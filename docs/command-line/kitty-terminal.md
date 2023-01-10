@@ -1,5 +1,7 @@
 # Kitty terminal
 
+![Kitty Logo]()
+
 [Kitty Terminal](https://sw.kovidgoyal.net/kitty/) is a fast, feature-rich, GPU based terminal emulator
 
 ## install
@@ -31,15 +33,31 @@ font_family FiraCode
 font_size 16
 ```
 
+
 ## Multiple sessions
+
+Create a new terminal session without leaving kitty by creating a new tab or a window split.
 
 ++ctrl+shift+"T"++ to create a new session in a tab window
 
 ++ctrl+shift+arrow-left++ or ++arrow-right++ to switch between tabs to the left or right
 
+++ctrl+shift+"Q"++ to close a window
+
 ++ctrl+shift+enter++ to create a new session in split window
 
 ++ctrl+shift+bracket-left++ or ++bracket-right++ to switch between window splits
+
+++ctrl+shift+"W"++ to close a window
+
+
+Other common commands include:
+
+++ctrl+shift+equal++ to increase the font size without restarting kitty
+
+++ctrl+shift+minus++ to increase the font size without restarting kitty
+
+++ctrl+shift+"F11"++ to toggle kitty full-screen
 
 
 ## Kitten features
@@ -180,3 +198,10 @@ font_size 14
 # adjust_baseline 0
 # ---------------------------------------------------------
 ```
+
+
+
+Other
+Copy to Clipboard	Ctrl+Shift+C
+Paste from Clipboard	Ctrl+Shift+V
+Paste from Selection	Ctrl+Shift+S
