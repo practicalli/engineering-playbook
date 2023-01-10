@@ -1,10 +1,11 @@
 # Kitty terminal
 
-![Kitty Logo]()
+![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark){align=right loading=lazy}
+![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light){align=right loading=lazy}
 
 [Kitty Terminal](https://sw.kovidgoyal.net/kitty/) is a fast, feature-rich, GPU based terminal emulator
 
-## install
+## Install
 
 
 === "Ubuntu/Debian"
