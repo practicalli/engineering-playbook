@@ -360,21 +360,27 @@ we don't consider them a good choice, mostly as they don't work well on mobile.
   [requirement diagrams]: https://mermaid-js.github.io/mermaid/#/requirementDiagram
 
 
-## Formatting
+## Keyboard keys
 
-[Keyboard keys] for all those key bindings... each number and alphabet character has their own key
+Represent key bindings with [Keyboard keys](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index){target=_blank}. Each number and alphabet character has their own key.
 
-++spc++ or ++space++ for leader and ++comma++ for local leader
+* ++1++ `++1++` for numbers
+* ++"l"++ `++"l"++` for lowercase character
+* ++u++ `++u++` for uppercase character or `++"U"++` for consistency 
 
-[Punctionation keys](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#punctuation-keys) by name, e.g. ++bar++
+[Punctionation keys](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#punctuation-keys){target=_blank} use their name
+* ++spc++ `++spc++` 
+* ++comma++ `++comma++` 
+* ++arrow-left++
 
-++arrow-left+arrow-up+arrow-down+arrow-right++
+For key sequences, place a space between each keyboard character 
+* ++spc++ ++"g"++ ++"s"++  `++spc++ ++"g"++ ++"s"++`
 
-++meta+x++ for all the classic Emacs fun
+For key combinations, use join they key identifies with a `+`
+* ++meta+x++ `++meta+x++`
+* ++ctrl+alt+del++ `++ctrl+alt+del++`
 
-++ctrl+alt+del++
-
-[Keyboard keys]: https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index
+[Keyboard keys reference](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index){target=_blank .md-button}
 
 
 ## Grids
