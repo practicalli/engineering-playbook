@@ -60,6 +60,13 @@ Other common commands include:
 
 ++ctrl+shift+"F11"++ to toggle kitty full-screen
 
+++ctrl+shift+"c"++ copy from kitty terminal to clipboard
+
+++ctrl+shift+"v"++ paste into to kitty terminal from clipboard
+
+++ctrl+shift+"s"++ paste into to kitty terminal from clipboard
+Paste from Selection	Ctrl+Shift+S
+
 
 ## Kitten features
 
@@ -202,7 +209,3 @@ font_size 14
 
 
 
-Other
-Copy to Clipboard	Ctrl+Shift+C
-Paste from Clipboard	Ctrl+Shift+V
-Paste from Selection	Ctrl+Shift+S
