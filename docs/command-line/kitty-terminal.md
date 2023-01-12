@@ -123,7 +123,7 @@ kitty +kitten diff file1 file2
 ++period++ or ++less-than++  jumps to previous diff match
 
 
-* [All keyboard controls](fast, feature-rich, GPU based terminal emulator)
+* [All keyboard controls](https://sw.kovidgoyal.net/kitty/kittens/diff/#keyboard-controls)
 
 
 
