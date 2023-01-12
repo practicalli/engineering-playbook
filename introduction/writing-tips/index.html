@@ -780,23 +780,60 @@ we don't consider them a good choice, mostly as they don't work well on mobile.<
 <p>Sponsor only feature</p>
 </blockquote>
 <h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">λ︎</a></h2>
-<p>Oh yesssss... aligning images... I am in love... and lazy loading too</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo-name.svg"><img align="right" alt="Practicalli logo named" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo-name.svg"/></a></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+<p>Markdown images can be appended with material tags to set the size of the image, whether to appear on light or dark theme and support lazy image loading in browsers</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Size</label><label for="__tabbed_3_2">Lazy Loading</label><label for="__tabbed_3_3">Align</label><label for="__tabbed_3_4">Theme Specific</label><label for="__tabbed_3_5">All Image Attributes</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><code>{style="height:150px;width:150px"}</code> specifies the image size 
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){style="height:150px;width:150px"}
+</code></pre></div></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark"><img alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark" style="height:150px;width:150px"/></a></p>
+</div>
+<div class="tabbed-block">
+<p><code>{loading=lazy}</code> specifies an image should lazily load in the browser 
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png</span>){loading=lazy}
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p><code>{aligh=left}</code> or <code>{aligh=right}</code> specifies the page alignment of an image.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){align=right}
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){align=right}
+</code></pre></div></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png"><img align="left" alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png" style="height:64px;width:64px"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png"><img align="right" alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png" style="height:64px;width:64px"/></a>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+</div>
+<div class="tabbed-block">
+<p><code>![Kitty Logo](image/kitty-light.png#only-dark)</code> or <code>![Kitty Logo](image/kitty-light.png#only-light)</code>  specifies the theme the image should be shown, allowing different versions of images to be shown based on the theme.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){style="height:150px;width:150px"}
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){style="height:150px;width:150px"}
+</code></pre></div>
+Use the theme toggle in the top nav bar to see the icon change between light and dark.
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark"><img alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark" style="height:150px;width:150px"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light"><img alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light" style="height:150px;width:150px"/></a></p>
 <blockquote>
-<p>If the image is too big then it will simply take up the whole width of the page</p>
+<p>Requires the <a href="https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle">color pallet toggle</a></p>
 </blockquote>
-<p>When adding the <a href="https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle">color pallet toggle</a>, have different images for light and dark</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://dummyimage.com/600x400/f5f5f5/aaaaaa#only-light"><img alt="Image title" src="https://dummyimage.com/600x400/f5f5f5/aaaaaa#only-light"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://dummyimage.com/600x400/21222c/d5d7e2#only-dark"><img alt="Image title" src="https://dummyimage.com/600x400/21222c/d5d7e2#only-dark"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Alight right, lazy load and set image to 150x150</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){align=right loading=lazy style="height:64px;width:64px"}
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){align=right loading=lazy style="height:64px;width:64px"}
+</code></pre></div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark"><img align="right" alt="Kitty Logo" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark" style="height:64px;width:64px"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light"><img align="left" alt="Kitty Logo" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light" style="height:64px;width:64px"/></a>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+</div>
+</div>
+</input></input></input></input></input></div>
 <h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">λ︎</a></h2>
 <p>Task lists</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Vestibulum convallis sit amet nisi a tincidunt<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> In hac habitasse platea dictumst</li>
-<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> In scelerisque nibh non dolor mollis congue sed et metus</li>
-<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Praesent sed risus massa</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Vestibulum convallis sit amet nisi a tincidunt<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> In hac habitasse platea dictumst</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> In scelerisque nibh non dolor mollis congue sed et metus</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Praesent sed risus massa</li>
 </ul>
 </li>
 <li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"/><span class="task-list-indicator"></span></label> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</li>
@@ -821,7 +858,7 @@ we don't consider them a good choice, mostly as they don't work well on mobile.<
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 10, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 12, 2023</span>
 </small>
 </div>
 </article>
