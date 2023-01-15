@@ -21,6 +21,9 @@ nav:
   - Architecture:
       - architecture/index.md
       - Structurizr: architecture/structurizr.md
+  - Code Quality:
+      - code-quality/index.md
+      - code-quality/megalinter.md
   - Command Line:
       - command-line/index.md
       - Kitty Terminal: command-line/kitty-terminal.md
