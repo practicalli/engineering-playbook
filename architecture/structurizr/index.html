@@ -1,0 +1,1004 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Practical guides to common Engineering tasks" name="description"/>
+<meta content="Practicalli" name="author"/>
+<link href="https://practical.li/engineering-playbook/architecture/structurizr/" rel="canonical"/>
+<link href="../" rel="prev"/>
+<link href="../../code-quality/" rel="next"/>
+<link href="../../assets/favicon.svg" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.5" name="generator"/>
+<title>Structurizr - Practicalli Engineering Playbook</title>
+<link href="../../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<meta content="website" property="og:type"/>
+<meta content="Structurizr - Practicalli Engineering Playbook" property="og:title"/>
+<meta content="Practical guides to common Engineering tasks" property="og:description"/>
+<meta content="https://practical.li/engineering-playbook/assets/images/social/architecture/structurizr.png" property="og:image"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="https://practical.li/engineering-playbook/architecture/structurizr/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Structurizr - Practicalli Engineering Playbook" name="twitter:title"/>
+<meta content="Practical guides to common Engineering tasks" name="twitter:description"/>
+<meta content="https://practical.li/engineering-playbook/assets/images/social/architecture/structurizr.png" name="twitter:image"/>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="blue" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#structurizr-architecture-diagrams-as-code">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Practicalli Engineering Playbook" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Practicalli Engineering Playbook">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Practicalli Engineering Playbook
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Structurizr
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="deep-purple" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="teal" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/practicalli/engineering-playbook/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Practicalli Engineering Playbook" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Practicalli Engineering Playbook">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
+</a>
+    Practicalli Engineering Playbook
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/practicalli/engineering-playbook/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../..">Overview</a>
+<label for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Overview" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../introduction/contributing/">
+        Contributing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../introduction/writing-tips/">
+        Writing Tips
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">Architecture</a>
+<label for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Architecture" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Architecture
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Structurizr
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Structurizr
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c4-model-summary">
+    C4 Model summary
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install">
+    Install
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structurizr-dsl-editor">
+    Structurizr DSL editor
+  </a>
+<nav aria-label="Structurizr DSL editor" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-the-system">
+    Define the system
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-values">
+    Common values
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grouping-services">
+    Grouping services
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-relationships">
+    Define relationships
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#defining-views">
+    Defining Views
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#embedding-documentaion-in-views">
+    Embedding Documentaion in views
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-themes">
+    Adding themes
+  </a>
+<nav aria-label="Adding themes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-theme">
+    Custom Theme
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#organisation-branding">
+    Organisation branding
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comments">
+    Comments
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#practicalli-system">
+    Practicalli System
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources">
+    Resources
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../code-quality/">Code Quality</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Code Quality" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Code Quality
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../code-quality/megalinter/">
+        MegaLinter
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../command-line/">Command Line</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Command Line" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Command Line
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../command-line/kitty-terminal/">
+        Kitty Terminal
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../continuous-integration/">Continuous Integration</a>
+<label for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Continuous Integration" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Continuous Integration
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../continuous-integration/github-workflow/">
+        GitHub Actions
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c4-model-summary">
+    C4 Model summary
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install">
+    Install
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structurizr-dsl-editor">
+    Structurizr DSL editor
+  </a>
+<nav aria-label="Structurizr DSL editor" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-the-system">
+    Define the system
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-values">
+    Common values
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grouping-services">
+    Grouping services
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#define-relationships">
+    Define relationships
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#defining-views">
+    Defining Views
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#embedding-documentaion-in-views">
+    Embedding Documentaion in views
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#adding-themes">
+    Adding themes
+  </a>
+<nav aria-label="Adding themes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#custom-theme">
+    Custom Theme
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#organisation-branding">
+    Organisation branding
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comments">
+    Comments
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#practicalli-system">
+    Practicalli System
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#resources">
+    Resources
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="structurizr-architecture-diagrams-as-code">Structurizr - Architecture diagrams as code<a class="headerlink" href="#structurizr-architecture-diagrams-as-code" title="Permanent link">λ︎</a></h1>
+<p><a href="https://structurizr.com/dsl">Structurizr</a> is a tool for expressing and visualising architecture using the <a href="https://c4model.com/">C4 model</a></p>
+<p>Define a single <strong>model</strong> divided into <strong>softwareSystems</strong> within which <strong>services</strong> and <strong>persistent data stores</strong> are defined. <strong>Relationships</strong> are defined between services and persistence stores.</p>
+<p>Many views can be generated from the single model and changes to the model automatically update those views to ensure all views are always up to date.</p>
+<h2 id="c4-model-summary">C4 Model summary<a class="headerlink" href="#c4-model-summary" title="Permanent link">λ︎</a></h2>
+<ul>
+<li>Level 1: <strong>Software system</strong> - a system context composed of one or more containers</li>
+<li>Level 2: <strong>Container</strong> - application or data store, each component is separately deployable/runable, composed of one or more components</li>
+<li>Level 3: <strong>Component</strong> - grouping of functionality with a well defined interface, implemented by one or more code artefacts</li>
+<li>Level 4: <strong>Code</strong> - code artefact (function, object/class)</li>
+</ul>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/570b6f55d83294a732c1e6b1c8d822d6ab2ab9ac/architecture/c4-model-structure-concept.png"><img alt="c4 model abstraction" src="https://raw.githubusercontent.com/practicalli/graphic-design/570b6f55d83294a732c1e6b1c8d822d6ab2ab9ac/architecture/c4-model-structure-concept.png"/></a></p>
+<div class="admonition hint">
+<p class="admonition-title">Quick try with Structurizr DSL Editor</p>
+<p><a href="https://structurizr.com/dsl" target="_blank">Structurizr DSL online editor</a> provides an instant way to try structurizr without install or sign-up</p>
+</div>
+<h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">λ︎</a></h2>
+<p>Use the free Structurizr Lite locally (via docker) or use Structurizr Cloud service (free for Open Source &amp; Academic projects on request)</p>
+<p>Project models can be imported into the cloud-based tool from Structurizr Lite when team or company wide collaboration is required.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Structurizr lite</label><label for="__tabbed_1_2">Structurizr Cloud</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="md-button" href="https://structurizr.com/share/76352/documentation#getting-started" target="_blank">Structurizr Lite - Getting Started</a></p>
+<p>Install Structurizr locally with the free <a href="https://structurizr.com/help/lite">structurizr Lite</a> product via the Docker image. Ensure Docker or Docker Desktop is running  (image approximately 450Mb in size)</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Docker Compose</label><label for="__tabbed_2_2">Docker</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Include Structurizr Lite in a <code>docker-compose.yaml</code> file in the root of the project.  Docker compose is especially useful when running one or more services to automatically update views from the model.</p>
+<p>A volume is use to persist the model <code>workspace.dsl</code> file, enabling local editing of the model while the docker container is running.
+<div class="highlight"><span class="filename">docker-compose.yaml</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>---
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>version:<span class="w"> </span><span class="s2">"3.9"</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>services:
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span>#<span class="w"> </span>---<span class="w"> </span>System<span class="w"> </span>Model<span class="w"> </span>---<span class="w"> </span>#
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span>structurizr:
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span>container_name:<span class="w"> </span>system-architecture
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span>image:<span class="w"> </span><span class="s2">"structurizr/lite:latest"</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span>ports:
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">      </span>-<span class="w"> </span><span class="s2">"8080:8080"</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span>volumes:
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">      </span>-<span class="w"> </span><span class="s2">"./model:/usr/local/structurizr:rw"</span>
+</code></pre></div></p>
+<p>Run structurizr lite using the command:
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>docker compose up
+</code></pre></div></p>
+<p>Structurizr can also be defined in its own docker compose file and called separately, e.g. <code>strucurizr.yaml</code> configuration file
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>structurizr.yaml<span class="w"> </span>up
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>Pull the docker image</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>docker<span class="w"> </span>pull<span class="w"> </span>structurizr/lite
+</code></pre></div>
+<p>Set the Structurizr project path to define the location of the <code>.dsl</code> or <code>.json</code> workspace definitions (or enter the path directly in the docker command)</p>
+<p>Practicalli uses the <code>model</code> directory to keep the configuration files</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>export STRUCTURIZR_DATA_PATH=/home/practicalli/projects/practicalli/structurizr/model
+</code></pre></div>
+<p>Run docker with the Structurizr data path
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>docker run -it --rm -p 8080:8080 -v $STRUCTURIZR_DATA_PATH:/usr/local/structurizr structurizr/lite
+</code></pre></div></p>
+</div>
+</div>
+</input></input></div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/architecture/structurizr-docker-run-output-dark.png#only-dark"><img alt="Structurizr Docker run output" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/architecture/structurizr-docker-run-output-dark.png#only-dark"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/architecture/structurizr-docker-run-output-light.png#only-light"><img alt="Structurizr Docker run output" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/architecture/structurizr-docker-run-output-light.png#only-light"/></a></p>
+<p><code>workspace.dsl</code> and <code>workspace.json</code> files are created if they do not already exist.</p>
+</div>
+<div class="tabbed-block">
+<p><a class="md-button" href="https://structurizr.com/" target="_blank">Structurizr Cloud</a></p>
+<p>Sign up for a free account which provides 1 workspace on the cloud service.</p>
+<details class="info">
+<summary>Free Cloud product for Open Source &amp; Academic use</summary>
+<p>Access to 5 workspaces on the Structurizr paid cloud service for each <a href="https://structurizr.com/help/open-source">open source project</a> or <a href="https://structurizr.com/help/academic">academic     establishment</a> on request</p>
+</details>
+<p>Select New workspace after login to <a href="https://structurizr.com/">Structurizr</a></p>
+<p>A summary page of the new workspace is shown, showing the last modified time and an option to load a previous version.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/architecture/structurizr-workspace-summary.png"><img alt="Structurizr new workspace summary page" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/architecture/structurizr-workspace-summary.png"/></a></p>
+<p>Scroll the page vertically to see the available diagrams, or click <strong>More Diagrams...</strong> at the bottom of the page</p>
+<h2 id="structurizr-dsl-editor">Structurizr DSL editor<a class="headerlink" href="#structurizr-dsl-editor" title="Permanent link">λ︎</a></h2>
+<p>The model is defined by a domain specific language (DSL) and the DSL editor should be used to add and update all configuration.</p>
+<p>Select DSL editor from the left hand navigation bar</p>
+<p>Structurizr DSL Language Reference documentation</p>
+<p>Select the Source text icon to see only the code window, allowing for easier editing</p>
+</div>
+</div>
+</input></input></div>
+<h3 id="define-the-system">Define the system<a class="headerlink" href="#define-the-system" title="Permanent link">λ︎</a></h3>
+<p><a class="md-button" href="https://github.com/structurizr/dsl/blob/master/docs/language-reference.md" target="_blank">Structurizr DSL Language Reference documentation</a>
+<a class="md-button" href="https://github.com/structurizr/dsl/blob/master/docs/cookbook/README.md" target="_blank">Structurizr DSL Cookbook</a>
+<a class="md-button" href="https://structurizr.com/dsl" target="_blank">Structurizr DSL online editor</a></p>
+<p>The <a href="https://structurizr.com/dsl" target="_blank">Structurizr DSL online editor</a> is a useful tool to help learn the syntax of the Structurizr DSL, using the <strong>Render</strong> button to see the results of the model as it is defined.</p>
+<p>Basic structure:</p>
+<ul>
+<li><code>workspace</code> is composed of the system model and views derived from that model</li>
+<li><code>model</code> is composed of one or more <code>softwaresystems</code></li>
+<li><code>views</code> define one or more views of the model, using autoLayout to organise diagrams or manually specifying layouts, sytlyes, themes, etc.</li>
+<li><code>softwaresystem</code> defines specific services along container boundaries (application * data store components)</li>
+</ul>
+<p>Add an entry for each service within the specific <code>softwareSystem</code> using the form</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>unique_name_id = container "Service or data store name" "Description of service or database" "Container name" "View type - Tag name"
+</code></pre></div>
+<details class="info">
+<summary>Tags and themes</summary>
+<p>Tags are used to define the appearance in a view.  Structurizr default theme contains simple tags.  Amazon AWS theme contains a wide range of icons and styles to represent its many services, although these are more suitable for deploymentEnvironment views.  <a href="#themes">Adding themes section</a> covers this in more detail.</p>
+</details>
+<p>For a persistent store, e.g. relational database, use the form</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>fraud_data = container "Fraud History" "A complete history of transactions and reports" "fraud-data" "database"
+</code></pre></div>
+<p>For an elastic search service, use the form</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>unique_name_id = container "Display name" "Description of service or database" "Elastic Search" "Elastic"
+</code></pre></div>
+<p>simple example</p>
+<ul>
+<li>Create a model with a user and a software system, where the user uses the software system.</li>
+<li>Create a system context view for the software system, adding the default set of elements, using auto-layout.</li>
+<li>Use the default theme for styling elements and relationships.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>workspace {
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>    model {
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>        user = person "User"
+<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>        softwareSystem = softwareSystem "Software System"
+<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a>
+<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a>        user -&gt; softwareSystem "Uses"
+<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a>    }
+<a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a>    views {
+<a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a>        systemContext softwareSystem "Diagram1" {
+<a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a>            include *
+<a href="#__codelineno-9-11" id="__codelineno-9-11" name="__codelineno-9-11"></a>            autoLayout
+<a href="#__codelineno-9-12" id="__codelineno-9-12" name="__codelineno-9-12"></a>        }
+<a href="#__codelineno-9-13" id="__codelineno-9-13" name="__codelineno-9-13"></a>        theme default
+<a href="#__codelineno-9-14" id="__codelineno-9-14" name="__codelineno-9-14"></a>    }
+<a href="#__codelineno-9-15" id="__codelineno-9-15" name="__codelineno-9-15"></a>}
+</code></pre></div>
+<!--
+> Billie example: https://gist.github.com/practicalli-john/662b232b1c0ee119d1686b61f6104bd8
+-->
+<h3 id="common-values">Common values<a class="headerlink" href="#common-values" title="Permanent link">λ︎</a></h3>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>!constant ORGANISATION_NAME "Practicalli"
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a>!constant GROUP_NAME "Fintech"
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a>workspace {
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a>    model {
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a>        enterprise "${ORGANISATION_NAME} - ${GROUP_NAME}" {
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>            user = person "User"
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a>        }
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a>    }
+<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a>}
+</code></pre></div>
+<h3 id="grouping-services">Grouping services<a class="headerlink" href="#grouping-services" title="Permanent link">λ︎</a></h3>
+<p>Grouping services within a softwareSystem keeps closely related service together and are rendered in the group within a view. A group can
+also be included or excluded from a view</p>
+<p>The Banking software system contains groups: shared, credit, transaction and fraud. Each group containing a number of services</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>risk = softwareSystem "Risk" {
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a>  shared_services_risk = group "Shared Services Risk" {
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a>    company_info = container "Company WhoIs" "Company search service" "Clojure API"
+<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a>    company_info_database = container "Company WhoIs database" "" "Relational database schema" "Database"
+<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a>    company_info_search = container "Company Search Aggregator" "Company full-text search index" "Elastic Search" "Elastic"
+<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a>    risk_data_providers = container "Risk Data Providers" "Data Provider Service" "PHP Symphony service"
+<a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a>    risk_data_providers_database = container "Risk Data" "" "Relational database schema" "Database"
+<a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a>  }
+<a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a>  credit_risk = group "Credit Risk" {
+<a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a>    score = container "Credit risk scoring" "Scoring organizations Credit Risk" "Clojure Service"
+<a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a>    score_data = container "Credit Risk Scoring Service database" "" "Relational database schema" "DatabaseWip"
+<a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a>    assessment = container "Credit Assessment" "Credit risk assessment Service" "Clojure"
+<a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a>  }
+<a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a>  transaction = group "Transaction" {
+<a href="#__codelineno-11-15" id="__codelineno-11-15" name="__codelineno-11-15"></a>    guardian = container "Transaction Guardian" "Transaction monitoring and transaction Screening service" "Clojure"
+<a href="#__codelineno-11-16" id="__codelineno-11-16" name="__codelineno-11-16"></a>    guardian_database = container "Transaction Guardian Database" "" "Relational database schema" "Database"
+<a href="#__codelineno-11-17" id="__codelineno-11-17" name="__codelineno-11-17"></a>    limiter = container "Limiter" "Limits Service" "ClojureKafka"
+<a href="#__codelineno-11-18" id="__codelineno-11-18" name="__codelineno-11-18"></a>  }
+<a href="#__codelineno-11-19" id="__codelineno-11-19" name="__codelineno-11-19"></a>  fraud_risk = group "Fraud Risk" {
+<a href="#__codelineno-11-20" id="__codelineno-11-20" name="__codelineno-11-20"></a>    detection = container "Fraud Service" "Detect fraudulent transactions via Fraud Scoring Data Science models " "Clojure API"
+<a href="#__codelineno-11-21" id="__codelineno-11-21" name="__codelineno-11-21"></a>    detection_data = container "Fraud Database" "TODO: Define the kind of data persisted" "Relational database schema" "Database"
+<a href="#__codelineno-11-22" id="__codelineno-11-22" name="__codelineno-11-22"></a>    ml_model = container "Machine learning model service" "Sagemaker"
+<a href="#__codelineno-11-23" id="__codelineno-11-23" name="__codelineno-11-23"></a>    feature_store_data = container "Feature store" "Pre-calculated feature values" "Key value database" "Database"
+<a href="#__codelineno-11-24" id="__codelineno-11-24" name="__codelineno-11-24"></a>    feature_schema_data = container "Feature mapping model/entity" "" "Key value database" "Database"
+<a href="#__codelineno-11-25" id="__codelineno-11-25" name="__codelineno-11-25"></a>    manual_review = container "Review Transactions" "Manually review transactions for fraud" "" "WebBrowser"
+<a href="#__codelineno-11-26" id="__codelineno-11-26" name="__codelineno-11-26"></a>  }
+<a href="#__codelineno-11-27" id="__codelineno-11-27" name="__codelineno-11-27"></a>}
+</code></pre></div>
+<h3 id="define-relationships">Define relationships<a class="headerlink" href="#define-relationships" title="Permanent link">λ︎</a></h3>
+<p><code>-&gt;</code> defines a relationships between two id's defined in the <code>softwareSystem</code> part of the model, along with a description of the relationship that is added to the arrow joining the artefacts in a view.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>service_name -&gt; service_or_datastore_name "Description of connection"
+</code></pre></div>
+<p>The relationships are used to draw connections between services and the descriptions name those connections</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>// Fraud Detection
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>fraud_service -&gt; risky "Request external risk data"
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a>fraud_service -&gt; jarvis "Reads schufa attributes"
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>fraud_service -&gt; watson_database "Reads and writes to"
+<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a>fraud_service -&gt; fraud_database "Reads and writes to"
+<a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>fraud_service -&gt; fraud_model_api "score order"
+<a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a>fraud_model_api -&gt; machine_learning_model_service "request model"
+<a href="#__codelineno-13-8" id="__codelineno-13-8" name="__codelineno-13-8"></a>fraud_model_api -&gt; feature_store_database "Collect features"
+<a href="#__codelineno-13-9" id="__codelineno-13-9" name="__codelineno-13-9"></a>fraud_model_api -&gt; feature_schema_database "Request feature set &amp; model"
+</code></pre></div>
+<h2 id="defining-views">Defining Views<a class="headerlink" href="#defining-views" title="Permanent link">λ︎</a></h2>
+<p>A workspace contains views which visualise artefacts defined in any <code>softwareSystem</code> within the model.</p>
+<p>A view can include everything * within the softwareSystem or use <code>include</code> and <code>exclude</code> to refine the view based on groups or specific containers.</p>
+<p>View of the form: view-type softwareSystem-name view-name</p>
+<p><code>container risk fraud-detection</code></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>container risk "RiskContainersAfterSE" {
+<a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>include *
+<a href="#__codelineno-14-3" id="__codelineno-14-3" name="__codelineno-14-3"></a>autoLayout
+<a href="#__codelineno-14-4" id="__codelineno-14-4" name="__codelineno-14-4"></a>}
+<a href="#__codelineno-14-5" id="__codelineno-14-5" name="__codelineno-14-5"></a>container risk "CreditRiskServices" {
+<a href="#__codelineno-14-6" id="__codelineno-14-6" name="__codelineno-14-6"></a>include *
+<a href="#__codelineno-14-7" id="__codelineno-14-7" name="__codelineno-14-7"></a>exclude fraud_risk
+<a href="#__codelineno-14-8" id="__codelineno-14-8" name="__codelineno-14-8"></a>autoLayout
+<a href="#__codelineno-14-9" id="__codelineno-14-9" name="__codelineno-14-9"></a>}
+<a href="#__codelineno-14-10" id="__codelineno-14-10" name="__codelineno-14-10"></a>container risk "FraudServices" {
+<a href="#__codelineno-14-11" id="__codelineno-14-11" name="__codelineno-14-11"></a>include *
+<a href="#__codelineno-14-12" id="__codelineno-14-12" name="__codelineno-14-12"></a>exclude credit_risk
+<a href="#__codelineno-14-13" id="__codelineno-14-13" name="__codelineno-14-13"></a>autoLayout
+</code></pre></div>
+<h2 id="embedding-documentaion-in-views">Embedding Documentaion in views<a class="headerlink" href="#embedding-documentaion-in-views" title="Permanent link">λ︎</a></h2>
+<p>Create a directory called <code>docs</code> to contain markdown files with system descriptions.</p>
+<p>Include <code>![](embed:DiagramName)</code> in the markdown file to include the text in the view called <code>DiagramName</code></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="gu">## Context</span>
+<a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a>
+<a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>Here is a description of my software system...
+<a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a>
+<a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a>![](embed:Diagram1)
+</code></pre></div>
+<p>The view should be defined in the workspaces.dsl</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>views {
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>        systemContext softwareSystem "DiagramName" {
+<a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a>            include *
+<a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a>            autoLayout
+<a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a>        }
+</code></pre></div>
+<h2 id="adding-themes">Adding themes<a class="headerlink" href="#adding-themes" title="Permanent link">λ︎</a></h2>
+<p>Themes add styles or icons to the diagrams rendered by Structurizr tools, e.g. Amazon AWS icons.</p>
+<p>Add a theme to the workspace.dsl configuration and add a theme tag to a component definition.</p>
+<p><code>theme</code> key is added as a value within the <code>views</code> key of the <code>workspace</code>.  <code>themes</code> is used to include multiple themes.</p>
+<blockquote>
+<p><a href="https://github.com/structurizr/dsl/blob/master/docs/language-reference.md#theme">Structurizr language reference - theme</a></p>
+</blockquote>
+<p>Example: using the Amazon icons</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>    views {
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>        systemContext softwareSystem "Diagram1" {
+<a href="#__codelineno-17-3" id="__codelineno-17-3" name="__codelineno-17-3"></a>            include *
+<a href="#__codelineno-17-4" id="__codelineno-17-4" name="__codelineno-17-4"></a>            autoLayout
+<a href="#__codelineno-17-5" id="__codelineno-17-5" name="__codelineno-17-5"></a>        }
+<a href="#__codelineno-17-6" id="__codelineno-17-6" name="__codelineno-17-6"></a>        theme https://static.structurizr.com/themes/amazon-web-services-2022.04.30/theme.json
+<a href="#__codelineno-17-7" id="__codelineno-17-7" name="__codelineno-17-7"></a>    }
+</code></pre></div>
+<p>Use icons from the theme by adding one of the theme tags</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>identifier = type "" "" "" "tag-name"
+</code></pre></div>
+<p>Exmaple: the <code>"Amazon Web Services - SageMaker"</code> tag is added to a machine learning model</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>ml_model = container "AWS Sagemaker" "Machine learning model service" "" "Amazon Web Services - SageMaker"
+</code></pre></div>
+<details class="hint">
+<summary>Useful Amazon Web Services Tags</summary>
+<p><a href="https://structurizr.com/help/theme?url=https://static.structurizr.com/themes/amazon-web-services-2022.04.30/theme.json">Amazon Web Services theme</a> - tags commonly used:</p>
+<ul>
+<li>Amazon Web Services - Lambda</li>
+<li>Amazon Web Services - Fargate</li>
+<li>Amazon Web Services - Route 53</li>
+<li>Amazon Web Services - Simple Storage Service</li>
+<li>Amazon Web Services - EC2</li>
+<li>Amazon Web Services - EC2 AMI</li>
+<li>Amazon Web Services - EC2 Auto Scaling</li>
+<li>Amazon Web Services - Elastic Load Balancing</li>
+<li>Amazon Web Services - Elastic Container Service</li>
+<li>Amazon Web Services - Elastic Container Kubernetes</li>
+<li>Amazon Web Services - Elastic Container Registry</li>
+<li>Amazon Web Services - Elastic Container Registry Image</li>
+<li>Amazon Web Services - EKS Cloud</li>
+<li>Amazon Web Services - Elastic Beanstalk</li>
+<li>Amazon Web Services - Category Database</li>
+<li>Amazon Web Services - Category Machine Learning</li>
+<li>Amazon Web Services - Category Serverless</li>
+<li>Amazon Web Services - Corretto</li>
+<li>Amazon Web Services - Data Pipeline</li>
+<li>Amazon Web Services - Deep Learning Containers</li>
+<li>Amazon Web Services - RDS</li>
+<li>Amazon Web Services - DocumentDB</li>
+<li>Amazon Web Services - DynamoDB</li>
+<li>Amazon Web Services - Managed Service for Grafana</li>
+<li>Amazon Web Services - Managed Service for Prometheus</li>
+<li>Amazon Web Services - Managed Streaming for Apache Kafka</li>
+<li>Amazon Web Services - Managed Workflows for Apache Airflow</li>
+<li>Amazon Web Services - Secrets Manager</li>
+<li>Amazon Web Services - Single Sign On</li>
+<li>Amazon Web Services - Virtual Private Cloud</li>
+</ul>
+</details>
+<h3 id="custom-theme">Custom Theme<a class="headerlink" href="#custom-theme" title="Permanent link">λ︎</a></h3>
+<blockquote>
+<p>TODO: Add theme element for Clojure Service, including clojure logo</p>
+</blockquote>
+<h2 id="organisation-branding">Organisation branding<a class="headerlink" href="#organisation-branding" title="Permanent link">λ︎</a></h2>
+<p>Add a PNG or Jpeg graphic as a logo on all diagrams, appearing in the bottom left of each page</p>
+<p>Define a specific font to use for all text in the digram (font downloaded from Google Fonts)</p>
+<p>Define a <code>branding</code> section in the <strong>workspace</strong> &gt; <strong>views</strong> section of the <code>workspace.dsl</code> file.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>branding {
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>    logo &lt;file|url&gt;
+<a href="#__codelineno-20-3" id="__codelineno-20-3" name="__codelineno-20-3"></a>    font &lt;name&gt; [url]
+<a href="#__codelineno-20-4" id="__codelineno-20-4" name="__codelineno-20-4"></a>}
+</code></pre></div>
+<h2 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">λ︎</a></h2>
+<p><code>/* */</code> for line comments.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>/* single-line comment */
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>/*
+<a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a>    multi-line comment
+<a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a>*/
+</code></pre></div>
+<blockquote>
+<p>Note: line comments within parens or directly after a closing paren cause syntax error</p>
+</blockquote>
+<h2 id="practicalli-system">Practicalli System<a class="headerlink" href="#practicalli-system" title="Permanent link">λ︎</a></h2>
+<p>The Practicalli configuration is defined as workspace that contains a model with an enterprise "Practicalli" key defining the high-level software systems</p>
+<ul>
+<li>Credit Assesment</li>
+<li>Risk Analysis</li>
+<li>Transactions (credit card, National bank deposit/transfer, BACS)</li>
+<li>Shared Services (account management, etc)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>/*
+<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a>  Practicalli Architecture
+<a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a>*/
+<a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a>
+<a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a>/* Constant values */
+<a href="#__codelineno-22-6" id="__codelineno-22-6" name="__codelineno-22-6"></a>!constant ORGANISATION_NAME "Practicalli"
+<a href="#__codelineno-22-7" id="__codelineno-22-7" name="__codelineno-22-7"></a>!constant GROUP_NAME "Fintech"
+<a href="#__codelineno-22-8" id="__codelineno-22-8" name="__codelineno-22-8"></a>
+<a href="#__codelineno-22-9" id="__codelineno-22-9" name="__codelineno-22-9"></a>workspace "Workspace name" "Wokspace title"{
+<a href="#__codelineno-22-10" id="__codelineno-22-10" name="__codelineno-22-10"></a>
+<a href="#__codelineno-22-11" id="__codelineno-22-11" name="__codelineno-22-11"></a>  model {
+<a href="#__codelineno-22-12" id="__codelineno-22-12" name="__codelineno-22-12"></a>    practicalli = enterprise "${ORGANISATION_NAME} - ${GROUP_NAME}" {
+<a href="#__codelineno-22-13" id="__codelineno-22-13" name="__codelineno-22-13"></a>
+<a href="#__codelineno-22-14" id="__codelineno-22-14" name="__codelineno-22-14"></a>      user = person "User"
+<a href="#__codelineno-22-15" id="__codelineno-22-15" name="__codelineno-22-15"></a>
+<a href="#__codelineno-22-16" id="__codelineno-22-16" name="__codelineno-22-16"></a>      risk = softwareSystem "Risk" {
+<a href="#__codelineno-22-17" id="__codelineno-22-17" name="__codelineno-22-17"></a>        shared_services = group "Shared Services Risk" {
+<a href="#__codelineno-22-18" id="__codelineno-22-18" name="__codelineno-22-18"></a>          company_info = container "Company WhoIs" "Company search service" "Clojure API"
+<a href="#__codelineno-22-19" id="__codelineno-22-19" name="__codelineno-22-19"></a>          company_info_database = container "Company WhoIs database" "" "Relational database schema" "Database"
+<a href="#__codelineno-22-20" id="__codelineno-22-20" name="__codelineno-22-20"></a>          company_info_search = container "Company Search Aggregator" "Company full-text search index" "Elastic Search" "Elastic"
+<a href="#__codelineno-22-21" id="__codelineno-22-21" name="__codelineno-22-21"></a>          risk_data_providers = container "Risk Data Providers" "Data Provider Service" "PHP Symphony service"
+<a href="#__codelineno-22-22" id="__codelineno-22-22" name="__codelineno-22-22"></a>          risk_data_providers_database = container "Risk Data" "" "Relational database schema" "Database"
+<a href="#__codelineno-22-23" id="__codelineno-22-23" name="__codelineno-22-23"></a>        }
+<a href="#__codelineno-22-24" id="__codelineno-22-24" name="__codelineno-22-24"></a>        credit = group "Credit Risk" {
+<a href="#__codelineno-22-25" id="__codelineno-22-25" name="__codelineno-22-25"></a>          score = container "Credit risk scoring" "Scoring organizations Credit Risk" "Clojure Service"
+<a href="#__codelineno-22-26" id="__codelineno-22-26" name="__codelineno-22-26"></a>          score_data = container "Credit Risk Scoring Service database" "" "Relational database schema" "DatabaseWip"
+<a href="#__codelineno-22-27" id="__codelineno-22-27" name="__codelineno-22-27"></a>          assessment = container "Credit Assessment" "Credit risk assessment Service" "Clojure"
+<a href="#__codelineno-22-28" id="__codelineno-22-28" name="__codelineno-22-28"></a>        }
+<a href="#__codelineno-22-29" id="__codelineno-22-29" name="__codelineno-22-29"></a>
+<a href="#__codelineno-22-30" id="__codelineno-22-30" name="__codelineno-22-30"></a>        fraud = group "Fraud Risk" {
+<a href="#__codelineno-22-31" id="__codelineno-22-31" name="__codelineno-22-31"></a>          detection = container "Fraud Service" "Detect fraudulent transactions via Fraud Scoring Data Science models " "Clojure API"
+<a href="#__codelineno-22-32" id="__codelineno-22-32" name="__codelineno-22-32"></a>          detection_data = container "Fraud Database" "TODO: Define the kind of data persisted" "Relational database schema" "Database"
+<a href="#__codelineno-22-33" id="__codelineno-22-33" name="__codelineno-22-33"></a>          ml_model = container "AWS Sagemaker" "Machine learning model service" "" "Amazon Web Services - SageMaker"
+<a href="#__codelineno-22-34" id="__codelineno-22-34" name="__codelineno-22-34"></a>          feature_store_data = container "Feature store" "Pre-calculated feature values" "Key value database" "Database"
+<a href="#__codelineno-22-35" id="__codelineno-22-35" name="__codelineno-22-35"></a>          feature_schema_data = container "Feature mapping model/entity" "" "Key value database" "Database"
+<a href="#__codelineno-22-36" id="__codelineno-22-36" name="__codelineno-22-36"></a>          manual_review = container "Review Transactions" "Manually review transactions for fraud" "" "WebBrowser"
+<a href="#__codelineno-22-37" id="__codelineno-22-37" name="__codelineno-22-37"></a>        }
+<a href="#__codelineno-22-38" id="__codelineno-22-38" name="__codelineno-22-38"></a>      }
+<a href="#__codelineno-22-39" id="__codelineno-22-39" name="__codelineno-22-39"></a>
+<a href="#__codelineno-22-40" id="__codelineno-22-40" name="__codelineno-22-40"></a>      transaction = softwareSystem "Transaction" {
+<a href="#__codelineno-22-41" id="__codelineno-22-41" name="__codelineno-22-41"></a>        guardian = container "Transaction Guardian" "Transaction monitoring and transaction Screening service" "Clojure"
+<a href="#__codelineno-22-42" id="__codelineno-22-42" name="__codelineno-22-42"></a>        guardian_data = container "Transaction Guardian Database" "" "Relational database schema" "Database"
+<a href="#__codelineno-22-43" id="__codelineno-22-43" name="__codelineno-22-43"></a>        limiter = container "Limiter" "Limits Service" "ClojureKafka"
+<a href="#__codelineno-22-44" id="__codelineno-22-44" name="__codelineno-22-44"></a>      }
+<a href="#__codelineno-22-45" id="__codelineno-22-45" name="__codelineno-22-45"></a>
+<a href="#__codelineno-22-46" id="__codelineno-22-46" name="__codelineno-22-46"></a>    /* Define Relationships between components */
+<a href="#__codelineno-22-47" id="__codelineno-22-47" name="__codelineno-22-47"></a>    user -&gt; transaction "Triggers"
+<a href="#__codelineno-22-48" id="__codelineno-22-48" name="__codelineno-22-48"></a>
+<a href="#__codelineno-22-49" id="__codelineno-22-49" name="__codelineno-22-49"></a>    transaction -&gt; risk "Uses"
+<a href="#__codelineno-22-50" id="__codelineno-22-50" name="__codelineno-22-50"></a>    guardian -&gt; guardian_data "Persists"
+<a href="#__codelineno-22-51" id="__codelineno-22-51" name="__codelineno-22-51"></a>    guardian -&gt; limiter "Uses"
+<a href="#__codelineno-22-52" id="__codelineno-22-52" name="__codelineno-22-52"></a>
+<a href="#__codelineno-22-53" id="__codelineno-22-53" name="__codelineno-22-53"></a>    detection -&gt; detection_data "Reads and writes to"
+<a href="#__codelineno-22-54" id="__codelineno-22-54" name="__codelineno-22-54"></a>    detection -&gt; ml_model "score transaction"
+<a href="#__codelineno-22-55" id="__codelineno-22-55" name="__codelineno-22-55"></a>    ml_model -&gt; feature_store_data "Collect features"
+<a href="#__codelineno-22-56" id="__codelineno-22-56" name="__codelineno-22-56"></a>    ml_model -&gt; feature_schema_data "Request feature set &amp; model"
+<a href="#__codelineno-22-57" id="__codelineno-22-57" name="__codelineno-22-57"></a>
+<a href="#__codelineno-22-58" id="__codelineno-22-58" name="__codelineno-22-58"></a>    }
+<a href="#__codelineno-22-59" id="__codelineno-22-59" name="__codelineno-22-59"></a>
+<a href="#__codelineno-22-60" id="__codelineno-22-60" name="__codelineno-22-60"></a>  /* Deployment / Infrastructure */
+<a href="#__codelineno-22-61" id="__codelineno-22-61" name="__codelineno-22-61"></a>
+<a href="#__codelineno-22-62" id="__codelineno-22-62" name="__codelineno-22-62"></a>  production = deploymentEnvironment "Production" {
+<a href="#__codelineno-22-63" id="__codelineno-22-63" name="__codelineno-22-63"></a>    aws = deploymentNode "Amazon Web Services" "" "" "Amazon Web Services - Cloud" {
+<a href="#__codelineno-22-64" id="__codelineno-22-64" name="__codelineno-22-64"></a>      region = deploymentNode "US-East-1" "" "" "Amazon Web Services - Region" {
+<a href="#__codelineno-22-65" id="__codelineno-22-65" name="__codelineno-22-65"></a>        route53 = infrastructureNode "Route 53" "" "" "Amazon Web Services - Route 53"
+<a href="#__codelineno-22-66" id="__codelineno-22-66" name="__codelineno-22-66"></a>        elb = infrastructureNode "Elastic Load Balancer" "" "" "Amazon Web Services - Elastic Load Balancing"
+<a href="#__codelineno-22-67" id="__codelineno-22-67" name="__codelineno-22-67"></a>        autoscalingGroup = deploymentNode "Autoscaling group" "" "" "Amazon Web Services - Auto Scaling" {
+<a href="#__codelineno-22-68" id="__codelineno-22-68" name="__codelineno-22-68"></a>          ec2 = deploymentNode "Amazon EC2" "" "" "Amazon Web Services - EC2" {
+<a href="#__codelineno-22-69" id="__codelineno-22-69" name="__codelineno-22-69"></a>
+<a href="#__codelineno-22-70" id="__codelineno-22-70" name="__codelineno-22-70"></a>            webApplicationInstance = containerInstance detection
+<a href="#__codelineno-22-71" id="__codelineno-22-71" name="__codelineno-22-71"></a>            elb -&gt; webApplicationInstance "Forwards requests to" "HTTPS"
+<a href="#__codelineno-22-72" id="__codelineno-22-72" name="__codelineno-22-72"></a>          }
+<a href="#__codelineno-22-73" id="__codelineno-22-73" name="__codelineno-22-73"></a>        }
+<a href="#__codelineno-22-74" id="__codelineno-22-74" name="__codelineno-22-74"></a>        rds = deploymentNode "Amazon RDS" "" "" "Amazon Web Services - RDS" {
+<a href="#__codelineno-22-75" id="__codelineno-22-75" name="__codelineno-22-75"></a>          mysql = deploymentNode "MySQL" "" "" "Amazon Web Services - RDS MySQL instance" {
+<a href="#__codelineno-22-76" id="__codelineno-22-76" name="__codelineno-22-76"></a>            databaseInstance = containerInstance detection_data
+<a href="#__codelineno-22-77" id="__codelineno-22-77" name="__codelineno-22-77"></a>          }
+<a href="#__codelineno-22-78" id="__codelineno-22-78" name="__codelineno-22-78"></a>        }
+<a href="#__codelineno-22-79" id="__codelineno-22-79" name="__codelineno-22-79"></a>        route53 -&gt; elb "Forwards requests to" "HTTPS"
+<a href="#__codelineno-22-80" id="__codelineno-22-80" name="__codelineno-22-80"></a>      }
+<a href="#__codelineno-22-81" id="__codelineno-22-81" name="__codelineno-22-81"></a>    }
+<a href="#__codelineno-22-82" id="__codelineno-22-82" name="__codelineno-22-82"></a>  }
+<a href="#__codelineno-22-83" id="__codelineno-22-83" name="__codelineno-22-83"></a> /* End Of Production Deployment Environment */
+<a href="#__codelineno-22-84" id="__codelineno-22-84" name="__codelineno-22-84"></a>
+<a href="#__codelineno-22-85" id="__codelineno-22-85" name="__codelineno-22-85"></a>  }
+<a href="#__codelineno-22-86" id="__codelineno-22-86" name="__codelineno-22-86"></a>  views {
+<a href="#__codelineno-22-87" id="__codelineno-22-87" name="__codelineno-22-87"></a>   /* Overall system */
+<a href="#__codelineno-22-88" id="__codelineno-22-88" name="__codelineno-22-88"></a>    systemContext risk "EnterpriseView" "Practicalli Enterprise Application" {
+<a href="#__codelineno-22-89" id="__codelineno-22-89" name="__codelineno-22-89"></a>      include *
+<a href="#__codelineno-22-90" id="__codelineno-22-90" name="__codelineno-22-90"></a>      autoLayout
+<a href="#__codelineno-22-91" id="__codelineno-22-91" name="__codelineno-22-91"></a>    }
+<a href="#__codelineno-22-92" id="__codelineno-22-92" name="__codelineno-22-92"></a>   /* Entire Risk system */
+<a href="#__codelineno-22-93" id="__codelineno-22-93" name="__codelineno-22-93"></a>    container risk riskView "Complete Risk system" {
+<a href="#__codelineno-22-94" id="__codelineno-22-94" name="__codelineno-22-94"></a>      include *
+<a href="#__codelineno-22-95" id="__codelineno-22-95" name="__codelineno-22-95"></a>      autoLayout
+<a href="#__codelineno-22-96" id="__codelineno-22-96" name="__codelineno-22-96"></a>    }
+<a href="#__codelineno-22-97" id="__codelineno-22-97" name="__codelineno-22-97"></a>    /* View of shared_services group in risk system */
+<a href="#__codelineno-22-98" id="__codelineno-22-98" name="__codelineno-22-98"></a>    container risk sharedServicesView "Services shared across the organisation" {
+<a href="#__codelineno-22-99" id="__codelineno-22-99" name="__codelineno-22-99"></a>      include shared_services
+<a href="#__codelineno-22-100" id="__codelineno-22-100" name="__codelineno-22-100"></a>      autoLayout
+<a href="#__codelineno-22-101" id="__codelineno-22-101" name="__codelineno-22-101"></a>    }
+<a href="#__codelineno-22-102" id="__codelineno-22-102" name="__codelineno-22-102"></a>    /* View of fraud_risk group in risk system */
+<a href="#__codelineno-22-103" id="__codelineno-22-103" name="__codelineno-22-103"></a>    container risk fraudRiskView "Fraud Risk Services Only" {
+<a href="#__codelineno-22-104" id="__codelineno-22-104" name="__codelineno-22-104"></a>      include fraud
+<a href="#__codelineno-22-105" id="__codelineno-22-105" name="__codelineno-22-105"></a>      autoLayout
+<a href="#__codelineno-22-106" id="__codelineno-22-106" name="__codelineno-22-106"></a>    }
+<a href="#__codelineno-22-107" id="__codelineno-22-107" name="__codelineno-22-107"></a>    /* View of credit_risk group in risk system */
+<a href="#__codelineno-22-108" id="__codelineno-22-108" name="__codelineno-22-108"></a>    container risk creditRiskView "Credit Risk Services only" {
+<a href="#__codelineno-22-109" id="__codelineno-22-109" name="__codelineno-22-109"></a>      include credit
+<a href="#__codelineno-22-110" id="__codelineno-22-110" name="__codelineno-22-110"></a>      autoLayout
+<a href="#__codelineno-22-111" id="__codelineno-22-111" name="__codelineno-22-111"></a>    }
+<a href="#__codelineno-22-112" id="__codelineno-22-112" name="__codelineno-22-112"></a>    /* View of fraud &amp; shared_services group without credit */
+<a href="#__codelineno-22-113" id="__codelineno-22-113" name="__codelineno-22-113"></a>    container risk fraudSharedView "Fraud and shared services" {
+<a href="#__codelineno-22-114" id="__codelineno-22-114" name="__codelineno-22-114"></a>      include *
+<a href="#__codelineno-22-115" id="__codelineno-22-115" name="__codelineno-22-115"></a>      exclude credit
+<a href="#__codelineno-22-116" id="__codelineno-22-116" name="__codelineno-22-116"></a>      autoLayout
+<a href="#__codelineno-22-117" id="__codelineno-22-117" name="__codelineno-22-117"></a>    }
+<a href="#__codelineno-22-118" id="__codelineno-22-118" name="__codelineno-22-118"></a>    container transaction transactionView "Current Transaction system" {
+<a href="#__codelineno-22-119" id="__codelineno-22-119" name="__codelineno-22-119"></a>      include *
+<a href="#__codelineno-22-120" id="__codelineno-22-120" name="__codelineno-22-120"></a>      autoLayout
+<a href="#__codelineno-22-121" id="__codelineno-22-121" name="__codelineno-22-121"></a>    }
+<a href="#__codelineno-22-122" id="__codelineno-22-122" name="__codelineno-22-122"></a>
+<a href="#__codelineno-22-123" id="__codelineno-22-123" name="__codelineno-22-123"></a>    deployment risk "Production" "AmazonWebServicesDeployment" {
+<a href="#__codelineno-22-124" id="__codelineno-22-124" name="__codelineno-22-124"></a>      include *
+<a href="#__codelineno-22-125" id="__codelineno-22-125" name="__codelineno-22-125"></a>      autolayout lr
+<a href="#__codelineno-22-126" id="__codelineno-22-126" name="__codelineno-22-126"></a>      animation {
+<a href="#__codelineno-22-127" id="__codelineno-22-127" name="__codelineno-22-127"></a>        route53
+<a href="#__codelineno-22-128" id="__codelineno-22-128" name="__codelineno-22-128"></a>        elb
+<a href="#__codelineno-22-129" id="__codelineno-22-129" name="__codelineno-22-129"></a>        autoscalingGroup
+<a href="#__codelineno-22-130" id="__codelineno-22-130" name="__codelineno-22-130"></a>        webApplicationInstance
+<a href="#__codelineno-22-131" id="__codelineno-22-131" name="__codelineno-22-131"></a>        databaseInstance
+<a href="#__codelineno-22-132" id="__codelineno-22-132" name="__codelineno-22-132"></a>      }
+<a href="#__codelineno-22-133" id="__codelineno-22-133" name="__codelineno-22-133"></a>    }
+<a href="#__codelineno-22-134" id="__codelineno-22-134" name="__codelineno-22-134"></a>
+<a href="#__codelineno-22-135" id="__codelineno-22-135" name="__codelineno-22-135"></a>
+<a href="#__codelineno-22-136" id="__codelineno-22-136" name="__codelineno-22-136"></a>    /* Theme for views */
+<a href="#__codelineno-22-137" id="__codelineno-22-137" name="__codelineno-22-137"></a>    themes https://static.structurizr.com/themes/amazon-web-services-2022.04.30/theme.json
+<a href="#__codelineno-22-138" id="__codelineno-22-138" name="__codelineno-22-138"></a>
+<a href="#__codelineno-22-139" id="__codelineno-22-139" name="__codelineno-22-139"></a>    branding {
+<a href="#__codelineno-22-140" id="__codelineno-22-140" name="__codelineno-22-140"></a>      logo https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo.png
+<a href="#__codelineno-22-141" id="__codelineno-22-141" name="__codelineno-22-141"></a>    }
+<a href="#__codelineno-22-142" id="__codelineno-22-142" name="__codelineno-22-142"></a>  }
+<a href="#__codelineno-22-143" id="__codelineno-22-143" name="__codelineno-22-143"></a>}
+</code></pre></div>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">λ︎</a></h2>
+<ul>
+<li><a href="https://dev.to/simonbrown/diagrams-as-code-2-0-82k">Diagrams as Code 2.0</a> - Simon Brown, 2021.</li>
+<li><a href="https://dev.to/simonbrown/getting-started-with-structurizr-lite-27d0">Getting started with Structurizr Lite</a> - Simon Brown, 2021</li>
+<li><a href="https://structurizr.com/dsl?example=amazon-web-services">Structurizr DSL: AWS Example deployment</a></li>
+<li><a href="https://structurizr.com/dsl?example=big-bank-plc">Structurizr DSL: Big Bank</a></li>
+<li><a href="https://github.com/structurizr/dsl/tree/master/src/test/dsl">Structurizr/dsl code examples</a></li>
+<li><a href="https://github.com/structurizr/dsl/blob/master/src/test/dsl/amazon-web-services-local.dsl">Model example: Amazon Web Services local</a></li>
+</ul>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 15, 2023</span>
+</small>
+</div>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2023  Practicali <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://www.linkedin.com/in/jr0cket/" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+</a>
+<a class="md-social__link" href="https://clojurians.slack.com/messages/practicalli" rel="noopener" target="_blank" title="clojurians.slack.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"></path></svg>
+</a>
+<a class="md-social__link" href="https://twitter.com/practical_li" rel="noopener" target="_blank" title="twitter.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+</a>
+<a class="md-social__link" href="https://github.com/practicalli" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="https://hub.docker.com/u/practicalli" rel="noopener" target="_blank" title="hub.docker.com">
+<svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
