@@ -20,11 +20,22 @@ Convert any link into a button by adding `{ .md-button }` class names to end of 
 [link text](http://practical.li/blog){ .md-button target=_blank }
 ```
 
-[:octicons-heart-fill-24: Practicalli Blog](http://practical.li/blog){ .md-button .md-button-primary }
+Or specify a different class
 
-Add an icon to the button with fontawsome
+```
+[link text](http://practical.li/blog){ .md-button .md-button-primary }
+```
+
+Add an icon to the button 
 
 [:fontawesome-brands-github: Practicalli Issues](http://practical.li/blog){ .md-button .md-button-primary }
+[:octicons-heart-fill-24: Practicalli Blog](http://practical.li/blog){ .md-button .md-button-primary }
+
+```markdown
+[:fontawesome-brands-github: Practicalli Issues](http://practical.li/blog){ .md-button .md-button-primary }
+[:octicons-heart-fill-24: Practicalli Blog](http://practical.li/blog){ .md-button .md-button-primary }
+```
+
 
 
 ## YouTube video
@@ -183,8 +194,7 @@ Add an annotation using `# (1)` where 1 is the number of the annotation
 ls -la $HOME/Downloads  # (1)
 ```
 
-    1.  :woman_raising_hand: I'm a code annotation! I can contain `code`, __formatted text__, images, ... basically anything that can be written in Markdown.
-
+1.  :woman_raising_hand: I'm a code annotation! I can contain `code`, __formatted text__, images, ... basically anything that can be written in Markdown.
 
 
 Code blocks with annotation, add `!` after the annotation number to suppress the `#` character
@@ -197,9 +207,6 @@ Code blocks with annotation, add `!` after the annotation number to suppress the
   )
 ```
 1.  Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.
-
-
-GitHub action example with multiple annotations
 
 
 GitHub action example with multiple annotations
@@ -244,7 +251,6 @@ jobs:
 ### Highlight lines in code blocks
 
 `hl_lines="2"` where 2 is the line number to highlight
-
 
 ```clojure hl_lines="2"
 (defn my-function
