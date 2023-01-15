@@ -6,6 +6,8 @@ Define a single **model** divided into **softwareSystems** within which **servic
 
 Many views can be generated from the single model and changes to the model automatically update those views to ensure all views are always up to date.
 
+[Mock Fintech Starup - Practicalli Services](https://structurizr.com/share/79474){target=_blank .md-button}
+
 ## C4 Model summary
 
 * Level 1: **Software system** - a system context composed of one or more containers
