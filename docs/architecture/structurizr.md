@@ -386,6 +386,8 @@ ml_model = container "AWS Sagemaker" "Machine learning model service" "" "Amazon
 
 > TODO: Add theme element for Clojure Service, including clojure logo
 
+[Element style DSL reference](https://github.com/structurizr/dsl/blob/master/docs/language-reference.md#element-style){target=_blank .md-button}
+
 
 ## Organisation branding
 
