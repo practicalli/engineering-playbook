@@ -94,6 +94,16 @@ Change themes automatically to the given theme name (the theme must exist)
 kitty +kitten theme theme-name
 ```
 
+??? HINT "Themes used by Practicalli"
+    Practicalli uses the Gruvbox Material Light Soft as the light theme
+    ```shell
+    kitty +kitten themes Gruvbox Material Light Soft
+    ```
+    Practicalli uses Gruvbox Material Dark Soft as the dark theme
+    ```shell
+    kitty +kitten themes Gruvbox Material Dark Soft
+    ```
+
 The first time the theme kitten is run the following config is added to the `~.config/kitty/kitty.conf` file and the chosen theme configuration written to the  `~/.config/kitty/current-theme.conf` file
 
 This configuration shows the name of the theme, which is also in the top of the `current-theme.conf` file
