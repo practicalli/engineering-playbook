@@ -46,7 +46,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://practical.li/engineering-playbook/continuous-integration/github-workflow/</loc>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/github-actions/</loc>
+         <lastmod>2023-01-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/github-workflows/</loc>
          <lastmod>2023-01-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
