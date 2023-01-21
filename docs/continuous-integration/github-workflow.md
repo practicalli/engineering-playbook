@@ -33,6 +33,7 @@ For customised authentication or to  access to a different GitHub repository, cr
 | [Changelog Enforcer](https://github.com/marketplace/actions/changelog-enforcer)      | checks the CHANGELOG.md file has been updated for a pull request                                        |
 | [MegaLinter](https://github.com/marketplace/actions/megalinter)                      | verify code and configuration consistency                                                               |
 | [Setup reviewdog](https://github.com/marketplace/actions/setup-reviewdog)            | Setup reviewdog post review comments to pull requests, typically used with lint tools                   |
+| [Clojure lint](https://github.com/marketplace/actions/clojure-lint-action)           | clj-kondo lint with reviewdog comments added inline to pull request                                     |
 | [Setup java jdk](https://github.com/marketplace/actions/setup-java-jdk)              | setup up Java run-time environment (specify version, distribution, etc)                                 |
 | [Setup clojure](https://github.com/marketplace/actions/setup-clojure)                | Setup Clojure environment and common Clojure tools for quality (clj-kondo, cljstyle, unit testing, etc) |
 | [Setup go](https://github.com/marketplace/actions/setup-go-environment)              | sets up a Go language environment                                                                       |
