@@ -7,7 +7,8 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guides to common Engineering tasks" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/engineering-playbook/continuous-integration/github-workflows/" rel="canonical"/>
+<link href="https://practical.li/engineering-playbook/continuous-integration/github-workflow/" rel="canonical"/>
+<link href="../github-actions/" rel="prev"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>GitHub workflows - Practicalli Engineering Playbook</title>
@@ -21,15 +22,15 @@
 <meta content="website" property="og:type"/>
 <meta content="GitHub workflows - Practicalli Engineering Playbook" property="og:title"/>
 <meta content="Practical guides to common Engineering tasks" property="og:description"/>
-<meta content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/github-workflows.png" property="og:image"/>
+<meta content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/github-workflow.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/engineering-playbook/continuous-integration/github-workflows/" property="og:url"/>
+<meta content="https://practical.li/engineering-playbook/continuous-integration/github-workflow/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="GitHub workflows - Practicalli Engineering Playbook" name="twitter:title"/>
 <meta content="Practical guides to common Engineering tasks" name="twitter:description"/>
-<meta content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/github-workflows.png" name="twitter:image"/>
+<meta content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/github-workflow.png" name="twitter:image"/>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -247,8 +248,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../">Continuous Integration</a>
 <label for="__nav_5">
@@ -266,10 +267,53 @@
         GitHub Actions
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../github-workflow.md">
-        None
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          GitHub workflows
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        GitHub workflows
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backstageio">
+    Backstage.io
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#changelog-update-check">
+    Changelog Update Check
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clojure-lint-with-reviewdog">
+    Clojure Lint with Reviewdog
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#clojure-quality-check">
+    Clojure quality check
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#megalinter">
+    MegaLinter
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mkdocs-publisher">
+    mkdocs publisher
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
