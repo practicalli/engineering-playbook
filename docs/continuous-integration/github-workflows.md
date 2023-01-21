@@ -80,6 +80,62 @@ jobs:
           reporter: github-pr-review
 ```
 
+## Clojure quality check
+
+* clj-kondo syntax check for code and project configuration
+* cljstyle code format check
+* Kaocha unit test runner
+
+```yaml
+---
+name: "Clojure Quality Check"
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  tests:
+    name: "Clojure Quality Checks"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout code"
+        uses: actions/checkout@v3.0.2
+
+      - name: "Prepare Java runtime"
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: "Cache Clojure Dependencies"
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.m2/repository
+            ~/.gitlibs
+          key: clojure-deps-${{ hashFiles('**/deps.edn') }}
+          restore-keys: clojure-deps-
+
+      - name: "Install Clojure tools"
+        uses: DeLaGuardo/setup-clojure@7.0
+        with:
+          cli: 1.11.1.1165 # Clojure CLI
+          cljstyle: 0.15.0 # cljstyle
+          clj-kondo: 2022.10.05 # Clj-kondo
+          # bb: 0.7.8           # Babashka
+
+      - name: "Lint with clj-kondo"
+        run: clj-kondo --lint deps.edn src resources test --config .clj-kondo/config-ci.edn
+
+      - name: "Check Clojure Style"
+        run: cljstyle check --report
+
+      - name: "Kaocha test runner"
+        run: clojure -X:env/test:test/run
+```
 
 ## MegaLinter
 
