@@ -2,6 +2,32 @@
 
 GitHub workflows used by Practicalli
 
+## Backstage.io
+
+```yaml
+---
+# --- Validate Backstage.io configuration files ---#
+# https://github.com/marketplace/actions/backstage-entity-validator
+
+# trigger workflow if yaml files `.backstage/` directory updated
+name: Backstage Validator
+on:
+  pull_request:
+    paths:
+      - ".backstage/"
+
+jobs:
+  # Validate backstage configuration
+  backstage-validator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: RoadieHQ/backstage-entity-validator@v0.3.2
+        with:
+          path: ".backstage/*.yaml"
+```
+
+
 ## Changelog Update Check
 
 Check the CHANGELOG.md file has been updated for a pull request, providing a reminder to add a summary of changes for the pull request
