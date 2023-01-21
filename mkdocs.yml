@@ -29,6 +29,7 @@ nav:
       - Kitty Terminal: command-line/kitty-terminal.md
   - Continuous Integration:
       - continuous-integration/index.md
+      - continuous-integration/github-actions.md
       - continuous-integration/github-workflow.md
 
 # Theme and styling
