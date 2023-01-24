@@ -66,7 +66,7 @@ Guides to development tools & workflows for specific programming languages, incl
 
 [Contributions are welcome via GitHub issues and pull requests](introduction/contributing.md), or discuss the book on the Clojurians Slack community.
 
-[![Join the conversation on Clojurians Slack](images/practicalli-slack-channel.png)](https://clojurians.slack.com/messages/practicalli)
+[Join the conversation on Clojurians Slack](https://clojurians.slack.com/messages/practicalli){target=_blank .md-button}
 
 Get a [free Clojurians slack community account](https://clojurians.net/)
 
