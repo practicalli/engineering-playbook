@@ -6,6 +6,10 @@ Define a single **model** divided into **softwareSystems** within which **servic
 
 Many views can be generated from the single model and changes to the model automatically update those views to ensure all views are always up to date.
 
+![Mock Fintech Startup - Fraud service deployment view](https://raw.githubusercontent.com/practicalli/graphic-design/live/architecture/structurizr-fintech-aws-deployment-fraud.png "")
+
+> Colours of exported SVG image enhanced using [Inkscape.org](https://inkscape.org) and exported as PNG file
+
 [Mock Fintech Starup - Practicalli Services](https://structurizr.com/share/79474){target=_blank .md-button}
 
 ## C4 Model summary
@@ -235,7 +239,6 @@ risk = softwareSystem "Risk" {
     detection_data = container "Fraud Database" "TODO: Define the kind of data persisted" "Relational database schema" "Database"
     ml_model = container "Machine learning model service" "Sagemaker"
     feature_store_data = container "Feature store" "Pre-calculated feature values" "Key value database" "Database"
-    feature_schema_data = container "Feature mapping model/entity" "" "Key value database" "Database"
     manual_review = container "Review Transactions" "Manually review transactions for fraud" "" "WebBrowser"
   }
 }
@@ -253,15 +256,16 @@ service_name -> service_or_datastore_name "Description of connection"
 The relationships are used to draw connections between services and the descriptions name those connections
 
 ```
-// Fraud Detection
-fraud_service -> risky "Request external risk data"
-fraud_service -> jarvis "Reads schufa attributes"
-fraud_service -> watson_database "Reads and writes to"
-fraud_service -> fraud_database "Reads and writes to"
-fraud_service -> fraud_model_api "score order"
-fraud_model_api -> machine_learning_model_service "request model"
-fraud_model_api -> feature_store_database "Collect features"
-fraud_model_api -> feature_schema_database "Request feature set & model"
+    user -> transaction "Triggers"
+
+    transaction -> risk "Uses"
+    guardian -> guardian_data "Persists"
+    guardian -> limiter "Uses"
+
+    detection -> detection_data "Reads and writes to"
+    detection -> ml_model "score transaction"
+    ml_model -> feature_store_data "Collect features"
+    ml_model -> feature_schema_data "Request feature set & model"
 ```
 
 
@@ -291,6 +295,36 @@ exclude credit_risk
 autoLayout
 ```
 
+## Deployment Infrastructure
+
+An example of production deployment environment for the Practicall Mock Fintech Startup
+
+```
+  production = deploymentEnvironment "Production" {
+    aws = deploymentNode "Amazon Web Services" "" "" "Amazon Web Services - Cloud" {
+      region = deploymentNode "US-East-1" "" "" "Amazon Web Services - Region" {
+        route53 = infrastructureNode "Route 53" "" "" "Amazon Web Services - Route 53"
+        elb = infrastructureNode "Elastic Load Balancer" "" "" "Amazon Web Services - Elastic Load Balancing"
+        autoscalingGroup = deploymentNode "Autoscaling group" "" "" "Amazon Web Services - Auto Scaling" {
+          ec2 = deploymentNode "Amazon EC2" "" "" "Amazon Web Services - EC2" {
+
+            webApplicationInstance = containerInstance detection
+            elb -> webApplicationInstance "Forwards requests to" "HTTPS"
+          }
+        }
+        rds = deploymentNode "Amazon RDS" "" "" "Amazon Web Services - RDS" {
+          mysql = deploymentNode "MySQL" "" "" "Amazon Web Services - RDS MySQL instance" {
+            databaseInstance = containerInstance detection_data
+          }
+        }
+        route53 -> elb "Forward requests to" "HTTPS"
+      }
+    }
+  }
+```
+
+
+
 ## Embedding Documentaion in views
 
 Create a directory called `docs` to contain markdown files with system descriptions.
@@ -314,6 +348,67 @@ views {
             autoLayout
         }
 ```
+
+??? EXAMPLE "Example views from Mock Fintech Startup"
+    Views defined in the Practicalli Enterpirse for the Mock Fintech Startup architecture
+    ```
+      views {
+       /* Overall system */
+        systemContext risk "EnterpriseView" "Practicalli Enterprise Application" {
+          include *
+          autoLayout
+        }
+       /* Entire Risk system */
+        container risk riskView "Complete Risk system" {
+          include *
+          autoLayout
+        }
+        /* View of shared_services group in risk system */
+        container risk sharedServicesView "Services shared across the organisation" {
+          include shared_services
+          autoLayout
+        }
+        /* View of fraud_risk group in risk system */
+        container risk fraudRiskView "Fraud Risk Services Only" {
+          include fraud
+          autoLayout
+        }
+        /* View of credit_risk group in risk system */
+        container risk creditRiskView "Credit Risk Services only" {
+          include credit
+          autoLayout
+        }
+        /* View of fraud & shared_services group without credit */
+        container risk fraudSharedView "Fraud and shared services" {
+          include *
+          exclude credit
+          autoLayout
+        }
+        container transaction transactionView "Current Transaction system" {
+          include *
+          autoLayout
+        }
+
+        deployment risk "Production" "AmazonWebServicesDeployment" {
+          include *
+          autolayout lr
+          animation {
+            route53
+            elb
+            autoscalingGroup
+            webApplicationInstance
+            databaseInstance
+          }
+        }
+
+        /* Theme for views */
+        themes default https://static.structurizr.com/themes/amazon-web-services-2022.04.30/theme.json https://raw.githubusercontent.com/practicalli/structurizr/main/themes/practicalli/theme.json
+
+        branding {
+          logo https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo.png
+        }
+      }
+    ```
 
 
 ## Adding themes
@@ -384,11 +479,63 @@ ml_model = container "AWS Sagemaker" "Machine learning model service" "" "Amazon
     * Amazon Web Services - Single Sign On
     * Amazon Web Services - Virtual Private Cloud
 
-### Custom Theme
+## Custom Theme
 
-> TODO: Add theme element for Clojure Service, including clojure logo
+Create a theme as a `.json` file that containes a collection of definitions within `"elements": [ ]`
+
+Each element should define the `"tag"` name used in the view definition to identify the type of element to use.
+
+The look of the element is defined by `"colour"`, `"background"`, `"stroke"` hex color values and a `"shape"` type, e.g. `"RoundedBox"`, `"Cylinder"`
+
+Include an `"icon"` as a further visual representation of the element, e.g. using AWS theme icons.
 
 [Element style DSL reference](https://github.com/structurizr/dsl/blob/master/docs/language-reference.md#element-style){target=_blank .md-button}
+[Practicalli Structurizr theme](https://github.com/practicalli/structurizr/blob/main/themes/practicalli/theme.json){target=_blank .md-button}
+
+??? EXAMPLE "Practicalli Custom theme and AWS theme"
+    ```structurizr title="practicalli/structurizr theme/practicalli/theme.json
+    {
+      "name" : "Practicalli theme",
+      "elements" : [ {
+        "tag" : "Clojure Service",
+        "background" : "#8FB5FE",
+        "color" : "#EEECE6",
+        "stroke" : "#5881D8",
+        "shape" : "RoundedBox",
+        "icon" : "https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/clojure-logo-64.png"
+      } , {
+        "tag" : "Database",
+        "background" : "#EEECE6",
+        "color" : "#3f51d4",
+        "stroke" : "#3f51d4",
+        "shape" : "Cylinder",
+        "icon" : "https://static.structurizr.com/themes/amazon-web-services-2022.04.30/Arch_Amazon-RDS_48.png"
+      } , {
+        "tag" : "Web Browser",
+        "shape" : "WebBrowser"
+      } , {
+        "tag" : "AWS SageMaker",
+        "background" : "#EEECE6",
+        "stroke" : "#2d8f7a",
+        "color" : "#2d8f7a",
+        "icon" : "https://static.structurizr.com/themes/amazon-web-services-2022.04.30/Arch_Amazon-SageMaker_48.png"
+      } ]
+    }
+    ```
+
+[Practicalli Structurizr theme](https://github.com/practicalli/structurizr/blob/main/themes/practicalli/theme.json){target=_blank} provides `Clojure Service`, `Database`, `Web Browser` and `AWS SageMaker` tags to customise the views generated.
+
+The `Database` tag uses the icon from the AWS theme, although changes colors and shape to improve readability of the diagrams. The `AWS SageMaker` tag overrides that provided by AWS theme, again improving the readability of the diagrams.
+
+The Mock Fintect Startup example uses a custom theme by Practicalli and the standard AWS theme.  It also includes the Practicalli Logo that appears next to the name of the view in each diagram
+
+```structurizr title="practicalli/structurizr model/workspace.dsl extract"
+themes default https://static.structurizr.com/themes/amazon-web-services-2022.04.30/theme.json https://raw.githubusercontent.com/practicalli/structurizr/main/themes/practicalli/theme.json
+
+branding {
+  logo https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo.png
+}
+    ```
 
 
 ## Organisation branding
@@ -403,6 +550,14 @@ Define a `branding` section in the **workspace** > **views** section of the `wor
 branding {
     logo <file|url>
     font <name> [url]
+}
+```
+
+Practicalli uses the following branding in the structurizr `workspace.dsl`
+
+```structurizr title="practicalli/structurizr model/workspace.dsl extract"
+branding {
+  logo https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo.png
 }
 ```
 
@@ -423,160 +578,29 @@ branding {
 
 ## Practicalli System
 
-The Practicalli configuration is defined as workspace that contains a model with an enterprise "Practicalli" key defining the high-level software systems
+The [Practicalli Mock Fintech Startup](https://github.com/practicalli/structurizr/blob/main/themes/practicalli/theme.json) is defined as workspace that contains a model with an enterprise "Practicalli" key defining the high-level software systems
 
 * Credit Assesment
 * Risk Analysis
 * Transactions (credit card, National bank deposit/transfer, BACS)
 * Shared Services (account management, etc)
 
+A simple mock up of a Fintech managing transactions that may be susceptible to various risks, including fraud
 
-```
-/*
-  Practicalli Architecture
-*/
+[Practicalli Structurizr project - Mock Fintech Startup](https://github.com/practicalli/structurizr){target=_blank .md-button}
 
-/* Constant values */
-!constant ORGANISATION_NAME "Practicalli"
-!constant GROUP_NAME "Fintech"
+`workspace.dsl` defined a Practicalli Enterprise with several softwareSystem defintions, each representing aspects of the business
 
-workspace "Workspace name" "Wokspace title"{
+Each softwareSystem is composed of containers that represent a logical service and related containers are grouped together
 
-  model {
-    practicalli = enterprise "${ORGANISATION_NAME} - ${GROUP_NAME}" {
+Relationships between containers are defined, stating the direction and relationship name, represented as arrows in the model views
 
-      user = person "User"
+`workspace.dsl` also contains a deploymentEnvironment for production, defining the infrastructure that containers are deployed into
 
-      risk = softwareSystem "Risk" {
-        shared_services = group "Shared Services Risk" {
-          company_info = container "Company WhoIs" "Company search service" "Clojure API"
-          company_info_database = container "Company WhoIs database" "" "Relational database schema" "Database"
-          company_info_search = container "Company Search Aggregator" "Company full-text search index" "Elastic Search" "Elastic"
-          risk_data_providers = container "Risk Data Providers" "Data Provider Service" "PHP Symphony service"
-          risk_data_providers_database = container "Risk Data" "" "Relational database schema" "Database"
-        }
-        credit = group "Credit Risk" {
-          score = container "Credit risk scoring" "Scoring organizations Credit Risk" "Clojure Service"
-          score_data = container "Credit Risk Scoring Service database" "" "Relational database schema" "DatabaseWip"
-          assessment = container "Credit Assessment" "Credit risk assessment Service" "Clojure"
-        }
+A range of views are defined, using include and exclude options to refine the containers that are shown
 
-        fraud = group "Fraud Risk" {
-          detection = container "Fraud Service" "Detect fraudulent transactions via Fraud Scoring Data Science models " "Clojure API"
-          detection_data = container "Fraud Database" "TODO: Define the kind of data persisted" "Relational database schema" "Database"
-          ml_model = container "AWS Sagemaker" "Machine learning model service" "" "Amazon Web Services - SageMaker"
-          feature_store_data = container "Feature store" "Pre-calculated feature values" "Key value database" "Database"
-          feature_schema_data = container "Feature mapping model/entity" "" "Key value database" "Database"
-          manual_review = container "Review Transactions" "Manually review transactions for fraud" "" "WebBrowser"
-        }
-      }
+Practicalli Structurizr custom theme and AWS theme are included, along with Practicalli logo in the branding
 
-      transaction = softwareSystem "Transaction" {
-        guardian = container "Transaction Guardian" "Transaction monitoring and transaction Screening service" "Clojure"
-        guardian_data = container "Transaction Guardian Database" "" "Relational database schema" "Database"
-        limiter = container "Limiter" "Limits Service" "ClojureKafka"
-      }
-
-    /* Define Relationships between components */
-    user -> transaction "Triggers"
-
-    transaction -> risk "Uses"
-    guardian -> guardian_data "Persists"
-    guardian -> limiter "Uses"
-
-    detection -> detection_data "Reads and writes to"
-    detection -> ml_model "score transaction"
-    ml_model -> feature_store_data "Collect features"
-    ml_model -> feature_schema_data "Request feature set & model"
-
-    }
-
-  /* Deployment / Infrastructure */
-
-  production = deploymentEnvironment "Production" {
-    aws = deploymentNode "Amazon Web Services" "" "" "Amazon Web Services - Cloud" {
-      region = deploymentNode "US-East-1" "" "" "Amazon Web Services - Region" {
-        route53 = infrastructureNode "Route 53" "" "" "Amazon Web Services - Route 53"
-        elb = infrastructureNode "Elastic Load Balancer" "" "" "Amazon Web Services - Elastic Load Balancing"
-        autoscalingGroup = deploymentNode "Autoscaling group" "" "" "Amazon Web Services - Auto Scaling" {
-          ec2 = deploymentNode "Amazon EC2" "" "" "Amazon Web Services - EC2" {
-
-            webApplicationInstance = containerInstance detection
-            elb -> webApplicationInstance "Forwards requests to" "HTTPS"
-          }
-        }
-        rds = deploymentNode "Amazon RDS" "" "" "Amazon Web Services - RDS" {
-          mysql = deploymentNode "MySQL" "" "" "Amazon Web Services - RDS MySQL instance" {
-            databaseInstance = containerInstance detection_data
-          }
-        }
-        route53 -> elb "Forwards requests to" "HTTPS"
-      }
-    }
-  }
- /* End Of Production Deployment Environment */
-
-  }
-  views {
-   /* Overall system */
-    systemContext risk "EnterpriseView" "Practicalli Enterprise Application" {
-      include *
-      autoLayout
-    }
-   /* Entire Risk system */
-    container risk riskView "Complete Risk system" {
-      include *
-      autoLayout
-    }
-    /* View of shared_services group in risk system */
-    container risk sharedServicesView "Services shared across the organisation" {
-      include shared_services
-      autoLayout
-    }
-    /* View of fraud_risk group in risk system */
-    container risk fraudRiskView "Fraud Risk Services Only" {
-      include fraud
-      autoLayout
-    }
-    /* View of credit_risk group in risk system */
-    container risk creditRiskView "Credit Risk Services only" {
-      include credit
-      autoLayout
-    }
-    /* View of fraud & shared_services group without credit */
-    container risk fraudSharedView "Fraud and shared services" {
-      include *
-      exclude credit
-      autoLayout
-    }
-    container transaction transactionView "Current Transaction system" {
-      include *
-      autoLayout
-    }
-
-    deployment risk "Production" "AmazonWebServicesDeployment" {
-      include *
-      autolayout lr
-      animation {
-        route53
-        elb
-        autoscalingGroup
-        webApplicationInstance
-        databaseInstance
-      }
-    }
-
-
-    /* Theme for views */
-    themes https://static.structurizr.com/themes/amazon-web-services-2022.04.30/theme.json
-
-    branding {
-      logo https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo.png
-    }
-  }
-}
-
-```
 
 
 ## Resources
