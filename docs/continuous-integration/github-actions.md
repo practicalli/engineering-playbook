@@ -17,7 +17,7 @@ GitHub automatically creates a token that GitHub actions can use to make an auth
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-For customised authentication or to  access to a different GitHub repository, create a developer token and save it as a user or organisation secret.
+For customised authentication or access to a different GitHub repository, create a developer token and save it as a [user or organisation secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 
 
 
