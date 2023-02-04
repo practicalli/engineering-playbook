@@ -277,6 +277,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#organisation-branding">
+    Organisation branding
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#comments">
     Comments
   </a>
@@ -444,6 +449,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="#custom-theme">
     Custom Theme
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#organisation-branding">
+    Organisation branding
   </a>
 </li>
 <li class="md-nav__item">
@@ -856,71 +866,64 @@ also be included or excluded from a view</p>
 <a class="md-button" href="https://github.com/practicalli/structurizr/blob/main/themes/practicalli/theme.json" target="_blank">Practicalli Structurizr theme</a></p>
 <details class="example">
 <summary>Practicalli Custom theme and AWS theme</summary>
-<p><code>structurizr title="practicalli/structurizr theme/practicalli/theme.json
-{
-  "name" : "Practicalli theme",
-  "elements" : [ {
-    "tag" : "Clojure Service",
-    "background" : "#8FB5FE",
-    "color" : "#EEECE6",
-    "stroke" : "#5881D8",
-    "shape" : "RoundedBox",
-    "icon" : "https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/clojure-logo-64.png"
-  } , {
-    "tag" : "Database",
-    "background" : "#EEECE6",
-    "color" : "#3f51d4",
-    "stroke" : "#3f51d4",
-    "shape" : "Cylinder",
-    "icon" : "https://static.structurizr.com/themes/amazon-web-services-2022.04.30/Arch_Amazon-RDS_48.png"
-  } , {
-    "tag" : "Web Browser",
-    "shape" : "WebBrowser"
-  } , {
-    "tag" : "AWS SageMaker",
-    "background" : "#EEECE6",
-    "stroke" : "#2d8f7a",
-    "color" : "#2d8f7a",
-    "icon" : "https://static.structurizr.com/themes/amazon-web-services-2022.04.30/Arch_Amazon-SageMaker_48.png"
-  } ]
-}</code></p>
+<div class="highlight"><span class="filename">practicalli/structurizr theme/practicalli/theme.json</span><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>{
+<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a>  "name" : "Practicalli theme",
+<a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a>  "elements" : [ {
+<a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a>    "tag" : "Clojure Service",
+<a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a>    "background" : "#8FB5FE",
+<a href="#__codelineno-22-6" id="__codelineno-22-6" name="__codelineno-22-6"></a>    "color" : "#EEECE6",
+<a href="#__codelineno-22-7" id="__codelineno-22-7" name="__codelineno-22-7"></a>    "stroke" : "#5881D8",
+<a href="#__codelineno-22-8" id="__codelineno-22-8" name="__codelineno-22-8"></a>    "shape" : "RoundedBox",
+<a href="#__codelineno-22-9" id="__codelineno-22-9" name="__codelineno-22-9"></a>    "icon" : "https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/clojure-logo-64.png"
+<a href="#__codelineno-22-10" id="__codelineno-22-10" name="__codelineno-22-10"></a>  } , {
+<a href="#__codelineno-22-11" id="__codelineno-22-11" name="__codelineno-22-11"></a>    "tag" : "Database",
+<a href="#__codelineno-22-12" id="__codelineno-22-12" name="__codelineno-22-12"></a>    "background" : "#EEECE6",
+<a href="#__codelineno-22-13" id="__codelineno-22-13" name="__codelineno-22-13"></a>    "color" : "#3f51d4",
+<a href="#__codelineno-22-14" id="__codelineno-22-14" name="__codelineno-22-14"></a>    "stroke" : "#3f51d4",
+<a href="#__codelineno-22-15" id="__codelineno-22-15" name="__codelineno-22-15"></a>    "shape" : "Cylinder",
+<a href="#__codelineno-22-16" id="__codelineno-22-16" name="__codelineno-22-16"></a>    "icon" : "https://static.structurizr.com/themes/amazon-web-services-2022.04.30/Arch_Amazon-RDS_48.png"
+<a href="#__codelineno-22-17" id="__codelineno-22-17" name="__codelineno-22-17"></a>  } , {
+<a href="#__codelineno-22-18" id="__codelineno-22-18" name="__codelineno-22-18"></a>    "tag" : "Web Browser",
+<a href="#__codelineno-22-19" id="__codelineno-22-19" name="__codelineno-22-19"></a>    "shape" : "WebBrowser"
+<a href="#__codelineno-22-20" id="__codelineno-22-20" name="__codelineno-22-20"></a>  } , {
+<a href="#__codelineno-22-21" id="__codelineno-22-21" name="__codelineno-22-21"></a>    "tag" : "AWS SageMaker",
+<a href="#__codelineno-22-22" id="__codelineno-22-22" name="__codelineno-22-22"></a>    "background" : "#EEECE6",
+<a href="#__codelineno-22-23" id="__codelineno-22-23" name="__codelineno-22-23"></a>    "stroke" : "#2d8f7a",
+<a href="#__codelineno-22-24" id="__codelineno-22-24" name="__codelineno-22-24"></a>    "color" : "#2d8f7a",
+<a href="#__codelineno-22-25" id="__codelineno-22-25" name="__codelineno-22-25"></a>    "icon" : "https://static.structurizr.com/themes/amazon-web-services-2022.04.30/Arch_Amazon-SageMaker_48.png"
+<a href="#__codelineno-22-26" id="__codelineno-22-26" name="__codelineno-22-26"></a>  } ]
+<a href="#__codelineno-22-27" id="__codelineno-22-27" name="__codelineno-22-27"></a>}
+</code></pre></div>
 </details>
 <p><a href="https://github.com/practicalli/structurizr/blob/main/themes/practicalli/theme.json" target="_blank">Practicalli Structurizr theme</a> provides <code>Clojure Service</code>, <code>Database</code>, <code>Web Browser</code> and <code>AWS SageMaker</code> tags to customise the views generated.</p>
 <p>The <code>Database</code> tag uses the icon from the AWS theme, although changes colors and shape to improve readability of the diagrams. The <code>AWS SageMaker</code> tag overrides that provided by AWS theme, again improving the readability of the diagrams.</p>
 <p>The Mock Fintect Startup example uses a custom theme by Practicalli and the standard AWS theme.  It also includes the Practicalli Logo that appears next to the name of the view in each diagram</p>
-<p><div class="highlight"><span class="filename">practicalli/structurizr model/workspace.dsl extract</span><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>themes default https://static.structurizr.com/themes/amazon-web-services-2022.04.30/theme.json https://raw.githubusercontent.com/practicalli/structurizr/main/themes/practicalli/theme.json
-<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a>
-<a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a>branding {
-<a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a>  logo https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo.png
-<a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a>}
-<a href="#__codelineno-22-6" id="__codelineno-22-6" name="__codelineno-22-6"></a>    ```
-<a href="#__codelineno-22-7" id="__codelineno-22-7" name="__codelineno-22-7"></a>
-<a href="#__codelineno-22-8" id="__codelineno-22-8" name="__codelineno-22-8"></a>
-<a href="#__codelineno-22-9" id="__codelineno-22-9" name="__codelineno-22-9"></a>## Organisation branding
-<a href="#__codelineno-22-10" id="__codelineno-22-10" name="__codelineno-22-10"></a>
-<a href="#__codelineno-22-11" id="__codelineno-22-11" name="__codelineno-22-11"></a>Add a PNG or Jpeg graphic as a logo on all diagrams, appearing in the bottom left of each page
-<a href="#__codelineno-22-12" id="__codelineno-22-12" name="__codelineno-22-12"></a>
-<a href="#__codelineno-22-13" id="__codelineno-22-13" name="__codelineno-22-13"></a>Define a specific font to use for all text in the digram (font downloaded from Google Fonts)
-<a href="#__codelineno-22-14" id="__codelineno-22-14" name="__codelineno-22-14"></a>
-<a href="#__codelineno-22-15" id="__codelineno-22-15" name="__codelineno-22-15"></a>Define a `branding` section in the **workspace** &gt; **views** section of the `workspace.dsl` file.
-</code></pre></div>
-branding {
-    logo <file|url>
-    font <name> [url]
-}
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a>Practicalli uses the following branding in the structurizr `workspace.dsl`
+<div class="highlight"><span class="filename">practicalli/structurizr model/workspace.dsl extract</span><pre><span></span><code><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a>themes default https://static.structurizr.com/themes/amazon-web-services-2022.04.30/theme.json https://raw.githubusercontent.com/practicalli/structurizr/main/themes/practicalli/theme.json
 <a href="#__codelineno-23-2" id="__codelineno-23-2" name="__codelineno-23-2"></a>
-<a href="#__codelineno-23-3" id="__codelineno-23-3" name="__codelineno-23-3"></a>```structurizr title="practicalli/structurizr model/workspace.dsl extract"
-<a href="#__codelineno-23-4" id="__codelineno-23-4" name="__codelineno-23-4"></a>branding {
-<a href="#__codelineno-23-5" id="__codelineno-23-5" name="__codelineno-23-5"></a>  logo https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo.png
-<a href="#__codelineno-23-6" id="__codelineno-23-6" name="__codelineno-23-6"></a>}
-</code></pre></div></name></file|url></p>
+<a href="#__codelineno-23-3" id="__codelineno-23-3" name="__codelineno-23-3"></a>branding {
+<a href="#__codelineno-23-4" id="__codelineno-23-4" name="__codelineno-23-4"></a>  logo https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo.png
+<a href="#__codelineno-23-5" id="__codelineno-23-5" name="__codelineno-23-5"></a>}
+</code></pre></div>
+<h2 id="organisation-branding">Organisation branding<a class="headerlink" href="#organisation-branding" title="Permanent link">λ︎</a></h2>
+<p>Add a PNG or Jpeg graphic as a logo on all diagrams, appearing in the bottom left of each page</p>
+<p>Define a specific font to use for all text in the digram (font downloaded from Google Fonts)</p>
+<p>Define a <code>branding</code> section in the <strong>workspace</strong> &gt; <strong>views</strong> section of the <code>workspace.dsl</code> file.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a>branding {
+<a href="#__codelineno-24-2" id="__codelineno-24-2" name="__codelineno-24-2"></a>    logo &lt;file|url&gt;
+<a href="#__codelineno-24-3" id="__codelineno-24-3" name="__codelineno-24-3"></a>    font &lt;name&gt; [url]
+<a href="#__codelineno-24-4" id="__codelineno-24-4" name="__codelineno-24-4"></a>}
+</code></pre></div>
+<p>Practicalli uses the following branding in the structurizr <code>workspace.dsl</code></p>
+<div class="highlight"><span class="filename">practicalli/structurizr model/workspace.dsl extract</span><pre><span></span><code><a href="#__codelineno-25-1" id="__codelineno-25-1" name="__codelineno-25-1"></a>branding {
+<a href="#__codelineno-25-2" id="__codelineno-25-2" name="__codelineno-25-2"></a>  logo https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo.png
+<a href="#__codelineno-25-3" id="__codelineno-25-3" name="__codelineno-25-3"></a>}
+</code></pre></div>
 <h2 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">λ︎</a></h2>
 <p><code>/* */</code> for line comments.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a>/* single-line comment */
-<a href="#__codelineno-24-2" id="__codelineno-24-2" name="__codelineno-24-2"></a>/*
-<a href="#__codelineno-24-3" id="__codelineno-24-3" name="__codelineno-24-3"></a>    multi-line comment
-<a href="#__codelineno-24-4" id="__codelineno-24-4" name="__codelineno-24-4"></a>*/
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-26-1" id="__codelineno-26-1" name="__codelineno-26-1"></a>/* single-line comment */
+<a href="#__codelineno-26-2" id="__codelineno-26-2" name="__codelineno-26-2"></a>/*
+<a href="#__codelineno-26-3" id="__codelineno-26-3" name="__codelineno-26-3"></a>    multi-line comment
+<a href="#__codelineno-26-4" id="__codelineno-26-4" name="__codelineno-26-4"></a>*/
 </code></pre></div>
 <blockquote>
 <p>Note: line comments within parens or directly after a closing paren cause syntax error</p>
@@ -955,7 +958,7 @@ branding {
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 3, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 4, 2023</span>
 </small>
 </div>
 </article>
