@@ -495,7 +495,7 @@ Include an `"icon"` as a further visual representation of the element, e.g. usin
 [Practicalli Structurizr theme](https://github.com/practicalli/structurizr/blob/main/themes/practicalli/theme.json){target=_blank .md-button}
 
 ??? EXAMPLE "Practicalli Custom theme and AWS theme"
-    ```structurizr title="practicalli/structurizr theme/practicalli/theme.json
+    ```structurizr title="practicalli/structurizr theme/practicalli/theme.json"
     {
       "name" : "Practicalli theme",
       "elements" : [ {
@@ -537,7 +537,7 @@ themes default https://static.structurizr.com/themes/amazon-web-services-2022.04
 branding {
   logo https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo.png
 }
-    ```
+```
 
 
 ## Organisation branding
@@ -548,7 +548,7 @@ Define a specific font to use for all text in the digram (font downloaded from G
 
 Define a `branding` section in the **workspace** > **views** section of the `workspace.dsl` file.
 
-```
+```structurizr
 branding {
     logo <file|url>
     font <name> [url]
