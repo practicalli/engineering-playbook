@@ -12,26 +12,6 @@ edit_uri: https://github.com/practicalli/engineering-playbook/edit/main/docs/
 # remote_name: origin
 remote_branch: gh-pages # deployment branch
 
-# Navigation
-nav:
-  - Overview:
-      - index.md
-      - Contributing: introduction/contributing.md
-      - Writing Tips: introduction/writing-tips.md
-  - Architecture:
-      - architecture/index.md
-      - Structurizr: architecture/structurizr.md
-  - Code Quality:
-      - code-quality/index.md
-      - code-quality/megalinter.md
-  - Command Line:
-      - command-line/index.md
-      - Kitty Terminal: command-line/kitty-terminal.md
-  - Continuous Integration:
-      - continuous-integration/index.md
-      - continuous-integration/github-actions.md
-      - continuous-integration/github-workflow.md
-
 # Theme and styling
 theme:
   name: material
@@ -136,3 +116,32 @@ extra:
       link: https://github.com/practicalli
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/practicalli
+
+# Navigation
+nav:
+  - Overview:
+      - index.md
+      - Contributing: introduction/contributing.md
+      - Writing Tips: introduction/writing-tips.md
+  - Architecture:
+      - architecture/index.md
+      - Structurizr: architecture/structurizr.md
+  - Build tool:
+      - build-tool/index.md
+      - build-tool/make.md
+  - Code Quality:
+      - code-quality/index.md
+      - code-quality/megalinter.md
+  - Command Line:
+      - command-line/index.md
+      - Kitty Terminal: command-line/kitty-terminal.md
+  - Continuous Integration:
+      - continuous-integration/index.md
+      - continuous-integration/github-actions.md
+      - continuous-integration/github-workflow.md
+  - Documentation:
+      - documentation/index.md
+      - documentation/site-generator/mkdocs.md
+  - Version Control:
+      - version-control/index.md
+      - version-control/git-client-configuration.md
