@@ -10,9 +10,9 @@ MegaLinter is an Open-Source tool for CI/CD workflows that analyses the consiste
     MegaLinter run via a GitHub workflow has no requirements
 
 
-## GitHub Action Workflow
+## GitHub Workflow
 
-Create a `.github/workflows/mega-linter.yml` configuration and commit to the source code repository.
+Create a `.github/workflows/megalinter.yaml` configuration and commit to the source code repository.
 
 The MegaLinter Installation : GitHub Action provides a working example
 
@@ -42,7 +42,7 @@ env:
     [MegaLinter Configuration](https://megalinter.io/latest/installation/#github-action) provides a detailed breakdown of the configuration options
 
 
-## MegaLinter Local Configuration
+## Local Configuration
 
 Create a configuration for a specific project using the MegaLinter runner command in the root of the project directory
 
@@ -54,18 +54,17 @@ npx mega-linter-runner --install
 `.mega-linter.yml` file is created at the root of the project. Review the file and ensure it has the Linters required See MegaLinter Configuration for a breakdown of the configuration
 
 
-## Run locally with mega-linter-runner
+## Run Locally
 
 Install the MegaLinter for use across any project
 
-```
+```shell
 npm install mega-linter-runner -g
 ```
 
-
 Run the MegaLinter runner (initial run will be slow as the MegaLinter docker image downloads and is cached)
 
-```
+```shell
 mega-linter-runner
 ```
 
@@ -97,10 +96,10 @@ Fraud API service contains a mega-linter.yml configuration file for running DOCK
 
 ### Configuring Linters
 
-ENABLE or DISABLE specific linter groups DOCKERFILE, MAKEFILE, etc. or specific tools within a linter category, e.g. DISABLE the devskim tool  in the Repository linter category, REPOSITORY_DEVSKIM
+`ENABLE` or `DISABLE` specific linter groups DOCKERFILE, MAKEFILE, etc. or specific tools within a linter category, e.g. DISABLE the devskim tool  in the Repository linter category, REPOSITORY_DEVSKIM
 Enabling specific Linters will disable all other linters that are not in the list
 
-```
+```shell
 # Linters
 # ENABLE specific linters, all other linters automatically disabled
 ENABLE:CLOJURE,DOCKERFILE,MAKEFILE,MARKDOWN,YAML
@@ -110,7 +109,7 @@ The list format seems to cause errors in GitHub actions workflow configuration, 
 
 Pass configuration to the linter tools. Most tools have their configuration files and the default location is defined on the specific page for that tool.
 
-```
+```shell
 # Linter specific configuration
 CLOJURE_CLJ_KONDO_CONFIG_FILE: ".clj-kondo/config-ci.edn"
 CLOJURE_CLJ_KONDO_FILTER_REGEX_EXCLUDE: "dev"
@@ -119,7 +118,7 @@ MARKDOWN_MARKDOWN_LINK_CHECK_CONFIG_FILE: ".github/linters/markdown link-check.j
 
 Disable Linters and specific tools (features)
 
-```
+```shell
 # Explicitly disable linters to ensure they are never run
 DISABLE:
  - COPYPASTE # checks for excessive copy-pastes
