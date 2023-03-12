@@ -2,7 +2,7 @@
 
 Source contend and generated static content for the Practicalli Engineering Playbooks book.
 
-The book provides a collection of plays that detail common tasks undertaken by Engineers 
+The book provides a collection of plays that detail common tasks undertaken by Engineers
 
 
 ## Book status
@@ -14,19 +14,31 @@ The book provides a collection of plays that detail common tasks undertaken by E
 [![MegaLinter](https://github.com/practicalli/spacemacs/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/engineering-playbooks/actions/workflows/megalinter.yml)
 
 
-## License and Contributing
+## Creative commons license
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
-<a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
-<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a>
- <a property="dct:title" rel="cc:attributionURL" href="https://github.com/practicalli/engineering-playbooks">Practicalli Doom Emacs</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://practical.li">Practicalli</a> is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0 </a></p>
+<div style="width:95%; margin:auto;">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+  This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images & stylesheets).
+</div>
 
 Please [read the contributing section of the book](contributing.html) before raising an issue or pull request
 
 By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/engineering-playbooks/graphs/contributors).
 
 
-## Sponsor my work
+## Contributing
+
+Issues and pull requests are most welcome.  Please detail issues as much as you can.  Pull requests are simpler to work with when they are specific to a page or at most a section.  The smaller the change the quicker it is to review and merge.
+
+Please [see the detailed contributing section of the book](contributing.html) before raising an issue or pull request
+
+* [Current Issues](https://github.com/practicalli/engineering-playbook/issues)
+* [Current pull requests](https://github.com/practicalli/engineering-playbook/pulls)
+
+By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/engineering-playbook/graphs/contributors).
+
+
+## Sponsor Practicalli
 
 [![Sponsor practicalli-john](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png)](https://github.com/sponsors/practicalli-john/)
 
@@ -61,15 +73,15 @@ pip install mkdocs
 Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
 
 ```bash
-pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin pillow cairosvg
+pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
 ```
 
 > pillow and cairosvg python packages are required for [Social Cards](https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/)
 
-Fork the practicalli/spacemacs GitHub repository and clone that fork to your computer,
+Fork the GitHub repository and clone that fork to your computer,
 
 ```bash
-git clone https://github.com/<your-github-account>/spacemacs.git
+git clone https://github.com/<your-github-account>/engineering-playbook.git
 
 ```
 
