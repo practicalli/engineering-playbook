@@ -144,8 +144,9 @@ nav:
       - continuous-integration/github-actions.md
       - continuous-integration/github-workflow.md
   - Documentation:
-      - documentation/index.md
-      - documentation/site-generator/mkdocs.md
+      - technical-writing/index.md
+      # - technical-writing/techniques.md
+      # - technical-writing/site-generator/mkdocs.md
   - Version Control:
       - version-control/index.md
       - version-control/git-client-configuration.md
