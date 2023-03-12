@@ -40,3 +40,12 @@ For customised authentication or access to a different GitHub repository, create
 | [Setup node](https://github.com/marketplace/actions/setup-node-js-environment)       | setup a version of the Node.js environment, caching npm/yarn /pnpm dependencies                         |
 | [Setup python](https://github.com/marketplace/actions/setup-python)                  | Provides python or PyPy, optionally cache pip dependencies                                              |
 | [GitHub Pages Deploy](https://github.com/marketplace/actions/deploy-to-github-pages) | deploy to GitHub pages, including cross-repository deployments                                          |
+
+
+Actions to investigate
+
+- [clj-watson](https://github.com/clj-holmes/clj-watson) - software composition analysis (SCA)
+- [clj-homes](https://github.com/marketplace/actions/clj-holmes-clojure) - SAST (Static application security testing) tool
+- [Clojure Dependency Update Action](https://github.com/marketplace/actions/clojure-dependency-update-action) - update project dependency versions for Clojure CLI, Shadow-cljs, Leiningen, Boot and Maven Pom.xml
+- [Clojure-Autodoc Action](https://github.com/marketplace/actions/clojure-documentation-action) - generate HTML API documentation from a Clojure project
+- [Clojars Release Action](https://github.com/marketplace/actions/publish-to-clojars)
