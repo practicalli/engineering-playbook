@@ -135,6 +135,7 @@ nav:
   - Code Quality:
       - code-quality/index.md
       - code-quality/megalinter.md
+      - code-quality/clojure.md
   - Command Line:
       - command-line/index.md
       - Kitty Terminal: command-line/kitty-terminal.md
