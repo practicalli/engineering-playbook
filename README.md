@@ -7,11 +7,11 @@ The book provides a collection of plays that detail common tasks undertaken by E
 
 ## Book status
 
-![GitHub issues](https://img.shields.io/github/issues/practicalli/engineering-playbooks?label=content%20ideas&logo=github)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/engineering-playbooks?label=commits&logo=github)
-![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/engineering-playbooks?label=pull%20requests&logo=github)
-[![Publish Book](https://github.com/practicalli/spacemacs/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/engineering-playbooks/actions/workflows/publish-book.yaml)
-[![MegaLinter](https://github.com/practicalli/spacemacs/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/engineering-playbooks/actions/workflows/megalinter.yml)
+![GitHub issues](https://img.shields.io/github/issues/practicalli/engineering-playbook?label=content%20ideas&logo=github)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/engineering-playbook?label=commits&logo=github)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/engineering-playbook?label=pull%20requests&logo=github)
+[![Publish Book](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/engineering-playbooks/actions/workflows/publish-book.yaml)
+[![MegaLinter](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/engineering-playbooks/actions/workflows/megalinter.yml)
 
 
 ## Creative commons license
@@ -21,7 +21,7 @@ The book provides a collection of plays that detail common tasks undertaken by E
   This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images & stylesheets).
 </div>
 
-Please [read the contributing section of the book](contributing.html) before raising an issue or pull request
+Please [read the contributing section of the book](https://practical.li//engineering-playbook/introduction/contributing/) before raising an issue or pull request
 
 By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/engineering-playbooks/graphs/contributors).
 
