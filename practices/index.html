@@ -7,12 +7,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guides to common Engineering tasks" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/engineering-playbook/technical-writing/" rel="canonical"/>
-<link href="../continuous-integration/github-workflow/" rel="prev"/>
-<link href="../practices/" rel="next"/>
+<link href="https://practical.li/engineering-playbook/practices/" rel="canonical"/>
+<link href="../technical-writing/" rel="prev"/>
+<link href="behaviour-driven-development/" rel="next"/>
 <link href="../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Technical writing - Practicalli Engineering Playbook</title>
+<title>Engineering Practices - Practicalli Engineering Playbook</title>
 <link href="../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -23,17 +23,17 @@
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-SMJSV1S03Y"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-SMJSV1S03Y",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-SMJSV1S03Y",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="website" property="og:type"/>
-<meta content="Technical writing - Practicalli Engineering Playbook" property="og:title"/>
+<meta content="Engineering Practices - Practicalli Engineering Playbook" property="og:title"/>
 <meta content="Practical guides to common Engineering tasks" property="og:description"/>
-<meta content="https://practical.li/engineering-playbook/assets/images/social/technical-writing/index.png" property="og:image"/>
+<meta content="https://practical.li/engineering-playbook/assets/images/social/practices/index.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/engineering-playbook/technical-writing/" property="og:url"/>
+<meta content="https://practical.li/engineering-playbook/practices/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Technical writing - Practicalli Engineering Playbook" name="twitter:title"/>
+<meta content="Engineering Practices - Practicalli Engineering Playbook" name="twitter:title"/>
 <meta content="Practical guides to common Engineering tasks" name="twitter:description"/>
-<meta content="https://practical.li/engineering-playbook/assets/images/social/technical-writing/index.png" name="twitter:image"/>
+<meta content="https://practical.li/engineering-playbook/assets/images/social/practices/index.png" name="twitter:image"/>
 <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -52,7 +52,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#technical-writing">
+<a class="md-skip" href="#engineering-practices">
           Skip to content
         </a>
 </div>
@@ -76,7 +76,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Technical writing
+              Engineering Practices
             
           </span>
 </div>
@@ -283,12 +283,12 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index md-nav__link--active">
-<a href="./">Documentation</a>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../technical-writing/">Documentation</a>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
           Documentation
@@ -322,22 +322,22 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../practices/">Practices</a>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index md-nav__link--active">
+<a href="./">Practices</a>
 <label for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
           Practices
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../practices/behaviour-driven-development/">
+<a class="md-nav__link" href="behaviour-driven-development/">
         Behaviour Driven Development
       </a>
 </li>
@@ -353,50 +353,47 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#website-generators">
-    Website generators
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#clojure-tech-docs">
-    Clojure tech docs
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tips">
-    Tips
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="technical-writing">Technical writing<a class="headerlink" href="#technical-writing" title="Permanent link">λ︎</a></h1>
-<h2 id="website-generators">Website generators<a class="headerlink" href="#website-generators" title="Permanent link">λ︎</a></h2>
-<p>Static web sites are fast to serve and relatively low maintenance, so can make for an excellent approach to serving up technical documentation.</p>
-<h2 id="clojure-tech-docs">Clojure tech docs<a class="headerlink" href="#clojure-tech-docs" title="Permanent link">λ︎</a></h2>
-<p><a class="md-button" href="https://cljdoc.org/" target="_blank">cljdoc</a></p>
-<p><a href="https://cljdoc.org/">cljdoc</a> is a website building &amp; hosting documentation for Clojure/Script libraries</p>
-<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">λ︎</a></h2>
+<h1 id="engineering-practices">Engineering Practices<a class="headerlink" href="#engineering-practices" title="Permanent link">λ︎</a></h1>
+<p>Engineering has many practices and principles defined over it many decades.</p>
 <ul>
-<li>learn <a href="https://en.wikipedia.org/wiki/English_grammar">English grammar</a></li>
-<li>avoid <a href="https://en.wikipedia.org/wiki/English_pronouns">English pronouns</a>, pronouns are often an indicator of verbosity</li>
+<li>
+<p>Agile software Development</p>
+<ul>
+<li>Agile Manifesto</li>
+<li>Extreme Programming</li>
+<li>Test Driven Development</li>
+<li>Retrospective</li>
+</ul>
+</li>
+<li>
+<p>Lean software development</p>
+</li>
+<li>
+<p>Kanban</p>
+</li>
+<li>
+<p><a href="behaviour-driven-development/">Behaviour Driven Development</a></p>
+</li>
+<li>
+<p>General Project Management techniques</p>
+<ul>
+<li>Rolling Wave Planning</li>
+<li>MoSCow rules - Must Have, Should Have, Could Have</li>
+</ul>
+</li>
 </ul>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 20, 2023</span>
 </small>
 </div>
 </article>

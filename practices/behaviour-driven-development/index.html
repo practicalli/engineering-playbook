@@ -7,34 +7,33 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guides to common Engineering tasks" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/engineering-playbook/technical-writing/" rel="canonical"/>
-<link href="../continuous-integration/github-workflow/" rel="prev"/>
-<link href="../practices/" rel="next"/>
-<link href="../assets/favicon.svg" rel="icon"/>
+<link href="https://practical.li/engineering-playbook/practices/behaviour-driven-development/" rel="canonical"/>
+<link href="../" rel="prev"/>
+<link href="../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Technical writing - Practicalli Engineering Playbook</title>
-<link href="../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Behaviour Driven Development - Practicalli Engineering Playbook</title>
+<link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-SMJSV1S03Y"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-SMJSV1S03Y",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-SMJSV1S03Y",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="website" property="og:type"/>
-<meta content="Technical writing - Practicalli Engineering Playbook" property="og:title"/>
+<meta content="Behaviour Driven Development - Practicalli Engineering Playbook" property="og:title"/>
 <meta content="Practical guides to common Engineering tasks" property="og:description"/>
-<meta content="https://practical.li/engineering-playbook/assets/images/social/technical-writing/index.png" property="og:image"/>
+<meta content="https://practical.li/engineering-playbook/assets/images/social/practices/behaviour-driven-development.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/engineering-playbook/technical-writing/" property="og:url"/>
+<meta content="https://practical.li/engineering-playbook/practices/behaviour-driven-development/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Technical writing - Practicalli Engineering Playbook" name="twitter:title"/>
+<meta content="Behaviour Driven Development - Practicalli Engineering Playbook" name="twitter:title"/>
 <meta content="Practical guides to common Engineering tasks" name="twitter:description"/>
-<meta content="https://practical.li/engineering-playbook/assets/images/social/technical-writing/index.png" name="twitter:image"/>
-<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<meta content="https://practical.li/engineering-playbook/assets/images/social/practices/behaviour-driven-development.png" name="twitter:image"/>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -45,14 +44,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="blue" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#technical-writing">
+<a class="md-skip" href="#behaviour-driven-development">
           Skip to content
         </a>
 </div>
@@ -60,8 +59,8 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Practicalli Engineering Playbook" class="md-header__button md-logo" data-md-component="logo" href=".." title="Practicalli Engineering Playbook">
-<img alt="logo" src="../assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Engineering Playbook" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Practicalli Engineering Playbook">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -76,7 +75,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Technical writing
+              Behaviour Driven Development
             
           </span>
 </div>
@@ -142,8 +141,8 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Practicalli Engineering Playbook" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Practicalli Engineering Playbook">
-<img alt="logo" src="../assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Engineering Playbook" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Practicalli Engineering Playbook">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
 </a>
     Practicalli Engineering Playbook
   </label>
@@ -161,7 +160,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="..">Overview</a>
+<a href="../..">Overview</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -173,12 +172,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/contributing/">
+<a class="md-nav__link" href="../../introduction/contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/writing-tips/">
+<a class="md-nav__link" href="../../introduction/writing-tips/">
         Writing Tips
       </a>
 </li>
@@ -188,7 +187,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../architecture/">Architecture</a>
+<a href="../../architecture/">Architecture</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -200,7 +199,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../architecture/structurizr/">
+<a class="md-nav__link" href="../../architecture/structurizr/">
         Structurizr
       </a>
 </li>
@@ -210,7 +209,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../code-quality/">Code Quality</a>
+<a href="../../code-quality/">Code Quality</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -222,12 +221,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../code-quality/megalinter/">
+<a class="md-nav__link" href="../../code-quality/megalinter/">
         MegaLinter
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../code-quality/clojure/">
+<a class="md-nav__link" href="../../code-quality/clojure/">
         Clojure Quality tools
       </a>
 </li>
@@ -237,7 +236,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../command-line/">Command Line</a>
+<a href="../../command-line/">Command Line</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -249,7 +248,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../command-line/kitty-terminal/">
+<a class="md-nav__link" href="../../command-line/kitty-terminal/">
         Kitty Terminal
       </a>
 </li>
@@ -259,7 +258,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../continuous-integration/">Continuous Integration</a>
+<a href="../../continuous-integration/">Continuous Integration</a>
 <label for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -271,24 +270,24 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../continuous-integration/github-actions/">
+<a class="md-nav__link" href="../../continuous-integration/github-actions/">
         GitHub Actions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../continuous-integration/github-workflow/">
+<a class="md-nav__link" href="../../continuous-integration/github-workflow/">
         GitHub workflows
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index md-nav__link--active">
-<a href="./">Documentation</a>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../technical-writing/">Documentation</a>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
           Documentation
@@ -310,36 +309,59 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../version-control/index.md">
+<a class="md-nav__link" href="../../version-control/index.md">
         None
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../version-control/git-client-configuration.md">
+<a class="md-nav__link" href="../../version-control/git-client-configuration.md">
         None
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../practices/">Practices</a>
+<a href="../">Practices</a>
 <label for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
           Practices
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../practices/behaviour-driven-development/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Behaviour Driven Development
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Behaviour Driven Development
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bdd-concepts">
+    BDD concepts
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#references">
+    References
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -359,18 +381,13 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#website-generators">
-    Website generators
+<a class="md-nav__link" href="#bdd-concepts">
+    BDD concepts
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#clojure-tech-docs">
-    Clojure tech docs
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#tips">
-    Tips
+<a class="md-nav__link" href="#references">
+    References
   </a>
 </li>
 </ul>
@@ -380,23 +397,66 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="technical-writing">Technical writing<a class="headerlink" href="#technical-writing" title="Permanent link">λ︎</a></h1>
-<h2 id="website-generators">Website generators<a class="headerlink" href="#website-generators" title="Permanent link">λ︎</a></h2>
-<p>Static web sites are fast to serve and relatively low maintenance, so can make for an excellent approach to serving up technical documentation.</p>
-<h2 id="clojure-tech-docs">Clojure tech docs<a class="headerlink" href="#clojure-tech-docs" title="Permanent link">λ︎</a></h2>
-<p><a class="md-button" href="https://cljdoc.org/" target="_blank">cljdoc</a></p>
-<p><a href="https://cljdoc.org/">cljdoc</a> is a website building &amp; hosting documentation for Clojure/Script libraries</p>
-<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">λ︎</a></h2>
-<ul>
-<li>learn <a href="https://en.wikipedia.org/wiki/English_grammar">English grammar</a></li>
-<li>avoid <a href="https://en.wikipedia.org/wiki/English_pronouns">English pronouns</a>, pronouns are often an indicator of verbosity</li>
-</ul>
+<h1 id="behaviour-driven-development">Behaviour Driven Development<a class="headerlink" href="#behaviour-driven-development" title="Permanent link">λ︎</a></h1>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/engineering-playbook/behaviour-driven-development-workflow-concept.png"><img align="right" alt="Behaviour Driven Development Workflow conceptually" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/engineering-playbook/behaviour-driven-development-workflow-concept.png" style="height:360px;width:360px"/></a></p>
+<p>Behaviour-driven development (BDD) is an evolution of the ideas behind agile software delivery. With its roots in test-driven development, domain-driven design, and automated acceptance testing, BDD focuses on the ways an application is expected to work - its behaviour.</p>
+<p>Understanding your domain and who your stakeholders are, identifying and exploring requirements, automating acceptance criteria, and delivering working and tested software.</p>
+<p>BDD is writing software that matters</p>
+<p><a class="md-button" href="https://dannorth.net/introducing-bdd/" target="_blank">Introducing BDD - Dan North</a></p>
+<h2 id="bdd-concepts">BDD concepts<a class="headerlink" href="#bdd-concepts" title="Permanent link">λ︎</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outside-in</td>
+<td>understand system usage from the outside (user interfaces) inwards</td>
+</tr>
+<tr>
+<td>Pull based system</td>
+<td>Produce only that which is ready to be used by people, systems, or code closer to a boundary or UI</td>
+</tr>
+<tr>
+<td>Multiple stakeholder</td>
+<td>Core and incidental stakeholders - Core stakeholders define the vision and often provide budget; Incidental stakeholders support the solution delivery and may influence that solution</td>
+</tr>
+<tr>
+<td>Multiple scale</td>
+<td>BDD applied from end to end, from small feature set to enterprise projects</td>
+</tr>
+<tr>
+<td>High automation</td>
+<td>Automation of testing (acceptance &amp; unit) hence reducing the expense of scenario and examples testing; Enabling and inviting change through acceptance tests and reducing the impact of change</td>
+</tr>
+<tr>
+<td>Features</td>
+<td>A slice through the whole solution; defined by multiple scenarios describing interactions stemming from user interface (outside-in). Features are defined with respect to business value</td>
+</tr>
+<tr>
+<td>Feature Injection</td>
+<td>Only work on features that deliver value, according to the project vision/goals (in the context of the organisations goals)</td>
+</tr>
+<tr>
+<td>Ubiquitous language</td>
+<td>Using the language of the domain consistently, end to end in the solution artefacts; name things with respect to their behavior in the domain. Using Given,When,Then also provides structure to the ubiquitous language</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/engineering-playbook/behaviour-driven-development-mindmap.png"><img alt="Behaviour Driven Development mind map" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/engineering-playbook/behaviour-driven-development-mindmap.png"/></a></p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">λ︎</a></h2>
+<p><a class="md-button" href="https://dannorth.net/introducing-bdd/" target="_blank">Introducing BDD - Dan North</a>
+<a class="md-button" href="https://cucumber.io/docs/bdd/" target="_blank">Cucumber - Behaviour Driven Development</a>
+<a class="md-button" href="https://en.wikipedia.org/wiki/Behavior-driven_development" target="_blank">Behaviour Driven Development - Wikipedia</a></p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 20, 2023</span>
 </small>
 </div>
 </article>
@@ -446,7 +506,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
