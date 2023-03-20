@@ -151,4 +151,5 @@ nav:
       - version-control/index.md
       - version-control/git-client-configuration.md
   - Practices:
+      - practices/index.md
       - practices/behaviour-driven-development.md
