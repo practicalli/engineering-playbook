@@ -256,6 +256,15 @@ Defines `changelog-check-skip` label on a pull request instructs the workflow no
 
 ## mkdocs publisher
 
+A workflow used to publish Practicalli books.
+
+* `workflow_dispatch:` for manual trigger of workflow
+* `workflow_run:` to depend on a successful run of the `MegaLinter` workflow
+* `paths-ignore` defining paths to ignore changes from
+* actions/setup-python installs python version 3
+* `pip` to install Material for MkDocs packages used for Practialli books
+
+
 !!! EXAMPLE "MkDocs Publish Book workflow"
     ```yaml
     ---
@@ -294,6 +303,6 @@ Defines `changelog-check-skip` label on a pull request instructs the workflow no
             with:
               key: ${{ github.ref }}
               path: .cache
-          - run: pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin pillow cairosvg
+          - run: pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
           - run: mkdocs gh-deploy --force
     ```
