@@ -159,3 +159,4 @@ nav:
   - Practices:
       - practices/index.md
       - practices/behaviour-driven-development.md
+      - practices/deliberate-practice.md
