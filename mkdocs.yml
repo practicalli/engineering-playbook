@@ -137,6 +137,7 @@ nav:
   - Build tool:
       - build-tool/index.md
       - build-tool/make.md
+      - build-tool/babashka-task-runner.md
   - Code Quality:
       - code-quality/index.md
       - code-quality/megalinter.md
