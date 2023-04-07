@@ -134,9 +134,9 @@ nav:
   - Architecture:
       - architecture/index.md
       - Structurizr: architecture/structurizr.md
-  #     - build-tool/make.md
   - Build tool:
       - build-tool/index.md
+      - build-tool/make.md
   - Code Quality:
       - code-quality/index.md
       - code-quality/megalinter.md
