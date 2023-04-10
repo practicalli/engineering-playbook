@@ -153,9 +153,9 @@ nav:
       - technical-writing/index.md
       # - technical-writing/techniques.md
       # - technical-writing/site-generator/mkdocs.md
-  - Version Control:
-      - version-control/index.md
-      - version-control/git-client-configuration.md
+  # - Version Control:
+  #     - version-control/index.md
+  #     - version-control/git-client-configuration.md
   - Practices:
       - practices/index.md
       - practices/behaviour-driven-development.md
