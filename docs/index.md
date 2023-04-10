@@ -1,4 +1,10 @@
-# Playbooks
+# Practicalli Engineering Playbooks
+
+!!! QUOTE
+    **Effective Communication** is the fundamental challenge for all software engineering projects
+
+    John Stevenson, Practialli
+
 
 The Playbook and Plays concept is used to curate a consistent information, so the right information can be found and used more effectively by all.
 
