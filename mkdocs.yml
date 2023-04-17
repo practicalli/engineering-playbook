@@ -148,6 +148,7 @@ nav:
   - Continuous Integration:
       - continuous-integration/index.md
       - continuous-integration/github-actions.md
+      - continuous-integration/github-common-jobs.md
       - continuous-integration/github-workflow.md
   - Documentation:
       - technical-writing/index.md
