@@ -40,3 +40,24 @@ Echo the GitHub Repository that was cloned to the workflow log, to support debug
           token: "${{ secrets.PAT || secrets.GITHUB_TOKEN }}"
           fetch-depth: 0   # fetch all history
       - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
+```
+
+
+## Pull Request first interaction
+
+Add messages to a contributor's first issue or pull request to a repository.
+
+In this example, the contributing guide is added as a comment to the issue or pull request.
+
+```yaml
+      # Message on first interaction
+      - name: First interaction
+        uses: actions/first-interaction@v1.1.1
+        with:
+          # Token for the repository
+          repo-token: "{{ secrets.GITHUB_TOKEN }}"
+          # Comment to post on an individual's first issue
+          issue-message: "[Practicalli Contributing Guide](https://practical.li/spacemacs/introduction/contributing/)"
+          # Comment to post on an individual's first pull request
+          pr-message: "[Practicalli Contributing Guide](https://practical.li/spacemacs/introduction/contributing/)"
+```
