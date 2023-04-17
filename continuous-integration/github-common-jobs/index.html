@@ -7,34 +7,34 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guides to common Engineering tasks" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/engineering-playbook/architecture/" rel="canonical"/>
-<link href="../introduction/writing-tips/" rel="prev"/>
-<link href="structurizr/" rel="next"/>
-<link href="../assets/favicon.svg" rel="icon"/>
+<link href="https://practical.li/engineering-playbook/continuous-integration/github-common-jobs/" rel="canonical"/>
+<link href="../github-actions/" rel="prev"/>
+<link href="../github-workflow/" rel="next"/>
+<link href="../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.6" name="generator"/>
-<title>Architecture tools and techniques - Practicalli Engineering Playbook</title>
-<link href="../assets/stylesheets/main.ded33207.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Common GitHub Workflow Jobs - Practicalli Engineering Playbook</title>
+<link href="../../assets/stylesheets/main.ded33207.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-SMJSV1S03Y"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-SMJSV1S03Y",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-SMJSV1S03Y",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="website" property="og:type"/>
-<meta content="Architecture tools and techniques - Practicalli Engineering Playbook" property="og:title"/>
+<meta content="Common GitHub Workflow Jobs - Practicalli Engineering Playbook" property="og:title"/>
 <meta content="Practical guides to common Engineering tasks" property="og:description"/>
-<meta content="https://practical.li/engineering-playbook/assets/images/social/architecture/index.png" property="og:image"/>
+<meta content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/github-common-jobs.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/engineering-playbook/architecture/" property="og:url"/>
+<meta content="https://practical.li/engineering-playbook/continuous-integration/github-common-jobs/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Architecture tools and techniques - Practicalli Engineering Playbook" name="twitter:title"/>
+<meta content="Common GitHub Workflow Jobs - Practicalli Engineering Playbook" name="twitter:title"/>
 <meta content="Practical guides to common Engineering tasks" name="twitter:description"/>
-<meta content="https://practical.li/engineering-playbook/assets/images/social/architecture/index.png" name="twitter:image"/>
-<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<meta content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/github-common-jobs.png" name="twitter:image"/>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -45,14 +45,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="blue" data-md-color-primary="deep-purple" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#architecture-tools-and-techniques">
+<a class="md-skip" href="#common-github-workflow-jobs">
           Skip to content
         </a>
 </div>
@@ -60,8 +60,8 @@
 </div>
 <header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Practicalli Engineering Playbook" class="md-header__button md-logo" data-md-component="logo" href=".." title="Practicalli Engineering Playbook">
-<img alt="logo" src="../assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Engineering Playbook" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Practicalli Engineering Playbook">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -76,7 +76,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Architecture tools and techniques
+              Common GitHub Workflow Jobs
             
           </span>
 </div>
@@ -142,8 +142,8 @@
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Practicalli Engineering Playbook" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Practicalli Engineering Playbook">
-<img alt="logo" src="../assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Engineering Playbook" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Practicalli Engineering Playbook">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
 </a>
     Practicalli Engineering Playbook
   </label>
@@ -161,7 +161,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="..">Overview</a>
+<a href="../..">Overview</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -173,34 +173,34 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/contributing/">
+<a class="md-nav__link" href="../../introduction/contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/writing-tips/">
+<a class="md-nav__link" href="../../introduction/writing-tips/">
         Writing Tips
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index md-nav__link--active">
-<a href="./">Architecture</a>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../architecture/">Architecture</a>
 <label for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
           Architecture
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="structurizr/">
+<a class="md-nav__link" href="../../architecture/structurizr/">
         Structurizr
       </a>
 </li>
@@ -210,7 +210,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../build-tool/">Build tool</a>
+<a href="../../build-tool/">Build tool</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -222,12 +222,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../build-tool/make/">
+<a class="md-nav__link" href="../../build-tool/make/">
         Make
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../build-tool/babashka-task-runner/">
+<a class="md-nav__link" href="../../build-tool/babashka-task-runner/">
         Babashka Task Runner
       </a>
 </li>
@@ -237,7 +237,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../code-quality/">Code Quality</a>
+<a href="../../code-quality/">Code Quality</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -249,12 +249,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../code-quality/megalinter/">
+<a class="md-nav__link" href="../../code-quality/megalinter/">
         MegaLinter
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../code-quality/clojure/">
+<a class="md-nav__link" href="../../code-quality/clojure/">
         Clojure Quality tools
       </a>
 </li>
@@ -264,7 +264,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../command-line/">Command Line</a>
+<a href="../../command-line/">Command Line</a>
 <label for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -276,39 +276,57 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../command-line/kitty-terminal/">
+<a class="md-nav__link" href="../../command-line/kitty-terminal/">
         Kitty Terminal
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../continuous-integration/">Continuous Integration</a>
+<a href="../">Continuous Integration</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
           Continuous Integration
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../continuous-integration/github-actions/">
+<a class="md-nav__link" href="../github-actions/">
         GitHub Actions
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../continuous-integration/github-common-jobs/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Common GitHub Workflow Jobs
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Common GitHub Workflow Jobs
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-checkout">
+    Git Checkout
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../continuous-integration/github-workflow/">
+<a class="md-nav__link" href="../github-workflow/">
         GitHub workflows
       </a>
 </li>
@@ -318,7 +336,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../technical-writing/">Documentation</a>
+<a href="../../technical-writing/">Documentation</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_7">
@@ -332,7 +350,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../practices/">Practices</a>
+<a href="../../practices/">Practices</a>
 <label for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -344,12 +362,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../practices/behaviour-driven-development/">
+<a class="md-nav__link" href="../../practices/behaviour-driven-development/">
         Behaviour Driven Development
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../practices/deliberate-practice/">
+<a class="md-nav__link" href="../../practices/deliberate-practice/">
         Deliberate Practice
       </a>
 </li>
@@ -365,26 +383,48 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-checkout">
+    Git Checkout
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/practicalli/engineering-playbook/edit/main/docs/architecture/index.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/practicalli/engineering-playbook/edit/main/docs/continuous-integration/github-common-jobs.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
 </a>
-<a class="md-content__button md-icon" href="https://github.com/practicalli/engineering-playbook/raw/main/docs/architecture/index.md" title="View source of this page">
+<a class="md-content__button md-icon" href="https://github.com/practicalli/engineering-playbook/raw/main/docs/continuous-integration/github-common-jobs.md" title="View source of this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"></path></svg>
 </a>
-<h1 id="architecture-tools-and-techniques">Architecture tools and techniques<a class="headerlink" href="#architecture-tools-and-techniques" title="Permanent link">λ︎</a></h1>
-<p>Tools and techniques to support design and communication of archiectural decisions and techniques to elicit archiectural designs</p>
+<h1 id="common-github-workflow-jobs">Common GitHub Workflow Jobs<a class="headerlink" href="#common-github-workflow-jobs" title="Permanent link">λ︎</a></h1>
+<p>Common job configuration snippets taken from GitHub workflows, showing options typically used with GitHub actions.</p>
+<h2 id="git-checkout">Git Checkout<a class="headerlink" href="#git-checkout" title="Permanent link">λ︎</a></h2>
+<p>Check-out the project from version control, fetching the whole history with <code>fetch-depth: 0</code>. Set <code>fetch-depth:</code> to 1 (or remove the option) to checkout the single commit for the ref/SHA that triggered the workflow</p>
+<p>Echo the GitHub Repository that was cloned to the workflow log, to support debugging efforts.</p>
+<div class="highlight"><pre><span></span><code>  # Git Checkout
+  - name: Checkout Code
+    uses: actions/checkout@v3
+    with:
+      token: "${{ secrets.PAT || secrets.GITHUB_TOKEN }}"
+      fetch-depth: 0   # fetch all history
+  - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
+</code></pre></div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 15, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 17, 2023</span>
 </small>
 </div>
 </article>
@@ -398,7 +438,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Writing Tips" class="md-footer__link md-footer__link--prev" href="../introduction/writing-tips/" rel="prev">
+<a aria-label="Previous: GitHub Actions" class="md-footer__link md-footer__link--prev" href="../github-actions/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -407,17 +447,17 @@
                 Previous
               </span>
 <div class="md-ellipsis">
-                Writing Tips
+                GitHub Actions
               </div>
 </div>
 </a>
-<a aria-label="Next: Structurizr" class="md-footer__link md-footer__link--next" href="structurizr/" rel="next">
+<a aria-label="Next: GitHub workflows" class="md-footer__link md-footer__link--next" href="../github-workflow/" rel="next">
 <div class="md-footer__title">
 <span class="md-footer__direction">
                 Next
               </span>
 <div class="md-ellipsis">
-                Structurizr
+                GitHub workflows
               </div>
 </div>
 <div class="md-footer__button md-icon">
@@ -462,7 +502,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
