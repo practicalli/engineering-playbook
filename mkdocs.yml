@@ -147,9 +147,9 @@ nav:
       - Kitty Terminal: command-line/kitty-terminal.md
   - Continuous Integration:
       - continuous-integration/index.md
-      - continuous-integration/github-actions.md
-      - continuous-integration/github-common-jobs.md
-      - continuous-integration/github-workflow.md
+      - GitHub Actions: continuous-integration/github-actions.md
+      - GitHub Common jobs: continuous-integration/github-common-jobs.md
+      - GitHub Workflows: continuous-integration/github-workflow.md
   - Documentation:
       - technical-writing/index.md
       # - technical-writing/techniques.md
