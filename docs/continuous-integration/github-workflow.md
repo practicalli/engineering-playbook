@@ -124,8 +124,11 @@ jobs:
         name: "Clojure Quality Checks"
         runs-on: ubuntu-latest
         steps:
-          - name: "Checkout code"
-            uses: actions/checkout@v3.0.2
+
+          # Git Checkout
+          - name: Checkout Code
+            uses: actions/checkout@v3
+          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
 
           - name: "Prepare Java runtime"
             uses: actions/setup-java@v3
@@ -197,6 +200,7 @@ jobs:
             uses: actions/checkout@v3
             with:
               token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
+          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
 
           # MegaLinter Configuration
           - name: MegaLinter Run
