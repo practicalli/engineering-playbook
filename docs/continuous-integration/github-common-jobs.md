@@ -32,6 +32,7 @@ Check-out the project from version control, fetching the whole history with `fet
 
 Echo the GitHub Repository that was cloned to the workflow log, to support debugging efforts.
 
+```yaml
       # Git Checkout
       - name: Checkout Code
         uses: actions/checkout@v3
