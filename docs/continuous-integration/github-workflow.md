@@ -63,24 +63,43 @@ Defines `changelog-check-skip` label on a pull request instructs the workflow no
 
 !!! EXAMPLE "clj-kondo lint with reviewdog reports"
     ```yaml
-    ---
-    name: Lint Review
-    on: [pull_request]
-    jobs:
-      clj-kondo:
-        name: runner / clj-kondo
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v3.0.2
-          - name: clj-kondo
-            uses: nnichols/clojure-lint-action@v2
-            with:
-              pattern: "*.clj"
-              clj_kondo_config: ".clj-kondo/config-ci.edn"
-              level: "error"
-              exclude: ".cljstyle"
-              github_token: ${{ secrets.github_token }}
-              reporter: github-pr-review
+---
+# Clojure Lint with clj-kondo and reviewdog
+#
+# Lint errors raised as comments on pull request conversation
+
+name: Lint Review
+on: [pull_request]
+
+jobs:
+  clj-kondo:
+    name: runner / clj-kondo
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
+      - run: echo "🐧 Job running on ${{ runner.os }} server"
+      - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
+
+      # Git Checkout
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          token: "${{ secrets.PAT || secrets.GITHUB_TOKEN }}"
+      - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
+
+      - name: clj-kondo
+        uses: nnichols/clojure-lint-action@v2
+        with:
+          pattern: "*.clj"
+          clj_kondo_config: ".clj-kondo/config-ci.edn"
+          level: "error"
+          exclude: ".cljstyle"
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+
+      # Summary and status
+      - run: echo "🎨 Lint Review checks completed"
+      - run: echo "🍏 Job status is ${{ job.status }}."
     ```
 
 ## Clojure quality check
