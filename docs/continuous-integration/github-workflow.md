@@ -38,24 +38,42 @@ Defines `changelog-check-skip` label on a pull request instructs the workflow no
 !!! EXAMPLE "Changelog Checker"
     ```yaml title=".github/workflows/changelog-check.yml"
     ---
+    # Check CHANGELOG.md file updated for every pull request
+
     name: Changelog Check
     on:
       pull_request:
-      paths-ignore:
-        - "README.md"
-        - "CHANGELOG.md"
-      types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled]
+        paths-ignore:
+          - "README.md"
+          - "CHANGELOG.md"
+        types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled]
 
     jobs:
-      # Check CHANGELOG.md file updated on every pull request
       changelog:
+        name: Changelog Update Check
         runs-on: ubuntu-latest
         steps:
-          - uses: actions/checkout@v3
-          - uses: dangoslen/changelog-enforcer@v2
-        with:
-          changeLogPath: "CHANGELOG.md"
-          skipLabels: "changelog-check-skip"
+          - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
+          - run: echo "🐧 Job running on ${{ runner.os }} server"
+          - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
+
+          # Git Checkout
+          - name: Checkout Code
+            uses: actions/checkout@v3
+            with:
+              token: "${{ secrets.PAT || secrets.GITHUB_TOKEN }}"
+          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
+
+          # Changelog Enforcer
+          - name: Changelog Enforcer
+            uses: dangoslen/changelog-enforcer@v3
+            with:
+              changeLogPath: "CHANGELOG.md"
+              skipLabels: "skip-changelog-check"
+
+          # Summary and status
+          - run: echo "🎨 Changelog Enforcer quality checks completed"
+          - run: echo "🍏 Job status is ${{ job.status }}."
     ```
 
 
