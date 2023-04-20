@@ -2,7 +2,7 @@
 
 [GitHub Actions](https://docs.github.com/en/actions) are pre-defined tasks that can be used within a GitHub Workflow, triggered by events such as committing to a branch or pull request.
 
-[GitHub Actions Marketplace]()  contains a wide range of actions that can be used to quickly create a workflow.
+[GitHub Actions Marketplace](https://github.com/marketplace?type=actions)  contains a wide range of actions that can be used to quickly create a workflow.
 
 !!! HINT "Use major version only"
     Use the major version of a GitHub action within a GitHub workflows to minimise the maintenance of action versions in workflow configuration.  e.g. if the latest version is `v5.2.1`, then use version `v5` to use the latest version available within that major version.
