@@ -458,6 +458,10 @@
 </a>
 <h1 id="github-workflows">GitHub workflows<a class="headerlink" href="#github-workflows" title="Permanent link">λ︎</a></h1>
 <p>GitHub workflows used by Practicalli</p>
+<div class="admonition hint">
+<p class="admonition-title">Use major version only</p>
+<p>Use the major version of a GitHub action within a GitHub workflows to minimise the maintenance of action versions in workflow configuration.  e.g. if the latest version is <code>v5.2.1</code>, then use version <code>v5</code> to use the latest version available within that major version.</p>
+</div>
 <h2 id="backstageio">Backstage.io<a class="headerlink" href="#backstageio" title="Permanent link">λ︎</a></h2>
 <div class="admonition example">
 <p class="admonition-title">Validate Backstage.io configuration files</p>
@@ -613,7 +617,7 @@
 <a href="#__codelineno-3-34" id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">          </span><span class="nt">restore-keys</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clojure-deps-</span>
 <a href="#__codelineno-3-35" id="__codelineno-3-35" name="__codelineno-3-35"></a>
 <a href="#__codelineno-3-36" id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Install</span><span class="nv"> </span><span class="s">Clojure</span><span class="nv"> </span><span class="s">tools"</span>
-<a href="#__codelineno-3-37" id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DeLaGuardo/setup-clojure@7.0</span>
+<a href="#__codelineno-3-37" id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DeLaGuardo/setup-clojure@10</span>
 <a href="#__codelineno-3-38" id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
 <a href="#__codelineno-3-39" id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">          </span><span class="nt">cli</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.11.1.1165</span><span class="w"> </span><span class="c1"># Clojure CLI</span>
 <a href="#__codelineno-3-40" id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="w">          </span><span class="nt">cljstyle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.15.0</span><span class="w"> </span><span class="c1"># cljstyle</span>
@@ -669,7 +673,7 @@
 <a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a>
 <a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">      </span><span class="c1"># Message on first interaction</span>
 <a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">First interaction</span>
-<a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/first-interaction@v1.1.1</span>
+<a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/first-interaction@v1</span>
 <a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
 <a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">          </span><span class="c1"># Token for the repository</span>
 <a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">          </span><span class="nt">repo-token</span><span class="p">:</span><span class="w"> </span><span class="s">"{{</span><span class="nv"> </span><span class="s">secrets.GITHUB_TOKEN</span><span class="nv"> </span><span class="s">}}"</span>
@@ -690,7 +694,7 @@
 <a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MegaLinter Run</span>
 <a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a><span class="w">        </span><span class="nt">id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ml</span>
 <a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a><span class="w">        </span><span class="c1">## latest release of major version</span>
-<a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">oxsecurity/megalinter/flavors/java@v6.22.2</span>
+<a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">oxsecurity/megalinter/flavors/java@v6</span>
 <a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a><span class="w">        </span><span class="nt">env</span><span class="p">:</span>
 <a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a><span class="w">          </span><span class="nt">MEGALINTER_CONFIG</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.github/config/megalinter.yaml</span>
 <a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a><span class="w">          </span><span class="nt">GITHUB_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="s">"${{</span><span class="nv"> </span><span class="s">secrets.GITHUB_TOKEN</span><span class="nv"> </span><span class="s">}}"</span><span class="w"> </span><span class="c1"># report individual linter status</span>
@@ -898,7 +902,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 17, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 20, 2023</span>
 </small>
 </div>
 </article>

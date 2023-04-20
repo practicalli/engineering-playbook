@@ -408,7 +408,11 @@
 </a>
 <h1 id="github-actions">GitHub Actions<a class="headerlink" href="#github-actions" title="Permanent link">λ︎</a></h1>
 <p><a href="https://docs.github.com/en/actions">GitHub Actions</a> are pre-defined tasks that can be used within a GitHub Workflow, triggered by events such as committing to a branch or pull request.</p>
-<p><a href="">GitHub Actions Marketplace</a>  contains a wide range of actions that can be used to quickly create a workflow.</p>
+<p><a href="https://github.com/marketplace?type=actions">GitHub Actions Marketplace</a>  contains a wide range of actions that can be used to quickly create a workflow.</p>
+<div class="admonition hint">
+<p class="admonition-title">Use major version only</p>
+<p>Use the major version of a GitHub action within a GitHub workflows to minimise the maintenance of action versions in workflow configuration.  e.g. if the latest version is <code>v5.2.1</code>, then use version <code>v5</code> to use the latest version available within that major version.</p>
+</div>
 <h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">λ︎</a></h2>
 <p>GitHub actions have read access to repositories, allowing them to checkout code and configuration.  For more permissions the GitHub Action requires an authorisation token.</p>
 <p>GitHub automatically creates a token that GitHub actions can use to make an authenticated API request, scoped to the current repository.</p>
@@ -490,7 +494,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 20, 2023</span>
 </small>
 </div>
 </article>
