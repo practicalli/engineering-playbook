@@ -2,6 +2,11 @@
 
 GitHub workflows used by Practicalli
 
+
+!!! HINT "Use major version only"
+    Use the major version of a GitHub action within a GitHub workflows to minimise the maintenance of action versions in workflow configuration.  e.g. if the latest version is `v5.2.1`, then use version `v5` to use the latest version available within that major version.
+
+
 ## Backstage.io
 
 !!! EXAMPLE "Validate Backstage.io configuration files"
@@ -164,7 +169,7 @@ Defines `changelog-check-skip` label on a pull request instructs the workflow no
               restore-keys: clojure-deps-
 
           - name: "Install Clojure tools"
-            uses: DeLaGuardo/setup-clojure@7.0
+            uses: DeLaGuardo/setup-clojure@10
             with:
               cli: 1.11.1.1165 # Clojure CLI
               cljstyle: 0.15.0 # cljstyle
@@ -221,7 +226,7 @@ Defines `changelog-check-skip` label on a pull request instructs the workflow no
 
           # Message on first interaction
           - name: First interaction
-            uses: actions/first-interaction@v1.1.1
+            uses: actions/first-interaction@v1
             with:
               # Token for the repository
               repo-token: "{{ secrets.GITHUB_TOKEN }}"
@@ -242,7 +247,7 @@ Defines `changelog-check-skip` label on a pull request instructs the workflow no
           - name: MegaLinter Run
             id: ml
             ## latest release of major version
-            uses: oxsecurity/megalinter/flavors/java@v6.22.2
+            uses: oxsecurity/megalinter/flavors/java@v6
             env:
               MEGALINTER_CONFIG: .github/config/megalinter.yaml
               GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" # report individual linter status
