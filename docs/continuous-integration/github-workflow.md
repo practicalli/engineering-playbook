@@ -454,3 +454,68 @@ A workflow used to publish Practicalli books.
           - run: pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
           - run: mkdocs gh-deploy --force
     ```
+
+## Scheduled Version Check
+
+Use [liquidz/antq-action](https://github.com/liquidz/antq-action) to check for new versions of Clojure libraries and GitHub action.
+
+The GtiHub action can use the following actions
+
+- `excludes:` list of space separated artefact names to exclude from the version check, use `groupId/artifactId` for Java libraries
+- `directories:` search paths to check, space separated.
+- `skips:` project types to skip to search, space separated. One of boot, clojure-cli, github-action, pom, shadow-cljs or leiningen.
+
+`on: schedule: cron:` is used to set the frequency for running the workflow, using a [POSIX cron syntax](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07){target=_blank}.
+
+[:fontawesome-brands-github: GitHub Docs: GitHub Actions - schedule](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule){target=_blank .md-button}
+
+
+!!! EXAMPLE "Scheduled Antq Version check with Manual Trigger"
+    ```yaml
+    ---
+    # ------------------------------------------
+    # Scheduled check of versions
+    # - use as non-urgent report on versions
+    # - Uses POSIX Cron syntax
+    #   - Minute [0,59]
+    #   - Hour [0,23]
+    #   - Day of the month [1,31]
+    #   - Month of the year [1,12]
+    #   - Day of the week ([0,6] with 0=Sunday)
+    #
+    # Using liquidz/anta to check:
+    # - GitHub workflows
+    # - deps.edn
+    # ------------------------------------------
+
+    name: "Scheduled Version Check"
+    on:
+      schedule:
+        # - cron: "0 4 * * *" # at 04:04:04 ever day
+        - cron: "0 4 * * 5" # at 04:04:04 ever Friday
+        # - cron: "0 4 1 * *" # at 04:04:04 on first day of month
+      workflow_dispatch: # Run manually via GitHub Actions Workflow page
+
+    jobs:
+      scheduled-version-check:
+        name: "Scheduled Version Check"
+        runs-on: ubuntu-latest
+        steps:
+          - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
+          - run: echo "🐧 Job running on ${{ runner.os }} server"
+          - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
+
+          - name: "Checkout code"
+            uses: actions/checkout@v3
+          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
+
+          - name: "Version Check"
+            uses: liquidz/antq-action@main
+            # - excludes: "qualifier/libary-name groupId/artifactId"
+            # - directories: "search/path/1 search/path/2"
+            # - skips: "boot clojure-cli github-action pom shadow-cljs leiningen"
+
+          - run: echo "🎨 Clojure library and GitHub Action versions checked with liquidz/antq"
+
+          - run: echo "🍏 Job status is ${{ job.status }}."
+    ```
