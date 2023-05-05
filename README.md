@@ -11,8 +11,7 @@ The book provides a collection of plays that detail common tasks undertaken by E
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/engineering-playbook?label=commits&logo=github)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/engineering-playbook?label=pull%20requests&logo=github)
 [![Publish Book](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/engineering-playbooks/actions/workflows/publish-book.yaml)
-[![MegaLinter](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/engineering-playbooks/actions/workflows/megalinter.yml)
-
+[![MegaLinter](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml)
 
 ## Creative commons license
 
