@@ -149,6 +149,7 @@ nav:
       - continuous-integration/index.md
       - GitHub Actions: continuous-integration/github-actions.md
       - GitHub Common jobs: continuous-integration/github-common-jobs.md
+      - Trigger Workflows: continuous-integration/trigger-workflow.md
       - GitHub Workflows: continuous-integration/github-workflow.md
   - Documentation:
       - technical-writing/index.md
