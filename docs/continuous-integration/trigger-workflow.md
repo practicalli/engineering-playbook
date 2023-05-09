@@ -49,3 +49,26 @@ A POSIX Cron pattern is used to define the schedule
 Add `workflow_dispatch:` without arguments to the `on:` directive in a workflow configuration file to manually trigger the running of the workflow.
 
 Visit GitHub.com > Actions > Workflow Name in the repository and select `Run`
+
+
+## Conditional on other workeflow
+
+Run a workflow based on the outcome of running another GitHub workflow
+
+!!! EXAMPLE "Run workflow if MegaLinter workflow returns success"
+    ```yaml
+        name: "Publish Documentation"
+        on:
+          # Run work flow conditional on linter workflow success
+          workflow_run:
+            workflows:
+              - "MegaLinter"
+            paths-ignore:
+              - README.md
+              - CHANGELOG.md
+              - .gitignore
+            branches:
+              - main
+            types:
+              - completed
+    ```
