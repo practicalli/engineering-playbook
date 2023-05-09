@@ -441,9 +441,16 @@ A workflow used to publish Practicalli books.
       deploy:
         runs-on: ubuntu-latest
         steps:
-          - uses: actions/checkout@v3
+          - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
+          - run: echo "🐧 Job running on ${{ runner.os }} server"
+          - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
+
+          - name: "Checkout code"
+            uses: actions/checkout@v3
             with:
               fetch-depth: 0
+          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
+
           - uses: actions/setup-python@v4
             with:
               python-version: 3.x
@@ -453,6 +460,10 @@ A workflow used to publish Practicalli books.
               path: .cache
           - run: pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
           - run: mkdocs gh-deploy --force
+
+          # Summary
+          - run: echo "🎨 MkDocs book built and deployed to GitHub Pages"
+          - run: echo "🍏 Job status is ${{ job.status }}."
     ```
 
 ## Scheduled Version Check
@@ -509,13 +520,15 @@ The GtiHub action can use the following actions
             uses: actions/checkout@v3
           - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
 
-          - name: "Version Check"
+          - name: "Antq Version Check"
             uses: liquidz/antq-action@main
-            # - excludes: "qualifier/libary-name groupId/artifactId"
-            # - directories: "search/path/1 search/path/2"
-            # - skips: "boot clojure-cli github-action pom shadow-cljs leiningen"
+            with:
+              excludes: "org.clojure/tools.deps.alpha"
+              # excludes: "qualifier/libary-name groupId/artifactId"
+              # directories: "search/path/1 search/path/2"
+              # skips: "boot clojure-cli github-action pom shadow-cljs leiningen"
 
-          - run: echo "🎨 Clojure library and GitHub Action versions checked with liquidz/antq"
-
+          # Summary
+          - run: echo "🎨 library versions checked with liquidz/antq"
           - run: echo "🍏 Job status is ${{ job.status }}."
     ```
