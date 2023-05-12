@@ -147,6 +147,10 @@ nav:
       - Kitty Terminal: command-line/kitty-terminal.md
   - Continuous Integration:
       - continuous-integration/index.md
+      - Docker:
+        - continuous-integration/docker/index.md
+        - continuous-integration/docker/dockerfile.md
+        - continuous-integration/docker/compose.md
       - GitHub:
         - continuous-integration/github/index.md
         - Actions: continuous-integration/github/actions.md
