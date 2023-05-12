@@ -12,27 +12,27 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/engineering-playbook/command-line/">
+        <link rel="canonical" href="https://practical.li/engineering-playbook/continuous-integration/docker/compose/">
       
       
-        <link rel="prev" href="../code-quality/clojure/">
+        <link rel="prev" href="../dockerfile/">
       
       
-        <link rel="next" href="kitty-terminal/">
+        <link rel="next" href="../../github/">
       
-      <link rel="icon" href="../assets/favicon.svg">
+      <link rel="icon" href="../../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>Command Line - Practicalli Engineering Playbook</title>
+        <title>Compose - Practicalli Engineering Playbook</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -71,11 +71,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Command Line - Practicalli Engineering Playbook" >
+        <meta  property="og:title"  content="Compose - Practicalli Engineering Playbook" >
       
         <meta  property="og:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/command-line/index.png" >
+        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/docker/compose.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -83,19 +83,19 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/engineering-playbook/command-line/" >
+        <meta  property="og:url"  content="https://practical.li/engineering-playbook/continuous-integration/docker/compose/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Command Line - Practicalli Engineering Playbook" >
+        <meta  name="twitter:title"  content="Compose - Practicalli Engineering Playbook" >
       
         <meta  name="twitter:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/command-line/index.png" >
+        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/docker/compose.png" >
       
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -106,7 +106,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -128,7 +128,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#command-line" class="md-skip">
+        <a href="#compose" class="md-skip">
           Skip to content
         </a>
       
@@ -144,9 +144,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Practicalli Engineering Playbook" class="md-header__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
+    <a href="../../.." title="Practicalli Engineering Playbook" class="md-header__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
       
-  <img src="../assets/practicalli-logo.svg" alt="logo">
+  <img src="../../../assets/practicalli-logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -162,7 +162,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Command Line
+              Compose
             
           </span>
         </div>
@@ -267,9 +267,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Practicalli Engineering Playbook" class="md-nav__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
+    <a href="../../.." title="Practicalli Engineering Playbook" class="md-nav__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
       
-  <img src="../assets/practicalli-logo.svg" alt="logo">
+  <img src="../../../assets/practicalli-logo.svg" alt="logo">
 
     </a>
     Practicalli Engineering Playbook
@@ -319,7 +319,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="..">Overview</a>
+          <a href="../../..">Overview</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -342,7 +342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/contributing/" class="md-nav__link">
+      <a href="../../../introduction/contributing/" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -356,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../introduction/writing-tips/" class="md-nav__link">
+      <a href="../../../introduction/writing-tips/" class="md-nav__link">
         Writing Tips
       </a>
     </li>
@@ -398,7 +398,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../architecture/">Architecture</a>
+          <a href="../../../architecture/">Architecture</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -421,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architecture/structurizr/" class="md-nav__link">
+      <a href="../../../architecture/structurizr/" class="md-nav__link">
         Structurizr
       </a>
     </li>
@@ -465,7 +465,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../build-tool/">Build tool</a>
+          <a href="../../../build-tool/">Build tool</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -488,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-tool/make/" class="md-nav__link">
+      <a href="../../../build-tool/make/" class="md-nav__link">
         Make
       </a>
     </li>
@@ -502,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../build-tool/babashka-task-runner/" class="md-nav__link">
+      <a href="../../../build-tool/babashka-task-runner/" class="md-nav__link">
         Babashka Task Runner
       </a>
     </li>
@@ -546,7 +546,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../code-quality/">Code Quality</a>
+          <a href="../../../code-quality/">Code Quality</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -569,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-quality/megalinter/" class="md-nav__link">
+      <a href="../../../code-quality/megalinter/" class="md-nav__link">
         MegaLinter
       </a>
     </li>
@@ -583,8 +583,73 @@
   
   
     <li class="md-nav__item">
-      <a href="../code-quality/clojure/" class="md-nav__link">
+      <a href="../../../code-quality/clojure/" class="md-nav__link">
         Clojure Quality tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../command-line/">Command Line</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Command Line
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../command-line/kitty-terminal/" class="md-nav__link">
+        Kitty Terminal
       </a>
     </li>
   
@@ -612,72 +677,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
-      
-      
-        
-          
-            
-          
-        
-          
-        
-      
-      
-        
-        
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">Command Line</a>
-          
-            <label for="__nav_5">
-              <span class="md-nav__icon md-icon"></span>
-            </label>
-          
-        </div>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Command Line
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="kitty-terminal/" class="md-nav__link">
-        Kitty Terminal
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
       
       
         
@@ -694,7 +694,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../continuous-integration/">Continuous Integration</a>
+          <a href="../../">Continuous Integration</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -702,7 +702,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Continuous Integration
@@ -715,14 +715,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
       
       
         
@@ -739,7 +741,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../continuous-integration/docker/">Docker</a>
+          <a href="../">Docker</a>
           
             <label for="__nav_6_2">
               <span class="md-nav__icon md-icon"></span>
@@ -747,7 +749,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_6_2">
           <span class="md-nav__icon md-icon"></span>
           Docker
@@ -762,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../continuous-integration/docker/dockerfile/" class="md-nav__link">
+      <a href="../dockerfile/" class="md-nav__link">
         Dockerfile
       </a>
     </li>
@@ -774,11 +776,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../continuous-integration/docker/compose/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Compose
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Compose
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-watcher" class="md-nav__link">
+    File watcher
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -823,7 +866,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../continuous-integration/github/">GitHub</a>
+          <a href="../../github/">GitHub</a>
           
             <label for="__nav_6_3">
               <span class="md-nav__icon md-icon"></span>
@@ -846,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../continuous-integration/github/actions/" class="md-nav__link">
+      <a href="../../github/actions/" class="md-nav__link">
         Actions
       </a>
     </li>
@@ -860,7 +903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../continuous-integration/github/common-jobs/" class="md-nav__link">
+      <a href="../../github/common-jobs/" class="md-nav__link">
         Common jobs
       </a>
     </li>
@@ -874,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../continuous-integration/github/trigger-events/" class="md-nav__link">
+      <a href="../../github/trigger-events/" class="md-nav__link">
         Trigger Events
       </a>
     </li>
@@ -908,7 +951,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../continuous-integration/github/workflows/">Workflows</a>
+          <a href="../../github/workflows/">Workflows</a>
           
             <label for="__nav_6_3_5">
               <span class="md-nav__icon md-icon"></span>
@@ -931,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../continuous-integration/github/workflows/megalinter/" class="md-nav__link">
+      <a href="../../github/workflows/megalinter/" class="md-nav__link">
         MegaLinter Workflow
       </a>
     </li>
@@ -985,7 +1028,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../technical-writing/">Documentation</a>
+          <a href="../../../technical-writing/">Documentation</a>
           
         </div>
       
@@ -1034,7 +1077,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../practices/">Practices</a>
+          <a href="../../../practices/">Practices</a>
           
             <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
@@ -1057,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../practices/behaviour-driven-development/" class="md-nav__link">
+      <a href="../../../practices/behaviour-driven-development/" class="md-nav__link">
         Behaviour Driven Development
       </a>
     </li>
@@ -1071,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../practices/deliberate-practice/" class="md-nav__link">
+      <a href="../../../practices/deliberate-practice/" class="md-nav__link">
         Deliberate Practice
       </a>
     </li>
@@ -1105,6 +1148,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-watcher" class="md-nav__link">
+    File watcher
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1118,7 +1176,7 @@
                   
 
   
-    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/command-line/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/continuous-integration/docker/compose.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1127,22 +1185,78 @@
     
       
     
-    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/command-line/index.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/continuous-integration/docker/compose.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="command-line">Command Line<a class="headerlink" href="#command-line" title="Permanent link">λ︎</a></h1>
-<p>Terminal apps, shells, configuration tips, etc.</p>
+<h1 id="compose">Compose<a class="headerlink" href="#compose" title="Permanent link">λ︎</a></h1>
+<p>Define a <code>compose.yaml</code> file that builds the Clojure project and run services that the Clojure service requires or talks too (database, cache, mock API, etc.).</p>
+<p>Each service can define a heart beat which can be used as a conditional startup for other services.</p>
+<details class="info">
+<summary>compose.yaml new Compose configuration file</summary>
+<p><code>compose.yaml</code> is the new configuration file for orchestrating services locally, a simplified and extended version of <code>docker-compose.yaml</code>.</p>
+</details>
+<p>Include the <code>build:</code> option for the Clojure service with the path to the multi-stage Dockerfile for the project (typically in the same root directory of the project, although a remote Git repository can also be used)</p>
+<p>The Clojure service defines a dependency on a Postgres Database.  The dependency has a condition so the Clojure service is only started once the Postgres service is healthy</p>
+<div class="admonition example">
+<p class="admonition-title">Clojure Service with Postgres Database</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">clojure-service</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linux/amd64</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="c1"># host:container</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:8080</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">postgres-database</span><span class="p">:</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">postgres-database</span><span class="p">:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:15.2-alpine</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$DOCKER_POSTGRES_ROOT_PASSWORD&quot;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;pg_isready&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">45s</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432:5432</span>
+</code></pre></div>
+</div>
+<p>Run the services using docker from the root of the project</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
+</code></pre></div>
+</div>
+<h3 id="file-watcher">File watcher<a class="headerlink" href="#file-watcher" title="Permanent link">λ︎</a></h3>
+<p>Docker provides <a href="https://docs.docker.com/compose/file-watch/"><code>watch</code></a> as an experimental feature which can rebuild the Clojure service when a file change is detected.  This seems most useful when troubleshooting issues that occur during system integration testing.</p>
+<p>Add an <code>x-develop</code> configuration with watch under the Clojure service configuration</p>
+<div class="admonition example">
+<p class="admonition-title">Automated rebuild on file change</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="nt">x-develop</span><span class="p">:</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">      </span><span class="nt">watch</span><span class="p">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./deps.edn</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rebuild</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./src</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rebuild</span>
+</code></pre></div>
+</div>
+<p>Start the services and the file watch mode</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--detach<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>alpha<span class="w"> </span>watch
+</code></pre></div>
+</div>
+<p>Save changes to files and a new image for the Clojure service will be built and deployed when ready.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 10, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 12, 2023</span>
       
     
   </small>
@@ -1177,7 +1291,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../code-quality/clojure/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Clojure Quality tools" rel="prev">
+          <a href="../dockerfile/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Dockerfile" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1186,20 +1300,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Clojure Quality tools
+                Dockerfile
               </div>
             </div>
           </a>
         
         
           
-          <a href="kitty-terminal/" class="md-footer__link md-footer__link--next" aria-label="Next: Kitty Terminal" rel="next">
+          <a href="../../github/" class="md-footer__link md-footer__link--next" aria-label="Next: GitHub Workflows and Actions" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Kitty Terminal
+                GitHub Workflows and Actions
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1294,10 +1408,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.fac441b0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fac441b0.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
