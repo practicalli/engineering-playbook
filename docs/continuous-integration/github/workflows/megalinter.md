@@ -2,81 +2,6 @@
 
 The MegaLinter Workflow uses a configuration file to define which linters should be run as well as specify linter specific configuration files.
 
-
-    ```yaml title=".github/workflows/megalinter.yaml
-    ---
-    # MegaLinter GitHub Action configuration file
-    # More info at https://megalinter.github.io
-    # All variables described in https://megalinter.github.io/configuration/
-
-    name: MegaLinter
-    on:
-      workflow_dispatch:
-      pull_request:
-        branches: [main]
-      push:
-        branches: [main]
-
-    # Run Linters in parallel
-    # Cancel running job if new job is triggered
-    concurrency:
-      group: "${{ github.ref }}-${{ github.workflow }}"
-      cancel-in-progress: true
-
-    jobs:
-      megalinter:
-        name: MegaLinter
-        runs-on: ubuntu-latest
-        steps:
-          - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
-          - run: echo "🐧 Job running on ${{ runner.os }} server"
-          - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
-
-          # Git Checkout
-          - name: Checkout Code
-            uses: actions/checkout@v3
-            with:
-              token: "${{ secrets.PAT || secrets.GITHUB_TOKEN }}"
-              fetch-depth: 0
-          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
-
-          # MegaLinter Configuration
-          - name: MegaLinter Run
-            id: ml
-            ## latest release of major version
-            uses: oxsecurity/megalinter/flavors/java@v6
-            env:
-              # ADD CUSTOM ENV VARIABLES OR DEFINE IN MEGALINTER_CONFIG file
-              MEGALINTER_CONFIG: .github/config/megalinter.yaml
-
-              GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" # report individual linter status
-              # Validate all source when push on main, else just the git diff with live.
-              VALIDATE_ALL_CODEBASE: >-
-                ${{ github.event_name == 'push' && github.ref == 'refs/heads/main'}}
-
-          # Upload MegaLinter artifacts
-          - name: Archive production artifacts
-            if: ${{ success() }} || ${{ failure() }}
-            uses: actions/upload-artifact@v3
-            with:
-              name: MegaLinter reports
-              path: |
-                megalinter-reports
-                mega-linter.log
-
-          # Summary and status
-          - run: echo "🎨 MegaLinter quality checks completed"
-          - run: echo "🍏 Job status is ${{ job.status }}."
-    ```
-
-
-
-
-
-!!! HINT "Reference: MegaLinter Configuration"
-    [MegaLinter Installation ](https://megalinter.io/latest/installation/#github-action) defines a GitHub workflow which includes creating a commit or pull request to automatically apply fixes.
-
-
 !!! EXAMPLE "Practicalli MegaLinter Workflow"
 
     ```clojure
@@ -152,7 +77,7 @@ The MegaLinter Workflow uses a configuration file to define which linters should
 The MegaLinter workflow can also apply fixes it finds to pull requests and commit_message
 
 !!! WARNING "Applying fixes can make for confusing commits"
-    Using the `--fix` option with the local MegaLinter runner is a more effective way to manage automatic fixes by MegaLinter, especially if code and configuration changes are staged or committed before automatically fixing.  Automatic fixes can then be discarded or treated as a separate commit using any Git tool.
+    Using the `--fix` option with the [:fontawesome-solid-book-open: local MegaLinter runner](/engineering-playbook/code-quality/megalinter/#run-megalinter) is a more effective way to manage automatic fixes by MegaLinter, especially if code and configuration changes are staged or committed before automatically fixing.  Automatic fixes can then be discarded or treated as a separate commit using any Git tool.
 
 
 ??? EXAMPLE "MegaLinter Workflow with Apply Fixes"
@@ -254,3 +179,6 @@ The MegaLinter workflow can also apply fixes it finds to pull requests and commi
           - run: echo "🎨 MegaLinter quality checks completed"
           - run: echo "🍏 Job status is ${{ job.status }}."
     ```
+
+!!! HINT "Reference: MegaLinter Configuration"
+    [MegaLinter Installation ](https://megalinter.io/latest/installation/#github-action) defines a GitHub workflow which includes creating a commit or pull request to automatically apply fixes.
