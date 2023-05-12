@@ -605,29 +605,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github-workflow" class="md-nav__link">
-    GitHub Workflow
+  <a href="#megalinter-locally" class="md-nav__link">
+    MegaLinter Locally
   </a>
+  
+    <nav class="md-nav" aria-label="MegaLinter Locally">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-configuration" class="md-nav__link">
+    Create a configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-megalinter" class="md-nav__link">
+    Run MegaLinter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatically-fix-issues" class="md-nav__link">
+    Automatically fix issues
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#local-configuration" class="md-nav__link">
-    Local Configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-locally" class="md-nav__link">
-    Run Locally
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optional-optimisation" class="md-nav__link">
-    Optional optimisation
+  <a href="#make-tasks" class="md-nav__link">
+    Make tasks
   </a>
   
 </li>
@@ -641,14 +654,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-linters" class="md-nav__link">
-    Configuring Linters
+  <a href="#optomise-run" class="md-nav__link">
+    Optomise Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linter-groups" class="md-nav__link">
+    Linter groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linter-configuration" class="md-nav__link">
+    Linter configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting" class="md-nav__link">
+    Reporting
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-workflow" class="md-nav__link">
+    GitHub Workflow
+  </a>
   
 </li>
       
@@ -1112,29 +1153,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github-workflow" class="md-nav__link">
-    GitHub Workflow
+  <a href="#megalinter-locally" class="md-nav__link">
+    MegaLinter Locally
   </a>
+  
+    <nav class="md-nav" aria-label="MegaLinter Locally">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-configuration" class="md-nav__link">
+    Create a configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-megalinter" class="md-nav__link">
+    Run MegaLinter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automatically-fix-issues" class="md-nav__link">
+    Automatically fix issues
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#local-configuration" class="md-nav__link">
-    Local Configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-locally" class="md-nav__link">
-    Run Locally
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#optional-optimisation" class="md-nav__link">
-    Optional optimisation
+  <a href="#make-tasks" class="md-nav__link">
+    Make tasks
   </a>
   
 </li>
@@ -1148,14 +1202,42 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuring-linters" class="md-nav__link">
-    Configuring Linters
+  <a href="#optomise-run" class="md-nav__link">
+    Optomise Run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linter-groups" class="md-nav__link">
+    Linter groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linter-configuration" class="md-nav__link">
+    Linter configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting" class="md-nav__link">
+    Reporting
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-workflow" class="md-nav__link">
+    GitHub Workflow
+  </a>
   
 </li>
       
@@ -1191,95 +1273,239 @@
 
 
 <h1 id="megalinter">MegaLinter<a class="headerlink" href="#megalinter" title="Permanent link">λ︎</a></h1>
-<p>MegaLinter will verify code and configuration with a a wide range of Lint and formatting tools, all from a Docker image that minimises the install requirements.</p>
+<p><a href="https://megalinter.io/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> MegaLinter</a> verifies code and configuration with a a wide range of Lint and formatting tools, all from within a Docker image that minimises the install requirements.</p>
 <p>MegaLinter is an Open-Source tool for CI/CD workflows that analyses the consistency of your code, IAC, configuration, and scripts in your  repository sources, to ensure all your projects sources are clean and formatted whatever IDE/toolbox is used.</p>
+<p>The declarative MegaLinter configuration is relatively easy to learn. Typically time is spent tweaking the features (tools) of the <a href="https://megalinter.io/latest/supported-linters/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> supported Linters</a></p>
+<p>Supported Linters have their own page listing the lint and format tools it provides, e.g. <a href="https://megalinter.io/latest/descriptors/clojure/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Clojure</a>. Each tool has its own page listing the configuration options and links to the tool homepage, e.g. <a href="https://megalinter.io/latest/descriptors/clojure_clj_kondo/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> clj-kondo</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Requirements</p>
-<p>Node.js is required to install and run the <code>mega-linter-runner</code> tool. Docker (Docker Desktop) is required to run MegaLinter containers locally, optionally with</p>
+<p><a href="https://nodejs.org/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Node.js</a> is required to install and run the <code>mega-linter-runner</code> tool. <a href="/engineering-playbook/continuous-integration/docker/">Docker (Docker Desktop)</a> is required to run MegaLinter containers locally, optionally with</p>
 <p>MegaLinter run via a GitHub workflow has no requirements</p>
 </div>
-<h2 id="github-workflow">GitHub Workflow<a class="headerlink" href="#github-workflow" title="Permanent link">λ︎</a></h2>
-<p>Create a <code>.github/workflows/megalinter.yaml</code> configuration and commit to the source code repository.</p>
-<p>The MegaLinter Installation : GitHub Action provides a working example</p>
-<p>Edit the MegaLinter step in jobs: and ENABLE linters required and provide linter specific configuration</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> # Linters to run (all other Linters automatically disabled)  ENABLE: CLOJURE,DOCKERFILE,MAKEFILE,MARKDOWN,YAML
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> # Linter specific configuration
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> CLOJURE_CLJ_KONDO_CONFIG_FILE: &quot;.clj-kondo/config-ci.edn&quot;  CLOJURE_CLJ_KONDO_FILTER_REGEX_EXCLUDE: &quot;dev&quot;
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> MARKDOWN_MARKDOWN_LINK_CHECK_CONFIG_FILE: &quot;.github/linters /markdown-link-check.json&quot;
-</code></pre></div>
-<p>Comment the <code>APPLY_FIXES</code> lines in the top-level env: section to only report issues, rather than automatically commit changes to fix the issues.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>env:
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a> # Apply linter fixes configuration
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> # APPLY_FIXES: all # APPLY_FIXES must be defined as environment  variable
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a> # APPLY_FIXES_EVENT: pull_request # events that trigger fixes on a  commit or PR (pull_request, push, all)
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a> # APPLY_FIXES_MODE: pull_request # are fixes are directly committed  (commit) or posted in a PR (pull_request)
-</code></pre></div>
+<h2 id="megalinter-locally">MegaLinter Locally<a class="headerlink" href="#megalinter-locally" title="Permanent link">λ︎</a></h2>
+<p>The most effective way to manage lint and format issues is to run MegaLinter locally, before pushing changes to a Continuous Integration service.</p>
+<p>The MegaLinter runner uses a MegaLinter docker image will all lint tools pre-installed and configured, minimising the need to install tools locally.</p>
+<p>Install a recent version of <a href="https://nodejs.org/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Node.js</a>, version 18 (Long Term Support) is recommended.</p>
+<blockquote>
+<p><code>npx mega-linter-runner</code> runs MegaLinter without the need for a specific npm install.</p>
+</blockquote>
+<h3 id="create-a-configuration">Create a configuration<a class="headerlink" href="#create-a-configuration" title="Permanent link">λ︎</a></h3>
 <div class="admonition hint">
-<p class="admonition-title">Reference: MegaLinter Configuration</p>
-<p><a href="https://megalinter.io/latest/installation/#github-action">MegaLinter Configuration</a> provides a detailed breakdown of the configuration options</p>
+<p class="admonition-title">Use the Practicalli MegaLinter Configuration</p>
+<p><a href="#megalinter-configuration">Practicalli MegaLinter configuration</a> configures tools relevant to Clojure development. Practicalli Project Templates also include Megalinter configuration and GitHub workflow.</p>
 </div>
-<h2 id="local-configuration">Local Configuration<a class="headerlink" href="#local-configuration" title="Permanent link">λ︎</a></h2>
 <p>Create a configuration for a specific project using the MegaLinter runner command in the root of the project directory</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npx mega-linter-runner --install
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npx mega-linter-runner
 </code></pre></div>
-<p><code>.mega-linter.yml</code> file is created at the root of the project. Review the file and ensure it has the Linters required See MegaLinter Configuration for a breakdown of the configuration</p>
-<h2 id="run-locally">Run Locally<a class="headerlink" href="#run-locally" title="Permanent link">λ︎</a></h2>
-<p>Install the MegaLinter for use across any project</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npm<span class="w"> </span>install<span class="w"> </span>mega-linter-runner<span class="w"> </span>-g
+<p><code>.mega-linter.yml</code> file is created at the root of the project. Review the file and ensure it has the Linters required. <a href="https://megalinter.io/latest/configuration/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> MegaLinter Configuration</a> describes the purpose of each variable.</p>
+<h3 id="run-megalinter">Run MegaLinter<a class="headerlink" href="#run-megalinter" title="Permanent link">λ︎</a></h3>
+<p>Use a specific flavour of MegaLinter to reduce the size of the Docker image used. A flavor is a docker image configuration for a specific programming language and its tooling.</p>
+<ul>
+<li><code>--flavor java</code> for Clojure projects</li>
+<li><code>--flavor documentation</code> for markdown / documentation only projects</li>
+</ul>
+<p>Other useful options include</p>
+<ul>
+<li><code>--env "'MEGALINTER_CONFIG=.github/config/megalinter.yaml'"</code> to pass a specific MegaLinter configuration file</li>
+<li><code>--remove-container</code> to remove the docker container once MegaLinter run has completed (the MegaLinter image will still be available)</li>
+</ul>
+<p>Run the MegaLinter runner with these options</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx<span class="w"> </span>mega-linter-runner<span class="w"> </span>--flavor<span class="w"> </span>java<span class="w"> </span>--env<span class="w"> </span><span class="s2">&quot;&#39;MEGALINTER_CONFIG=.github/config/megalinter.yaml&#39;&quot;</span><span class="w"> </span>--remove-container
 </code></pre></div>
-<p>Run the MegaLinter runner (initial run will be slow as the MegaLinter docker image downloads and is cached)</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mega-linter-runner
+</div>
+<p>The initial run will be slow as the MegaLinter docker image downloads and its overlays are cached.  All following runs will be significantly faster.</p>
+<div class="admonition hint">
+<p class="admonition-title">make lint</p>
+<p><code>make lint</code> will run the MegaLinter runner using the above options, using the <code>lint</code> task from <a href="/engineering-playbook/build-tool/make/">Practicalli Makefile</a></p>
+</div>
+<h3 id="automatically-fix-issues">Automatically fix issues<a class="headerlink" href="#automatically-fix-issues" title="Permanent link">λ︎</a></h3>
+<p>Use the <code>--fix</code> option with the local MegaLinter runner to automatically apply lint and format fixes that MegaLinter discovers.</p>
+<details class="hint">
+<summary>Stage or Commit changes before MegaLinter runner automatic fix</summary>
+<p>If code and configuration changes are staged or committed before running with <code>--fix</code> then automatic fixes can easily be discarded or treated as a separate commit using any Git tool.</p>
+</details>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npx<span class="w"> </span>mega-linter-runner<span class="w"> </span>--fix<span class="w"> </span>--flavor<span class="w"> </span>java<span class="w"> </span>--env<span class="w"> </span><span class="s2">&quot;&#39;MEGALINTER_CONFIG=.github/config/megalinter.yaml&#39;&quot;</span><span class="w"> </span>--remove-container
 </code></pre></div>
-<h2 id="optional-optimisation">Optional optimisation<a class="headerlink" href="#optional-optimisation" title="Permanent link">λ︎</a></h2>
-<p>Use a specific flavour of MegaLinter to reduce the size of the Docker image used (a flavor is a docker image configuration for a specific programming  language and its tooling)
-MEGALINGER_CONFIG environment variable defines an alternative location for the configuration file, e.g. <code>.github/linters/megalinter.yml</code></p>
-<p>Add a lint target to the project Makefile and run make lint to call the <code>mega-linter-runner</code>, especially if using a different <code>--flavor</code> or using an alternative location for the configuration file</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a># Run MegaLinter with custom configuration
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>lint:
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a> $(info --------- MegaLinter Runner ---------)
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a> mega-linter-runner --env &#39;MEGALINTER_CONFIG=.github/linters /mega-linter.yml&#39;
+</div>
+<h2 id="make-tasks">Make tasks<a class="headerlink" href="#make-tasks" title="Permanent link">λ︎</a></h2>
+<p>Add a <code>lint</code> task to the project Makefile and run <code>make lint</code> to call the <code>mega-linter-runner</code>. Especially useful when using a different <code>--flavor</code> or using an alternative location for the configuration file, so the same approach is used each time.</p>
+<div class="admonition example">
+<p class="admonition-title">Makefile tasks for MegaLinter Runner</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">lint</span><span class="o">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w"> </span><span class="k">$(</span>info<span class="w"> </span>---------<span class="w"> </span>MegaLinter<span class="w"> </span>Runner<span class="w"> </span>---------<span class="k">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span>npx<span class="w"> </span>mega-linter-runner<span class="w"> </span>--flavor<span class="w"> </span>java<span class="w"> </span>--env<span class="w"> </span><span class="s2">&quot;&#39;MEGALINTER_CONFIG=.github/config/megalinter.yaml&#39;&quot;</span><span class="w"> </span>--remove-container
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nf">lint-fix</span><span class="o">:</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w"> </span><span class="k">$(</span>info<span class="w"> </span>---------<span class="w"> </span>MegaLinter<span class="w"> </span>Runner<span class="w"> </span>---------<span class="k">)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span>npx<span class="w"> </span>mega-linter-runner<span class="w"> </span>--fix<span class="w"> </span>--flavor<span class="w"> </span>java<span class="w"> </span>--env<span class="w"> </span><span class="s2">&quot;&#39;MEGALINTER_CONFIG=.github/config/megalinter.yaml&#39;&quot;</span><span class="w"> </span>--remove-container
 </code></pre></div>
+</div>
 <div class="admonition hint">
 <p class="admonition-title">Options for MegaLinter Runner</p>
 <p><a href="https://megalinter.io/latest/mega-linter-runner/">MegaLinter Runner options</a></p>
 </div>
 <h2 id="megalinter-configuration">MegaLinter Configuration<a class="headerlink" href="#megalinter-configuration" title="Permanent link">λ︎</a></h2>
-<p>The declarative MegaLinter configuration is relatively easy to learn. Typically more time is spent tweaking the features (tools) each Linter category provides
-Each Linter has its own page listing the tools it provides and each tool has its own page listing the configuration options and links to the tools  homepage.</p>
-<p>Fraud API service contains a mega-linter.yml configuration file for running DOCKERFILE, MAKEFILE, YAML, MARKDOWN and CLOJURE Linters</p>
-<h3 id="configuring-linters">Configuring Linters<a class="headerlink" href="#configuring-linters" title="Permanent link">λ︎</a></h3>
-<p><code>ENABLE</code> or <code>DISABLE</code> specific linter groups DOCKERFILE, MAKEFILE, etc. or specific tools within a linter category, e.g. DISABLE the devskim tool  in the Repository linter category, REPOSITORY_DEVSKIM
-Enabling specific Linters will disable all other linters that are not in the list</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Linters</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1"># ENABLE specific linters, all other linters automatically disabled</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>ENABLE:CLOJURE,DOCKERFILE,MAKEFILE,MARKDOWN,YAML
+<p>Create a configuration file to use with the local <code>mega-linter-runner</code> and <a href="#github-workflow">GitHub workflow</a></p>
+<p><code>.github/config/megalinter.yaml</code> is a recommeded location for the MegaLinter configuration file, especially when using GitHub workflow.</p>
+<details class="example">
+<summary>Practicalli MegaLinter Configuration</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nn">---</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1"># Configuration file for MegaLinter</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1">#</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># General configuration:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># https://oxsecurity.github.io/megalinter/configuration/</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1">#</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Specific Linters:</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># https://oxsecurity.github.io/megalinter/latest/supported-linters/</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># ------------------------</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="c1"># Linters</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1"># Run linters in parallel</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="nt">PARALLEL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="c1"># ENABLE specific linters, all other linters automatically disabled</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="nt">ENABLE</span><span class="p">:</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CLOJURE</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CREDENTIALS</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DOCKERFILE</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAKEFILE</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MARKDOWN</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GIT</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SPELL</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YAML</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REPOSITORY</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="c1"># Linter specific configuration</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="nt">CLOJURE_CLJ_KONDO_CONFIG_FILE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;.github/config/clj-kondo-ci-config.edn&quot;</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="c1"># CLOJURE_CLJ_KONDO_ARGUMENTS: &quot;--lint deps.edn&quot;</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="c1"># CLOJURE_CLJ_KONDO_FILTER_REGEX_EXCLUDE: &quot;dev|develop&quot;</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="nt">CLOJURE_CLJ_KONDO_FILTER_REGEX_EXCLUDE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;resources&quot;</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="c1"># CREDENTIALS_SECRETLINT_DISABLE_ERRORS: true</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="nt">CREDENTIALS_SECRETLINT_CONFIG_FILE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;.github/config/secretlintrc.json&quot;</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="nt">MARKDOWN_MARKDOWNLINT_CONFIG_FILE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;.github/config/markdown-lint.jsonc&quot;</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="nt">MARKDOWN_MARKDOWNLINT_FILTER_REGEX_EXCLUDE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;.github/pull_request_template.md|CHANGELOG.md&quot;</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="c1"># MARKDOWN_MARKDOWNLINT_DISABLE_ERRORS: false</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="nt">MARKDOWN_MARKDOWN_LINK_CHECK_CONFIG_FILE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;.github/config/markdown-link-check.json&quot;</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="c1"># MARKDOWN_MARKDOWN_LINK_CHECK_CLI_LINT_MODE: &quot;project&quot;</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="c1"># MARKDOWN_MARKDOWN_LINK_CHECK_DISABLE_ERRORS: false</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="nt">MARKDOWN_REMARK_LINT_DISABLE_ERRORS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a><span class="c1"># MARKDOWN_MARKDOWN_TABLE_FORMATTER_DISABLE_ERRORS: false</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="c1"># SPELL_CSPELL_DISABLE_ERRORS: true</span>
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a><span class="nt">SPELL_MISSPELL_DISABLE_ERRORS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="c1"># YAML_PRETTIER_FILTER_REGEX_EXCLUDE: (docs/)</span>
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a><span class="c1"># YAML_YAMLLINT_FILTER_REGEX_EXCLUDE: (docs/)</span>
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a><span class="c1"># Explicitly disable linters to ensure they are never run</span>
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a><span class="c1"># DISABLE:</span>
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a><span class="c1">#   - COPYPASTE # checks for excessive copy-pastes</span>
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a><span class="c1">#   - SPELL # spell checking - often creates many false positives</span>
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a><span class="c1">#   - CSS #</span>
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a><span class="c1"># Disable linter features</span>
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a><span class="nt">DISABLE_LINTERS</span><span class="p">:</span>
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YAML_PRETTIER</span><span class="w"> </span><span class="c1"># draconian format rules</span>
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SPELL_CSPELL</span><span class="w"> </span><span class="c1"># many clojure references causing false positives</span>
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YAML_YAMLLINT</span><span class="w"> </span><span class="c1"># vague error mesages, investigation required</span>
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REPOSITORY_GIT_DIFF</span><span class="w"> </span><span class="c1"># warnings about LF to CRLF</span>
+<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REPOSITORY_SECRETLINT</span><span class="w"> </span><span class="c1"># reporting errors in its own config file</span>
+<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a><span class="w">  </span><span class="c1"># - REPOSITORY_DEVSKIM # unnecessary URL TLS checks</span>
+<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REPOSITORY_CHECKOV</span><span class="w"> </span><span class="c1"># fails on root user in Dockerfile</span>
+<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REPOSITORY_SECRETLINT</span>
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a><span class="c1"># Ignore all errors and return without error status</span>
+<a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a><span class="c1"># DISABLE_ERRORS: true</span>
+<a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>
+<a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a><span class="c1"># ------------------------</span>
+<a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a>
+<a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a><span class="c1"># ------------------------</span>
+<a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a><span class="c1"># Reporting</span>
+<a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a>
+<a id="__codelineno-4-78" name="__codelineno-4-78" href="#__codelineno-4-78"></a><span class="c1"># Activate sources reporter</span>
+<a id="__codelineno-4-79" name="__codelineno-4-79" href="#__codelineno-4-79"></a><span class="nt">UPDATED_SOURCES_REPORTER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-4-80" name="__codelineno-4-80" href="#__codelineno-4-80"></a>
+<a id="__codelineno-4-81" name="__codelineno-4-81" href="#__codelineno-4-81"></a><span class="c1"># Show Linter timings in summary table at end of run</span>
+<a id="__codelineno-4-82" name="__codelineno-4-82" href="#__codelineno-4-82"></a><span class="nt">SHOW_ELAPSED_TIME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<a id="__codelineno-4-83" name="__codelineno-4-83" href="#__codelineno-4-83"></a>
+<a id="__codelineno-4-84" name="__codelineno-4-84" href="#__codelineno-4-84"></a><span class="c1"># Upload reports to file.io</span>
+<a id="__codelineno-4-85" name="__codelineno-4-85" href="#__codelineno-4-85"></a><span class="nt">FILEIO_REPORTER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<a id="__codelineno-4-86" name="__codelineno-4-86" href="#__codelineno-4-86"></a><span class="c1"># ------------------------</span>
+<a id="__codelineno-4-87" name="__codelineno-4-87" href="#__codelineno-4-87"></a>
+<a id="__codelineno-4-88" name="__codelineno-4-88" href="#__codelineno-4-88"></a><span class="c1"># ------------------------</span>
+<a id="__codelineno-4-89" name="__codelineno-4-89" href="#__codelineno-4-89"></a><span class="c1"># Over-ride errors</span>
+<a id="__codelineno-4-90" name="__codelineno-4-90" href="#__codelineno-4-90"></a>
+<a id="__codelineno-4-91" name="__codelineno-4-91" href="#__codelineno-4-91"></a><span class="c1"># detect errors but do not block CI passing</span>
+<a id="__codelineno-4-92" name="__codelineno-4-92" href="#__codelineno-4-92"></a><span class="c1"># DISABLE_ERRORS: true</span>
+<a id="__codelineno-4-93" name="__codelineno-4-93" href="#__codelineno-4-93"></a><span class="c1"># ------------------------</span>
 </code></pre></div>
-<p>The list format seems to cause errors in GitHub actions workflow configuration, so use a comma separated list</p>
-<p>Pass configuration to the linter tools. Most tools have their configuration files and the default location is defined on the specific page for that tool.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Linter specific configuration</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>CLOJURE_CLJ_KONDO_CONFIG_FILE:<span class="w"> </span><span class="s2">&quot;.clj-kondo/config-ci.edn&quot;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>CLOJURE_CLJ_KONDO_FILTER_REGEX_EXCLUDE:<span class="w"> </span><span class="s2">&quot;dev&quot;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>MARKDOWN_MARKDOWN_LINK_CHECK_CONFIG_FILE:<span class="w"> </span><span class="s2">&quot;.github/linters/markdown link-check.json&quot;</span>
+</details>
+<h3 id="optomise-run">Optomise Run<a class="headerlink" href="#optomise-run" title="Permanent link">λ︎</a></h3>
+<p>Run the linters in paralell to speed up the overall MegaLinter run</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">PARALLEL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
-<p>Disable Linters and specific tools (features)</p>
-<p>```shell</p>
-<h1 id="explicitly-disable-linters-to-ensure-they-are-never-run">Explicitly disable linters to ensure they are never run<a class="headerlink" href="#explicitly-disable-linters-to-ensure-they-are-never-run" title="Permanent link">λ︎</a></h1>
-<p>DISABLE:
- - COPYPASTE # checks for excessive copy-pastes
- - SPELL # spell checking - often creates many false positives  - CSS</p>
-<h1 id="disable-linter-features">Disable linter features<a class="headerlink" href="#disable-linter-features" title="Permanent link">λ︎</a></h1>
-<p>DISABLE_LINTERS:
- - REPOSITORY_DEVSKIM # unnecessary URL TLS checks
- - REPOSITORY_CHECKOV # fails on root user in Dockerfile
- - REPOSITORY_SECRETLINT
- ```</p>
+<h3 id="linter-groups">Linter groups<a class="headerlink" href="#linter-groups" title="Permanent link">λ︎</a></h3>
+<p>Enable the linter groups to run. Specific linters within these groups can be enabled/disabled using Linter specific variables</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">ENABLE</span><span class="p">:</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CLOJURE</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CREDENTIALS</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DOCKERFILE</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MAKEFILE</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MARKDOWN</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GIT</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SPELL</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YAML</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REPOSITORY</span>
+</code></pre></div>
+<h3 id="linter-configuration">Linter configuration<a class="headerlink" href="#linter-configuration" title="Permanent link">λ︎</a></h3>
+<p>Configure the Clojure lint tools, which currently includes clj-kondo</p>
+<ul>
+<li><code>CLOJURE_CLJ_KONDO_CONFIG_FILE</code> to define clj-kondo configuration and lint rules to use</li>
+<li><code>CLOJURE_CLJ_KONDO_ARGUMENTS</code> pass arguments such as <code>--lint</code> to define a path to check rather than the whole project</li>
+<li><code>CLOJURE_CLJ_KONDO_FILTER_REGEX_EXCLUDE</code> to exclude one or more files or directories</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">CLOJURE_CLJ_KONDO_CONFIG_FILE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;.github/config/clj-kondo-ci-config.edn&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">CLOJURE_CLJ_KONDO_ARGUMENTS</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;--lint</span><span class="nv"> </span><span class="s">deps.edn&quot;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nt">CLOJURE_CLJ_KONDO_FILTER_REGEX_EXCLUDE</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dev|develop&quot;</span>
+</code></pre></div>
+<p>Explicitly disable linter tools to ensure they are never run</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">DISABLE_LINTERS</span><span class="p">:</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YAML_PRETTIER</span><span class="w"> </span><span class="c1"># draconian format rules</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SPELL_CSPELL</span><span class="w"> </span><span class="c1"># many clojure references causing false positives</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YAML_YAMLLINT</span><span class="w"> </span><span class="c1"># vague error mesages, investigation required</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REPOSITORY_GIT_DIFF</span><span class="w"> </span><span class="c1"># warnings about LF to CRLF</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REPOSITORY_SECRETLINT</span><span class="w"> </span><span class="c1"># reporting errors in its own config file</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="c1"># - REPOSITORY_DEVSKIM # unnecessary URL TLS checks</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REPOSITORY_CHECKOV</span><span class="w"> </span><span class="c1"># fails on root user in Dockerfile</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">REPOSITORY_SECRETLINT</span>
+</code></pre></div>
+<p>Disable all errors if there are configuration issues that need troubleshooting</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># DISABLE_ERRORS: true</span>
+</code></pre></div>
+<h3 id="reporting">Reporting<a class="headerlink" href="#reporting" title="Permanent link">λ︎</a></h3>
+<p>Show Linter timings in summary table at end of run</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">SHOW_ELAPSED_TIME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<p>Upload reports to file.io</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">FILEIO_REPORTER</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+<h2 id="github-workflow">GitHub Workflow<a class="headerlink" href="#github-workflow" title="Permanent link">λ︎</a></h2>
+<p><a href="/engineering-playbook/continuous-integration/github/workflows/megalinter/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Practicalli MegaLinter GitHub Workflow</a></p>
+<p>Create a <code>.github/workflows/megalinter.yaml</code> workflow configuration, e.g <a href="/engineering-playbook/continuous-integration/github/workflows/megalinter/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Practicalli MegaLinter Workflow</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 12, 2023</span>
       
     
   </small>

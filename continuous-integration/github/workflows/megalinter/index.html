@@ -1114,76 +1114,6 @@
 
 <h1 id="megalinter-workflow">MegaLinter Workflow<a class="headerlink" href="#megalinter-workflow" title="Permanent link">λ︎</a></h1>
 <p>The MegaLinter Workflow uses a configuration file to define which linters should be run as well as specify linter specific configuration files.</p>
-<div class="highlight"><pre><span></span><code>```yaml title=&quot;.github/workflows/megalinter.yaml
----
-# MegaLinter GitHub Action configuration file
-# More info at https://megalinter.github.io
-# All variables described in https://megalinter.github.io/configuration/
-
-name: MegaLinter
-on:
-  workflow_dispatch:
-  pull_request:
-    branches: [main]
-  push:
-    branches: [main]
-
-# Run Linters in parallel
-# Cancel running job if new job is triggered
-concurrency:
-  group: &quot;${{ github.ref }}-${{ github.workflow }}&quot;
-  cancel-in-progress: true
-
-jobs:
-  megalinter:
-    name: MegaLinter
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo &quot;🚀 Job automatically triggered by ${{ github.event_name }}&quot;
-      - run: echo &quot;🐧 Job running on ${{ runner.os }} server&quot;
-      - run: echo &quot;🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository&quot;
-
-      # Git Checkout
-      - name: Checkout Code
-        uses: actions/checkout@v3
-        with:
-          token: &quot;${{ secrets.PAT || secrets.GITHUB_TOKEN }}&quot;
-          fetch-depth: 0
-      - run: echo &quot;🐙 ${{ github.repository }} repository was cloned to the runner.&quot;
-
-      # MegaLinter Configuration
-      - name: MegaLinter Run
-        id: ml
-        ## latest release of major version
-        uses: oxsecurity/megalinter/flavors/java@v6
-        env:
-          # ADD CUSTOM ENV VARIABLES OR DEFINE IN MEGALINTER_CONFIG file
-          MEGALINTER_CONFIG: .github/config/megalinter.yaml
-
-          GITHUB_TOKEN: &quot;${{ secrets.GITHUB_TOKEN }}&quot; # report individual linter status
-          # Validate all source when push on main, else just the git diff with live.
-          VALIDATE_ALL_CODEBASE: &gt;-
-            ${{ github.event_name == &#39;push&#39; &amp;&amp; github.ref == &#39;refs/heads/main&#39;}}
-
-      # Upload MegaLinter artifacts
-      - name: Archive production artifacts
-        if: ${{ success() }} || ${{ failure() }}
-        uses: actions/upload-artifact@v3
-        with:
-          name: MegaLinter reports
-          path: |
-            megalinter-reports
-            mega-linter.log
-
-      # Summary and status
-      - run: echo &quot;🎨 MegaLinter quality checks completed&quot;
-      - run: echo &quot;🍏 Job status is ${{ job.status }}.&quot;
-```
-</code></pre></div>
-<div class="admonition hint">
-<p class="admonition-title">Reference: MegaLinter Configuration</p>
-<p><a href="https://megalinter.io/latest/installation/#github-action">MegaLinter Installation </a> defines a GitHub workflow which includes creating a commit or pull request to automatically apply fixes.</p>
-</div>
 <div class="admonition example">
 <p class="admonition-title">Practicalli MegaLinter Workflow</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">---</span>
@@ -1255,7 +1185,7 @@ jobs:
 <p>The MegaLinter workflow can also apply fixes it finds to pull requests and commit_message</p>
 <div class="admonition warning">
 <p class="admonition-title">Applying fixes can make for confusing commits</p>
-<p>Using the <code>--fix</code> option with the local MegaLinter runner is a more effective way to manage automatic fixes by MegaLinter, especially if code and configuration changes are staged or committed before automatically fixing.  Automatic fixes can then be discarded or treated as a separate commit using any Git tool.</p>
+<p>Using the <code>--fix</code> option with the <a href="/engineering-playbook/code-quality/megalinter/#run-megalinter"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> local MegaLinter runner</a> is a more effective way to manage automatic fixes by MegaLinter, especially if code and configuration changes are staged or committed before automatically fixing.  Automatic fixes can then be discarded or treated as a separate commit using any Git tool.</p>
 </div>
 <details class="example">
 <summary>MegaLinter Workflow with Apply Fixes</summary>
@@ -1357,6 +1287,10 @@ jobs:
 <a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🍏 Job status is ${{ job.status }}.&quot;</span>
 </code></pre></div>
 </details>
+<div class="admonition hint">
+<p class="admonition-title">Reference: MegaLinter Configuration</p>
+<p><a href="https://megalinter.io/latest/installation/#github-action">MegaLinter Installation </a> defines a GitHub workflow which includes creating a commit or pull request to automatically apply fixes.</p>
+</div>
 
   <hr>
 <div class="md-source-file">
