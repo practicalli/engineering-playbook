@@ -1,6 +1,6 @@
 # Introduction
 
-Source contend and generated static content for the Practicalli Engineering Playbooks book.
+Source contend and generated static content for the Practicalli Engineering Playbook.
 
 The book provides a collection of plays that detail common tasks undertaken by Engineers
 
@@ -10,7 +10,7 @@ The book provides a collection of plays that detail common tasks undertaken by E
 ![GitHub issues](https://img.shields.io/github/issues/practicalli/engineering-playbook?label=content%20ideas&logo=github)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/engineering-playbook?label=commits&logo=github)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/engineering-playbook?label=pull%20requests&logo=github)
-[![Publish Book](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/engineering-playbooks/actions/workflows/publish-book.yaml)
+[![Publish Book](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml)
 [![MegaLinter](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml)
 
 ## Creative commons license
@@ -22,7 +22,7 @@ The book provides a collection of plays that detail common tasks undertaken by E
 
 Please [read the contributing section of the book](https://practical.li//engineering-playbook/introduction/contributing/) before raising an issue or pull request
 
-By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/engineering-playbooks/graphs/contributors).
+By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/engineering-playbook/graphs/contributors).
 
 
 ## Contributing
