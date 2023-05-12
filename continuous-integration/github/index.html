@@ -12,20 +12,20 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/engineering-playbook/continuous-integration/trigger-workflow/">
+        <link rel="canonical" href="https://practical.li/engineering-playbook/continuous-integration/github/">
       
       
-        <link rel="prev" href="../github-common-jobs/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../github-workflow/">
+        <link rel="next" href="actions/">
       
       <link rel="icon" href="../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.11">
     
     
       
-        <title>Trigger Workflows - Practicalli Engineering Playbook</title>
+        <title>GitHub Workflows and Actions - Practicalli Engineering Playbook</title>
       
     
     
@@ -71,11 +71,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Trigger Workflows - Practicalli Engineering Playbook" >
+        <meta  property="og:title"  content="GitHub Workflows and Actions - Practicalli Engineering Playbook" >
       
         <meta  property="og:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/trigger-workflow.png" >
+        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/github/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -83,15 +83,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/engineering-playbook/continuous-integration/trigger-workflow/" >
+        <meta  property="og:url"  content="https://practical.li/engineering-playbook/continuous-integration/github/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Trigger Workflows - Practicalli Engineering Playbook" >
+        <meta  name="twitter:title"  content="GitHub Workflows and Actions - Practicalli Engineering Playbook" >
       
         <meta  name="twitter:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/trigger-workflow.png" >
+        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/github/index.png" >
       
     
     
@@ -128,7 +128,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#trigger-workflows" class="md-skip">
+        <a href="#github-workflows-and-actions" class="md-skip">
           Skip to content
         </a>
       
@@ -162,7 +162,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Trigger Workflows
+              GitHub Workflows and Actions
             
           </span>
         </div>
@@ -687,12 +687,6 @@
         
           
         
-          
-        
-          
-        
-          
-        
       
       
         
@@ -719,94 +713,62 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../github-actions/" class="md-nav__link">
-        GitHub Actions
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../github-common-jobs/" class="md-nav__link">
-        GitHub Common jobs
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
-    <li class="md-nav__item md-nav__item--active">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
       
       
         
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Trigger Workflows
+        
+        
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">GitHub</a>
+          
+            <label for="__nav_6_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6_2">
           <span class="md-nav__icon md-icon"></span>
+          GitHub
         </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Trigger Workflows
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="actions/" class="md-nav__link">
+        Actions
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cron-schedule" class="md-nav__link">
-    Cron schedule
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow-dispatch" class="md-nav__link">
-    Workflow Dispatch
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conditional-on-other-workeflow" class="md-nav__link">
-    Conditional on other workeflow
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -818,9 +780,94 @@
   
   
     <li class="md-nav__item">
-      <a href="../github-workflow/" class="md-nav__link">
-        GitHub Workflows
+      <a href="common-jobs/" class="md-nav__link">
+        Common jobs
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="trigger-events/" class="md-nav__link">
+        Trigger Events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="workflows/">Workflows</a>
+          
+            <label for="__nav_6_2_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Workflows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="workflows/megalinter/" class="md-nav__link">
+        MegaLinter Workflow
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -978,35 +1025,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cron-schedule" class="md-nav__link">
-    Cron schedule
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow-dispatch" class="md-nav__link">
-    Workflow Dispatch
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conditional-on-other-workeflow" class="md-nav__link">
-    Conditional on other workeflow
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1020,7 +1038,7 @@
                   
 
   
-    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/continuous-integration/trigger-workflow.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/continuous-integration/github/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1029,83 +1047,24 @@
     
       
     
-    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/continuous-integration/trigger-workflow.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/continuous-integration/github/index.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="trigger-workflows">Trigger Workflows<a class="headerlink" href="#trigger-workflows" title="Permanent link">λ︎</a></h1>
-<p><a href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows">GitHub workflows are triggered by events</a>.</p>
-<p>Events related to a GitHub workflow include</p>
-<ul>
-<li>pull request</li>
-<li>push</li>
-<li>workflow_dispatch (Manual run)</li>
-<li><a href="#cron-schedule">Schedule (Cron)</a></li>
-</ul>
-<div class="admonition example">
-<p class="admonition-title">Scheduled Version Check</p>
-<p><a href="/continuous-integration/github-workflow/#scheduled-version-check">Scheduled Version Check</a> GitHub workflow uses the cron schedule to check for newer versions of Clojure libraries and GitHub actions</p>
-</div>
-<h2 id="cron-schedule">Cron schedule<a class="headerlink" href="#cron-schedule" title="Permanent link">λ︎</a></h2>
-<p>GitHub workflows can use <code>cron:</code> to define a schedule as to when a workflow should run.</p>
-<p>A POSIX Cron pattern is used to define the schedule</p>
-<ul>
-<li>Minute [0,59]</li>
-<li>Hour [0,23]</li>
-<li>Day of the month [1,31]</li>
-<li>Month of the year [1,12]</li>
-<li>Day of the week ([0,6] with 0=Sunday)</li>
-</ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Scheduled</span><span class="nv"> </span><span class="s">Version</span><span class="nv"> </span><span class="s">Check&quot;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">on</span><span class="p">:</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">      </span><span class="nt">schedule</span><span class="p">:</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">cron</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0</span><span class="nv"> </span><span class="s">4</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span><span class="w"> </span><span class="c1"># at 04:04:04 ever day</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="c1"># - cron: &quot;0 4 * * 5&quot; # at 04:04:04 ever Friday</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="c1"># - cron: &quot;0 4 1 * *&quot; # at 04:04:04 on first day of month</span>
-</code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Scheduled version check uses cron schedule</p>
-</div>
-<details class="info">
-<summary>Cron references</summary>
-<ul>
-<li><a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onschedule"><code>on.schedule</code> - GitHub workflow syntax</a></li>
-<li><a href="https://cronstatus.com/docs/cron/">Cron Expression Syntax Cheatsheet</a></li>
-</ul>
-</details>
-<h2 id="workflow-dispatch">Workflow Dispatch<a class="headerlink" href="#workflow-dispatch" title="Permanent link">λ︎</a></h2>
-<p>Add <code>workflow_dispatch:</code> without arguments to the <code>on:</code> directive in a workflow configuration file to manually trigger the running of the workflow.</p>
-<p>Visit GitHub.com &gt; Actions &gt; Workflow Name in the repository and select <code>Run</code></p>
-<h2 id="conditional-on-other-workeflow">Conditional on other workeflow<a class="headerlink" href="#conditional-on-other-workeflow" title="Permanent link">λ︎</a></h2>
-<p>Run a workflow based on the outcome of running another GitHub workflow</p>
-<div class="admonition example">
-<p class="admonition-title">Run workflow if MegaLinter workflow returns success</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Publish</span><span class="nv"> </span><span class="s">Documentation&quot;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">on</span><span class="p">:</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="c1"># Run work flow conditional on linter workflow success</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">workflow_run</span><span class="p">:</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">workflows</span><span class="p">:</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;MegaLinter&quot;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nt">paths-ignore</span><span class="p">:</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">README.md</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CHANGELOG.md</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.gitignore</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="nt">branches</span><span class="p">:</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="nt">types</span><span class="p">:</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">completed</span>
-</code></pre></div>
-</div>
+<h1 id="github-workflows-and-actions">GitHub Workflows and Actions<a class="headerlink" href="#github-workflows-and-actions" title="Permanent link">λ︎</a></h1>
+<p>A <a href="workflows/">GitHub workflow</a> defines one or more jobs to carry out as part of a continuous integration run.</p>
+<p>Workflows are <a href="trigger-events/">triggered by events</a>, usually bit Git related actions (commit, PR, etc.) or by schedule or human interaction with the GitHub website.</p>
+<p><a href="actions/">GitHub Actions</a> provide common jobs that can be used within a workflow, greatly reducing the configuration required to get tasks done.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 12, 2023</span>
       
     
   </small>
@@ -1140,7 +1099,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../github-common-jobs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: GitHub Common jobs" rel="prev">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Continuous integration" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1149,20 +1108,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                GitHub Common jobs
+                Continuous integration
               </div>
             </div>
           </a>
         
         
           
-          <a href="../github-workflow/" class="md-footer__link md-footer__link--next" aria-label="Next: GitHub Workflows" rel="next">
+          <a href="actions/" class="md-footer__link md-footer__link--next" aria-label="Next: Actions" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                GitHub Workflows
+                Actions
               </div>
             </div>
             <div class="md-footer__button md-icon">

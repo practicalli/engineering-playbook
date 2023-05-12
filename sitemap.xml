@@ -66,22 +66,32 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://practical.li/engineering-playbook/continuous-integration/github-actions/</loc>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/github/</loc>
          <lastmod>2023-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://practical.li/engineering-playbook/continuous-integration/github-common-jobs/</loc>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/github/actions/</loc>
          <lastmod>2023-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://practical.li/engineering-playbook/continuous-integration/github-workflow/</loc>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/github/common-jobs/</loc>
          <lastmod>2023-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://practical.li/engineering-playbook/continuous-integration/trigger-workflow/</loc>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/github/trigger-events/</loc>
+         <lastmod>2023-05-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/</loc>
+         <lastmod>2023-05-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/megalinter/</loc>
          <lastmod>2023-05-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
