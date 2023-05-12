@@ -147,10 +147,14 @@ nav:
       - Kitty Terminal: command-line/kitty-terminal.md
   - Continuous Integration:
       - continuous-integration/index.md
-      - GitHub Actions: continuous-integration/github-actions.md
-      - GitHub Common jobs: continuous-integration/github-common-jobs.md
-      - Trigger Workflows: continuous-integration/trigger-workflow.md
-      - GitHub Workflows: continuous-integration/github-workflow.md
+      - GitHub:
+        - continuous-integration/github/index.md
+        - Actions: continuous-integration/github/actions.md
+        - Common jobs: continuous-integration/github/common-jobs.md
+        - Trigger Events : continuous-integration/github/trigger-events.md
+        - Workflows: 
+          - continuous-integration/github/workflows/index.md
+          - continuous-integration/github/workflows/megalinter.md
   - Documentation:
       - technical-writing/index.md
       # - technical-writing/techniques.md

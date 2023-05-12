@@ -47,6 +47,8 @@ Echo the GitHub Repository that was cloned to the workflow log, to support debug
 
 ## Pull Request first interaction
 
+!!! WARNING "first-interaction returning Bad Credentials error"
+
 Add messages to a contributor's first issue or pull request to a repository.
 
 In this example, the contributing guide is added as a comment to the issue or pull request.
