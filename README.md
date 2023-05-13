@@ -1,17 +1,26 @@
-# Introduction
+# Practicalli Engineering Playbook
 
-Source contend and generated static content for the Practicalli Engineering Playbook.
-
-The book provides a collection of plays that detail common tasks undertaken by Engineers
-
+```none
+██████╗ ██████╗  █████╗  ██████╗████████╗██╗ ██████╗ █████╗ ██╗     ██╗     ██╗
+██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██║██╔════╝██╔══██╗██║     ██║     ██║
+██████╔╝██████╔╝███████║██║        ██║   ██║██║     ███████║██║     ██║     ██║
+██╔═══╝ ██╔══██╗██╔══██║██║        ██║   ██║██║     ██╔══██║██║     ██║     ██║
+██║     ██║  ██║██║  ██║╚██████╗   ██║   ██║╚██████╗██║  ██║███████╗███████╗██║
+╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝
+```
 
 ## Book status
 
-![GitHub issues](https://img.shields.io/github/issues/practicalli/engineering-playbook?label=content%20ideas&logo=github)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/engineering-playbook?label=commits&logo=github)
-![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/engineering-playbook?label=pull%20requests&logo=github)
-[![Publish Book](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml)
 [![MegaLinter](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml)
+[![Publish Book](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml)
+[![pages-build-deployment](https://github.com/practicalli/engineering-playbook/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/pages/pages-build-deployment)
+
+![Ideas & issues](https://img.shields.io/github/issues/practicalli/engineering-playbook?label=content%20ideas&logo=github)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/engineering-playbook?label=pull%20requests&logo=github)
+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/engineering-playbook?label=commits&logo=github)
+![GitHub contributors](https://img.shields.io/github/contributors/practicalli/engineering-playbook?style=for-the-badge&label=github%20contributors)
+
 
 ## Creative commons license
 
@@ -24,6 +33,9 @@ Please [read the contributing section of the book](https://practical.li//enginee
 
 By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/engineering-playbook/graphs/contributors).
 
+# Overview
+
+A collection of plays that detail common tasks undertaken by Engineers
 
 ## Contributing
 
@@ -54,19 +66,15 @@ A review of the change will be carried out by the Practicalli team and the PR me
 
 The Publish Book GitHub action will run when PR's are merged into main (or the Practicalli team pushes changes to the default branch).
 
+Publish book workflow installs Material for MkDocs version 9
+
 
 ## Local development
 
-Install mkdocs using the Operating system package manager
+Install mkdocs version 9 using the Python pip package manager
 
 ```bash
-sudo apt install mkdocs
-```
-
-Or via Python pip
-
-```bash
-pip install mkdocs
+pip install mkdocs-material=="9.*"
 ```
 
 Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
@@ -80,7 +88,7 @@ pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revisio
 Fork the GitHub repository and clone that fork to your computer,
 
 ```bash
-git clone https://github.com/<your-github-account>/engineering-playbook.git
+git clone https://github.com/<your-github-account>/<repository>.git
 
 ```
 
@@ -90,4 +98,4 @@ Run a local server from the root of the cloned project
 mkdocs serve
 ```
 
-The website will open at http://localhost:8000
+The website will open at <http://localhost:8000>
