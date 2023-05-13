@@ -17,8 +17,6 @@ theme:
   name: material
   logo: assets/images/practicalli-logo.png
   favicon: assets/favicon.svg
-  extra_css:
-    - stylesheets/extra.css
   features:
     - announce.dismiss
     - content.action.edit
@@ -55,7 +53,7 @@ theme:
   custom_dir: overrides
 
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
 
 ## Additional styling
 markdown_extensions:
@@ -157,7 +155,7 @@ nav:
         - Actions: continuous-integration/github/actions.md
         - Common jobs: continuous-integration/github/common-jobs.md
         - Trigger Events : continuous-integration/github/trigger-events.md
-        - Workflows: 
+        - Workflows:
           - continuous-integration/github/workflows/index.md
           - continuous-integration/github/workflows/megalinter.md
   - Documentation:
@@ -170,4 +168,8 @@ nav:
   - Practices:
       - practices/index.md
       - practices/behaviour-driven-development.md
+      # - TODO: practices/root-cause-analysis.md
+      # - TODO: practices/five-whys.md
+      # - TODO: practices/thinking-hats.md
       - practices/deliberate-practice.md
+      # - TODO: practices/code-kata.md
