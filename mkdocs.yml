@@ -34,9 +34,7 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: deep purple
-      accent: blue
-      extra_css:
-        - stylesheets/extra.css
+      accent: purple
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
