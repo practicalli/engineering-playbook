@@ -15,7 +15,7 @@ remote_branch: gh-pages # deployment branch
 # Theme and styling
 theme:
   name: material
-  logo: assets/practicalli-logo.png
+  logo: assets/images/practicalli-logo.png
   favicon: assets/favicon.svg
   extra_css:
     - stylesheets/extra.css
