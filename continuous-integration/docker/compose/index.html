@@ -892,9 +892,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#file-watcher" class="md-nav__link">
-    File watcher
+  <a href="#compose-configuration" class="md-nav__link">
+    Compose Configuration
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-clojure-service" class="md-nav__link">
+    Build Clojure Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compose-services" class="md-nav__link">
+    Compose services
+  </a>
+  
+    <nav class="md-nav" aria-label="Compose services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-on-change" class="md-nav__link">
+    Build on Change
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1235,9 +1262,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#file-watcher" class="md-nav__link">
-    File watcher
+  <a href="#compose-configuration" class="md-nav__link">
+    Compose Configuration
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-clojure-service" class="md-nav__link">
+    Build Clojure Service
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compose-services" class="md-nav__link">
+    Compose services
+  </a>
+  
+    <nav class="md-nav" aria-label="Compose services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-on-change" class="md-nav__link">
+    Build on Change
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1273,70 +1327,148 @@
 
 
 <h1 id="compose">Compose<a class="headerlink" href="#compose" title="Permanent link">λ︎</a></h1>
-<p>Define a <code>compose.yaml</code> file that builds the Clojure project and run services that the Clojure service requires or talks too (database, cache, mock API, etc.).</p>
-<p>Each service can define a heart beat which can be used as a conditional startup for other services.</p>
+<p>Docker Compose provides a declarative configuration for orchestrating services locally, providing a simple way to spin up services to try them out or orchestrate a whole system from numerous dependent services.</p>
+<p>Compose can build images for Clojure projects and conditionally run based on the health check of other supporting services, e.g. Postgres Database.</p>
+<p>Each service can define a heart beat which can be used as a conditional startup for other services which depend upon them.</p>
+<h2 id="compose-configuration">Compose Configuration<a class="headerlink" href="#compose-configuration" title="Permanent link">λ︎</a></h2>
+<p><code>compose.yaml</code> is the configuration file for Docker Compose</p>
+<p><code>docker compose</code> command will start all services defined in the <code>compose.yaml</code> configuration (or <code>--file filename</code> to specify an alternative configuration file).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up
+</code></pre></div>
+<ul>
+<li><code>--build</code> option will run the build process for services that contain a <code>build:</code> configuration</li>
+<li><code>--detach</code> runs services in the background, compose startup logs are still shown in the foreground</li>
+</ul>
+<p>Shutdown the services with <code>down</code> (specifying <code>--file filename</code> if used in the compose up command)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>down
+</code></pre></div>
 <details class="info">
-<summary>compose.yaml new Compose configuration file</summary>
-<p><code>compose.yaml</code> is the new configuration file for orchestrating services locally, a simplified and extended version of <code>docker-compose.yaml</code>.</p>
+<summary>Compose simplified after Docker integration</summary>
+<p><code>compose.yaml</code> is the new Compose configuration file for orchestrating services locally, a simplified and extended version of <code>docker-compose.yaml</code>.  The main benefit is that a version number is no longer required, as the Compose version shipped with Docker is used.</p>
+<p><code>docker compose</code> the new command, replacing <code>docker-compose</code>, although the options and arguments to this command are the same for now.</p>
 </details>
-<p>Include the <code>build:</code> option for the Clojure service with the path to the multi-stage Dockerfile for the project (typically in the same root directory of the project, although a remote Git repository can also be used)</p>
+<h2 id="build-clojure-service">Build Clojure Service<a class="headerlink" href="#build-clojure-service" title="Permanent link">λ︎</a></h2>
+<p>The simplest approach to building a service is to include a <code>build:</code> configuration specifying the location of <a href="https://practical.li/engineering-playbook/continuous-integration/docker/clojure-multi-stage-dockerfile/">a multi-stage <code>Dockerfile</code></a>, which has a <code>builder</code> stage to create an uberjar that is run in the run-time image.</p>
+<p>The <code>build:</code> option for the Clojure service with the path to the multi-stage Dockerfile for the project (typically in the same root directory of the project, although a remote Git repository can also be used)</p>
+<div class="admonition example">
+<p class="admonition-title">Clojure project build configuration</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># --- Docker Compose Configuration --- #</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># - Docker Compose V2</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># - https://docs.docker.com/compose/compose-file/</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">#</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Build the Clojure Service from source code</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># and run on port 8080</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;practicalli&quot;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="c1"># --- Clojure Service --- #</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="nt">gameboard-service</span><span class="p">:</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linux/amd64</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="c1"># Build using Dockerfile - relative path or Git repository</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">      </span><span class="nt">context</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./</span><span class="w"> </span><span class="c1"># Use Dockerfile in project root</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COMPOSE_PROJECT_NAME</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="c1"># host:container</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:8080</span>
+</code></pre></div>
+</div>
+<ul>
+<li><code>name:</code> (optional) is used to set the container prefix of the service name, via the <code>environment:</code> variable <code>COMPOSE_PROJECT_NAME</code>, helping to identify the container by name when running.  The above container would be <code>practicalli-gameboard-service</code>.  This option is more valuable as the number of services grows</li>
+<li><code>services:</code> contains one or more service definitions with a unique name, e.g. <code>gameboard-service</code></li>
+<li><code>gameboard-service:</code> is a unique name for a service configuration</li>
+<li><code>platform:</code> defines the operating system and hardware architecture that should be used for the service</li>
+<li><code>build: context:</code> defines the location of the <code>Dockerfile</code> to use, either a local file or a Git repository URL</li>
+<li><code>ports:</code> defines the host:container mapping for the service port.  <code>8080:8000</code> value would map the service running within the container on <code>8000</code> to the host (e.g. engineers' computer) on port 8080.</li>
+</ul>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-in-progress-light.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Docker Compose build process - Clojure project with tools.build" src="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-in-progress-light.png?raw=true" /></a></p>
+<blockquote>
+<p>Use <a href="https://practical.li/engineering-playbook/continuous-integration/docker/clojure-multi-stage-dockerfile/">a multi-stage <code>Dockerfile</code></a> to provide greater opportunity to create image overlays for the build stage which can be cached, e.g. downloading project dependencies, speeding up the build process on consecutive runs.</p>
+</blockquote>
+<h2 id="compose-services">Compose services<a class="headerlink" href="#compose-services" title="Permanent link">λ︎</a></h2>
+<p>Add more unique service configurations under <code>services:</code>, e.g. <code>postgres-database</code>.  All the services that support the local testing and integration of the Clojure project can be added to the <code>compose.yaml</code> file (database, cache, mock APIs, coupled services, etc.).</p>
 <p>The Clojure service defines a dependency on a Postgres Database.  The dependency has a condition so the Clojure service is only started once the Postgres service is healthy</p>
 <div class="admonition example">
-<p class="admonition-title">Clojure Service with Postgres Database</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">clojure-service</span><span class="p">:</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linux/amd64</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="c1"># host:container</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:8080</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">postgres-database</span><span class="p">:</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">postgres-database</span><span class="p">:</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:15.2-alpine</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$DOCKER_POSTGRES_ROOT_PASSWORD&quot;</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;pg_isready&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">45s</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432:5432</span>
+<p class="admonition-title">Compose Clojure project build with Postgres database</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">clojure-service</span><span class="p">:</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linux/amd64</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="c1"># host:container</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:8080</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">      </span><span class="nt">postgres-database</span><span class="p">:</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="nt">postgres-database</span><span class="p">:</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:15.2-alpine</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$DOCKER_POSTGRES_ROOT_PASSWORD&quot;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;pg_isready&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">45s</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432:5432</span>
 </code></pre></div>
 </div>
-<p>Run the services using docker from the root of the project</p>
+<ul>
+<li><code>depends_on:</code> include one or more services that the service depends on, optionally adding a start <code>condition:</code></li>
+<li><code>depends_on: &lt;service-name&gt; condition:</code> a condition that should be true in order for the service image to start, typically checking <code>service_healthy</code> of another service in the configuration</li>
+<li><code>heathcheck:</code> define a command and options to determine if the specific service running is healthy, with the <code>test:</code> command specific to the type of service.</li>
+</ul>
+<p>Build and run the services using the <code>--build</code> flag with <code>docker compose</code></p>
 <div class="admonition note">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
 </code></pre></div>
 </div>
-<h3 id="file-watcher">File watcher<a class="headerlink" href="#file-watcher" title="Permanent link">λ︎</a></h3>
-<p>Docker provides <a href="https://docs.docker.com/compose/file-watch/"><code>watch</code></a> as an experimental feature which can rebuild the Clojure service when a file change is detected.  This seems most useful when troubleshooting issues that occur during system integration testing.</p>
-<p>Add an <code>x-develop</code> configuration with watch under the Clojure service configuration</p>
+<p>The Clojure project is built in parallel with running the Postgres database.</p>
+<p>On the initial run the Clojure project may take longer to run that starting the Postgres database, in which case the Clojure uberjar will run straight away.</p>
+<p>On consecutive runs, at least part of the Clojure build process should be cached and images for all the services will have been downloaded and cached.  The Clojure uberjar may wait for the Postgres database to start up.</p>
+<p>Each service can define a health check that can be used as a conditional startup trigger and ensure all services start in a meaningful order.</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-buld-clojure-run-postgres-healthy-attaching-light.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Docker Compose startup - Clojure build and Postgres database - attache to database" src="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-buld-clojure-run-postgres-healthy-attaching-light.png?raw=true" /></a></p>
+<h3 id="build-on-change">Build on Change<a class="headerlink" href="#build-on-change" title="Permanent link">λ︎</a></h3>
+<p>Docker provides <a href="https://docs.docker.com/compose/file-watch/"><code>watch</code></a> as an experimental feature which can rebuild the Clojure service when a file change is detected.</p>
+<p>The watch approach seems most useful for Clojure projects when troubleshooting issues that occur during system integration testing.</p>
+<p>When additional tools need to run outside of Clojure code, e.g. SaSS build, data loading / ETL, then <code>watch</code> can compliment the Clojure REPL workflow by providing incremental change management for non-clojur aspects of the project.</p>
+<p>Add an <code>x-develop</code> configuration with <code>watch</code> under the Clojure service configuration.  Define the action for each path to create a simple but comprehensive way to update the service</p>
 <div class="admonition example">
-<p class="admonition-title">Automated rebuild on file change</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="nt">x-develop</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">      </span><span class="nt">watch</span><span class="p">:</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./deps.edn</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rebuild</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./src</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rebuild</span>
+<p class="admonition-title">Clojure Project - Build on Change</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">services</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">clojure-service</span><span class="p">:</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linux/amd64</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="c1"># host:container</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:8080</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">      </span><span class="nt">postgres-database</span><span class="p">:</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="nt">x-develop</span><span class="p">:</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">      </span><span class="nt">watch</span><span class="p">:</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./deps.edn</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rebuild</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./src</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rebuild</span>
 </code></pre></div>
 </div>
 <p>Start the services and the file watch mode</p>
 <div class="admonition note">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--detach<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>alpha<span class="w"> </span>watch
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--detach<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>alpha<span class="w"> </span>watch
 </code></pre></div>
 </div>
 <p>Save changes to files and a new image for the Clojure service will be built and deployed when ready.</p>
+<div class="admonition hint">
+<p class="admonition-title">Optimise Docker Cache in Build process</p>
+<p>Using build on change approach can run quite frequently, so an optimised build process in the <code>Dockerfile</code> or <code>compose.yaml</code> configuration is especially important to make build on change fast and therefore effective to use.</p>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 15, 2023</span>
       
     
   </small>
