@@ -148,6 +148,7 @@ nav:
         - continuous-integration/docker/index.md
         - continuous-integration/docker/dockerfile.md
         - continuous-integration/docker/compose.md
+        - Clojure Multi-stage Dockerfile: continuous-integration/docker/clojure-multi-stage-dockerfile.md
       - GitHub:
         - continuous-integration/github/index.md
         - Actions: continuous-integration/github/actions.md
