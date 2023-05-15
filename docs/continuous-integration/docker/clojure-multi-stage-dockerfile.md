@@ -4,9 +4,18 @@ Building a Clojure project from source to create a docker image provides an effe
 
 A multi-stage Dockerfile is recommended to ensure build tools and artefacts are not included in the final Docker image, helping minimise the size and resources used by that image.
 
+??? HINT "Practicalli Project Templates provide Multi-stage Dockerfile"
+    [:globe_with_meridians: Practialli Project Templates](https://practical.li/clojure/clojure-cli/projects/templates/){target=_blank} provides `Dockerfile`, `.dockerignore` and `compose.yaml` configurations to optimise the build and run of Clojure projects.
+    ```shell
+    clojure -T:project/create :template practicalli/service :name practicalli/gameboard
+    ```
+    Practicalli Project Templates are included in the [:globe_with_meridians: Practicalli Clojure CLI Config](https://practical.li/clojure/clojure-cli/practicalli-config/){target=_blank} which provides aliases for running community tools to support a wide range of development tasks.
+
 ## Builder stage
 
-Practicalli uses the latest Clojure CLI release and the latest Long Term Support (LTS) version of Eclipse Temurin (OpenJDK).  Alpine Linux is used to keep the image file size as small as possible, reducing local resource requirements (and image download time).
+Practicalli uses the latest Clojure CLI release and the latest Long Term Support (LTS) version of [:fontawesome-solid-book-open: Eclipse Temurin](images.md#openjdk) (OpenJDK).
+
+[:fontawesome-solid-book-open: Alpine Linux](images.md#alpine-linux) image variants are used to keep the image file size as small as possible, reducing local resource requirements (and image download time).
 
 !!! EXAMPLE "Set builder stage image"
     ```dockerfile
@@ -171,7 +180,7 @@ Optionally, add packages to support running the service or helping to debug issu
 Docker runs as root user by default and if a container is compromised the root permissions and could lead to a compromised host system. [Docker recommends creating a user and group in the run-time image](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#user)  to run the service
 
 
-!!! EXAMPLE ""Create a non-privileged user account
+!!! EXAMPLE "Create a non-privileged user account"
     ```dockerfile
     ARG UID=10001
     RUN adduser \
