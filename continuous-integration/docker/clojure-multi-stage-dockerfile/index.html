@@ -12,20 +12,20 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/engineering-playbook/continuous-integration/docker/dockerfile/">
+        <link rel="canonical" href="https://practical.li/engineering-playbook/continuous-integration/docker/clojure-multi-stage-dockerfile/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../compose/">
       
       
-        <link rel="next" href="../compose/">
+        <link rel="next" href="../../github/">
       
       <link rel="icon" href="../../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
-        <title>Dockerfile - Practicalli Engineering Playbook</title>
+        <title>Clojure Multi-stage Dockerfile - Practicalli Engineering Playbook</title>
       
     
     
@@ -71,11 +71,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Dockerfile - Practicalli Engineering Playbook" >
+        <meta  property="og:title"  content="Clojure Multi-stage Dockerfile - Practicalli Engineering Playbook" >
       
         <meta  property="og:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/docker/dockerfile.png" >
+        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/docker/clojure-multi-stage-dockerfile.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -83,15 +83,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/engineering-playbook/continuous-integration/docker/dockerfile/" >
+        <meta  property="og:url"  content="https://practical.li/engineering-playbook/continuous-integration/docker/clojure-multi-stage-dockerfile/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Dockerfile - Practicalli Engineering Playbook" >
+        <meta  name="twitter:title"  content="Clojure Multi-stage Dockerfile - Practicalli Engineering Playbook" >
       
         <meta  name="twitter:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/docker/dockerfile.png" >
+        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/docker/clojure-multi-stage-dockerfile.png" >
       
     
     
@@ -128,7 +128,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dockerfile" class="md-skip">
+        <a href="#docker-multi-stage-dockerfile-for-clojure" class="md-skip">
           Skip to content
         </a>
       
@@ -162,7 +162,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dockerfile
+              Clojure Multi-stage Dockerfile
             
           </span>
         </div>
@@ -764,66 +764,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Dockerfile
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../dockerfile/" class="md-nav__link">
         Dockerfile
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#multi-stage-dockerfile" class="md-nav__link">
-    Multi-stage Dockerfile
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#official-docker-images" class="md-nav__link">
-    Official Docker images
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -847,11 +792,141 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../clojure-multi-stage-dockerfile/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Clojure Multi-stage Dockerfile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Clojure Multi-stage Dockerfile
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#builder-stage" class="md-nav__link">
+    Builder stage
+  </a>
+  
+    <nav class="md-nav" aria-label="Builder stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache-dependencies" class="md-nav__link">
+    Cache Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-uberjar" class="md-nav__link">
+    Build Uberjar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-ignore-patterns" class="md-nav__link">
+    Docker Ignore patterns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-time-stage" class="md-nav__link">
+    Run-time stage
+  </a>
+  
+    <nav class="md-nav" aria-label="Run-time stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-root-group-and-user" class="md-nav__link">
+    Non-root group and user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-uberjar-to-run-time-stage" class="md-nav__link">
+    Copy Uberjar to run-time stage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-environment-variables" class="md-nav__link">
+    Service Environment variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-virtual-machine-optimisation" class="md-nav__link">
+    Java Virtual Machine Optimisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expose-clojure-service" class="md-nav__link">
+    Expose Clojure service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrypoint" class="md-nav__link">
+    Entrypoint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-and-run-with-docker" class="md-nav__link">
+    Build and Run with docker
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1185,22 +1260,97 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#multi-stage-dockerfile" class="md-nav__link">
-    Multi-stage Dockerfile
+  <a href="#builder-stage" class="md-nav__link">
+    Builder stage
   </a>
+  
+    <nav class="md-nav" aria-label="Builder stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache-dependencies" class="md-nav__link">
+    Cache Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-uberjar" class="md-nav__link">
+    Build Uberjar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-ignore-patterns" class="md-nav__link">
+    Docker Ignore patterns
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#official-docker-images" class="md-nav__link">
-    Official Docker images
+  <a href="#run-time-stage" class="md-nav__link">
+    Run-time stage
   </a>
+  
+    <nav class="md-nav" aria-label="Run-time stage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#non-root-group-and-user" class="md-nav__link">
+    Non-root group and user
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-uberjar-to-run-time-stage" class="md-nav__link">
+    Copy Uberjar to run-time stage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-environment-variables" class="md-nav__link">
+    Service Environment variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-virtual-machine-optimisation" class="md-nav__link">
+    Java Virtual Machine Optimisation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expose-clojure-service" class="md-nav__link">
+    Expose Clojure service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrypoint" class="md-nav__link">
+    Entrypoint
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
+  <a href="#build-and-run-with-docker" class="md-nav__link">
+    Build and Run with docker
   </a>
   
 </li>
@@ -1220,7 +1370,7 @@
                   
 
   
-    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/continuous-integration/docker/dockerfile.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/continuous-integration/docker/clojure-multi-stage-dockerfile.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1229,42 +1379,300 @@
     
       
     
-    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/continuous-integration/docker/dockerfile.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/continuous-integration/docker/clojure-multi-stage-dockerfile.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="dockerfile">Dockerfile<a class="headerlink" href="#dockerfile" title="Permanent link">λ︎</a></h1>
-<p>Deployment of Clojure is very simple, only an Uberjar archive file (Clojure Project and Clojure run-time) and the Java Run-time Environment (JRE) are required.</p>
-<p>A Clojure service rarely works in isolation and although many services are access via a network connection (defined in Environment Variables), provisioning containers to build and run Clojure along with any other services can be valuable as complexity of the architecture grows.</p>
-<p>A <a href="https://github.com/practicalli/clojure-app-template/blob/main/Dockerfile">Multi-stage <code>Dockerfile</code></a> is an effective way to build and run Clojure projects in continuous integration pipelines and during local development where multiple services are required for testing.</p>
-<p><a href="https://hub.docker.com/_/amazoncorretto">Docker Hub</a> provides a wide range of images, supporting development, continuous integration and system integration testing.</p>
-<h2 id="multi-stage-dockerfile">Multi-stage Dockerfile<a class="headerlink" href="#multi-stage-dockerfile" title="Permanent link">λ︎</a></h2>
-<p>A multi-stage <code>Dockerfile</code> contains builder stage and an unnamed stage used as the run-time.  The builder stage can be designed optimally for building the Clojure project and the run-time stage optimised for running the service efficiently and securely.</p>
-<p>The uberjar created by the builder image is copied over to the run-time image to keep that image as clean and small as possible (to minimise resource use).</p>
+<h1 id="docker-multi-stage-dockerfile-for-clojure">Docker Multi-Stage Dockerfile for Clojure<a class="headerlink" href="#docker-multi-stage-dockerfile-for-clojure" title="Permanent link">λ︎</a></h1>
+<p>Building a Clojure project from source to create a docker image provides an effective workflow for local testing and system integration.</p>
+<p>A multi-stage Dockerfile is recommended to ensure build tools and artefacts are not included in the final Docker image, helping minimise the size and resources used by that image.</p>
+<h2 id="builder-stage">Builder stage<a class="headerlink" href="#builder-stage" title="Permanent link">λ︎</a></h2>
+<p>Practicalli uses the latest Clojure CLI release and the latest Long Term Support (LTS) version of Eclipse Temurin (OpenJDK).  Alpine Linux is used to keep the image file size as small as possible, reducing local resource requirements (and image download time).</p>
+<div class="admonition example">
+<p class="admonition-title">Set builder stage image</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">clojure:temurin-17-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
+</code></pre></div>
+</div>
+<p><code>CLOJURE_VERSION</code> will over-ride the version of Clojure CLI in the Clojure image (which defaults to latest Clojure CLI release). Or choose an image that has a specific Clojure CLI version, e.g. <code>temurin-17-tools-deps-1.11.1.1182-alpine</code></p>
+<div class="admonition example">
+<p class="admonition-title">Set builder stage image with specific Clojure version</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">clojure:temurin-17-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">ENV</span><span class="w"> </span><span class="nv">CLOJURE_VERSION</span><span class="o">=</span><span class="m">1</span>.11.1.1182
+</code></pre></div>
+</div>
+<p>Create directory for building the project code and set it as the working directory within the Docker container to give RUN commands a path to execute from.</p>
+<div class="admonition example">
+<p class="admonition-title">Create working directory for build</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/build
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/build</span>
+</code></pre></div>
+</div>
+<h3 id="cache-dependencies">Cache Dependencies<a class="headerlink" href="#cache-dependencies" title="Permanent link">λ︎</a></h3>
+<p>Clojure CLI is used to download dependencies for the project and any other tooling used during the build stage, e.g. test runners, packaging tools to create an uberjar.  Dependency download should only occur once, unless the <code>deps.edn</code> file changes.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Makefile</label><label for="__tabbed_1_2">Clojure CLI</label><label for="__tabbed_1_3">Babashka Task Runner</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Copy the <code>deps.edn</code> file to the build stage and use the <code>clojure -P</code> prepare (dry run) command to download the dependencies without running any Clojure code or tools.</p>
+<div class="admonition example">
+<p class="admonition-title">Create dependency cache overlay</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">COPY</span><span class="w"> </span>deps.edn<span class="w"> </span>Makefile<span class="w"> </span>/build/
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">RUN</span><span class="w"> </span>make<span class="w"> </span>deps
+</code></pre></div>
+</div>
+<p>The dependencies are cached in the Docker overlay (layer) and this cache will be used on successive docker builds unless the <code>deps.edn</code> file or <code>Makefile</code> is change.</p>
+</div>
+<div class="tabbed-block">
+<p>Copy the <code>deps.edn</code> file to the build stage and use the <code>clojure -P</code> prepare (dry run) command to download the dependencies without running any Clojure code or tools.</p>
+<div class="admonition example">
+<p class="admonition-title">Create dependency cache overlay</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">COPY</span><span class="w"> </span>deps.edn<span class="w"> </span>/build/
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">RUN</span><span class="w"> </span>clojure<span class="w"> </span>-P<span class="w"> </span>-X:build
+</code></pre></div>
+</div>
+<p>The dependencies are cached in the Docker overlay (layer) and this cache will be used on successive docker builds unless the <code>deps.edn</code> file is change.</p>
+</div>
+<div class="tabbed-block">
+<p>Pull request welcome
+<!-- TODO Add babashka test runner for mutli-stage Dockerfile --></p>
+</div>
+</div>
+</div>
+<p><code>deps.edn</code> in this example contains the project dependencies and <code>:build</code> alias used build the Uberjar.</p>
+<h3 id="build-uberjar">Build Uberjar<a class="headerlink" href="#build-uberjar" title="Permanent link">λ︎</a></h3>
+<p>Copy all the project files to the docker builder working directory, creating another overlay.</p>
+<p>Copying the src and other files in a separate overlay to the <code>deps.edn</code> file ensures that changes to the Clojure code or configuration files does not trigger downloading of the dependencies again.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Makefile</label><label for="__tabbed_2_2">Clojure CLI</label><label for="__tabbed_2_3">Babashka Task Runner</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Run the <code>dist</code> task to generate an Uberjar for distribution.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">COPY</span><span class="w"> </span>./<span class="w"> </span>/build
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">RUN</span><span class="w"> </span>make<span class="w"> </span>dist
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Run the <code>tools.build</code> command to generate an Uberjar.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">COPY</span><span class="w"> </span>./<span class="w"> </span>/build
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">RUN</span><span class="w"> </span>clojure<span class="w"> </span>-T:build<span class="w"> </span>uberjar
+</code></pre></div>
+<code>:build</code> is an alias to include <a href="https://practical.li/clojure/clojure-cli/projects/tools-build/">Clojure tools.build</a> dependencies which is used to build the Clojure project into an Uberjar.</p>
+</div>
+<div class="tabbed-block">
+<p>Pull request welcome</p>
+</div>
+</div>
+</div>
+<h3 id="docker-ignore-patterns">Docker Ignore patterns<a class="headerlink" href="#docker-ignore-patterns" title="Permanent link">λ︎</a></h3>
+<p><code>.dockerignore</code> file in the root of the project defines file and directory patterns that Docker will ignore with the COPY command.  Use <code>.dockerignore</code> to avoid copying files that are not required for the build</p>
+<p>Keep the <code>.dockerignore</code> file simple by excluding all files with <code>*</code> pattern and then use the <code>!</code> character to explicitly add files and directories that should be copied</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Makefile</label><label for="__tabbed_3_2">Clojure CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Docker ignore - only include specific patterns</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Ignore all files</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>*
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Include Clojure code and config</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>!deps.edn
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>!Makefile
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>!src/
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>!test/
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>!test-data/
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>!resources/
+</code></pre></div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Clojure CLI</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Docker ignore - only include specific patterns</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Ignore all files</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>*
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Include Clojure code and config</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>!deps.edn
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>!src/
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>!test/
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>!test-data/
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>!resources/
+</code></pre></div>
+</div>
+<p><code>test-data</code> directory is commonly used by Practicalli to include scripts and data for testing the system once running.</p>
 <blockquote>
-<p><a href="https://github.com/practicalli/clojure-app-template/blob/main/Dockerfile">Example  Multi-stage <code>Dockerfile</code> for Clojure projects</a> derived from the configuration currently used for commercial and open source work.  The example uses make targets, which are Clojure commands defined in the <a href="https://github.com/practicalli/clojure-app-template/blob/main/Makefile">example Makefile</a></p>
+<p>The classic approach for Docker ignoer patters is to <a href="https://gist.github.com/practicalli-john/36230953271cb0376a297d8a1d82ff6d">specify all files and directories to exclude in a Clojure project</a>, although this can lead to more maintenance as the project grows.</p>
 </blockquote>
-<h2 id="official-docker-images">Official Docker images<a class="headerlink" href="#official-docker-images" title="Permanent link">λ︎</a></h2>
-<p>Docker Hub contains a large variety of images, using those tagged with <strong>Docker Official Image</strong> is recommended.</p>
+<h2 id="run-time-stage">Run-time stage<a class="headerlink" href="#run-time-stage" title="Permanent link">λ︎</a></h2>
+<p>The Alpine Linux version of the Eclipse Temurin image is used as it is around 5Mb in size, compared to 60Mb or more of other operating system images.</p>
+<div class="admonition example">
+<p class="admonition-title">Image for run-time stage</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">eclipse-temurin:17-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">final</span>
+</code></pre></div>
+</div>
+<p>Run-time containers are often cached in a repository, e.g. AWS Container Repository (ECR).  <code>LABEL</code> adds metadata to the container helping it to be identified in a repository or in a local development environment.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">LABEL</span><span class="w"> </span>org.opencontainers.image.authors<span class="o">=</span><span class="s2">&quot;nospam+dockerfile@practicall.li&quot;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">LABEL</span><span class="w"> </span>io.github.practicalli.service<span class="o">=</span><span class="s2">&quot;Gameboard API Service&quot;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">LABEL</span><span class="w"> </span>io.github.practicalli.team<span class="o">=</span><span class="s2">&quot;Practicalli Engineering Team&quot;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">LABEL</span><span class="w"> </span><span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">LABEL</span><span class="w"> </span><span class="nv">description</span><span class="o">=</span><span class="s2">&quot;Gameboard API service&quot;</span>
+</code></pre></div>
+<blockquote>
+<p>Use <code>docker inspect</code> to view the metadata</p>
+</blockquote>
+<p>Optionally, add packages to support running the service or helping to debug issue in the container when it is running.  For example, add <code>dumb-init</code> to manage processes, <code>curl</code> and <code>jq</code> binaries for manual running of system integration testing scripts for API testing.</p>
+<p><code>apk</code> is the package tool for Alpine Linux and <code>--no-cache</code> option ensures the install file is not part of the resulting image, saving resources.  Alpine Linux recommends setting versions to use any point release with the <code>~=</code> approximately equal version, so any same major.minor version of the package can be used.</p>
+<div class="admonition example">
+<p class="admonition-title">Add Alpine packages</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">RUN</span><span class="w"> </span>apk<span class="w"> </span>add<span class="w"> </span>--no-cache<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span>dumb-init~<span class="o">=</span><span class="m">1</span>.2.5<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span>curl~<span class="o">=</span><span class="m">8</span>.0.1<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span>jq~<span class="o">=</span><span class="m">1</span>.6
+</code></pre></div>
+</div>
+<blockquote>
+<p><a href="https://pkgs.alpinelinux.org/packages">Check Alpine packages</a> if new major versions are no longer available (low frequency)</p>
+</blockquote>
+<h3 id="non-root-group-and-user">Non-root group and user<a class="headerlink" href="#non-root-group-and-user" title="Permanent link">λ︎</a></h3>
+<p>Docker runs as root user by default and if a container is compromised the root permissions and could lead to a compromised host system. <a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#user">Docker recommends creating a user and group in the run-time image</a>  to run the service</p>
+<p>!!! EXAMPLE ""Create a non-privileged user account
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">ARG</span><span class="w"> </span><span class="nv">UID</span><span class="o">=</span><span class="m">10001</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">RUN</span><span class="w"> </span>adduser<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">    </span>--disabled-password<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">    </span>--gecos<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span>--home<span class="w"> </span><span class="s2">&quot;/nonexistent&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span>--shell<span class="w"> </span><span class="s2">&quot;/sbin/nologin&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span>--no-create-home<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span>--uid<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">UID</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span>clojure
+</code></pre></div></p>
+<div class="admonition example">
+<p class="admonition-title">Create Non-root group and user</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">RUN</span><span class="w"> </span>addgroup<span class="w"> </span>-S<span class="w"> </span>practicalli<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>adduser<span class="w"> </span>-S<span class="w"> </span>practicalli<span class="w"> </span>-G<span class="w"> </span>practicalli
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Create directory to contain service</p>
+<p>Create directory to contain service archive, owned by non-root user</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/service<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>clojure.<span class="w"> </span>/service
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Set user</p>
+<p>Instruct docker that all future commands should run as the appuser user
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">USER</span><span class="w"> </span><span class="s">clojure</span>
+</code></pre></div></p>
+</div>
+<h3 id="copy-uberjar-to-run-time-stage">Copy Uberjar to run-time stage<a class="headerlink" href="#copy-uberjar-to-run-time-stage" title="Permanent link">λ︎</a></h3>
+<p>Create a directory to run the service or use a known existing path that will not clash with any existing files from the image.</p>
+<p>Set the working directory and copy the uberjar archive file from Builder image</p>
+<div class="admonition example">
+<p class="admonition-title">Copy Uberjar from build stage</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/service</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>--chown<span class="o">=</span>clojure:clojure<span class="w"> </span>/build/practicalli-service.jar<span class="w"> </span>/service/practicalli-service.jar
+</code></pre></div>
+<p>Optionally, add system integration testing scripts to the run-time stage for testing from within the docker container.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">RUN</span><span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/service/test-scripts
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>builder<span class="w"> </span>--chown<span class="o">=</span>clojure:clojure<span class="w"> </span>/build/test-scripts/curl--*<span class="w"> </span>/service/test-scripts/
+</code></pre></div>
+<h3 id="service-environment-variables">Service Environment variables<a class="headerlink" href="#service-environment-variables" title="Permanent link">λ︎</a></h3>
+<p>Define values for environment variables should they be required (usually for debugging), ensuring no sensitive values are used. Environment variables are typically set by the service provisioning the containers (AWS ECS / Kubernettes) or on the local OS host during development (Docker Desktop).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c"># optional over-rides for Integrant configuration</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="c"># ENV HTTP_SERVER_PORT=</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="c"># ENV MYSQL_DATABASE=</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="k">ENV</span><span class="w"> </span><span class="nv">SERVICE_PROFILE</span><span class="o">=</span>prod
+</code></pre></div>
+<h3 id="java-virtual-machine-optimisation">Java Virtual Machine Optimisation<a class="headerlink" href="#java-virtual-machine-optimisation" title="Permanent link">λ︎</a></h3>
+<p>Clojure Uberjar runs on the Java Virtual Machine which is a highly optimised environment that rarely needs adjusting, unless there are noticeable performance or resource issue use.</p>
+<p>Minimum and maximum heap sizes, i.e. <code>-XX:MinRAMPercentage</code> and <code>-XX:MaxRAMPercentage</code> are typically the only optimisations required.</p>
+<p><code>java -XshowSettings -version</code> displays VM settings (vm), Property settings (property), Locale settings (locale), Operating System Metrics (system) and the version of the JVM used.  Add the category name to show only a specific group of settings, e.g. <code>java -XshowSettings:system -version</code>.</p>
+<p><code>JDK_JAVA_OPTIONS</code> can be used to tailor the operation of the Java Virtual Machine, although the benefits and constraints of options should be well understood before using them (especially in production).</p>
+<div class="admonition example">
+<p class="admonition-title">Show settings on JVM startup</p>
+<p>Show system settings on startup, force container mode and set memory heap maximum to 85% of host memory size.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">ENV</span><span class="w"> </span>JDK_JAVA_OPTIONS<span class="w"> </span><span class="s2">&quot;-XshowSettings:system -XX:+UseContainerSupport -XX:MaxRAMPercentage=85&quot;</span>
+</code></pre></div></p>
+</div>
+<details class="info">
+<summary>Use relative heap memory settings, not fixed sizes</summary>
+<p>Relative heap memory settings (<code>-XX:MaxRAMPercentage</code>) should be used for containers rather than the fixed value options (<code>-Xmx</code>) as the provisioning service for the container may control and change the resources available to a container on deployment (especially a Kubernettes system).</p>
+</details>
+<p>Options that are most relevant to running Clojure &amp; Java Virtual Machine in a container include:</p>
 <ul>
-<li><a href="https://hub.docker.com/_/clojure/">Clojure - official Docker Image</a> - provides tools to build Clojure projects (Clojure CLI, Leiningen, Boot)</li>
-<li><a href="https://hub.docker.com/_/eclipse-temurin">Eclipse temurin OpenJDK - official Docker image</a> - built by the <a href="https://adoptium.net/">community</a> - provides the Java run-time</li>
+<li><code>-XshowSettings:system</code> display (container) system resources on JVM startup</li>
+<li><code>-XX:InitialRAMPercentage</code> Percentage of real memory used for initial heap size</li>
+<li><code>-XX:MaxRAMPercentage</code> Maximum percentage of real memory used for maximum heap size</li>
+<li><code>-XX:MinRAMPercentage</code> Minimum percentage of real memory used for maximum heap size on systems with small physical memory</li>
+<li><code>-XX:ActiveProcessorCount</code> specifies the number of CPU cores the JVM should use regardless of container detection heuristics</li>
+<li><code>-XX:±UseContainerSupport</code> force JVM to run in container mode, disabling container detection (only useful if JVM not detecting container environment)</li>
+<li><code>-XX:+UseZGC</code> low latency Z Garbage collector (read the <a href="https://docs.oracle.com/en/java/javase/17/gctuning/z-garbage-collector.html">Z Garbage collector documentation</a> and understand the trade-offs before use) - the default Hotspot garbage collector is the most effective choice for most services</li>
 </ul>
-<p>Ideally a base image should be used where both builder and run-time images share the same ancestor, this helps maintain consistency between build and run-time environments.</p>
-<p>The Eclipse OpenJDK image is used by the Clojure docker image, so they implicitly use the same base image without needed to be specified in the project <code>Dockerfile</code>.  The Eclipse OpenJDK image could be used as a base image in the <code>Dockerfile</code> but it would mean repeating (and maintaining) much the work done by the official Clojure image)</p>
-<p>Alternative Docker images
-* <a href="https://hub.docker.com/r/cimg/clojure">CircleCI Convenience Images =&gt; Clojure</a> - an optimised Clojure image for use with the <a href="https://circleci.com/">CircleCI service</a>
-* <a href="https://hub.docker.com/_/amazoncorretto">Amazon Corretto</a> is an alternative version of OpenJDK</p>
+<details class="warning">
+<summary>Only optimise if performance test data shows issues</summary>
+<p>Without performance testing of a specific Clojure service and analysis of the results, let the JVM use its own heuristics to determine the most optimum strategies it should use</p>
+</details>
+<h3 id="expose-clojure-service">Expose Clojure service<a class="headerlink" href="#expose-clojure-service" title="Permanent link">λ︎</a></h3>
+<p>If Clojure service listens to network requests when running, then the port it is listening on should be exposed so the world outside the container can communicate to the Clojure service.</p>
+<p>e.g. expose port of HTTP Server that runs the Clojure service</p>
+<div class="admonition example">
+<p class="admonition-title">Expose service port</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">EXPOSE</span><span class="w"> </span><span class="s">8080</span>
+</code></pre></div>
+</div>
+<h3 id="entrypoint">Entrypoint<a class="headerlink" href="#entrypoint" title="Permanent link">λ︎</a></h3>
+<p>Finally define how to run the Clojure service in the container.  The <code>java</code> command is used with the <code>-jar</code> option to run the Clojure service from the Uberjar archive.</p>
+<p>The <code>java</code> command will use arguments defined in <code>JDK_JAVA_OPTIONS</code>.</p>
+<p>ENTRYPOINT directive defines the command to run the service</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;java&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-jar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;/service/practicalli-service.jar&quot;</span><span class="p">]</span>
+</code></pre></div>
+<details class="info">
+<summary>Docker ENTRYPOINT directive</summary>
+<p><code>ENTRYPOINT</code> is the recommended way to run a service in Docker.  <code>CMD</code> can be used to pass additional arguments to the <code>ENTRYPOINT</code> command, or used instead of <code>ENTRYPOINT</code>.</p>
+<p><code>jshell</code>is the default <code>ENTRYPOINT</code> for the Eclipse Temurin image. <code>jshell</code> will run if a <code>CMD</code> directive is not included in the run-time stage of the <code>Dockerfile</code>.</p>
+</details>
+<p>The <code>ENTRYPOINT</code> command runs as process id 1 (PID 1) inside the docker container.  In a Linux system PID 1 should respond to all TERM and SIGTERM signals.</p>
+<p><a href="https://github.com/Yelp/dumb-init">dump-init</a> provides a simple process supervisor and init system, designed to run as PID 1 and manage all signals and child processes effectively.</p>
+<p>Use <code>dumb-init</code> as the <code>ENTRYPOINT</code> command and <code>CMD</code> to pass the java command to start the Clojure service as an argument.  <code>dumb-init</code> ensures <code>TERM</code> signals are sent to the Java process and all child processes are cleaned up on shutdown.</p>
+<div class="admonition example">
+<p class="admonition-title">ENTRYPOINT to cleanly manage service</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;/usr/bin/dumb-init&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--&quot;</span><span class="p">]</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;java&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-jar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;/service/practicalli-service.jar&quot;</span><span class="p">]</span>
+</code></pre></div>
+</div>
 <blockquote>
-<p>An Official Docker Image means the configuration of that image follows the <a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Docker recommended practices</a>, is well documented and designed for common use cases.  There is no implication at to the correctness of tools, languages or service that image provides, only in the means in which they are provided.</p>
+<p>Alternatively, run dumb-jump and java within the <code>ENTRYPOINT</code> directive, <code>ENTRYPOINT ["/usr/bin/dumb-init", "--", "java", "-jar", "/service/practicalli-service.jar"]</code>.  This approach cannot be overridden correctly with an additional CMD directive on the command line when using <code>docker run</code>.</p>
 </blockquote>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">λ︎</a></h2>
-<p>A Multi-stage <code>Dockerfile</code> is an effective way of building and running Clojure projects, especially as the architecture grows in complexity.</p>
-<p>Organising the commands in the <code>Dockerfile</code> to maximise the use of docker cache will speed up the build time by skipping tasks that would not change the resulting image.</p>
-<p>Consider creating a <code>compose.yaml</code> file to orchestrate services that are required for development of the project and local system integration testing.</p>
+<h2 id="build-and-run-with-docker">Build and Run with docker<a class="headerlink" href="#build-and-run-with-docker" title="Permanent link">λ︎</a></h2>
+<p>Ensure docker services are running, i.e. start docker desktop.</p>
+<p>Build the service and create an image to run the Clojure service in a container with <code>docker build</code>.  Use a <code>--tag</code> to help identify the image and specify the context (in this example the root directory of the current project, <code>.</code>)</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>docker<span class="w"> </span>build<span class="w"> </span>--tag<span class="w"> </span>practicalli/service-name:1.1<span class="w"> </span>.
+</code></pre></div>
+</div>
+<p>After the first time building the docker image, any parts of the build that havent changed will use their respective cached layers in the builder stage.  This can lead to very fast, even zero time builds.</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/docker-compose-build-output-cached-layers.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Docker build image optomised to use docker layer cache for build stage" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/docker-compose-build-output-cached-layers.png" /></a></p>
+<div class="admonition hint">
+<p class="admonition-title">Maximise use of Docker cache</p>
+<p>Maximising the docker cache by careful consideration of command order and design in a <code>Dockerfile</code> can have a significant positive affect on build speed.</p>
+<p>Each command is an overlay (layer) in the Docker image and if its respective files have not changed, then the cached version of the command will be used.</p>
+</div>
+<p>Run the built image in a docker container using <code>docker run</code>, publishing the port number so it can be used from the host (developer environment or deployed environment).  Use the name of the image created by the tag in the docker build command.</p>
+<div class="admonition note">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--publish<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span>practicalli/service-name
+</code></pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Orchestrate multiple services with Compose</p>
+<p><a href="../compose/">Create a <code>compose.yml</code> file</a> to defines all services to run to support local integration testing, optionally adding health checks and conditional starts.</p>
+<p>Run <code>docker compose up</code> to start all the services.</p>
+</div>
 
   <hr>
 <div class="md-source-file">
@@ -1306,7 +1714,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker" rel="prev">
+          <a href="../compose/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Compose" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1315,20 +1723,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Docker
+                Compose
               </div>
             </div>
           </a>
         
         
           
-          <a href="../compose/" class="md-footer__link md-footer__link--next" aria-label="Next: Compose" rel="next">
+          <a href="../../github/" class="md-footer__link md-footer__link--next" aria-label="Next: GitHub Workflows and Actions" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Compose
+                GitHub Workflows and Actions
               </div>
             </div>
             <div class="md-footer__button md-icon">
