@@ -81,7 +81,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/docker/desktop-extensions/</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/docker/desktop/</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/dockerfile/</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/docker/images/</loc>
+         <lastmod>2023-05-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/docker/install/</loc>
          <lastmod>2023-05-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
