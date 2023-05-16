@@ -8,12 +8,12 @@ A Docker workflow complements a [REPL Driven Development workflow](https://pract
 
 ## General Workflow
 
-- Create a Clojure project, e.g. using [deps-new and Practicalli Project Templates](https://practical.li/clojure/clojure-cli/projects/templates/)
-- Install Docker Desktop & Extensions, e.g. [Docker Desktop for Ubuntu](https://practical.li/blog/posts/docker-desktop-on-ubuntu-linux/) (coming soon)
-- Create a Dockerfile ([multi-stage build and run-time](https://practical.li/blog/posts/build-and-run-clojure-with-multistage-dockerfile/))
-- Compose services together, adding health checks and conditional starts
-- REPL driven development, e.g. [Practicalli REPL Reloaded Workflow](https://practical.li/clojure/clojure-cli/repl-reloaded/)
-- (optional) Automatic rebuild of Clojure project when [watching for code changes](https://docs.docker.com/compose/file-watch/) (experimental feature)
+- Create a Clojure project, e.g. using [:globe_with_meridians: deps-new and Practicalli Project Templates](https://practical.li/clojure/clojure-cli/projects/templates/)
+- [:fontawesome-solid-book-open: Install Docker Desktop](install.md) & [:fontawesome-solid-book-open: Extensions](desktop-extensions.md)
+- [:fontawesome-solid-book-open: Create a Dockerfile](dockerfile.md), e.g [:fontawesome-solid-book-open: a multi-stage build and run-time Dockerfile](clojure-multi-stage-dockerfile.md)
+- [:fontawesome-solid-book-open: Compose services together](compose.md), adding health checks and conditional starts
+- REPL driven development, e.g. [:globe_with_meridians: Practicalli REPL Reloaded Workflow](https://practical.li/clojure/clojure-cli/repl-reloaded/)
+- (optional) Automatic rebuild of Clojure project when [:fontawesome-solid-book-open: watching for code changes](compose.md#build-on-change) (experimental feature)
 
 !!! HINT "Try the Docker getting started tutorial"
     Follow the Docker Getting Started tutorial from within Docker Desktop or via the command line.
