@@ -9,7 +9,7 @@ A Docker workflow complements a [REPL Driven Development workflow](https://pract
 ## General Workflow
 
 - Create a Clojure project, e.g. using [deps-new and Practicalli Project Templates](https://practical.li/clojure/clojure-cli/projects/templates/)
-- Install Docker Desktop & Extensions, e.g. [Docker Desktop for Ubuntu](https://practical.li/blog/posts/docker-desktop-on-ubuntu-linux/) (coming soon)
+- Install Docker Desktop & Extensions, e.g. [Docker Desktop for Ubuntu](https://practical.li/blog/posts/docker-desktop-on-ubuntu-linux/)
 - Create a Dockerfile ([multi-stage build and run-time](https://practical.li/blog/posts/build-and-run-clojure-with-multistage-dockerfile/))
 - Compose services together, adding health checks and conditional starts
 - REPL driven development, e.g. [Practicalli REPL Reloaded Workflow](https://practical.li/clojure/clojure-cli/repl-reloaded/)
