@@ -27,12 +27,80 @@ cp /usr/share/doc/kitty/examples/kitty.conf ~/.config/kitty/
 ```
 
 
-## Common configuration options
+## Fonts
 
-```shell
-font_family FiraCode
-font_size 16
-```
+[Nerd Fonts](https://www.nerdfonts.com/) are recommended to provide icon support in Kitty
+
+Download a Nerd Font and configure the font in `kitty.conf`
+
+!!! EXAMPLE "Kitty Font and Font Family"
+    ```shell
+    font_family FiraCode Nerd Font
+    font_size 16
+    ```
+
+Or download the `Symbols Nerd Font` font package for use with any font and add the Nerd Font symbols to Kitty via a symbol map configuration.
+
+??? EXAMPLE "Kitty Configuration for Nerd Fonts symbol map"
+    ```shell title="$HOME/.config/kitty/nerdfont-icons.conf"
+    # ---------------------------------------------------------
+    # NerdFont icons via symbol maps
+    #
+    # Kitty recommends mapping symbols rather than using patched fonts
+    #
+    # Download symbols only font from
+    # <https://github.com/ryanoasis/nerd-fonts/blob/master/src/glyphs/Symbols-2048-em%20Nerd%20Font%20Complete.ttf>
+    #
+    # List available fonts with:
+    #   kitty +list-fonts
+    #
+    # Troubleshoot missing/incorrect characters with:
+    #   kitty --debug-font-fallback
+    #
+    # Reference: <https://erwin.co/kitty-and-nerd-fonts/>
+
+    # Symbols Nerd Font - complete symbol_map
+    
+    # "Nerd Fonts - Pomicons"
+    symbol_map  U+E000-U+E00D Symbols Nerd Font
+    
+    # "Nerd Fonts - Powerline"
+    symbol_map U+e0a0-U+e0a2,U+e0b0-U+e0b3 Symbols Nerd Font
+    
+    # "Nerd Fonts - Powerline Extra"
+    symbol_map U+e0a3-U+e0a3,U+e0b4-U+e0c8,U+e0cc-U+e0d2,U+e0d4-U+e0d4 Symbols Nerd Font
+    
+    # "Nerd Fonts - Symbols original"
+    symbol_map U+e5fa-U+e62b Symbols Nerd Font
+    
+    # "Nerd Fonts - Devicons"
+    symbol_map U+e700-U+e7c5 Symbols Nerd Font
+    
+    # "Nerd Fonts - Font awesome"
+    symbol_map U+f000-U+f2e0 Symbols Nerd Font
+    
+    # "Nerd Fonts - Font awesome extension"
+    symbol_map U+e200-U+e2a9 Symbols Nerd Font
+    
+    # "Nerd Fonts - Octicons"
+    symbol_map U+f400-U+f4a8,U+2665-U+2665,U+26A1-U+26A1,U+f27c-U+f27c Symbols Nerd Font
+    
+    # "Nerd Fonts - Font Linux"
+    symbol_map U+F300-U+F313 Symbols Nerd Font
+    
+    #  Nerd Fonts - Font Power Symbols"
+    symbol_map U+23fb-U+23fe,U+2b58-U+2b58 Symbols Nerd Font
+    
+    #  "Nerd Fonts - Material Design Icons"
+    symbol_map U+f500-U+fd46 Symbols Nerd Font
+    
+    # "Nerd Fonts - Weather Icons"
+    symbol_map U+e300-U+e3eb Symbols Nerd Font
+    
+    # Misc Code Point Fixes
+    symbol_map U+21B5,U+25B8,U+2605,U+2630,U+2632,U+2714,U+E0A3,U+E615,U+E62B Symbols Nerd Font
+    # ---------------------------------------------------------
+    ```
 
 
 ## Multiple sessions
@@ -65,7 +133,7 @@ Other common commands include:
 ++ctrl+shift+"v"++ paste into to kitty terminal from clipboard
 
 ++ctrl+shift+"s"++ paste into to kitty terminal from clipboard
-Paste from Selection	Ctrl+Shift+S
+Paste from Selection Ctrl+Shift+S
 
 
 ## Kitten features
@@ -123,8 +191,6 @@ include ./nerdfont-icons.conf
 ```
 
 
-
-
 ## Diff
 
 The Diff kitten provides a fast way to compare files, although there is no support for merging changes.
@@ -141,7 +207,6 @@ kitty +kitten diff file1 file2
 
 
 * [All keyboard controls](https://sw.kovidgoyal.net/kitty/kittens/diff/#keyboard-controls)
-
 
 
 ## SSH
@@ -216,6 +281,3 @@ font_size 14
 # adjust_baseline 0
 # ---------------------------------------------------------
 ```
-
-
-
