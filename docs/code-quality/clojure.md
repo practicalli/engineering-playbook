@@ -25,13 +25,13 @@ Run `clj-kondo` with the --lint option and specify a file or path
 To analyse a specific file
 
 ```shell
-clj-kondon --lint ~/.config/deps.edn
+clj-kondo --lint ~/.config/deps.edn
 ```
 
 Analyse a project, running the clj-kondo command from the root of the project
 
 ```shell
-clj-kondon --lint .
+clj-kondo --lint .
 ```
 
 
