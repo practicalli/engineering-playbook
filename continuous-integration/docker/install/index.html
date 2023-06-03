@@ -1454,65 +1454,76 @@
 <a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>215c033924260874013394d1f27fa5ec587f183ee9851d3a48884a1422fcc732
 </code></pre></div>
 <p>Open the tutorial website at <a href="http://localhost/">http://localhost/</a> and follow the tutorial steps to learn more about Docker.</p>
+<div class="admonition hint">
+<p class="admonition-title">Increase concurrent download of image overlays</p>
+<p>increase the max-concurrent-downloads value from the default 3 to 24, to download multi-layered docker images faster
+<div class="highlight"><span class="filename">.docker/config.json</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>{
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    &quot;auths&quot;: {},
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    &quot;credsStore&quot;: &quot;desktop&quot;,
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    &quot;currentContext&quot;: &quot;default&quot;,
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="hll">    &quot;max-concurrent-downloads&quot;: 24
+</span><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>}
+</code></pre></div></p>
+</div>
 <h2 id="check-installed-versions">Check installed versions<a class="headerlink" href="#check-installed-versions" title="Permanent link">λ︎</a></h2>
 <p>Print the version of Docker CE installed.  If Docker Desktop is running, then version its information is also printed.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>docker<span class="w"> </span>version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker<span class="w"> </span>version
 </code></pre></div>
 <p>Example output (once Docker Desktop is running)</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>❯<span class="w"> </span>docker<span class="w"> </span>version
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Client:<span class="w"> </span>Docker<span class="w"> </span>Engine<span class="w"> </span>-<span class="w"> </span>Community
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w"> </span>Cloud<span class="w"> </span>integration:<span class="w"> </span>v1.0.31
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w"> </span>Version:<span class="w">           </span><span class="m">23</span>.0.6
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w"> </span>API<span class="w"> </span>version:<span class="w">       </span><span class="m">1</span>.42
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w"> </span>Go<span class="w"> </span>version:<span class="w">        </span>go1.19.9
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w"> </span>Git<span class="w"> </span>commit:<span class="w">        </span>ef23cbc
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w"> </span>Built:<span class="w">             </span>Fri<span class="w"> </span>May<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">21</span>:18:13<span class="w"> </span><span class="m">2023</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w"> </span>OS/Arch:<span class="w">           </span>linux/amd64
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w"> </span>Context:<span class="w">           </span>desktop-linux
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>Server:<span class="w"> </span>Docker<span class="w"> </span>Desktop<span class="w"> </span><span class="m">4</span>.19.0<span class="w"> </span><span class="o">(</span><span class="m">106363</span><span class="o">)</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w"> </span>Engine:
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">  </span>Version:<span class="w">          </span><span class="m">23</span>.0.5
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">  </span>API<span class="w"> </span>version:<span class="w">      </span><span class="m">1</span>.42<span class="w"> </span><span class="o">(</span>minimum<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.12<span class="o">)</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">  </span>Go<span class="w"> </span>version:<span class="w">       </span>go1.19.8
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">  </span>Git<span class="w"> </span>commit:<span class="w">       </span>94d3ad6
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">  </span>Built:<span class="w">            </span>Wed<span class="w"> </span>Apr<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">16</span>:17:45<span class="w"> </span><span class="m">2023</span>
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">  </span>OS/Arch:<span class="w">          </span>linux/amd64
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">  </span>Experimental:<span class="w">     </span><span class="nb">false</span>
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w"> </span>containerd:
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">  </span>Version:<span class="w">          </span><span class="m">1</span>.6.20
-<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">  </span>GitCommit:<span class="w">        </span>2806fc1057397dbaeefbea0e4e17bddfbd388f38
-<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w"> </span>runc:
-<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">  </span>Version:<span class="w">          </span><span class="m">1</span>.1.5
-<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">  </span>GitCommit:<span class="w">        </span>v1.1.5-0-gf19387a
-<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="w"> </span>docker-init:
-<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">  </span>Version:<span class="w">          </span><span class="m">0</span>.19.0
-<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">  </span>GitCommit:<span class="w">        </span>de40ad0
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>❯<span class="w"> </span>docker<span class="w"> </span>version
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Client:<span class="w"> </span>Docker<span class="w"> </span>Engine<span class="w"> </span>-<span class="w"> </span>Community
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w"> </span>Cloud<span class="w"> </span>integration:<span class="w"> </span>v1.0.31
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w"> </span>Version:<span class="w">           </span><span class="m">23</span>.0.6
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w"> </span>API<span class="w"> </span>version:<span class="w">       </span><span class="m">1</span>.42
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w"> </span>Go<span class="w"> </span>version:<span class="w">        </span>go1.19.9
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w"> </span>Git<span class="w"> </span>commit:<span class="w">        </span>ef23cbc
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w"> </span>Built:<span class="w">             </span>Fri<span class="w"> </span>May<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">21</span>:18:13<span class="w"> </span><span class="m">2023</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w"> </span>OS/Arch:<span class="w">           </span>linux/amd64
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w"> </span>Context:<span class="w">           </span>desktop-linux
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>Server:<span class="w"> </span>Docker<span class="w"> </span>Desktop<span class="w"> </span><span class="m">4</span>.19.0<span class="w"> </span><span class="o">(</span><span class="m">106363</span><span class="o">)</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w"> </span>Engine:
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">  </span>Version:<span class="w">          </span><span class="m">23</span>.0.5
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">  </span>API<span class="w"> </span>version:<span class="w">      </span><span class="m">1</span>.42<span class="w"> </span><span class="o">(</span>minimum<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.12<span class="o">)</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">  </span>Go<span class="w"> </span>version:<span class="w">       </span>go1.19.8
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">  </span>Git<span class="w"> </span>commit:<span class="w">       </span>94d3ad6
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">  </span>Built:<span class="w">            </span>Wed<span class="w"> </span>Apr<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">16</span>:17:45<span class="w"> </span><span class="m">2023</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">  </span>OS/Arch:<span class="w">          </span>linux/amd64
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">  </span>Experimental:<span class="w">     </span><span class="nb">false</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w"> </span>containerd:
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="w">  </span>Version:<span class="w">          </span><span class="m">1</span>.6.20
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="w">  </span>GitCommit:<span class="w">        </span>2806fc1057397dbaeefbea0e4e17bddfbd388f38
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w"> </span>runc:
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="w">  </span>Version:<span class="w">          </span><span class="m">1</span>.1.5
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="w">  </span>GitCommit:<span class="w">        </span>v1.1.5-0-gf19387a
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="w"> </span>docker-init:
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="w">  </span>Version:<span class="w">          </span><span class="m">0</span>.19.0
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="w">  </span>GitCommit:<span class="w">        </span>de40ad0
 </code></pre></div>
 <p>Check compose version</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>version
 </code></pre></div>
 <p>Example output</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>❯<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>version
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Docker<span class="w"> </span>Compose<span class="w"> </span>version<span class="w"> </span>v2.17.3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>❯<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>version
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Docker<span class="w"> </span>Compose<span class="w"> </span>version<span class="w"> </span>v2.17.3
 </code></pre></div>
 <h2 id="optimise-log-rotation">Optimise Log rotation<a class="headerlink" href="#optimise-log-rotation" title="Permanent link">λ︎</a></h2>
 <p>Docker uses the <code>json-file</code> driver which creates JSON objects of log events from all containers.  To avoid disk space issues, configure log rotation in a <code>/etc/docker/daemon.json</code> file</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">{</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nt">&quot;log-driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;json-file&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="nt">&quot;log-opts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="nt">&quot;max-size&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10m&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="nt">&quot;max-file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nt">&quot;log-driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;json-file&quot;</span><span class="p">,</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nt">&quot;log-opts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="nt">&quot;max-size&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10m&quot;</span><span class="p">,</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="nt">&quot;max-file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="p">}</span>
 </code></pre></div>
 <p>Use the <a href="https://docs.docker.com/config/containers/logging/local/">local file logging driver</a> if a longer logging history is desirable.  The local file logging driver preserves 100Mb of logs per container (5 x 20Mb files) and uses automatic compression to greatly reduce disk consumption.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">{</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nt">&quot;log-driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span><span class="p">,</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nt">&quot;log-opts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="nt">&quot;max-size&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10m&quot;</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nt">&quot;log-driver&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;local&quot;</span><span class="p">,</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="nt">&quot;log-opts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="nt">&quot;max-size&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10m&quot;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">}</span>
 </code></pre></div>
 <!-- TODO: does local logging driver work with Docker Desktop log explorer? -->
 
@@ -1528,7 +1539,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 15, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 3, 2023</span>
       
     
   </small>
