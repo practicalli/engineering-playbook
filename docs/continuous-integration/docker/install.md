@@ -108,6 +108,18 @@ Status: Downloaded newer image for docker/getting-started:latest
 Open the tutorial website at [http://localhost/](http://localhost/) and follow the tutorial steps to learn more about Docker.
 
 
+!!! HINT "Increase concurrent download of image overlays"
+    increase the max-concurrent-downloads value from the default 3 to 24, to download multi-layered docker images faster
+    ```config hl_lines="5" title=".docker/config.json"
+    {
+    	"auths": {},
+    	"credsStore": "desktop",
+    	"currentContext": "default",
+    	"max-concurrent-downloads": 24
+    }
+    ```
+
+
 ## Check installed versions
 
 Print the version of Docker CE installed.  If Docker Desktop is running, then version its information is also printed.
