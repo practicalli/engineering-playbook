@@ -22,44 +22,13 @@ databases, system integration testing, optimising builds in docker.
     Practicalli Engineering Playbook was started in January 2022 in an attempt to codify the last few decades of development experience, so this will be an on-going work
 
 
-## Development Workflow
-
-Development workflow overview provides a high-level overview of the options available for developing services at Billie, including establishing a project, general development tools and continuous integration workflow.
-
-Deployment workflow via Jenkins overview provides a high-level overview of the Jenkins CI pipeline, including how to Configure Service deployment on test instance via Jenkins Pipeline
-
-
-## General Development tools
-
-* MegaLinter - verify code and configuration consistency - a wide range of open source tools that run in a docker container to minimise install and as a GitHub action for CI support
-* Makefile - consistent tasks across projects - simplify on-boarding and daily development of projects
-
-
-## Programming Languages
-
-Guides to development tools & workflows for specific programming languages, including testing and deployment of services
-
-### Clojure
-
-* Clojure Development Overview
-* Clojure development environment guide
-* Clojure Workflow - REPL Driven Development
-* Deploy Clojure Services via Jenkins and System Integration testing
-
-## Continuous Integration
-
-* Dockerfile Multi-stage build configuration
-* GitHub Actions and common workflow
-
-
-
 ## Book Source code
 
-[practicalli/playbooks repository](https://github.com/practicalli/playbooks){target=_blank} contains the content for this book
+[practicalli/engineering-playbook repository](https://github.com/practicalli/engineering-playbook){target=_blank} contains the content for this book
 
 === "HTTPS"
     ```bash
-    git clone https://github.com/practicalli/engineering-playbooks.git
+    git clone https://github.com/practicalli/engineering-playbook.git
     ```
 
 === "SSH"
