@@ -1,331 +1,83 @@
 # GitHub workflows
 
-GitHub workflows used by Practicalli
+The marketplace page for a GitHub action should specify how it is used within a GitHub workflow.
 
+## Event Triggers
 
+Workflows can be triggered by 
 
-??? HINT "Use major version of Action in workflow configuration"
-    Use the major version of a GitHub action within a GitHub workflows to minimise maintenance of the workflow configuration.
+- commit to branch
+- `pull_request`
+- `cron` scheduled event
+- `workflow_dispatch` manual trigger
 
-    The major version will use the latest version within that scope, e.g. action/checkoutv3 will use `v3.5.2`, the latest version within that major version
+## Include Exclude patterns
 
+Files and directories to include or exclude within the scope of a trigger.  
 
-## MegaLinter
+e.g. ingnore a pull request when changes are only in the `README.md` file
 
-[:fontawesome-solid-book-open: Practicalli MegaLinter workflow](megalinter.md){.md-button}
-
-
-## Backstage.io
-
-[Backstage](https://github.com/backstage/backstage#what-is-backstage) is an open platform for building developer portals, using a centralised software catalog.
-
-The Backstage Validator workflow checks the Backstage configuration of the current project.
-
-!!! EXAMPLE "Validate Backstage.io configuration files"
-    ```yaml
-    ---
-    # --- Validate Backstage.io configuration files ---#
-    # https://github.com/marketplace/actions/backstage-entity-validator
-
-    # trigger workflow if yaml files `.backstage/` directory updated
-    name: Backstage Validator
-    on:
-      pull_request:
-        paths:
-          - ".backstage/"
-    jobs:
-      # Validate backstage configuration
-      backstage-validator:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v3
-          - uses: RoadieHQ/backstage-entity-validator@v0.3.2
-            with:
-              path: ".backstage/*.yaml"
-    ```
-
-
-## Changelog Update Check
-
-Check the CHANGELOG.md file has been updated for a pull request, providing a reminder to add a summary of changes for the pull request
-
-Defines `changelog-check-skip` label on a pull request instructs the workflow not to run
-
-!!! EXAMPLE "Changelog Checker"
-    ```yaml title=".github/workflows/changelog-check.yml"
-    ---
-    # Check CHANGELOG.md file updated for every pull request
-
-    name: Changelog Check
+```yaml
+    name: Workflow name
     on:
       pull_request:
         paths-ignore:
           - "README.md"
-          - "CHANGELOG.md"
-        types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled]
-
-    jobs:
-      changelog:
-        name: Changelog Update Check
-        runs-on: ubuntu-latest
-        steps:
-          - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
-          - run: echo "🐧 Job running on ${{ runner.os }} server"
-          - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
-
-          # Git Checkout
-          - name: Checkout Code
-            uses: actions/checkout@v3
-            with:
-              token: "${{ secrets.PAT || secrets.GITHUB_TOKEN }}"
-          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
-
-          # Changelog Enforcer
-          - name: Changelog Enforcer
-            uses: dangoslen/changelog-enforcer@v3
-            with:
-              changeLogPath: "CHANGELOG.md"
-              skipLabels: "skip-changelog-check"
-
-          # Summary and status
-          - run: echo "🎨 Changelog Enforcer quality checks completed"
-          - run: echo "🍏 Job status is ${{ job.status }}."
-    ```
+```
 
 
-## Clojure Lint with Reviewdog
+## GitHub Action version
 
-!!! EXAMPLE "clj-kondo lint with reviewdog reports"
-    ```yaml
-    ---
-    # Clojure Lint with clj-kondo and reviewdog
-    #
-    # Lint errors raised as comments on pull request conversation
+GitHub actions typically use semantic versioning for their releases
 
-    name: Lint Review
-    on: [pull_request]
+??? INFO "Semantic versioning"
+    Given a version number MAJOR.MINOR.PATCH, increment the:
 
-    jobs:
-      clj-kondo:
-        name: runner / clj-kondo
-        runs-on: ubuntu-latest
-        steps:
-          - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
-          - run: echo "🐧 Job running on ${{ runner.os }} server"
-          - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
+    - MAJOR version for incompatible API changes
+    - MINOR version to add functionality in a backward compatible manner
+    - PATCH version for backward compatible bug fixes
+    - Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
-          # Git Checkout
-          - name: Checkout Code
-            uses: actions/checkout@v3
-            with:
-              token: "${{ secrets.PAT || secrets.GITHUB_TOKEN }}"
-          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
-
-          - name: clj-kondo
-            uses: nnichols/clojure-lint-action@v2
-            with:
-              pattern: "*.clj"
-              clj_kondo_config: ".clj-kondo/config-ci.edn"
-              level: "error"
-              exclude: ".cljstyle"
-              github_token: ${{ secrets.github_token }}
-              reporter: github-pr-review
-
-          # Summary and status
-          - run: echo "🎨 Lint Review checks completed"
-          - run: echo "🍏 Job status is ${{ job.status }}."
-    ```
-
-## Clojure quality check
-
-* clj-kondo syntax check for code and project configuration
-* cljstyle code format check
-* Kaocha unit test runner
-
-!!! EXAMPLE "Clojure Quality Checks"
-    ```yaml
-    ---
-    name: "Clojure Quality Check"
-
-    on:
-      pull_request:
-      push:
-        branches:
-          - main
-
-    jobs:
-      tests:
-        name: "Clojure Quality Checks"
-        runs-on: ubuntu-latest
-        steps:
-
-          # Git Checkout
-          - name: Checkout Code
-            uses: actions/checkout@v3
-          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
-
-          - name: "Prepare Java runtime"
-            uses: actions/setup-java@v3
-            with:
-              distribution: "temurin"
-              java-version: "17"
-
-          - name: "Cache Clojure Dependencies"
-            uses: actions/cache@v3
-            with:
-              path: |
-                ~/.m2/repository
-                ~/.gitlibs
-              key: clojure-deps-${{ hashFiles('**/deps.edn') }}
-              restore-keys: clojure-deps-
-
-          - name: "Install Clojure tools"
-            uses: DeLaGuardo/setup-clojure@10
-            with:
-              cli: 1.11.1.1165 # Clojure CLI
-              cljstyle: 0.15.0 # cljstyle
-              clj-kondo: 2022.10.05 # Clj-kondo
-              # bb: 0.7.8           # Babashka
-
-          - name: "Lint with clj-kondo"
-            run: clj-kondo --lint deps.edn src resources test --config .clj-kondo/config-ci.edn
-
-          - name: "Check Clojure Style"
-            run: cljstyle check --report
-
-          - name: "Kaocha test runner"
-            run: clojure -X:env/test:test/run
-    ```
+    [Semantic Versioning 2.0.0 Specification](https://semver.org/){target=_blank .md-button} 
 
 
+Specify the major release the major version will use the latest version within that scope, e.g. `action/checkout@v3` will use `v3.5.2`, the latest version within that major version
 
-## mkdocs publisher
+```yaml
+steps:
+    - uses: actions/checkout@v3
+```
 
-A workflow used to publish Practicalli books.
-
-* `workflow_dispatch:` for manual trigger of workflow
-* `workflow_run:` to depend on a successful run of the `MegaLinter` workflow
-* `paths-ignore` defining paths to ignore changes from
-* actions/setup-python installs python version 3
-* `pip` to install Material for MkDocs packages used for Practialli books
-
-
-!!! EXAMPLE "MkDocs Publish Book workflow"
-    ```yaml
-    ---
-    name: Publish Book
-    on:
-      # Manually trigger workflow
-      workflow_dispatch:
-
-      # Run work flow conditional on linter workflow success
-      workflow_run:
-        workflows:
-          - "MegaLinter"
-        paths-ignore:
-          - README.md
-          - CHANGELOG.md
-          - .gitignore
-        branches:
-          - main
-        types:
-          - completed
-
-    permissions:
-      contents: write
-
-    jobs:
-      deploy:
-        runs-on: ubuntu-latest
-        steps:
-          - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
-          - run: echo "🐧 Job running on ${{ runner.os }} server"
-          - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
-
-          - name: "Checkout code"
-            uses: actions/checkout@v3
-            with:
-              fetch-depth: 0
-          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
-
-          - uses: actions/setup-python@v4
-            with:
-              python-version: 3.x
-          - uses: actions/cache@v3
-            with:
-              key: ${{ github.ref }}
-              path: .cache
-          - run: pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
-          - run: mkdocs gh-deploy --force
-
-          # Summary
-          - run: echo "🎨 MkDocs book built and deployed to GitHub Pages"
-          - run: echo "🍏 Job status is ${{ job.status }}."
-    ```
-
-## Scheduled Version Check
-
-Use [liquidz/antq-action](https://github.com/liquidz/antq-action) to check for new versions of Clojure libraries and GitHub action.
-
-The GtiHub action can use the following actions
-
-- `excludes:` list of space separated artefact names to exclude from the version check, use `groupId/artifactId` for Java libraries
-- `directories:` search paths to check, space separated.
-- `skips:` project types to skip to search, space separated. One of boot, clojure-cli, github-action, pom, shadow-cljs or leiningen.
-
-`on: schedule: cron:` is used to set the frequency for running the workflow, using a [POSIX cron syntax](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07){target=_blank}.
-
-[:fontawesome-brands-github: GitHub Docs: GitHub Actions - schedule](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule){target=_blank .md-button}
+??? HINT "Use major version of Action in workflow configuration"
+    Use the major version of a GitHub action within a GitHub workflows to minimise maintenance of the workflow configuration.
 
 
-!!! EXAMPLE "Scheduled Antq Version check with Manual Trigger"
-    ```yaml
-    ---
-    # ------------------------------------------
-    # Scheduled check of versions
-    # - use as non-urgent report on versions
-    # - Uses POSIX Cron syntax
-    #   - Minute [0,59]
-    #   - Hour [0,23]
-    #   - Day of the month [1,31]
-    #   - Month of the year [1,12]
-    #   - Day of the week ([0,6] with 0=Sunday)
-    #
-    # Using liquidz/anta to check:
-    # - GitHub workflows
-    # - deps.edn
-    # ------------------------------------------
+Use a specific patch release tag when a specific version is reqiured, providing a consistent version that is used each time.
 
-    name: "Scheduled Version Check"
-    on:
-      schedule:
-        # - cron: "0 4 * * *" # at 04:04:04 ever day
-        - cron: "0 4 * * 5" # at 04:04:04 ever Friday
-        # - cron: "0 4 1 * *" # at 04:04:04 on first day of month
-      workflow_dispatch: # Run manually via GitHub Actions Workflow page
+```yaml
+steps:
+    - uses: actions/checkout@v1.0.1
+```
 
-    jobs:
-      scheduled-version-check:
-        name: "Scheduled Version Check"
-        runs-on: ubuntu-latest
-        steps:
-          - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
-          - run: echo "🐧 Job running on ${{ runner.os }} server"
-          - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
+Use a branch name, commonly used for release management
 
-          - name: "Checkout code"
-            uses: actions/checkout@v3
-          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
+```yaml
+steps:
+    - uses: actions/checkout@v1-beta
+```
 
-          - name: "Antq Version Check"
-            uses: liquidz/antq-action@main
-            with:
-              excludes: "org.clojure/tools.deps.alpha"
-              # excludes: "qualifier/libary-name groupId/artifactId"
-              # directories: "search/path/1 search/path/2"
-              # skips: "boot clojure-cli github-action pom shadow-cljs leiningen"
+Using a commit's SHA for release management
+Every Git commit has a unique and immutable SHA value, calculated in part from the contents of the commit. 
 
-          # Summary
-          - run: echo "🎨 library versions checked with liquidz/antq"
-          - run: echo "🍏 Job status is ${{ job.status }}."
-    ```
+A SHA value can be more reliable than specifying a tag value which could be deleted or moved.
+
+Using a SHA value does means only that specific commit is used, so a new SHA value must be used if a newer version is required. The full SHA value of the commit must be used, not the abbreviated value.
+
+```yaml
+steps:
+    - uses: actions/checkout@172239021f7ba04fe7327647b213799853a9eb89
+```
+
+[:fontawesome-brands-github: GitHub: creating actions reference](https://docs.github.com/en/actions/creating-actions/about-custom-actions){target=_blank .md-button}
+
+
