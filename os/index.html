@@ -12,27 +12,25 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/engineering-playbook/continuous-integration/docker/desktop/">
+        <link rel="canonical" href="https://practical.li/engineering-playbook/os/">
       
       
-        <link rel="prev" href="../install/">
+        <link rel="prev" href="../practices/deliberate-practice/">
       
       
-        <link rel="next" href="../desktop-extensions/">
-      
-      <link rel="icon" href="../../../assets/favicon.svg">
+      <link rel="icon" href="../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>Desktop - Practicalli Engineering Playbook</title>
+        <title>Operating Systems - Practicalli Engineering Playbook</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -48,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -71,11 +69,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Desktop - Practicalli Engineering Playbook" >
+        <meta  property="og:title"  content="Operating Systems - Practicalli Engineering Playbook" >
       
         <meta  property="og:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/docker/desktop.png" >
+        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/os/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -83,19 +81,19 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/engineering-playbook/continuous-integration/docker/desktop/" >
+        <meta  property="og:url"  content="https://practical.li/engineering-playbook/os/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Desktop - Practicalli Engineering Playbook" >
+        <meta  name="twitter:title"  content="Operating Systems - Practicalli Engineering Playbook" >
       
         <meta  name="twitter:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/docker/desktop.png" >
+        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/os/index.png" >
       
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -106,7 +104,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -128,7 +126,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker-desktop" class="md-skip">
+        <a href="#operating-systems" class="md-skip">
           Skip to content
         </a>
       
@@ -144,9 +142,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Practicalli Engineering Playbook" class="md-header__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
+    <a href=".." title="Practicalli Engineering Playbook" class="md-header__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
       
-  <img src="../../../assets/images/practicalli-logo.png" alt="logo">
+  <img src="../assets/images/practicalli-logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -162,7 +160,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Desktop
+              Operating Systems
             
           </span>
         </div>
@@ -267,9 +265,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Practicalli Engineering Playbook" class="md-nav__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
+    <a href=".." title="Practicalli Engineering Playbook" class="md-nav__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
       
-  <img src="../../../assets/images/practicalli-logo.png" alt="logo">
+  <img src="../assets/images/practicalli-logo.png" alt="logo">
 
     </a>
     Practicalli Engineering Playbook
@@ -319,7 +317,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../..">Overview</a>
+          <a href="..">Overview</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -342,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../introduction/contributing/" class="md-nav__link">
+      <a href="../introduction/contributing/" class="md-nav__link">
         Contributing
       </a>
     </li>
@@ -356,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../introduction/writing-tips/" class="md-nav__link">
+      <a href="../introduction/writing-tips/" class="md-nav__link">
         Writing Tips
       </a>
     </li>
@@ -398,7 +396,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../architecture/">Architecture</a>
+          <a href="../architecture/">Architecture</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -421,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../architecture/structurizr/" class="md-nav__link">
+      <a href="../architecture/structurizr/" class="md-nav__link">
         Structurizr
       </a>
     </li>
@@ -465,7 +463,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../build-tool/">Build tool</a>
+          <a href="../build-tool/">Build tool</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -488,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../build-tool/make/" class="md-nav__link">
+      <a href="../build-tool/make/" class="md-nav__link">
         Make
       </a>
     </li>
@@ -502,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../build-tool/babashka-task-runner/" class="md-nav__link">
+      <a href="../build-tool/babashka-task-runner/" class="md-nav__link">
         Babashka Task Runner
       </a>
     </li>
@@ -546,7 +544,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../code-quality/">Code Quality</a>
+          <a href="../code-quality/">Code Quality</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -569,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../code-quality/megalinter/" class="md-nav__link">
+      <a href="../code-quality/megalinter/" class="md-nav__link">
         MegaLinter
       </a>
     </li>
@@ -583,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../code-quality/clojure/" class="md-nav__link">
+      <a href="../code-quality/clojure/" class="md-nav__link">
         Clojure Quality tools
       </a>
     </li>
@@ -625,7 +623,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../command-line/">Command Line</a>
+          <a href="../command-line/">Command Line</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -648,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../command-line/kitty-terminal/" class="md-nav__link">
+      <a href="../command-line/kitty-terminal/" class="md-nav__link">
         Kitty Terminal
       </a>
     </li>
@@ -668,16 +666,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
       
       
         
@@ -694,7 +690,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">Continuous Integration</a>
+          <a href="../continuous-integration/">Continuous Integration</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -702,7 +698,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Continuous Integration
@@ -715,16 +711,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
       
       
         
@@ -751,7 +745,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Docker</a>
+          <a href="../continuous-integration/docker/">Docker</a>
           
             <label for="__nav_6_2">
               <span class="md-nav__icon md-icon"></span>
@@ -759,7 +753,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6_2">
           <span class="md-nav__icon md-icon"></span>
           Docker
@@ -774,7 +768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
+      <a href="../continuous-integration/docker/install/" class="md-nav__link">
         Install
       </a>
     </li>
@@ -786,80 +780,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Desktop
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../continuous-integration/docker/desktop/" class="md-nav__link">
         Desktop
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#learning-center" class="md-nav__link">
-    Learning Center
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#images" class="md-nav__link">
-    Images
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#containers" class="md-nav__link">
-    Containers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#volumes" class="md-nav__link">
-    Volumes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dev-environments" class="md-nav__link">
-    Dev Environments
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -871,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../desktop-extensions/" class="md-nav__link">
+      <a href="../continuous-integration/docker/desktop-extensions/" class="md-nav__link">
         Desktop Extensions
       </a>
     </li>
@@ -885,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../images/" class="md-nav__link">
+      <a href="../continuous-integration/docker/images/" class="md-nav__link">
         Images
       </a>
     </li>
@@ -899,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dockerfile/" class="md-nav__link">
+      <a href="../continuous-integration/docker/dockerfile/" class="md-nav__link">
         Dockerfile Design
       </a>
     </li>
@@ -913,7 +838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../clojure-multi-stage-dockerfile/" class="md-nav__link">
+      <a href="../continuous-integration/docker/clojure-multi-stage-dockerfile/" class="md-nav__link">
         Clojure Multi-stage Dockerfile
       </a>
     </li>
@@ -927,7 +852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../compose/" class="md-nav__link">
+      <a href="../continuous-integration/docker/compose/" class="md-nav__link">
         Compose
       </a>
     </li>
@@ -974,7 +899,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../github/">GitHub</a>
+          <a href="../continuous-integration/github/">GitHub</a>
           
             <label for="__nav_6_3">
               <span class="md-nav__icon md-icon"></span>
@@ -997,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../github/actions/" class="md-nav__link">
+      <a href="../continuous-integration/github/actions/" class="md-nav__link">
         Actions
       </a>
     </li>
@@ -1011,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../github/common-jobs/" class="md-nav__link">
+      <a href="../continuous-integration/github/common-jobs/" class="md-nav__link">
         Common jobs
       </a>
     </li>
@@ -1025,7 +950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../github/trigger-events/" class="md-nav__link">
+      <a href="../continuous-integration/github/trigger-events/" class="md-nav__link">
         Trigger Events
       </a>
     </li>
@@ -1059,7 +984,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../github/workflows/">Workflows</a>
+          <a href="../continuous-integration/github/workflows/">Workflows</a>
           
             <label for="__nav_6_3_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1082,7 +1007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../github/workflows/megalinter/" class="md-nav__link">
+      <a href="../continuous-integration/github/workflows/megalinter/" class="md-nav__link">
         MegaLinter Workflow
       </a>
     </li>
@@ -1136,7 +1061,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../technical-writing/">Documentation</a>
+          <a href="../technical-writing/">Documentation</a>
           
         </div>
       
@@ -1185,7 +1110,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../practices/">Practices</a>
+          <a href="../practices/">Practices</a>
           
             <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
@@ -1208,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/behaviour-driven-development/" class="md-nav__link">
+      <a href="../practices/behaviour-driven-development/" class="md-nav__link">
         Behaviour Driven Development
       </a>
     </li>
@@ -1222,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/deliberate-practice/" class="md-nav__link">
+      <a href="../practices/deliberate-practice/" class="md-nav__link">
         Deliberate Practice
       </a>
     </li>
@@ -1242,14 +1167,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
       
       
         
@@ -1261,12 +1188,12 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../os/">Operating System</a>
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">Operating System</a>
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Operating System
@@ -1308,36 +1235,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#learning-center" class="md-nav__link">
-    Learning Center
+  <a href="#linux-distributions" class="md-nav__link">
+    Linux Distributions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#images" class="md-nav__link">
-    Images
+  <a href="#softare-development" class="md-nav__link">
+    Softare development
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#containers" class="md-nav__link">
-    Containers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#volumes" class="md-nav__link">
-    Volumes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dev-environments" class="md-nav__link">
-    Dev Environments
+  <a href="#creative" class="md-nav__link">
+    Creative
   </a>
   
 </li>
@@ -1357,7 +1270,7 @@
                   
 
   
-    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/continuous-integration/docker/desktop.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/os/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1366,45 +1279,42 @@
     
       
     
-    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/continuous-integration/docker/desktop.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/os/index.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="docker-desktop">Docker Desktop<a class="headerlink" href="#docker-desktop" title="Permanent link">λ︎</a></h1>
-<p><a class="md-button" href="../desktop-extensions/" target="_blank">Docker Extensions used by Practicalli</a></p>
-<p><a href="https://docs.docker.com/desktop/">Docker desktop</a> provides an easy way to manage Docker images, containers and volumes.  Sign in to Docker Desktop to manage your images on DockerHub.</p>
-<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-images-light.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Docker Desktop - images view" src="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-images-light.png?raw=true" /></a></p>
-<h2 id="learning-center">Learning Center<a class="headerlink" href="#learning-center" title="Permanent link">λ︎</a></h2>
-<p>Resources for learning how to use Docker effectively</p>
-<h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">λ︎</a></h2>
-<h2 id="containers">Containers<a class="headerlink" href="#containers" title="Permanent link">λ︎</a></h2>
+<h1 id="operating-systems">Operating Systems<a class="headerlink" href="#operating-systems" title="Permanent link">λ︎</a></h1>
+<p>Guides to install and configure operating systems to support software development, graphic design and video editing.</p>
+<h2 id="linux-distributions">Linux Distributions<a class="headerlink" href="#linux-distributions" title="Permanent link">λ︎</a></h2>
 <ul>
-<li>container status</li>
-<li>view details</li>
-<li>logs</li>
-<li>inspect - environment, port values</li>
-<li>terminal shell within the container</li>
-<li>files - file browser for the container (check for uberjar, test-data, etc)</li>
-<li>
-<p>stats- basic resource usage  (Resource usage extension provides view over all containers)</p>
-</li>
-<li>
-<p>start / stop containers</p>
-</li>
+<li>Debian</li>
+<li>Ubuntu</li>
+<li>Regolith Desktop</li>
 </ul>
-<h2 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">λ︎</a></h2>
-<h2 id="dev-environments">Dev Environments<a class="headerlink" href="#dev-environments" title="Permanent link">λ︎</a></h2>
-<!-- TODO link to example dev environments - including one for Clojure - to submit  -->
+<h2 id="softare-development">Softare development<a class="headerlink" href="#softare-development" title="Permanent link">λ︎</a></h2>
+<ul>
+<li>Clojure CLI</li>
+<li>node.js and npm</li>
+<li>Python</li>
+</ul>
+<h2 id="creative">Creative<a class="headerlink" href="#creative" title="Permanent link">λ︎</a></h2>
+<ul>
+<li>Inkscape 2D vector graphics (SVG)</li>
+<li>Blender 3D modelling, animation and video editing</li>
+<li>Audacity sound editing</li>
+<li>FFMpeg</li>
+<li>Opus audio codec</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 15, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 8, 2023</span>
       
     
   </small>
@@ -1439,7 +1349,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../install/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Install" rel="prev">
+          <a href="../practices/deliberate-practice/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Deliberate Practice" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -1448,26 +1358,11 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Install
+                Deliberate Practice
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../desktop-extensions/" class="md-footer__link md-footer__link--next" aria-label="Next: Desktop Extensions" rel="next">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Desktop Extensions
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -1556,10 +1451,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
