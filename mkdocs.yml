@@ -145,22 +145,22 @@ nav:
   - Continuous Integration:
       - continuous-integration/index.md
       - Docker:
-        - continuous-integration/docker/index.md
-        - Install: continuous-integration/docker/install.md
-        - Desktop: continuous-integration/docker/desktop.md
-        - Desktop Extensions: continuous-integration/docker/desktop-extensions.md
-        - Images: continuous-integration/docker/images.md
-        - Dockerfile Design: continuous-integration/docker/dockerfile.md
-        - Clojure Multi-stage Dockerfile: continuous-integration/docker/clojure-multi-stage-dockerfile.md
-        - Compose: continuous-integration/docker/compose.md
+          - continuous-integration/docker/index.md
+          - Install: continuous-integration/docker/install.md
+          - Desktop: continuous-integration/docker/desktop.md
+          - Desktop Extensions: continuous-integration/docker/desktop-extensions.md
+          - Images: continuous-integration/docker/images.md
+          - Dockerfile Design: continuous-integration/docker/dockerfile.md
+          - Clojure Multi-stage Dockerfile: continuous-integration/docker/clojure-multi-stage-dockerfile.md
+          - Compose: continuous-integration/docker/compose.md
       - GitHub:
-        - continuous-integration/github/index.md
-        - Actions: continuous-integration/github/actions.md
-        - Common jobs: continuous-integration/github/common-jobs.md
-        - Trigger Events : continuous-integration/github/trigger-events.md
-        - Workflows:
-          - continuous-integration/github/workflows/index.md
-          - continuous-integration/github/workflows/megalinter.md
+          - continuous-integration/github/index.md
+          - Actions: continuous-integration/github/actions.md
+          - Common jobs: continuous-integration/github/common-jobs.md
+          - Trigger Events: continuous-integration/github/trigger-events.md
+          - Workflows:
+              - continuous-integration/github/workflows/index.md
+              - continuous-integration/github/workflows/megalinter.md
   - Documentation:
       - technical-writing/index.md
       # - technical-writing/techniques.md
