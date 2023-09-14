@@ -161,6 +161,7 @@ nav:
           - Workflows:
               - continuous-integration/github/workflows/index.md
               - continuous-integration/github/workflows/megalinter.md
+              - continuous-integration/github/workflows/luarocks.md
   - Documentation:
       - technical-writing/index.md
       # - technical-writing/techniques.md
