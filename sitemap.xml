@@ -131,6 +131,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/luarocks/</loc>
+         <lastmod>2023-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/megalinter/</loc>
          <lastmod>2023-09-14</lastmod>
          <changefreq>daily</changefreq>
