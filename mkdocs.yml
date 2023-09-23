@@ -62,8 +62,8 @@ markdown_extensions:
   - md_in_html # Grids
   - footnotes # footnotes and abbreviations
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji ""
+      emoji_generator: !!python/name:materialx.emoji.to_svg ""
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -73,7 +73,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          format: !!python/name:pymdownx.superfences.fence_code_format ""
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.keys # keyboard keys
@@ -90,22 +90,22 @@ plugins:
   - search
   - callouts
   - glightbox # Image aligning
-  - git-revision-date-localized: # Update and Creation date of each page
+  - git-revision-date-localized:
+      # Update and Creation date of each page
       # enable_creation_date: true
       fallback_to_build_date: true
 
   # Generate Social Cards via CI only
   # in assets/images/social
   - social:
-      cards: !ENV [MKDOCS_SOCIAL_CARDS_GENERATE, true]
-
+      cards: !ENV [ MKDOCS_SOCIAL_CARDS_GENERATE, true ]
   # Redirect pages when moved or changed
   # - redirects:
   #     redirect_maps:
   #       changelog/insiders.md: insiders/changelog.md
   #       reference/meta-tags.md: reference/index.md
 
-# Footer / Social Media
+  # Footer / Social Media
 extra:
   analytics:
     provider: google
@@ -166,9 +166,9 @@ nav:
       - technical-writing/index.md
       # - technical-writing/techniques.md
       # - technical-writing/site-generator/mkdocs.md
-  # - Version Control:
-  #     - version-control/index.md
-  #     - version-control/git-client-configuration.md
+      # - Version Control:
+      #     - version-control/index.md
+      #     - version-control/git-client-configuration.md
   - Practices:
       - practices/index.md
       - practices/behaviour-driven-development.md
@@ -181,4 +181,5 @@ nav:
       - os/index.md
       - Linux:
           - os/linux/index.md
+          - os/debian.md
           - Regolith: os/linux/regolith.md
