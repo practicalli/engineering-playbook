@@ -25,6 +25,12 @@ Arch Linux has solid community support should a more involved operating system e
 
     MacOSX is often used by companies (especially FinTech) as commercial software is used to administrate the operting system, usually by a remote System Adminstration team.
 
+## Linux Shell
+
+- bash
+- zsh
+- fish
+
 
 ## Software development tools
 

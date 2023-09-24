@@ -184,3 +184,5 @@ nav:
           - os/debian.md
           - os/ubuntu.md
           - Regolith: os/linux/regolith.md
+      - Shell:
+          - os/shell/index.md
