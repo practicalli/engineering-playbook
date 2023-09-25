@@ -188,3 +188,4 @@ nav:
           - os/shell/index.md
           - os/shell/bash.md
           - os/shell/zsh.md
+          - os/shell/fish.md
