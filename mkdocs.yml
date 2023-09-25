@@ -186,3 +186,4 @@ nav:
           - Regolith: os/linux/regolith.md
       - Shell:
           - os/shell/index.md
+          - os/shell/bash.md
