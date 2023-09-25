@@ -187,3 +187,4 @@ nav:
       - Shell:
           - os/shell/index.md
           - os/shell/bash.md
+          - os/shell/zsh.md
