@@ -177,6 +177,11 @@ nav:
       # - TODO: practices/thinking-hats.md
       - practices/deliberate-practice.md
       # - TODO: practices/code-kata.md
+  - Programming Languages:
+      - programming-languages/index.md
+      - JavaScript:
+          - programming-languages/javascript/index.md
+          - programming-languages/javascript/nodejs.md
   - Operating Systems:
       - os/index.md
       - Linux:
