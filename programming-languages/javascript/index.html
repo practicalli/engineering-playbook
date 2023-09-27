@@ -12,26 +12,28 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/engineering-playbook/">
+        <link rel="canonical" href="https://practical.li/engineering-playbook/programming-languages/javascript/">
       
       
+        <link rel="prev" href="../">
       
-        <link rel="next" href="introduction/contributing/">
+      
+        <link rel="next" href="nodejs/">
       
       
-      <link rel="icon" href="assets/favicon.svg">
+      <link rel="icon" href="../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
     
     
       
-        <title>Practicalli Engineering Playbook - Practicalli Engineering Playbook</title>
+        <title>JavaScript - Practicalli Engineering Playbook</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.d451bc0e.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d451bc0e.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a5377069.min.css">
       
       
 
@@ -50,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -71,11 +73,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Practicalli Engineering Playbook - Practicalli Engineering Playbook" >
+        <meta  property="og:title"  content="JavaScript - Practicalli Engineering Playbook" >
       
         <meta  property="og:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/index.png" >
+        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/programming-languages/javascript/index.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -83,19 +85,19 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/engineering-playbook/" >
+        <meta  property="og:url"  content="https://practical.li/engineering-playbook/programming-languages/javascript/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Practicalli Engineering Playbook - Practicalli Engineering Playbook" >
+        <meta  name="twitter:title"  content="JavaScript - Practicalli Engineering Playbook" >
       
         <meta  name="twitter:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/index.png" >
+        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/programming-languages/javascript/index.png" >
       
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -106,7 +108,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -128,7 +130,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#practicalli-engineering-playbook" class="md-skip">
+        <a href="#javascript" class="md-skip">
           Skip to content
         </a>
       
@@ -144,9 +146,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Practicalli Engineering Playbook" class="md-header__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
+    <a href="../.." title="Practicalli Engineering Playbook" class="md-header__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
       
-  <img src="assets/images/practicalli-logo.png" alt="logo">
+  <img src="../../assets/images/practicalli-logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -163,7 +165,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Practicalli Engineering Playbook
+              JavaScript
             
           </span>
         </div>
@@ -273,9 +275,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Practicalli Engineering Playbook" class="md-nav__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
+    <a href="../.." title="Practicalli Engineering Playbook" class="md-nav__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
       
-  <img src="assets/images/practicalli-logo.png" alt="logo">
+  <img src="../../assets/images/practicalli-logo.png" alt="logo">
 
     </a>
     Practicalli Engineering Playbook
@@ -299,8 +301,6 @@
       
   
   
-    
-  
   
     
     
@@ -317,17 +317,17 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="." class="md-nav__link md-nav__link--active">
+            <a href="../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -338,13 +338,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_1" id="__nav_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Overview
@@ -359,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="introduction/contributing/" class="md-nav__link">
+      <a href="../../introduction/contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -379,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="introduction/writing-tips/" class="md-nav__link">
+      <a href="../../introduction/writing-tips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -428,7 +428,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="architecture/" class="md-nav__link ">
+            <a href="../../architecture/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -460,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="architecture/structurizr/" class="md-nav__link">
+      <a href="../../architecture/structurizr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +511,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="build-tool/" class="md-nav__link ">
+            <a href="../../build-tool/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -543,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="build-tool/make/" class="md-nav__link">
+      <a href="../../build-tool/make/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -563,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="build-tool/babashka-task-runner/" class="md-nav__link">
+      <a href="../../build-tool/babashka-task-runner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -614,7 +614,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="code-quality/" class="md-nav__link ">
+            <a href="../../code-quality/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -646,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="code-quality/megalinter/" class="md-nav__link">
+      <a href="../../code-quality/megalinter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -666,7 +666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="code-quality/clojure/" class="md-nav__link">
+      <a href="../../code-quality/clojure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -715,7 +715,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="command-line/" class="md-nav__link ">
+            <a href="../../command-line/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -747,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="command-line/kitty-terminal/" class="md-nav__link">
+      <a href="../../command-line/kitty-terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -798,7 +798,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="continuous-integration/" class="md-nav__link ">
+            <a href="../../continuous-integration/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -864,7 +864,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="continuous-integration/docker/" class="md-nav__link ">
+            <a href="../../continuous-integration/docker/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -896,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="continuous-integration/docker/install/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -916,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="continuous-integration/docker/desktop/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/desktop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -936,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="continuous-integration/docker/desktop-extensions/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/desktop-extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -956,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="continuous-integration/docker/images/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/images/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -976,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="continuous-integration/docker/dockerfile/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/dockerfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -996,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="continuous-integration/docker/clojure-multi-stage-dockerfile/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/clojure-multi-stage-dockerfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1016,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="continuous-integration/docker/compose/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/compose/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1072,7 +1072,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="continuous-integration/github/" class="md-nav__link ">
+            <a href="../../continuous-integration/github/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1104,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="continuous-integration/github/actions/" class="md-nav__link">
+      <a href="../../continuous-integration/github/actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1124,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="continuous-integration/github/common-jobs/" class="md-nav__link">
+      <a href="../../continuous-integration/github/common-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1144,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="continuous-integration/github/trigger-events/" class="md-nav__link">
+      <a href="../../continuous-integration/github/trigger-events/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1188,7 +1188,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="continuous-integration/github/workflows/" class="md-nav__link ">
+            <a href="../../continuous-integration/github/workflows/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1220,7 +1220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="continuous-integration/github/workflows/megalinter/" class="md-nav__link">
+      <a href="../../continuous-integration/github/workflows/megalinter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1240,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="continuous-integration/github/workflows/luarocks/" class="md-nav__link">
+      <a href="../../continuous-integration/github/workflows/luarocks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1303,7 +1303,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="technical-writing/" class="md-nav__link ">
+            <a href="../../technical-writing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1361,7 +1361,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="practices/" class="md-nav__link ">
+            <a href="../../practices/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1393,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="practices/behaviour-driven-development/" class="md-nav__link">
+      <a href="../../practices/behaviour-driven-development/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1413,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="practices/deliberate-practice/" class="md-nav__link">
+      <a href="../../practices/deliberate-practice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1438,6 +1438,8 @@
       
   
   
+    
+  
   
     
     
@@ -1452,17 +1454,17 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="programming-languages/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1479,7 +1481,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Programming Languages
@@ -1492,6 +1494,8 @@
                 
   
   
+    
+  
   
     
     
@@ -1506,17 +1510,17 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="programming-languages/javascript/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   <span class="md-ellipsis">
@@ -1527,13 +1531,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_2">
             <span class="md-nav__icon md-icon"></span>
             JavaScript
@@ -1548,7 +1552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="programming-languages/javascript/nodejs/" class="md-nav__link">
+      <a href="nodejs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1607,7 +1611,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="os/" class="md-nav__link ">
+            <a href="../../os/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1687,7 +1691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="os/linux/index.md" class="md-nav__link">
+      <a href="../../os/linux/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1707,7 +1711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="os/debian.md" class="md-nav__link">
+      <a href="../../os/debian.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1727,7 +1731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="os/macosx/" class="md-nav__link">
+      <a href="../../os/macosx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1747,7 +1751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="os/ubuntu.md" class="md-nav__link">
+      <a href="../../os/ubuntu.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1767,7 +1771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="os/linux/regolith/" class="md-nav__link">
+      <a href="../../os/linux/regolith/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1821,7 +1825,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="os/shell/" class="md-nav__link ">
+            <a href="../../os/shell/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1853,7 +1857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="os/shell/bash/" class="md-nav__link">
+      <a href="../../os/shell/bash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1873,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="os/shell/zsh/" class="md-nav__link">
+      <a href="../../os/shell/zsh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1893,7 +1897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="os/shell/fish/" class="md-nav__link">
+      <a href="../../os/shell/fish/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1942,49 +1946,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#book-source-code" class="md-nav__link">
-    Book Source code
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#discussions-and-feedback" class="md-nav__link">
-    Discussions and feedback
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#navigate-the-book" class="md-nav__link">
-    Navigate the book
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sponsor-my-work" class="md-nav__link">
-    Sponsor my work
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creative-commons-license" class="md-nav__link">
-    Creative commons license
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1998,7 +1959,7 @@
                   
 
   
-    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/programming-languages/javascript/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2007,81 +1968,21 @@
     
       
     
-    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/index.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/programming-languages/javascript/index.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="practicalli-engineering-playbook">Practicalli Engineering Playbook<a class="headerlink" href="#practicalli-engineering-playbook" title="Permanent link">λ︎</a></h1>
-<div class="admonition quote">
-<p class="admonition-title">Quote</p>
-<p><strong>Effective Communication</strong> is the fundamental challenge for all software engineering projects</p>
-<p>John Stevenson, Practialli</p>
-</div>
-<p>The Playbook and Plays concept is used to curate a consistent information, so the right information can be found and used more effectively by all.</p>
-<ul>
-<li>A Play is a document that details practices and an approach for a specific task</li>
-<li>A Playbook is a collection of Plays that are related by topic, e.g. Billie Engineering playbook could cover the practices for deployment, accessing
-databases, system integration testing, optimising builds in docker.</li>
-</ul>
-<div class="admonition hint">
-<p class="admonition-title">Engineering Playbook Initiative</p>
-<p>Establishing a playbook within an organisation encourages information sharing across teams and provides an effective way for disperate teams to learn from each other.</p>
-</div>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/engineering-playbook/engineering-playbook-concept.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Engineering Playbook concept" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/engineering-playbook/engineering-playbook-concept.png" /></a></p>
-<details class="warning">
-<summary>New Book - content under development</summary>
-<p>Practicalli Engineering Playbook was started in January 2022 in an attempt to codify the last few decades of development experience, so this will be an on-going work</p>
-</details>
-<h2 id="book-source-code">Book Source code<a class="headerlink" href="#book-source-code" title="Permanent link">λ︎</a></h2>
-<p><a href="https://github.com/practicalli/engineering-playbook" target="_blank">practicalli/engineering-playbook repository</a> contains the content for this book</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">HTTPS</label><label for="__tabbed_1_2">SSH</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/engineering-playbook.git
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/engineering-playbook.git
-</code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="discussions-and-feedback">Discussions and feedback<a class="headerlink" href="#discussions-and-feedback" title="Permanent link">λ︎</a></h2>
-<p><a href="introduction/contributing/">Contributions are welcome via GitHub issues and pull requests</a>, or discuss the book on the Clojurians Slack community.</p>
-<p><a class="md-button" href="https://clojurians.slack.com/messages/practicalli" target="_blank">Ask questions on #practicalli channel of  Clojurians Slack</a></p>
-<p>Get a <a href="https://clojurians.net/">free Clojurians slack community account</a></p>
-<h2 id="navigate-the-book">Navigate the book<a class="headerlink" href="#navigate-the-book" title="Permanent link">λ︎</a></h2>
-<p>Use the mouse or built-in key bindings to navigate the pages of the book</p>
-<ul>
-<li><span class="keys"><kbd class="key-p">P</kbd></span> , <span class="keys"><kbd class="key-comma">,</kbd></span> : go to previous page</li>
-<li><span class="keys"><kbd class="key-n">N</kbd></span> , <span class="keys"><kbd class="key-period">.</kbd></span> : go to next page</li>
-</ul>
-<p>Use the search box to quickly find a specific topic</p>
-<ul>
-<li><span class="keys"><kbd class="key-f">F</kbd></span> , <span class="keys"><kbd class="key-s">S</kbd></span> , <span class="keys"><kbd class="key-slash">/</kbd></span> : open search dialog</li>
-<li><span class="keys"><kbd class="key-arrow-down">Down</kbd></span> , <span class="keys"><kbd class="key-arrow-up">Up</kbd></span> : select next / previous result</li>
-<li><span class="keys"><kbd class="key-escape">Esc</kbd></span> , <span class="keys"><kbd class="key-tab">Tab</kbd></span> : close search dialog</li>
-<li><span class="keys"><kbd class="key-enter">Enter</kbd></span> : follow selected result</li>
-</ul>
-<h2 id="sponsor-my-work">Sponsor my work<a class="headerlink" href="#sponsor-my-work" title="Permanent link">λ︎</a></h2>
-<p><a href="https://github.com/sponsors/practicalli-john/"><img align="left" alt="Sponsor practicalli-john" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png" /></a></p>
-<p>All sponsorship recieved is used to maintain and further develop the <a href="https://practical.li/" target="_blank">Practicalli series of books and videos</a>, although most of the work is still done with my own time and cost.</p>
-<p>Thank you to <a href="https://www.cognitect.com/" target="_blank">Cognitect</a>, <a href="https://nubank.com.br/" target="_blank">Nubank</a> and a wide range of other <a href="https://github.com/sponsors/practicalli-john#sponsors" target="_blank">sponsors</a> from the Clojure community for your continued support</p>
-<h2 id="creative-commons-license">Creative commons license<a class="headerlink" href="#creative-commons-license" title="Permanent link">λ︎</a></h2>
-<div style="width:95%; margin:auto;">
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
-This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images & stylesheets).
-</div>
+<h1 id="javascript">JavaScript<a class="headerlink" href="#javascript" title="Permanent link">λ︎</a></h1>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 21, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 27, 2023</span>
       
     
   </small>
@@ -2116,15 +2017,31 @@ This work is licensed under a Creative Commons Attribution 4.0 ShareAlike Licens
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Programming Languages">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Programming Languages
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="introduction/contributing/" class="md-footer__link md-footer__link--next" aria-label="Next: Contributing">
+          <a href="nodejs/" class="md-footer__link md-footer__link--next" aria-label="Next: Node.js">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Contributing
+                Node.js
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2220,10 +2137,10 @@ This work is licensed under a Creative Commons Attribution 4.0 ShareAlike Licens
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.726fbb30.min.js"></script>
+      <script src="../../assets/javascripts/bundle.726fbb30.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
