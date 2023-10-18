@@ -8,6 +8,7 @@ Engineering has many practices and principles defined over it many decades.
     - Extreme Programming
     - Test Driven Development
     - Retrospective
+    - [Technical Debt](technical-debt/)
 
 * Lean software development
   * Kanban

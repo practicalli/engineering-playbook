@@ -173,6 +173,7 @@ nav:
   - Practices:
       - practices/index.md
       - practices/behaviour-driven-development.md
+      - Tech Debt: practices/technical-debt.md
       # - TODO: practices/root-cause-analysis.md
       # - TODO: practices/five-whys.md
       # - TODO: practices/thinking-hats.md
