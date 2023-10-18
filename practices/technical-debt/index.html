@@ -2158,15 +2158,15 @@
 
 
 <h1 id="technical-debt-overview">Technical Debt Overview<a class="headerlink" href="#technical-debt-overview" title="Permanent link">λ︎</a></h1>
-<p>Technical debt occurs when balancing the needs of the business with the productivity of engineering teams. Choosing tactical solutions, proceeding with limited understanding and taking short-cuts are all generators of technical debt to varing degrees.</p>
-<p>Intentionally aquiring technical debt can have significant business value if more can be achieved in a shorter time-frame, providing much needed revenue and time to implment a longer term solution.</p>
-<p>Inadvertantly aquiring debt beyond the capability of a team leads to spiralling debt, increaingly limiting the ability to get work done. </p>
+<p>Technical debt occurs when balancing the needs of the business with the productivity of engineering teams. Choosing tactical solutions, proceeding with limited understanding and taking short-cuts are all generators of technical debt to varying degrees.</p>
+<p>Intentionally acquiring technical debt can have significant business value if more can be achieved in a shorter time-frame, providing much needed revenue and time to implement a longer term solution.</p>
+<p>Inadvertently acquiring debt beyond the capability of a team leads to spiralling debt, increasingly limiting the ability to get work done. </p>
 <p>Unresolved debt leads to feature delivery delays, hidden risks, spiraling project costs, engineer burnout and eventually leaving in frustration.  </p>
 <p>Engineers use the term technical debt to communicate tasks are needed to improving the current system, along-side tasks only focused on business features. Naturally a system upon which teams can deliver timely features has intrinsic value for the business and its customers.</p>
-<p>As a metaphor, techncial debt has grown to reflect any issue having a negative impact on the productivity of technical teams, e.g. infrastructure challenges, architecture desicions, design complexity, test coverage, documentation quality and development practices. </p>
+<p>As a metaphor, technical debt has grown to reflect any issue having a negative impact on the productivity of technical teams, e.g. infrastructure challenges, architectural decisions, design complexity, test coverage, documentation quality and development practices. </p>
 <details class="info">
-<summary>Technical Debt original definition - Ward Cunningham, 1992, OOPSLA Converence</summary>
-<p>Ward Cunningham suggested technical debt could be a benefit.  An engineer creates a quick solution with limited understanding of the problem, with the intention to rewrite the code once understanding had improved and aleviate the debt. </p>
+<summary>Technical Debt original definition - Ward Cunningham, 1992, OOPSLA Conference</summary>
+<p>Ward Cunningham suggested technical debt could be a benefit.  An engineer creates a quick solution with limited understanding of the problem, with the intention to rewrite the code once understanding had improved and alleviate the debt. </p>
 <p>The danger occurs when the debt is not repaid. Every minute spent on code that is not quite right for the programming task of the moment counts as interest on that debt. </p>
 <p>Entire engineering organizations can be brought to a stand-still under the debt load of an unfactored implementation, object-oriented or otherwise.</p>
 </details>
@@ -2180,40 +2180,43 @@
     Credit card debt where funds available for monthly repayments become insufficient to prevent spiraling interest growing the debt to unsustainable levels</p>
 </details>
 <h2 id="debt-scenarios">Debt scenarios<a class="headerlink" href="#debt-scenarios" title="Permanent link">λ︎</a></h2>
-<p><strong>Intentional techical debt</strong> </p>
-<p>The benefit outways the potential issues, which are resolved across the next releases</p>
+<p><strong>Intentional technical debt</strong> </p>
+<p>The benefit out-ways the potential issues, which are resolved across the next releases</p>
 <ul>
 <li>exploring a new market, creating tactical (throw-away) solutions whilst retaining the learning required to implement a strategic longer-term solution (or develop a strategic solution in parallel).</li>
-<li>continuing with a releasing that delivers customer partial set of features, or has known issues, rather than delay the relase. </li>
+<li>continuing with a releasing that delivers customer partial set of features, or has known issues, rather than delay the release.</li>
 </ul>
-<p><strong>Inadvertent techical debt</strong> </p>
+<p><strong>Inadvertent technical debt</strong> </p>
 <ul>
-<li>hack together a solution to meet an unrealistic deadline pressures, with no time to documenting lessons learned or plan time to mitigate the risks of that approach (due to working on the next deadline)</li>
-<li>technical decisions made with limited understanding leading to solutions that become increasingly hard to maintain and extend.  Ultimately leading to a major rework of the solution.</li>
+<li>hack together a solution to meet unrealistic deadline pressures.  No time is available to document lessons learned or plan time to mitigate the risks taken due to working on the next deadline.</li>
+<li>technical decisions made with limited understanding lead to a solutions that struggles to fit the long term strategy, but the system is so ingrained into development it is perceived as unchangeable.  Work continues to be hampered until ultimately a major redevelopment of the solution is agreed.</li>
 </ul>
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Death_march_(project_management)">Death March (Edward Yourdon)</a> is a term describing projects that continue to wallow in significant technical debt.</p>
+</blockquote>
 <h2 id="identifying-debt">Identifying debt<a class="headerlink" href="#identifying-debt" title="Permanent link">λ︎</a></h2>
 <p>Time may be limited when first starting to address technical debt as time pressures are a major factor in creating technical debt.</p>
-<p>Identifing debt and its risks can be time-consuming, so start by apply simple techniques </p>
+<p>Identifying debt and its risks can be time-consuming, so start by apply simple techniques </p>
 <ul>
 <li>journal technical debt as its is discovered during feature development </li>
-<li>use a shared document to capture potential issues e.g. wiki (minimising interuption to flow)</li>
+<li>use a shared document to capture potential issues e.g. wiki (minimise interruption to engineer flow)</li>
 <li>carve out time to expand on potential issues, individually and collectively as a team </li>
 <li>review at retrospectives to decide on actions (see <a href="#managing-debt">Managing debt</a>)</li>
 <li>convert agreed upon issues to actionable tickets, labelled as technical-debt </li>
 <li>create an Epic style ticket linking all technical debt issues to help understand the scale of debt and if the debt is growing</li>
 </ul>
 <h2 id="managing-debt">Managing debt<a class="headerlink" href="#managing-debt" title="Permanent link">λ︎</a></h2>
-<p>When the driving factors of technical debt are understood, organisations can choose an appropriate level of technical debt and carefully manage it as part of the sofware development workflow.</p>
-<p>Project management and engineering teams should agree on what constitues technical debt and balance the value provided by the debt with its detrimental effects.  </p>
+<p>When the driving factors of technical debt are understood, organisations can choose an appropriate level of technical debt and carefully manage it as part of the software development workflow.</p>
+<p>Project management and engineering teams should agree on what constitutes technical debt and balance the value provided by the debt with its detrimental effects.  </p>
 <p>Consider these aspects when reviewing the technical debt of a project:</p>
 <ul>
-<li>Type: intentional or inadvertant</li>
+<li>Type: intentional or inadvertent</li>
 <li>Impact: how is affecting the team, other systems and the business</li>
 <li>Amount: perception of how large the debt is</li>
 <li>Time-frame: duration of positive and negative effects</li>
 <li>Age: from active work or inherited legacy</li>
 </ul>
-<p>Opportunities to aleviate technical debt should be included during planning work and experiences shared during retrospectives.</p>
+<p>Opportunities to alleviate technical debt should be included during planning work and experiences shared during retrospectives.</p>
 <p>The collective positive and negative effects of technical debt are specific to an organisation, so should be agreed &amp; understood across that organisation.</p>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">λ︎</a></h2>
 <p>The McKinsey survey shows it is common to have 20% of technical budgets diverted to resolving issues related to technical debt. [1]</p>
