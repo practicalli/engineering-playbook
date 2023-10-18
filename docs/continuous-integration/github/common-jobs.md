@@ -44,6 +44,26 @@ Echo the GitHub Repository that was cloned to the workflow log, to support debug
           - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
     ```
 
+### Sparse Checkout
+
+Using `git sparse-checkout` can save signficant time by checking out a sub-set of files, especially from a large repository with thousands of commits.
+
+`git sparse-checkout` always checks out all files in the root of the repository, so specify only the additional files and directories required.
+
+!!! EXAMPLE "Git Sparse Checkout Action"
+    ```yaml
+          # Git Checkout
+          - name: Checkout Code
+            uses: actions/checkout@v3
+            with:
+              token: "${{ secrets.PAT || secrets.GITHUB_TOKEN }}"
+              fetch-depth: 0   # fetch all history
+              sparse-checkout: |
+                docs
+                overrides
+          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
+    ```
+
 
 ## Pull Request first interaction
 
