@@ -39,6 +39,12 @@ Create directory for building the project code and set it as the working directo
     WORKDIR /build
     ```
 
+!!! INFO "Clojure CLI and tools.build"
+    [:fontawesome-solid-book-open: Practicalli Clojure - Tools.Build](https://practical.li/clojure/clojure-cli/projects/package/tools-build/) is the recommended approach to creating an Uberjar from a Clojure CLI project.
+
+    As long as the required files are copied, any build tool and task can be used to create the Uberjar file that packages the Clojure service for deployment.
+
+
 ### Cache Dependencies
 
 Clojure CLI is used to download dependencies for the project and any other tooling used during the build stage, e.g. test runners, packaging tools to create an uberjar.  Dependency download should only occur once, unless the `deps.edn` file changes.
@@ -48,7 +54,7 @@ Clojure CLI is used to download dependencies for the project and any other tooli
 
     !!! EXAMPLE "Create dependency cache overlay"
         ```dockerfile
-        COPY deps.edn Makefile /build/
+        COPY deps.edn build.clj Makefile /build/
         RUN make deps
         ```
     The dependencies are cached in the Docker overlay (layer) and this cache will be used on successive docker builds unless the `deps.edn` file or `Makefile` is change.
@@ -58,7 +64,7 @@ Clojure CLI is used to download dependencies for the project and any other tooli
 
     !!! EXAMPLE "Create dependency cache overlay"
         ```dockerfile
-        COPY deps.edn /build/
+        COPY deps.edn build.clj /build/
         RUN clojure -P -X:build
         ```
     The dependencies are cached in the Docker overlay (layer) and this cache will be used on successive docker builds unless the `deps.edn` file is change.
@@ -111,6 +117,7 @@ Keep the `.dockerignore` file simple by excluding all files with `*` pattern and
 
         # Include Clojure code and config
         !deps.edn
+        !build.clj
         !Makefile
         !src/
         !test/
