@@ -40,6 +40,15 @@ OpenJDK is the most commonly used run-time environment for Java and JVM language
 
 [:globe_with_meridians: Clojure - official Docker Image](https://hub.docker.com/_/clojure/) - built by the Clojure community, provides tools to build Clojure projects (Clojure CLI, Leiningen)
 
+Use the Clojure image within a `Dockerfile`, specifying `tools-deps` or `lein` variants
+
+!!! EXAMPLE "Clojure CLI Docker Image as builder stage"
+    ```dockerfile title="Dockerfile"
+    FROM clojure:tools-deps AS builder
+    ```
+
 The Clojure image is built from the equivalent Eclipse Temurin image which can be used as the run-time image for a Multi-stage Dockerfile final stage.  As the build and final stages are built upon the same underlying image, a separate base stage is not required.
 
 [:globe_with_meridians: Clojure - official Docker Image](https://hub.docker.com/_/clojure/){target=_blank .md-button}
+
+!!! HINT "Multi-stage Dockerfile for Clojure"

@@ -1,4 +1,4 @@
-# Docker Multi-Stage Dockerfile for Clojure
+# Multi-Stage Dockerfile for Clojure
 
 Building a Clojure project from source to create a docker image provides an effective workflow for local testing and system integration.
 
@@ -11,16 +11,26 @@ A multi-stage Dockerfile is recommended to ensure build tools and artefacts are 
     ```
     Practicalli Project Templates are included in the [:globe_with_meridians: Practicalli Clojure CLI Config](https://practical.li/clojure/clojure-cli/practicalli-config/){target=_blank} which provides aliases for running community tools to support a wide range of development tasks.
 
+??? WARNING "Updating to Java 21 Long Term Support release"
+    This guide will be updated to use images with Java 21, the latest Long Term Support release (LTS) as of October 2023.
+    
+     Examples will be provided using Alpine Linux and Debian Linux operating system. 
+
+
 ## Builder stage
+
 
 Practicalli uses the latest Clojure CLI release and the latest Long Term Support (LTS) version of [:fontawesome-solid-book-open: Eclipse Temurin](images.md#openjdk) (OpenJDK).
 
 [:fontawesome-solid-book-open: Alpine Linux](images.md#alpine-linux) image variants are used to keep the image file size as small as possible, reducing local resource requirements (and image download time).
 
-!!! EXAMPLE "Set builder stage image"
-    ```dockerfile
-    FROM clojure:temurin-17-alpine AS builder
+
+!!! EXAMPLE "Set builder stage image using specific Java version"
+    ```dockerfile title="Dockerfile"
+    FROM clojure:temurin-21-tools-deps-alpine AS builder
     ```
+
+> [clojure:temurin-21-tools-deps-alpine](https://hub.docker.com/layers/library/clojure/temurin-21-tools-deps-alpine/images/sha256-df9061b056300f3513407221ba4f5a60d330660563a6ecadcac62570a787bacd?context=explore) image details
 
 `CLOJURE_VERSION` will over-ride the version of Clojure CLI in the Clojure image (which defaults to latest Clojure CLI release). Or choose an image that has a specific Clojure CLI version, e.g. `temurin-17-tools-deps-1.11.1.1182-alpine`
 

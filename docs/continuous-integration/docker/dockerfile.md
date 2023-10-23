@@ -8,16 +8,32 @@ A [Multi-stage `Dockerfile`](clojure-multi-stage-dockerfile.md) is an effective 
 
 [Docker Hub](https://hub.docker.com/_/amazoncorretto) provides a wide range of images, supporting development, continuous integration and system integration testing.
 
+## Dockerfile Design
+
 ## Multi-stage Dockerfile
 
 A multi-stage `Dockerfile` contains builder stage and an unnamed stage used as the run-time.  The builder stage can be designed optimally for building the Clojure project and the run-time stage optimised for running the service efficiently and securely.
 
+The builder stage caches dependencies to optimise building Clojure and the run-time stage optimises running the service efficiently and securely.
+
 The uberjar created by the builder image is copied over to the run-time image to keep that image as clean and small as possible (to minimise resource use).
+
+![Docker Multi-stage build file with cached overlays](https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-output-cached-layers.png?raw=true)
 
 ??? "Practicalli Multi-stage Dockerfile for Clojure"
     [:fontawesome-solid-book-open: Practicalli Multi-stage `Dockerfile` for Clojure projects](clojure-multi-stage-dockerfile.md) derived from the configuration currently used for commercial and open source work.
 
     The Dockerfile uses make targets, which are Clojure commands defined in the [Practicalli Makefile](/engineering-playbook/build-tool/make/)
+
+
+[Multi-stage `Dockerfile` for Clojure projects](clojure-multi-stage-dockerfile.md){.md-button}
+[Docker Multi-stage builds docs](https://docs.docker.com/build/building/multi-stage/){target=_blank .md-button}
+
+!!! WARNING "Docker init - beta feature"
+    [`docker init`](https://docs.docker.com/engine/reference/commandline/init/) is a new (beta) feature to create `Dockerfile`, `.dockerignore` and`compose.yaml` files using Docker recommended practices.
+
+
+
 
 ## Official Docker images
 

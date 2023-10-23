@@ -148,8 +148,9 @@ nav:
       - Docker:
           - continuous-integration/docker/index.md
           - Install: continuous-integration/docker/install.md
-          - Desktop: continuous-integration/docker/desktop.md
-          - Desktop Extensions: continuous-integration/docker/desktop-extensions.md
+          - Desktop:
+              - continuous-integration/docker/desktop/index.md
+              - Desktop Extensions: continuous-integration/docker/desktop/extensions.md
           - Images: continuous-integration/docker/images.md
           - Dockerfile Design: continuous-integration/docker/dockerfile.md
           - Clojure Multi-stage Dockerfile: continuous-integration/docker/clojure-multi-stage-dockerfile.md
