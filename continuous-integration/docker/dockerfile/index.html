@@ -910,8 +910,6 @@
       
         
       
-        
-      
     
     
     
@@ -977,12 +975,66 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../desktop/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../desktop/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Desktop
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2_3" id="__nav_6_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Desktop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desktop/extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desktop Extensions
   </span>
   
 
@@ -992,21 +1044,9 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../desktop-extensions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Desktop Extensions
-  </span>
-  
-
-      </a>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1082,6 +1122,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile-design" class="md-nav__link">
+    Dockerfile Design
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#multi-stage-dockerfile" class="md-nav__link">
@@ -2157,6 +2204,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#dockerfile-design" class="md-nav__link">
+    Dockerfile Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#multi-stage-dockerfile" class="md-nav__link">
     Multi-stage Dockerfile
   </a>
@@ -2276,14 +2330,23 @@
 <p>Each line in the <code>Dockerfile</code> configuration creates an overlay, a layer of the image that is applied to create the final image.  Overlays are cached by docker on the first run and if the files or commands the overlays are created from do not change, then the cache is used on consecutive use of the docker image.</p>
 <p>A <a href="../clojure-multi-stage-dockerfile/">Multi-stage <code>Dockerfile</code></a> is an effective way to build and run projects via a continuous integration pipeline and local development (in concert with supporting services via a <a href="../compose/"><code>compose.yaml</code> configuration</a>).</p>
 <p><a href="https://hub.docker.com/_/amazoncorretto">Docker Hub</a> provides a wide range of images, supporting development, continuous integration and system integration testing.</p>
+<h2 id="dockerfile-design">Dockerfile Design<a class="headerlink" href="#dockerfile-design" title="Permanent link">λ︎</a></h2>
 <h2 id="multi-stage-dockerfile">Multi-stage Dockerfile<a class="headerlink" href="#multi-stage-dockerfile" title="Permanent link">λ︎</a></h2>
 <p>A multi-stage <code>Dockerfile</code> contains builder stage and an unnamed stage used as the run-time.  The builder stage can be designed optimally for building the Clojure project and the run-time stage optimised for running the service efficiently and securely.</p>
+<p>The builder stage caches dependencies to optimise building Clojure and the run-time stage optimises running the service efficiently and securely.</p>
 <p>The uberjar created by the builder image is copied over to the run-time image to keep that image as clean and small as possible (to minimise resource use).</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-output-cached-layers.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Docker Multi-stage build file with cached overlays" src="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-output-cached-layers.png?raw=true" /></a></p>
 <details>
 <summary>Practicalli Multi-stage Dockerfile for Clojure</summary>
 <p><a href="../clojure-multi-stage-dockerfile/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Practicalli Multi-stage <code>Dockerfile</code> for Clojure projects</a> derived from the configuration currently used for commercial and open source work.</p>
 <p>The Dockerfile uses make targets, which are Clojure commands defined in the <a href="/engineering-playbook/build-tool/make/">Practicalli Makefile</a></p>
 </details>
+<p><a class="md-button" href="../clojure-multi-stage-dockerfile/">Multi-stage <code>Dockerfile</code> for Clojure projects</a>
+<a class="md-button" href="https://docs.docker.com/build/building/multi-stage/" target="_blank">Docker Multi-stage builds docs</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Docker init - beta feature</p>
+<p><a href="https://docs.docker.com/engine/reference/commandline/init/"><code>docker init</code></a> is a new (beta) feature to create <code>Dockerfile</code>, <code>.dockerignore</code> and<code>compose.yaml</code> files using Docker recommended practices.</p>
+</div>
 <h2 id="official-docker-images">Official Docker images<a class="headerlink" href="#official-docker-images" title="Permanent link">λ︎</a></h2>
 <p>Docker Hub contains a large variety of images, using those tagged with <strong>Docker Official Image</strong> is recommended.</p>
 <ul>
@@ -2390,7 +2453,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 15, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2023</span>
       
     
   </small>

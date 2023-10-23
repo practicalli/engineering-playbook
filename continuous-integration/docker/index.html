@@ -910,8 +910,6 @@
       
         
       
-        
-      
     
     
     
@@ -977,12 +975,66 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="desktop/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="desktop/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Desktop
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2_3" id="__nav_6_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Desktop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="desktop/extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desktop Extensions
   </span>
   
 
@@ -992,21 +1044,9 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="desktop-extensions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Desktop Extensions
-  </span>
-  
-
-      </a>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2040,43 +2080,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-desktop" class="md-nav__link">
-    Docker Desktop
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#choosing-docker-images" class="md-nav__link">
     Choosing Docker Images
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dockerfile-design" class="md-nav__link">
-    Dockerfile Design
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compose-services" class="md-nav__link">
-    Compose services
-  </a>
-  
-    <nav class="md-nav" aria-label="Compose services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-watcher" class="md-nav__link">
-    File watcher
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2125,7 +2131,8 @@
 <h2 id="general-workflow">General Workflow<a class="headerlink" href="#general-workflow" title="Permanent link">λ︎</a></h2>
 <ul>
 <li>Create a Clojure project, e.g. using <a href="https://practical.li/clojure/clojure-cli/projects/templates/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> deps-new and Practicalli Project Templates</a></li>
-<li><a href="install/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Install Docker Desktop</a> &amp; <a href="desktop-extensions/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Extensions</a></li>
+<li><a href="install/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Install Docker Desktop</a> &amp; <a href="desktop-extensions.md"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Extensions</a></li>
+<li><a href="images/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Select a Docker image</a> as a base or builder stage</li>
 <li><a href="dockerfile/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Create a Dockerfile</a>, e.g <a href="clojure-multi-stage-dockerfile/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> a multi-stage build and run-time Dockerfile</a></li>
 <li><a href="compose/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Compose services together</a>, adding health checks and conditional starts</li>
 <li>REPL driven development, e.g. <a href="https://practical.li/clojure/clojure-cli/repl-reloaded/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practicalli REPL Reloaded Workflow</a></li>
@@ -2137,24 +2144,15 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span>docker/getting-started
 </code></pre></div></p>
 </div>
-<h2 id="docker-desktop">Docker Desktop<a class="headerlink" href="#docker-desktop" title="Permanent link">λ︎</a></h2>
-<p><a href="https://docs.docker.com/desktop/">Docker desktop</a> provides an easy way to manage Docker images, containers and volumes.  Sign in to Docker Desktop to manage your images on DockerHub.</p>
-<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-images-light.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Docker Desktop - images view" src="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-images-light.png?raw=true" /></a></p>
-<p>There is a growing marketplace of extensions that provide very useful tools to extend the capabilities of Docker Desktop.  Search within the Docker Desktop extensions or for <a href="https://hub.docker.com/search?q=&amp;type=extension">extensions on Docker Hub</a>.</p>
-<ul>
-<li><a href="https://hub.docker.com/extensions/docker/resource-usage-extension">Resource Usage</a> monitor resources (cpu, memory, network, disk) used by containers and docker compose systems over time</li>
-<li><a href="https://hub.docker.com/extensions/docker/disk-usage-extension">Disk Usage</a> optimise use of local disk space by removing unused images, containers and volumes</li>
-<li><a href="https://hub.docker.com/extensions/docker/volumes-backup-extension">Volumes Backup &amp; Share</a> to backup, clone, restore and share Docker volumes easily</li>
-<li><a href="https://hub.docker.com/extensions/docker/logs-explorer-extension">Logs Explorer</a> view all container logs in one place to assist troubleshooting</li>
-<li><a href="https://hub.docker.com/extensions/mochoa/pgadmin4-docker-extension">Postgres Admin</a> PGAdmin4 open source management tool for Postgres</li>
-<li><a href="https://hub.docker.com/extensions/aquasec/trivy-docker-extension">Trivy</a> scan local and remote images for security vulnerabilities</li>
-<li><a href="https://hub.docker.com/extensions/snyk/snyk-docker-desktop-extension">Snyk</a> scan local and remote images for security vulnerabilities</li>
-<li><a href="https://hub.docker.com/extensions/ddosify/ddosify-docker-extension">Ddosify</a> high-performance, open-source and simple load testing tool</li>
-</ul>
-<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-extensions-disk-usage-light.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Docker Desktop extension - disk usage" src="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-extensions-disk-usage-light.png?raw=true" /></a></p>
 <h2 id="choosing-docker-images">Choosing Docker Images<a class="headerlink" href="#choosing-docker-images" title="Permanent link">λ︎</a></h2>
-<p><a href="https://docs.docker.com/docker-hub/official_images/">Docker Official Images</a> from Docker Hub are highly recommended.  Look for the Docker Official Image tag on the image page.</p>
-<p><a class="glightbox" href="https://docs.docker.com/docker-hub/images/official-image-badge-iso.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Docker Official Image Tag" src="https://docs.docker.com/docker-hub/images/official-image-badge-iso.png" /></a></p>
+<p><a class="glightbox" href="https://docs.docker.com/trusted-content/images/official-image-badge-iso.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="right" alt="Docker Official Image Tag" src="https://docs.docker.com/trusted-content/images/official-image-badge-iso.png" /></a></p>
+<p><a href="https://docs.docker.com/docker-hub/official_images/">Docker Official Images</a> are highly recommended.  Look for the Docker Official Image tag on the image page.</p>
+<details class="info">
+<summary>Docker Official Image meaning</summary>
+<p>An Official Docker Image means the configuration of that image follows the <a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Docker recommended practices</a>, is well documented and designed for common use cases.</p>
+<p>There is no implication as to the correctness of tools, languages or service that image provides, only in the means in which they are provided.</p>
+<p>However, if time was invested in creating an image good enough to pass the Docker review, then it has a higher probability of being a useful image that others that are not official.</p>
+</details>
 <ul>
 <li><a href="https://hub.docker.com/_/clojure/">Clojure - official Docker Image</a> - built by the Clojure community, provides tools to build Clojure projects (Clojure CLI, Leiningen)</li>
 <li><a href="https://hub.docker.com/_/eclipse-temurin">Eclipse temurin OpenJDK - official Docker image</a> - built by the <a href="https://adoptium.net/">community</a> - provides the Java run-time</li>
@@ -2164,84 +2162,6 @@
 <li><a href="https://hub.docker.com/_/nginx">nginx</a> open source reverse proxy &amp; load balancing for HTTP, HTTPS, SMTP, POP3 &amp; IMAP protocols, HTTP cache and a web server</li>
 <li><a href="https://hub.docker.com/_/mariadb">mariadb</a> open source relational database by the original developers of MySQL and is much more efficient</li>
 </ul>
-<details class="info">
-<summary>Docker Official Image meaning</summary>
-<p>An Official Docker Image means the configuration of that image follows the <a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Docker recommended practices</a>, is well documented and designed for common use cases.</p>
-<p>There is no implication as to the correctness of tools, languages or service that image provides, only in the means in which they are provided.</p>
-<p>However, if time was invested in creating an image good enough to pass the Docker review, then it has a higher probability of being a useful image that others that are not official.</p>
-</details>
-<h2 id="dockerfile-design">Dockerfile Design<a class="headerlink" href="#dockerfile-design" title="Permanent link">λ︎</a></h2>
-<p><a class="md-button" href="dockerfile/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Dockerfile design in detail</a></p>
-<p>A multi-stage <code>Dockerfile</code> contains builder stage and an unnamed stage used as the run-time.  Optionally, the configuration can use a base image which both build and run-time stages extend.</p>
-<p>The builder stage caches dependencies to optimise building Clojure and the run-time stage optimises running the service efficiently and securely.</p>
-<p>The uberjar created by the builder image is copied over to the run-time image to keep that image as clean and small as possible (to minimise resource use).</p>
-<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-output-cached-layers.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Docker Multi-stage build file with cached overlays" src="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-output-cached-layers.png?raw=true" /></a></p>
-<ul>
-<li><a href="https://practical.li/blog/posts/build-and-run-clojure-with-multistage-dockerfile/">Multi-stage <code>Dockerfile</code> for Clojure projects</a></li>
-<li><a href="https://docs.docker.com/build/building/multi-stage/">Docker Multi-stage builds docs</a></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Docker init - beta feature</p>
-<p><a href="https://docs.docker.com/engine/reference/commandline/init/"><code>docker init</code></a> is a new (beta) feature to create <code>Dockerfile</code>, <code>.dockerignore</code> and<code>compose.yaml</code> files using Docker recommended practices.</p>
-</div>
-<h2 id="compose-services">Compose services<a class="headerlink" href="#compose-services" title="Permanent link">λ︎</a></h2>
-<p>Define a <code>compose.yaml</code> file that builds the Clojure project and run services that the Clojure service requires or talks too (database, cache, mock API, etc.).</p>
-<p>Each service can define a heart beat which can be used as a conditional startup for other services.</p>
-<details class="info">
-<summary>compose.yaml new Compose configuration file</summary>
-<p><code>compose.yaml</code> is the new configuration file for orchestrating services locally, a simplified and extended version of <code>docker-compose.yaml</code>.</p>
-</details>
-<p>Include the <code>build:</code> option for the Clojure service with the path to the multi-stage Dockerfile for the project (typically in the same root directory of the project, although a remote Git repository can also be used)</p>
-<p>The Clojure service defines a dependency on a Postgres Database.  The dependency has a condition so the Clojure service is only started once the Postgres service is healthy</p>
-<div class="admonition example">
-<p class="admonition-title">Clojure Service with Postgres Database</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">services</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">clojure-service</span><span class="p">:</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linux/amd64</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"> </span><span class="c1"># host:container</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:8080</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="nt">postgres-database</span><span class="p">:</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_healthy</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="nt">postgres-database</span><span class="p">:</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:15.2-alpine</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$DOCKER_POSTGRES_ROOT_PASSWORD&quot;</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;pg_isready&quot;</span><span class="w"> </span><span class="p p-Indicator">]</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">45s</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5432:5432</span>
-</code></pre></div>
-</div>
-<p>Run the services using docker from the root of the project</p>
-<div class="admonition note">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--build
-</code></pre></div>
-</div>
-<h3 id="file-watcher">File watcher<a class="headerlink" href="#file-watcher" title="Permanent link">λ︎</a></h3>
-<p>Docker provides <a href="https://docs.docker.com/compose/file-watch/"><code>watch</code></a> as an experimental feature which can rebuild the Clojure service when a file change is detected.  This seems most useful when troubleshooting issues that occur during system integration testing.</p>
-<p>Add an <code>x-develop</code> configuration with watch under the Clojure service configuration</p>
-<div class="admonition example">
-<p class="admonition-title">Automated rebuild on file change</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span><span class="nt">x-develop</span><span class="p">:</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">      </span><span class="nt">watch</span><span class="p">:</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./deps.edn</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rebuild</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./src</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">          </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rebuild</span>
-</code></pre></div>
-</div>
-<p>Start the services and the file watch mode</p>
-<div class="admonition note">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>--detach<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>alpha<span class="w"> </span>watch
-</code></pre></div>
-</div>
-<p>Save changes to files and a new image for the Clojure service will be built and deployed when ready.</p>
 <h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">λ︎</a></h2>
 <p>Docker desktop provides lots of tools to support local system integration work before code is sent to a continuous integration service (or as a temporary alternative if that CI service id down)</p>
 <p>Practicalli Project Templates include <code>Dockerfile</code>, <code>.dockerignore</code> and <code>compose.yaml</code> configurations for Clojure development, kick-starting the use of Docker.</p>
@@ -2251,16 +2171,16 @@
 <li><a href="https://docs.docker.com/desktop/">Docker Desktop Overview</a></li>
 <li><a href="https://docs.docker.com/desktop/extensions/">Docker Desktop Extensions overview</a></li>
 <li><a href="https://docs.docker.com/build/">Docker Build overview</a></li>
-<li><a href="https://docs.docker.com/compose/">Docker Compose Overview</a>
-ocker images are a relatively clean way of trying out different services or even different operating systems, e.g.<a href="https://hub.docker.com/_/ubuntu">Ubuntu</a> or <a href="https://hub.docker.com/_/archlinux">ArchLinux</a></li>
+<li><a href="https://docs.docker.com/compose/">Docker Compose Overview</a></li>
 </ul>
+<p>Docker images are a relatively clean way of trying out different services or even different operating systems, e.g.<a href="https://hub.docker.com/_/debian">Debian</a> or <a href="https://hub.docker.com/_/archlinux">ArchLinux</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2023</span>
       
     
   </small>

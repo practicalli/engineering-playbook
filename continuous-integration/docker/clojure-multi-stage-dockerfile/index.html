@@ -130,7 +130,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker-multi-stage-dockerfile-for-clojure" class="md-skip">
+        <a href="#multi-stage-dockerfile-for-clojure" class="md-skip">
           Skip to content
         </a>
       
@@ -910,8 +910,6 @@
       
         
       
-        
-      
     
     
     
@@ -977,12 +975,66 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../desktop/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../desktop/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Desktop
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2_3" id="__nav_6_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_6_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Desktop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../desktop/extensions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desktop Extensions
   </span>
   
 
@@ -992,21 +1044,9 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../desktop-extensions/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Desktop Extensions
-  </span>
-  
-
-      </a>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2295,7 +2335,7 @@
   
 
 
-<h1 id="docker-multi-stage-dockerfile-for-clojure">Docker Multi-Stage Dockerfile for Clojure<a class="headerlink" href="#docker-multi-stage-dockerfile-for-clojure" title="Permanent link">λ︎</a></h1>
+<h1 id="multi-stage-dockerfile-for-clojure">Multi-Stage Dockerfile for Clojure<a class="headerlink" href="#multi-stage-dockerfile-for-clojure" title="Permanent link">λ︎</a></h1>
 <p>Building a Clojure project from source to create a docker image provides an effective workflow for local testing and system integration.</p>
 <p>A multi-stage Dockerfile is recommended to ensure build tools and artefacts are not included in the final Docker image, helping minimise the size and resources used by that image.</p>
 <details class="hint">
@@ -2305,14 +2345,22 @@
 </code></pre></div>
 Practicalli Project Templates are included in the <a href="https://practical.li/clojure/clojure-cli/practicalli-config/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practicalli Clojure CLI Config</a> which provides aliases for running community tools to support a wide range of development tasks.</p>
 </details>
+<details class="warning">
+<summary>Updating to Java 21 Long Term Support release</summary>
+<p>This guide will be updated to use images with Java 21, the latest Long Term Support release (LTS) as of October 2023.</p>
+<p>Examples will be provided using Alpine Linux and Debian Linux operating system. </p>
+</details>
 <h2 id="builder-stage">Builder stage<a class="headerlink" href="#builder-stage" title="Permanent link">λ︎</a></h2>
 <p>Practicalli uses the latest Clojure CLI release and the latest Long Term Support (LTS) version of <a href="../images/#openjdk"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Eclipse Temurin</a> (OpenJDK).</p>
 <p><a href="../images/#alpine-linux"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Alpine Linux</a> image variants are used to keep the image file size as small as possible, reducing local resource requirements (and image download time).</p>
 <div class="admonition example">
-<p class="admonition-title">Set builder stage image</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">clojure:temurin-17-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
+<p class="admonition-title">Set builder stage image using specific Java version</p>
+<div class="highlight"><span class="filename">Dockerfile</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">clojure:temurin-21-tools-deps-alpine</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
 </code></pre></div>
 </div>
+<blockquote>
+<p><a href="https://hub.docker.com/layers/library/clojure/temurin-21-tools-deps-alpine/images/sha256-df9061b056300f3513407221ba4f5a60d330660563a6ecadcac62570a787bacd?context=explore">clojure:temurin-21-tools-deps-alpine</a> image details</p>
+</blockquote>
 <p><code>CLOJURE_VERSION</code> will over-ride the version of Clojure CLI in the Clojure image (which defaults to latest Clojure CLI release). Or choose an image that has a specific Clojure CLI version, e.g. <code>temurin-17-tools-deps-1.11.1.1182-alpine</code></p>
 <div class="admonition example">
 <p class="admonition-title">Set builder stage image with specific Clojure version</p>
@@ -2604,7 +2652,7 @@ Practicalli Project Templates are included in the <a href="https://practical.li/
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 20, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2023</span>
       
     
   </small>
