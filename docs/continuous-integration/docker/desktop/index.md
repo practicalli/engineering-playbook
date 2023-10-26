@@ -6,6 +6,8 @@
 
 [Docker desktop](https://docs.docker.com/desktop/) provides an easy way to manage Docker images, containers and volumes.  Sign in to Docker Desktop to manage your images on DockerHub.
 
+[Docker Desktop Overview](https://docs.docker.com/desktop/){target=_blank .md-button}
+
 ## Extensions Marketplace
 
 There is a growing marketplace of extensions that provide very useful tools to extend the capabilities of Docker Desktop.  Search within the Docker Desktop extensions or for [extensions on Docker Hub](https://hub.docker.com/search?q=&type=extension).

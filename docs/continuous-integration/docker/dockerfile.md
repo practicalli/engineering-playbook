@@ -8,7 +8,6 @@ A [Multi-stage `Dockerfile`](clojure-multi-stage-dockerfile.md) is an effective 
 
 [Docker Hub](https://hub.docker.com/_/amazoncorretto) provides a wide range of images, supporting development, continuous integration and system integration testing.
 
-## Dockerfile Design
 
 ## Multi-stage Dockerfile
 
@@ -33,6 +32,7 @@ The uberjar created by the builder image is copied over to the run-time image to
     [`docker init`](https://docs.docker.com/engine/reference/commandline/init/) is a new (beta) feature to create `Dockerfile`, `.dockerignore` and`compose.yaml` files using Docker recommended practices.
 
 
+[Docker Build overview](https://docs.docker.com/build/){target=_blank .md-button}
 
 
 ## Official Docker images
