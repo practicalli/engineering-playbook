@@ -1124,13 +1124,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dockerfile-design" class="md-nav__link">
-    Dockerfile Design
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#multi-stage-dockerfile" class="md-nav__link">
     Multi-stage Dockerfile
   </a>
@@ -2204,13 +2197,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dockerfile-design" class="md-nav__link">
-    Dockerfile Design
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#multi-stage-dockerfile" class="md-nav__link">
     Multi-stage Dockerfile
   </a>
@@ -2330,7 +2316,6 @@
 <p>Each line in the <code>Dockerfile</code> configuration creates an overlay, a layer of the image that is applied to create the final image.  Overlays are cached by docker on the first run and if the files or commands the overlays are created from do not change, then the cache is used on consecutive use of the docker image.</p>
 <p>A <a href="../clojure-multi-stage-dockerfile/">Multi-stage <code>Dockerfile</code></a> is an effective way to build and run projects via a continuous integration pipeline and local development (in concert with supporting services via a <a href="../compose/"><code>compose.yaml</code> configuration</a>).</p>
 <p><a href="https://hub.docker.com/_/amazoncorretto">Docker Hub</a> provides a wide range of images, supporting development, continuous integration and system integration testing.</p>
-<h2 id="dockerfile-design">Dockerfile Design<a class="headerlink" href="#dockerfile-design" title="Permanent link">λ︎</a></h2>
 <h2 id="multi-stage-dockerfile">Multi-stage Dockerfile<a class="headerlink" href="#multi-stage-dockerfile" title="Permanent link">λ︎</a></h2>
 <p>A multi-stage <code>Dockerfile</code> contains builder stage and an unnamed stage used as the run-time.  The builder stage can be designed optimally for building the Clojure project and the run-time stage optimised for running the service efficiently and securely.</p>
 <p>The builder stage caches dependencies to optimise building Clojure and the run-time stage optimises running the service efficiently and securely.</p>
@@ -2347,6 +2332,7 @@
 <p class="admonition-title">Docker init - beta feature</p>
 <p><a href="https://docs.docker.com/engine/reference/commandline/init/"><code>docker init</code></a> is a new (beta) feature to create <code>Dockerfile</code>, <code>.dockerignore</code> and<code>compose.yaml</code> files using Docker recommended practices.</p>
 </div>
+<p><a class="md-button" href="https://docs.docker.com/build/" target="_blank">Docker Build overview</a></p>
 <h2 id="official-docker-images">Official Docker images<a class="headerlink" href="#official-docker-images" title="Permanent link">λ︎</a></h2>
 <p>Docker Hub contains a large variety of images, using those tagged with <strong>Docker Official Image</strong> is recommended.</p>
 <ul>
@@ -2453,7 +2439,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2023</span>
       
     
   </small>

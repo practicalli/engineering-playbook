@@ -2079,20 +2079,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#choosing-docker-images" class="md-nav__link">
-    Choosing Docker Images
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    Summary
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2125,17 +2111,23 @@
 
 
 <h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">λ︎</a></h1>
-<p>Docker enables a consistent approach to building and running Clojure projects along with a range of other services locally (database, cache, streams, etc.), The Clojure project is built from source when starting services (a <code>watch</code> feature can rebuild on code changes). Heath checks and conditions are set to ensure dependant services start in the correct order.</p>
-<p>Running Docker is relatively fast once image overlays (layers) are cached on their first run, so its a viable approach for local system integration testing and acceptance testing, before pushing changes to a remote Continuous Integration service.</p>
-<p>A Docker workflow complements a <a href="https://practical.li/clojure/introduction/repl-workflow/">REPL Driven Development workflow</a>, it does not replace it.  The main development effort should still be done via a REPL connected editor, with Docker Compose focused on orchestration of services.</p>
+<p>Docker provides an isolated environment for repeatable build &amp; runtime systems.</p>
+<p>Docker enables a consistent approach to building the source code of project locally, or within a continuous integration (CI) system.</p>
+<p><a href="compose/">Docker compose</a> orchestrates multiple services locally. Heath checks and conditions can be set to ensure dependant services start in the correct order.</p>
+<p>Docker compose can use a <a href="dockerfile/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> <code>Dockerfile</code> configuration</a> to build a project when starting services. An <code>on-watch</code> feature can rebuild the project on code changes. </p>
+<p>Creating a <a href="dockerfile/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> <code>Dockerfile</code> configuration</a> using image overlays (layers) cached on first run makes for a highly efficient local integration testing system, before pushing changes to a remote Continuous Integration service.</p>
+<details class="hint">
+<summary>Docker and Clojure projects</summary>
+<p>A Docker Compose workflow complements the <a href="https://practical.li/clojure/introduction/repl-workflow/">Clojure REPL Driven Development workflow</a>.  </p>
+<p>A REPL connected editor provides instant feedback on the code as it is written, with Docker Compose providing a consistent build and orchestration of services.</p>
+<p><a class="md-button" href="https://practical.li/clojure/clojure-cli/repl-reloaded/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practicalli REPL Reloaded Workflow</a></p>
+</details>
 <h2 id="general-workflow">General Workflow<a class="headerlink" href="#general-workflow" title="Permanent link">λ︎</a></h2>
 <ul>
-<li>Create a Clojure project, e.g. using <a href="https://practical.li/clojure/clojure-cli/projects/templates/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> deps-new and Practicalli Project Templates</a></li>
-<li><a href="install/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Install Docker Desktop</a> &amp; <a href="desktop-extensions.md"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Extensions</a></li>
+<li><a href="install/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Install Docker Desktop</a> &amp; <a href="desktop/extensions/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Extensions</a></li>
 <li><a href="images/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Select a Docker image</a> as a base or builder stage</li>
 <li><a href="dockerfile/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Create a Dockerfile</a>, e.g <a href="clojure-multi-stage-dockerfile/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> a multi-stage build and run-time Dockerfile</a></li>
 <li><a href="compose/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Compose services together</a>, adding health checks and conditional starts</li>
-<li>REPL driven development, e.g. <a href="https://practical.li/clojure/clojure-cli/repl-reloaded/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practicalli REPL Reloaded Workflow</a></li>
 <li>(optional) Automatic rebuild of Clojure project when <a href="compose/#build-on-change"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> watching for code changes</a> (experimental feature)</li>
 </ul>
 <div class="admonition hint">
@@ -2144,43 +2136,17 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">80</span>:80<span class="w"> </span>docker/getting-started
 </code></pre></div></p>
 </div>
-<h2 id="choosing-docker-images">Choosing Docker Images<a class="headerlink" href="#choosing-docker-images" title="Permanent link">λ︎</a></h2>
-<p><a class="glightbox" href="https://docs.docker.com/trusted-content/images/official-image-badge-iso.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="right" alt="Docker Official Image Tag" src="https://docs.docker.com/trusted-content/images/official-image-badge-iso.png" /></a></p>
-<p><a href="https://docs.docker.com/docker-hub/official_images/">Docker Official Images</a> are highly recommended.  Look for the Docker Official Image tag on the image page.</p>
 <details class="info">
-<summary>Docker Official Image meaning</summary>
-<p>An Official Docker Image means the configuration of that image follows the <a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Docker recommended practices</a>, is well documented and designed for common use cases.</p>
-<p>There is no implication as to the correctness of tools, languages or service that image provides, only in the means in which they are provided.</p>
-<p>However, if time was invested in creating an image good enough to pass the Docker review, then it has a higher probability of being a useful image that others that are not official.</p>
+<summary>Practicalli Project Templates includes docker configuration</summary>
+<p>Practicalli Project Templates create projects that include a multi-stage <code>Dockerfile</code>, <code>.dockerignore</code> and <code>compose.yaml</code> configurations for Clojure development.</p>
 </details>
-<ul>
-<li><a href="https://hub.docker.com/_/clojure/">Clojure - official Docker Image</a> - built by the Clojure community, provides tools to build Clojure projects (Clojure CLI, Leiningen)</li>
-<li><a href="https://hub.docker.com/_/eclipse-temurin">Eclipse temurin OpenJDK - official Docker image</a> - built by the <a href="https://adoptium.net/">community</a> - provides the Java run-time</li>
-<li><a href="https://hub.docker.com/_/amazoncorretto">Amazon Corretto</a> is an OpenJDK distribution by Amazon AWS team, <a href="https://aws.amazon.com/corretto/">Amazon Corretto</a> can also be installed for the local development environment</li>
-<li><a href="https://hub.docker.com/_/postgres">Postgres</a> open-source object-relational database management system</li>
-<li><a href="https://hub.docker.com/_/redis">Redis</a> open-source, networked, in-memory, key-value data store with optional durability</li>
-<li><a href="https://hub.docker.com/_/nginx">nginx</a> open source reverse proxy &amp; load balancing for HTTP, HTTPS, SMTP, POP3 &amp; IMAP protocols, HTTP cache and a web server</li>
-<li><a href="https://hub.docker.com/_/mariadb">mariadb</a> open source relational database by the original developers of MySQL and is much more efficient</li>
-</ul>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">λ︎</a></h2>
-<p>Docker desktop provides lots of tools to support local system integration work before code is sent to a continuous integration service (or as a temporary alternative if that CI service id down)</p>
-<p>Practicalli Project Templates include <code>Dockerfile</code>, <code>.dockerignore</code> and <code>compose.yaml</code> configurations for Clojure development, kick-starting the use of Docker.</p>
-<p>Docker images are a relatively clean way of trying out different services or even different operating systems, e.g.<a href="https://hub.docker.com/_/ubuntu">Ubuntu</a> or <a href="https://hub.docker.com/_/archlinux">ArchLinux</a>.  Deleting the images removes the whole service without affecting the underlying operating system.</p>
-<p><a href="https://practical.li/engineering-playbook/code-quality/megalinter/#megalinter-configuration">MegaLinter</a> is an excellent example of a docker image that provides a large number of tools that would otherwise need to be installed directly on the operating system.</p>
-<ul>
-<li><a href="https://docs.docker.com/desktop/">Docker Desktop Overview</a></li>
-<li><a href="https://docs.docker.com/desktop/extensions/">Docker Desktop Extensions overview</a></li>
-<li><a href="https://docs.docker.com/build/">Docker Build overview</a></li>
-<li><a href="https://docs.docker.com/compose/">Docker Compose Overview</a></li>
-</ul>
-<p>Docker images are a relatively clean way of trying out different services or even different operating systems, e.g.<a href="https://hub.docker.com/_/debian">Debian</a> or <a href="https://hub.docker.com/_/archlinux">ArchLinux</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 26, 2023</span>
       
     
   </small>
