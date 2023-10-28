@@ -189,10 +189,10 @@ nav:
       - os/index.md
       - Linux:
           - os/linux/index.md
-          - os/debian.md
-          - os/macosx.md
-          - os/ubuntu.md
+          - Debian: os/debian-linux.md
+          - Ubuntu: os/ubuntu-linux.md
           - Regolith: os/linux/regolith.md
+          - MacOSX: os/macosx.md
       - Shell:
           - os/shell/index.md
           - os/shell/bash.md
