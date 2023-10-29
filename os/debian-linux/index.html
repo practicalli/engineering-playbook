@@ -15,18 +15,22 @@
         <link rel="canonical" href="https://practical.li/engineering-playbook/os/debian-linux/">
       
       
+        <link rel="prev" href="../cron/">
+      
+      
+        <link rel="next" href="../ubuntu-linux/">
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
     
     
       
-        <title>Debian Linux - Practicalli Engineering Playbook</title>
+        <title>Debian - Practicalli Engineering Playbook</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -69,7 +73,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Debian Linux - Practicalli Engineering Playbook" >
+        <meta  property="og:title"  content="Debian - Practicalli Engineering Playbook" >
       
         <meta  property="og:description"  content="Practical guides to common Engineering tasks" >
       
@@ -85,7 +89,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Debian Linux - Practicalli Engineering Playbook" >
+        <meta  name="twitter:title"  content="Debian - Practicalli Engineering Playbook" >
       
         <meta  name="twitter:description"  content="Practical guides to common Engineering tasks" >
       
@@ -177,7 +181,7 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-             Debian Linux 
+             Debian 
           </span>
         </div>
       </div>
@@ -1697,6 +1701,8 @@
       
   
   
+    
+  
   
     
     
@@ -1713,12 +1719,12 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
           
@@ -1740,7 +1746,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Operating Systems
@@ -1753,6 +1759,8 @@
                 
   
   
+    
+  
   
     
     
@@ -1767,16 +1775,18 @@
       
         
       
+        
+      
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" checked>
         
           
           <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
@@ -1790,7 +1800,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10_2">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -1823,11 +1833,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../debian.md" class="md-nav__link">
+      <a href="../cron/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    None
+    Cron
   </span>
   
 
@@ -1841,17 +1851,160 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../macosx/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Debian
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Mac OSX
+    Debian
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    Install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-install" class="md-nav__link">
+    Post Install
+  </a>
+  
+    <nav class="md-nav" aria-label="Post Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#root-vs-sudo" class="md-nav__link">
+    root vs sudo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-xdg-freedesktop-locations" class="md-nav__link">
+    Set XDG freedesktop locations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-install" class="md-nav__link">
+    Git install
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-practicallidotfiles" class="md-nav__link">
+    Clone practicalli/dotfiles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-configure" class="md-nav__link">
+    Git configure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kitty-terminal" class="md-nav__link">
+    Kitty Terminal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zsh-and-prezto" class="md-nav__link">
+    Zsh and Prezto
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neovim" class="md-nav__link">
+    Neovim
+  </a>
+  
+    <nav class="md-nav" aria-label="Neovim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    Nodejs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#releases" class="md-nav__link">
+    Releases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-nvim" class="md-nav__link">
+    Configure nvim
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1863,11 +2016,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../ubuntu.md" class="md-nav__link">
+      <a href="../ubuntu-linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    None
+    Ubuntu
   </span>
   
 
@@ -1888,6 +2041,26 @@
   
   <span class="md-ellipsis">
     Regolith
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../macosx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MacOSX
   </span>
   
 
@@ -2383,6 +2556,44 @@ alias practicalli-redux="NVIM_APPNAME=neovim-config-redux nvim"</p>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../cron/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cron">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Cron
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ubuntu-linux/" class="md-footer__link md-footer__link--next" aria-label="Next: Ubuntu">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Ubuntu
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
