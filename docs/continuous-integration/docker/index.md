@@ -10,6 +10,14 @@ Designing a [:fontawesome-solid-book-open: `Dockerfile` configuration](dockerfil
 
 Docker compose can use a [:fontawesome-solid-book-open: `Dockerfile` configuration](dockerfile.md) to build a project when starting services. An `on-watch` feature can rebuild the project from sourcw when code changes are written to file. 
 
+??? HINT "Recommended Docker Images"
+
+    - [:globe_with_meridians: alpine linux](https://hub.docker.com/_/alpine){target=_blank} or [:globe_with_meridians: debian linux](https://hub.docker.com/_/debian){target=_blank} as the base operating system
+    - [Clojure](https://hub.docker.com/_/clojure){target=_blank} - official Docker Clojure image
+    - [Eclipse Temurin](https://hub.docker.com/_/eclipse-temurin/){target=_blank} - Offical Docker image for OpenJDK
+
+    [:fontawesome-solid-book-open: Detailed Docker Image Descriptions](images.md){.md-button}
+
 
 ??? HINT "Docker and Clojure projects"
     A Docker Compose workflow complements the [Clojure REPL Driven Development workflow](https://practical.li/clojure/introduction/repl-workflow/).  
