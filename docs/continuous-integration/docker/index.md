@@ -1,14 +1,15 @@
 # Docker
 
-Docker provides an isolated environment for repeatable build & runtime systems.
+Docker containers an isolated environment for repeatable build & runtime systems.
 
-Docker enables a consistent approach to building the source code of project locally, or within a continuous integration (CI) system.
+[:fontawesome-solid-book-open: Dockerfile](dockerfile.md) configuration defines a consistent approach to building the source code of project locally, or within a continuous integration (CI) system.
 
-[Docker compose](compose.md) orchestrates multiple services locally. Heath checks and conditions can be set to ensure dependant services start in the correct order.
+Designing a [:fontawesome-solid-book-open: `Dockerfile` configuration](dockerfile.md) to maximise use of image overlays (layers) greatly enhances the speed of the build, as libraries and other unchanged assets are cached on first run.
 
-Docker compose can use a [:fontawesome-solid-book-open: `Dockerfile` configuration](dockerfile.md) to build a project when starting services. An `on-watch` feature can rebuild the project on code changes. 
+[:fontawesome-solid-book-open: Docker compose](compose.md) orchestrates multiple services locally. Heath checks and conditions can be set to ensure dependant services start in the correct order.
 
-Creating a [:fontawesome-solid-book-open: `Dockerfile` configuration](dockerfile.md) using image overlays (layers) cached on first run makes for a highly efficient local integration testing system, before pushing changes to a remote Continuous Integration service.
+Docker compose can use a [:fontawesome-solid-book-open: `Dockerfile` configuration](dockerfile.md) to build a project when starting services. An `on-watch` feature can rebuild the project from sourcw when code changes are written to file. 
+
 
 ??? HINT "Docker and Clojure projects"
     A Docker Compose workflow complements the [Clojure REPL Driven Development workflow](https://practical.li/clojure/introduction/repl-workflow/).  
