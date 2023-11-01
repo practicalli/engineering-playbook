@@ -180,6 +180,7 @@ nav:
       # - TODO: practices/thinking-hats.md
       - practices/deliberate-practice.md
       # - TODO: practices/code-kata.md
+      - practices/one-to-one-meeting.md
   - Programming Languages:
       - programming-languages/index.md
       - JavaScript:
