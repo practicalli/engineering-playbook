@@ -226,6 +226,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/engineering-playbook/practices/one-to-one-meeting/</loc>
+         <lastmod>2023-11-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/engineering-playbook/practices/technical-debt/</loc>
          <lastmod>2023-11-01</lastmod>
          <changefreq>daily</changefreq>
