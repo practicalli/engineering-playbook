@@ -70,6 +70,17 @@ The Clojure image is built from the equivalent Eclipse Temurin image which can b
 
 !!! HINT "Multi-stage Dockerfile for Clojure"
 
+### Clojure image tags
+
+| Image tag                           | compressed size |
+| ---                                 | ---             |
+| temurin-17-tools-deps-bookworm-slim | 234.56 MB       |
+| temurin-21-tools-deps-bookworm-slim | 247.68 MB       |
+| temurin-17-tools-deps-alpine        | 178.96 MB       |
+| temurin-21-tools-deps-alpine        | 191.89 MB       |
+
+> Consider building a custom Java JDK to reduce the image size
+
 
 ## MegaLinter
 
