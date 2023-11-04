@@ -174,13 +174,17 @@ nav:
   - Practices:
       - practices/index.md
       - practices/behaviour-driven-development.md
+      - Discussions:
+          - practices/discussions/index.md
+          - practices/discussions/one-to-one-meeting.md
+          # - practices/discussions/retrospective.md
+          - practices/discussions/standup.md
       - Tech Debt: practices/technical-debt.md
       # - TODO: practices/root-cause-analysis.md
       # - TODO: practices/five-whys.md
       # - TODO: practices/thinking-hats.md
       - practices/deliberate-practice.md
       # - TODO: practices/code-kata.md
-      - practices/one-to-one-meeting.md
   - Programming Languages:
       - programming-languages/index.md
       - JavaScript:
