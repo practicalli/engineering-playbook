@@ -173,7 +173,6 @@ nav:
       #     - version-control/git-client-configuration.md
   - Practices:
       - practices/index.md
-      - practices/behaviour-driven-development.md
       - Discussions:
           - practices/discussions/index.md
           - practices/discussions/one-to-one-meeting.md
@@ -181,10 +180,9 @@ nav:
           - practices/discussions/standup.md
           - Five Whys: practices/discussions/five-whys.md
           - Thinking Hats: practices/discussions/thinking-hats.md
+      - BDD:
+          - practices/behaviour-driven-development/index.md
       - Tech Debt: practices/technical-debt.md
-      # - TODO: practices/root-cause-analysis.md
-      # - TODO: practices/five-whys.md
-      # - TODO: practices/thinking-hats.md
       - practices/deliberate-practice.md
       # - TODO: practices/code-kata.md
   - Programming Languages:
