@@ -46,11 +46,90 @@ OpenJDK is the most commonly used run-time environment for Java and JVM language
 [:globe_with_meridians: Eclipse temurin OpenJDK - official Docker image](https://hub.docker.com/_/eclipse-temurin) is built by the [:globe_with_meridians: Java community](https://adoptium.net/) and provides the Java run-time (Java Virtual Machine).  Eclipse Temurin provides all Long Term Support (LTS) versions from Java 8 onward and current intermediate releases.  Variants are available with Alpine Linux and a wide range of system architectures (`amd64`, `arm32v7`, `arm64v8`, `ppc64le`, `s390x`, `windows-amd64`)
 
 
-## Amazon Corretto
+### Amazon Corretto
 
 [:globe_with_meridians: Amazon Corretto](https://hub.docker.com/_/amazoncorretto) is an OpenJDK distribution by Amazon AWS team and may be an appropriate choice if relying on Amazon support.
 
 [Amazon Corretto](https://aws.amazon.com/corretto/) can also be installed for the local development environment, providing a consistent run-time between development and production.
+
+
+### Custom JDK Image
+
+OpenJDK can be built with a custom set of modules, optomising the size of a container used to run a Java or JVM service
+
+`jdeps` analyses a `.class` file, directory or `.jar` file and lists Java module dependencies.
+
+!!! NOTE ""
+    Clojure Uberjar files built with tools.build use [:globe_with_meridians: multi-release jars](https://docs.oracle.com/en/java/javase/17/docs/specs/jar/jar.html){target=_blank}, so a Java release version should be specified to see the respective dependencies.
+    ```shell title="JDK 17 dependencies for Clojure Uberjar"
+    jdeps --multi-release 17 target/practicalli-todo-standalone.jar > jdeps-report.txt
+    ```
+
+`java --list-modules` lists the modules contained in the current Java environment.
+
+??? EXAMPLE "Custom Java runtime using jlink in multi-stage container build"
+
+    ```Dockerfile
+    FROM eclipse-temurin:21 as jre-build
+
+    # Create a custom Java runtime
+    #(1)!
+    RUN $JAVA_HOME/bin/jlink \
+             --add-modules java.base \
+             --strip-debug \
+             --no-man-pages \
+             --no-header-files \
+             --compress=2 \  
+             --output /javaruntime  
+
+    # Define base image
+    FROM debian:bookworm-slim
+    ENV JAVA_HOME=/opt/java/openjdk
+    ENV PATH "${JAVA_HOME}/bin:${PATH}"
+    COPY --from=jre-build /javaruntime $JAVA_HOME
+
+    # Continue with application deployment
+    ```
+
+    1.  `--compress=2` option for Jlink uses Zip compression
+
+    
+    If the JVM based application is still evolving it may be prudent to include the Jdeps command within the Jlink command
+
+    ```Dockerfile
+    FROM eclipse-temurin:21 as jre-build
+
+    # Create a custom Java runtime
+    #(1)!
+    RUN $JAVA_HOME/bin/jlink \
+             --module-path practicalli-todo-uber.jar \
+             --add-modules $(jdeps --ignore-missing-deps \
+                                   --multi-release 21 \
+                                   --print-module-deps practicalli-todo-uber.jar) \
+             --no-header-files \
+             --no-man-pages \
+             --strip-debug \
+             --compress=2 \  
+             --output /javaruntime  
+
+    # Define base image
+    FROM debian:bookworm-slim
+    ENV JAVA_HOME=/opt/java/openjdk
+    ENV PATH "${JAVA_HOME}/bin:${PATH}"
+    COPY --from=jre-build /javaruntime $JAVA_HOME
+
+    # Continue with application deployment
+    ```
+
+
+[:globe_with_meridians: jlink - Oracle Java SE help center](https://docs.oracle.com/en/java/javase/11/tools/jlink.html){target=_blank .md-button}
+
+[:globe_with_meridians: jlink - Assembel & Optomise Modules](https://dev.java/learn/jvm/tools/core/jlink/){target=_blank .md-button}
+
+[:globe_with_meridians: jdeps - Oracle Java SE help center](https://docs.oracle.com/en/java/javase/17/docs/specs/man/jdeps.html){target=_blank .md-button}
+
+[:globe_with_meridians: Modules - Java 17 API Specification](https://docs.oracle.com/en/java/javase/17/docs/api/index.html){target=_blank .md-button}
+
 
 
 ## Clojure
