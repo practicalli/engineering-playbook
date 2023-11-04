@@ -33,7 +33,10 @@ As images are very small, resources used both locally and in stage and productio
 
 Alpine Linux uses the `pkg` tool for package management, to add tools and libraries to support a Dockerfile build stage if required.
 
-[Alpine](https://hub.docker.com/_/alpine){target=_blank .md-button}
+Alpine uses [musl libc](https://musl.libc.org/) rather than glibc so testing software run on top of Alpine is important.  [Java 16 release officially supports Alpine Linux using musl](https://openjdk.org/jeps/386).  If required, there are [several options to running glibc software on Alpine](https://wiki.alpinelinux.org/wiki/Running_glibc_programs).
+
+[Alpine Linux Official Image](https://hub.docker.com/_/alpine){target=_blank .md-button}
+
 
 
 ## OpenJDK
