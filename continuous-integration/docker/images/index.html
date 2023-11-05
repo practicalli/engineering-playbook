@@ -1111,9 +1111,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#operating-systems" class="md-nav__link">
+    Operating Systems
+  </a>
+  
+    <nav class="md-nav" aria-label="Operating Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#alpine-linux" class="md-nav__link">
     Alpine Linux
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debian-linux" class="md-nav__link">
+    Debian Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1126,6 +1146,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#eclipse-temurin" class="md-nav__link">
+    Eclipse Temurin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#amazon-corretto" class="md-nav__link">
     Amazon Corretto
   </a>
@@ -1133,8 +1160,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#custom-jdk-image" class="md-nav__link">
-    Custom JDK Image
+  <a href="#custom-built-image" class="md-nav__link">
+    Custom built image
   </a>
   
 </li>
@@ -1167,13 +1194,6 @@
         <li class="md-nav__item">
   <a href="#megalinter" class="md-nav__link">
     MegaLinter
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operating-systems" class="md-nav__link">
-    Operating Systems
   </a>
   
 </li>
@@ -2402,9 +2422,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#operating-systems" class="md-nav__link">
+    Operating Systems
+  </a>
+  
+    <nav class="md-nav" aria-label="Operating Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#alpine-linux" class="md-nav__link">
     Alpine Linux
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debian-linux" class="md-nav__link">
+    Debian Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2417,6 +2457,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#eclipse-temurin" class="md-nav__link">
+    Eclipse Temurin
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#amazon-corretto" class="md-nav__link">
     Amazon Corretto
   </a>
@@ -2424,8 +2471,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#custom-jdk-image" class="md-nav__link">
-    Custom JDK Image
+  <a href="#custom-built-image" class="md-nav__link">
+    Custom built image
   </a>
   
 </li>
@@ -2458,13 +2505,6 @@
         <li class="md-nav__item">
   <a href="#megalinter" class="md-nav__link">
     MegaLinter
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operating-systems" class="md-nav__link">
-    Operating Systems
   </a>
   
 </li>
@@ -2511,84 +2551,135 @@
 <p>There is no implication as to the correctness of tools, languages or service that image provides, only in the means in which they are provided.</p>
 <p>However, if time was invested in creating an image good enough to pass the Docker review, then it has a higher probability of being a useful image that others that are not official.</p>
 </details>
+<div class="admonition info">
+<p class="admonition-title">Common Official Docker images include</p>
 <ul>
-<li><a href="https://hub.docker.com/_/clojure/">Clojure - official Docker Image</a> - built by the Clojure community, provides tools to build Clojure projects (Clojure CLI, Leiningen)</li>
-<li><a href="https://hub.docker.com/_/eclipse-temurin">Eclipse temurin OpenJDK - official Docker image</a> - built by the <a href="https://adoptium.net/">community</a> - provides the Java run-time</li>
-<li><a href="https://hub.docker.com/_/amazoncorretto">Amazon Corretto</a> is an OpenJDK distribution by Amazon AWS team, <a href="https://aws.amazon.com/corretto/">Amazon Corretto</a> can also be installed for the local development environment</li>
-<li><a href="https://hub.docker.com/_/postgres">Postgres</a> open-source object-relational database management system</li>
-<li><a href="https://hub.docker.com/_/redis">Redis</a> open-source, networked, in-memory, key-value data store with optional durability</li>
-<li><a href="https://hub.docker.com/_/nginx">nginx</a> open source reverse proxy &amp; load balancing for HTTP, HTTPS, SMTP, POP3 &amp; IMAP protocols, HTTP cache and a web server</li>
-<li><a href="https://hub.docker.com/_/mariadb">mariadb</a> open source relational database by the original developers of MySQL and is much more efficient</li>
+<li><a href="https://hub.docker.com/_/alpine"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Alpine Linux</a> minimal operating system (musl lib)</li>
+<li><a href="https://hub.docker.com/_/debian"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Debian Linux</a> or <a href="https://hub.docker.com/_/ubuntu"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Ubuntu Linux</a> operating system</li>
+<li><a href="https://hub.docker.com/_/clojure/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Clojure</a> - built by the Clojure community, provides tools to build Clojure projects (Clojure CLI, Leiningen)</li>
+<li><a href="https://hub.docker.com/_/eclipse-temurin"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> OpenJDK - Eclipse temurin</a> - built by the <a href="https://adoptium.net/">community</a> - provides the Java run-time</li>
+<li><a href="https://hub.docker.com/_/amazoncorretto"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> OpenJDK - Amazon Corretto</a> is an OpenJDK distribution by Amazon AWS team, <a href="https://aws.amazon.com/corretto/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Amazon Corretto</a> can also be installed for the local development environment</li>
+<li><a href="https://hub.docker.com/_/postgres"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Postgres</a> open-source object-relational database management system</li>
+<li><a href="https://hub.docker.com/_/redis"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Redis</a> open-source, networked, in-memory, key-value data store with optional durability</li>
+<li><a href="https://hub.docker.com/_/nginx"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> nginx</a> open source reverse proxy &amp; load balancing for HTTP, HTTPS, SMTP, POP3 &amp; IMAP protocols, HTTP cache and a web server</li>
+<li><a href="https://hub.docker.com/_/mariadb"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> mariadb</a> open source relational database by the original developers of MySQL and is much more efficient</li>
 </ul>
-<h2 id="alpine-linux">Alpine Linux<a class="headerlink" href="#alpine-linux" title="Permanent link">λ︎</a></h2>
+</div>
+<h2 id="operating-systems">Operating Systems<a class="headerlink" href="#operating-systems" title="Permanent link">λ︎</a></h2>
+<p>Operating systems are the base for many other Docker images, providing essential tools required for all software.</p>
+<p>Alpine Linux is ultra-minimal operating system.  Debian and Ubuntu Linux are glibc based operating systems which are commonly used.</p>
+<div class="admonition info">
+<p class="admonition-title">Operating System Image Tags</p>
+<table>
+<thead>
+<tr>
+<th>Image tag</th>
+<th>compressed size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>debian:bookworm-slim</td>
+<td>27.8 MB</td>
+</tr>
+<tr>
+<td>debian:bookworm</td>
+<td>47.29 MB</td>
+</tr>
+<tr>
+<td>alpine:latest</td>
+<td>3.24 MB</td>
+</tr>
+<tr>
+<td>ubuntu:latest</td>
+<td>28.17 MB</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="alpine-linux">Alpine Linux<a class="headerlink" href="#alpine-linux" title="Permanent link">λ︎</a></h3>
 <p><a href="https://www.alpinelinux.org/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Alpine Linux</a> images have a very small footprint and provide the essential tools for running services that do not depend on specific operating system packages.</p>
 <p>As images are very small, resources used both locally and in stage and production environments are minimal.  This can be a simple way to reduce costs and do more with far fewer resources.</p>
 <p>Alpine Linux uses the <code>pkg</code> tool for package management, to add tools and libraries to support a Dockerfile build stage if required.</p>
 <p>Alpine uses <a href="https://musl.libc.org/">musl libc</a> rather than glibc so testing software run on top of Alpine is important.  <a href="https://openjdk.org/jeps/386">Java 16 release officially supports Alpine Linux using musl</a>.  If required, there are <a href="https://wiki.alpinelinux.org/wiki/Running_glibc_programs">several options to running glibc software on Alpine</a>.</p>
 <p><a class="md-button" href="https://hub.docker.com/_/alpine" target="_blank">Alpine Linux Official Image</a></p>
+<h3 id="debian-linux">Debian Linux<a class="headerlink" href="#debian-linux" title="Permanent link">λ︎</a></h3>
+<p><a href="https://www.debian.org/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Debian Linux</a> is a completely free operating system.</p>
+<p><code>bookworm</code> is the name for Debian Linux 12, the latest stable release.</p>
+<p>Debian Slim image provides a glib based operating system with a relatively minimal size, although not as small as Alpine Linux.</p>
+<div class="admonition example">
+<p class="admonition-title">Debian Linux latest stable image - slim variant</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">debian:bookworm-slim</span>
+</code></pre></div>
+</div>
+<p>Ubuntu Linux is built from Debian Linux, adding kernel patches, sudo adminstrative access and other enhancements.</p>
+<p><a class="md-button" href="https://hub.docker.com/_/debian" target="_blank">Debian Linux</a>
+<a class="md-button" href="https://hub.docker.com/_/ubuntu" target="_blank">Ubuntu</a></p>
 <h2 id="openjdk">OpenJDK<a class="headerlink" href="#openjdk" title="Permanent link">λ︎</a></h2>
-<p>OpenJDK is the most commonly used run-time environment for Java and JVM languages (Clojure, Kotlin, Gradle, Jython, JRuby, etc.)</p>
+<p>OpenJDK is the most commonly used run-time environment for Java and JVM languages (Clojure, Kotlin, Scala, Gradle, Jython, JRuby, etc.).</p>
+<p>A permissive use and distribution license is provided by all OpenJDK image variants.</p>
+<h3 id="eclipse-temurin">Eclipse Temurin<a class="headerlink" href="#eclipse-temurin" title="Permanent link">λ︎</a></h3>
 <p><a href="https://hub.docker.com/_/eclipse-temurin"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Eclipse temurin OpenJDK - official Docker image</a> is built by the <a href="https://adoptium.net/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Java community</a> and provides the Java run-time (Java Virtual Machine).  Eclipse Temurin provides all Long Term Support (LTS) versions from Java 8 onward and current intermediate releases.  Variants are available with Alpine Linux and a wide range of system architectures (<code>amd64</code>, <code>arm32v7</code>, <code>arm64v8</code>, <code>ppc64le</code>, <code>s390x</code>, <code>windows-amd64</code>)</p>
 <h3 id="amazon-corretto">Amazon Corretto<a class="headerlink" href="#amazon-corretto" title="Permanent link">λ︎</a></h3>
 <p><a href="https://hub.docker.com/_/amazoncorretto"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Amazon Corretto</a> is an OpenJDK distribution by Amazon AWS team and may be an appropriate choice if relying on Amazon support.</p>
 <p><a href="https://aws.amazon.com/corretto/">Amazon Corretto</a> can also be installed for the local development environment, providing a consistent run-time between development and production.</p>
-<h3 id="custom-jdk-image">Custom JDK Image<a class="headerlink" href="#custom-jdk-image" title="Permanent link">λ︎</a></h3>
+<h3 id="custom-built-image">Custom built image<a class="headerlink" href="#custom-built-image" title="Permanent link">λ︎</a></h3>
 <p>OpenJDK can be built with a custom set of modules, optomising the size of a container used to run a Java or JVM service</p>
 <p><code>jdeps</code> analyses a <code>.class</code> file, directory or <code>.jar</code> file and lists Java module dependencies.</p>
 <div class="admonition note">
 <p>Clojure Uberjar files built with tools.build use <a href="https://docs.oracle.com/en/java/javase/17/docs/specs/jar/jar.html" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> multi-release jars</a>, so a Java release version should be specified to see the respective dependencies.
-<div class="highlight"><span class="filename">JDK 17 dependencies for Clojure Uberjar</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>jdeps<span class="w"> </span>--multi-release<span class="w"> </span><span class="m">17</span><span class="w"> </span>target/practicalli-todo-standalone.jar<span class="w"> </span>&gt;<span class="w"> </span>jdeps-report.txt
+<div class="highlight"><span class="filename">JDK 17 dependencies for Clojure Uberjar</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>jdeps<span class="w"> </span>--multi-release<span class="w"> </span><span class="m">17</span><span class="w"> </span>target/practicalli-todo-standalone.jar<span class="w"> </span>&gt;<span class="w"> </span>jdeps-report.txt
 </code></pre></div></p>
 </div>
 <p><code>java --list-modules</code> lists the modules contained in the current Java environment.</p>
 <details class="example">
 <summary>Custom Java runtime using jlink in multi-stage container build</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">eclipse-temurin:21</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s">jre-build</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c"># Create a custom Java runtime</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c">#(1)!</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">RUN</span><span class="w"> </span><span class="nv">$JAVA_HOME</span>/bin/jlink<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">         </span>--add-modules<span class="w"> </span>java.base<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">         </span>--strip-debug<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">         </span>--no-man-pages<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">         </span>--no-header-files<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">         </span>--compress<span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="se">\ </span><span class="w"> </span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">         </span>--output<span class="w"> </span>/javaruntime<span class="w">  </span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c"># Define base image</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">FROM</span><span class="w"> </span><span class="s">debian:bookworm-slim</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="k">ENV</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/opt/java/openjdk
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="k">ENV</span><span class="w"> </span>PATH<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">JAVA_HOME</span><span class="si">}</span><span class="s2">/bin:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>jre-build<span class="w"> </span>/javaruntime<span class="w"> </span><span class="nv">$JAVA_HOME</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="c"># Continue with application deployment</span>
-</code></pre></div>
-<ol>
-<li><code>--compress=2</code> option for Jlink uses Zip compression</li>
-</ol>
-<p>If the JVM based application is still evolving it may be prudent to include the Jdeps command within the Jlink command</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">eclipse-temurin:21</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s">jre-build</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c"># Create a custom Java runtime</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c">#(1)!</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">RUN</span><span class="w"> </span><span class="nv">$JAVA_HOME</span>/bin/jlink<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">         </span>--module-path<span class="w"> </span>practicalli-todo-uber.jar<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">         </span>--add-modules<span class="w"> </span><span class="k">$(</span>jdeps<span class="w"> </span>--ignore-missing-deps<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">                               </span>--multi-release<span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">                               </span>--print-module-deps<span class="w"> </span>practicalli-todo-uber.jar<span class="k">)</span><span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">         </span>--no-header-files<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">         </span>--no-man-pages<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">         </span>--strip-debug<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">         </span>--compress<span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="se">\ </span><span class="w"> </span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">         </span>--output<span class="w"> </span>/javaruntime<span class="w">  </span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c"># Define base image</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="k">FROM</span><span class="w"> </span><span class="s">debian:bookworm-slim</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="k">ENV</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/opt/java/openjdk
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="k">ENV</span><span class="w"> </span>PATH<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">JAVA_HOME</span><span class="si">}</span><span class="s2">/bin:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span><span class="s2">&quot;</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>jre-build<span class="w"> </span>/javaruntime<span class="w"> </span><span class="nv">$JAVA_HOME</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="c"># Continue with application deployment</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">         </span>--add-modules<span class="w"> </span>java.base<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">         </span>--strip-debug<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">         </span>--no-man-pages<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">         </span>--no-header-files<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">         </span>--compress<span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="se">\ </span><span class="w"> </span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">         </span>--output<span class="w"> </span>/javaruntime<span class="w">  </span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c"># Define base image</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="k">FROM</span><span class="w"> </span><span class="s">debian:bookworm-slim</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="k">ENV</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/opt/java/openjdk
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="k">ENV</span><span class="w"> </span>PATH<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">JAVA_HOME</span><span class="si">}</span><span class="s2">/bin:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>jre-build<span class="w"> </span>/javaruntime<span class="w"> </span><span class="nv">$JAVA_HOME</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="c"># Continue with application deployment</span>
+</code></pre></div>
+<ol>
+<li><code>--compress=2</code> option for Jlink uses Zip compression</li>
+</ol>
+<p>If the JVM based application is still evolving it may be prudent to include the Jdeps command within the Jlink command</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">eclipse-temurin:21</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s">jre-build</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c"># Create a custom Java runtime</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c">#(1)!</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">RUN</span><span class="w"> </span><span class="nv">$JAVA_HOME</span>/bin/jlink<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">         </span>--module-path<span class="w"> </span>practicalli-todo-uber.jar<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">         </span>--add-modules<span class="w"> </span><span class="k">$(</span>jdeps<span class="w"> </span>--ignore-missing-deps<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">                               </span>--multi-release<span class="w"> </span><span class="m">21</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">                               </span>--print-module-deps<span class="w"> </span>practicalli-todo-uber.jar<span class="k">)</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">         </span>--no-header-files<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">         </span>--no-man-pages<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">         </span>--strip-debug<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">         </span>--compress<span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="se">\ </span><span class="w"> </span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">         </span>--output<span class="w"> </span>/javaruntime<span class="w">  </span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="c"># Define base image</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="k">FROM</span><span class="w"> </span><span class="s">debian:bookworm-slim</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="k">ENV</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/opt/java/openjdk
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="k">ENV</span><span class="w"> </span>PATH<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">JAVA_HOME</span><span class="si">}</span><span class="s2">/bin:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="k">COPY</span><span class="w"> </span>--from<span class="o">=</span>jre-build<span class="w"> </span>/javaruntime<span class="w"> </span><span class="nv">$JAVA_HOME</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="c"># Continue with application deployment</span>
 </code></pre></div>
 </details>
 <p><a class="md-button" href="https://docs.oracle.com/en/java/javase/11/tools/jlink.html" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> jlink - Oracle Java SE help center</a></p>
@@ -2600,7 +2691,7 @@
 <p>Use the Clojure image within a <code>Dockerfile</code>, specifying <code>tools-deps</code> or <code>lein</code> variants</p>
 <div class="admonition example">
 <p class="admonition-title">Clojure CLI Docker Image as builder stage</p>
-<div class="highlight"><span class="filename">Dockerfile</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">clojure:tools-deps</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
+<div class="highlight"><span class="filename">Dockerfile</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">FROM</span><span class="w"> </span><span class="s">clojure:tools-deps</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">builder</span>
 </code></pre></div>
 </div>
 <p>The Clojure image is built from the equivalent Eclipse Temurin image which can be used as the run-time image for a Multi-stage Dockerfile final stage.  As the build and final stages are built upon the same underlying image, a separate base stage is not required.</p>
@@ -2641,18 +2732,13 @@
 <h2 id="megalinter">MegaLinter<a class="headerlink" href="#megalinter" title="Permanent link">λ︎</a></h2>
 <p><a href="https://practical.li/engineering-playbook/code-quality/megalinter/#megalinter-configuration">MegaLinter</a> greatly simplifies applying quality </p>
 <p>The MegaLinter image is an example of a docker image that provides a large number of tools which otherwise need to be installed directly on the operating system.</p>
-<h2 id="operating-systems">Operating Systems<a class="headerlink" href="#operating-systems" title="Permanent link">λ︎</a></h2>
-<p><a class="md-button" href="https://hub.docker.com/_/archlinux" target="_blank">Arch Linux</a>
-<a class="md-button" href="https://hub.docker.com/_/alpine" target="_blank">Alpine Linux</a>
-<a class="md-button" href="https://hub.docker.com/_/debian" target="_blank">Debian Linux</a>
-<a class="md-button" href="https://hub.docker.com/_/ubuntu" target="_blank">Ubuntu</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 4, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 5, 2023</span>
       
     
   </small>
