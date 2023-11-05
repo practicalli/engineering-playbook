@@ -54,3 +54,6 @@ Display the summary of the topic being discussed throughout the meeting.
 Display a summary of a hats purpose whilst that hat is active.
 
 Capture disussions as they happen on a whiteboard or shared document, ensuring information is catagorised under the appropriate hat.
+
+
+[:globe_with_meridians: Six Thinking Hats - De Bono Group](https://www.debonogroup.com/services/core-programs/six-thinking-hats/)
