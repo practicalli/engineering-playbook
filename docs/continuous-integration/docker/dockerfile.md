@@ -68,7 +68,6 @@ The General purpose option provides almost all the configuration required.  Upda
 
 ## Dockerfile Syntax
 
-
 The form of `Dockerfile` instructions
 
 ```dockerfile
@@ -89,37 +88,40 @@ Start by learning the common instructions used in `Dockerfile` configurations an
 
 [:globe_with_meridians: Docker Docs Dockerfile reference](https://docs.docker.com/engine/reference/builder/){target=_blank .md-button}
 
-## FROM
+
+### FROM
 
 `FROM` instruction should be the first instruction in the `Dockerfile` and specifies the image from which the current configuration uses as a base.
 
 FROM can be preceded ARG instructions to declare arguments used in the `FROM` instruction.  Comments `#` and [parser directives](https://docs.docker.com/engine/reference/builder/#parser-directives){target=_blank} can also appear before `FROM`
 
 
-## COPY
+### COPY
 
 Copy files from the local directory or from a URL to the Docker images.
 
 !!! INFO "COPY replaces ADD"
     Avoid the use of `ADD` and use `COPY` instead
 
-## WORKDIR
+
+### WORKDIR
 
 Set the directory in the Docker image in which all future commands will run.
 
 Setting `WORKDIR` can simplify `COPY` and `RUN` commands
 
 
-## USER
+### USER
 
-set user account to run all further commands
-
-## RUN
-
-execute any command recongnised within the container
+Set user account to run all further commands
 
 
-## HEALTHCHECK
+### RUN
+
+Execute any command recongnised within the container
+
+
+### HEALTHCHECK
 
 Docker Service heathcheck provides a simple mechanism to report that a service is running.  A health check is a vital configuration to provide for production systems to ensure failing containers are replaced by working containers automatically.
 
@@ -165,7 +167,7 @@ Wait 10 seconds before running the first health check, then try every 5 seconds 
     Avoid defining a health-check in the `compose.yaml` for services that already have an adequate health-check defined in ther `Dockerfile`
 
 
-## ENTRYPOINT
+### ENTRYPOINT
 
 Define the default command to run once the container is started.
 
@@ -184,9 +186,9 @@ The image used to create the final stage from may have a default command, e.g. E
 [:globe_with_meridians: Docker Entrypoint documentation](https://docs.docker.com/engine/reference/builder/#entrypoint){target=_blank .md-button}
 
 
-
-## CMD
+### CMD
 
 The command to run the service within the container, typically paired with ENTRYPOINT
 
 CMD can be supplied on the command line when calling docker to over-ride the CMD defined in the `Dockerfile`, e.g. to help test a Docker image that is not running correctly or run variations of the service such as debug mode.
+
