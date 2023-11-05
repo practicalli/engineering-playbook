@@ -16,16 +16,37 @@ Docker images provide a quick approach to trying services and different operatin
 
     However, if time was invested in creating an image good enough to pass the Docker review, then it has a higher probability of being a useful image that others that are not official.
 
-- [Clojure - official Docker Image](https://hub.docker.com/_/clojure/) - built by the Clojure community, provides tools to build Clojure projects (Clojure CLI, Leiningen)
-- [Eclipse temurin OpenJDK - official Docker image](https://hub.docker.com/_/eclipse-temurin) - built by the [community](https://adoptium.net/) - provides the Java run-time
-- [Amazon Corretto](https://hub.docker.com/_/amazoncorretto) is an OpenJDK distribution by Amazon AWS team, [Amazon Corretto](https://aws.amazon.com/corretto/) can also be installed for the local development environment
-- [Postgres](https://hub.docker.com/_/postgres) open-source object-relational database management system
-- [Redis](https://hub.docker.com/_/redis) open-source, networked, in-memory, key-value data store with optional durability
-- [nginx](https://hub.docker.com/_/nginx) open source reverse proxy & load balancing for HTTP, HTTPS, SMTP, POP3 & IMAP protocols, HTTP cache and a web server
-- [mariadb](https://hub.docker.com/_/mariadb) open source relational database by the original developers of MySQL and is much more efficient
+
+!!! INFO "Common Official Docker images include"
+
+    - [:globe_with_meridians: Alpine Linux](https://hub.docker.com/_/alpine) minimal operating system (musl lib)
+    - [:globe_with_meridians: Debian Linux](https://hub.docker.com/_/debian) or [:globe_with_meridians: Ubuntu Linux](https://hub.docker.com/_/ubuntu) operating system
+    - [:globe_with_meridians: Clojure](https://hub.docker.com/_/clojure/) - built by the Clojure community, provides tools to build Clojure projects (Clojure CLI, Leiningen)
+    - [:globe_with_meridians: OpenJDK - Eclipse temurin](https://hub.docker.com/_/eclipse-temurin) - built by the [community](https://adoptium.net/) - provides the Java run-time
+    - [:globe_with_meridians: OpenJDK - Amazon Corretto](https://hub.docker.com/_/amazoncorretto) is an OpenJDK distribution by Amazon AWS team, [:globe_with_meridians: Amazon Corretto](https://aws.amazon.com/corretto/) can also be installed for the local development environment
+    - [:globe_with_meridians: Postgres](https://hub.docker.com/_/postgres) open-source object-relational database management system
+    - [:globe_with_meridians: Redis](https://hub.docker.com/_/redis) open-source, networked, in-memory, key-value data store with optional durability
+    - [:globe_with_meridians: nginx](https://hub.docker.com/_/nginx) open source reverse proxy & load balancing for HTTP, HTTPS, SMTP, POP3 & IMAP protocols, HTTP cache and a web server
+    - [:globe_with_meridians: mariadb](https://hub.docker.com/_/mariadb) open source relational database by the original developers of MySQL and is much more efficient
 
 
-## Alpine Linux
+## Operating Systems
+
+Operating systems are the base for many other Docker images, providing essential tools required for all software.
+
+Alpine Linux is ultra-minimal operating system.  Debian and Ubuntu Linux are glibc based operating systems which are commonly used.
+
+!!! INFO "Operating System Image Tags"
+
+    | Image tag            | compressed size |
+    | ---                  | ---             |
+    | debian:bookworm-slim | 27.8 MB         |
+    | debian:bookworm      | 47.29 MB        |
+    | alpine:latest        | 3.24 MB         |
+    | ubuntu:latest        | 28.17 MB        |
+
+
+### Alpine Linux
 
 [:globe_with_meridians: Alpine Linux](https://www.alpinelinux.org/) images have a very small footprint and provide the essential tools for running services that do not depend on specific operating system packages.
 
@@ -38,10 +59,34 @@ Alpine uses [musl libc](https://musl.libc.org/) rather than glibc so testing sof
 [Alpine Linux Official Image](https://hub.docker.com/_/alpine){target=_blank .md-button}
 
 
+### Debian Linux
+
+[:globe_with_meridians: Debian Linux](https://www.debian.org/) is a completely free operating system.
+
+`bookworm` is the name for Debian Linux 12, the latest stable release.
+
+Debian Slim image provides a glib based operating system with a relatively minimal size, although not as small as Alpine Linux.
+
+
+!!! EXAMPLE "Debian Linux latest stable image - slim variant"
+    ```Dockerfile
+    FROM debian:bookworm-slim
+    ```
+
+Ubuntu Linux is built from Debian Linux, adding kernel patches, sudo adminstrative access and other enhancements.
+
+[Debian Linux](https://hub.docker.com/_/debian){target=_blank .md-button}
+[Ubuntu](https://hub.docker.com/_/ubuntu){target=_blank .md-button}
+
 
 ## OpenJDK
 
-OpenJDK is the most commonly used run-time environment for Java and JVM languages (Clojure, Kotlin, Gradle, Jython, JRuby, etc.)
+OpenJDK is the most commonly used run-time environment for Java and JVM languages (Clojure, Kotlin, Scala, Gradle, Jython, JRuby, etc.).
+
+A permissive use and distribution license is provided by all OpenJDK image variants.
+
+
+### Eclipse Temurin
 
 [:globe_with_meridians: Eclipse temurin OpenJDK - official Docker image](https://hub.docker.com/_/eclipse-temurin) is built by the [:globe_with_meridians: Java community](https://adoptium.net/) and provides the Java run-time (Java Virtual Machine).  Eclipse Temurin provides all Long Term Support (LTS) versions from Java 8 onward and current intermediate releases.  Variants are available with Alpine Linux and a wide range of system architectures (`amd64`, `arm32v7`, `arm64v8`, `ppc64le`, `s390x`, `windows-amd64`)
 
@@ -53,7 +98,7 @@ OpenJDK is the most commonly used run-time environment for Java and JVM language
 [Amazon Corretto](https://aws.amazon.com/corretto/) can also be installed for the local development environment, providing a consistent run-time between development and production.
 
 
-### Custom JDK Image
+### Custom built image
 
 OpenJDK can be built with a custom set of modules, optomising the size of a container used to run a Java or JVM service
 
@@ -166,13 +211,5 @@ The Clojure image is built from the equivalent Eclipse Temurin image which can b
 [MegaLinter](https://practical.li/engineering-playbook/code-quality/megalinter/#megalinter-configuration) greatly simplifies applying quality 
 
 The MegaLinter image is an example of a docker image that provides a large number of tools which otherwise need to be installed directly on the operating system.
-
-
-## Operating Systems
-
-[Arch Linux](https://hub.docker.com/_/archlinux){target=_blank .md-button}
-[Alpine Linux](https://hub.docker.com/_/alpine){target=_blank .md-button}
-[Debian Linux](https://hub.docker.com/_/debian){target=_blank .md-button}
-[Ubuntu](https://hub.docker.com/_/ubuntu){target=_blank .md-button}
 
 
