@@ -175,6 +175,7 @@ nav:
       - practices/index.md
       - Discussions:
           - practices/discussions/index.md
+          - practices/discussions/rolling-wave-planning.md
           - practices/discussions/one-to-one-meeting.md
           # - practices/discussions/retrospective.md
           - practices/discussions/standup.md
