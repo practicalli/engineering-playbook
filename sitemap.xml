@@ -246,7 +246,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/engineering-playbook/practices/discussions/retrospective/</loc>
+         <lastmod>2023-11-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/rolling-wave-planning/</loc>
+         <lastmod>2023-11-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/practices/discussions/standup/</loc>
          <lastmod>2023-11-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
