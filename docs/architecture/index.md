@@ -12,3 +12,7 @@ Tools and techniques to support design and communication of archiectural decisio
 - [Inkscape](https://inkscape.org/) - open desktop diagram tool using SVG
 
 
+## Diagram as Code
+
+- [Structurizr](structurizr.md) architeture tool using the C4 model approach
+
