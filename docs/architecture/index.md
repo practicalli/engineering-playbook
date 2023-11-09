@@ -5,3 +5,10 @@ Tools and techniques to support design and communication of archiectural decisio
 
 - [:fontawesome-solid-book-open: Architectural Katas](kata/index.md)
 
+## Visual tools
+
+- [ExcaliDraw](https://excalidraw.com/) - online tool to sketch designs and export to SVG or PNG format
+- [Miro](https://miro.com/) - comprehensive online diagram tool with numerous templates
+- [Inkscape](https://inkscape.org/) - open desktop diagram tool using SVG
+
+
