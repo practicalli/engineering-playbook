@@ -131,6 +131,7 @@ nav:
       - Writing Tips: introduction/writing-tips.md
   - Architecture:
       - architecture/index.md
+      - architecture/kata/index.md
       - Structurizr: architecture/structurizr.md
   - Build tool:
       - build-tool/index.md
