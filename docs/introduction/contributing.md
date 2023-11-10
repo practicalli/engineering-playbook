@@ -12,11 +12,27 @@ All content and interaction with any persons or systems must be done so with res
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/engineering-playbook?label=commits&logo=github)](https://img.shields.io/github/commit-activity/y/practicalli/engineering-playbook?label=commits&logo=github){target=_blank}
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/engineering-playbook?label=pull%20requests&logo=github)](https://img.shields.io/github/issues-pr-raw/practicalli/engineering-playbook?label=pull%20requests&logo=github){target=_blank}
 
-[![MegaLinter](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml){target=_blank}
+[![MegaLinter](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml){target=_blank}
 [![Publish Book](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml){target=_blank}
 [![pages-build-deployment](https://github.com/practicalli/engineering-playbook/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/pages/pages-build-deployment){target=_blank}
 
 ![GitHub contributors](https://img.shields.io/github/contributors/practicalli/engineering-playbook?style=for-the-badge&label=github%20contributors)
+
+
+## Book Source code
+
+[practicalli/engineering-playbook repository](https://github.com/practicalli/engineering-playbook){target=_blank} contains the content for this book
+
+=== "HTTPS"
+    ```bash
+    git clone https://github.com/practicalli/engineering-playbook.git
+    ```
+
+=== "SSH"
+    ```bash
+    git clone git@github.com:practicalli/engineering-playbook.git
+    ```
+
 
 ## Submit and issue or idea
 
