@@ -22,21 +22,6 @@ databases, system integration testing, optimising builds in docker.
     Practicalli Engineering Playbook was started in January 2022 in an attempt to codify the last few decades of development experience, so this will be an on-going work
 
 
-## Book Source code
-
-[practicalli/engineering-playbook repository](https://github.com/practicalli/engineering-playbook){target=_blank} contains the content for this book
-
-=== "HTTPS"
-    ```bash
-    git clone https://github.com/practicalli/engineering-playbook.git
-    ```
-
-=== "SSH"
-    ```bash
-    git clone git@github.com:practicalli/engineering-playbook.git
-    ```
-
-
 ## Discussions and feedback
 
 [Contributions are welcome via GitHub issues and pull requests](introduction/contributing.md), or discuss the book on the Clojurians Slack community.
