@@ -133,6 +133,7 @@ nav:
       - architecture/index.md
       - architecture/kata/index.md
       - Structurizr: architecture/structurizr.md
+      - architecture/adr.md
   - Build tool:
       - build-tool/index.md
       - build-tool/make.md
