@@ -2,292 +2,297 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://practical.li/engineering-playbook/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/architecture/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/architecture/adr/</loc>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/architecture/structurizr/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/architecture/kata/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/assets/images/social/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/build-tool/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/build-tool/babashka-task-runner/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/build-tool/make/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/code-quality/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/code-quality/clojure/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/code-quality/megalinter/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/command-line/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/command-line/kitty-terminal/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/clojure-multi-stage-dockerfile/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/compose/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/dockerfile/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/images/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/install/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/desktop/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/desktop/extensions/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/actions/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/common-jobs/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/trigger-events/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/luarocks/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/megalinter/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/practicalli/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/system-catalog/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/introduction/contributing/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/introduction/writing-tips/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/cron/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/debian-linux/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/macosx/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/ubuntu-linux/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/linux/regolith/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/shell/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/shell/bash/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/shell/fish/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/shell/zsh/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/deliberate-practice/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/technical-debt/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/behaviour-driven-development/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/five-whys/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/one-to-one-meeting/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/retrospective/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/rolling-wave-planning/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/standup/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/thinking-hats/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/programming-languages/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/programming-languages/javascript/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/technical-writing/</loc>
-         <lastmod>2023-11-09</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
