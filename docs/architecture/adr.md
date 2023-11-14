@@ -4,6 +4,21 @@ Architecture Decision Record (ADR) is a formal way to capture a significant deci
 
 Everyone can learn from the history of desisions taken during the evolution of the project without adding burden to the current project team.
 
+Once decisions are made and delivered the ADR document should be treated as immutable, so it becomes a perminant record.  Should a decision need to be changed or significantly altered, then a new ADR document should be created that references the orginal ADR.
+
+
+## Scope
+
+Create an ADR for architecturally significant decision that affects the software project or product
+
+- Structure (patterns such as microservices)
+- Non-functional requirements (security, high availability, and fault tolerance)
+- Dependencies (coupling of components)
+- Interfaces (APIs and published contracts)
+- Construction techniques (libraries, frameworks, tools, and processes)
+
+Functional and non-functional requirements are the most common inputs to the ADR process.
+
 
 ## Scenarios
 
@@ -86,11 +101,19 @@ Teams can align on best practices across the organization when ADRs detail why c
     ```
 
 
+## Backfill decisions
+
+Decisions made before ADRs became part of the engineering workflow can be retrospectively created, although they may only be a partial record and contain historical inaccuracies regarding the original decsion.
+
+Identify undocumented decisions during a retrospective or an architectural peer review, deciding which decisions are the most valuable to document. 
 
 
 ## References
 
-
 [:globe_with_meridians: ADR management tools](https://github.com/npryce/adr-tools){target=_blank .md-button}
 
 [:globe_with_meridians: Architectural Decision Records - Amazon](https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/welcome.html){target=_blank .md-button}
+
+[:globe_with_meridians: Example ADR - Amazon](https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/appendix.html){target=_blank .md-button} 
+
+[:fontawesome-brands-github: Architecture Decision Record Examples](https://github.com/joelparkerhenderson/architecture-decision-record){target=_blank .md-button} 

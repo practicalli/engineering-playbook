@@ -5,6 +5,11 @@ Tools and techniques to support design and communication of archiectural decisio
 
 - [:fontawesome-solid-book-open: Architectural Katas](kata/index.md)
 
+## Organising
+
+- [:fontawesome-solid-book-open: Architectural Decision Records](/docs/architecture/adr.md)
+
+
 ## Visual tools
 
 - [ExcaliDraw](https://excalidraw.com/) - online tool to sketch designs and export to SVG or PNG format
