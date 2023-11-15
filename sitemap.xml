@@ -46,6 +46,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/engineering-playbook/careers/</loc>
+         <lastmod>2023-11-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/careers/engineering-manager/</loc>
+         <lastmod>2023-11-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/engineering-playbook/code-quality/</loc>
          <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
