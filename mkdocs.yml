@@ -138,6 +138,9 @@ nav:
       - build-tool/index.md
       - build-tool/make.md
       - build-tool/babashka-task-runner.md
+  - Careers:
+      - careers/index.md
+      - careers/engineering-manager.md
   - Code Quality:
       - code-quality/index.md
       - code-quality/megalinter.md

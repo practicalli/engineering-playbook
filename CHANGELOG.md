@@ -5,6 +5,7 @@
 ### Added
 - github: sparse-checkout action example workflow
 - architecture: kata page first release
+- careers: new section and engineering manager
 
 ### Changed
 - dev: spell lychee & repository trufflehog linters warn only (false positives) 
