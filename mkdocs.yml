@@ -171,6 +171,7 @@ nav:
               - continuous-integration/github/workflows/luarocks.md
   - Culture:
       - culture/index.md
+      - culture/documentation.md
       - culture/leadership.md
   - Documentation:
       - technical-writing/index.md
