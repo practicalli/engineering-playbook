@@ -1,5 +1,7 @@
 # Docker Images
 
+![Docker logo](https://github.com/practicalli/graphic-design/blob/live/topic-images/docker-logo-name.png?raw=true){align=right loading=lazy style="width:240px"}
+
 Docker images provide a quick approach to trying services and different operating systems.  An image can be used as the base for other images.
 
 

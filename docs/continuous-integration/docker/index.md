@@ -1,5 +1,7 @@
 # Docker
 
+![Docker logo](https://github.com/practicalli/graphic-design/blob/live/topic-images/docker-logo-name.png?raw=true){align=right loading=lazy style="width:240px"}
+
 Docker containers an isolated environment for repeatable build & runtime systems.
 
 [:fontawesome-solid-book-open: Dockerfile](dockerfile.md) configuration defines a consistent approach to building the source code of project locally, or within a continuous integration (CI) system.

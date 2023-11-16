@@ -1,5 +1,7 @@
 # Multi-Stage Dockerfile for Clojure
 
+![Docker logo](https://github.com/practicalli/graphic-design/blob/live/topic-images/docker-logo-name.png?raw=true){align=right loading=lazy style="width:240px"}
+
 Building a Clojure project from source to create a docker image provides an effective workflow for local testing and system integration.
 
 A multi-stage Dockerfile is recommended to ensure build tools and artefacts are not included in the final Docker image, helping minimise the size and resources used by that image.

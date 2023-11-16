@@ -1,5 +1,7 @@
 # Docker Desktop
 
+![Docker logo](https://github.com/practicalli/graphic-design/blob/live/topic-images/docker-logo-name.png?raw=true){align=right loading=lazy style="width:240px"}
+
 [Docker Extensions used by Practicalli](desktop-extensions.md){target=_blank .md-button}
 
 ![Docker Desktop - images view](https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-images-light.png?raw=true)

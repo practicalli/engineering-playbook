@@ -1,5 +1,7 @@
 # Install Docker CE and Desktop
 
+![Docker logo](https://github.com/practicalli/graphic-design/blob/live/topic-images/docker-logo-name.png?raw=true){align=right loading=lazy style="width:240px"}
+
 Docker community edition provides the back-end services to run docker images in containers.
 
 Docker Desktop provides a graphical UI for managing images, containers and volumes.

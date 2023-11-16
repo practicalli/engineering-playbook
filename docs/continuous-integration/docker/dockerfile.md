@@ -1,5 +1,7 @@
 # Dockerfile
 
+![Docker logo](https://github.com/practicalli/graphic-design/blob/live/topic-images/docker-logo-name.png?raw=true){align=right loading=lazy style="width:240px"}
+
 A Dockerfile is a declarative configuration that defines how an image is assembled and can use another image to provide much of the configuration, minimising the amount of design and maintenance required.
 
 Each line in the `Dockerfile` configuration creates an overlay, a layer of the image that is applied to create the final image.  Overlays are cached by docker on the first run and if the files or commands the overlays are created from do not change, then the cache is used on consecutive use of the docker image.
