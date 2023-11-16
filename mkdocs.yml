@@ -169,6 +169,8 @@ nav:
               - continuous-integration/github/workflows/index.md
               - continuous-integration/github/workflows/megalinter.md
               - continuous-integration/github/workflows/luarocks.md
+  - Culture:
+      - culture/index.md
   - Documentation:
       - technical-writing/index.md
       # - technical-writing/techniques.md
