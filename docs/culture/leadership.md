@@ -6,7 +6,7 @@ Leadership is about owning the responsibility for the collective actions of a gr
 
 Leaders should be inspirational and motivational, encouraging the people they lead to use and maximise their skills for the benefit of the organisation and themselves.
 
-An effective leader
+An effective leader:
 
 - exudes empathy for others which increases levels of communication and trust
 - has situational awareness and takes an holistic approach to challenges and solutions
@@ -16,6 +16,12 @@ An effective leader
 
 
 An organisation becomes more effective when leaders can take a predominantly [servant-leader approach](#servant-leadership) role, dedicating themselves to those they are responsible for.
+
+
+!!! INFO "Red berries - Leading by example" 
+    Monkeys are afraid to eat red berries until they see another monkey eat them and see that they are safe.
+
+    A leader should do actions and behaviour they wish to see in others as an effective way to encourage those they lead to do the same.
 
 
 ??? WARNING "Anti-pattern: Control"
