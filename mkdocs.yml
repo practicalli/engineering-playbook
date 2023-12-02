@@ -169,6 +169,7 @@ nav:
               - continuous-integration/github/workflows/index.md
               - continuous-integration/github/workflows/megalinter.md
               - continuous-integration/github/workflows/luarocks.md
+              - continuous-integration/github/workflows/practicalli.md
   - Culture:
       - culture/index.md
       - culture/anti-patterns.md
