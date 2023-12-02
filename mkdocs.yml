@@ -170,6 +170,7 @@ nav:
               - continuous-integration/github/workflows/megalinter.md
               - continuous-integration/github/workflows/luarocks.md
               - continuous-integration/github/workflows/practicalli.md
+              - continuous-integration/github/workflows/system-catalog.md
   - Culture:
       - culture/index.md
       - culture/anti-patterns.md
