@@ -175,6 +175,25 @@ Use an existing SSH key to sign commits and tags, or generate a new one specific
 
 Configure Git client to use SSH to sign commits and tags for all local repositories
 
+??? EXAMPLE "Git Configuration SSH Key sigining"
+    ```config
+	## ------ Git Behaviour ------ ##
+    [commit]
+      # Automatically sign every commit
+    	gpgsign = true
+
+    [tag]
+      # Automatically sign every tag
+    	gpgsign = true
+
+    # SSH Key signing 
+    [user]
+    	signingkey = ~/.ssh/id_ed25519.pub
+    [gpg]
+    	format = ssh
+    [gpg "ssh"]
+    	allowedSignersFile = ~/.config/git/allowed-signatures
+```
 
 Configure SSH key as signing format
 
