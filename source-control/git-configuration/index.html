@@ -2766,6 +2766,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Git identity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-git-identities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Git Identities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2778,9 +2793,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-ssh-key-to-keyring" class="md-nav__link">
+  <a href="#add-ssh-key-to-keychain" class="md-nav__link">
     <span class="md-ellipsis">
-      Add SSH key to Keyring
+      Add SSH key to Keychain
     </span>
   </a>
   
@@ -2877,6 +2892,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Git identity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-git-identities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Git Identities
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2889,9 +2919,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#add-ssh-key-to-keyring" class="md-nav__link">
+  <a href="#add-ssh-key-to-keychain" class="md-nav__link">
     <span class="md-ellipsis">
-      Add SSH key to Keyring
+      Add SSH key to Keychain
     </span>
   </a>
   
@@ -3011,9 +3041,8 @@
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nv">helper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>osxkeychain
 </code></pre></div>
 </details>
-<details class="example">
-<summary>Multiple Git Identities</summary>
-<p>Configure the Git client with multiple identities when working on a mixture of commercial projects and Open Source projects</p>
+<h3 id="multiple-git-identities">Multiple Git Identities<a class="headerlink" href="#multiple-git-identities" title="Permanent link">λ︎</a></h3>
+<p>When working on a mixture of commercial and Open Source projects, configure the Git client with multiple identities </p>
 <div class="admonition example">
 <p class="admonition-title">Git Clone alias</p>
 <div class="highlight"><span class="filename">.config/git/identity-clojure-inc</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">## ------ Git Config: Identity ------ ##</span>
@@ -3027,13 +3056,13 @@
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>~/.config/git/identity-clojure-inc
 </code></pre></div>
 </div>
-<div class="admonition info">
-<p class="admonition-title">MacOSX Path expansion not working</p>
+<details class="info">
+<summary>MacOSX Path expansion not working</summary>
 <p>MacOSX did not expand ~ or $HOME for relative paths for identity files when using the latest MacOSX version and Git client from homebrew.</p>
-</div>
+</details>
 <p>Included configure file with company identity.</p>
-<div class="admonition example">
-<p class="admonition-title">Git Clone alias</p>
+<details class="example">
+<summary>Git Clone alias</summary>
 <div class="highlight"><span class="filename">.config/git/identity-clojure-inc</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">## ------ Company Identity ------ ##</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># Add details for specific company identity</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
@@ -3052,7 +3081,6 @@
 <a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="o">[</span>credential<span class="o">]</span>
 <a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="nv">helper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>osxkeychain
 </code></pre></div>
-</div>
 </details>
 <h2 id="ssh-key">SSH Key<a class="headerlink" href="#ssh-key" title="Permanent link">λ︎</a></h2>
 <p>Use an SSH key for secure access to a remote Git repository. The SSH key removes the need to enter GitHub credentials each time a command is used that accesses a remote repository (push, pull, clone, etc.).</p>
@@ -3075,23 +3103,14 @@
 <summary>Use the GitHub Email Mask address</summary>
 <p>Minimise Email spam by using the <a href="https://github.com/settings/emails">email address provided by GitHub as a mask to your primary email address</a> on the GitHub account.  The mask address is of the form <code>***+github-account@noreply.github.com</code>.</p>
 </details>
-<h2 id="add-ssh-key-to-keyring">Add SSH key to Keyring<a class="headerlink" href="#add-ssh-key-to-keyring" title="Permanent link">λ︎</a></h2>
-<p>Add Git SSH key passphrase to Operating System key ring to avoid typing in the passphrase each time a Git command interacts with a remote repository.</p>
-<p>Edit the <code>~/.ssh/config</code> file and add/modify to include the following configuration</p>
-<div class="admonition example">
-<p class="admonition-title">SSH key Key Chain Git Configuration</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Host<span class="w"> </span>github.com
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span>AddKeysToAgent<span class="w"> </span>yes
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span>UseKeychain<span class="w"> </span>yes
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span>IdentityFile<span class="w"> </span>~/.ssh/id_ed25519
-</code></pre></div>
-</div>
+<h2 id="add-ssh-key-to-keychain">Add SSH key to Keychain<a class="headerlink" href="#add-ssh-key-to-keychain" title="Permanent link">λ︎</a></h2>
+<p>Add Git SSH key passphrase to Operating System keychain to avoid typing in the passphrase each time a Git command interacts with a remote repository.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">MacOSX</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=linux">Add the SSH private key to the ssh-agent</a> to avoid typing in the passphrase each time.  Logging into the operating system with the user account will unlock the key ring and enable access to the passphrase.</p>
 <div class="admonition note">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ssh-add<span class="w"> </span>~/.ssh/id_ed25519
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ssh-add<span class="w"> </span>~/.ssh/id_ed25519
 </code></pre></div>
 </div>
 <blockquote>
@@ -3101,7 +3120,16 @@
 <div class="tabbed-block">
 <p><a class="md-button" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent" target="_blank">Add SSH key passphrase to MacOSX Keychain</a></p>
 <div class="admonition note">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ssh-add<span class="w"> </span>--apple-use-keychain<span class="w"> </span>~/.ssh/id_ed25519
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ssh-add<span class="w"> </span>--apple-use-keychain<span class="w"> </span>~/.ssh/id_ed25519
+</code></pre></div>
+</div>
+<p>Edit the <code>~/.ssh/config</code> file and add/modify to include the following configuration</p>
+<div class="admonition example">
+<p class="admonition-title">SSH key Key Chain Git Configuration</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Host<span class="w"> </span>github.com
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span>AddKeysToAgent<span class="w"> </span>yes
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span>UseKeychain<span class="w"> </span>yes
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span>IdentityFile<span class="w"> </span>~/.ssh/id_ed25519
 </code></pre></div>
 </div>
 <p>If there is an issue with the passphrase, delete the key passphrase using the MacOSX Keychain Access App.  Select <code>Local Items</code> to see a list of keys that includes the SSH key.  Select the key to show a menu that allows deletion.</p>
@@ -3180,7 +3208,7 @@ e.g <code>git clone p:clojure-cli-config</code> rather than <code>git clone git@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 23, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 26, 2023</span>
   </span>
 
     
