@@ -53,49 +53,48 @@ The `[user]` section of the Git configuration file is updated by these commands,
         helper = osxkeychain
     ```
 
-??? EXAMPLE "Multiple Git Identities"
-    Configure the Git client with multiple identities when working on a mixture of commercial projects and Open Source projects
+### Multiple Git Identities
 
-    !!! EXAMPLE "Git Clone alias"
-        ```shell title=".config/git/identity-clojure-inc"
-        ## ------ Git Config: Identity ------ ##
+When working on a mixture of commercial and Open Source projects, configure the Git client with multiple identities 
 
-        # Default identity configuration
-        [include]
-        		path = ~/.config/git/identity-practicalli-johnny
+!!! EXAMPLE "Git Clone alias"
+    ```shell title=".config/git/identity-clojure-inc"
+    ## ------ Git Config: Identity ------ ##
 
-        # Override identify for specific directories
-        [includeIf "gitdir:~/projects/identity-clojure-inc"]
-        		path = ~/.config/git/identity-clojure-inc
-        ```
+    # Default identity configuration
+    [include]
+    		path = ~/.config/git/identity-practicalli-johnny
 
-    !!! INFO "MacOSX Path expansion not working"
-        MacOSX did not expand ~ or $HOME for relative paths for identity files when using the latest MacOSX version and Git client from homebrew.
+    # Override identify for specific directories
+    [includeIf "gitdir:~/projects/identity-clojure-inc"]
+    		path = ~/.config/git/identity-clojure-inc
+    ```
 
+??? INFO "MacOSX Path expansion not working"
+    MacOSX did not expand ~ or $HOME for relative paths for identity files when using the latest MacOSX version and Git client from homebrew.
 
-    Included configure file with company identity.
+Included configure file with company identity.
 
+??? EXAMPLE "Git Clone alias"
+    ```shell title=".config/git/identity-clojure-inc"
+    ## ------ Company Identity ------ ##
+    # Add details for specific company identity
 
-    !!! EXAMPLE "Git Clone alias"
-        ```shell title=".config/git/identity-clojure-inc"
-        ## ------ Company Identity ------ ##
-        # Add details for specific company identity
+    # Add identity to all commits (required for GitHub / GitLab)
+    [user]
+    	name = Practicalli Johnny
 
-        # Add identity to all commits (required for GitHub / GitLab)
-        [user]
-        	name = Practicalli Johnny
+        # add email to Personal GitHub account via Settings > Email
+    	email = "johnny@clojure.inc"
 
-            # add email to Personal GitHub account via Settings > Email
-        	email = "johnny@clojure.inc"
+    ## Identity for using GitHub API
+    [github]
+    	user = practicalli-johnny
 
-        ## Identity for using GitHub API
-        [github]
-        	user = practicalli-johnny
-
-        ## SSH Keys - add key passphrase to MacOSX key chain
-        [credential]
-            helper = osxkeychain
-        ```
+    ## SSH Keys - add key passphrase to MacOSX key chain
+    [credential]
+        helper = osxkeychain
+    ```
 
 
 ## SSH Key
@@ -128,19 +127,9 @@ Enter a passphrase.  A 12 character or greater passphrase should provide adequat
     Minimise Email spam by using the [email address provided by GitHub as a mask to your primary email address](https://github.com/settings/emails) on the GitHub account.  The mask address is of the form `***+github-account@noreply.github.com`.
 
 
-## Add SSH key to Keyring
+## Add SSH key to Keychain
 
-Add Git SSH key passphrase to Operating System key ring to avoid typing in the passphrase each time a Git command interacts with a remote repository.
-
-Edit the `~/.ssh/config` file and add/modify to include the following configuration
-
-!!! EXAMPLE "SSH key Key Chain Git Configuration"
-    ```shell
-    Host github.com
-      AddKeysToAgent yes
-      UseKeychain yes
-      IdentityFile ~/.ssh/id_ed25519
-    ```
+Add Git SSH key passphrase to Operating System keychain to avoid typing in the passphrase each time a Git command interacts with a remote repository.
 
 === "Linux"
 
@@ -161,6 +150,16 @@ Edit the `~/.ssh/config` file and add/modify to include the following configurat
     !!! NOTE ""
         ```shell
         ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+        ```
+
+    Edit the `~/.ssh/config` file and add/modify to include the following configuration
+
+    !!! EXAMPLE "SSH key Key Chain Git Configuration"
+        ```shell
+        Host github.com
+          AddKeysToAgent yes
+          UseKeychain yes
+          IdentityFile ~/.ssh/id_ed25519
         ```
 
     If there is an issue with the passphrase, delete the key passphrase using the MacOSX Keychain Access App.  Select `Local Items` to see a list of keys that includes the SSH key.  Select the key to show a menu that allows deletion.
