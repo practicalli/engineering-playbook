@@ -2808,36 +2808,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Commit signing with SSH Key">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#allowed-ssh-keys" class="md-nav__link">
-    <span class="md-ellipsis">
-      Allowed SSH keys
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#clone-aliases-for-a-github-domain" class="md-nav__link">
+  <a href="#-git-behaviour-" class="md-nav__link">
     <span class="md-ellipsis">
-      Clone aliases for a GitHub domain
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diff-3-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diff 3 Support
+      ------ Git Behaviour ------
     </span>
   </a>
   
@@ -2934,36 +2910,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Commit signing with SSH Key">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#allowed-ssh-keys" class="md-nav__link">
-    <span class="md-ellipsis">
-      Allowed SSH keys
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#clone-aliases-for-a-github-domain" class="md-nav__link">
+  <a href="#-git-behaviour-" class="md-nav__link">
     <span class="md-ellipsis">
-      Clone aliases for a GitHub domain
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#diff-3-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Diff 3 Support
+      ------ Git Behaviour ------
     </span>
   </a>
   
@@ -3141,6 +3093,25 @@
 <p>The SSH key can be registered with your GitHub account as a signing key, as opposed to an authorization key used to access a remote repository securely.</p>
 <p>Use an existing SSH key to sign commits and tags, or generate a new one specifically for signing.</p>
 <p>Configure Git client to use SSH to sign commits and tags for all local repositories</p>
+<details class="example">
+<summary>Git Configuration SSH Key sigining</summary>
+<p>```config</p>
+<h2 id="-git-behaviour-">------ Git Behaviour ------<a class="headerlink" href="#-git-behaviour-" title="Permanent link">λ︎</a></h2>
+<p>[commit]
+  # Automatically sign every commit
+    gpgsign = true</p>
+<p>[tag]
+  # Automatically sign every tag
+    gpgsign = true</p>
+<h1 id="ssh-key-signing">SSH Key signing<a class="headerlink" href="#ssh-key-signing" title="Permanent link">λ︎</a></h1>
+<p>[user]
+    signingkey = ~/.ssh/id_ed25519.pub
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    allowedSignersFile = ~/.config/git/allowed-signatures</p>
+</details>
+<p>```</p>
 <p>Configure SSH key as signing format</p>
 <div class="admonition note">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>gpg.format<span class="w"> </span>ssh
