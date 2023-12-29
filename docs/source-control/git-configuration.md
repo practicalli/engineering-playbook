@@ -1,9 +1,8 @@
 # Git Client Configuration
 
-Git uses either `XDG_CONFIG_HOME/git/config` or `$HOME/.gitconfig` configuration file for user level settings.
+Git uses either `XDG_CONFIG_HOME/git/config` or `$HOME/.gitconfig` configuration file for user level settings for the Git client.
 
-An identity is required when sharing commits via services such as GitHub/GitLab and so that each commit you make is associated to you.
-
+Editor Git support should use the Git client configuration.
 
 ??? HINT "Practicalli Dotfiles Git Configuration"
     [:fontawesome-brands-github: Practicalli Dotfiles](https://github.com/practicalli/dotfiles) contains an example Git user configuration, with separate identity configuration files for commercial and open source work.
@@ -13,7 +12,9 @@ An identity is required when sharing commits via services such as GitHub/GitLab 
     [practicalli/dotfiles Git config files](https://github.com/practicalli/dotfiles){target=_blank .md-button}
 
 
-## Git identity 
+## Git identity
+
+An identity is required when sharing commits via services such as GitHub/GitLab and so that each commit you make is associated to you.
 
 Define your git identity using the following commands in a terminal window
 
@@ -193,7 +194,7 @@ Configure Git client to use SSH to sign commits and tags for all local repositor
     	format = ssh
     [gpg "ssh"]
     	allowedSignersFile = ~/.config/git/allowed-signatures
-```
+    ```
 
 Configure SSH key as signing format
 
