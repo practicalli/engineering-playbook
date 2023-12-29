@@ -3187,6 +3187,11 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>config<span class="w"> </span>gpg.ssh.allowedSignersFile<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.config/git/allowed-signatures&quot;</span>
 </code></pre></div>
 </div>
+<details class="hint">
+<summary>SSH keys on multiple machines</summary>
+<p>When using different SSH keys across multiple computers, add all public keys to the <code>allowed-signatures</code> file.</p>
+<p>Use a secret GitHub gist if you do not wish to add public keys to a shared git repository for the Git configuration.</p>
+</details>
 <h2 id="clone-aliases-for-a-github-domain">Clone aliases for a GitHub domain<a class="headerlink" href="#clone-aliases-for-a-github-domain" title="Permanent link">λ︎</a></h2>
 <p>Define a short-cut alias to simplify the URL argument for the repository when using the Git clone command, 
 e.g <code>git clone p:clojure-cli-config</code> rather than <code>git clone git@github.com:practicalli/clojure-cli-config</code></p>
