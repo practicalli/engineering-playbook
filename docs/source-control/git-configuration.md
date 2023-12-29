@@ -233,6 +233,11 @@ Set the `gpg.ssh.allowedSignersFile` file in the Git Configuration
     git config gpg.ssh.allowedSignersFile "$HOME/.config/git/allowed-signatures"
     ```
 
+??? HINT "SSH keys on multiple machines"
+    When using different SSH keys across multiple computers, add all public keys to the `allowed-signatures` file.
+
+    Use a secret GitHub gist if you do not wish to add public keys to a shared git repository for the Git configuration.
+
 
 ## Clone aliases for a GitHub domain
 
