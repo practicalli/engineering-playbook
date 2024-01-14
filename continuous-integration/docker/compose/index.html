@@ -2969,7 +2969,7 @@
 
 
 <h1 id="compose">Compose<a class="headerlink" href="#compose" title="Permanent link">λ︎</a></h1>
-<p><a class="glightbox" href="https://www.unixmen.com/wp-content/uploads/2017/06/docker-compose-logo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="right" alt="Docker Compose octopus" loading="lazy" src="https://www.unixmen.com/wp-content/uploads/2017/06/docker-compose-logo.png" style="width:150px" /></a></p>
+<p><a class="glightbox" href="https://www.unixmen.com/wp-content/uploads/2017/06/docker-compose-logo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Docker Compose octopus" loading="lazy" src="https://www.unixmen.com/wp-content/uploads/2017/06/docker-compose-logo.png" style="width:150px" /></a></p>
 <p>Docker Compose provides a declarative configuration for orchestrating multiple services locally. </p>
 <p>Compose can build images for Clojure projects using a <code>Dockerfile</code> and conditionally run services based on the health check of other supporting services, e.g. Clojure service runs once Postgres Database service is healthy.</p>
 <p>Each service can define a heart beat used as a conditional startup for other services which depend upon them.</p>
@@ -3025,7 +3025,7 @@
 <li><code>build: context:</code> defines the location of the <code>Dockerfile</code> to use, either a local file or a Git repository URL</li>
 <li><code>ports:</code> defines the host:container mapping for the service port.  <code>8080:8000</code> value would map the service running within the container on <code>8000</code> to the host (e.g. engineers' computer) on port 8080.</li>
 </ul>
-<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-in-progress-light.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Docker Compose build process - Clojure project with tools.build" src="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-in-progress-light.png?raw=true" /></a></p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-in-progress-light.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Docker Compose build process - Clojure project with tools.build" src="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-in-progress-light.png?raw=true" /></a></p>
 <blockquote>
 <p>Use <a href="https://practical.li/engineering-playbook/continuous-integration/docker/clojure-multi-stage-dockerfile/">a multi-stage <code>Dockerfile</code></a> to provide greater opportunity to create image overlays for the build stage which can be cached, e.g. downloading project dependencies, speeding up the build process on consecutive runs.</p>
 </blockquote>
@@ -3071,7 +3071,7 @@
 <p>On the initial run the Clojure project may take longer to run that starting the Postgres database, in which case the Clojure uberjar will run straight away.</p>
 <p>On consecutive runs, at least part of the Clojure build process should be cached and images for all the services will have been downloaded and cached.  The Clojure uberjar may wait for the Postgres database to start up.</p>
 <p>Each service can define a health check that can be used as a conditional startup trigger and ensure all services start in a meaningful order.</p>
-<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-buld-clojure-run-postgres-healthy-attaching-light.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Docker Compose startup - Clojure build and Postgres database - attache to database" src="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-buld-clojure-run-postgres-healthy-attaching-light.png?raw=true" /></a></p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-buld-clojure-run-postgres-healthy-attaching-light.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Docker Compose startup - Clojure build and Postgres database - attache to database" src="https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-buld-clojure-run-postgres-healthy-attaching-light.png?raw=true" /></a></p>
 <h3 id="build-on-change">Build on Change<a class="headerlink" href="#build-on-change" title="Permanent link">λ︎</a></h3>
 <p>Docker provides <a href="https://docs.docker.com/compose/file-watch/"><code>watch</code></a> as an experimental feature which can rebuild the Clojure service when a file change is detected.</p>
 <p>The watch approach seems most useful for Clojure projects when troubleshooting issues that occur during system integration testing.</p>

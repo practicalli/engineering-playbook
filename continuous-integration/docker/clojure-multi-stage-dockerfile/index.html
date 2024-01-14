@@ -3077,15 +3077,15 @@
 
 
 <h1 id="multi-stage-dockerfile-for-clojure">Multi-Stage Dockerfile for Clojure<a class="headerlink" href="#multi-stage-dockerfile-for-clojure" title="Permanent link">λ︎</a></h1>
-<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/topic-images/docker-logo-name.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img align="right" alt="Docker logo" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/topic-images/docker-logo-name.png?raw=true" style="width:240px" /></a></p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/topic-images/docker-logo-name.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Docker logo" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/topic-images/docker-logo-name.png?raw=true" style="width:240px" /></a></p>
 <p>Building a Clojure project from source to create a docker image provides an effective workflow for local testing and system integration.</p>
 <p>A multi-stage Dockerfile is recommended to ensure build tools and artefacts are not included in the final Docker image, helping minimise the size and resources used by that image.</p>
 <details class="hint">
 <summary>Practicalli Project Templates provide Multi-stage Dockerfile</summary>
-<p><a href="https://practical.li/clojure/clojure-cli/projects/templates/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practialli Project Templates</a> provides <code>Dockerfile</code>, <code>.dockerignore</code> and <code>compose.yaml</code> configurations to optimise the build and run of Clojure projects.
+<p><a href="https://practical.li/clojure/clojure-cli/projects/templates/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practialli Project Templates</a> provides <code>Dockerfile</code>, <code>.dockerignore</code> and <code>compose.yaml</code> configurations to optimise the build and run of Clojure projects.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>clojure<span class="w"> </span>-T:project/create<span class="w"> </span>:template<span class="w"> </span>practicalli/service<span class="w"> </span>:name<span class="w"> </span>practicalli/gameboard
 </code></pre></div>
-Practicalli Project Templates are included in the <a href="https://practical.li/clojure/clojure-cli/practicalli-config/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practicalli Clojure CLI Config</a> which provides aliases for running community tools to support a wide range of development tasks.</p>
+Practicalli Project Templates are included in the <a href="https://practical.li/clojure/clojure-cli/practicalli-config/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Practicalli Clojure CLI Config</a> which provides aliases for running community tools to support a wide range of development tasks.</p>
 </details>
 <details class="warning">
 <summary>Updating to Java 21 Long Term Support release</summary>
@@ -3372,7 +3372,7 @@ Practicalli Project Templates are included in the <a href="https://practical.li/
 </code></pre></div>
 </div>
 <p>After the first time building the docker image, any parts of the build that havent changed will use their respective cached layers in the builder stage.  This can lead to very fast, even zero time builds.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/docker-compose-build-output-cached-layers.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Docker build image optomised to use docker layer cache for build stage" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/docker-compose-build-output-cached-layers.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/docker-compose-build-output-cached-layers.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Docker build image optomised to use docker layer cache for build stage" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/docker-compose-build-output-cached-layers.png" /></a></p>
 <div class="admonition hint">
 <p class="admonition-title">Maximise use of Docker cache</p>
 <p>Maximising the docker cache by careful consideration of command order and design in a <code>Dockerfile</code> can have a significant positive affect on build speed.</p>
