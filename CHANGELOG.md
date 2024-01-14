@@ -10,3 +10,4 @@
 ### Changed
 - dev: spell lychee & repository trufflehog linters warn only (false positives) 
 - mkdocs: update emoji extension for Material 9.4 version
+- kitty: install script and configuration

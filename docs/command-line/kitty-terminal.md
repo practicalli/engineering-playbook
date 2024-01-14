@@ -7,8 +7,42 @@
 
 ## Install
 
+Use the installer script to install in `~/.local/kitty.app on Linux` and `/Applications/kitty.app` on macOS.
 
-=== "Ubuntu/Debian"
+!!! NOTE "Install script for Linux & MacOSX"
+    ```shell
+    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin \
+     dest=~/.local/apps/kitty/kitty-<version>
+    ```
+
+Add kitty and kitten to the operating system path by creating symbolic links 
+
+!!! NOTE "Install script for Linux & MacOSX"
+    ```shell
+    ln -sf ~/.local/apps/kitty/kitty-<version>/bin/kitty \
+    ~/.local/apps/kitty/kitty-<version>/bin/kitten \
+    ~/.local/bin/
+    ```
+
+Include kitty in desktop launchers using the kitty.desktop file
+
+!!! NOTE "Symbolic link for Kitty desktop application"
+    ```shell
+    ln -s ~/.local/apps/kitty/kitty-<version>/share/applications/kitty.desktop \
+    ~/.local/share/applications/kitty.desktop
+    ```
+
+Open text files and images in kitty via the file manager 
+
+!!! NOTE "Symbolic link for Kitty file manager support"
+    ```shell
+    ln -s ~/.local/apps/kitty/kitty-<version>/share/applications/kitty-open.desktop \
+    ~/.local/share/applications/kitty-open.desktop
+    ```
+
+Alternatively, download from [GitHub releases](https://github.com/kovidgoyal/kitty/releases){target=_blank} or use one of the package managers for your operating system.
+
+=== "Debian Packages"
 
     ```shell
     sudo apt install kitty
@@ -25,6 +59,73 @@ Copy the installed configuration to make personal changes, or start a new config
 ```shell
 cp /usr/share/doc/kitty/examples/kitty.conf ~/.config/kitty/
 ```
+
+## Configuration
+
+Practicalli recommends the following configuration for Kitty terminal across multiple operating systems
+
+??? EXAMPLE "Practicalli Kitty configuration" 
+
+
+    ```shell title="~/.config/kitty/kitty.conf"
+    # ---------------------------------------------------------
+    # Practicalli Kitty terminal theme
+    #
+    # Configuration using GitHub theme with light and dark options
+    # using FiraCode font and NerdFont symbol mappings for icon support
+    # for powerline10k and web-devicons in Neovim
+    # ---------------------------------------------------------
+
+    # ---------------------------------------------------------
+    # Colorscheme / Icons
+
+    # Icons from NerdFont (install Nerdfont symbols only theme)
+    include ./nerdfont-icons.conf
+
+    # `kitty +kitten theme` to browse available themes and apply one
+    # `kitty +kitten theme theme-name` to change themes automatically
+    # Favorite themese include:
+    # Catppuccin-Latte and Catppuccin-Mocha
+    # GitHub Light and GitHub Dark
+
+    # BEGIN_KITTY_THEME
+    # GitHub Dark
+    include current-theme.conf
+    # END_KITTY_THEME
+    # ---------------------------------------------------------
+
+    # ---------------------------------------------------------
+    # Feedback
+    enable_audio_bell no
+    # visual_bell_color none
+    # ---------------------------------------------------------
+
+    # ---------------------------------------------------------
+    # Tab styles
+    # fade slant separator powerline custom hidden
+    tab_bar_style powerline
+    tab_bar_align left
+    tab_powerline_style angled
+    # ---------------------------------------------------------
+
+    # ---------------------------------------------------------
+    # Fonts
+    font_family FiraCode
+
+    # Patched fonts (not recommended for Kitty)
+    # font_family MesloLGS NF
+    # font_family Fira Code NF
+
+    # bold_font        auto
+    # italic_font      auto
+    # bold_italic_font auto
+    font_size 14
+
+    # adjust_line_height  0
+    # adjust_column_width 0
+    # adjust_baseline 0
+    # ---------------------------------------------------------
+    ```
 
 
 ## Fonts
@@ -217,67 +318,19 @@ The `+kitten` option ensures the remote environment is configured correctly for 
 kitty +kitten ssh hostname
 ```
 
+## Image viewer
 
-## Example configuration
 
-Practicalli uses the following configuration for Kitty terminal across multiple operating systems
+!!! NOTE "View images with "
+    ```shell
+    kitty +kitten icat /path/to/image
+    ```
 
-```shell title="~/.config/kitty/kitty.conf"
-# ---------------------------------------------------------
-# Practicalli Kitty terminal theme
-#
-# Configuration using GitHub theme with light and dark options
-# using FiraCode font and NerdFont symbol mappings for icon support
-# for powerline10k and web-devicons in Neovim
-# ---------------------------------------------------------
+create an alias in your shell configuration file, e.g. `shell-aliases`
 
-# ---------------------------------------------------------
-# Colorscheme / Icons
+!!! NOTE "View images with "
+    ```shell
+    alias icat="kitten icat"
+    ```
 
-# Icons from NerdFont (install Nerdfont symbols only theme)
-include ./nerdfont-icons.conf
-
-# `kitty +kitten theme` to browse available themes and apply one
-# `kitty +kitten theme theme-name` to change themes automatically
-# Favorite themese include:
-# Catppuccin-Latte and Catppuccin-Mocha
-# GitHub Light and GitHub Dark
-
-# BEGIN_KITTY_THEME
-# GitHub Dark
-include current-theme.conf
-# END_KITTY_THEME
-# ---------------------------------------------------------
-
-# ---------------------------------------------------------
-# Feedback
-enable_audio_bell no
-# visual_bell_color none
-# ---------------------------------------------------------
-
-# ---------------------------------------------------------
-# Tab styles
-# fade slant separator powerline custom hidden
-tab_bar_style powerline
-tab_bar_align left
-tab_powerline_style angled
-# ---------------------------------------------------------
-
-# ---------------------------------------------------------
-# Fonts
-font_family FiraCode
-
-# Patched fonts (not recommended for Kitty)
-# font_family MesloLGS NF
-# font_family Fira Code NF
-
-# bold_font        auto
-# italic_font      auto
-# bold_italic_font auto
-font_size 14
-
-# adjust_line_height  0
-# adjust_column_width 0
-# adjust_baseline 0
-# ---------------------------------------------------------
-```
+[Kitty kitten icat](https://sw.kovidgoyal.net/kitty/kittens/icat/){target=_blank .md-button} 
