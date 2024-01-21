@@ -1870,6 +1870,8 @@
       
         
       
+        
+      
     
     
     
@@ -2193,15 +2195,99 @@
   
   
     <li class="md-nav__item">
-      <a href="../../practices/deliberate-practice/" class="md-nav__link">
+      <a href="../../practices/deliberate-practice.md" class="md-nav__link">
         
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../practices/deliberate-practice/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Deliberate Practice
   </span>
   
 
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10_6" id="__nav_10_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_6">
+            <span class="md-nav__icon md-icon"></span>
+            Deliberate Practice
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practices/deliberate-practice/code-kata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code Kata
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2954,9 +3040,16 @@
 <p>If something doesnt seem quite right or something is missing from the book, please <a href="https://github.com/practicalli/clojure/issues" target="_blank">raise an issue via the GitHub repository</a> explaining in as much detail as you can.</p>
 <p><strong>Raising an issue before creating a pull request will save you and the maintainer time</strong>.</p>
 <h2 id="considering-a-pull-request">Considering a Pull request?<a class="headerlink" href="#considering-a-pull-request" title="Permanent link">λ︎</a></h2>
-<p>Before investing any time in a pull request, please raise an issue explaining the situation.  This can save you and the maintainer time and avoid rejected pull requests.</p>
+<div class="admonition info">
+<p class="admonition-title">Pull Request Commits must be cryptographically signed</p>
+<p>All commits contributed to Practicalli must be signed via a legitimate SSH or GPG key to avoid the risk of commit spoofing.</p>
+<p><a class="md-button" href="https://practical.li/engineering-playbook/source-control/git-configuration/#commit-signing-with-ssh-key" target="_blank">Configure commit signing with SSH key - Practicalli Engineering</a></p>
+</div>
+<p>All pull requests must include an entry in CHANGELOG.md or will not be merged.  A changelog entry allows the community to follow the changes to the book.</p>
+<p>Each pull request will have a number of CI workflows run against the contribution, checking the format of the content and if a changelog entry has been provided.</p>
 <p>Please keep pull requests small and focused, as they are much quicker to review and easier to accept.  Ideally PR's should be for a specific page or at most a section.</p>
-<p>A PR with a list of changes across different sections will not be merged, it will be reviewed eventually though.</p>
+<p>A PR with a list of changes across different sections will be closed without merging as these take considerable time to review.</p>
+<p>Issues such as grammar improvements are typically a sign of a rushed section that requires a rewrite, so a pull request to fix a typeographic error will probably not be merged.  Raise an issue, or post a thread in the <a href="https://clojurians.slack.com/messages/practicalli"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Clojurians Slack #practicall channel</a></p>
 <h2 id="thank-you-to-everyone-that-has-contributed">Thank you to everyone that has contributed<a class="headerlink" href="#thank-you-to-everyone-that-has-contributed" title="Permanent link">λ︎</a></h2>
 <p>A huge thank you to Rich Hickey and the team at Cognitect for creating and continually guiding the Clojure language.  Special thank you to Alex Miller who has provided excellent advice on working with Clojure and the CLI tooling.</p>
 <p>The Clojure community has been highly supportive of everyone using Clojure and I'd like to thank everyone for the feedback and contributions.  I would also like to thank everyone that has joined in with the <a href="https://www.meetup.com/London-Clojurians/" target="_blank">London Clojurins community</a>, <a href="https://clojurebridgelondon.github.io/" target="_blank">ClojureBridgeLondon</a>, <a href="http://clojurians.net/" target="_blank">Clojurians Slack community</a>, <a href="https://clojurians.zulipchat.com/" target="_blank">Clojurians Zulip</a> community and <a href="https://clojureverse.org/" target="_blank">Clojureverse community</a>.</p>
@@ -2983,7 +3076,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 10, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2024</span>
   </span>
 
     

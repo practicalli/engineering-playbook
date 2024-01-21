@@ -256,17 +256,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://practical.li/engineering-playbook/practices/deliberate-practice/</loc>
-         <lastmod>2024-01-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://practical.li/engineering-playbook/practices/technical-debt/</loc>
          <lastmod>2024-01-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/behaviour-driven-development/</loc>
+         <lastmod>2024-01-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/practices/deliberate-practice/</loc>
+         <lastmod>2024-01-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/practices/deliberate-practice/code-kata/</loc>
          <lastmod>2024-01-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
