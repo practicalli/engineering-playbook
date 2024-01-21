@@ -1,17 +1,31 @@
-# Version Control
+# Source Control
 
-Managing code changes is an important part of maintaining a usable code base and is the first step to having a robust development environment.
+Managing code changes is an important part of maintaining a usable code base and is an essential step to having a robust development workflow.
 
-Versioning your code allows you to track all the changes that happen over the life of your software, giving you a useful audit trail of how your code has evolved as well as allowing you go back in history to earlier versions.
+Versioning code tracks all the changes over the life of a project, providing an audit trail of change.
 
-Projects are managed in a repository which provides
+## Git
 
-* An authoritative place to refer to all your project assets
-* A complete history of the changes that happened during the project
-* Ability to branch off and try alternative approaches / code solutions without polluting the main project (eg. sprints, experimental functionality)
-* Collective ownership of the code as all developers take responsibility for the project assets
+Git is the defacto tool to manage code and other text artifacts of a project.
 
-A repository can be central or decentralised
+Git uses a distributed model for sharing changes which also encourages branching to support easily experimenting with changes.
+
+
+## GitHub and GitLab
+
+Code sharing services support Git and also add pull requests to enable people to contribute to projects they are not maintainers for.  This is especially useful for open source projects, allowing the community to contribute.
+
+
+!!! INFO "Emoji guide for commit messages and pull requests"
+    [gitmoji](https://gitmoji.dev/) provides an interactive search for emoji that can be used with Git commit messages and pull request descriptions & templates
+
+    [emojipedia](https://emojipedia.org/github) provides a wider support for emoji across multiple services
+
+
+
+!!! HINT "Collective Ownership of Code"
+    The distributed nature of Git supports and encourages collective ownership of the project code, as all developers take responsibility for the project assets
+
 
 
 ## Access remote repositories
@@ -34,44 +48,6 @@ Binary files such as images and logos should also be versioned, even though you 
 It is important to also version your build files (build.xml, myproject.pom) so that you always have the correct script versions to build, test and deploy your project.  If all your assets are in the version control system, it make it very easy to set up and maintain a continuous integration server.
 
 Compiled assets such as JavaDoc output, class files, jar and war files are not usually stored in the version control system as these can be generated.  This avoids duplication of information and ensures that information does not become outdated.
-
-
-
-## Central or Decentralised Repositories
-
-
-
-## Managing Repositories
-
-Version control repositories can be managed centrally as with CVS and Subversion, meaning that there is a single server that holds all the repositories.
-
-Repositories can also be decentralised as with Git, Mercurial and Bazaar, meaning repositories are held on many servers and developer computers that may be holding repositories.
-
-Distributed repositories allow you the freedom to work on projects locally, making it easy to work in another direction or try out experimental code that may not be useful in the main project repository.
-
-Managing changes (files vs change sets) - Branching and merging
-
-Subversion likes to think about revisions. A revision is what the entire file system looked like at some particular point in time.
-
-In a distributed system, you think about changesets. A changeset is a concise list of the changes between one revision and the next revision.
-
-Assume that Bill and Ben are working on Project X, and both Bill and Ben branch Project X code.  Bill and Ben make their own changes in their separate workspaces, so they have diverged considerably.
-
-If Bill and Ben decide to merge all these changes, Subversion tries to look at both revisions—Bill's modified code, and Ben's modified code—and it tries to guess how to join them together in back to one project.  Due to a lack of the complete history of changes then that merge is more likely to fail, producing many “merge conflicts” that aren’t really conflicts, simply places where Subversion failed to understand what has happened.
-
-If Bill and Ben were instead using a distributed system (eg. Git), then Git would have kept a full history of the changes - the changesets for each of Bill and Ben. When the pair come to merge their code together, Git has the whole version history from the local repositories Bill and Ben were working with.  Those changesets can then be applied one by one and Git will find it much easie r to automatically merge them as it can see the full history.
-
-For example, if you rewrite a method and then move that method to another class, Subversion wont necessarily relate those to actions, so when it comes time to merge, it might think that a new method was added. Whereas Mercurial will remember those things separately: method changed, method moved, which means that if you also changed that function a little bit, it is much more likely that Mercurial will successfully merge our changes.
-
-Since distributed systems think of everything in terms of changesets, you get to do interesting things with those changesets. You can push them to a colleague on your team to try them out, instead of pushing them to the central repository and potentially causing problems for the whole project.
-
-
-Keeping stable and dev code separate is precisely what source code control is supposed to let you do.
-
-
-That means you can have team repositories, where a small team of programmers collaborates on a new feature, and when they’re done, they merge it into the main development repository, and it works!
-
-That means you can have a QA repository that lets the QA team try out the code. If it works, the QA team can push it up to the central repository, meaning, the central repository always has solid, tested code. And it works!
 
 
 ## Concepts and Terms
