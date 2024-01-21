@@ -198,6 +198,9 @@ nav:
       - Tech Debt: practices/technical-debt.md
       - practices/deliberate-practice.md
       # - TODO: practices/code-kata.md
+      - Deliberate Practice:
+          - practices/deliberate-practice/index.md
+          - Code Kata: practices/deliberate-practice/code-kata.md
   - Programming Languages:
       - programming-languages/index.md
       - JavaScript:
