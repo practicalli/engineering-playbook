@@ -22,11 +22,11 @@
       
       
       <link rel="icon" href="../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
     
     
       
-        <title>Version Control - Practicalli Engineering Playbook</title>
+        <title>Source Control - Practicalli Engineering Playbook</title>
       
     
     
@@ -73,7 +73,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Version Control - Practicalli Engineering Playbook" >
+        <meta  property="og:title"  content="Source Control - Practicalli Engineering Playbook" >
       
         <meta  property="og:description"  content="Practical guides to common Engineering tasks" >
       
@@ -89,7 +89,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Version Control - Practicalli Engineering Playbook" >
+        <meta  name="twitter:title"  content="Source Control - Practicalli Engineering Playbook" >
       
         <meta  name="twitter:description"  content="Practical guides to common Engineering tasks" >
       
@@ -127,7 +127,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#version-control" class="md-skip">
+        <a href="#source-control" class="md-skip">
           Skip to content
         </a>
       
@@ -178,7 +178,7 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-             Version Control 
+             Source Control 
           </span>
         </div>
       </div>
@@ -2764,6 +2764,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-and-gitlab" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub and GitLab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#access-remote-repositories" class="md-nav__link">
     <span class="md-ellipsis">
       Access remote repositories
@@ -2776,24 +2794,6 @@
   <a href="#what-to-version" class="md-nav__link">
     <span class="md-ellipsis">
       What to Version
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#central-or-decentralised-repositories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Central or Decentralised Repositories
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#managing-repositories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Managing Repositories
     </span>
   </a>
   
@@ -3004,17 +3004,23 @@
   
 
 
-<h1 id="version-control">Version Control<a class="headerlink" href="#version-control" title="Permanent link">λ︎</a></h1>
-<p>Managing code changes is an important part of maintaining a usable code base and is the first step to having a robust development environment.</p>
-<p>Versioning your code allows you to track all the changes that happen over the life of your software, giving you a useful audit trail of how your code has evolved as well as allowing you go back in history to earlier versions.</p>
-<p>Projects are managed in a repository which provides</p>
-<ul>
-<li>An authoritative place to refer to all your project assets</li>
-<li>A complete history of the changes that happened during the project</li>
-<li>Ability to branch off and try alternative approaches / code solutions without polluting the main project (eg. sprints, experimental functionality)</li>
-<li>Collective ownership of the code as all developers take responsibility for the project assets</li>
-</ul>
-<p>A repository can be central or decentralised</p>
+<h1 id="source-control">Source Control<a class="headerlink" href="#source-control" title="Permanent link">λ︎</a></h1>
+<p>Managing code changes is an important part of maintaining a usable code base and is an essential step to having a robust development workflow.</p>
+<p>Versioning code tracks all the changes over the life of a project, providing an audit trail of change.</p>
+<h2 id="git">Git<a class="headerlink" href="#git" title="Permanent link">λ︎</a></h2>
+<p>Git is the defacto tool to manage code and other text artifacts of a project.</p>
+<p>Git uses a distributed model for sharing changes which also encourages branching to support easily experimenting with changes.</p>
+<h2 id="github-and-gitlab">GitHub and GitLab<a class="headerlink" href="#github-and-gitlab" title="Permanent link">λ︎</a></h2>
+<p>Code sharing services support Git and also add pull requests to enable people to contribute to projects they are not maintainers for.  This is especially useful for open source projects, allowing the community to contribute.</p>
+<div class="admonition info">
+<p class="admonition-title">Emoji guide for commit messages and pull requests</p>
+<p><a href="https://gitmoji.dev/">gitmoji</a> provides an interactive search for emoji that can be used with Git commit messages and pull request descriptions &amp; templates</p>
+<p><a href="https://emojipedia.org/github">emojipedia</a> provides a wider support for emoji across multiple services</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Collective Ownership of Code</p>
+<p>The distributed nature of Git supports and encourages collective ownership of the project code, as all developers take responsibility for the project assets</p>
+</div>
 <h2 id="access-remote-repositories">Access remote repositories<a class="headerlink" href="#access-remote-repositories" title="Permanent link">λ︎</a></h2>
 <p>Sharted Git repositories can be accessed via HTTPS or SSH URL.</p>
 <p>SSH approach is typically more secure, especially as the files holding your keys on disk are encrypted.  SSH connections can be tunnelled through HTTPS if connecting to a remote repository via a very restricted firewall.</p>
@@ -3025,22 +3031,6 @@
 <p>Binary files such as images and logos should also be versioned, even though you cannot usually do meaningful diffs.  It is important to version those files that are part of the software project so your build, test and release scripts are always using the correct version.</p>
 <p>It is important to also version your build files (build.xml, myproject.pom) so that you always have the correct script versions to build, test and deploy your project.  If all your assets are in the version control system, it make it very easy to set up and maintain a continuous integration server.</p>
 <p>Compiled assets such as JavaDoc output, class files, jar and war files are not usually stored in the version control system as these can be generated.  This avoids duplication of information and ensures that information does not become outdated.</p>
-<h2 id="central-or-decentralised-repositories">Central or Decentralised Repositories<a class="headerlink" href="#central-or-decentralised-repositories" title="Permanent link">λ︎</a></h2>
-<h2 id="managing-repositories">Managing Repositories<a class="headerlink" href="#managing-repositories" title="Permanent link">λ︎</a></h2>
-<p>Version control repositories can be managed centrally as with CVS and Subversion, meaning that there is a single server that holds all the repositories.</p>
-<p>Repositories can also be decentralised as with Git, Mercurial and Bazaar, meaning repositories are held on many servers and developer computers that may be holding repositories.</p>
-<p>Distributed repositories allow you the freedom to work on projects locally, making it easy to work in another direction or try out experimental code that may not be useful in the main project repository.</p>
-<p>Managing changes (files vs change sets) - Branching and merging</p>
-<p>Subversion likes to think about revisions. A revision is what the entire file system looked like at some particular point in time.</p>
-<p>In a distributed system, you think about changesets. A changeset is a concise list of the changes between one revision and the next revision.</p>
-<p>Assume that Bill and Ben are working on Project X, and both Bill and Ben branch Project X code.  Bill and Ben make their own changes in their separate workspaces, so they have diverged considerably.</p>
-<p>If Bill and Ben decide to merge all these changes, Subversion tries to look at both revisions—Bill's modified code, and Ben's modified code—and it tries to guess how to join them together in back to one project.  Due to a lack of the complete history of changes then that merge is more likely to fail, producing many “merge conflicts” that aren’t really conflicts, simply places where Subversion failed to understand what has happened.</p>
-<p>If Bill and Ben were instead using a distributed system (eg. Git), then Git would have kept a full history of the changes - the changesets for each of Bill and Ben. When the pair come to merge their code together, Git has the whole version history from the local repositories Bill and Ben were working with.  Those changesets can then be applied one by one and Git will find it much easie r to automatically merge them as it can see the full history.</p>
-<p>For example, if you rewrite a method and then move that method to another class, Subversion wont necessarily relate those to actions, so when it comes time to merge, it might think that a new method was added. Whereas Mercurial will remember those things separately: method changed, method moved, which means that if you also changed that function a little bit, it is much more likely that Mercurial will successfully merge our changes.</p>
-<p>Since distributed systems think of everything in terms of changesets, you get to do interesting things with those changesets. You can push them to a colleague on your team to try them out, instead of pushing them to the central repository and potentially causing problems for the whole project.</p>
-<p>Keeping stable and dev code separate is precisely what source code control is supposed to let you do.</p>
-<p>That means you can have team repositories, where a small team of programmers collaborates on a new feature, and when they’re done, they merge it into the main development repository, and it works!</p>
-<p>That means you can have a QA repository that lets the QA team try out the code. If it works, the QA team can push it up to the central repository, meaning, the central repository always has solid, tested code. And it works!</p>
 <h2 id="concepts-and-terms">Concepts and Terms<a class="headerlink" href="#concepts-and-terms" title="Permanent link">λ︎</a></h2>
 <h3 id="repository">Repository<a class="headerlink" href="#repository" title="Permanent link">λ︎</a></h3>
 <p>A repository is the magic box that contains all the information about your checked in items, the full history of your changes.</p>
@@ -3109,7 +3099,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 23, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2024</span>
   </span>
 
     
@@ -3269,10 +3259,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.7389ff0e.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
