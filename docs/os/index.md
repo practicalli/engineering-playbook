@@ -18,7 +18,11 @@ Arch Linux has solid community support should a more involved operating system e
 [Ubuntu Desktop](linux/ubuntu/)
 
 !!! HINT "Practicalli recommends Linux"
-    Practicalli recommends use of a Linux distribution to provide a stable and developer focused environment to work in.  Unix/BSD based systems may offer a good developer experience.
+    Practicalli recommends use of a Linux distribution to provide a stable and developer focused environment to work in.  The vast majority is freely available without cost and typically of high quality thanks to so many collaborators and users.
+
+    Linux also has a quite minimal hardware resource use and has very widespread support for new and classic hardware.
+
+    Unix/BSD based systems can also offer a good developer experience, e.g. MacOSX.
 
 ??? INFO "MacOSX"
     Mac OSX is a BSD based operating system so has similar command line experience.  Coupled with Homebrew, a wide selection of developer focused packages are freely availalbe.
