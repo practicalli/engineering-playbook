@@ -34,6 +34,7 @@ Arch Linux has solid community support should a more involved operating system e
 - bash
 - zsh
 - fish
+- [Kitty Terminal](clojure /docs/command-line/kitty-terminal.md)
 
 
 ## Software development tools
@@ -50,3 +51,4 @@ Arch Linux has solid community support should a more involved operating system e
 - Audacity sound editing
 - FFMpeg
 - Opus audio codec
+
