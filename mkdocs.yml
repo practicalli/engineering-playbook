@@ -183,6 +183,20 @@ nav:
       # - Version Control:
       #     - version-control/index.md
       #     - version-control/git-client-configuration.md
+  - Operating Systems:
+      - os/index.md
+      - Linux:
+          - Overview: os/linux/index.md
+          - Cron: os/cron.md
+          - Debian: os/debian-linux.md
+          - Ubuntu: os/ubuntu-linux.md
+          - Regolith: os/linux/regolith.md
+          - MacOSX: os/macosx.md
+      - Shell:
+          - os/shell/index.md
+          - os/shell/bash.md
+          - os/shell/zsh.md
+          - os/shell/fish.md
   - Practices:
       - practices/index.md
       - Discussions:
@@ -206,20 +220,6 @@ nav:
       - JavaScript:
           - programming-languages/javascript/index.md
           - programming-languages/javascript/nodejs.md
-  - Operating Systems:
-      - os/index.md
-      - Linux:
-          - os/linux/index.md
-          - Cron: os/cron.md
-          - Debian: os/debian-linux.md
-          - Ubuntu: os/ubuntu-linux.md
-          - Regolith: os/linux/regolith.md
-          - MacOSX: os/macosx.md
-      - Shell:
-          - os/shell/index.md
-          - os/shell/bash.md
-          - os/shell/zsh.md
-          - os/shell/fish.md
   - Source Control:
       - source-control/index.md
       - source-control/git-configuration.md
