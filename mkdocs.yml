@@ -129,11 +129,6 @@ nav:
       - index.md
       - Contributing: introduction/contributing.md
       - Writing Tips: introduction/writing-tips.md
-  - Architecture:
-      - architecture/index.md
-      - architecture/kata/index.md
-      - Structurizr: architecture/structurizr.md
-      - architecture/adr.md
   - Build tool:
       - build-tool/index.md
       - build-tool/make.md
@@ -223,3 +218,15 @@ nav:
   - Source Control:
       - source-control/index.md
       - source-control/git-configuration.md
+  - Software Design:
+      - software-design/index.md
+      - Anti-patterns: software-design/anti-patterns/index.md
+      - Architecture:
+          - software-design/architecture/index.md
+          - Kata: software-design/architecture/kata/index.md
+          - Structurizr: software-design/architecture/structurizr.md
+          - Architecture Design Record: software-design/architecture/adr.md
+      - Design Patterns:
+          - software-design/design-patterns/index.md
+          - software-design/design-patterns/command-query-separation.md
+          - software-design/design-patterns/cqrs.md
