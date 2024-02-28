@@ -209,6 +209,7 @@ nav:
       # - TODO: practices/code-kata.md
       - Deliberate Practice:
           - practices/deliberate-practice/index.md
+          - Architecture Kata: practices/deliberate-practice/architecture-kata.md
           - Code Kata: practices/deliberate-practice/code-kata.md
   - Programming Languages:
       - programming-languages/index.md
