@@ -10,6 +10,9 @@ Tools and techniques to support design and communication of archiectural decisio
 - [:fontawesome-solid-book-open: Command Query Resposibility Segregation (CQRS)](cqrs.md)
 
 
+!!! HINT "Architectural Kata - Deliberate Practice"
+    [:fontawesome-solid-book-open: Architecture Kata](/engineering-playbook/practices/deliberate-practice/architecture-kata/) is a group activity for deliberate practice, providing a rich environment to stretch architecture design skills.
+
 ## Organising
 
 - [:fontawesome-solid-book-open: Architectural Decision Records](/docs/architecture/adr.md)
