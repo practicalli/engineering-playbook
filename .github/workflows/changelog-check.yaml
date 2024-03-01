@@ -20,10 +20,15 @@ jobs:
 
       # Git Checkout
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          token: "${{ secrets.PAT || secrets.GITHUB_TOKEN }}"
-      - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
+          fetch-depth: 0
+          sparse-checkout: |
+            docs
+            overrides
+            .github
+            CHANGELOG.md
+      - run: echo "🐙 Sparse Checkout of ${{ github.repository }} repository to the CI runner."
 
       # Changelog Enforcer
       - name: Changelog Enforcer
