@@ -18,4 +18,5 @@
 - practices: deliberate practice and code kata
 - dev: checkout v4 changelog checkout action & sparce checkout
 - dev: upload-artefact v4 in megalinter workflow
+- dev: ignore readme changes for changelog checker workflow
 
