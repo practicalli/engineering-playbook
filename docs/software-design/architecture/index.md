@@ -4,7 +4,7 @@ Tools and techniques to support design and communication of archiectural decisio
 
 - Domain Driven Design
 - Architecture Patterns
-- [:fontawesome-solid-book-open: Architectural Katas](kata/index.md)
+- [:fontawesome-solid-book-open: Architectural Katas](/engineering-playbook/practices/deliberate-practice/architecture-kata/)
 - Composition (Aggregation)
 - [:fontawesome-solid-book-open: Command Query Separation](command-query-separation.md)
 - [:fontawesome-solid-book-open: Command Query Resposibility Segregation (CQRS)](cqrs.md)
