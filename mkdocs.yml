@@ -224,7 +224,6 @@ nav:
       - Anti-patterns: software-design/anti-patterns/index.md
       - Architecture:
           - software-design/architecture/index.md
-          - Kata: software-design/architecture/kata/index.md
           - Structurizr: software-design/architecture/structurizr.md
           - Architecture Design Record: software-design/architecture/adr.md
       - Design Patterns:
