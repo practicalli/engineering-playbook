@@ -26,3 +26,4 @@
   - cache v4 action
   - echo status feedback at each stage
 - dev: update to standard repo healthcheck files
+- dev: signed commits required for PR contributions
