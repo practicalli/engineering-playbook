@@ -19,4 +19,10 @@
 - dev: checkout v4 changelog checkout action & sparce checkout
 - dev: upload-artefact v4 in megalinter workflow
 - dev: ignore readme changes for changelog checker workflow
+- dev: paths, action versions and feedback for publish book workflow
+  - trigger workflow on specific paths, rather than paths-ignore
+  - checkout v4 with sparse checkout
+  - setup python v5 action
+  - cache v4 action
+  - echo status feedback at each stage
 
