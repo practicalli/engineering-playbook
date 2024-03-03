@@ -8,6 +8,7 @@
 - architecture: kata page first release
 - careers: new section and engineering manager
 - os: shell-aliases examples
+- os: zsh history and editing command history
 
 ### Changed
 
