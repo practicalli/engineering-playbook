@@ -1995,6 +1995,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#command-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command History
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-last-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit last command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-command-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit command history
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-aliases-for-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell aliases for commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternatives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3070,6 +3130,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#command-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command History
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command History">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-last-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit last command
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-command-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit command history
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-aliases-for-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell aliases for commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternatives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3106,6 +3226,52 @@
 <p><a class="md-button" href="https://en.wikipedia.org/wiki/Z_shell" target="_blank">Wikipedia - Z Shell</a> </p>
 <h2 id="prezto">Prezto<a class="headerlink" href="#prezto" title="Permanent link">λ︎</a></h2>
 <h2 id="ohmyzsh">OhmyZsh<a class="headerlink" href="#ohmyzsh" title="Permanent link">λ︎</a></h2>
+<h2 id="command-history">Command History<a class="headerlink" href="#command-history" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-arrow-up">Up</kbd></span> and <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> navigate through the history of commands.</p>
+<h3 id="edit-last-command">Edit last command<a class="headerlink" href="#edit-last-command" title="Permanent link">λ︎</a></h3>
+<p>Edit the previous command in the history if you know what it should be, e.g. if you typed got status instead of git statusthe you could run the command</p>
+<div class="admonition note">
+<p class="admonition-title">Edit last command</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">fc</span><span class="w"> </span>-e<span class="w"> </span>astro<span class="w"> </span>-1<span class="w"> </span>
+</code></pre></div>
+</div>
+<blockquote>
+<p>Replace <code>astro</code> with either <code>emacsclient</code>, <code>nvim</code>, <code>vim</code>, nano or any preferred text editor.</p>
+</blockquote>
+<details class="example">
+<summary>Edit last command</summary>
+<p>Edit the <code>got status</code>to <code>git status</code> and save &amp; exit. Now the previous command is <code>git status</code>.</p>
+<p>Change the <code>-1</code> to if the command is further back in history (a known location)</p>
+</details>
+<h3 id="edit-command-history">Edit command history<a class="headerlink" href="#edit-command-history" title="Permanent link">λ︎</a></h3>
+<p>Edit the whole command history as a file, allowing easy removal of unwanted or duplicate commands using search and replace and other editing tools.</p>
+<div class="admonition note">
+<p class="admonition-title">Edit entire history</p>
+<p>```shell
+fc -W; astro "$HISTFILE"; fc -R
+````</p>
+</div>
+<blockquote>
+<p>Replace <code>astro</code> with either <code>emacsclient</code>, <code>nvim</code>, <code>vim</code>, nano or any preferred text editor.</p>
+</blockquote>
+<h2 id="shell-aliases-for-commands">Shell aliases for commands<a class="headerlink" href="#shell-aliases-for-commands" title="Permanent link">λ︎</a></h2>
+<p>Add aliases to <code>$XDG_CONFIG_HOME/shell-aliases</code> or your preferred location of shell alias definitions.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Shell history</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># edit entire history</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">alias</span><span class="w"> </span>zsh-edit-history<span class="o">=</span><span class="s2">&quot;fc -W; astro \&quot;</span><span class="nv">$HISTFILE</span><span class="s2">\&quot;; fc -R&quot;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># edit previous command in history</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nb">alias</span><span class="w"> </span>zsh-edit-last-command<span class="o">=</span><span class="s2">&quot;fc -e astro -1&quot;</span>
+</code></pre></div>
+<h2 id="alternatives">Alternatives<a class="headerlink" href="#alternatives" title="Permanent link">λ︎</a></h2>
+<ul>
+<li><a href="https://github.com/marlonrichert/zsh-hist">zsh-hist plugin</a></li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">λ︎</a></h2>
+<ul>
+<li><a href="https://superuser.com/a/1399768">Edit Zsh history - Stack Exchange</a></li>
+<li><a href="https://jdhao.github.io/2021/03/24/zsh_history_setup/">zsh history setup</a></li>
+</ul>
 
 
 
@@ -3126,7 +3292,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 25, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 3, 2024</span>
   </span>
 
     
