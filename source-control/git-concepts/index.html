@@ -12,28 +12,28 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/engineering-playbook/continuous-integration/github/common-jobs/">
+        <link rel="canonical" href="https://practical.li/engineering-playbook/source-control/git-concepts/">
       
       
-        <link rel="prev" href="../actions/">
+        <link rel="prev" href="../git-configuration/">
       
       
-        <link rel="next" href="../trigger-events/">
+        <link rel="next" href="../../software-design/">
       
       
-      <link rel="icon" href="../../../assets/favicon.svg">
+      <link rel="icon" href="../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
     
     
       
-        <title>Common jobs - Practicalli Engineering Playbook</title>
+        <title>Git Concepts - Practicalli Engineering Playbook</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -73,11 +73,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Common jobs - Practicalli Engineering Playbook" >
+        <meta  property="og:title"  content="Git Concepts - Practicalli Engineering Playbook" >
       
         <meta  property="og:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/github/common-jobs.png" >
+        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/source-control/git-concepts.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -85,19 +85,19 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/engineering-playbook/continuous-integration/github/common-jobs/" >
+        <meta  property="og:url"  content="https://practical.li/engineering-playbook/source-control/git-concepts/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Common jobs - Practicalli Engineering Playbook" >
+        <meta  name="twitter:title"  content="Git Concepts - Practicalli Engineering Playbook" >
       
         <meta  name="twitter:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/continuous-integration/github/common-jobs.png" >
+        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/source-control/git-concepts.png" >
       
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -106,7 +106,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -125,7 +125,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#common-github-workflow-jobs" class="md-skip">
+        <a href="#git-concepts" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
       target="_blank"
     >
       
-  <img src="../../../assets/images/practicalli-logo.png" alt="logo">
+  <img src="../../assets/images/practicalli-logo.png" alt="logo">
 
     </a>
 
@@ -176,7 +176,7 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-             Common jobs 
+             Git Concepts 
           </span>
         </div>
       </div>
@@ -328,9 +328,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Practicalli Engineering Playbook" class="md-nav__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
+    <a href="../.." title="Practicalli Engineering Playbook" class="md-nav__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
       
-  <img src="../../../assets/images/practicalli-logo.png" alt="logo">
+  <img src="../../assets/images/practicalli-logo.png" alt="logo">
 
     </a>
     Practicalli Engineering Playbook
@@ -379,7 +379,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../.." class="md-nav__link ">
+            <a href="../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -412,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../introduction/contributing/" class="md-nav__link">
+      <a href="../../introduction/contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -433,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../introduction/writing-tips/" class="md-nav__link">
+      <a href="../../introduction/writing-tips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -483,7 +483,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../build-tool/" class="md-nav__link ">
+            <a href="../../build-tool/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -516,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../build-tool/make/" class="md-nav__link">
+      <a href="../../build-tool/make/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -537,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../build-tool/babashka-task-runner/" class="md-nav__link">
+      <a href="../../build-tool/babashka-task-runner/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +585,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../careers/" class="md-nav__link ">
+            <a href="../../careers/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -618,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../careers/engineering-manager/" class="md-nav__link">
+      <a href="../../careers/engineering-manager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -668,7 +668,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../code-quality/" class="md-nav__link ">
+            <a href="../../code-quality/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -701,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../code-quality/megalinter/" class="md-nav__link">
+      <a href="../../code-quality/megalinter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -722,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../code-quality/clojure/" class="md-nav__link">
+      <a href="../../code-quality/clojure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,7 +770,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../command-line/" class="md-nav__link ">
+            <a href="../../command-line/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -803,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../command-line/kitty-terminal/" class="md-nav__link">
+      <a href="../../command-line/kitty-terminal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -828,8 +828,6 @@
       
   
   
-    
-  
   
   
     
@@ -846,16 +844,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../continuous-integration/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -872,7 +870,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Continuous Integration
@@ -918,7 +916,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../docker/" class="md-nav__link ">
+            <a href="../../continuous-integration/docker/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -951,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/install/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +990,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../docker/desktop/" class="md-nav__link ">
+            <a href="../../continuous-integration/docker/desktop/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1025,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/desktop/extensions/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/desktop/extensions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1054,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/images/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/images/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1075,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/dockerfile/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/dockerfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1096,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/clojure-multi-stage-dockerfile/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/clojure-multi-stage-dockerfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1117,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/compose/" class="md-nav__link">
+      <a href="../../continuous-integration/docker/compose/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,8 +1141,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1165,16 +1161,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../continuous-integration/github/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1191,7 +1187,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_3">
             <span class="md-nav__icon md-icon"></span>
             GitHub
@@ -1207,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../actions/" class="md-nav__link">
+      <a href="../../continuous-integration/github/actions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1225,30 +1221,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Common jobs
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../continuous-integration/github/common-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1257,68 +1233,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-workflow-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      Basic workflow information
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#git-checkout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Git Checkout
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Git Checkout">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sparse-checkout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sparse Checkout
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pull-request-first-interaction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pull Request first interaction
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1331,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../trigger-events/" class="md-nav__link">
+      <a href="../../continuous-integration/github/trigger-events/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1378,7 +1292,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../workflows/" class="md-nav__link ">
+            <a href="../../continuous-integration/github/workflows/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1411,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/megalinter/" class="md-nav__link">
+      <a href="../../continuous-integration/github/workflows/megalinter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1432,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/luarocks/" class="md-nav__link">
+      <a href="../../continuous-integration/github/workflows/luarocks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/practicalli/" class="md-nav__link">
+      <a href="../../continuous-integration/github/workflows/practicalli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1474,7 +1388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../workflows/system-catalog/" class="md-nav__link">
+      <a href="../../continuous-integration/github/workflows/system-catalog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1542,7 +1456,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../culture/" class="md-nav__link ">
+            <a href="../../culture/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1575,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../culture/anti-patterns/" class="md-nav__link">
+      <a href="../../culture/anti-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1596,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../culture/documentation/" class="md-nav__link">
+      <a href="../../culture/documentation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1617,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../culture/leadership/" class="md-nav__link">
+      <a href="../../culture/leadership/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1663,7 +1577,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../technical-writing/" class="md-nav__link ">
+            <a href="../../technical-writing/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1720,7 +1634,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../os/" class="md-nav__link ">
+            <a href="../../os/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1802,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../os/linux/index.md" class="md-nav__link">
+      <a href="../../os/linux/index.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1823,7 +1737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../os/cron/" class="md-nav__link">
+      <a href="../../os/cron/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1844,7 +1758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../os/debian-linux/" class="md-nav__link">
+      <a href="../../os/debian-linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1865,7 +1779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../os/ubuntu-linux/" class="md-nav__link">
+      <a href="../../os/ubuntu-linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1886,7 +1800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../os/linux/regolith/" class="md-nav__link">
+      <a href="../../os/linux/regolith/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1907,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../os/macosx/" class="md-nav__link">
+      <a href="../../os/macosx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1960,7 +1874,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../os/shell/" class="md-nav__link ">
+            <a href="../../os/shell/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1993,7 +1907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../os/shell/bash/" class="md-nav__link">
+      <a href="../../os/shell/bash/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2014,7 +1928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../os/shell/zsh/" class="md-nav__link">
+      <a href="../../os/shell/zsh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2035,7 +1949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../os/shell/fish/" class="md-nav__link">
+      <a href="../../os/shell/fish/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2099,7 +2013,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../practices/" class="md-nav__link ">
+            <a href="../../practices/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2162,7 +2076,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../practices/discussions/" class="md-nav__link ">
+            <a href="../../practices/discussions/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2195,7 +2109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/rolling-wave-planning/" class="md-nav__link">
+      <a href="../../practices/discussions/rolling-wave-planning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2216,7 +2130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/one-to-one-meeting/" class="md-nav__link">
+      <a href="../../practices/discussions/one-to-one-meeting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2237,7 +2151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/retrospective/" class="md-nav__link">
+      <a href="../../practices/discussions/retrospective/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2258,7 +2172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/standup/" class="md-nav__link">
+      <a href="../../practices/discussions/standup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2279,7 +2193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/five-whys/" class="md-nav__link">
+      <a href="../../practices/discussions/five-whys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2300,7 +2214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/thinking-hats/" class="md-nav__link">
+      <a href="../../practices/discussions/thinking-hats/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2347,7 +2261,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../practices/behaviour-driven-development/" class="md-nav__link ">
+            <a href="../../practices/behaviour-driven-development/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2383,7 +2297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/technical-debt/" class="md-nav__link">
+      <a href="../../practices/technical-debt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2404,7 +2318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/deliberate-practice.md" class="md-nav__link">
+      <a href="../../practices/deliberate-practice.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2447,7 +2361,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../practices/deliberate-practice/" class="md-nav__link ">
+            <a href="../../practices/deliberate-practice/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2480,7 +2394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/deliberate-practice/architecture-kata/" class="md-nav__link">
+      <a href="../../practices/deliberate-practice/architecture-kata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2501,7 +2415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/deliberate-practice/code-kata/" class="md-nav__link">
+      <a href="../../practices/deliberate-practice/code-kata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2557,7 +2471,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../programming-languages/" class="md-nav__link ">
+            <a href="../../programming-languages/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2610,7 +2524,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../programming-languages/javascript/" class="md-nav__link ">
+            <a href="../../programming-languages/javascript/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2643,7 +2557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../programming-languages/javascript/nodejs/" class="md-nav__link">
+      <a href="../../programming-languages/javascript/nodejs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2676,6 +2590,8 @@
       
   
   
+    
+  
   
   
     
@@ -2692,16 +2608,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../source-control/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2718,7 +2634,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             Source Control
@@ -2734,7 +2650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../source-control/git-configuration/" class="md-nav__link">
+      <a href="../git-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2752,10 +2668,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../source-control/git-concepts/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Git Concepts
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2764,6 +2700,152 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trunk
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    <span class="md-ellipsis">
+      Head
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#push" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promote
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diff
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conflict
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2809,7 +2891,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../software-design/" class="md-nav__link ">
+            <a href="../../software-design/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2842,7 +2924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../software-design/anti-patterns/" class="md-nav__link">
+      <a href="../../software-design/anti-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2885,7 +2967,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../software-design/architecture/" class="md-nav__link ">
+            <a href="../../software-design/architecture/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2918,7 +3000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../software-design/architecture/structurizr/" class="md-nav__link">
+      <a href="../../software-design/architecture/structurizr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2939,7 +3021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../software-design/architecture/adr/" class="md-nav__link">
+      <a href="../../software-design/architecture/adr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2990,7 +3072,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../software-design/design-patterns/" class="md-nav__link ">
+            <a href="../../software-design/design-patterns/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -3023,7 +3105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../software-design/design-patterns/command-query-separation/" class="md-nav__link">
+      <a href="../../software-design/design-patterns/command-query-separation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3044,7 +3126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../software-design/design-patterns/cqrs/" class="md-nav__link">
+      <a href="../../software-design/design-patterns/cqrs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3100,42 +3182,126 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-workflow-information" class="md-nav__link">
+  <a href="#repository" class="md-nav__link">
     <span class="md-ellipsis">
-      Basic workflow information
+      Repository
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#git-checkout" class="md-nav__link">
+  <a href="#trunk" class="md-nav__link">
     <span class="md-ellipsis">
-      Git Checkout
+      Trunk
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Git Checkout">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sparse-checkout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sparse Checkout
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pull-request-first-interaction" class="md-nav__link">
+  <a href="#branch" class="md-nav__link">
     <span class="md-ellipsis">
-      Pull Request first interaction
+      Branch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    <span class="md-ellipsis">
+      Head
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#push" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#promote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promote
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diff
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conflict" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conflict
     </span>
   </a>
   
@@ -3156,7 +3322,7 @@
                   
 
   
-    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/continuous-integration/github/common-jobs.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/source-control/git-concepts.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -3165,85 +3331,63 @@
     
       
     
-    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/continuous-integration/github/common-jobs.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/source-control/git-concepts.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="common-github-workflow-jobs">Common GitHub Workflow Jobs<a class="headerlink" href="#common-github-workflow-jobs" title="Permanent link">λ︎</a></h1>
-<p>Common job configuration snippets taken from GitHub workflows, showing options typically used with GitHub actions.</p>
-<h2 id="basic-workflow-information">Basic workflow information<a class="headerlink" href="#basic-workflow-information" title="Permanent link">λ︎</a></h2>
-<p>Echo information regarding the triggering of the workflow, to help diagnose issues should they arise</p>
-<div class="admonition example">
-<p class="admonition-title">Git Checkout Action</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">jobs</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">workflow</span><span class="p">:</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">workflow-name</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🚀 Job automatically triggered by ${{ github.event_name }}&quot;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🐧 Job running on ${{ runner.os }} server&quot;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository&quot;</span>
-</code></pre></div>
-<p>Add a summary of the workflow at the end of the configuration.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">      </span><span class="c1"># Summary and status</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🎨 Workflow name completed&quot;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🍏 Job status is ${{ job.status }}.&quot;</span>
-</code></pre></div>
-</div>
-<h2 id="git-checkout">Git Checkout<a class="headerlink" href="#git-checkout" title="Permanent link">λ︎</a></h2>
-<p>Check-out the project from version control, fetching the whole history with <code>fetch-depth: 0</code>. Set <code>fetch-depth:</code> to 1 (or remove the option) to checkout the single commit for the ref/SHA that triggered the workflow</p>
-<p>Echo the GitHub Repository that was cloned to the workflow log, to support debugging efforts.</p>
-<div class="admonition example">
-<p class="admonition-title">Git Checkout Action</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">      </span><span class="c1"># Git Checkout</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout Code</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">          </span><span class="nt">token</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${{</span><span class="nv"> </span><span class="s">secrets.PAT</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">secrets.GITHUB_TOKEN</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">   </span><span class="c1"># fetch all history</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🐙 ${{ github.repository }} repository was cloned to the runner.&quot;</span>
-</code></pre></div>
-</div>
-<h3 id="sparse-checkout">Sparse Checkout<a class="headerlink" href="#sparse-checkout" title="Permanent link">λ︎</a></h3>
-<p>Using <code>git sparse-checkout</code> can save signficant time by checking out a sub-set of files, especially from a large repository with thousands of commits.</p>
-<p><code>git sparse-checkout</code> always checks out all files in the root of the repository, so specify only the additional files and directories required.</p>
-<div class="admonition example">
-<p class="admonition-title">Git Sparse Checkout Action</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">      </span><span class="c1"># Git Checkout</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout Code</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">          </span><span class="nt">token</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${{</span><span class="nv"> </span><span class="s">secrets.PAT</span><span class="nv"> </span><span class="s">||</span><span class="nv"> </span><span class="s">secrets.GITHUB_TOKEN</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">          </span><span class="nt">fetch-depth</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w">   </span><span class="c1"># fetch all history</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">          </span><span class="nt">sparse-checkout</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">            </span><span class="no">docs</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">            </span><span class="no">overrides</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🐙 ${{ github.repository }} repository was cloned to the runner.&quot;</span>
+<h1 id="git-concepts">Git Concepts<a class="headerlink" href="#git-concepts" title="Permanent link">λ︎</a></h1>
+<h2 id="repository">Repository<a class="headerlink" href="#repository" title="Permanent link">λ︎</a></h2>
+<p>A repository is the magic box that contains all the information about your checked in items, the full history of your changes.</p>
+<h2 id="trunk">Trunk<a class="headerlink" href="#trunk" title="Permanent link">λ︎</a></h2>
+<p>The trunk refers to the main set of files and changes that make up the project.    If you create a new repository and commit / push a change (eg. a new file) then you have added that change to the trunk.</p>
+<p>A trunk is what you typically release and refer to as the main version of the project.</p>
+<h2 id="branch">Branch<a class="headerlink" href="#branch" title="Permanent link">λ︎</a></h2>
+<p>A project under version control may be branched to work on new functionality or experimental development.  The branch becomes a separate independent copy, even though it is not actually be stored as a copy in the version control system.</p>
+<p>Changes committed / pushed to the trunk after the branch are not applied to the branch and changes committed / pushed to the branch are not applied to the trunk.</p>
+<h2 id="tag">Tag<a class="headerlink" href="#tag" title="Permanent link">λ︎</a></h2>
+<p>A tag or label refers to an important snapshot in time of your repository. The current version of all files can be tagged with a meaningful name or revision number. Tags are often used to indicate milestones or releases of a project.</p>
+<h2 id="head">Head<a class="headerlink" href="#head" title="Permanent link">λ︎</a></h2>
+<p>The head is a special label that represents the latest version of your files in the repository.  When you checkout or clone a project you get the version that is pointed to by the head label - unless you specify a particular version.</p>
+<h2 id="commit">Commit<a class="headerlink" href="#commit" title="Permanent link">λ︎</a></h2>
+<p>A commit (check-in) is the action of writing or merging the changes made in the working copy back to the repository. The terms 'commit' and 'check-in' can also used in noun form to describe the new revision that is created as a result of committing.</p>
+<h2 id="update">Update<a class="headerlink" href="#update" title="Permanent link">λ︎</a></h2>
+<p>An update merges changes made in the central repository (by other people, for example) into the local working copy / local repository</p>
+<h2 id="clone">Clone<a class="headerlink" href="#clone" title="Permanent link">λ︎</a></h2>
+<p>Creates a complete copy of a repository locally (used in distributed version control systems such as Git, Mercurial, Bazaar)</p>
+<h2 id="push">Push<a class="headerlink" href="#push" title="Permanent link">λ︎</a></h2>
+<p>Merges change sets from your local repository to the main (parent) of your repository.</p>
+<h2 id="pull">Pull<a class="headerlink" href="#pull" title="Permanent link">λ︎</a></h2>
+<p>Merge change sets from other repositories - you pull in change sets and merge them into your repository</p>
+<h2 id="promote">Promote<a class="headerlink" href="#promote" title="Permanent link">λ︎</a></h2>
+<p>A more abstract term for committing or pushing, where changes are "promoted" from a less controlled location into a more controlled location. For example, from a user's workspace into a repository, or from a local clone to its main (parent).</p>
+<h2 id="diff">Diff<a class="headerlink" href="#diff" title="Permanent link">λ︎</a></h2>
+<p>A diff (or delta) represents a specific change to a project under version control.  Diffs between different versions of files are created to see what changes have been between two versions and giving you information on how to merge two files together.</p>
+<h2 id="merge">Merge<a class="headerlink" href="#merge" title="Permanent link">λ︎</a></h2>
+<p>A merge where two sets of changes are applied to a file or set of files. Some sample scenarios for merging include:</p>
+<p>You update your working copy or local repository with changes made by other users, either from a central repository or from another repository.</p>
+<p>You try to commit / push changes to files that have been updated by others since you checked out those files (or you last update).  The version control software automatically merges the files (typically, after prompting the user if it should proceed with the automatic merge, and in some cases only doing so if the merge can be clearly and reasonably resolved).</p>
+<p>The project is branched before a problem that existed is fixed in the main trunk.  The fix is done in the trunk and then merged into the branch.</p>
+<p>A branch is created, the code in the files is independently edited, and the updated branch is later incorporated into a single, unified trunk.</p>
+<h2 id="conflict">Conflict<a class="headerlink" href="#conflict" title="Permanent link">λ︎</a></h2>
+<p>A conflict occurs when different changes are being applied to the same file, and the version control system is unable to reconcile the changes. The person making a merge needs to resolve the conflict by combining the changes manually, or by telling the version control system which version to use.</p>
+<h1 id="diff-and-merge">Diff and Merge<a class="headerlink" href="#diff-and-merge" title="Permanent link">λ︎</a></h1>
+<p>When you want to merge code you may experience conflicts between your code and the code your merging.  If your version control tool is not able to automatically manage these conflicts, you will need to merge manually.</p>
+<p>To see the differences between two code files you use a diff tool.  A diff tool will show text references or a visual representation of the differences.</p>
+<p>Using the diff tool you can change your code so the conflicts are addressed and changes can be merged.</p>
+<div class="admonition hint">
+<p class="admonition-title">Meld - visual diff and merge tool</p>
+<p>Meld is a visual diff and merge tool. You can compare two or three files and edit them in place (diffs update dynamically). You can compare two or three folders and launch file comparisons. You can browse and view a working copy from popular version control systems such such as CVS, Subversion, Bazaar-ng and Mercurial.</p>
+<p>Calling Meld from git-merge</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>mergetool<span class="w"> </span>-t<span class="w"> </span>meld
 </code></pre></div>
 </div>
-<h2 id="pull-request-first-interaction">Pull Request first interaction<a class="headerlink" href="#pull-request-first-interaction" title="Permanent link">λ︎</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">first-interaction returning Bad Credentials error</p>
-</div>
-<p>Add messages to a contributor's first issue or pull request to a repository.</p>
-<p>In this example, the contributing guide is added as a comment to the issue or pull request.</p>
-<div class="admonition example">
-<p class="admonition-title">First Interaction Action</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">      </span><span class="c1"># Message on first interaction</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">First interaction</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/first-interaction@v1.1.1</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">          </span><span class="c1"># Token for the repository</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">          </span><span class="nt">repo-token</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">secrets.GITHUB_TOKEN</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">          </span><span class="c1"># Comment to post on an individual&#39;s first issue</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">          </span><span class="nt">issue-message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;[Practicalli</span><span class="nv"> </span><span class="s">Contributing</span><span class="nv"> </span><span class="s">Guide](https://practical.li/spacemacs/introduction/contributing/)&quot;</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">          </span><span class="c1"># Comment to post on an individual&#39;s first pull request</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">          </span><span class="nt">pr-message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;[Practicalli</span><span class="nv"> </span><span class="s">Contributing</span><span class="nv"> </span><span class="s">Guide](https://practical.li/spacemacs/introduction/contributing/)&quot;</span>
-</code></pre></div>
-</div>
+<h2 id="git-advanced-branching-and-merging">Git Advanced branching and merging<a class="headerlink" href="#git-advanced-branching-and-merging" title="Permanent link">λ︎</a></h2>
+<p>All of the changes that git was able to merge automatically are already added to the index file, so git diff shows only the conflicts. It uses an unusual syntax:</p>
+<p>The commit which will be committed after we resolve this conflict will have two parents instead of the usual one: one parent will be HEAD, the tip of the current branch; the other will be the tip of the other branch, which is stored temporarily in MERGE_HEAD.</p>
+<p><a href="http://book.git-scm.com/5_advanced_branching_and_merging.html">http://book.git-scm.com/5_advanced_branching_and_merging.html</a></p>
 
 
 
@@ -3264,7 +3408,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 18, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 22, 2024</span>
   </span>
 
     
@@ -3304,7 +3448,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../actions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Actions">
+          <a href="../git-configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Git Client Configuration">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -3314,20 +3458,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Actions
+                Git Client Configuration
               </div>
             </div>
           </a>
         
         
           
-          <a href="../trigger-events/" class="md-footer__link md-footer__link--next" aria-label="Next: Trigger Events">
+          <a href="../../software-design/" class="md-footer__link md-footer__link--next" aria-label="Next: Software Design">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Trigger Events
+                Software Design
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3424,10 +3568,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
