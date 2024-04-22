@@ -220,6 +220,7 @@ nav:
       - source-control/index.md
       - source-control/git-configuration.md
       - source-control/git-concepts.md
+      - source-control/git-status.md
   - Software Design:
       - software-design/index.md
       - Anti-patterns: software-design/anti-patterns/index.md

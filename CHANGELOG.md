@@ -9,6 +9,8 @@
 - careers: new section and engineering manager
 - os: shell-aliases examples
 - os: zsh history and editing command history
+- source-control: git concepts
+- source-control: git status & multi-repo status
 
 ### Changed
 
