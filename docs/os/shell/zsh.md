@@ -50,14 +50,15 @@ Edit the whole command history as a file, allowing easy removal of unwanted or d
 
 Add aliases to `$XDG_CONFIG_HOME/shell-aliases` or your preferred location of shell alias definitions.
 
-```shell
-# Shell history
-# edit entire history
-alias zsh-edit-history="fc -W; astro \"$HISTFILE\"; fc -R"
+!!! EXAMPLE "Shell Alias"
+    ```shell
+    # Shell history
+    # edit entire history
+    alias zsh-edit-history="fc -W; astro \"$HISTFILE\"; fc -R"
 
-# edit previous command in history
-alias zsh-edit-last-command="fc -e astro -1"
-```
+    # edit previous command in history
+    alias zsh-edit-last-command="fc -e astro -1"
+    ```
 
 ## Alternatives
 - [zsh-hist plugin](https://github.com/marlonrichert/zsh-hist)
