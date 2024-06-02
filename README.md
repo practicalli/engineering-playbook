@@ -29,19 +29,15 @@
   This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images & stylesheets).
 </div>
 
-Please [read the contributing section of the book](https://practical.li//engineering-playbook/introduction/contributing/) before raising an issue or pull request
-
-By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/engineering-playbook/graphs/contributors).
-
 # Overview
 
 A collection of plays that detail common tasks undertaken by Engineers
 
 ## Contributing
 
-Issues and pull requests are most welcome.  Please detail issues as much as you can.  Pull requests are simpler to work with when they are specific to a page or at most a section.  The smaller the change the quicker it is to review and merge.
+Issues and pull requests are most welcome although it is the maintainers discression as to if they are applicable.  Please detail issues as much as you can.  Pull requests are simpler to work with when they are specific to a page or at most a section.  The smaller the change the quicker it is to review and merge.
 
-Please [see the detailed contributing section of the book](contributing.html) before raising an issue or pull request
+Please read the [detailed Practicalli contributing page](https://practical.li/contributing/) before raising an issue or pull request to avoid disappointment.
 
 * [Current Issues](https://github.com/practicalli/engineering-playbook/issues)
 * [Current pull requests](https://github.com/practicalli/engineering-playbook/pulls)
@@ -73,13 +69,13 @@ Publish book workflow installs Material for MkDocs version 9
 
 Install mkdocs version 9 using the Python pip package manager
 
-```bash
-pip3 install mkdocs-material=="9.4"
+```shell
+pip install mkdocs-material=="9.*"
 ```
 
 Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
 
-```bash
+```shell
 pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
 ```
 
@@ -87,15 +83,20 @@ pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revisio
 
 Fork the GitHub repository and clone that fork to your computer,
 
-```bash
+```shell
 git clone https://github.com/<your-github-account>/<repository>.git
-
 ```
 
 Run a local server from the root of the cloned project
 
-```bash
-mkdocs serve
+```shell
+make docs
 ```
 
 The website will open at <http://localhost:8000>
+
+If making smaller changes, then only rebuild the content that changes, speeding up the local development process
+```shell
+make docs-changed
+```
+
