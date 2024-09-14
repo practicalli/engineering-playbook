@@ -13,10 +13,10 @@ Docker Desktop provides a graphical UI for managing images, containers and volum
 
     Install via the package archive manage by the Docker team.  Add the Docker team public key and archive, then install the Docker community edition (CE) related packages.
 
-    Ubuntu Prerequisites to use the Docker team keys (may already be installed).
+    Debian Linux based distributions has several prerequisites packages (may already be installed).
 
     ```shell
-    sudo apt-get install ca-certificates curl gnupg lsb-release
+    apt install ca-certificates curl gnupg lsb-release
     ```
 
     Add the Docker team public key to Ubuntu package manager, ensuring only official Docker packages are used
@@ -36,7 +36,7 @@ Docker Desktop provides a graphical UI for managing images, containers and volum
     Install Docker community edition packages
 
     ```shell
-    sudo apt update && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-desktop
+    apt update && sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-desktop
     ```
 
 ## Install Docker Desktop
@@ -45,7 +45,7 @@ Docker Desktop provides a graphical UI for managing images, containers and volum
 === "Ubuntu / Debian Install"
     [:globe_with_meridians: Download the DEB package](https://docs.docker.com/desktop/install/ubuntu/) for Docker Desktop UI and install using Ubuntu package manager
     ```shell
-    sudo apt install ./Downloads/docker-desktop-4.19.0-amd64.deb
+    apt install ./Downloads/docker-desktop-4.19.0-amd64.deb
     ```
 
 ### Post Install
