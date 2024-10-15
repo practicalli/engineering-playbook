@@ -2,7 +2,7 @@
 
 Debian Linux provides support for the widest range of hardware of any Linux distribution.
 
-The Debian project established the high-quality `.deb` package system which ensures all packages are consitenly defined and manage dependencies. 
+The Debian project established the high-quality `.deb` package system which ensures all packages are consitenly defined and manage dependencies.
 
 
 ## Install
@@ -18,7 +18,7 @@ The net install image is small and quick to download, containing only the essent
 
 ### root vs sudo
 
-Debian recommends using the root account to administer the system, rather than using `sudo` as with Ubuntu 
+Debian recommends using the root account to administer the system, rather than using `sudo` as with Ubuntu
 
 `su -` command in a terminal changes to the root user, upon entering a successful root password at the prompt
 
@@ -71,12 +71,12 @@ Update identity-practicalli-john file with annonymous email address from GitHub 
 
 ## Kitty Terminal
 
-Debian packages 
+Debian packages
 
 - kitty
 - kitty-doc
-- kitty-shell-integration  
-- kitty-terminfo           
+- kitty-shell-integration
+- kitty-terminfo
 - `fonts-firacode` use by Practicalli Kitty terminal
 
 
@@ -84,7 +84,7 @@ Debian packages
 apt install kitty kitty-doc kitty-shell-integration kitty-terminfo fonts-firacode
 
 ```
-root@londo:~# sudo apt install kitty kitty-doc kitty-shell-integration kitty-terminfo 
+root@londo:~# sudo apt install kitty kitty-doc kitty-shell-integration kitty-terminfo
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
@@ -98,7 +98,7 @@ The following NEW packages will be installed:
 0 upgraded, 9 newly installed, 0 to remove and 0 not upgraded.
 Need to get 4,106 kB of archives.
 After this operation, 20.6 MB of additional disk space will be used.
-Do you want to continue? [Y/n] 
+Do you want to continue? [Y/n]
 
 
 Link to practicalli/dotfiles/kitty in .config directory
@@ -114,12 +114,12 @@ check if XDG_CONFIG_HOME is set, if not set to $HOME/.config on command line (pr
 
 clone prezto to XDG location
 
-link customised configuration files to practicalli dotfiles/zsh 
+link customised configuration files to practicalli dotfiles/zsh
 
 - .zprezto practicalli customisations for Prezto
 - .zprofile includes .local/bin on execution path
 - .zshrc aliases for neovim configurations (astro, practicalli
-- .zshenv configures XDG locations 
+- .zshenv configures XDG locations
 
 > cd .config/zsh
 > ls -la
@@ -138,7 +138,7 @@ lrwxrwxrwx  1 practicalli practicalli    58 Aug  8 20:36 .zshrc -> /home/practic
 
 
 
-## Neovim 
+## Neovim
 
 Required packages
 
@@ -197,6 +197,8 @@ ln -s ~/.local/bin/nvim.appimage ~/.local/bin/nvim
 Edit .config/zsh/.zprofile and add $HOME/.local/bin to paths to search for executables
 
 Set the list of directories that Zsh searches for programs.
+
+!!! EXAMPLE "Zsh paths searched for executable files"
 path=(
   $HOME/.local/{,s}bin(N)
   /opt/{homebrew,local}/{,s}bin(N)
@@ -204,10 +206,10 @@ path=(
   $path
 )
 
-source .zprofile to  update the path and include the .local/bin
+Use the `source` command to load the changes in `.zprofile` to  update the path and include the `.local/bin` path
 
 ```shell
-source .config/zsh/.zprofile 
+source .config/zsh/.zprofile
 ```
 
 
