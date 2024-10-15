@@ -185,45 +185,51 @@ If a different version of nodejs is installed, then all that should be required 
 
 Download latest appimage for neovim from Neovim repository releases page
 
-chmod u+x nvim.appimage
+!!! EXAMPLE "Make Neovim executable"
+    ```shell
+    chmod u+x nvim.appimage
+    ```
 
-> Debian specific? - mkdir ~/.local/bin
+!!! EXAMPLE "Add Neovim to shell execution path"
+    ```shell
+    mv nvim.appimage ~/.local/bin && \
+    ln -s ~/.local/bin/nvim.appimage ~/.local/bin/nvim
+    ```
 
-mv nvim.appimage ~/.local/bin
-
-ln -s ~/.local/bin/nvim.appimage ~/.local/bin/nvim
-
-
-Edit .config/zsh/.zprofile and add $HOME/.local/bin to paths to search for executables
+Edit `.config/zsh/.zprofile` and add `$HOME/.local/bin` to paths to search for executables
 
 Set the list of directories that Zsh searches for programs.
 
 !!! EXAMPLE "Zsh paths searched for executable files"
-path=(
-  $HOME/.local/{,s}bin(N)
-  /opt/{homebrew,local}/{,s}bin(N)
-  /usr/local/{,s}bin(N)
-  $path
-)
+    ```
+    path=(
+      $HOME/.local/{,s}bin(N)
+      /opt/{homebrew,local}/{,s}bin(N)
+      /usr/local/{,s}bin(N)
+      $path
+    )
+    ```
 
 Use the `source` command to load the changes in `.zprofile` to  update the path and include the `.local/bin` path
 
-```shell
-source .config/zsh/.zprofile
-```
+!!! EXAMPLE "Load configuration into current shell session"
+    ```shell
+    source .config/zsh/.zprofile
+    ```
 
 
 ### Configure nvim
 
 Clone astronvim configuration and Practicalli Astronvim configuration
 
-Add aliases to .zshrc to call different neovim configurations
+Add aliases to `.zshrc` to call different neovim configurations
 
-```shell
-alias astro="NVIM_APPNAME=astronvim nvim"
-alias lazyvim="NVIM_APPNAME=lazyvim nvim"
-alias practicalli-redux="NVIM_APPNAME=neovim-config-redux nvim"
-```
+!!! EXAMPLE "Shell Aliases for neovim multiple configurations"
+    ```shell
+    alias astro="NVIM_APPNAME=astronvim nvim"
+    alias lazyvim="NVIM_APPNAME=lazyvim nvim"
+    alias practicalli-redux="NVIM_APPNAME=neovim-config-redux nvim"
+    ```
 
 [Practicalli Neovim - Multiple Configurations](https://practical.li/neovim/install/multiple-configurations/){target=_blank .md-button}
 
