@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -1936,6 +1936,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#date-and-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date and Time
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3338,6 +3347,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#date-and-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date and Time
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3371,13 +3389,13 @@
 
 <h1 id="debian-linux">Debian Linux<a class="headerlink" href="#debian-linux" title="Permanent link">λ︎</a></h1>
 <p>Debian Linux provides support for the widest range of hardware of any Linux distribution.</p>
-<p>The Debian project established the high-quality <code>.deb</code> package system which ensures all packages are consitenly defined and manage dependencies. </p>
+<p>The Debian project established the high-quality <code>.deb</code> package system which ensures all packages are consitenly defined and manage dependencies.</p>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">λ︎</a></h2>
 <p>Debian provides ISO images which can be burned onto compact disks or USB memory sticks.</p>
 <p>The net install image is small and quick to download, containing only the essential packages to run an operating system.</p>
 <h2 id="post-install">Post Install<a class="headerlink" href="#post-install" title="Permanent link">λ︎</a></h2>
 <h3 id="root-vs-sudo">root vs sudo<a class="headerlink" href="#root-vs-sudo" title="Permanent link">λ︎</a></h3>
-<p>Debian recommends using the root account to administer the system, rather than using <code>sudo</code> as with Ubuntu </p>
+<p>Debian recommends using the root account to administer the system, rather than using <code>sudo</code> as with Ubuntu</p>
 <p><code>su -</code> command in a terminal changes to the root user, upon entering a successful root password at the prompt</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>su<span class="w"> </span>-
 </code></pre></div>
@@ -3411,17 +3429,17 @@ Do you want to continue? [Y/n]</p>
 <p>link .config/git to Practicall dotfiles/git directory</p>
 <p>Update identity-practicalli-john file with annonymous email address from GitHub settings &gt; Emails section</p>
 <h2 id="kitty-terminal">Kitty Terminal<a class="headerlink" href="#kitty-terminal" title="Permanent link">λ︎</a></h2>
-<p>Debian packages </p>
+<p>Debian packages</p>
 <ul>
 <li>kitty</li>
 <li>kitty-doc</li>
-<li>kitty-shell-integration  </li>
-<li>kitty-terminfo           </li>
+<li>kitty-shell-integration</li>
+<li>kitty-terminfo</li>
 <li><code>fonts-firacode</code> use by Practicalli Kitty terminal</li>
 </ul>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>apt<span class="w"> </span>install<span class="w"> </span>kitty<span class="w"> </span>kitty-doc<span class="w"> </span>kitty-shell-integration<span class="w"> </span>kitty-terminfo<span class="w"> </span>fonts-firacode
 </code></pre></div>
-root@londo:~# sudo apt install kitty kitty-doc kitty-shell-integration kitty-terminfo 
+root@londo:~# sudo apt install kitty kitty-doc kitty-shell-integration kitty-terminfo
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
@@ -3435,19 +3453,19 @@ The following NEW packages will be installed:
 0 upgraded, 9 newly installed, 0 to remove and 0 not upgraded.
 Need to get 4,106 kB of archives.
 After this operation, 20.6 MB of additional disk space will be used.
-Do you want to continue? [Y/n] </p>
+Do you want to continue? [Y/n]</p>
 <p>Link to practicalli/dotfiles/kitty in .config directory</p>
 <h2 id="zsh-and-prezto">Zsh and Prezto<a class="headerlink" href="#zsh-and-prezto" title="Permanent link">λ︎</a></h2>
 <p>Install zsh package using su -</p>
 <p>as the user account, <code>zsh</code> command to change to zsh from bash shell</p>
 <p>check if XDG_CONFIG_HOME is set, if not set to $HOME/.config on command line (practicalli dotfiles has a zshenv that does this later in process)</p>
 <p>clone prezto to XDG location</p>
-<p>link customised configuration files to practicalli dotfiles/zsh </p>
+<p>link customised configuration files to practicalli dotfiles/zsh</p>
 <ul>
 <li>.zprezto practicalli customisations for Prezto</li>
 <li>.zprofile includes .local/bin on execution path</li>
 <li>.zshrc aliases for neovim configurations (astro, practicalli</li>
-<li>.zshenv configures XDG locations </li>
+<li>.zshenv configures XDG locations</li>
 </ul>
 <blockquote>
 <p>cd .config/zsh
@@ -3494,29 +3512,70 @@ lrwxrwxrwx  1 practicalli practicalli    58 Aug  8 20:36 .zshrc -&gt; /home/prac
 <p>If a different version of nodejs is installed, then all that should be required is deleting and recreating the <code>current</code> symbolic link in <code>~/.local/apps/nodejs/</code> to point to the desired version.</p>
 <h3 id="releases">Releases<a class="headerlink" href="#releases" title="Permanent link">λ︎</a></h3>
 <p>Download latest appimage for neovim from Neovim repository releases page</p>
-<p>chmod u+x nvim.appimage</p>
-<blockquote>
-<p>Debian specific? - mkdir ~/.local/bin</p>
-</blockquote>
-<p>mv nvim.appimage ~/.local/bin</p>
-<p>ln -s ~/.local/bin/nvim.appimage ~/.local/bin/nvim</p>
-<p>Edit .config/zsh/.zprofile and add $HOME/.local/bin to paths to search for executables</p>
-<p>Set the list of directories that Zsh searches for programs.
-path=(
-  $HOME/.local/{,s}bin(N)
-  /opt/{homebrew,local}/{,s}bin(N)
-  /usr/local/{,s}bin(N)
-  $path
-)</p>
-<p>source .zprofile to  update the path and include the .local/bin</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">source</span><span class="w"> </span>.config/zsh/.zprofile<span class="w"> </span>
+<div class="admonition example">
+<p class="admonition-title">Make Neovim executable</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>chmod<span class="w"> </span>u+x<span class="w"> </span>nvim.appimage
 </code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Add Neovim to shell execution path</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mv<span class="w"> </span>nvim.appimage<span class="w"> </span>~/.local/bin<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>ln<span class="w"> </span>-s<span class="w"> </span>~/.local/bin/nvim.appimage<span class="w"> </span>~/.local/bin/nvim
+</code></pre></div>
+</div>
+<p>Edit <code>.config/zsh/.zprofile</code> and add <code>$HOME/.local/bin</code> to paths to search for executables</p>
+<p>Set the list of directories that Zsh searches for programs.</p>
+<div class="admonition example">
+<p class="admonition-title">Zsh paths searched for executable files</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>path=(
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  $HOME/.local/{,s}bin(N)
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  /opt/{homebrew,local}/{,s}bin(N)
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>  /usr/local/{,s}bin(N)
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  $path
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>)
+</code></pre></div>
+</div>
+<p>Use the <code>source</code> command to load the changes in <code>.zprofile</code> to  update the path and include the <code>.local/bin</code> path</p>
+<div class="admonition example">
+<p class="admonition-title">Load configuration into current shell session</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">source</span><span class="w"> </span>.config/zsh/.zprofile
+</code></pre></div>
+</div>
 <h3 id="configure-nvim">Configure nvim<a class="headerlink" href="#configure-nvim" title="Permanent link">λ︎</a></h3>
 <p>Clone astronvim configuration and Practicalli Astronvim configuration</p>
-<p>Add aliases to .z call different neovim configurations</p>
-<p>alias astro="NVIM_APPNAME=astronvim nvim"
-alias lazyvim="NVIM_APPNAME=lazyvim nvim"
-alias practicalli-redux="NVIM_APPNAME=neovim-config-redux nvim"</p>
+<p>Add aliases to <code>.zshrc</code> to call different neovim configurations</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Aliases for neovim multiple configurations</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">astro</span><span class="o">=</span><span class="s2">&quot;NVIM_APPNAME=astronvim nvim&quot;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">lazyvim</span><span class="o">=</span><span class="s2">&quot;NVIM_APPNAME=lazyvim nvim&quot;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nb">alias</span><span class="w"> </span>practicalli-redux<span class="o">=</span><span class="s2">&quot;NVIM_APPNAME=neovim-config-redux nvim&quot;</span>
+</code></pre></div>
+</div>
+<p><a class="md-button" href="https://practical.li/neovim/install/multiple-configurations/" target="_blank">Practicalli Neovim - Multiple Configurations</a></p>
+<h2 id="date-and-time">Date and Time<a class="headerlink" href="#date-and-time" title="Permanent link">λ︎</a></h2>
+<p>The <code>date</code> command on Linux systems is used to show the system date or set a specific date and time. The system date can only be changed by the root account or accounts in the <code>sudo</code> group.</p>
+<p>When using the Gnome desktop the system date is automatically managed, keeping the date and time current.</p>
+<p>The <code>timedatectl</code> command is used to control automatic updating of the system time.  This must be disabled to set the date and time to something other than the current.</p>
+<div class="admonition note">
+<p class="admonition-title">Disable automatic date-time</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>timedatectl<span class="w"> </span>set-ntp<span class="w"> </span><span class="m">0</span>
+</code></pre></div>
+</div>
+<p>When the timedateclt is disabled, then the <code>date</code> command can be used to set a specific date and or time.</p>
+<div class="admonition example">
+<p class="admonition-title">Set the date and time</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w"> </span>date<span class="w"> </span>-s<span class="w"> </span><span class="s1">&#39;2024-09-16 21:32:00&#39;</span>
+</code></pre></div>
+</div>
+<p><code>date</code> command will show the current date, confirming that the OS system date was changed.</p>
+<div class="admonition note">
+<p class="admonition-title">Enable automatic date-time</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>timedatectl<span class="w"> </span>set-ntp<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+</div>
+<blockquote>
+<p>Linux used to use the ntp service which is available via the Debian <code>ntp</code> package, but not used by Gnome desktop</p>
+</blockquote>
 
 
 
@@ -3537,7 +3596,7 @@ alias practicalli-redux="NVIM_APPNAME=neovim-config-redux nvim"</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 23, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 15, 2024</span>
   </span>
 
     
@@ -3697,10 +3756,10 @@ alias practicalli-redux="NVIM_APPNAME=neovim-config-redux nvim"</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
