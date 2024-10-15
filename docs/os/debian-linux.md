@@ -215,9 +215,43 @@ source .config/zsh/.zprofile
 
 Clone astronvim configuration and Practicalli Astronvim configuration
 
-Add aliases to .z call different neovim configurations
+Add aliases to .zshrc to call different neovim configurations
 
+```shell
 alias astro="NVIM_APPNAME=astronvim nvim"
 alias lazyvim="NVIM_APPNAME=lazyvim nvim"
 alias practicalli-redux="NVIM_APPNAME=neovim-config-redux nvim"
+```
 
+[Practicalli Neovim - Multiple Configurations](https://practical.li/neovim/install/multiple-configurations/){target=_blank .md-button}
+
+
+## Date and Time
+
+The `date` command on Linux systems is used to show the system date or set a specific date and time. The system date can only be changed by the root account or accounts in the `sudo` group.
+
+
+When using the Gnome desktop the system date is automatically managed, keeping the date and time current.
+
+The `timedatectl` command is used to control automatic updating of the system time.  This must be disabled to set the date and time to something other than the current.
+
+!!! NOTE "Disable automatic date-time"
+    ```shell
+    timedatectl set-ntp 0
+    ```
+
+When the timedateclt is disabled, then the `date` command can be used to set a specific date and or time.
+
+!!! EXAMPLE "Set the date and time"
+    ```shell
+     date -s '2024-09-16 21:32:00'
+    ```
+
+`date` command will show the current date, confirming that the OS system date was changed.
+
+!!! NOTE "Enable automatic date-time"
+    ```shell
+    timedatectl set-ntp 1
+    ```
+
+> Linux used to use the ntp service which is available via the Debian `ntp` package, but not used by Gnome desktop
