@@ -185,8 +185,9 @@ nav:
           - Cron: os/cron.md
           - Debian: os/debian-linux.md
           - Ubuntu: os/ubuntu-linux.md
+          - Hyprland: os/linux/hyprland.md
           - Regolith: os/linux/regolith.md
-          - MacOSX: os/macosx.md
+      - MacOSX: os/macosx.md
       - Shell:
           - os/shell/index.md
           - os/shell/bash.md
