@@ -11,6 +11,25 @@ Debian provides ISO images which can be burned onto compact disks or USB memory 
 
 The net install image is small and quick to download, containing only the essential packages to run an operating system.
 
+Copy the Debian Linux ISO image to a USB of 1GB size or larger
+
+!!! EXAMPLE "Create USB install disk from Debian ISO file"
+    ```shell
+    cp debian.iso /dev/sda
+    ```
+
+??? HINT "Creating USB install disks with non-Debian images"
+    Find the name of the USB stick
+    ```shell
+    ls -l /dev/disk/by-id/usb-*
+    ```
+
+    Copy the image using the name of the USB Stick
+    ```shell
+    dd bs=4M if=path/to/filename.iso of=/dev/disk/by-id/usb-My_flash_drive conv=fsync oflag=direct status=progress
+    ```
+    [Arch Linux: ISO image command line utilities](https://wiki.archlinux.org/title/USB_flash_installation_medium)
+
 
 ## Post Install
 
@@ -36,25 +55,25 @@ su -
 ## Set XDG freedesktop locations
 
 
+=== "Zsh"
+
+    ```config
+    # Set XDG_CONFIG_HOME for clean management of configuration files
+    export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:=$HOME/.config}"
+    export XDG_DATA_HOME="${XDG_DATA_HOME:=$HOME/.local/share}"
+    export XDG_STATE_HOME="${XDG_STATE_HOME:=$HOME/.local/state}"
+    export XDG_CACHE_HOME="${XDG_CACHE_HOME:=$HOME/.cache}"
+    export ZDOTDIR="${ZDOTDIR:=$XDG_CONFIG_HOME/zsh}"
+    ```
+
+=== "Bash"
+
 
 ## Git install
 
-root@londo:~# apt install git
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-The following additional packages will be installed:
-  git-man liberror-perl patch
-Suggested packages:
-  git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui gitk
-  gitweb git-cvs git-mediawiki git-svn ed diffutils-doc
-The following NEW packages will be installed:
-  git git-man liberror-perl patch
-0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
-Need to get 9,377 kB of archives.
-After this operation, 48.0 MB of additional disk space will be used.
-Do you want to continue? [Y/n]
-
+```shell
+apt install git
+```
 
 ## Clone practicalli/dotfiles
 
@@ -64,6 +83,10 @@ clone to projects/practicalli/dotfiles
 ## Git configure
 
 link .config/git to Practicall dotfiles/git directory
+
+```shell
+ln -s ~/projects/practicalli/dotfiles/git ~/.config/git
+```
 
 Update identity-practicalli-john file with annonymous email address from GitHub settings > Emails section
 
@@ -84,61 +107,94 @@ Debian packages
 apt install kitty kitty-doc kitty-shell-integration kitty-terminfo fonts-firacode
 
 ```
-root@londo:~# sudo apt install kitty kitty-doc kitty-shell-integration kitty-terminfo
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-The following additional packages will be installed:
-  libb2-1 libjs-jquery libjs-sphinxdoc libjs-underscore librsync2
-Suggested packages:
-  imagemagick
-The following NEW packages will be installed:
-  kitty kitty-doc kitty-shell-integration kitty-terminfo libb2-1 libjs-jquery
-  libjs-sphinxdoc libjs-underscore librsync2
-0 upgraded, 9 newly installed, 0 to remove and 0 not upgraded.
-Need to get 4,106 kB of archives.
-After this operation, 20.6 MB of additional disk space will be used.
-Do you want to continue? [Y/n]
-
 
 Link to practicalli/dotfiles/kitty in .config directory
 
+```shell
+ln -s ~/projects/practicalli/dotfiles/kitty ~/.config/kitty
+```
 
-## Zsh and Prezto
 
-Install zsh package using su -
+## Zsh
 
-as the user account, `zsh` command to change to zsh from bash shell
+Install zsh package
 
-check if XDG_CONFIG_HOME is set, if not set to $HOME/.config on command line (practicalli dotfiles has a zshenv that does this later in process)
+```shell
+apt install zsh
+```
 
-clone prezto to XDG location
+## Zsh Configuration
 
-link customised configuration files to practicalli dotfiles/zsh
+[Prezto]() and [OhMyZsh]() are community created configurations that provide a rich experience with very little work.
 
-- .zprezto practicalli customisations for Prezto
-- .zprofile includes .local/bin on execution path
-- .zshrc aliases for neovim configurations (astro, practicalli
-- .zshenv configures XDG locations
+!!! HINT "Prezto recommended"
+    Practicalli recommends Prezto as it has excellent completion capabilities, especially wish fish mode enabled.
 
-> cd .config/zsh
-> ls -la
-total 112
-drwxr-xr-x  3 practicalli practicalli  4096 Aug  9 16:10 .
-drwx------ 12 practicalli practicalli  4096 Aug  8 20:54 ..
-drwxr-xr-x  6 practicalli practicalli  4096 Aug  8 19:09 .zprezto
--rw-r--r--  1 practicalli practicalli 92846 Aug  8 20:45 .p10k.zsh
-lrwxrwxrwx  1 practicalli practicalli    53 Aug  8 20:35 .zlogin -> /home/practicalli/.config/zsh/.zprezto/runcoms/zlogin
-lrwxrwxrwx  1 practicalli practicalli    54 Aug  8 20:35 .zlogout -> /home/practicalli/.config/zsh/.zprezto/runcoms/zlogout
-lrwxrwxrwx  1 practicalli practicalli    62 Aug  8 20:38 .zpreztorc -> /home/practicalli/projects/practicalli/dotfiles/zsh/.zpreztorc
-lrwxrwxrwx  1 practicalli practicalli    55 Aug  8 20:35 .zprofile -> /home/practicalli/.config/zsh/.zprezto/runcoms/zprofile
-lrwxrwxrwx  1 practicalli practicalli    59 Aug  8 20:36 .zshenv -> /home/practicalli/projects/practicalli/dotfiles/zsh/.zshenv
--rw-------  1 practicalli practicalli  1460 Aug  9 16:10 .zsh_history
-lrwxrwxrwx  1 practicalli practicalli    58 Aug  8 20:36 .zshrc -> /home/practicalli/projects/practicalli/dotfiles/zsh/.zshrc
+    OhMyZsh is used within Termux as Prezto has not worked correctly in my experiences.
 
+
+=== "Prezto"
+
+    Prezto provides sane defaults, aliases, functions, auto completion, and prompt themes.
+
+
+    As the user account, `zsh` command to change to zsh from bash shell
+
+    check if XDG_CONFIG_HOME is set, if not set to $HOME/.config on command line (practicalli dotfiles has a zshenv that does this later in process)
+
+    clone prezto to XDG location
+
+    !!! EXAMPLE "Clone Prezto to XDG_CONFIG_HOME"
+    ```shell
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-${XDG_CONFIG_HOME:-$HOME/.config}/zsh}/.zprezto"
+    ```
+
+
+    ```shell
+    export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:=$HOME/.config}"
+    [[ -d $XDG_CONFIG_HOME/zsh ]] && export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+    source "$ZDOTDIR/.zshenv"
+    ```
+
+    Generate symbolic links to the zsh configuration files residing in the prezto directory
+
+    ```shell
+    setopt EXTENDED_GLOB
+    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+      ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+    done
+    ```
+
+    Practicalli creates custom configuration files to keep updating Prezto a simple Git pull.
+
+    - `.zprezto` practicalli customisations for Prezto
+    - `.zprofile` includes .local/bin on execution path
+    - `.zshrc` aliases for neovim configurations (astro, practicalli
+    - `.zshenv` configures XDG locations
+
+    ```shell
+    .zprezto
+    .p10k.zsh
+    .zlogin -> /home/practicalli/.config/zsh/.zprezto/runcoms/zlogin
+    .zlogout -> /home/practicalli/.config/zsh/.zprezto/runcoms/zlogout
+    .zpreztorc -> /home/practicalli/projects/practicalli/dotfiles/zsh/.zpreztorc
+    .zprofile -> /home/practicalli/.config/zsh/.zprezto/runcoms/zprofile
+    .zshenv -> /home/practicalli/projects/practicalli/dotfiles/zsh/.zshenv
+    .zsh_history
+    .zshrc -> /home/practicalli/projects/practicalli/dotfiles/zsh/.zshrc
+    ```
+
+    !!! EXAMPLE "Change the default shell"
+    ```shell
+    chsh -s /usr/bin/zsh
+    ```
 
 
 ## Neovim
+
+!!! HINT "Practicalli Neovim install"
+    See the [install guide in Practicalli Neovim](https://practical.li/neovim/install/) book
+
 
 Required packages
 
@@ -263,3 +319,42 @@ When the timedateclt is disabled, then the `date` command can be used to set a s
     ```
 
 > Linux used to use the ntp service which is available via the Debian `ntp` package, but not used by Gnome desktop
+
+
+## Add Sid packages on Testing
+
+Packages can be installed from `sid` (unstable) when the `testing` version of Debian Linux is installed, referred to as "Testing-Unstable Mix".
+
+
+Configure apt to ensure a testing system stays on testing, without apt upgrading every package to the unstable version.
+
+Define testing as the default Debian release
+
+!!! EXAMPLE "Set Default Release as testing with security updates"
+    ```config title="/etc/apt/apt.conf.d/20-tum.conf"
+    APT::Default-Release "/^testing(|-security|-updates)$/";
+    ```
+
+In the Apt sources.list configuration, copy the main testing line and change the version to unstable
+
+!!! EXAMPLE "Add unstable to package sources"
+    ```conf title="/etc/apt/sources.list"
+    # Testing
+    deb http://deb.debian.org/debian/ trixie main contrib non-free-firmware non-free
+    deb-src http://deb.debian.org/debian/ trixie main contrib non-free-firmware non-free
+    deb http://deb.debian.org/debian/ trixie-updates main contrib non-free-firmware non-free
+    deb http://deb.debian.org/debian/ trixie-backports main contrib non-free-firmware non-free
+
+    deb http://security.debian.org/debian-security trixie-security main contrib non-free-firmware
+    deb-src http://security.debian.org/debian-security trixie-security main contrib non-free-firmware
+
+    # Sid
+    # deb http://deb.debian.org/debian/ unstable main contrib non-free-firmware non-free
+    ```
+
+Run apt update to refresh the cache. Use `apt -t unstable install <package-name>` to install package foo from unstable rather than testing.
+
+!!! EXAMPLE "Install specific package from Sid"
+    ```shell
+    apt -t unstable install hyprland
+    ```
