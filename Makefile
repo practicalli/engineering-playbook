@@ -11,6 +11,7 @@
 # ------- Makefile Variables --------- #
 # run help if no target specified
 .DEFAULT_GOAL := help
+SHELL := /usr/bin/zsh
 
 # Column the target description is printed from
 HELP-DESCRIPTION-SPACING := 24
