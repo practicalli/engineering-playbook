@@ -4,54 +4,90 @@
 
 Building a Clojure project from source to create a docker image provides an effective workflow for local testing and system integration.
 
-A multi-stage Dockerfile is recommended to ensure build tools and artefacts are not included in the final Docker image, helping minimise the size and resources used by that image.
+A multi-stage Dockerfile uses a separate build stage that separates tools and temporary artefacts from the final Docker image, producing a runtime image with minimal size and resources used.
 
-??? HINT "Practicalli Project Templates provide Multi-stage Dockerfile"
+??? HINT "Practicalli Project Templates provide a Multi-stage Dockerfile"
     [:globe_with_meridians: Practialli Project Templates](https://practical.li/clojure/clojure-cli/projects/templates/){target=_blank} provides `Dockerfile`, `.dockerignore` and `compose.yaml` configurations to optimise the build and run of Clojure projects.
     ```shell
     clojure -T:project/create :template practicalli/service :name practicalli/gameboard
     ```
     Practicalli Project Templates are included in the [:globe_with_meridians: Practicalli Clojure CLI Config](https://practical.li/clojure/clojure-cli/practicalli-config/){target=_blank} which provides aliases for running community tools to support a wide range of development tasks.
 
-??? WARNING "Updating to Java 21 Long Term Support release"
-    This guide will be updated to use images with Java 21, the latest Long Term Support release (LTS) as of October 2023.
-    
-     Examples will be provided using Alpine Linux and Debian Linux operating system. 
+??? INFO "Java 21 Long Term Support release recommended"
+    This guide uses Docker images with Java 21, the latest Long Term Support release (LTS) as of October 2023.
+
+     Examples will be provided using Alpine Linux and Debian Linux operating system.
 
 
 ## Builder stage
 
+The builder stage packages the Clojure service into an uberjar containing the Clojure standard library and the build of the Clojure service.
 
-Practicalli uses the latest Clojure CLI release and the latest Long Term Support (LTS) version of [:fontawesome-solid-book-open: Eclipse Temurin](images.md#openjdk) (OpenJDK).
+Practicalli uses the Official Clojure Docker image with Clojure CLI as the build environment.
 
-[:fontawesome-solid-book-open: Alpine Linux](images.md#alpine-linux) image variants are used to keep the image file size as small as possible, reducing local resource requirements (and image download time).
+??? INFO "Clojure Docker image uses OpenJDK Eclipse Temuring image"
+    OpenJDK  [:fontawesome-solid-book-open: Eclipse Temurin](images.md#openjdk) is used as the base for all Clojure Official docker images.
 
+    Practicalli recommends using the same OpenJDK Long Term Support image tag and Operating system for the Clojure and Eclipse Termurin images.
 
-!!! EXAMPLE "Set builder stage image using specific Java version"
-    ```dockerfile title="Dockerfile"
-    FROM clojure:temurin-21-tools-deps-alpine AS builder
-    ```
+=== "Alpine Linux"
 
-> [clojure:temurin-21-tools-deps-alpine](https://hub.docker.com/layers/library/clojure/temurin-21-tools-deps-alpine/images/sha256-df9061b056300f3513407221ba4f5a60d330660563a6ecadcac62570a787bacd?context=explore) image details
-
-`CLOJURE_VERSION` will over-ride the version of Clojure CLI in the Clojure image (which defaults to latest Clojure CLI release). Or choose an image that has a specific Clojure CLI version, e.g. `temurin-17-tools-deps-1.11.1.1182-alpine`
+    [:fontawesome-solid-book-open: Alpine Linux image](images.md#alpine-linux) variants are used to keep the image file size as small as possible, reducing local resource requirements (and image download time).
 
 
-!!! EXAMPLE "Set builder stage image with specific Clojure version"
-    ```dockerfile
-    FROM clojure:temurin-17-alpine AS builder
-    ENV CLOJURE_VERSION=1.11.1.1182
-    ```
+    !!! EXAMPLE "Set builder stage image using specific Java version"
+        ```dockerfile title="Dockerfile"
+        FROM clojure:temurin-21-tools-deps-alpine AS builder
+        ```
+
+    > [clojure:temurin-21-tools-deps-alpine](https://hub.docker.com/layers/library/clojure/temurin-21-tools-deps-alpine/images/sha256-df9061b056300f3513407221ba4f5a60d330660563a6ecadcac62570a787bacd?context=explore) image details
+
+    `CLOJURE_VERSION` will over-ride the version of Clojure CLI in the Clojure image (which defaults to latest Clojure CLI release). Or choose an image that has a specific Clojure CLI version, e.g. `temurin-21-tools-deps-1.11.1.1413-alpine`
+
+
+    !!! EXAMPLE "Set builder stage image with specific Clojure version"
+        ```dockerfile title="Dockerfile"
+        FROM clojure:temurin-21-alpine AS builder
+        ENV CLOJURE_VERSION=1.12.0.1479
+        ```
+
+
+=== "Debian Linux"
+
+    [:fontawesome-solid-book-open: Debian Linux](images.md#debian-linux) bookworm is the latest stable image, using `slim` variant for a minimal set of packages
+
+
+    !!! EXAMPLE "Set builder stage image using specific Java version"
+        ```dockerfile title="Dockerfile"
+        FROM clojure:temurin-21-tools-deps-bookworm-slim AS builder
+        ```
+
+    > [clojure:temurin-21-tools-deps-alpine](https://hub.docker.com/layers/library/clojure/temurin-21-tools-deps-alpine/images/sha256-df9061b056300f3513407221ba4f5a60d330660563a6ecadcac62570a787bacd?context=explore) image details
+
+    `CLOJURE_VERSION` will over-ride the version of Clojure CLI in the Clojure image (which defaults to latest Clojure CLI release). Or choose an image that has a specific Clojure CLI version, e.g. `temurin-17-tools-deps-1.11.1.1182-alpine`
+
+
+    !!! EXAMPLE "Set builder stage image with specific Clojure version"
+        ```dockerfile title="Dockerfile"
+        FROM clojure:temurin-21-tools-deps-bookworm-slim AS builder
+        ENV CLOJURE_VERSION=1.12.0.1479
+        ```
+
+??? HINT "Clojure CLI release history"
+    [Clojure.org Tool Releases]() page shows the current release and history of each released version.
+
+
+
 
 Create directory for building the project code and set it as the working directory within the Docker container to give RUN commands a path to execute from.
 
 !!! EXAMPLE "Create working directory for build"
-    ```dockerfile
+    ```dockerfile title="Dockerfile"
     RUN mkdir -p /build
     WORKDIR /build
     ```
 
-!!! INFO "Clojure CLI and tools.build"
+??? INFO "Clojure CLI and tools.build"
     [:fontawesome-solid-book-open: Practicalli Clojure - Tools.Build](https://practical.li/clojure/clojure-cli/projects/package/tools-build/) is the recommended approach to creating an Uberjar from a Clojure CLI project.
 
     As long as the required files are copied, any build tool and task can be used to create the Uberjar file that packages the Clojure service for deployment.
@@ -59,23 +95,46 @@ Create directory for building the project code and set it as the working directo
 
 ### Cache Dependencies
 
-Clojure CLI is used to download dependencies for the project and any other tooling used during the build stage, e.g. test runners, packaging tools to create an uberjar.  Dependency download should only occur once, unless the `deps.edn` file changes.
+Clojure CLI is used to download library dependencies for the project and any other tooling used during the build stage, e.g. test runners, packaging tools to create an uberjar.
+
+Once a library has been downloaded it becomes part of the cached layer so the download should only occur once.
+
+If the `deps.edn` file changes then the layer will run again and update the cache if changes to the library dependencies were made.
+
 
 === "Makefile"
-    Copy the `deps.edn` file to the build stage and use the `clojure -P` prepare (dry run) command to download the dependencies without running any Clojure code or tools.
+    [:fontawesome-solid-book-open: Practicalli Makefile](/engineering-playbook/build-tool/make/){target=_blank} includes a `deps` task that downloads all the library dependency for a project.
+
+    The `deps` Makefile target uses the `clojure -P` command to download the dependencies without running any other Clojure code or tools.
+
+    ??? EXAMPLE "Makefile deps target using Clojure CLI"
+        ```Makefile
+         deps: deps.edn  ## Prepare dependencies for test and dist targets
+            $(info --------- Download test and service libraries ---------)
+            clojure -P -X:build
+        ```
+
+    [:fontawesome-solid-book-open: Practicalli Makefile tasks](/engineering-playbook/build-tool/make/){target=_blank .md-button}
+
+    Copy the essential build configuration files:
+
+    - `Makefile` which defines the `deps` target
+    - `deps.edn` file which includes the project dependencies and a `:project/build` alias that includes the tools.build library.
+    - `build.clj` script to define built tasks using `tools.build`
 
     !!! EXAMPLE "Create dependency cache overlay"
-        ```dockerfile
-        COPY deps.edn build.clj Makefile /build/
+        ```dockerfile title="Dockerfile"
+        COPY Makefile deps.edn build.clj /build/
         RUN make deps
         ```
     The dependencies are cached in the Docker overlay (layer) and this cache will be used on successive docker builds unless the `deps.edn` file or `Makefile` is change.
+
 
 === "Clojure CLI"
     Copy the `deps.edn` file to the build stage and use the `clojure -P` prepare (dry run) command to download the dependencies without running any Clojure code or tools.
 
     !!! EXAMPLE "Create dependency cache overlay"
-        ```dockerfile
+        ```dockerfile title="Dockerfile"
         COPY deps.edn build.clj /build/
         RUN clojure -P -X:build
         ```
@@ -87,6 +146,7 @@ Clojure CLI is used to download dependencies for the project and any other tooli
 
 `deps.edn` in this example contains the project dependencies and `:build` alias used build the Uberjar.
 
+
 ### Build Uberjar
 
 Copy all the project files to the docker builder working directory, creating another overlay.
@@ -97,22 +157,27 @@ Copying the src and other files in a separate overlay to the `deps.edn` file ens
 === "Makefile"
     Run the `dist` task to generate an Uberjar for distribution.
 
-    ```dockerfile
-    COPY ./ /build
-    RUN make dist
-    ```
+    !!! EXAMPLE "Use tools.build to generate an Uberjar"
+        ```dockerfile title="Dockerfile"
+        COPY ./ /build
+        RUN make dist
+        ```
 
 === "Clojure CLI"
     Run the `tools.build` command to generate an Uberjar.
 
-    ```dockerfile
-    COPY ./ /build
-    RUN clojure -T:build uberjar
-    ```
-    `:build` is an alias to include [Clojure tools.build](https://practical.li/clojure/clojure-cli/projects/tools-build/) dependencies which is used to build the Clojure project into an Uberjar.
+    !!! EXAMPLE "Use tools.build to generate an Uberjar"
+        ```dockerfile title="Dockerfile"
+        COPY ./ /build
+        RUN clojure -T:project/build uberjar
+        ```
+
+    `:project/build` is an alias to include [Clojure tools.build](https://practical.li/clojure/clojure-cli/projects/tools-build/) dependencies which is used to build the Clojure project into an Uberjar.
+
 
 === "Babashka Task Runner"
     Pull request welcome
+
 
 ### Docker Ignore patterns
 
@@ -161,13 +226,22 @@ Keep the `.dockerignore` file simple by excluding all files with `*` pattern and
 
 ## Run-time stage
 
-The Alpine Linux version of the Eclipse Temurin image is used as it is around 5Mb in size, compared to 60Mb or more of other operating system images.
 
-!!! EXAMPLE "Image for run-time stage"
-    ```dockerfile
-    FROM eclipse-temurin:17-alpine AS final
-    ```
+=== "Alpine Linux"
+    The Alpine Linux version of the Eclipse Temurin image is used as it is around 5Mb in size, compared to 60Mb or more of other operating system images.
 
+    !!! EXAMPLE "Image for run-time stage"
+        ```dockerfile title="Dockerfile"
+        FROM eclipse-temurin:17-alpine AS final
+        ```
+
+=== "Debian Linux"
+    The Alpine Linux version of the Eclipse Temurin image is used as it is around 5Mb in size, compared to 60Mb or more of other operating system images.
+
+    !!! EXAMPLE "Image for run-time stage"
+        ```dockerfile title="Dockerfile"
+        FROM eclipse-temurin:21-bookworm-slim AS final
+        ```
 Run-time containers are often cached in a repository, e.g. AWS Container Repository (ECR).  `LABEL` adds metadata to the container helping it to be identified in a repository or in a local development environment.
 
 ```dockerfile
@@ -180,54 +254,82 @@ LABEL description="Gameboard API service"
 
 > Use `docker inspect` to view the metadata
 
+
+### Additional Packages
+
 Optionally, add packages to support running the service or helping to debug issue in the container when it is running.  For example, add `dumb-init` to manage processes, `curl` and `jq` binaries for manual running of system integration testing scripts for API testing.
 
-`apk` is the package tool for Alpine Linux and `--no-cache` option ensures the install file is not part of the resulting image, saving resources.  Alpine Linux recommends setting versions to use any point release with the `~=` approximately equal version, so any same major.minor version of the package can be used.
 
-!!! EXAMPLE "Add Alpine packages"
-    ```dockerfile
-    RUN apk add --no-cache \
-        dumb-init~=1.2.5 \
-        curl~=8.0.1 \
-        jq~=1.6
-    ```
+=== "Alpine Linux"
 
-> [Check Alpine packages](https://pkgs.alpinelinux.org/packages) if new major versions are no longer available (low frequency)
+    `apk` is the package tool for Alpine Linux and `--no-cache` option ensures the install file is not part of the resulting image, saving resources.  Alpine Linux recommends setting versions to use any point release with the `~=` approximately equal version, so any same major.minor version of the package can be used.
+
+    !!! EXAMPLE "Add Alpine packages"
+        ```dockerfile title="Dockerfile"
+        RUN apk add --no-cache \
+            dumb-init~=1.2.5 \
+            curl~=8.0.1 \
+            jq~=1.6
+        ```
+
+    > [Check Alpine packages](https://pkgs.alpinelinux.org/packages) if new major versions are no longer available (low frequency)
+
+
+=== "Debian Linux"
+
+    `apt` is the Advanced Package Tool for Debian Linux and any Debian based distrobution like Ubuntu.
+
+    !!! EXAMPLE "Add Alpine packages"
+        ```dockerfile title="Dockerfile"
+        ENV DEBIAN_FRONTEND=noninteractive
+        RUN apt update && \
+            apt install -y dumb-init curl jq && \
+            apt autoremove &&
+            rm -rf /var/lib/apt/lists/*
+        ```
+
+    > [Debian Linux packages](https://pkgs.alpinelinux.org/packages) if new major versions are no longer available (low frequency)
+
 
 ### Non-root group and user
 
 Docker runs as root user by default and if a container is compromised the root permissions and could lead to a compromised host system. [Docker recommends creating a user and group in the run-time image](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#user)  to run the service
 
 
-!!! EXAMPLE "Create a non-privileged user account"
-    ```dockerfile
-    ARG UID=10001
-    RUN adduser \
-        --disabled-password \
-        --gecos "" \
-        --home "/nonexistent" \
-        --shell "/sbin/nologin" \
-        --no-create-home \
-        --uid "${UID}" \
-        clojure
-    ```
+=== "Alpine Linux"
+    !!! EXAMPLE "Create a non-privileged user account"
+        ```dockerfile
+        ARG UID=10001
+        RUN adduser \
+            --disabled-password \
+            --gecos "" \
+            --home "/nonexistent" \
+            --shell "/sbin/nologin" \
+            --no-create-home \
+            --uid "${UID}" \
+            clojure
+        ```
 
-!!! EXAMPLE "Create Non-root group and user"
-    ```dockerfile
-    RUN addgroup -S practicalli && adduser -S practicalli -G practicalli
-    ```
+    !!! EXAMPLE "Create Non-root group and user"
+        ```dockerfile
+        RUN addgroup -S practicalli && adduser -S practicalli -G practicalli
+        ```
 
-!!! EXAMPLE "Create directory to contain service"
-    Create directory to contain service archive, owned by non-root user
-    ```dockerfile
-    RUN mkdir -p /service && chown -R clojure. /service
-    ```
+    !!! EXAMPLE "Create directory to contain service"
+        Create directory to contain service archive, owned by non-root user
+        ```dockerfile
+        RUN mkdir -p /service && chown -R clojure. /service
+        ```
 
-!!! EXAMPLE "Set user"
-    Instruct docker that all future commands should run as the appuser user
-    ```dockerfile
-    USER clojure
-    ```
+    !!! EXAMPLE "Set user"
+        Instruct docker that all future commands should run as the appuser user
+        ```dockerfile
+        USER clojure
+        ```
+
+=== "Debian Linux"
+
+
 
 ### Copy Uberjar to run-time stage
 
@@ -332,9 +434,10 @@ Use `dumb-init` as the `ENTRYPOINT` command and `CMD` to pass the java command t
     CMD ["java", "-jar", "/service/practicalli-service.jar"]
     ```
 
-> Alternatively, run dumb-jump and java within the `ENTRYPOINT` directive, `ENTRYPOINT ["/usr/bin/dumb-init", "--", "java", "-jar", "/service/practicalli-service.jar"]`.  This approach cannot be overridden correctly with an additional CMD directive on the command line when using `docker run`.
+> Alternatively, run dumb-jump and java within the `ENTRYPOINT` directive, `ENTRYPOINT ["/usr/bin/dumb-init", "--", "java", "-jar", "/service/practicalli-service.jar"]`.  This approach cannot be overridden with an additional CMD directive on the command line when using `docker run`.
 
-## Build and Run with docker
+
+## Build and Run
 
 Ensure docker services are running, i.e. start docker desktop.
 
