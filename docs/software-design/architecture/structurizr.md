@@ -6,7 +6,7 @@ Define a single **model** divided into **softwareSystems** within which **servic
 
 Many views can be generated from the single model and changes to the model automatically update those views to ensure all views are always up to date.
 
-![Mock Fintech Startup - Fraud service deployment view](https://raw.githubusercontent.com/practicalli/graphic-design/live/architecture/structurizr-fintech-aws-deployment-fraud.png "")
+![Mock Fintech Startup - Fraud service deployment view](https://github.com/practicalli/graphic-design/blob/live/architecture/structurizr-fintech-aws-deployment-fraud.png?raw=true)
 
 > Colours of exported SVG image enhanced using [Inkscape.org](https://inkscape.org) and exported as PNG file
 
