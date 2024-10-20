@@ -13,5 +13,4 @@
 - [Vercel](https://vercel.com/) - front-end focus
 - [Heroku](https://heroku.com) - commercial only
 
-Practicalli uses [Vercel](https://vercel.com/) to host scripts to update GitHub profiles, i.e. [:fontawesome-brands-github: practicalli-john](https://github.com/practicalli-john)
-
+Practicalli uses [Vercel](https://vercel.com/) to host scripts to update GitHub profiles, i.e. [:fontawesome-brands-github: practicalli-johnny](https://github.com/practicalli-johnny)
