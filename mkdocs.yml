@@ -137,7 +137,10 @@ nav:
       - build-tool/babashka-task-runner.md
   - Careers:
       - careers/index.md
+      - careers/engineer.md
       - careers/engineering-manager.md
+  - Change Management:
+      - change-management/index.md
   - Code Quality:
       - code-quality/index.md
       - code-quality/megalinter.md
@@ -171,15 +174,15 @@ nav:
   - Culture:
       - culture/index.md
       - culture/anti-patterns.md
+      - culture/burnout.md
       - culture/documentation.md
       - culture/leadership.md
   - Documentation:
       - technical-writing/index.md
-      # - technical-writing/techniques.md
-      # - technical-writing/site-generator/mkdocs.md
-      # - Version Control:
-      #     - version-control/index.md
-      #     - version-control/git-client-configuration.md
+      - technical-writing/techniques.md
+      - Static Sites:
+          - technical-writing/static-site/index.md
+          - MkDocs: technical-writing/static-site/mkdocs.md
   - Operating Systems:
       - os/index.md
       - Linux:
@@ -219,18 +222,23 @@ nav:
           - practices/discussions/rolling-wave-planning.md
           - practices/discussions/one-to-one-meeting.md
           - Retrospective: practices/discussions/retrospective.md
-          - practices/discussions/standup.md
+          - Standup: practices/discussions/standup.md
           - Five Whys: practices/discussions/five-whys.md
           - Thinking Hats: practices/discussions/thinking-hats.md
+      - Kanban:
+          - practices/kanban/index.md
+          - Value-Stream Mapping: practices/kanban/value-stream-mapping.md
       - BDD:
           - practices/behaviour-driven-development/index.md
       - Tech Debt: practices/technical-debt.md
-      - practices/deliberate-practice.md
-      # - TODO: practices/code-kata.md
+      - Root Cause Analysis: practices/root-cause-analysis.md
       - Deliberate Practice:
           - practices/deliberate-practice/index.md
           - Architecture Kata: practices/deliberate-practice/architecture-kata.md
           - Code Kata: practices/deliberate-practice/code-kata.md
+      - practices/test-driven-development.md
+      - practices/managing-bias.md
+
   - Programming Languages:
       - programming-languages/index.md
       - JavaScript:
@@ -238,6 +246,7 @@ nav:
           - programming-languages/javascript/nodejs.md
   - Source Control:
       - source-control/index.md
+      # - source-control/git-overview.md
       - source-control/git-configuration.md
       - source-control/git-concepts.md
       - source-control/git-status.md
