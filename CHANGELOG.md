@@ -11,6 +11,7 @@
 - os: zsh history and editing command history
 - source-control: git concepts
 - source-control: git status & multi-repo status
+- persistence: new section with structure and basic content
 
 ### Changed
 

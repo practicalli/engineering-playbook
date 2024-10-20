@@ -195,6 +195,23 @@ nav:
           - os/shell/bash.md
           - os/shell/zsh.md
           - os/shell/fish.md
+  - Persistence:
+      - persistence/index.md
+      - RDBMS:
+          - Overview: persistence/rdbms/index.md
+          - Client:
+              - persistence/rdbms/client/index.md
+              - Command Line: persistence/rdbms/client/cli.md
+              - DBeaver: persistence/rdbms/client/dbeaver.md
+              - Postgres Admin: persistence/rdbms/client/pgadmin.md
+          - Server:
+              - persistence/rdbms/server/h2.md
+              - persistence/rdbms/server/mariadb.md
+              - PostgreSQL:
+                  - Overview: persistence/rdbms/server/postgresql/index.md
+          - SQL:
+              - Overview: persistence/rdbms/sql/index.md
+              - Examples: persistence/rdbms/sql/examples.md
   - Practices:
       - practices/index.md
       - Discussions:
