@@ -145,9 +145,6 @@ nav:
       - code-quality/index.md
       - code-quality/megalinter.md
       - code-quality/clojure.md
-  - Command Line:
-      - command-line/index.md
-      - Kitty Terminal: command-line/kitty-terminal.md
   - Continuous Integration:
       - continuous-integration/index.md
       - Docker:
@@ -185,6 +182,9 @@ nav:
           - MkDocs: technical-writing/static-site/mkdocs.md
   - Operating Systems:
       - os/index.md
+      - Command Line:
+          - os/command-line/index.md
+          - Kitty Terminal: os/command-line/kitty-terminal.md
       - Linux:
           - Overview: os/linux/index.md
           - Cron: os/cron.md
