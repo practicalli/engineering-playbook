@@ -54,6 +54,11 @@ All sponsorship funds are used to support the continued development of [Practica
 Thanks to [Cognitect](https://www.cognitect.com/), [Nubank](https://nubank.com.br/) and a wide range of other [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors) for your continued support
 
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=practicalli/engineering-playbook&type=Date)](https://star-history.com/#practicalli/engineering-playbook&Date)
+
+
 ## GitHub Actions
 
 The megalinter GitHub actions will run when a pull request is created,checking basic markdown syntax.
