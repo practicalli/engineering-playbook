@@ -101,7 +101,10 @@ make docs
 The website will open at <http://localhost:8000>
 
 If making smaller changes, then only rebuild the content that changes, speeding up the local development process
+
 ```shell
 make docs-changed
 ```
+
+> NOTE: navigation changes may not be correctly reflected without reloading the page in the web browser or carrying out a full `make docs` build
 
