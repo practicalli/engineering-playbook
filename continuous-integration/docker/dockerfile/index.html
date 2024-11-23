@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
@@ -4270,8 +4270,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">HEALTHCHECK</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span>CMD<span class="w"> </span><span class="o">[</span><span class="s2">&quot;curl&quot;</span>,<span class="w"> </span><span class="s2">&quot;--fail&quot;</span>,<span class="w"> </span><span class="s2">&quot;http://localhost:8080/system-admin/status&quot;</span><span class="o">]</span>
 </code></pre></div>
-<p>Start by learning the common instructions used in <code>Dockerfile</code> configurations and consult <a href="https://docs.docker.com/engine/reference/builder/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Docker Docs extensive Dockerfile reference</a> to understand additional instructions are required</p>
-<p><a class="md-button" href="https://docs.docker.com/engine/reference/builder/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Docker Docs Dockerfile reference</a></p>
+<p>Start by learning the common instructions used in <code>Dockerfile</code> configurations and consult <a href="https://docs.docker.com/engine/reference/builder/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Docker Docs extensive Dockerfile reference</a> to understand additional instructions are required</p>
+<p><a class="md-button" href="https://docs.docker.com/engine/reference/builder/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Docker Docs Dockerfile reference</a></p>
 <h3 id="from">FROM<a class="headerlink" href="#from" title="Permanent link">λ︎</a></h3>
 <p><code>FROM</code> instruction should be the first instruction in the <code>Dockerfile</code> and specifies the image from which the current configuration uses as a base.</p>
 <p>FROM can be preceded ARG instructions to declare arguments used in the <code>FROM</code> instruction.  Comments <code>#</code> and <a href="https://docs.docker.com/engine/reference/builder/#parser-directives" target="_blank">parser directives</a> can also appear before <code>FROM</code></p>
@@ -4334,7 +4334,7 @@
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;java&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-jar&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;/service/practicalli-suit-you-sir-standalone.jar&quot;</span><span class="p">]</span>
 </code></pre></div></p>
 </div>
-<p><a class="md-button" href="https://docs.docker.com/engine/reference/builder/#entrypoint" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Docker Entrypoint documentation</a></p>
+<p><a class="md-button" href="https://docs.docker.com/engine/reference/builder/#entrypoint" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Docker Entrypoint documentation</a></p>
 <h3 id="cmd">CMD<a class="headerlink" href="#cmd" title="Permanent link">λ︎</a></h3>
 <p>The command to run the service within the container, typically paired with ENTRYPOINT</p>
 <p>CMD can be supplied on the command line when calling docker to over-ride the CMD defined in the <code>Dockerfile</code>, e.g. to help test a Docker image that is not running correctly or run variations of the service such as debug mode.</p>

@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
@@ -4208,19 +4208,19 @@
 
 
 <h1 id="megalinter">MegaLinter<a class="headerlink" href="#megalinter" title="Permanent link">λ︎</a></h1>
-<p><a href="https://megalinter.io/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> MegaLinter</a> verifies code and configuration with a a wide range of Lint and formatting tools, all from within a Docker image that minimises the install requirements.</p>
+<p><a href="https://megalinter.io/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> MegaLinter</a> verifies code and configuration with a a wide range of Lint and formatting tools, all from within a Docker image that minimises the install requirements.</p>
 <p>MegaLinter is an Open-Source tool for CI/CD workflows that analyses the consistency of your code, IAC, configuration, and scripts in your  repository sources, to ensure all your projects sources are clean and formatted whatever IDE/toolbox is used.</p>
-<p>The declarative MegaLinter configuration is relatively easy to learn. Typically time is spent tweaking the features (tools) of the <a href="https://megalinter.io/latest/supported-linters/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> supported Linters</a></p>
-<p>Supported Linters have their own page listing the lint and format tools it provides, e.g. <a href="https://megalinter.io/latest/descriptors/clojure/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Clojure</a>. Each tool has its own page listing the configuration options and links to the tool homepage, e.g. <a href="https://megalinter.io/latest/descriptors/clojure_clj_kondo/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> clj-kondo</a>.</p>
+<p>The declarative MegaLinter configuration is relatively easy to learn. Typically time is spent tweaking the features (tools) of the <a href="https://megalinter.io/latest/supported-linters/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> supported Linters</a></p>
+<p>Supported Linters have their own page listing the lint and format tools it provides, e.g. <a href="https://megalinter.io/latest/descriptors/clojure/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Clojure</a>. Each tool has its own page listing the configuration options and links to the tool homepage, e.g. <a href="https://megalinter.io/latest/descriptors/clojure_clj_kondo/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> clj-kondo</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">Requirements</p>
-<p><a href="https://nodejs.org/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Node.js</a> is required to install and run the <code>mega-linter-runner</code> tool. <a href="/engineering-playbook/continuous-integration/docker/">Docker (Docker Desktop)</a> is required to run MegaLinter containers locally, optionally with</p>
+<p><a href="https://nodejs.org/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Node.js</a> is required to install and run the <code>mega-linter-runner</code> tool. <a href="/engineering-playbook/continuous-integration/docker/">Docker (Docker Desktop)</a> is required to run MegaLinter containers locally, optionally with</p>
 <p>MegaLinter run via a GitHub workflow has no requirements</p>
 </div>
 <h2 id="megalinter-locally">MegaLinter Locally<a class="headerlink" href="#megalinter-locally" title="Permanent link">λ︎</a></h2>
 <p>The most effective way to manage lint and format issues is to run MegaLinter locally, before pushing changes to a Continuous Integration service.</p>
 <p>The MegaLinter runner uses a MegaLinter docker image will all lint tools pre-installed and configured, minimising the need to install tools locally.</p>
-<p>Install a recent version of <a href="https://nodejs.org/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Node.js</a>, version 18 (Long Term Support) is recommended.</p>
+<p>Install a recent version of <a href="https://nodejs.org/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Node.js</a>, version 18 (Long Term Support) is recommended.</p>
 <blockquote>
 <p><code>npx mega-linter-runner</code> runs MegaLinter without the need for a specific npm install.</p>
 </blockquote>
@@ -4232,7 +4232,7 @@
 <p>Create a configuration for a specific project using the MegaLinter runner command in the root of the project directory</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npx mega-linter-runner
 </code></pre></div>
-<p><code>.mega-linter.yml</code> file is created at the root of the project. Review the file and ensure it has the Linters required. <a href="https://megalinter.io/latest/configuration/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> MegaLinter Configuration</a> describes the purpose of each variable.</p>
+<p><code>.mega-linter.yml</code> file is created at the root of the project. Review the file and ensure it has the Linters required. <a href="https://megalinter.io/latest/configuration/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> MegaLinter Configuration</a> describes the purpose of each variable.</p>
 <h3 id="run-megalinter">Run MegaLinter<a class="headerlink" href="#run-megalinter" title="Permanent link">λ︎</a></h3>
 <p>Use a specific flavour of MegaLinter to reduce the size of the Docker image used. A flavor is a docker image configuration for a specific programming language and its tooling.</p>
 <ul>
