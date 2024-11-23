@@ -1,14 +1,15 @@
-# Docker Desktop
+# Docker Desktop Overview
 
 ![Docker logo](https://github.com/practicalli/graphic-design/blob/live/topic-images/docker-logo-name.png?raw=true){align=right loading=lazy style="width:240px"}
 
-[Docker Extensions used by Practicalli](desktop-extensions.md){target=_blank .md-button}
-
-![Docker Desktop - images view](https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-images-light.png?raw=true)
-
 [Docker desktop](https://docs.docker.com/desktop/) provides an easy way to manage Docker images, containers and volumes.  Sign in to Docker Desktop to manage your images on DockerHub.
 
+![Docker Desktop - images view](https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-images-light.png?raw=true#only-light)
+![Docker Desktop - images view](https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-images-dark.png?raw=true#only-dark)
+
 [Docker Desktop Overview](https://docs.docker.com/desktop/){target=_blank .md-button}
+[Docker Docs](https://docs.docker.com/){target=_blank .md-button}
+
 
 ## Extensions Marketplace
 
@@ -23,20 +24,17 @@ There is a growing marketplace of extensions that provide very useful tools to e
 - [Snyk](https://hub.docker.com/extensions/snyk/snyk-docker-desktop-extension) scan local and remote images for security vulnerabilities
 - [Ddosify](https://hub.docker.com/extensions/ddosify/ddosify-docker-extension) high-performance, open-source and simple load testing tool
 
-![Docker Desktop extension - disk usage](https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-extensions-disk-usage-light.png?raw=true)
+![Docker Desktop extension - disk usage](https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-extensions-disk-usage-light.png?raw=true#only-light)
+![Docker Desktop extension - disk usage](https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-desktop-extensions-disk-usage-dark.png?raw=true#only-dark)
 
-
-
-
-## Learning Center
-
-Resources for learning how to use Docker effectively
-
-
+[Docker Extensions Overview](extensions.md){target=_blank .md-button}
 
 
 ## Images
 
+Pre-defined images can be used directly or used to build custom images.
+
+[:fontawesome-solid-book-open: Docker Images Overview and Practicalli recommendations](../images.md){target=_blank .md-button}
 
 
 ## Containers
@@ -55,9 +53,9 @@ Resources for learning how to use Docker effectively
 
 ## Volumes
 
+Persist data to the local computer by mounting a part of the OS filespace as a volume in a Docker container.
 
 
 ## Dev Environments
-
 
 <!-- TODO link to example dev environments - including one for Clojure - to submit  -->
