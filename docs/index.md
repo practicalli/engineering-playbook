@@ -1,34 +1,27 @@
 # Practicalli Engineering Playbook
 
+
 !!! QUOTE
     **Effective Communication** is the fundamental challenge for all software engineering projects
 
-    John Stevenson, Practialli
+    John Stevenson, Practicalli
 
 
-The Playbook and Plays concept is used to curate a consistent information, so the right information can be found and used more effectively by all.
 
-- A Play is a document that details practices and an approach for a specific task
-- A Playbook is a collection of Plays that are related by topic, e.g. Billie Engineering playbook could cover the practices for deployment, accessing
-databases, system integration testing, optimising builds in docker.
+The Engineering Playbook presents a collection of practical guides which effectively address common software engineering tasks.
+
+- A Play is a guide that details practices and an approach for a specific task
+- A Playbook is a collection of Plays that are related by topic, e.g. practices for deployment, accessing databases, system integration testing, optimising builds in docker, etc.
+
+![Engineering Playbook concept](https://raw.githubusercontent.com/practicalli/graphic-design/live/engineering-playbook/engineering-playbook-concept.png){align=right loading=lazy style="width:320px"}
 
 !!! HINT "Engineering Playbook Initiative"
-    Establishing a playbook within an organisation encourages information sharing across teams and provides an effective way for disperate teams to learn from each other.
-
-![Engineering Playbook concept](https://raw.githubusercontent.com/practicalli/graphic-design/live/engineering-playbook/engineering-playbook-concept.png)
-
-
-??? WARNING "New Book - content under development"
-    Practicalli Engineering Playbook was started in January 2022 in an attempt to codify the last few decades of development experience, so this will be an on-going work
+    Establishing a playbook within an organisation encourages information sharing, providing an effective way for disparate teams to learn from each other.
 
 
 ## Discussions and feedback
 
-[Contributions are welcome via GitHub issues and pull requests](introduction/contributing.md), or discuss the book on the Clojurians Slack community.
-
-[Ask questions on #practicalli channel of  Clojurians Slack](https://clojurians.slack.com/messages/practicalli){target=_blank .md-button}
-
-Get a [free Clojurians slack community account](https://clojurians.net/)
+[Contributing to Practical.li](https://practical.li/contributing){target=_blank .md-button}
 
 
 ## Navigate the book
