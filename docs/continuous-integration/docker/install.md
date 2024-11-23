@@ -1,4 +1,4 @@
-# Install Docker CE and Desktop
+# Install Docker Desktop
 
 ![Docker logo](https://github.com/practicalli/graphic-design/blob/live/topic-images/docker-logo-name.png?raw=true){align=right loading=lazy style="width:240px"}
 
