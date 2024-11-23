@@ -20,7 +20,7 @@ Docker desktop depends on Docker Community Edition and will install all the resp
     apt install ca-certificates curl
     ```
 
-    Add the Docker team public key to Ubuntu package manager, ensuring only official Docker packages are used
+    Add the Docker team public key to Debian package manager, ensuring only official Docker packages are used
 
     ```shell
     install -m 0755 -d /etc/apt/keyrings && \
@@ -28,7 +28,7 @@ Docker desktop depends on Docker Community Edition and will install all the resp
     chmod a+r /etc/apt/keyrings/docker.asc
     ```
 
-    Add the Docker PPA to the Ubuntu package manager, creating a `/etc/apt/sources.list.d/docker.list` file.
+    Add the Docker PPA to the Debian package manager, creating a `/etc/apt/sources.list.d/docker.list` file.
 
     ```shell
     echo \
@@ -46,7 +46,7 @@ Docker desktop depends on Docker Community Edition and will install all the resp
     apt-get update
     ```
 
-    [:globe_with_meridians: Download the DEB package](https://docs.docker.com/desktop/install/ubuntu/) for Docker Desktop UI and install using Ubuntu package manager
+    [:globe_with_meridians: Download the DEB package](https://docs.docker.com/desktop/install/ubuntu/) for Docker Desktop UI and install using Debian package manager
     ```shell
     apt install ./Downloads/docker-desktop-4.19.0-amd64.deb
     ```
@@ -75,7 +75,7 @@ Starting Docker Desktop will automatically start the underlying Docker community
 Launch Docker Desktop via the desktop application Launcher or via the command line:
 
 === "Debian Linux"
-    Use the Ubuntu application launcher to start Docker Desktop, or use the `systemctl` command from a terminal.
+    Use the Debian application launcher to start Docker Desktop, or use the `systemctl` command from a terminal.
 
     ```shell
     systemctl --user start docker-desktop
