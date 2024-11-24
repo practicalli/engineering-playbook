@@ -13,9 +13,9 @@ There are a wide range of Linux distributions to choose from, although Practical
 
 Arch Linux has solid community support should a more involved operating system experience be desirable.
 
-[Regolith Desktop](linux/regolith/)
-[Debian Linux](linux/debian/)
-[Ubuntu Desktop](linux/ubuntu/)
+[Regolith Desktop](linux/regolith/){.md-button}
+[Debian Linux](linux/debian/){.md-button}
+[Ubuntu Desktop](linux/ubuntu/){.md-button}
 
 !!! HINT "Practicalli recommends Linux"
     Practicalli recommends use of a Linux distribution to provide a stable and developer focused environment to work in.  The vast majority is freely available without cost and typically of high quality thanks to so many collaborators and users.
@@ -29,12 +29,17 @@ Arch Linux has solid community support should a more involved operating system e
 
     MacOS is often used by commercial companies (especially FinTech) as commercial software is used to administrate the operting system, usually by a remote System Adminstration team.
 
-## Linux Shell
+## Command Line Shell
 
 - bash
 - zsh
 - fish
-- [Kitty Terminal](clojure /docs/command-line/kitty-terminal.md)
+- [Kitty Terminal](command-line/kitty-terminal.md)
+
+## Linux Desktop
+
+- i3 tiling window manager
+- [:fontawesome-solid-book-open: Hyprland](linux/hyprland.md) Wayland compositor and nwg-shell desktop for wayland and sway
 
 
 ## Software development tools
@@ -43,12 +48,10 @@ Arch Linux has solid community support should a more involved operating system e
 - node.js and npm
 - Python
 
-
 ## Creative tools
 
 - Inkscape 2D vector graphics (SVG)
 - Blender 3D modelling, animation and video editing
 - Audacity sound editing
-- FFMpeg
+- FFMpeg audio-video command line tools
 - Opus audio codec
-
