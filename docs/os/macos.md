@@ -1,4 +1,4 @@
-# Mac OSX
+# Mac OS
 
 A BSD based Unix system with commercial Graphic Desktop shell created by Apple.
 

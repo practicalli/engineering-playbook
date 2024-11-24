@@ -24,10 +24,10 @@ Arch Linux has solid community support should a more involved operating system e
 
     Unix/BSD based systems can also offer a good developer experience, e.g. MacOSX.
 
-??? INFO "MacOSX"
-    Mac OSX is a BSD based operating system so has similar command line experience.  Coupled with Homebrew, a wide selection of developer focused packages are freely availalbe.
+??? INFO "MacOS"
+    MacOS is a BSD based operating system so has similar command line experience.  Coupled with Homebrew, a wide selection of developer focused packages are freely available.
 
-    MacOSX is often used by companies (especially FinTech) as commercial software is used to administrate the operting system, usually by a remote System Adminstration team.
+    MacOS is often used by commercial companies (especially FinTech) as commercial software is used to administrate the operting system, usually by a remote System Adminstration team.
 
 ## Linux Shell
 
