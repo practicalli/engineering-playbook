@@ -184,6 +184,7 @@ nav:
       - Command Line:
           - os/command-line/index.md
           - Kitty Terminal: os/command-line/kitty-terminal.md
+          - Warp Terminal: os/command-line/warp.md
       - Linux:
           - Overview: os/linux/index.md
           - Cron: os/cron.md
