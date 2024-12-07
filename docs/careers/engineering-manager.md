@@ -1,13 +1,13 @@
 # Engineering Manager role
 
-Management roles are there to balance the needs of the organisation with the engineering teams ability to deliver  
+Management roles are there to balance the needs of the organisation with the engineering teams ability to deliver
 
 The role naturally focuses on on the larger goals and challenges facing the engineering teams, supporting the engineers to solve specific challenges using their own skills and experiences (that is why they were hired)
 
 
 ## Meetings
 
-[one to one](/engineering-playbook/practices/one-to-one-meeting.md) are regularly held with direct reports and those people the engineering manager reports to, ensuring there is good working relationship between the respective people.
+[one to one](/engineering-playbook/practices/discussions/one-to-one-meeting.md) are regularly held with direct reports and those people the engineering manager reports to, ensuring there is good working relationship between the respective people.
 
 - direct reports focus on supporting that persons ability to thrive within the company and identify actions to help
 
@@ -20,7 +20,7 @@ Engineering team meetings may occasionally be joined to review how effective the
 
 
 !!! HINT "Performance reviews supported by one-to-one meetings"
-    Where performace reviews are applicable, include the review as an aspect to raise with one-to-one meetings with direct reports throughout the year.   
+    Where performance reviews are applicable, include the review as an aspect to raise with one-to-one meetings with direct reports throughout the year.
 
     The need to complete a review should be raised as early as possible in one-to-one meetings and regularly raised (even if only briefly) to ensure supporting tasks are carried out to swiftly complete the review at the appropriate time.
 
@@ -38,11 +38,10 @@ Use the knowledge sharing tool for the organisation, e.g. [Atlassian Confluence]
 
 ## Management anti-patters
 
-**micro-management** is highly ineffective, demonstrates lack of trust, highlights poor communication and lack of management skills.  Shows lack of understanding of the needs of the business and engeering teams.
+**micro-management** is highly ineffective, demonstrates lack of trust, highlights poor communication and lack of management skills.  Shows lack of understanding of the needs of the business and engineering teams.
 
 **overt control** suggests a lack of confidence, demoralises the team, incurs a lack of trust and engagement by team under control.  Drives inefficiency, stifles agency and creativity.
 
 **emotional pain** degrading and emotionally attacking a person has no place in a positive relationship.
 
-**dominating** by tearing people down to (alegedly) build them up in the (percieved) right way is an act of emotional tourture and highly counter productive in the long term.
-
+**dominating** by tearing people down to (allegedly) build them up in the (perceived) right way is an act of emotional torture and highly counter productive in the long term.
