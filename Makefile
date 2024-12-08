@@ -24,6 +24,15 @@ MKDOCS_SERVER := mkdocs serve --dev-addr localhost:7777
 EDN-FILES := $(wildcard *.edn)
 # ------------------------------------ #
 
+# ------- Help ----------------------- #
+# Source: https://nedbatchelder.com/blog/201804/makefile_help_target.html
+
+help:  ## Describe available tasks in Makefile
+	@grep '^[a-zA-Z]' $(MAKEFILE_LIST) | \
+	sort | \
+	awk -F ':.*?## ' 'NF==2 {printf "\033[36m  %-$(HELP-DESCRIPTION-SPACING)s\033[0m %s\n", $$1, $$2}'
+# ------------------------------------ #
+
 # ------  Quality Checks  ------------ #
 pre-commit-check: lint
 
