@@ -93,6 +93,10 @@ SHOW_ELAPSED_TIME: true
 
 # Upload reports to file.io
 FILEIO_REPORTER: false
+
+# Grafana Dashboard Connections - GitHub Organization secrets
+# API_REPORTER_DEBUG: true
+
 # ------------------------
 
 # ------------------------
