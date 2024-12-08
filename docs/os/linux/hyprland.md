@@ -40,6 +40,10 @@ Hyprland is not a full desktop environment, unlike KDE or Gnome.  Additional too
     !!! INFO "Hyprland on Debian - scripts to review "
         [hyprland on debian script](https://github.com/drewgrif/debian-hyprland){target=_blank .md-button}
 
+
+    The hyprland packages are on version 0.41 at time of writing, the current release is 0.45 and has significant changes
+
+
 === "Arch Linux"
 
     Install a minimal Arch Linux OS from the ISO and setup Arch with Hyprland using the `archinstall`
