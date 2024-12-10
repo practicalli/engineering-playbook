@@ -219,6 +219,7 @@ nav:
       - practices/index.md
       - Discussions:
           - practices/discussions/index.md
+          - Asking Questions: practices/discussions/asking-questions.md
           - practices/discussions/rolling-wave-planning.md
           - practices/discussions/one-to-one-meeting.md
           - Retrospective: practices/discussions/retrospective.md

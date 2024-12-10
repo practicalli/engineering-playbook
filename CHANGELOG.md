@@ -13,6 +13,7 @@
 - source-control: git status & multi-repo status
 - persistence: new section with structure and basic content
 - dev: set git attributes to correctly identify languages used
+- practices: asking questions
 
 ### Changed
 
