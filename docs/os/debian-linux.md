@@ -334,4 +334,58 @@ Run apt update to refresh the cache. Use `apt -t unstable install <package-name>
 !!! EXAMPLE "Install specific package from Sid"
     ```shell
     apt -t unstable install hyprland
-    ```
+
+
+
+## Debian Tracker
+
+[Tracker service](https://wiki.ubuntu.com/Tracker) indexes many types of files to enable discovery of files by other Gnome services and applications.
+
+- [desktop search](https://wiki.ubuntu.com/IntegratedDesktopSearch)
+- Tag database for keyword tagging
+- Extensible metadata database to add custom metadata to files, e.g. rhythmbox, gedit, etc.
+- Store First Class Objects and the Gnome 3.0 Model
+
+> NOTE: when actively using Gnome desktop and Gnome apps, disabling the tracker may reduce functionality
+
+
+### Disable the tracker service
+
+The tracker service can be a significant drain on computer resources as it indexes files, especially when there have been a log of changes or for a newly installed system.
+
+The tracker has many dependencies, so its not easy to remove the `tracker-miner-fs-3` package when actively using the Gnome desktop.
+
+The recommended approach is to edit the `.desktop` files and add `Hidden=true` at the end of each tracker related file and reboot the operating system.
+
+```config title="/etc/xdg/autostart/tracker-miner-fs-3.desktop"
+[Desktop Entry]
+Name=Tracker File System Miner
+Comment=Crawls and processes files on the file system
+Exec=/usr/libexec/tracker-miner-fs-3
+Terminal=false
+Type=Application
+Categories=Utility;
+X-GNOME-Autostart-enabled=false
+X-GNOME-HiddenUnderSystemd=false
+# X-KDE-autostart-after=panel
+X-KDE-StartupNotify=false
+X-KDE-UniqueApplet=true
+NoDisplay=true
+OnlyShowIn=GNOME;KDE;XFCE;X-IVI;Unity;
+X-systemd-skip=true
+Hidden=true
+```
+
+If adding "Hiddent=true" is not sufficient, then disable the services for all users by setting them to `/dev/null` using the `systemctl` command.
+
+```shell
+sudo systemctl --global mask tracker-miner-fs-3.service
+sudo systemctl --global mask tracker-xdg-portal-3.service
+```
+
+Remove the database of indexed files from each user account on the system
+
+```shell
+rm -rf $HOME/.cache/tracker*
+```
+```
