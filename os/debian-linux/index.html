@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
@@ -2229,6 +2229,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#debian-tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debian Tracker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debian Tracker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-the-tracker-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable the tracker service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4314,6 +4338,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#debian-tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debian Tracker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debian Tracker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-the-tracker-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable the tracker service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4587,10 +4635,10 @@
 <div class="admonition example">
 <p class="admonition-title">Add unstable to package sources</p>
 <div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a># Testing
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>deb http://deb.debian.org/debian/ trixie main contrib non-free-firmware non-free
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>deb-src http://deb.debian.org/debian/ trixie main contrib non-free-firmware non-free
-<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>deb http://deb.debian.org/debian/ trixie-updates main contrib non-free-firmware non-free
-<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>deb http://deb.debian.org/debian/ trixie-backports main contrib non-free-firmware non-free
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>deb &lt;http://deb.debian.org/debian/&gt; trixie main contrib non-free-firmware non-free
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>deb-src &lt;http://deb.debian.org/debian/&gt; trixie main contrib non-free-firmware non-free
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>deb &lt;http://deb.debian.org/debian/&gt; trixie-updates main contrib non-free-firmware non-free
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>deb &lt;http://deb.debian.org/debian/&gt; trixie-backports main contrib non-free-firmware non-free
 <a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
 <a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>deb http://security.debian.org/debian-security trixie-security main contrib non-free-firmware
 <a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>deb-src http://security.debian.org/debian-security trixie-security main contrib non-free-firmware
@@ -4602,9 +4650,49 @@
 <p>Run apt update to refresh the cache. Use <code>apt -t unstable install &lt;package-name&gt;</code> to install package foo from unstable rather than testing.</p>
 <div class="admonition example">
 <p class="admonition-title">Install specific package from Sid</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>apt<span class="w"> </span>-t<span class="w"> </span>unstable<span class="w"> </span>install<span class="w"> </span>hyprland
-</code></pre></div>
+<p>```shell
+apt -t unstable install hyprland</p>
 </div>
+<h2 id="debian-tracker">Debian Tracker<a class="headerlink" href="#debian-tracker" title="Permanent link">λ︎</a></h2>
+<p><a href="https://wiki.ubuntu.com/Tracker">Tracker service</a> indexes many types of files to enable discovery of files by other Gnome services and applications.</p>
+<ul>
+<li><a href="https://wiki.ubuntu.com/IntegratedDesktopSearch">desktop search</a></li>
+<li>Tag database for keyword tagging</li>
+<li>Extensible metadata database to add custom metadata to files, e.g. rhythmbox, gedit, etc.</li>
+<li>Store First Class Objects and the Gnome 3.0 Model</li>
+</ul>
+<blockquote>
+<p>NOTE: when actively using Gnome desktop and Gnome apps, disabling the tracker may reduce functionality</p>
+</blockquote>
+<h3 id="disable-the-tracker-service">Disable the tracker service<a class="headerlink" href="#disable-the-tracker-service" title="Permanent link">λ︎</a></h3>
+<p>The tracker service can be a significant drain on computer resources as it indexes files, especially when there have been a log of changes or for a newly installed system.</p>
+<p>The tracker has many dependencies, so its not easy to remove the <code>tracker-miner-fs-3</code> package when actively using the Gnome desktop.</p>
+<p>The recommended approach is to edit the <code>.desktop</code> files and add <code>Hidden=true</code> at the end of each tracker related file and reboot the operating system.</p>
+<div class="highlight"><span class="filename">/etc/xdg/autostart/tracker-miner-fs-3.desktop</span><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>[Desktop Entry]
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>Name=Tracker File System Miner
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>Comment=Crawls and processes files on the file system
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>Exec=/usr/libexec/tracker-miner-fs-3
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>Terminal=false
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>Type=Application
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>Categories=Utility;
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>X-GNOME-Autostart-enabled=false
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>X-GNOME-HiddenUnderSystemd=false
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a># X-KDE-autostart-after=panel
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>X-KDE-StartupNotify=false
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>X-KDE-UniqueApplet=true
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>NoDisplay=true
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>OnlyShowIn=GNOME;KDE;XFCE;X-IVI;Unity;
+<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>X-systemd-skip=true
+<a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>Hidden=true
+</code></pre></div>
+<p>If adding "Hiddent=true" is not sufficient, then disable the services for all users by setting them to <code>/dev/null</code> using the <code>systemctl</code> command.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>--global<span class="w"> </span>mask<span class="w"> </span>tracker-miner-fs-3.service
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>--global<span class="w"> </span>mask<span class="w"> </span>tracker-xdg-portal-3.service
+</code></pre></div>
+<p>Remove the database of indexed files from each user account on the system</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$HOME</span>/.cache/tracker*
+</code></pre></div>
+```</p>
 
 
 
@@ -4625,7 +4713,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 17, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 26, 2024</span>
   </span>
 
     
@@ -4799,7 +4887,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
