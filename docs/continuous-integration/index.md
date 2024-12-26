@@ -2,7 +2,6 @@
 
 [:fontawesome-solid-book-open: Docker Containers & tools](docker/){.md-button}
 
-
 ## Hosted CI Services
 
 - CircleCI

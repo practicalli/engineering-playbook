@@ -13,7 +13,6 @@ Many views can be generated from the single model and changes to the model autom
 [Mock Fintech Starup - Practicalli Services](https://structurizr.com/share/79474){target=_blank .md-button}
 [practicalli/structurizr Git repository](https://github.com/practicalli/structurizr){target=_blank .md-button}
 
-
 ## C4 Model summary
 
 * Level 1: **Software system** - a system context composed of one or more containers
@@ -23,17 +22,14 @@ Many views can be generated from the single model and changes to the model autom
 
 ![c4 model abstraction](https://raw.githubusercontent.com/practicalli/graphic-design/570b6f55d83294a732c1e6b1c8d822d6ab2ab9ac/architecture/c4-model-structure-concept.png)
 
-
 !!! HINT "Quick try with Structurizr DSL Editor"
     [Structurizr DSL online editor](https://structurizr.com/dsl){target=_blank} provides an instant way to try structurizr without install or sign-up
-
 
 ## Install
 
 Use the free Structurizr Lite locally (via docker) or use Structurizr Cloud service (free for Open Source & Academic projects on request)
 
 Project models can be imported into the cloud-based tool from Structurizr Lite when team or company wide collaboration is required.
-
 
 === "Structurizr lite"
     [Structurizr Lite - Getting Started](https://structurizr.com/share/76352/documentation#getting-started){target=_blank .md-button}
@@ -98,7 +94,6 @@ Project models can be imported into the cloud-based tool from Structurizr Lite w
 
      `workspace.dsl` and `workspace.json` files are created if they do not already exist.
 
-
 === "Structurizr Cloud"
     [Structurizr Cloud](https://structurizr.com/){target=_blank .md-button}
 
@@ -125,7 +120,6 @@ Project models can be imported into the cloud-based tool from Structurizr Lite w
     Structurizr DSL Language Reference documentation
 
     Select the Source text icon to see only the code window, allowing for easier editing
-
 
 ### Define the system
 
@@ -169,7 +163,6 @@ simple example
 * Create a system context view for the software system, adding the default set of elements, using auto-layout.
 * Use the default theme for styling elements and relationships.
 
-
 ```
 workspace {
     model {
@@ -188,11 +181,9 @@ workspace {
 }
 ```
 
-
 <!--
 > Billie example: https://gist.github.com/practicalli-john/662b232b1c0ee119d1686b61f6104bd8
 -->
-
 
 ### Common values
 
@@ -208,7 +199,6 @@ workspace {
     }
 }
 ```
-
 
 ### Grouping services
 
@@ -246,7 +236,6 @@ risk = softwareSystem "Risk" {
 }
 ```
 
-
 ### Define relationships
 
 `->` defines a relationships between two id's defined in the `softwareSystem` part of the model, along with a description of the relationship that is added to the arrow joining the artefacts in a view.
@@ -269,7 +258,6 @@ The relationships are used to draw connections between services and the descript
     ml_model -> feature_store_data "Collect features"
     ml_model -> feature_schema_data "Request feature set & model"
 ```
-
 
 ## Defining Views
 
@@ -325,8 +313,6 @@ An example of production deployment environment for the Practicall Mock Fintech 
   }
 ```
 
-
-
 ## Embedding Documentaion in views
 
 Create a directory called `docs` to contain markdown files with system descriptions.
@@ -355,7 +341,7 @@ views {
     Views defined in the Practicalli Enterpirse for the Mock Fintech Startup architecture
     ```
       views {
-       /* Overall system */
+       /*Overall system */
         systemContext risk "EnterpriseView" "Practicalli Enterprise Application" {
           include *
           autoLayout
@@ -380,14 +366,14 @@ views {
           include credit
           autoLayout
         }
-        /* View of fraud & shared_services group without credit */
+        /* View of fraud & shared_services group without credit*/
         container risk fraudSharedView "Fraud and shared services" {
           include *
           exclude credit
           autoLayout
         }
         container transaction transactionView "Current Transaction system" {
-          include *
+          include*
           autoLayout
         }
 
@@ -411,7 +397,6 @@ views {
         }
       }
     ```
-
 
 ## Adding themes
 
@@ -539,7 +524,6 @@ branding {
 }
 ```
 
-
 ## Organisation branding
 
 Add a PNG or Jpeg graphic as a logo on all diagrams, appearing in the bottom left of each page
@@ -563,7 +547,6 @@ branding {
 }
 ```
 
-
 ## Comments
 
 `/* */` for line comments.
@@ -576,7 +559,6 @@ branding {
 ```
 
 > Note: line comments within parens or directly after a closing paren cause syntax error
-
 
 ## Practicalli System
 
@@ -602,8 +584,6 @@ Relationships between containers are defined, stating the direction and relation
 A range of views are defined, using include and exclude options to refine the containers that are shown
 
 Practicalli Structurizr custom theme and AWS theme are included, along with Practicalli logo in the branding
-
-
 
 ## Resources
 

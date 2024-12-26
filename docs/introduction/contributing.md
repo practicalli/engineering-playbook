@@ -18,7 +18,6 @@ All content and interaction with any persons or systems must be done so with res
 
 ![GitHub contributors](https://img.shields.io/github/contributors/practicalli/engineering-playbook?style=for-the-badge&label=github%20contributors)
 
-
 ## Book Source code
 
 [practicalli/engineering-playbook repository](https://github.com/practicalli/engineering-playbook){target=_blank} contains the content for this book
@@ -33,13 +32,11 @@ All content and interaction with any persons or systems must be done so with res
     git clone git@github.com:practicalli/engineering-playbook.git
     ```
 
-
 ## Submit and issue or idea
 
 If something doesnt seem quite right or something is missing from the book, please [raise an issue via the GitHub repository](https://github.com/practicalli/clojure/issues){target=_blank} explaining in as much detail as you can.
 
 **Raising an issue before creating a pull request will save you and the maintainer time**.
-
 
 ## Considering a Pull request?
 
@@ -57,7 +54,6 @@ Please keep pull requests small and focused, as they are much quicker to review 
 A PR with a list of changes across different sections will be closed without merging as these take considerable time to review.
 
 Issues such as grammar improvements are typically a sign of a rushed section that requires a rewrite, so a pull request to fix a typeographic error will probably not be merged.  Raise an issue, or post a thread in the [:globe_with_meridians: Clojurians Slack #practicall channel](https://clojurians.slack.com/messages/practicalli)
-
 
 ## Thank you to everyone that has contributed
 

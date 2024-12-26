@@ -2,8 +2,7 @@
 
 Notable people from computer science and software engineering
 
-
-## People 
+## People
 
 Doug Englebart - the mother of all demos
 

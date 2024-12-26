@@ -4,7 +4,6 @@ Management roles are there to balance the needs of the organisation with the eng
 
 The role naturally focuses on on the larger goals and challenges facing the engineering teams, supporting the engineers to solve specific challenges using their own skills and experiences (that is why they were hired)
 
-
 ## Meetings
 
 [one to one](/engineering-playbook/practices/discussions/one-to-one-meeting.md) are regularly held with direct reports and those people the engineering manager reports to, ensuring there is good working relationship between the respective people.
@@ -18,14 +17,12 @@ Engineering team meetings may occasionally be joined to review how effective the
 - [standup](/engineering-playbook/practices/discussions/standup.md) can highlight issues with motivation and team cohesiveness
 - [retrospective](/engineering-playbook/practices/discussions/retrospective.md) can help identify action items that the engineering manager can actively support or help direct others to support
 
-
 !!! HINT "Performance reviews supported by one-to-one meetings"
     Where performance reviews are applicable, include the review as an aspect to raise with one-to-one meetings with direct reports throughout the year.
 
     The need to complete a review should be raised as early as possible in one-to-one meetings and regularly raised (even if only briefly) to ensure supporting tasks are carried out to swiftly complete the review at the appropriate time.
 
     Creating regular journal entries can speed up the completion of a self-written performance review submission
-
 
 ## Journal
 
@@ -34,7 +31,6 @@ Write regular journal entries and encourage others to do the same by sharing the
 Use the knowledge sharing tool for the organisation, e.g. [Atlassian Confluence](https://www.atlassian.com/software/confluence){target=_blank}, [:globe_with_meridians: Notion](https://www.notion.so/){target=_blank}, [:globe_with_meridians: Tettra](https://tettra.com/){target=_blank}, etc.
 
 > TODO: example jornal, e.g. from Billie & 100 days of code
-
 
 ## Management anti-patters
 

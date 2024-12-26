@@ -13,7 +13,6 @@ Supported Linters have their own page listing the lint and format tools it provi
 
     MegaLinter run via a GitHub workflow has no requirements
 
-
 ## MegaLinter Locally
 
 The most effective way to manage lint and format issues is to run MegaLinter locally, before pushing changes to a Continuous Integration service.
@@ -23,7 +22,6 @@ The MegaLinter runner uses a MegaLinter docker image will all lint tools pre-ins
 Install a recent version of [:globe_with_meridians: Node.js](https://nodejs.org/){target=_blank}, version 18 (Long Term Support) is recommended.
 
 > `npx mega-linter-runner` runs MegaLinter without the need for a specific npm install.
-
 
 ### Create a configuration
 
@@ -69,7 +67,6 @@ Use the `--fix` option with the local MegaLinter runner to automatically apply l
 ??? HINT "Stage or Commit changes before MegaLinter runner automatic fix"
     If code and configuration changes are staged or committed before running with `--fix` then automatic fixes can easily be discarded or treated as a separate commit using any Git tool.
 
-
 !!! NOTE ""
     ```shell
     npx mega-linter-runner --fix --flavor java --env "'MEGALINTER_CONFIG=.github/config/megalinter.yaml'" --remove-container
@@ -93,13 +90,11 @@ Add a `lint` task to the project Makefile and run `make lint` to call the `mega-
 !!! HINT "Options for MegaLinter Runner"
     [MegaLinter Runner options](https://megalinter.io/latest/mega-linter-runner/)
 
-
 ## MegaLinter Configuration
 
 Create a configuration file to use with the local `mega-linter-runner` and [GitHub workflow](#github-workflow)
 
 `.github/config/megalinter.yaml` is a recommeded location for the MegaLinter configuration file, especially when using GitHub workflow.
-
 
 ??? EXAMPLE "Practicalli MegaLinter Configuration"
     ```yaml
@@ -107,10 +102,10 @@ Create a configuration file to use with the local `mega-linter-runner` and [GitH
     # Configuration file for MegaLinter
     #
     # General configuration:
-    # https://oxsecurity.github.io/megalinter/configuration/
+    # <https://oxsecurity.github.io/megalinter/configuration/>
     #
     # Specific Linters:
-    # https://oxsecurity.github.io/megalinter/latest/supported-linters/
+    # <https://oxsecurity.github.io/megalinter/latest/supported-linters/>
 
     # ------------------------
     # Linters

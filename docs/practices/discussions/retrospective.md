@@ -15,12 +15,10 @@ Feedback should be captured during a retropective and action points identified, 
 
     [:globe_with_meridians: Miro retrospective templates](https://miro.com/templates/retrospective/){target=_blank .md-button}
 
-
 ??? HINT "Mini-retrospective"
     A Mini-retrospective can be useful to look at a specific issue as a group or as an individual.
 
     Feedback can be captured in an individual journal when reviewing their own work and practices.
-
 
 ## References
 

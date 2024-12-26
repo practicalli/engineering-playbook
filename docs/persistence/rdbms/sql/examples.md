@@ -7,9 +7,7 @@ View the last 100 rows in the database (assuming id is an ascending (or auto-inc
 
 ## Database management
 
-
 ## Schema management
-
 
 ## Query data
 
@@ -25,4 +23,3 @@ SELECT * FROM (
 ) sub
 ORDER BY id ASC
 ```
-

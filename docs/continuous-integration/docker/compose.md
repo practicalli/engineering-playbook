@@ -2,14 +2,13 @@
 
 ![Docker Compose octopus](https://www.unixmen.com/wp-content/uploads/2017/06/docker-compose-logo.png){align=right loading=lazy style="width:150px"}
 
-Docker Compose provides a declarative configuration for orchestrating multiple services locally. 
+Docker Compose provides a declarative configuration for orchestrating multiple services locally.
 
 Compose can build images for Clojure projects using a `Dockerfile` and conditionally run services based on the health check of other supporting services, e.g. Clojure service runs once Postgres Database service is healthy.
 
 Each service can define a heart beat used as a conditional startup for other services which depend upon them.
 
 [Docker Compose Overview](https://docs.docker.com/compose/){target=_blank .md-button}
-
 
 ## Compose Configuration
 
@@ -64,15 +63,14 @@ The `build:` option for the Clojure service with the path to the multi-stage Doc
           - 8080:8080
     ```
 
-* `name:` (optional) is used to set the container prefix of the service name, via the `environment:` variable `COMPOSE_PROJECT_NAME`, helping to identify the container by name when running.  The above container would be `practicalli-gameboard-service`.  This option is more valuable as the number of services grows
-* `services:` contains one or more service definitions with a unique name, e.g. `gameboard-service`
-* `gameboard-service:` is a unique name for a service configuration
-* `platform:` defines the operating system and hardware architecture that should be used for the service
-* `build: context:` defines the location of the `Dockerfile` to use, either a local file or a Git repository URL
-* `ports:` defines the host:container mapping for the service port.  `8080:8000` value would map the service running within the container on `8000` to the host (e.g. engineers' computer) on port 8080.
+- `name:` (optional) is used to set the container prefix of the service name, via the `environment:` variable `COMPOSE_PROJECT_NAME`, helping to identify the container by name when running.  The above container would be `practicalli-gameboard-service`.  This option is more valuable as the number of services grows
+- `services:` contains one or more service definitions with a unique name, e.g. `gameboard-service`
+- `gameboard-service:` is a unique name for a service configuration
+- `platform:` defines the operating system and hardware architecture that should be used for the service
+- `build: context:` defines the location of the `Dockerfile` to use, either a local file or a Git repository URL
+- `ports:` defines the host:container mapping for the service port.  `8080:8000` value would map the service running within the container on `8000` to the host (e.g. engineers' computer) on port 8080.
 
 ![Docker Compose build process - Clojure project with tools.build](https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-in-progress-light.png?raw=true)
-
 
 > Use [a multi-stage `Dockerfile`](https://practical.li/engineering-playbook/continuous-integration/docker/clojure-multi-stage-dockerfile/) to provide greater opportunity to create image overlays for the build stage which can be cached, e.g. downloading project dependencies, speeding up the build process on consecutive runs.
 
@@ -107,10 +105,9 @@ The Clojure service defines a dependency on a Postgres Database.  The dependency
           - 5432:5432
     ```
 
-* `depends_on:` include one or more services that the service depends on, optionally adding a start `condition:`
-* `depends_on: <service-name> condition:` a condition that should be true in order for the service image to start, typically checking `service_healthy` of another service in the configuration
-* `heathcheck:` define a command and options to determine if the specific service running is healthy, with the `test:` command specific to the type of service.
-
+- `depends_on:` include one or more services that the service depends on, optionally adding a start `condition:`
+- `depends_on: <service-name> condition:` a condition that should be true in order for the service image to start, typically checking `service_healthy` of another service in the configuration
+- `heathcheck:` define a command and options to determine if the specific service running is healthy, with the `test:` command specific to the type of service.
 
 Build and run the services using the `--build` flag with `docker compose`
 
@@ -128,7 +125,6 @@ On consecutive runs, at least part of the Clojure build process should be cached
 Each service can define a health check that can be used as a conditional startup trigger and ensure all services start in a meaningful order.
 
 ![Docker Compose startup - Clojure build and Postgres database - attache to database](https://github.com/practicalli/graphic-design/blob/live/continuous-integration/docker-compose-build-buld-clojure-run-postgres-healthy-attaching-light.png?raw=true)
-
 
 ### Build on Change
 
@@ -170,10 +166,6 @@ Save changes to files and a new image for the Clojure service will be built and 
 
 !!! HINT "Optimise Docker Cache in Build process"
     Using build on change approach can run quite frequently, so an optimised build process in the `Dockerfile` or `compose.yaml` configuration is especially important to make build on change fast and therefore effective to use.
-
-
-
-
 
 ## Compose services
 
@@ -244,4 +236,3 @@ Start the services and the file watch mode
     ```
 
 Save changes to files and a new image for the Clojure service will be built and deployed when ready.
-

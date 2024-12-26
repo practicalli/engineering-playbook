@@ -2,14 +2,11 @@
 
 Connect to a relational database instance and manage the structure and data within a database.
 
-
 ## Recommended Clients
 
 - Command Line
 - DBeaver - desktop application
 - pgAdmin - desktop application and web app
-
-
 
 ## Manage Databases
 
@@ -25,7 +22,6 @@ Copy a Database – copy a database within a database server or from a server to
 
 Get Database Object Sizes – introduce you to various handy functions to get the size of a database, a table, and indexes.
 
-
 ## Manage Schema
 
 Schema – introduce the schema concept and explains how the schema search path works in PostgreSQL.
@@ -35,7 +31,6 @@ Create Schema – show you how to create a new schema in a database.
 Alter Schema – rename a schema or changes its owner to the new one.
 
 Drop schema – delete one or more schemas with their objects from a database.
-
 
 ## Managing Tablespaces
 
@@ -47,8 +42,8 @@ Changing Tablespaces – show you how to rename, change owner and set the parame
 
 Delete Tablespaces – learn how to delete tablespaces by using DROP TABLESPACE statement.
 
-
 ## Section 4. Roles & Privileges
+
 PostgreSQL represents accounts as roles. Roles that can log in called login roles or users. Roles that contain other roles are called group roles. In this section, you will learn how to manage roles and groups effectively.
 
 Create role: introduce you to roles concept and show you how to create roles and groups by using the create role statement.
@@ -65,7 +60,6 @@ Role membership – learn how to create group roles to better manage role member
 
 List user roles – show you how to list all roles on the PostgreSQL server.
 
-
 ## Backup & Restore
 
 PostgreSQL backup and restore tools including pg_dump, pg_dumpall, psql,  pg_restore and  pgAdmin to backup and restore databases.
@@ -74,9 +68,7 @@ Backup – introduce you to practical ways to back up your databases by using Po
 
 Restore –  show you various ways to restore PostgreSQL databases by using psql and pg_restore tools.
 
-
 > Backup and restore useful for local development with Docker Compose and volumes
-
 
 ## General
 

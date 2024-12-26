@@ -6,7 +6,6 @@ Ubuntu Desktop is aimed at a rich user experience.
 
 Server ISO provides additional options when installing Ubuntu, especially RAID support.
 
-
 ## Post Install steps
 
 - XDG Environment Variables
@@ -18,4 +17,3 @@ Server ISO provides additional options when installing Ubuntu, especially RAID s
 - Clojure CLI
 - Emacs
 - Neovim
-

@@ -20,7 +20,6 @@ Warp offers customisation options when first starting.
 - terminal theme
 - prompt theme (warp or any detected theme, e.g. powerline10k)
 
-
 - [:globe_with_meridians: Vim key bindings](https://docs.warp.dev/features/editor/vim)
 
 ## Notebooks

@@ -1,12 +1,9 @@
 # Practicalli Engineering Playbook
 
-
 !!! QUOTE
     **Effective Communication** is the fundamental challenge for all software engineering projects
 
     John Stevenson, Practicalli
-
-
 
 The Engineering Playbook presents a collection of practical guides which effectively address common software engineering tasks.
 
@@ -18,11 +15,9 @@ The Engineering Playbook presents a collection of practical guides which effecti
 !!! HINT "Engineering Playbook Initiative"
     Establishing a playbook within an organisation encourages information sharing, providing an effective way for disparate teams to learn from each other.
 
-
 ## Discussions and feedback
 
 [Contributing to Practical.li](https://practical.li/contributing){target=_blank .md-button}
-
 
 ## Navigate the book
 
@@ -38,7 +33,6 @@ Use the search box to quickly find a specific topic
 - ++esc++ , ++tab++ : close search dialog
 - ++enter++ : follow selected result
 
-
 ## Sponsor Practicalli
 
 [![Sponsor practicalli-johnny](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png){ align=left loading=lazy }](https://github.com/sponsors/practicalli-johnny/)
@@ -46,7 +40,6 @@ Use the search box to quickly find a specific topic
 All sponsorship funds are used to support the continued development of [Practicalli series of books and videos](https://practical.li/){target=_blank}, although most work is done at personal cost and time.
 
 Thanks to [Cognitect](https://www.cognitect.com/){target=_blank}, [Nubank](https://nubank.com.br/){target=_blank} and a wide range of other [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors){target=_blank} from the Clojure community for your continued support
-
 
 ## Creative commons license
 

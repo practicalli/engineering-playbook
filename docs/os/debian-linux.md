@@ -4,7 +4,6 @@ Debian Linux provides support for the widest range of hardware of any Linux dist
 
 The Debian project established the high-quality `.deb` package system which ensures all packages are consitenly defined and manage dependencies.
 
-
 ## Install
 
 Debian provides ISO images which can be burned onto compact disks or USB memory sticks.
@@ -30,10 +29,7 @@ Copy the Debian Linux ISO image to a USB of 1GB size or larger
     ```
     [Arch Linux: ISO image command line utilities](https://wiki.archlinux.org/title/USB_flash_installation_medium)
 
-
 ## Post Install
-
-
 
 ### root vs sudo
 
@@ -47,13 +43,10 @@ su -
 
 > root password is set during install of Debian
 
-
 !!! HINT "Dedicated terminal for root account"
     Open a terminal application specifically to use the root account when carrying out significant maintenance, e.g. installing many packages during the post install.
 
-
 ## Set XDG freedesktop locations
-
 
 === "Zsh"
 
@@ -68,7 +61,6 @@ su -
 
 === "Bash"
 
-
 ## Git install
 
 ```shell
@@ -78,7 +70,6 @@ apt install git
 ## Clone practicalli/dotfiles
 
 clone to projects/practicalli/dotfiles
-
 
 ## Git configure
 
@@ -90,8 +81,6 @@ ln -s ~/projects/practicalli/dotfiles/git ~/.config/git
 
 Update identity-practicalli-john file with annonymous email address from GitHub settings > Emails section
 
-
-
 ## Kitty Terminal
 
 Debian packages
@@ -101,7 +90,6 @@ Debian packages
 - kitty-shell-integration
 - kitty-terminfo
 - `fonts-firacode` use by Practicalli Kitty terminal
-
 
 ```shell
 apt install kitty kitty-doc kitty-shell-integration kitty-terminfo fonts-firacode
@@ -113,7 +101,6 @@ Link to practicalli/dotfiles/kitty in .config directory
 ```shell
 ln -s ~/projects/practicalli/dotfiles/kitty ~/.config/kitty
 ```
-
 
 ## Zsh
 
@@ -131,7 +118,6 @@ apt install zsh
     Practicalli recommends Prezto as it has excellent completion capabilities, especially wish fish mode enabled.
 
     OhMyZsh is used within Termux as Prezto has not worked correctly in my experiences.
-
 
 === "Prezto"
 
@@ -189,12 +175,10 @@ apt install zsh
     chsh -s /usr/bin/zsh
     ```
 
-
 ## Neovim
 
 !!! HINT "Practicalli Neovim install"
     See the [install guide in Practicalli Neovim](https://practical.li/neovim/install/) book
-
 
 Required packages
 
@@ -203,7 +187,6 @@ Required packages
 - `xclip` provider for accessing operating system clipboard from Neovim
 - `luarocks` required for some mason installed tools
 - `lazygit` terminal UI git client used by AstroNvim
-
 
 ```shell
 apt install curl gdu lazygit luarocks xclip
@@ -235,7 +218,6 @@ ln -s ~/.local/apps/nodejs/current/bin/npm ~/.local/bin/npm &&
 ```
 
 If a different version of nodejs is installed, then all that should be required is deleting and recreating the `current` symbolic link in `~/.local/apps/nodejs/` to point to the desired version.
-
 
 ### Releases
 
@@ -273,7 +255,6 @@ Use the `source` command to load the changes in `.zprofile` to  update the path 
     source .config/zsh/.zprofile
     ```
 
-
 ### Configure nvim
 
 Clone astronvim configuration and Practicalli Astronvim configuration
@@ -289,11 +270,9 @@ Add aliases to `.zshrc` to call different neovim configurations
 
 [Practicalli Neovim - Multiple Configurations](https://practical.li/neovim/install/multiple-configurations/){target=_blank .md-button}
 
-
 ## Date and Time
 
 The `date` command on Linux systems is used to show the system date or set a specific date and time. The system date can only be changed by the root account or accounts in the `sudo` group.
-
 
 When using the Gnome desktop the system date is automatically managed, keeping the date and time current.
 
@@ -320,11 +299,9 @@ When the timedateclt is disabled, then the `date` command can be used to set a s
 
 > Linux used to use the ntp service which is available via the Debian `ntp` package, but not used by Gnome desktop
 
-
 ## Add Sid packages on Testing
 
 Packages can be installed from `sid` (unstable) when the `testing` version of Debian Linux is installed, referred to as "Testing-Unstable Mix".
-
 
 Configure apt to ensure a testing system stays on testing, without apt upgrading every package to the unstable version.
 
@@ -340,10 +317,10 @@ In the Apt sources.list configuration, copy the main testing line and change the
 !!! EXAMPLE "Add unstable to package sources"
     ```conf title="/etc/apt/sources.list"
     # Testing
-    deb http://deb.debian.org/debian/ trixie main contrib non-free-firmware non-free
-    deb-src http://deb.debian.org/debian/ trixie main contrib non-free-firmware non-free
-    deb http://deb.debian.org/debian/ trixie-updates main contrib non-free-firmware non-free
-    deb http://deb.debian.org/debian/ trixie-backports main contrib non-free-firmware non-free
+    deb <http://deb.debian.org/debian/> trixie main contrib non-free-firmware non-free
+    deb-src <http://deb.debian.org/debian/> trixie main contrib non-free-firmware non-free
+    deb <http://deb.debian.org/debian/> trixie-updates main contrib non-free-firmware non-free
+    deb <http://deb.debian.org/debian/> trixie-backports main contrib non-free-firmware non-free
 
     deb http://security.debian.org/debian-security trixie-security main contrib non-free-firmware
     deb-src http://security.debian.org/debian-security trixie-security main contrib non-free-firmware

@@ -8,7 +8,7 @@ TDD is design tool to support understanding of thebehaviour the software should 
 
 Start by writing a single test representing a single piece of behaviour, an assumption of the understanding so far gathered from the requirements or other communications.  
 
-Behaviour defined through a test provides a specific constraint to focuses the implementation of code that satisfies the test. 
+Behaviour defined through a test provides a specific constraint to focuses the implementation of code that satisfies the test.
 
 ## TDD basic steps
 
@@ -26,7 +26,6 @@ Behaviour defined through a test provides a specific constraint to focuses the i
 
 5. Write another test / refactor code
 
-
 ## Tools
 
 Unit Testing frameworks
@@ -36,10 +35,9 @@ Hamcrest is often used with JUnit to make the tests more human readable, great w
 
 Hamcrest core is now included in JUnit since version 4.5 onwards.
 
-
 ## Learning TDD well
-The best way to learn TDD well and feel comfortable with this technique is to practice, see the section on deliberate practice for ideas on how to practice TDD.
 
+The best way to learn TDD well and feel comfortable with this technique is to practice, see the section on deliberate practice for ideas on how to practice TDD.
 
 ## Tips
 
@@ -56,19 +54,17 @@ When refactoring code, those tests that have a number of assertions are more lik
 Managing test data
 Each test will reset the state - that's the way JUnit works (nUnit maintains state, so has to be cleared manually)
 
-
 ## TDD Kanban
 
 ![TDD Kanban](TDD-Kanban.png){align=right loading=lazy style="height:150px;width:150px"}
-
 
 To help keep you in a good flow when you are following the test first approach, it can be useful to use a simple kanban board to manage your flow.
 
 The kanban board has three lanes as follows
 
-* Test - you are writing a single test
-* Code - you are writing code to pass a particular test that is failing
-* Refactor - you are changing the internal workings of your code
+- Test - you are writing a single test
+- Code - you are writing code to pass a particular test that is failing
+- Refactor - you are changing the internal workings of your code
 
 You only have one card on your kanban board (this is your work in progress limit), this reminds you which activity you should be working on and should help you get into the test-code-refactor routine.
 
@@ -82,8 +78,7 @@ Once you have written enough code to make the test pass (running all tests), mov
 
 When you have finished your refactor work and have run the tests, move the card back to the test lane and write another failing test.
 
-
 ## Resources
 
-* [List of TDD Problems](https://sites.google.com/site/tddproblems/all-problems-1)
-* [Effective exercises for teaching TDD](https://gojko.net/2010/04/19/effective-exercises-for-teaching-tdd/)
+- [List of TDD Problems](https://sites.google.com/site/tddproblems/all-problems-1)
+- [Effective exercises for teaching TDD](https://gojko.net/2010/04/19/effective-exercises-for-teaching-tdd/)

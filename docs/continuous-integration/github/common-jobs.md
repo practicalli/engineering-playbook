@@ -26,7 +26,6 @@ Echo information regarding the triggering of the workflow, to help diagnose issu
           - run: echo "🍏 Job status is ${{ job.status }}."
     ```
 
-
 ## Git Checkout
 
 Check-out the project from version control, fetching the whole history with `fetch-depth: 0`. Set `fetch-depth:` to 1 (or remove the option) to checkout the single commit for the ref/SHA that triggered the workflow
@@ -63,7 +62,6 @@ Using `git sparse-checkout` can save signficant time by checking out a sub-set o
                 overrides
           - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
     ```
-
 
 ## Pull Request first interaction
 

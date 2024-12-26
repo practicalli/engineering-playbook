@@ -4,12 +4,11 @@ Show the status of the files in the source controlled project, comparing the wor
 
 A file can have one of the following status values
 
-- untracked 
+- untracked
 - modified
 - staged
 
 > A file can have both modified and staged statuses if only specific lines or hunks were staged.
-
 
 ## Git Alias
 
@@ -18,10 +17,9 @@ Define a command line alias for Git, e.g. `git sr` or `git sitrep` that includes
 !!! EXAMPLE "Define Git alias for status"
     ```config title=".config/git/config"
     [alias]
-    	sitrep = status --short --branch
-    	sr = status --short --branch
+     sitrep = status --short --branch
+     sr = status --short --branch
     ```
-
 
 ## Report across repositories
 
@@ -31,7 +29,7 @@ Use the `mgitstatus` command line tool to show the status of all the repositorie
 cd ~/projects/practicalli && mgitstatus
 ```
 
-The status includes the following types: 
+The status includes the following types:
 
 - ok - no changes
 - untracked files

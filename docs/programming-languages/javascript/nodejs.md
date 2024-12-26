@@ -7,7 +7,7 @@ Node.js is useful for running JavaScript tools and server-side services.
 ## Install
 
 === "Debian/Ubuntu"
-    The nodejs package available in Ubuntu required a scary amount of dependencies, so it may be preferable to install nodejs locally, in your own account.  This does mean node is only available to this specific user account. 
+    The nodejs package available in Ubuntu required a scary amount of dependencies, so it may be preferable to install nodejs locally, in your own account.  This does mean node is only available to this specific user account.
 
     ??? WARNING "Avoid nodejs debian packages when using Neovim Mason"
         Mason is a Neovim plugin to manage installation of LSP servers, format and lint tools.

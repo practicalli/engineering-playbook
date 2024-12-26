@@ -9,10 +9,8 @@ Events related to a GitHub workflow include
 - workflow_dispatch (Manual run)
 - [Schedule (Cron)](#cron-schedule)
 
-
 !!! EXAMPLE "Scheduled Version Check"
     [Scheduled Version Check](/continuous-integration/github-workflow/#scheduled-version-check) GitHub workflow uses the cron schedule to check for newer versions of Clojure libraries and GitHub actions
-
 
 ## Cron schedule
 
@@ -37,19 +35,15 @@ A POSIX Cron pattern is used to define the schedule
 
 !!! INFO "Scheduled version check uses cron schedule"
 
-
 ??? INFO "Cron references"
     - [`on.schedule` - GitHub workflow syntax](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onschedule)
     - [Cron Expression Syntax Cheatsheet](https://cronstatus.com/docs/cron/)
-
-
 
 ## Workflow Dispatch
 
 Add `workflow_dispatch:` without arguments to the `on:` directive in a workflow configuration file to manually trigger the running of the workflow.
 
 Visit GitHub.com > Actions > Workflow Name in the repository and select `Run`
-
 
 ## Conditional on other workeflow
 

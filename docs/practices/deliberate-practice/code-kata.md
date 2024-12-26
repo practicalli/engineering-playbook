@@ -16,7 +16,6 @@ Coding kata often uses a test first approach, as in TDD.
 
 [Randori - Wikipedia](https://en.wikipedia.org/wiki/Randori){target=_blank .md-button}
 
-
 ### Prepared Kata
 
 A presenter shows how to solve a challenge using TDD using baby steps
@@ -26,5 +25,3 @@ Each step must make sense to everyone present
 Audience only interrupts if something is not understood.
 
 ### Group Kata
-
-

@@ -2,7 +2,6 @@
 
 Storing data on long term storage
 
-
 ## Relational Databases
 
 Relational Database (RDBMS) and tools

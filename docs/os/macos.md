@@ -6,7 +6,6 @@ A BSD based Unix system with commercial Graphic Desktop shell created by Apple.
 
     Otherwise, testing relies on the community for confirmation and corrections.
 
-
 !!! HINT "Use International English keyboard for sensible key locations"
     Practicalli highly recommends the 'International English' keyboard on Macbook laptops as this has sensible locations for keys, especially the `#` key.
     Or use the [:globe_with_meridians: Model 100 or Atreus keyboards from Keyboard.io](https://shop.keyboard.io/){target=_blank}
@@ -21,7 +20,6 @@ A BSD based Unix system with commercial Graphic Desktop shell created by Apple.
 Enable ++ctrl++ ++1++ ... ++5++ in the MacOS keybinding settings to control switching between the first 5 workspaces. Place the most commonly used apps on each of these workspaces to quickly switch between them.
 
 [:fontawesome-brands-github: Amethyst Tiling window management - MacOSX](https://github.com/ianyh/Amethyst){target=_blank .md-button}
-
 
 ## Homebrew
 

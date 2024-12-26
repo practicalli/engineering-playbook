@@ -1,7 +1,5 @@
 # System catalog
 
-
-
 ## Backstage.io
 
 [Backstage](https://github.com/backstage/backstage#what-is-backstage) is an open platform for building developer portals, using a centralised software catalog.
@@ -30,4 +28,3 @@ The Backstage Validator workflow checks the Backstage configuration of the curre
             with:
               path: ".backstage/*.yaml"
     ```
-

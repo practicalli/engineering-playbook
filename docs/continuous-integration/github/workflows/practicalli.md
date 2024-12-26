@@ -6,8 +6,6 @@ Practicalli books and other content websites use the following GitHub workflows.
 
 [:fontawesome-solid-book-open: Practicalli MegaLinter workflow](megalinter.md){.md-button}
 
-
-
 ## Changelog Update Check
 
 Check the CHANGELOG.md file has been updated for a pull request, providing a reminder to add a summary of changes for the pull request
@@ -53,7 +51,6 @@ Defines `changelog-check-skip` label on a pull request instructs the workflow no
           - run: echo "🎨 Changelog Enforcer quality checks completed"
           - run: echo "🍏 Job status is ${{ job.status }}."
     ```
-
 
 ## Clojure Lint with Reviewdog
 
@@ -159,8 +156,6 @@ Defines `changelog-check-skip` label on a pull request instructs the workflow no
             run: clojure -X:env/test:test/run
     ```
 
-
-
 ## mkdocs publisher
 
 A workflow used to publish Practicalli books.
@@ -170,7 +165,6 @@ A workflow used to publish Practicalli books.
 * `paths-ignore` defining paths to ignore changes from
 * actions/setup-python installs python version 3
 * `pip` to install Material for MkDocs packages used for Practialli books
-
 
 !!! EXAMPLE "MkDocs Publish Book workflow"
     ```yaml
@@ -231,14 +225,13 @@ Use [liquidz/antq-action](https://github.com/liquidz/antq-action) to check for n
 
 The GtiHub action can use the following actions
 
-- `excludes:` list of space separated artefact names to exclude from the version check, use `groupId/artifactId` for Java libraries
-- `directories:` search paths to check, space separated.
-- `skips:` project types to skip to search, space separated. One of boot, clojure-cli, github-action, pom, shadow-cljs or leiningen.
+* `excludes:` list of space separated artefact names to exclude from the version check, use `groupId/artifactId` for Java libraries
+* `directories:` search paths to check, space separated.
+* `skips:` project types to skip to search, space separated. One of boot, clojure-cli, github-action, pom, shadow-cljs or leiningen.
 
 `on: schedule: cron:` is used to set the frequency for running the workflow, using a [POSIX cron syntax](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07){target=_blank}.
 
 [:fontawesome-brands-github: GitHub Docs: GitHub Actions - schedule](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule){target=_blank .md-button}
-
 
 !!! EXAMPLE "Scheduled Antq Version check with Manual Trigger"
     ```yaml

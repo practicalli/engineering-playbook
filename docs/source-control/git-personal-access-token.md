@@ -2,9 +2,6 @@
 
 A personal access token is required when accessing a remote repository over HTTPS.
 
-
-
-
 ## Generate a token
 
 Visit the remote repository service and generate a personal access token with at least `repo` permission.

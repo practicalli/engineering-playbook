@@ -4,7 +4,6 @@ Engineering has many practices and principles defined over it many decades.
 
 ??? WARNING "Section is work in progress"
 
-
 ## Agile software Development
 
 - [:globe_with_meridians: Agile Manifesto](https://agilemanifesto.org/){target=_blank} (essentail reading)
@@ -12,14 +11,12 @@ Engineering has many practices and principles defined over it many decades.
 - Test Driven Development
 - [Technical Debt](technical-debt/)
 
-
 ## Discussions
 
 - [:fontawesome-solid-book-open: Standup](discussions/standup.md)
 - [:fontawesome-solid-book-open: Retrospective](discussions/retrospective.md)
 - [:fontawesome-solid-book-open: one-to-one meetings](discussions/one-to-one-meeting.md)
 - [:globe_with_meridians: Six Thinking Hats](https://en.wikipedia.org/wiki/Six_Thinking_Hats){target=_blank}
-
 
 ## Lean software development
 
@@ -31,7 +28,7 @@ Engineering has many practices and principles defined over it many decades.
 - Root Cause Analysis
 - Five whys
 
-## General Project Management 
+## General Project Management
 
 - Rolling Wave Planning
 - MoSCoW rules - Must have, Should have, Could have, Wont have

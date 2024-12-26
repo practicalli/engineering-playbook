@@ -9,12 +9,10 @@ Those same tools can check important quality rules when sharing code via continu
 
 The development team should agree on the rules that are valueable for these tools to apply, including those recommended by the community around the programming language or configuration file specification.
 
-
 ## Recommended Tools
 
 MegaLinter provides an extensive range of lint tools all in one, using docker images to remove tool installation requirements.
 
 [MegaLinter - extensive collection of lint tools](megalinter.md){target=_blank .md-button}
-
 
 [Clojure Quality Tools](clojure.md){target=_blank .md-button}

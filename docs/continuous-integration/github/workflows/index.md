@@ -4,7 +4,7 @@ The marketplace page for a GitHub action should specify how it is used within a 
 
 ## Event Triggers
 
-Workflows can be triggered by 
+Workflows can be triggered by
 
 - commit to branch
 - `pull_request`
@@ -25,7 +25,6 @@ e.g. ingnore a pull request when changes are only in the `README.md` file
           - "README.md"
 ```
 
-
 ## GitHub Action version
 
 GitHub actions typically use semantic versioning for their releases
@@ -40,7 +39,6 @@ GitHub actions typically use semantic versioning for their releases
 
     [Semantic Versioning 2.0.0 Specification](https://semver.org/){target=_blank .md-button} 
 
-
 Specify the major release the major version will use the latest version within that scope, e.g. `action/checkout@v3` will use `v3.5.2`, the latest version within that major version
 
 ```yaml
@@ -50,7 +48,6 @@ steps:
 
 ??? HINT "Use major version of Action in workflow configuration"
     Use the major version of a GitHub action within a GitHub workflows to minimise maintenance of the workflow configuration.
-
 
 Use a specific patch release tag when a specific version is reqiured, providing a consistent version that is used each time.
 
@@ -67,7 +64,7 @@ steps:
 ```
 
 Using a commit's SHA for release management
-Every Git commit has a unique and immutable SHA value, calculated in part from the contents of the commit. 
+Every Git commit has a unique and immutable SHA value, calculated in part from the contents of the commit.
 
 A SHA value can be more reliable than specifying a tag value which could be deleted or moved.
 
@@ -79,5 +76,3 @@ steps:
 ```
 
 [:fontawesome-brands-github: GitHub: creating actions reference](https://docs.github.com/en/actions/creating-actions/about-custom-actions){target=_blank .md-button}
-
-

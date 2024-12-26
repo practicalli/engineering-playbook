@@ -6,7 +6,6 @@ Docker community edition provides the back-end services to run docker images in 
 
 Docker Desktop provides a graphical UI for managing images, containers and volumes.
 
-
 ## Install Docker Desktop
 
 Docker desktop depends on Docker Community Edition and will install all the respective packages.
@@ -67,7 +66,6 @@ User accounts that will run docker should be included in the `docker` group.
 
    `groups` command will list the operating system groups assigned to the current user.
 
-
 ## Start Docker & Docker Desktop
 
 Starting Docker Desktop will automatically start the underlying Docker community edition that provides the run-time for docker containers.
@@ -114,18 +112,16 @@ Status: Downloaded newer image for docker/getting-started:latest
 
 Open the tutorial website at [http://localhost/](http://localhost/) and follow the tutorial steps to learn more about Docker.
 
-
 !!! HINT "Increase concurrent download of image overlays"
     increase the max-concurrent-downloads value from the default 3 to 24, to download multi-layered docker images faster
     ```config hl_lines="5" title=".docker/config.json"
     {
-    	"auths": {},
-    	"credsStore": "desktop",
-    	"currentContext": "default",
-    	"max-concurrent-downloads": 24
+     "auths": {},
+     "credsStore": "desktop",
+     "currentContext": "default",
+     "max-concurrent-downloads": 24
     }
     ```
-
 
 ## Check installed versions
 
@@ -170,7 +166,6 @@ Example
       GitCommit:        de40ad0
     ```
 
-
 !!! NOTE "Check compose version"
     ```shell
     docker compose version
@@ -181,7 +176,6 @@ Example
     ❯ docker compose version
     Docker Compose version v2.17.3
     ```
-
 
 ## Optimise Log rotation
 

@@ -7,7 +7,6 @@
 
 Practicalli uses Kitty as the terminal application on Linux and MacOS operating systems.  Kitty is used for running [Neovim](https://practical.li/neovim) and all command line tools.
 
-
 ## Install
 
 === "Debian Packages"
@@ -62,7 +61,6 @@ Practicalli uses Kitty as the terminal application on Linux and MacOS operating 
         ln -s ~/.local/apps/kitty/kitty-<version>/share/applications/kitty-open.desktop \
         ~/.local/share/applications/kitty-open.desktop
         ```
-
 
 ## Configuration
 
@@ -138,7 +136,6 @@ Set the font family in the `kitty.conf` configuration file
         --8<-- "https://github.com/practicalli/dotfiles/blob/main/kitty/nerdfont-icons.conf?raw=true"
         ```
 
-
 ## Common Key mappings
 
 Terminal session management.
@@ -154,7 +151,6 @@ Terminal session management.
 ++ctrl+shift+bracket-left++ or ++bracket-right++ to switch between window splits
 
 ++ctrl+shift+"w"++ to close a window
-
 
 Other common commands include:
 
@@ -172,7 +168,6 @@ Other common commands include:
 
 ++ctrl+shift+"s"++ paste into to kitty terminal from clipboard
 
-
 ## Kitten features
 
 [kittens](https://sw.kovidgoyal.net/kitty/kittens_intro/) provide additional features.  Recommended features include:
@@ -181,7 +176,6 @@ Other common commands include:
 * [diff](https://sw.kovidgoyal.net/kitty/kittens/diff/) - fast, side-by-side diff for the terminal with syntax highlighting
 * [Clipboard](https://sw.kovidgoyal.net/kitty/kittens/clipboard/) - Copy/paste to the clipboard from shell scripts, even over SSH
 * [SSH](https://sw.kovidgoyal.net/kitty/kittens/ssh/) - SSH with automatic shell integration, connection re-use for low latency and easy cloning of local shell and editor configuration to the remote host
-
 
 ## Themes
 
@@ -222,11 +216,9 @@ include current-theme.conf
 
 Icon support from Nerd fonts, download and include the configuration to show icons in terminal based editors (e.g. Neovim, Emacs, etc.)
 
-
 ```shell
 include ./nerdfont-icons.conf
 ```
-
 
 ## Diff
 
@@ -242,9 +234,7 @@ kitty +kitten diff file1 file2
 
 ++period++ or ++less-than++  jumps to previous diff match
 
-
 * [All keyboard controls](https://sw.kovidgoyal.net/kitty/kittens/diff/#keyboard-controls)
-
 
 ## SSH
 
@@ -255,7 +245,6 @@ kitty +kitten ssh hostname
 ```
 
 ## Image viewer
-
 
 !!! NOTE "View images with kitty"
     ```shell

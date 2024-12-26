@@ -4,15 +4,12 @@
 
 Command-line shells require the user to be familiar with commands and their calling syntax, and to understand concepts about the shell-specific scripting language (for example, bash), while graphical shells place a low burden on beginning computer users and are characterized as being easy to use, yet most GUI-enabled operating systems also provide CLI shells, normally for performing advanced tasks.
 
-[Wikipedia: Shell - Computing](https://en.wikipedia.org/wiki/Shell_(computing)){target=_blank .md-button} 
-
+[Wikipedia: Shell - Computing](https://en.wikipedia.org/wiki/Shell_(computing)){target=_blank .md-button}
 
 ## Command Line Shell
 
-
 - bash
 - zsh
-
 
 ## Aliases
 
@@ -59,6 +56,6 @@ Source the shell aliases from the shell configuration files
         fi
         ```
 
-## GUI Shell 
+## GUI Shell
 
 Gnome, KDE, Regolith are examples of desktop shells.

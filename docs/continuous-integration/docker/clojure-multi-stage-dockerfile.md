@@ -18,7 +18,6 @@ A multi-stage Dockerfile uses a separate build stage that separates tools and te
 
      Examples will be provided using Alpine Linux and Debian Linux operating system.
 
-
 ## Builder stage
 
 The builder stage packages the Clojure service into an uberjar containing the Clojure standard library and the build of the Clojure service.
@@ -51,7 +50,6 @@ Practicalli uses the Official Clojure Docker image with Clojure CLI as the build
         ENV CLOJURE_VERSION=1.12.0.1479
         ```
 
-
 === "Debian Linux"
 
     [:fontawesome-solid-book-open: Debian Linux](images.md#debian-linux) bookworm is the latest stable image, using `slim` variant for a minimal set of packages
@@ -76,9 +74,6 @@ Practicalli uses the Official Clojure Docker image with Clojure CLI as the build
 ??? HINT "Clojure CLI release history"
     [Clojure.org Tool Releases]() page shows the current release and history of each released version.
 
-
-
-
 Create directory for building the project code and set it as the working directory within the Docker container to give RUN commands a path to execute from.
 
 !!! EXAMPLE "Create working directory for build"
@@ -92,7 +87,6 @@ Create directory for building the project code and set it as the working directo
 
     As long as the required files are copied, any build tool and task can be used to create the Uberjar file that packages the Clojure service for deployment.
 
-
 ### Cache Dependencies
 
 Clojure CLI is used to download library dependencies for the project and any other tooling used during the build stage, e.g. test runners, packaging tools to create an uberjar.
@@ -100,7 +94,6 @@ Clojure CLI is used to download library dependencies for the project and any oth
 Once a library has been downloaded it becomes part of the cached layer so the download should only occur once.
 
 If the `deps.edn` file changes then the layer will run again and update the cache if changes to the library dependencies were made.
-
 
 === "Makefile"
     [:fontawesome-solid-book-open: Practicalli Makefile](/engineering-playbook/build-tool/make/){target=_blank} includes a `deps` task that downloads all the library dependency for a project.
@@ -129,7 +122,6 @@ If the `deps.edn` file changes then the layer will run again and update the cach
         ```
     The dependencies are cached in the Docker overlay (layer) and this cache will be used on successive docker builds unless the `deps.edn` file or `Makefile` is change.
 
-
 === "Clojure CLI"
     Copy the `deps.edn` file to the build stage and use the `clojure -P` prepare (dry run) command to download the dependencies without running any Clojure code or tools.
 
@@ -146,13 +138,11 @@ If the `deps.edn` file changes then the layer will run again and update the cach
 
 `deps.edn` in this example contains the project dependencies and `:build` alias used build the Uberjar.
 
-
 ### Build Uberjar
 
 Copy all the project files to the docker builder working directory, creating another overlay.
 
 Copying the src and other files in a separate overlay to the `deps.edn` file ensures that changes to the Clojure code or configuration files does not trigger downloading of the dependencies again.
-
 
 === "Makefile"
     Run the `dist` task to generate an Uberjar for distribution.
@@ -174,17 +164,14 @@ Copying the src and other files in a separate overlay to the `deps.edn` file ens
 
     `:project/build` is an alias to include [Clojure tools.build](https://practical.li/clojure/clojure-cli/projects/tools-build/) dependencies which is used to build the Clojure project into an Uberjar.
 
-
 === "Babashka Task Runner"
     Pull request welcome
-
 
 ### Docker Ignore patterns
 
 `.dockerignore` file in the root of the project defines file and directory patterns that Docker will ignore with the COPY command.  Use `.dockerignore` to avoid copying files that are not required for the build
 
 Keep the `.dockerignore` file simple by excluding all files with `*` pattern and then use the `!` character to explicitly add files and directories that should be copied
-
 
 === "Makefile"
     !!! EXAMPLE "Docker ignore - only include specific patterns"
@@ -223,9 +210,7 @@ Keep the `.dockerignore` file simple by excluding all files with `*` pattern and
 
 > The classic approach for Docker ignoer patters is to [specify all files and directories to exclude in a Clojure project](https://gist.github.com/practicalli-john/36230953271cb0376a297d8a1d82ff6d), although this can lead to more maintenance as the project grows.
 
-
 ## Run-time stage
-
 
 === "Alpine Linux"
     The Alpine Linux version of the Eclipse Temurin image is used as it is around 5Mb in size, compared to 60Mb or more of other operating system images.
@@ -254,11 +239,9 @@ LABEL description="Gameboard API service"
 
 > Use `docker inspect` to view the metadata
 
-
 ### Additional Packages
 
 Optionally, add packages to support running the service or helping to debug issue in the container when it is running.  For example, add `dumb-init` to manage processes, `curl` and `jq` binaries for manual running of system integration testing scripts for API testing.
-
 
 === "Alpine Linux"
 
@@ -273,7 +256,6 @@ Optionally, add packages to support running the service or helping to debug issu
         ```
 
     > [Check Alpine packages](https://pkgs.alpinelinux.org/packages) if new major versions are no longer available (low frequency)
-
 
 === "Debian Linux"
 
@@ -290,11 +272,9 @@ Optionally, add packages to support running the service or helping to debug issu
 
     > [Debian Linux packages](https://pkgs.alpinelinux.org/packages) if new major versions are no longer available (low frequency)
 
-
 ### Non-root group and user
 
 Docker runs as root user by default and if a container is compromised the root permissions and could lead to a compromised host system. [Docker recommends creating a user and group in the run-time image](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#user)  to run the service
-
 
 === "Alpine Linux"
     !!! EXAMPLE "Create a non-privileged user account"
@@ -328,8 +308,6 @@ Docker runs as root user by default and if a container is compromised the root p
         ```
 
 === "Debian Linux"
-
-
 
 ### Copy Uberjar to run-time stage
 
@@ -393,7 +371,6 @@ Options that are most relevant to running Clojure & Java Virtual Machine in a co
 ??? WARNING "Only optimise if performance test data shows issues"
     Without performance testing of a specific Clojure service and analysis of the results, let the JVM use its own heuristics to determine the most optimum strategies it should use
 
-
 ### Expose Clojure service
 
 If Clojure service listens to network requests when running, then the port it is listening on should be exposed so the world outside the container can communicate to the Clojure service.
@@ -435,7 +412,6 @@ Use `dumb-init` as the `ENTRYPOINT` command and `CMD` to pass the java command t
     ```
 
 > Alternatively, run dumb-jump and java within the `ENTRYPOINT` directive, `ENTRYPOINT ["/usr/bin/dumb-init", "--", "java", "-jar", "/service/practicalli-service.jar"]`.  This approach cannot be overridden with an additional CMD directive on the command line when using `docker run`.
-
 
 ## Build and Run
 

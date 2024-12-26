@@ -6,7 +6,6 @@ Everyone can learn from the history of desisions taken during the evolution of t
 
 Once decisions are made and delivered the ADR document should be treated as immutable, so it becomes a perminant record.  Should a decision need to be changed or significantly altered, then a new ADR document should be created that references the orginal ADR.
 
-
 ## Scope
 
 Create an ADR for architecturally significant decision that affects the software project or product
@@ -19,12 +18,11 @@ Create an ADR for architecturally significant decision that affects the software
 
 Functional and non-functional requirements are the most common inputs to the ADR process.
 
-
 ## Scenarios
 
 ADRs work well in the following scenarios:
 
-**Onboarding** 
+**Onboarding**
 
 New team members are able to find answers to why decisions were made in the project, allowing focus on new challenges whilst appreciating the existing approach.
 
@@ -34,27 +32,24 @@ Review ADRs when
 - when making related architectural decisions
 - better understand how the team think and their priorities
 
+**Ownership handover**:
 
-**Ownership handover**: 
-
-During a transfer of project the new maintenance team sees the resulting code, but that does not show how and why the project got to its current state. 
+During a transfer of project the new maintenance team sees the resulting code, but that does not show how and why the project got to its current state.
 
 It is hard to know what are the critical paths of the project, the parts that are very robust and parts that should be treated delicately.
 
-The new maintainers can 
+The new maintainers can
 
-- review past decisions to understand the current state. 
-- avoid repeating the same discussion points 
+- review past decisions to understand the current state.
+- avoid repeating the same discussion points
 - revisit topics in the future with knowledge of the historical context.
 - review decisions quickly and effectively to understand priorities at the time they were made
 
-
-**Alignment**: 
+**Alignment**:
 
 Teams can align on best practices across the organization when ADRs detail why certain decisions were made and alternatives were decided against.
 
 > ADR's could also be used to capture decisions that form an aspect of the overall engineering strategy, e.g. choice of programming language
-
 
 !!! EXAMPLE "Simple ADR template"
     ```markdown
@@ -100,13 +95,11 @@ Teams can align on best practices across the organization when ADRs detail why c
     Summary of the alternatives considered, incluing references to related documentation
     ```
 
-
 ## Backfill decisions
 
 Decisions made before ADRs became part of the engineering workflow can be retrospectively created, although they may only be a partial record and contain historical inaccuracies regarding the original decsion.
 
-Identify undocumented decisions during a retrospective or an architectural peer review, deciding which decisions are the most valuable to document. 
-
+Identify undocumented decisions during a retrospective or an architectural peer review, deciding which decisions are the most valuable to document.
 
 ## References
 
@@ -114,6 +107,6 @@ Identify undocumented decisions during a retrospective or an architectural peer 
 
 [:globe_with_meridians: Architectural Decision Records - Amazon](https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/welcome.html){target=_blank .md-button}
 
-[:globe_with_meridians: Example ADR - Amazon](https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/appendix.html){target=_blank .md-button} 
+[:globe_with_meridians: Example ADR - Amazon](https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/appendix.html){target=_blank .md-button}
 
-[:fontawesome-brands-github: Architecture Decision Record Examples](https://github.com/joelparkerhenderson/architecture-decision-record){target=_blank .md-button} 
+[:fontawesome-brands-github: Architecture Decision Record Examples](https://github.com/joelparkerhenderson/architecture-decision-record){target=_blank .md-button}

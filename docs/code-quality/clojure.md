@@ -1,6 +1,5 @@
 # Clojure Quality tools
 
-
 ## Syntax & Idiom check
 
 [clj-kondo](https://github.com/borkdude/clj-kondo/) is a lint tool that highlights syntactic errors and suggests idioms for Clojure, ClojureScript and EDN.
@@ -12,11 +11,9 @@ clj-kondo can also be used as a command line tool for checking projects in devel
 !!! HINT "Clojure LSP includes clj-kondo"
     [Clojure LSP install](clojure-lsp/) includes clj-kondo, removing the need for a separate install of clj-kondo
 
-
 [clj-kondo install guide](https://github.com/borkdude/clj-kondo/blob/master/doc/install.md){target=_blank .md-button}
 
 [Clj-kondo config](https://github.com/clj-kondo/config) contains additional configuration for using clj-kondo with libraries that extend the Clojure language via macros.
-
 
 ### Command Line
 
@@ -34,7 +31,6 @@ Analyse a project, running the clj-kondo command from the root of the project
 clj-kondo --lint .
 ```
 
-
 ### GitHub workflow
 
 Add clj-kondo linting to continuous integration workflow checks for syntax errors with Clojure files.
@@ -42,7 +38,6 @@ Add clj-kondo linting to continuous integration workflow checks for syntax error
 [Setup Clojure](https://github.com/marketplace/actions/setup-clojure){target=_blank .md-button}
 [Clojure Lint & Reviewdog](https://github.com/marketplace/actions/clojure-lint-action){target=_blank .md-button}
 [Setup clj-kondo](https://github.com/marketplace/actions/setup-clj-kondo){target=_blank .md-button}
-
 
 !!! EXAMPLE "Setup Clojure with clj-kondo and cljstyle checks"
     ```yaml
@@ -85,10 +80,8 @@ Add clj-kondo linting to continuous integration workflow checks for syntax error
           - run: echo "🍏 Job status is ${{ job.status }}."
     ```
 
-
 ??? INFO "Setup clojure-lsp Action"
     [Setup Clojure-LSP](https://github.com/marketplace/actions/setup-clojure-lsp) contains clj-kondo so can also be used within a continuous integration workflow as well as provide .
-
 
 ## Format Check and Fix
 
@@ -102,12 +95,10 @@ A consistent format between editors also minimises version control changes not r
 * [cljstyle](https://github.com/greglook/cljstyle){target=_blank} - binary and library (re-write of cljfmt)
 * [zprint](https://github.com/kkinnear/zprint){target=_blank} - binary & library
 
-
 ??? INFO "Tooling that uses the Clojure Style Guide"
     Emacs `clojure-mode` and Clojure LSP (via cljfmt) format code following the most common Clojure style guide rules, although cljfmt rules are quite strick so Practicalli disables many of them.
 
     cljstyle default configuration follows the majority of styles and has the same defaults as cljfmt. Practicalli Clojure CLI Config tweaks a few rules to make code more readable and allow for repl design experiments.
-
 
 ### cljstyle
 
@@ -117,7 +108,6 @@ Call with the `check` option to report formatting issues, providing a coloured d
 
 ![Clojure cljstyle format tool - check format diff example](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-cljstyle-check-diff-example-light.png#only-light)
 ![Clojure cljstyle format tool - check format diff example](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-cljstyle-check-diff-example-dark.png#only-dark)
-
 
 Call with `fix` option to automatically update all Clojure files with fixes, indicating which files have changed.
 
@@ -140,7 +130,6 @@ Cljstyle will examine all files in the current directory and any sub-directories
     ```shell
     cljstyle fix
     ```
-
 
 === "Practicalli Clojure CLI Config"
     cljstyle can be used as a library without installing the cljstyle binary.  [Practicalli Clojure CLI Config](/clojure/clojure-cli/practicalli-config/) defines the `:format/cljstyle` alias which should be passed wither the `check` or `format` option
@@ -191,7 +180,6 @@ Cljstyle will examine all files in the current directory and any sub-directories
 !!! HINT "Stage changes before automatically fixing format"
     Practicalli suggests staging (or committing) changes before running `cljstyle fix` to easily undo undesired changes or simply confirm what changes have been made
 
-
 !!! EXAMPLE "Practicall configuration"
     Practicalli updated the default cljstyle configuration with the following changes
 
@@ -211,7 +199,6 @@ Cljstyle will examine all files in the current directory and any sub-directories
       :vars
       {:enabled? false}
     ```
-
 
 ### cljfmt
 
@@ -236,7 +223,6 @@ Or specify cljfmt configuration within the Clojure LSP configuration file
 
     The default cljfmt rules feel overly strict and Practicalli configuration disables the more draconian rules to make code far more readable
 
-
 ### zprint
 
 zprint is a highly configurable format tool for both Clojure code and Clojure/EDN structures, available as a library and command line tool
@@ -244,7 +230,6 @@ zprint is a highly configurable format tool for both Clojure code and Clojure/ED
 zprint has advanced features over cljstyle and cljfmt, although may require some additional configuration work especially to format consistently with these tools.
 
 [zprint available styles](https://github.com/kkinnear/zprint/blob/main/doc/reference.md#style-and-style-map){target=_blank .md-button}
-
 
 ??? WARNING "No built-in diff option"
     zprint requires an external diff tool to see the format changes made, as zprint only reports on the files changed and not the content of those files that has changed.
@@ -287,7 +272,6 @@ zprint has advanced features over cljstyle and cljfmt, although may require some
     ```shell
     zprint -lfsw **/*.clj *.edn *.clj
     ```
-
 
 === "Practicalli Clojure CLI Config"
     zprint can be used as a library without installing the binary.  [Practicalli Clojure CLI Config](/clojure/clojure-cli/practicalli-config/) defines the `:format/zprint` alias which checks the format of a file and reports which files required
@@ -338,7 +322,6 @@ zprint has advanced features over cljstyle and cljfmt, although may require some
     If the team have adopted most if not all community styles, then `{:style :community}` may be a more appropriate start point.  Use --explain-all flag with the zprint command to see all the rules that are applied with a partiular style and modify as appropriate
 
     `$HOME/.zprintrc` is used for the configuration applied to all files, although this can be overridden in each project (or even as zprint comments in particular files)
-
 
 [zprint - GitHub repo](https://github.com/kkinnear/zprint){target=_blank .md-button}
 [zprint - clojars](https://clojars.org/zprint){target=_blank .md-button}

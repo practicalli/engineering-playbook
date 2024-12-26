@@ -6,5 +6,4 @@ Babashka provides a [task runner](https://book.babashka.org/#tasks) which can be
 
 [:fontawesome-solid-book-open: Babashka Task Runner](https://book.babashka.org/#tasks)
 
-
 <!-- TODO: create tasks to manage a clojure project (as has been done with make) -->

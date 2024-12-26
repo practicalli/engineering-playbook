@@ -6,26 +6,23 @@ Cultural adoption and effectiveness comes from collaboration and deep feeling of
 
 !!! WARNING "Initial draft - feedback welcome"
 
-
 ## Perk Culture
 
 Introducing perks like video game consoles, pool tables, etc can provide some basic interaction for people in the organisation.
 
-Perks are separate from the work that people are doing so serve as a distraction to help people wind-down. 
+Perks are separate from the work that people are doing so serve as a distraction to help people wind-down.
 
 Howerver, perks alone are very limited as they are not connected to the work and not really part of an effective culture.  
 
 Perks can also be a source of division and conflict, especially when they are made overly competitive or not equally accessible.
 
-
 ## Imposed Culture
 
-Top-down cultural ideas may start a conversation within an organisation about the culture they value. 
+Top-down cultural ideas may start a conversation within an organisation about the culture they value.
 
 Top-down cultural decrees impose specific cultural aspects that are often rejected or ignored by the organisation because they are not relevant to individual people within the organisation.
 
 Imposing a culture will stifle the adoption of cultural ideas and turn people away from discussing cultural aspects that are relevant.
-
 
 ## Homogenious culture
 
@@ -33,7 +30,7 @@ Cultural homogenization is the reduction in cultural diversity through populariz
 
 When culture is the same then everyone must act the same, leaving no room for cultural growth.
 
-As an organisation grows it may try too hard to maintain a particular culture, to the exclusion and detrement of other cultural ideas.  This can go as far as new hires being a carbon copy of existing people, which can stifle innovation and limit resilience to change. 
+As an organisation grows it may try too hard to maintain a particular culture, to the exclusion and detrement of other cultural ideas.  This can go as far as new hires being a carbon copy of existing people, which can stifle innovation and limit resilience to change.
 
 ??? INFO "Globalisation"
     Cultural homogenization is a central aspect of a global culture.
@@ -44,7 +41,6 @@ As an organisation grows it may try too hard to maintain a particular culture, t
 
     Globalisation is used in the context of Western culture dominating and destroying other cultures.  However, cultural homogenization is not one-way and involves many cultures mixing with people adopting various elements from other cultures.
 
-
 ## Blame Culture
 
 When people resourt to blaming others for failure, this is a blame culture.
@@ -54,18 +50,16 @@ Blame becomes systemic within the organisation and it becomes easier to pass the
 Managers may blame the people they are responsible for when
 
 - the manager does not properly understand the type or amount of work involved for the people they manage
--  poorly support those people to carry out realistic amount of work
+- poorly support those people to carry out realistic amount of work
 - micro-manage people
 - assiging conflicting priorities without any sense of value
 - just get it done approach
 - separate from the day to day work
 
-
 !!! INFO "Its Not A Blame Culture"
     Managers and staff start saying "this isnt a blame culture" when the organisation has alread decended into blame culture.
 
     When an organisation is truely not a blame culture, then there should not be a need for anyone to say, "this isnt a blame culture"
-
 
 ### individual blame
 
@@ -77,10 +71,9 @@ The system a person was able to make a mistake in was the actual root cause of t
 
 The events that lead up to the mistake happening should be reviewed as part of a root cause analysis.  This should include technical, process and cultural aspects as potential influencers of the mistake.
 
-
 ## A Culture change that isnt
 
-Change that doesnt actually change anything, but often has new words for things instead. 
+Change that doesnt actually change anything, but often has new words for things instead.
 
 An insurance company realised they were drastically loosing out against their competition, dropping from a strong 1st to a weak 6th (out of 6) in the last year.
 
@@ -96,11 +89,11 @@ I asked one of the main internal stakeholders (in charge of overall direction) w
 
 Eventually the stakeholder said: "Its just insurance, there isnt any difference"
 
-It was a few days after that revelation I started planning on an exit strategy from the company.  Six months later, I had left and out of the original 164 people in the IT department, only 9 people remained.  The company had been aquired by stakeholders who knew what they valued, selling off much of the company they did not value. 
+It was a few days after that revelation I started planning on an exit strategy from the company.  Six months later, I had left and out of the original 164 people in the IT department, only 9 people remained.  The company had been aquired by stakeholders who knew what they valued, selling off much of the company they did not value.
 
 !!! INFO "Macheaveleon Culture"
     A focus on gaining individual power through manipulation and control, with the precept that it is for the greater prosperity of those being controlled.
-    
+
     [The Machiavellian Manager - lead with cunning & Wisdom](https://www.machiavellianmastery.com/post/the-machiavellian-manager-how-to-lead-with-cunning-and-wisdom){target=_blank .md-button} 
 
     [how to deal with a Machiavellian boss](https://theconversation.com/manipulative-distrustful-self-serving-how-to-deal-with-a-machiavellian-boss-209210){target=_blank .md-button} 

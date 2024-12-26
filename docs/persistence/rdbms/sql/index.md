@@ -15,7 +15,6 @@ SQL is a declarative language (4GL) which also includes procedural elements.
 
 [SQL - wikipedia](https://en.wikipedia.org/wiki/SQL){target=_blank .md-button}
 
-
 ## SQL Syntax
 
 The SQL language is subdivided into several language elements, including:

@@ -8,7 +8,7 @@ A project plan is frequently updated, gaining more detail over time as more is l
 
 ## Waves
 
-Features (or projects) are planned in waves and at increasing levels of details 
+Features (or projects) are planned in waves and at increasing levels of details
 
 - features due soon have been defined in great detail over several iterations as undertanding was gained
 - features due much further away are initially defined at a very high level, raising awareness of longer term work
@@ -35,13 +35,11 @@ Slack time should be included in plans to allow for unexpected challenges and to
 
     Engineers gain an appreciation of the longer term work and consider designs that are more likely to optomise the amout of work required to deliver successive projects over time.
 
-
 ## Iterative plan
 
-For each iteration the plan should identify enough details to progress the project or feature in the immedate term.  Those details  should be communicate effectively to all people involved to provide a clear picture of the work and an indication of who is responsible for each work item. 
+For each iteration the plan should identify enough details to progress the project or feature in the immedate term.  Those details  should be communicate effectively to all people involved to provide a clear picture of the work and an indication of who is responsible for each work item.
 
 Planning should be kept as short as possible, but no shorter.
-
 
 ### Establish scope
 
@@ -66,7 +64,6 @@ Highlight deadlines and interconnected work and devise a specific assignment of 
 
 > When forming a new team, identify roles and responsibilities for individuals in the team and as well as the team overall.
 
-
 ### Develop
 
 Quickly review the plan for the current iteration (wave).
@@ -75,16 +72,15 @@ Feedback on assumptions as more is learned about the work whilst doing the work.
 
 As the team commences work, the manager starts to plan the next wave and updates the relevant stakeholders.
 
-Teams work on their tasks and the manager monitors and tracks progress and performance. 
+Teams work on their tasks and the manager monitors and tracks progress and performance.
 
 The manager will also work towards reducing uncertainties in the later stages of the project.
 
-
 ### Repeat
 
-Continue this process of iteration until you’ve reached the end of the project. 
+Continue this process of iteration until you’ve reached the end of the project.
 
-When the project or feature has been delivered, conduct a post mortem retrospective to discuss 
+When the project or feature has been delivered, conduct a post mortem retrospective to discuss
 
 - what worked well
 - what did not work so well
@@ -93,7 +89,6 @@ When the project or feature has been delivered, conduct a post mortem retrospect
 
 [Run a retrospective](retrospective.md){.md-button}
 
-
 ## Managing Uncertanty
 
 Rolling wave plan is an effective way to manage high levels of uncertainty and risk.
@@ -101,4 +96,3 @@ Rolling wave plan is an effective way to manage high levels of uncertainty and r
 Taking an incremental approach provides regular analysis and feedback into the project plans, allowing timely changes and supporting considerable piviots in direction.
 
 Progress of the plan should be monitored and challenges identified quickly so that enough time is available to make considered changes to the plan, with the conseus and understanding from the wider team.
-

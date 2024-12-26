@@ -70,15 +70,12 @@ The MegaLinter Workflow uses a configuration file to define which linters should
           - run: echo "🍏 Job status is ${{ job.status }}."
     ```
 
-
-
 ## Apply Fixes
 
 The MegaLinter workflow can also apply fixes it finds to pull requests and commit_message
 
 !!! WARNING "Applying fixes can make for confusing commits"
     Using the `--fix` option with the [:fontawesome-solid-book-open: local MegaLinter runner](/engineering-playbook/code-quality/megalinter/#run-megalinter) is a more effective way to manage automatic fixes by MegaLinter, especially if code and configuration changes are staged or committed before automatically fixing.  Automatic fixes can then be discarded or treated as a separate commit using any Git tool.
-
 
 ??? EXAMPLE "MegaLinter Workflow with Apply Fixes"
     ```yaml title=".github/workflow/megalinter.yaml"
@@ -181,4 +178,4 @@ The MegaLinter workflow can also apply fixes it finds to pull requests and commi
     ```
 
 !!! HINT "Reference: MegaLinter Configuration"
-    [MegaLinter Installation ](https://megalinter.io/latest/installation/#github-action) defines a GitHub workflow which includes creating a commit or pull request to automatically apply fixes.
+    [MegaLinter Installation](https://megalinter.io/latest/installation/#github-action) defines a GitHub workflow which includes creating a commit or pull request to automatically apply fixes.

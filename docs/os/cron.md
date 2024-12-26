@@ -12,12 +12,9 @@
 
     [GitHub Docs - Schedule](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule){target=_blank .md-button} 
 
-
 ## Crontab
 
 The crontab is used to automate all types of tasks on Linux systems.
-
-
 
 - Cron Concepts
 - Setup Crontab Access for a User Account
@@ -26,10 +23,10 @@ The crontab is used to automate all types of tasks on Linux systems.
 
 Difference between Cron, Crontab and Cron Job
 
-Element	Linux Name	Meaning
-- crontab: 	rows in a table for each cron job, each ‘*’ asterisk represents a segment of time and a corresponding column in each row.
-- Cron Job:	specific task to be performed described in a row, paired with its designated time id
+Element Linux Name Meaning
 
+- crontab:  rows in a table for each cron job, each ‘*’ asterisk represents a segment of time and a corresponding column in each row.
+- Cron Job: specific task to be performed described in a row, paired with its designated time id
 
 ```shell
 ps aux | grep crond
@@ -46,13 +43,11 @@ The daemon is running for the practicalli user account.
 
 ## Crontab syntax
 
-
 crontab [options]
 
-* * * * *  updatedb
-OR 
-* * * * * <path/to/script>
-
+- - - - - updatedb
+OR
+- - - - - <path/to/script>
 
 * * * * *
 | | | | |
@@ -61,7 +56,6 @@ OR
 | | |-----> Day of the month (1-31)
 | |-------> Hour (0-23)
 |---------> Minute (0-59)
-
 
 List the crontab entries for the current user account.
 
@@ -91,7 +85,6 @@ Select an editor.  To change later, run 'select-editor'.
 Choose 1-6 [1]: 
 ```
 
-
 ## Examples
 
 Redirect cron output to a file
@@ -111,7 +104,7 @@ drop out debug logs
 ```shell
 * * * * * /bin/bash -x /path/to/script.sh >> /tmp/cron.txt 2>&1
 ```
+
 ## Tips
 
 - echo the date and time at start of script
-

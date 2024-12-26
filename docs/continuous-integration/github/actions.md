@@ -7,7 +7,6 @@
 !!! HINT "Use major version only"
     Use the major version of a GitHub action within a GitHub workflows to minimise the maintenance of action versions in workflow configuration.  e.g. if the latest version is `v5.2.1`, then use version `v5` to use the latest version available within that major version.
 
-
 ## Authentication
 
 GitHub actions have read access to repositories, allowing them to checkout code and configuration.  For more permissions the GitHub Action requires an authorisation token.
@@ -22,10 +21,7 @@ GitHub automatically creates a token that GitHub actions can use to make an auth
 
 For customised authentication or access to a different GitHub repository, create a developer token and save it as a [user or organisation secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 
-
-
 [GitHub - Automatic token authentication](https://docs.github.com/en/actions/security-guides/automatic-token-authentication){target=_blank .md-button}
-
 
 # Common GitHub Actions
 
@@ -43,7 +39,6 @@ For customised authentication or access to a different GitHub repository, create
 | [Setup node](https://github.com/marketplace/actions/setup-node-js-environment)       | setup a version of the Node.js environment, caching npm/yarn /pnpm dependencies                         |
 | [Setup python](https://github.com/marketplace/actions/setup-python)                  | Provides python or PyPy, optionally cache pip dependencies                                              |
 | [GitHub Pages Deploy](https://github.com/marketplace/actions/deploy-to-github-pages) | deploy to GitHub pages, including cross-repository deployments                                          |
-
 
 Actions to investigate
 

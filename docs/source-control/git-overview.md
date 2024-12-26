@@ -20,7 +20,6 @@ Whole repository needs to be checked out - usually results in separating out cod
 
 Several new commands to learn if coming from a central repository approach, a small learning curve to understand the concepts.
 
-
 Getting started with Git
 
 Create git repository
@@ -33,11 +32,7 @@ Pushing to central repository
 
 Merging (pulling in? ) changes from other repositories
 
-
 Advanced code management
-Adding patches - The most powerful git feature you’re not using yet
-http://johnkary.net/git-add-p-the-most-powerful-git-feature-youre-not-using-yet/
-
 
 Operational Concerns
 Backups

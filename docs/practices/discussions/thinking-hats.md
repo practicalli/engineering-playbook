@@ -5,7 +5,7 @@ An effective group discussion technique where everyone thinks with certain focus
 The techniquie is most effective when tackling a specific challenge and achieving consensus on an appropriate solution.
 
 | HAT    | OVERVIEW                     | TECHNIQUE                                                    |
-| ---    | ---                          | ---                                                          |
+|--------|------------------------------|--------------------------------------------------------------|
 | BLUE   | "The Big Picture" & Managing | CAF (Consider All Factors); FIP (First Important Priorities) |
 | WHITE  | "Facts & Information"        | Information                                                  |
 | RED    | "Feelings & Emotions"        | Emotions and Ego                                             |
@@ -13,10 +13,8 @@ The techniquie is most effective when tackling a specific challenge and achievin
 | YELLOW | "Positive"                   | PMI                                                          |
 | GREEN  | "New Ideas"                  | Concept Challenge; Yes, No, Po                               |
 
-
 !!! WARNING "Unstructured discussions"
     Discusisons without structure can become confrontational or supress ideas without due consideration.
-
 
 ## Run a discussion
 
@@ -30,13 +28,12 @@ The facilitator manages an appropriate time to spend discussing with a specific 
 
 The facilitator ensures disussions stay within the focus of the currently selected hat.
 
-
 ## Hat sequences
 
 Common activities are supported by specific hat sequences to support an effective thinking process.
 
 | ACTIVITY                      | HAT SEQUENCE                                                               |
-| ---                           | ---                                                                        |
+|-------------------------------|----------------------------------------------------------------------------|
 | Initial Ideas                 | Blue, White, Green, Blue                                                   |
 | Choosing between alternatives | Blue, White, (Green), Yellow, Black, Red, Blue                             |
 | Identifying Solutions         | Blue, White, Black, Green, Blue                                            |
@@ -46,7 +43,6 @@ Common activities are supported by specific hat sequences to support an effectiv
 | Solving Problems              | Blue, White, Green, Red, Yellow, Black, Green, Blue                        |
 | Performance Review            | Blue, Red, White, Yellow, Black, Green, Blue                               |
 
-
 ## Tips
 
 Display the summary of the topic being discussed throughout the meeting.
@@ -54,6 +50,5 @@ Display the summary of the topic being discussed throughout the meeting.
 Display a summary of a hats purpose whilst that hat is active.
 
 Capture disussions as they happen on a whiteboard or shared document, ensuring information is catagorised under the appropriate hat.
-
 
 [:globe_with_meridians: Six Thinking Hats - De Bono Group](https://www.debonogroup.com/services/core-programs/six-thinking-hats/)

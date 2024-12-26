@@ -10,7 +10,6 @@
 [Docker Desktop Overview](https://docs.docker.com/desktop/){target=_blank .md-button}
 [Docker Docs](https://docs.docker.com/){target=_blank .md-button}
 
-
 ## Extensions Marketplace
 
 There is a growing marketplace of extensions that provide very useful tools to extend the capabilities of Docker Desktop.  Search within the Docker Desktop extensions or for [extensions on Docker Hub](https://hub.docker.com/search?q=&type=extension).
@@ -29,13 +28,11 @@ There is a growing marketplace of extensions that provide very useful tools to e
 
 [Docker Extensions Overview](extensions.md){target=_blank .md-button}
 
-
 ## Images
 
 Pre-defined images can be used directly or used to build custom images.
 
 [:fontawesome-solid-book-open: Docker Images Overview and Practicalli recommendations](../images.md){target=_blank .md-button}
-
 
 ## Containers
 
@@ -49,12 +46,9 @@ Pre-defined images can be used directly or used to build custom images.
 
 - start / stop containers
 
-
-
 ## Volumes
 
 Persist data to the local computer by mounting a part of the OS filespace as a volume in a Docker container.
-
 
 ## Dev Environments
 

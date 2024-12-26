@@ -6,7 +6,7 @@ A challenge is selected (or assigned), discussed and a solution presented - usua
 
 The Architectural Katas website generates kata challenges to solve as well as the recommended rules to maximise the value of the activity.
 
-[Architectural Katas website](https://www.architecturalkatas.com/){target=_blank .md-button} 
+[Architectural Katas website](https://www.architecturalkatas.com/){target=_blank .md-button}
 
 ??? EXAMPLE "Kata: Mock Internet UN"
     Organization running "Mock UN" events wants to take its events online, permitting students to participate online
@@ -15,13 +15,10 @@ The Architectural Katas website generates kata challenges to solve as well as th
 
     Users: 500 or so "diplomats" per "mock UN" gathering; dozens of moderators per "mock UN"; many "mock UN"s simultaneously; no new hardware requirements on students
 
-
 > A kata is a technique from martial arts training, encouraging repetition of actions to increase skill.
-
 
 !!! INFO "Related: Code kata"
     Code kata encourages the same challenge to be solved in several different ways, to grow experience with solving a solution with a programming language.
-
 
 ### Group practice
 
@@ -30,4 +27,3 @@ The architectural kata technique can be used within a group setting, with one or
 Groups of 3 to 5 people tend to be the most effective, especially where there are a good mixture of experiences.
 
 > Architectural kata workshops are commonly run at technical conferences and Ted Neward has run many of these workshops
-

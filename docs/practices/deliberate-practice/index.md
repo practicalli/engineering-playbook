@@ -14,8 +14,7 @@ Deliberate practice is not aimed at being an effective way to develop a software
 
     Most fundamentally, what we generally do…. isn’t designed by anyone to make us better at anything. Usually it isn’t designed at all: We are just given an objective that’s necessary to meeting the employer’s goals and then expected to get on with it.
 
-
-## Kata 
+## Kata
 
 Kata is a form of deliberate practice that uses repetative actions to improve skills.  Code kata involves solving different challenges or the same challenge in different ways.
 
@@ -23,8 +22,7 @@ Kata is a form of deliberate practice that uses repetative actions to improve sk
 
 [:fontawesome-solid-book-open: Architecture kata](architecture-kata.md) is a way practice creating high-level solutions to business challenges.
 
-
-## Code dojo 
+## Code dojo
 
 A coding dojo is a group event to help you learn a language, a framework, tool or development technique.  Ideally the scope of the challenge should be designed around what is most useful to learn each time.
 
@@ -39,7 +37,6 @@ A coding dojo provides exposure to the practical experience of others, especiall
 
     By considering the next simplest thing that can be done, a specific piece of code can be written and evaluated once it has been created.  Then the next simplest thing can be done.
 
-
 ??? INFO "Classic style dojo can be challenging"
 
     The original coding dojo approach was to have a single laptop connected to a projector (or very large screen monitor) so everyone present can see the coding taking place.
@@ -51,7 +48,6 @@ A coding dojo provides exposure to the practical experience of others, especiall
     If the pilot and co-pilot need help, they should ask the audience for guidance.
 
     > This approach can feel quite high pressure, especially when in a group of people that are not well known.
-
 
 ### Group show and tell dojo
 
@@ -68,8 +64,6 @@ Toward the end of the event, each group presents their design decisions and inte
 
     [:fontawesome-brands-github: London Clojurians Organisation](https://github.com/ldnclj)
 
-
-
 ## Code Retreat
 
 A group event where the same code challenge (code kata) is attempted over again with different pairs of people each time.
@@ -83,7 +77,6 @@ Pairs show and tell their approaches, with the ephasis on why a design was chose
 After a short break, the group is organised into different pairs and the same challenge is attempted from scratch.
 
 A retrospective is run at the end of the day, reflecting on the code retreat approach and designs shared throughout the day.
-
 
 <!-- 
 

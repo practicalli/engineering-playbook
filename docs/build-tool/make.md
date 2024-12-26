@@ -196,7 +196,6 @@ A `Makefile` defines targets called via the `make` command. Each target can run 
 
 > Practicalli also uses `make` to [configure and build the latest versions of Emacs](https://practical.li/blog/posts/build-emacs-28-on-ubuntu/){target=_blank} and other Linux open source software
 
-
 ## Defining tasks
 
 Create a `Makefile` in the root of a project and define a target by typing a suitable name followed by a `:` character, e.g. `test:`
@@ -210,7 +209,6 @@ repl:  ## Run Clojure REPL with rich terminal UI (Rebel Readline)
     $(info --------- Run Rebel REPL ---------)
     clojure -M:env/dev:env/test:repl/rebel
 ```
-
 
 ### Common target naming
 
@@ -232,7 +230,6 @@ Targets used across Practicalli projects follow the [make standard targets for u
 
 [:fontawesome-brands-github: practicalli/dotfiles/Makefile](https://github.com/practicalli/dotfiles/blob/main/Makefile) also defines docker targets to build and compose images locally, inspect images and prune containers and images.
 
-
 ## Target dependencies
 
 A `Makefile` target can depend on either a file name or another target in the `Makefile`.
@@ -247,13 +244,11 @@ Add the filename of a file after the name of the target, to depend on if that fi
 
 Clojure CLI Example: If the `deps` target depends on `deps.edn` and the file has not changed since last run, the deps target will not run again.
 
-
 ## deps target - depend on a file
 
 The deps target would use Clojure CLI or Leiningen to download dependencies.
 
 Configuring the `deps` target to depend on `deps.edn` or `project.clj` file, then if the file has not changed the deps will not run again.
-
 
 A Clojure CLI example depends on the `deps.edn` file that defines all the library dependencies for the project, tools for testing and packaging the Clojure service.  The `-P` flag is the prepare option, a dry run that only downloads the dependencies for the given tasks.
 
@@ -264,7 +259,6 @@ deps: deps.edn  ## Prepare dependencies for test and dist targets
 ```
 
 > `:env/test` adds libraries to run Kaocha and libraries used to run unit tests.  `:package/uberjar` runs a tool that creates an uberjar.
-
 
 ## Clean target - hiding command failure
 
@@ -280,7 +274,6 @@ clean:
     $(info --------- Clean Clojure classpath cache ---------)
     - rm -rf ./.cpcache
 ```
-
 
 ## MegaLinter target - simplifying a command
 
@@ -303,7 +296,6 @@ lint-clean:
     - rm -rf ./megalinter-reports
 ```
 
-
 ## Enhancing make output
 
 The `info` message is used with each target to enhances the readability of the make output, especially when multiple targets and commands are involved, or if commands are generating excessive output to standard out.
@@ -315,7 +307,6 @@ The `info` message is used with each target to enhances the readability of the m
 ```
 
 ![Makefile showing make all output with info messages to separate the Clojure commands and output](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/makefile-clojure-make-all-output-with-info.png)
-
 
 ## Avoiding file name collisions
 
@@ -329,7 +320,6 @@ Although unlikely, if a filename in the root of a project has the same name as a
 
 > Reference: [:fontawesome-solid-book-open: Makefile Tutorial: phony](https://makefiletutorial.com/#phony){target=_blank .md-button}
 
-
 ## Halt on failure
 
 `.DELETE_ON_ERROR:` halts any further commands if a command returns non-zero exit status.  Useful as short-circuit to stop tasks when further work is not valuable, e.g. if tests fail then it may not be valuable to build the Clojure project.
@@ -341,12 +331,10 @@ all: deps test-ci dist clean
 
 > Reference: [:fontawesome-solid-book-open: Makefile Tutorial:  delete_on_error](https://makefiletutorial.com/#delete_on_error){target=_blank .md-button}
 
-
 ## References
 
 [:fontawesome-solid-book-open: Makefile Tutorial by Example](https://makefiletutorial.com/){target=_blank .md-button}
 [:fontawesome-brands-github: practicalli/dotfiles Makefile](https://github.com/practicalli/dotfiles/blob/main/Makefile){target=_blank .md-button}
-
 
 ## Summary
 

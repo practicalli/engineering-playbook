@@ -1,6 +1,6 @@
 # Lua Rocks
 
-Publish package to Lua Rocks 
+Publish package to Lua Rocks
 
 ??? INFO "Lua Rocks API key required"
     Add Lua Rocks API to GitHub repository (or organisation) secrets

@@ -10,7 +10,7 @@ Designing a [:fontawesome-solid-book-open: `Dockerfile` configuration](dockerfil
 
 [:fontawesome-solid-book-open: Docker compose](compose.md) orchestrates multiple services locally. Heath checks and conditions can be set to ensure dependant services start in the correct order.
 
-Docker compose can use a [:fontawesome-solid-book-open: `Dockerfile` configuration](dockerfile.md) to build a project when starting services. An `on-watch` feature can rebuild the project from sourcw when code changes are written to file. 
+Docker compose can use a [:fontawesome-solid-book-open: `Dockerfile` configuration](dockerfile.md) to build a project when starting services. An `on-watch` feature can rebuild the project from sourcw when code changes are written to file.
 
 ??? HINT "Recommended Docker Images"
 
@@ -20,14 +20,12 @@ Docker compose can use a [:fontawesome-solid-book-open: `Dockerfile` configurati
 
     [:fontawesome-solid-book-open: Detailed Docker Image Descriptions](images.md){.md-button}
 
-
 ??? HINT "Docker and Clojure projects"
     A Docker Compose workflow complements the [Clojure REPL Driven Development workflow](https://practical.li/clojure/introduction/repl-workflow/).  
 
     A REPL connected editor provides instant feedback on the code as it is written, with Docker Compose providing a consistent build and orchestration of services.
 
     [:globe_with_meridians: Practicalli REPL Reloaded Workflow](https://practical.li/clojure/clojure-cli/repl-reloaded/){target=_blank .md-button}
-
 
 ## General Workflow
 
@@ -45,4 +43,3 @@ Docker compose can use a [:fontawesome-solid-book-open: `Dockerfile` configurati
 
 ??? INFO "Practicalli Project Templates includes docker configuration"
     [Practicalli Project Templates](https://practical.li/clojure/clojure-cli/projects/templates/practicalli/) create projects that include a multi-stage `Dockerfile`, `.dockerignore` and `compose.yaml` configurations for Clojure development.
-

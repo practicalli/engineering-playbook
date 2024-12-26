@@ -1,13 +1,11 @@
 # Hyprland Tiling Compositor
 
-
 Hyprland is an elegant and high performance Tiling window compositor for Wayland on Linux.
 
 Hyprland is not a full desktop environment, unlike KDE or Gnome.  Additional tools can be installed to make a complete desktop environment.
 
 !!! HINT "Try Hyprland with the NWG Live ISO"
     [NWG Live ISO](https://github.com/nwg-piotr/nwg-iso) provides a simple way to try Hyprland and the set of tools provided by NWG-Shell to give a Desktop Environment experience based on Gnome.
-
 
 ## Install
 
@@ -32,7 +30,6 @@ Hyprland is not a full desktop environment, unlike KDE or Gnome.  Additional too
 
     [Arch Linux ISO command line untilities](https://wiki.archlinux.org/title/USB_flash_installation_medium){target=_blank .md-button}
 
-
 === "Debian Linux"
 
     [Practicalli Journal - notes on Hyprland with Debian Linux](https://practical.li/journal/linux-wayland-compositor--hyprland/#hyprland-on-debian){target=_blank .md-button}
@@ -42,7 +39,6 @@ Hyprland is not a full desktop environment, unlike KDE or Gnome.  Additional too
 
 
     The hyprland packages are on version 0.41 at time of writing, the current release is 0.45 and has significant changes
-
 
 === "Arch Linux"
 

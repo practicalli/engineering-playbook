@@ -11,7 +11,6 @@ Editor Git support should use the Git client configuration.
 
     [practicalli/dotfiles Git config files](https://github.com/practicalli/dotfiles){target=_blank .md-button}
 
-
 ## Git identity
 
 An identity is required when sharing commits via services such as GitHub/GitLab and so that each commit you make is associated to you.
@@ -35,19 +34,18 @@ git config --global user.email ***+github-account@noreply.github.com
 
 The `[user]` section of the Git configuration file is updated by these commands, automatically creating the file and section if it does not exist.
 
-
 ??? EXAMPLE "Git Configuration"
     ```shell title=".config/git/identity-clojure-inc"
     # Add identity to all commits (required for GitHub / GitLab)
     [user]
-    	name = Practicalli Johnny
+     name = Practicalli Johnny
 
         # add email to Personal GitHub account via Settings > Email
-    	email = "johnny@clojure.inc"
+     email = "johnny@clojure.inc"
 
     ## Identity for using GitHub API
     [github]
-    	user = practicalli-johnny
+     user = practicalli-johnny
 
     ## SSH Keys - add key passphrase to MacOSX key chain
     [credential]
@@ -56,7 +54,7 @@ The `[user]` section of the Git configuration file is updated by these commands,
 
 ### Multiple Git Identities
 
-When working on a mixture of commercial and Open Source projects, configure the Git client with multiple identities 
+When working on a mixture of commercial and Open Source projects, configure the Git client with multiple identities
 
 !!! EXAMPLE "Git Clone alias"
     ```shell title=".config/git/identity-clojure-inc"
@@ -64,11 +62,11 @@ When working on a mixture of commercial and Open Source projects, configure the 
 
     # Default identity configuration
     [include]
-    		path = ~/.config/git/identity-practicalli-johnny
+      path = ~/.config/git/identity-practicalli-johnny
 
     # Override identify for specific directories
     [includeIf "gitdir:~/projects/identity-clojure-inc"]
-    		path = ~/.config/git/identity-clojure-inc
+      path = ~/.config/git/identity-clojure-inc
     ```
 
 ??? INFO "MacOSX Path expansion not working"
@@ -83,20 +81,19 @@ Included configure file with company identity.
 
     # Add identity to all commits (required for GitHub / GitLab)
     [user]
-    	name = Practicalli Johnny
+     name = Practicalli Johnny
 
         # add email to Personal GitHub account via Settings > Email
-    	email = "johnny@clojure.inc"
+     email = "johnny@clojure.inc"
 
     ## Identity for using GitHub API
     [github]
-    	user = practicalli-johnny
+     user = practicalli-johnny
 
     ## SSH Keys - add key passphrase to MacOSX key chain
     [credential]
         helper = osxkeychain
     ```
-
 
 ## SSH Key
 
@@ -117,16 +114,13 @@ Create an SSH key with the `ssh-keygen` command, using the `-C` argument to spec
 
 Enter a passphrase.  A 12 character or greater passphrase should provide adequate security.
 
-
 ??? HINT "SSH Key Passphrase"
-    Practicalli recommends setting a passphrase when generating an SSH key to add an extra layer of security.  If the computer containing keys should be compromised then a passphrase is requires to use the private keys. 
+    Practicalli recommends setting a passphrase when generating an SSH key to add an extra layer of security.  If the computer containing keys should be compromised then a passphrase is requires to use the private keys.
 
     The passphrase can be added to the operating system key ring, unlocking the key when logging into the operating system account.
 
-
 ??? HINT "Use the GitHub Email Mask address"
     Minimise Email spam by using the [email address provided by GitHub as a mask to your primary email address](https://github.com/settings/emails) on the GitHub account.  The mask address is of the form `***+github-account@noreply.github.com`.
-
 
 ## Add SSH key to Keychain
 
@@ -142,7 +136,6 @@ Add Git SSH key passphrase to Operating System keychain to avoid typing in the p
         ```
 
     > Ubuntu desktop has a key-ring tool which will display a pop-up dialog to save the passphrase to the key-ring the first time the SSH key is used. Once saved, the key is unlocked when login into the desktop.
-
 
 === "MacOSX"
 
@@ -167,7 +160,6 @@ Add Git SSH key passphrase to Operating System keychain to avoid typing in the p
 
     The command line terminal can be used to delete keys from the MacOSX keychain using the ssh-add command with the -d keyname to delete a specific key or -D option to delete all user added keys.
 
-
 ## Commit signing with SSH Key
 
 The SSH key can be registered with your GitHub account as a signing key, as opposed to an authorization key used to access a remote repository securely.
@@ -178,22 +170,22 @@ Configure Git client to use SSH to sign commits and tags for all local repositor
 
 ??? EXAMPLE "Git Configuration SSH Key sigining"
     ```config
-	## ------ Git Behaviour ------ ##
+ ## ------ Git Behaviour ------ ##
     [commit]
       # Automatically sign every commit
-    	gpgsign = true
+     gpgsign = true
 
     [tag]
       # Automatically sign every tag
-    	gpgsign = true
+     gpgsign = true
 
     # SSH Key signing 
     [user]
-    	signingkey = ~/.ssh/id_ed25519.pub
+     signingkey = ~/.ssh/id_ed25519.pub
     [gpg]
-    	format = ssh
+     format = ssh
     [gpg "ssh"]
-    	allowedSignersFile = ~/.config/git/allowed-signatures
+     allowedSignersFile = ~/.config/git/allowed-signatures
     ```
 
 Configure SSH key as signing format
@@ -238,20 +230,18 @@ Set the `gpg.ssh.allowedSignersFile` file in the Git Configuration
 
     Use a secret GitHub gist if you do not wish to add public keys to a shared git repository for the Git configuration.
 
-
 ## Clone aliases for a GitHub domain
 
-Define a short-cut alias to simplify the URL argument for the repository when using the Git clone command, 
+Define a short-cut alias to simplify the URL argument for the repository when using the Git clone command,
 e.g `git clone p:clojure-cli-config` rather than `git clone git@github.com:practicalli/clojure-cli-config`
 
 !!! EXAMPLE "Git Clone alias"
     ```shell title=".config/git/config"
     # Clone short-cuts
     [url "git@github.com:practicalli/"]
-    	# git clone p:repo-name
-    	insteadOf = p:
+     # git clone p:repo-name
+     insteadOf = p:
     ```
-
 
 ## Diff 3 Support
 
@@ -272,4 +262,3 @@ This command adds a `conflictstyle` entry in the `[merge]` section of the Git co
 Magit supports the Diff3 standard, so a common parent will be shown when this feature is enabled.
 
 ![Git Diff3 standard supported by Magit in Spacemacs](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-empty.png?raw=true)
-
