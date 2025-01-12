@@ -34,3 +34,4 @@
 - dev: update to standard repo healthcheck files
 - dev: signed commits required for PR contributions
 - dev: checkout v4 action with sparse checkout scheduled version workflow
+- ci: optional setup-python for publish book workflow

@@ -204,9 +204,10 @@ A workflow used to publish Practicalli books.
               fetch-depth: 0
           - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
 
-          - uses: actions/setup-python@v4
-            with:
-              python-version: 3.x
+          # setup-python only required to use non-default python version
+          # - uses: actions/setup-python@v4
+          #   with:
+          #     python-version: 3.x
           - uses: actions/cache@v3
             with:
               key: ${{ github.ref }}
