@@ -170,7 +170,7 @@ Configure Git client to use SSH to sign commits and tags for all local repositor
 
 ??? EXAMPLE "Git Configuration SSH Key sigining"
     ```config
- ## ------ Git Behaviour ------ ##
+    ## ------ Git Behaviour ------ ##
     [commit]
       # Automatically sign every commit
      gpgsign = true
@@ -179,7 +179,7 @@ Configure Git client to use SSH to sign commits and tags for all local repositor
       # Automatically sign every tag
      gpgsign = true
 
-    # SSH Key signing 
+    # SSH Key signing
     [user]
      signingkey = ~/.ssh/id_ed25519.pub
     [gpg]
@@ -214,7 +214,7 @@ Automatically sign commits and tags when creating a commit
 
 The `--show-signature` flag with Git `log` and `show` commands checks the contents of the `gpg.ssh.allowedSignersFile` to know which keys are valid
 
-Create an `$HOME/.config/git/allowed-signatures` file to list the SSH keys that you wish to define as allowed to sign commits.  
+Create an `$HOME/.config/git/allowed-signatures` file to list the SSH keys that you wish to define as allowed to sign commits.
 
 Each key entry should start with the email address used for commits, followed by the full public key value (which also ends with the email)
 
