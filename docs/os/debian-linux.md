@@ -41,10 +41,14 @@ Debian recommends using the root account to administer the system, rather than u
 su -
 ```
 
-> root password is set during install of Debian
+!!! INFO "root password is set during install of Debian"
 
 !!! HINT "Dedicated terminal for root account"
     Open a terminal application specifically to use the root account when carrying out significant maintenance, e.g. installing many packages during the post install.
+
+??? INFO "Install & Configure sudo for Debian Linux"
+    The [sudo page on the Debian Wiki](https://wiki.debian.org/sudo) describes how to install `sudo`, should that approach be acceptable.
+
 
 ## Set XDG freedesktop locations
 

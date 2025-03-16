@@ -14,6 +14,7 @@
 - persistence: new section with structure and basic content
 - dev: set git attributes to correctly identify languages used
 - practices: asking questions
+- linux: link to sudo setup page on Debian Linux wiki
 
 ### Changed
 
