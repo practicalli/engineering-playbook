@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -38,7 +38,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2050,6 +2050,8 @@
     
       
         
+          
+        
       
         
       
@@ -2071,8 +2073,10 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
         
           
-          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../os/linux/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Linux
@@ -2080,8 +2084,14 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_3">
@@ -2090,26 +2100,6 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../os/linux/index.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -4190,6 +4180,9 @@
 
 
 <h1 id="engineering-manager-role">Engineering Manager role<a class="headerlink" href="#engineering-manager-role" title="Permanent link">λ︎</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Work in progress</p>
+</div>
 <p>Management roles are there to balance the needs of the organisation with the engineering teams ability to deliver</p>
 <p>The role naturally focuses on on the larger goals and challenges facing the engineering teams, supporting the engineers to solve specific challenges using their own skills and experiences (that is why they were hired)</p>
 <h2 id="meetings">Meetings<a class="headerlink" href="#meetings" title="Permanent link">λ︎</a></h2>
@@ -4216,14 +4209,90 @@
 <h2 id="journal">Journal<a class="headerlink" href="#journal" title="Permanent link">λ︎</a></h2>
 <p>Write regular journal entries and encourage others to do the same by sharing the journal across the organisation (except for private notes)</p>
 <p>Use the knowledge sharing tool for the organisation, e.g. <a href="https://www.atlassian.com/software/confluence" target="_blank">Atlassian Confluence</a>, <a href="https://www.notion.so/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Notion</a>, <a href="https://tettra.com/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Tettra</a>, etc.</p>
-<blockquote>
-<p>TODO: example jornal, e.g. from Billie &amp; 100 days of code</p>
-</blockquote>
+<div class="admonition example">
+<p class="admonition-title">Example Journals</p>
+<p><a href="https://practical.li/journal/">Practicalli personal journal</a> is a purposely unstructured journal to capture important but ad-hock information quickly, in a central place to it can easily be found and added too.</p>
+</div>
 <h2 id="management-anti-patters">Management anti-patters<a class="headerlink" href="#management-anti-patters" title="Permanent link">λ︎</a></h2>
 <p><strong>micro-management</strong> is highly ineffective, demonstrates lack of trust, highlights poor communication and lack of management skills.  Shows lack of understanding of the needs of the business and engineering teams.</p>
 <p><strong>overt control</strong> suggests a lack of confidence, demoralises the team, incurs a lack of trust and engagement by team under control.  Drives inefficiency, stifles agency and creativity.</p>
 <p><strong>emotional pain</strong> degrading and emotionally attacking a person has no place in a positive relationship.</p>
 <p><strong>dominating</strong> by tearing people down to (allegedly) build them up in the (perceived) right way is an act of emotional torture and highly counter productive in the long term.</p>
+<h1 id="working-with-product">Working with Product<a class="headerlink" href="#working-with-product" title="Permanent link">λ︎</a></h1>
+<p>Important relationship for and effective team</p>
+<p>Ensures the work is readily understandable by the engineers on the team.</p>
+<p>There should be clear goals to achieve (e.g. milestones) and a common understanding of what DONE looks like (and how to demonstrate DONE).</p>
+<div class="admonition example">
+<p class="admonition-title">Fintech Startup</p>
+<ul>
+<li>wrote a pitch to enhance API security by introducing HTTP Message Signatures (RFC9421)</li>
+<li>reviewed and help simplify pitches created by the product manager, e.g. a new billing system and authorisation permissions and roles</li>
+<li>introduced concept of engineering pitches to address technical debt and engineering concerns, expressing the value of this work to the business and ensuring the most concerning technical debt was alieviated</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avoid solutionising</p>
+<p>Product requirements for a project should avoid providing a solution as this can be very distracting, especially if this leads the engineers on the team down an inappropriate approach.</p>
+<p>For example: Product suggested an API approach to an intricated billing system for a high volume service.  This would not have performed effectively and would have had a detrimental impact on the overall service.  A busy engineering team may have adopted this approach rather than seeking out existing services they could build a builing service upon (i.e. a ledger service).</p>
+</div>
+<h2 id="em-responsibility">EM responsibility<a class="headerlink" href="#em-responsibility" title="Permanent link">λ︎</a></h2>
+<p>The EM is ultimately responsible for everything the team does and agrees to do</p>
+<ul>
+<li>delivery of all work agreed</li>
+<li>Health and wellbeing of team</li>
+<li>Carrer progression of team members</li>
+<li>Onboarding new team members</li>
+<li>Rolling off new team members</li>
+<li>Overall quality of the platform</li>
+<li>Overall schedule of the team and meetings they attend</li>
+</ul>
+<h2 id="product-manager">product Manager<a class="headerlink" href="#product-manager" title="Permanent link">λ︎</a></h2>
+<p>The PM for the team is ultimately responsible for providing clear guidance on business features required by Griffin customers.</p>
+<ul>
+<li>The Product owner should be aware of the respective value of any work proposed and any time frame in which this value is constrained by.</li>
+<li>Why is it valuable</li>
+<li>When is it valuable</li>
+<li>How is it valuable compared to other business features</li>
+</ul>
+<h2 id="work-focus-cadence">Work focus &amp; cadence<a class="headerlink" href="#work-focus-cadence" title="Permanent link">λ︎</a></h2>
+<p>Short term cycle
+- 4 weeks product driven work
+- 2 weeks engineering driven work
+- Introduce goal keeper concept (based on need - initially engineering managers sole responsibility)</p>
+<h2 id="planning-view">Planning view<a class="headerlink" href="#planning-view" title="Permanent link">λ︎</a></h2>
+<ul>
+<li>3 month high level goals</li>
+<li>1 month plan overview</li>
+<li>1 week detailed work</li>
+</ul>
+<p>Priorities for product driven and engineering driven work agreed at start of week.</p>
+<ul>
+<li>Work broken down to small pieces, 1 day to 1 week.</li>
+<li>Epics used to orchestrate larger pieces</li>
+</ul>
+<h2 id="cycling-analogy">Cycling analogy<a class="headerlink" href="#cycling-analogy" title="Permanent link">λ︎</a></h2>
+<h3 id="onboarding">Onboarding<a class="headerlink" href="#onboarding" title="Permanent link">λ︎</a></h3>
+<p>Create the basic engineering environment
+- Getting a bike and making it ready for a ride
+- Wearing the right clothes for the weather
+- Food and snacks for the journey</p>
+<h3 id="starting-as-engineer-manager">Starting as Engineer Manager<a class="headerlink" href="#starting-as-engineer-manager" title="Permanent link">λ︎</a></h3>
+<p>(analogy breaks down a bit)</p>
+<ul>
+<li>I have an idea of the destination, but not an exact route</li>
+<li>Discover several hills to climb (at the same time)</li>
+<li>Understanding organisation principles, practices and tools</li>
+<li>Understanding the team</li>
+<li>Understanding platform &amp; products</li>
+<li>Understanding the needs of the business</li>
+<li>Identify where I can add value without detracting from delivery</li>
+</ul>
+<h3 id="reaching-the-destination">Reaching the destination<a class="headerlink" href="#reaching-the-destination" title="Permanent link">λ︎</a></h3>
+<ul>
+<li>Delivered what the business currently needs</li>
+<li>Climbing up each hill to be able to add value</li>
+<li>Identifying Where next?</li>
+</ul>
 
 
 
@@ -4244,7 +4313,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 26, 2024 20:34:28">December 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 22, 2025 11:49:53">March 22, 2025</span>
   </span>
 
     
