@@ -1,7 +1,11 @@
 # Git Overview
 
-Decentralised approach
-Local repository (clone) as well as central (master)
+Git provides a decentralised approach to version control.
+
+Versions are manage via a `.git` repository (clone) as well as central (master)
+
+
+
 Can clone a clone
 Can work disconnected from the central repository
 Designed for branching and merging and long lived branches
