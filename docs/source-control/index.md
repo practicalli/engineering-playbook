@@ -1,32 +1,46 @@
 # Source Control
 
-Managing code changes is an important part of maintaining a usable code base and is an essential step to having a robust development workflow.
+Managing code changes is an important part of maintaining a usable code base and an essential step to having a robust development workflow.
 
 Versioning code tracks all the changes over the life of a project, providing an audit trail of change.
 
 ## Git
 
-Git is the defacto tool to manage code and other text artifacts of a project.
+Git is the defacto tool to manage code and other artifacts of a project.
 
-Git uses a distributed model for sharing changes which also encourages branching to support easily experimenting with changes.
+A Git project is created locally for a new project, in the `.git` directory.  Changes are included in the local repository, first by adding to a staged state using `git add`, then committing to the local repository using `git commit`
 
-## GitHub and GitLab
+Git uses a distributed model for sharing changes and also encourages branching to support easily experimentation.
 
-Code sharing services support Git and also add pull requests to enable people to contribute to projects they are not maintainers for.  This is especially useful for open source projects, allowing the community to contribute.
+!!! HINT "Collective Ownership of Code"
+    The distributed nature of Git supports and encourages collective ownership of the project code, as all developers take responsibility for the project assets
 
-!!! INFO "Emoji guide for commit messages and pull requests"
+??? "Conventional Commits - a structure for commit messages"
+    [Conventional commits specification](https://www.conventionalcommits.org/) is an easy set of rules for describing the features, fixes, and breaking changes made in commit messages.  This convention creates an explicit commit history which is simple to process with automated tools, e.g. highlighting breaking changes.
+
+??? INFO "Emoji guide for commit messages and pull requests"
     [gitmoji](https://gitmoji.dev/) provides an interactive search for emoji that can be used with Git commit messages and pull request descriptions & templates
 
     [emojipedia](https://emojipedia.org/github) provides a wider support for emoji across multiple services
 
-!!! HINT "Collective Ownership of Code"
-    The distributed nature of Git supports and encourages collective ownership of the project code, as all developers take responsibility for the project assets
+
+## Code Sharing Services
+
+Git is used to efficiently share changes to a project via a repository on the shared service, with either public or private access.
+
+Contributions are made by pushing commits directly to the remote repository by maintainers of the project, using `git push`.  Shared contributions to the repository can be obtained by anyone who has access using `git pull`.
+
+Pull Requests (PRs) include a review step to contributions, optionally with continuous integration workflows.  Pull Requests also allow people other than the project maintainers to contribute to a repository, especially useful for open source projects.
+
+
+[GitHub](https://github.com/){target=_blank .md-button} [GitLab](https://gitlab.com/){target=_blank .md-button} [BitBucket](https://bitbucket.com/){target=_blank .md-button}
+
 
 ## Access remote repositories
 
 Sharted Git repositories can be accessed via HTTPS or SSH URL.
 
-SSH approach is typically more secure, especially as the files holding your keys on disk are encrypted.  SSH connections can be tunnelled through HTTPS if connecting to a remote repository via a very restricted firewall.
+SSH uses [Public-key_cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) where a private key securely encrypts information and a public key validates the identity of a commit.
 
 HTTPS connection requires a personal access token is required (GitHub blocks HTTP access via password).  A personal access token can be create with limited access, only allowing access to specific services and information.
 
