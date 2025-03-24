@@ -4062,9 +4062,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#github-and-gitlab" class="md-nav__link">
+  <a href="#code-sharing-services" class="md-nav__link">
     <span class="md-ellipsis">
-      GitHub and GitLab
+      Code Sharing Services
     </span>
   </a>
   
@@ -4121,25 +4121,33 @@
 
 
 <h1 id="source-control">Source Control<a class="headerlink" href="#source-control" title="Permanent link">λ︎</a></h1>
-<p>Managing code changes is an important part of maintaining a usable code base and is an essential step to having a robust development workflow.</p>
+<p>Managing code changes is an important part of maintaining a usable code base and an essential step to having a robust development workflow.</p>
 <p>Versioning code tracks all the changes over the life of a project, providing an audit trail of change.</p>
 <h2 id="git">Git<a class="headerlink" href="#git" title="Permanent link">λ︎</a></h2>
-<p>Git is the defacto tool to manage code and other text artifacts of a project.</p>
-<p>Git uses a distributed model for sharing changes which also encourages branching to support easily experimenting with changes.</p>
-<h2 id="github-and-gitlab">GitHub and GitLab<a class="headerlink" href="#github-and-gitlab" title="Permanent link">λ︎</a></h2>
-<p>Code sharing services support Git and also add pull requests to enable people to contribute to projects they are not maintainers for.  This is especially useful for open source projects, allowing the community to contribute.</p>
-<div class="admonition info">
-<p class="admonition-title">Emoji guide for commit messages and pull requests</p>
-<p><a href="https://gitmoji.dev/">gitmoji</a> provides an interactive search for emoji that can be used with Git commit messages and pull request descriptions &amp; templates</p>
-<p><a href="https://emojipedia.org/github">emojipedia</a> provides a wider support for emoji across multiple services</p>
-</div>
+<p>Git is the defacto tool to manage code and other artifacts of a project.</p>
+<p>A Git project is created locally for a new project, in the <code>.git</code> directory.  Changes are included in the local repository, first by adding to a staged state using <code>git add</code>, then committing to the local repository using <code>git commit</code></p>
+<p>Git uses a distributed model for sharing changes and also encourages branching to support easily experimentation.</p>
 <div class="admonition hint">
 <p class="admonition-title">Collective Ownership of Code</p>
 <p>The distributed nature of Git supports and encourages collective ownership of the project code, as all developers take responsibility for the project assets</p>
 </div>
+<details>
+<summary>Conventional Commits - a structure for commit messages</summary>
+<p><a href="https://www.conventionalcommits.org/">Conventional commits specification</a> is an easy set of rules for describing the features, fixes, and breaking changes made in commit messages.  This convention creates an explicit commit history which is simple to process with automated tools, e.g. highlighting breaking changes.</p>
+</details>
+<details class="info">
+<summary>Emoji guide for commit messages and pull requests</summary>
+<p><a href="https://gitmoji.dev/">gitmoji</a> provides an interactive search for emoji that can be used with Git commit messages and pull request descriptions &amp; templates</p>
+<p><a href="https://emojipedia.org/github">emojipedia</a> provides a wider support for emoji across multiple services</p>
+</details>
+<h2 id="code-sharing-services">Code Sharing Services<a class="headerlink" href="#code-sharing-services" title="Permanent link">λ︎</a></h2>
+<p>Git is used to efficiently share changes to a project via a repository on the shared service, with either public or private access.</p>
+<p>Contributions are made by pushing commits directly to the remote repository by maintainers of the project, using <code>git push</code>.  Shared contributions to the repository can be obtained by anyone who has access using <code>git pull</code>.</p>
+<p>Pull Requests (PRs) include a review step to contributions, optionally with continuous integration workflows.  Pull Requests also allow people other than the project maintainers to contribute to a repository, especially useful for open source projects.</p>
+<p><a class="md-button" href="https://github.com/" target="_blank">GitHub</a> <a class="md-button" href="https://gitlab.com/" target="_blank">GitLab</a> <a class="md-button" href="https://bitbucket.com/" target="_blank">BitBucket</a></p>
 <h2 id="access-remote-repositories">Access remote repositories<a class="headerlink" href="#access-remote-repositories" title="Permanent link">λ︎</a></h2>
 <p>Sharted Git repositories can be accessed via HTTPS or SSH URL.</p>
-<p>SSH approach is typically more secure, especially as the files holding your keys on disk are encrypted.  SSH connections can be tunnelled through HTTPS if connecting to a remote repository via a very restricted firewall.</p>
+<p>SSH uses <a href="https://en.wikipedia.org/wiki/Public-key_cryptography">Public-key_cryptography</a> where a private key securely encrypts information and a public key validates the identity of a commit.</p>
 <p>HTTPS connection requires a personal access token is required (GitHub blocks HTTP access via password).  A personal access token can be create with limited access, only allowing access to specific services and information.</p>
 <p>A personal access token is saved in a plain text file, e.g. <code>~/.github</code>.  Should a token be compromised, it does not give access to the account on the remote repository, so the token can be deleted and recreated without compromising the service login account.</p>
 <h2 id="what-to-version">What to Version<a class="headerlink" href="#what-to-version" title="Permanent link">λ︎</a></h2>
@@ -4167,7 +4175,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 26, 2024 20:34:28">December 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 23, 2025 23:28:55">March 23, 2025</span>
   </span>
 
     
