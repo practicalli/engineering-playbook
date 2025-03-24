@@ -11,6 +11,7 @@ Editor Git support should use the Git client configuration.
 
     [practicalli/dotfiles Git config files](https://github.com/practicalli/dotfiles){target=_blank .md-button}
 
+
 ## Git identity
 
 An identity is required when sharing commits via services such as GitHub/GitLab and so that each commit you make is associated to you.
@@ -95,32 +96,34 @@ Included configure file with company identity.
         helper = osxkeychain
     ```
 
-## SSH Key
+## SSH Keys
 
-Use an SSH key for secure access to a remote Git repository. The SSH key removes the need to enter GitHub credentials each time a command is used that accesses a remote repository (push, pull, clone, etc.).
+SSH Keys provide a secure way to authorise requests to a shared service and verify the author of commits sent to a shared service.
 
-[Generate an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and [add it to the GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
+!!! NOTE "Generate an SSH Key pair with Git email identity"
+    Generate a public & private key pair using the recommended `ed25519` format.  Include the email address added to your GitHub account, or use the email mask provides by GitHub to avoid exposing your personal email.
 
-![GitHub Clone using SSH URL](https://raw.githubusercontent.com/practicalli/graphic-design/live/github/screenshot/github-clone-ssh-spacemacs.png)
+    Enter a passphrase when prompted.  A 12 character or greater passphrase should provide adequate security.
 
-Generate an SSH Key with a secure passphrase for access to GitHub repositories (pull, push over SSH)
-
-Create an SSH key with the `ssh-keygen` command, using the `-C` argument to specify the Email address added to your GitHub accounty, replacing with your own name.
-
-!!! NOTE "Generate an SSH Key with Git email identity"
     ```shell
-    ssh-keygen -t ed25519 -C "654321+practicalli-johnny@users.noreply.github.com"
+    ssh-keygen -t ed25519 -C "******+practicalli-johnny@users.noreply.github.com"
     ```
-
-Enter a passphrase.  A 12 character or greater passphrase should provide adequate security.
-
-??? HINT "SSH Key Passphrase"
-    Practicalli recommends setting a passphrase when generating an SSH key to add an extra layer of security.  If the computer containing keys should be compromised then a passphrase is requires to use the private keys.
-
-    The passphrase can be added to the operating system key ring, unlocking the key when logging into the operating system account.
 
 ??? HINT "Use the GitHub Email Mask address"
     Minimise Email spam by using the [email address provided by GitHub as a mask to your primary email address](https://github.com/settings/emails) on the GitHub account.  The mask address is of the form `***+github-account@noreply.github.com`.
+
+??? HINT "Avoid use of Company Email address"
+    Once you leave a company that email is not verifyable by the sharing service.  Removing the company email address from your account will no longer associate commits with your shared service account.
+
+??? HINT "SSH Key Passphrase"
+    Practicalli recommends setting a passphrase when generating an SSH key, to add an extra layer of security.
+
+    The passphrase can be added to the operating system key ring, unlocking the key when logging into the operating system account.
+
+[:fontawesome-brands-github: Generate an SSH key - GitHub](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){target=_blank .md-button}
+
+[:fontawesome-brands-github: Add SSH key to GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/){target=_blank .md-button}
+
 
 ## Add SSH key to Keychain
 
