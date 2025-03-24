@@ -163,6 +163,28 @@ Add Git SSH key passphrase to Operating System keychain to avoid typing in the p
 
     The command line terminal can be used to delete keys from the MacOSX keychain using the ssh-add command with the -d keyname to delete a specific key or -D option to delete all user added keys.
 
+=== "Termux"
+    Termux does not provide a persistent keyring, so an SSH agent can be run manually to manage the SSH key passphrase for the current terminal session.
+
+    Start the agent.
+
+    ```shell
+    ssh-agent
+    ```
+
+    Capture the details of the agent in the terminal shell
+
+    ```shell
+    eval $(ssh-agent)
+    ```
+
+    Add the SSH key passphrase to the agent, allowing the SSH key to be used without repeatedly entering the passphrase until the terminal session is closed.
+
+    ```shell
+    ssh-add ~/.ssh/engineering
+    ```
+
+
 ## Commit signing with SSH Key
 
 The SSH key can be registered with your GitHub account as a signing key, as opposed to an authorization key used to access a remote repository securely.
