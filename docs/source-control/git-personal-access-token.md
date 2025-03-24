@@ -2,6 +2,12 @@
 
 A personal access token is required when accessing a remote repository over HTTPS.
 
+!!! TIP "GitHub CLI simplify access via token"
+    [GitHub CLI](https://cli.github.com/) for the entire GitHub workflow within the terminal.
+
+    `gh auth login` generates a token to access GitHub.
+
+
 ## Generate a token
 
 Visit the remote repository service and generate a personal access token with at least `repo` permission.
@@ -15,7 +21,7 @@ Whilst the token could be added to the `~/.gitconfig`, as this file is plain tex
 git config --global oauth.token "tokens-in-plain-text-files-are-not-very-secure"
 ```
 
-To provide greater security when using the token, consider using the [Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager).  
+To provide greater security when using the token, consider using the [Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager).
 
 ??? HINT "Magit Forge uses personal access token"
     [Magit Forge also requires a personal access token](forge-configuration.md), although this can be saved in the encrypted file `~/.authinfo.gpg` for greater security.  The Magit Forge token includes permissions required to access remote repositories over HTTPS
