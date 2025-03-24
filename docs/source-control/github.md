@@ -14,6 +14,7 @@ Organisation
 
 Set up a public private key on each computer to be used as a GitHub client, to push commits over an SSH connection.
 
+![GitHub Clone using SSH URL](https://raw.githubusercontent.com/practicalli/graphic-design/live/github/screenshot/github-clone-ssh-spacemacs.png)
 
 
 ### Check SSH Key on GitHub
