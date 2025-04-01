@@ -6,6 +6,23 @@ Management roles are there to balance the needs of the organisation with the eng
 
 The role naturally focuses on on the larger goals and challenges facing the engineering teams, supporting the engineers to solve specific challenges using their own skills and experiences (that is why they were hired)
 
+The Engineering Manager role can have a wide variation in scope of the role, especially in a startup environment.
+
+The essence of the role is to ensure engineers:
+
+- understand the responsibilities the company expects of them.
+- have the information and tools required to work effectively
+- support the growth of engineers
+
+
+!!! TIP "Expectations may vary company to company"
+    The EM role have varied wildly across all the companies I have worked for.  Some were very hands-on, some I never had chance to look at the code.
+
+    Establishing what you percieve as the role scope within your organisation & team is important.  Without this clearly communicated then undiscussed expectations easily go unmet, leading to a poor outcome.
+
+    When the scope is diverse, communicate the aspects you will focus on each month or each quarter.
+
+
 ## Meetings
 
 [one to one](/engineering-playbook/practices/discussions/one-to-one-meeting.md) are regularly held with direct reports and those people the engineering manager reports to, ensuring there is good working relationship between the respective people.
