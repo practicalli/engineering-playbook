@@ -18,6 +18,7 @@
 - dev: add scheduled stale issue & pull request check (monthly)
 - os: install sudo & add user to sudo group
 - os: starship prompt in command-line shell
+- os: command-line commands section
 
 ### Changed
 

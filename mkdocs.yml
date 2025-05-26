@@ -190,9 +190,13 @@ nav:
               - Bash: os/command-line/shell/bash.md
               - Zsh: os/command-line/shell/zsh.md
               - Fish: os/command-line/shell/fish.md
+              - Starship prompt: os/command-line/shell/starship-prompt.md
+          - Commands:
+              - os/command-line/commands/index.md
+              - Files: os/command-line/commands/file-system.md
+              - Cron: os/command-line/commands/cron.md
       - Linux:
           - Overview: os/linux/index.md
-          - Cron: os/cron.md
           - Debian: os/debian-linux.md
           - Ubuntu: os/ubuntu-linux.md
           - Hyprland: os/linux/hyprland.md
