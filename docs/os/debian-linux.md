@@ -49,6 +49,17 @@ su -
 ??? INFO "Install & Configure sudo for Debian Linux"
     The [sudo page on the Debian Wiki](https://wiki.debian.org/sudo) describes how to install `sudo`, should that approach be acceptable.
 
+    Install sudo package, using root account
+
+    ```shell
+    apt install sudo
+    ```
+
+    Add account-name to `sudo` group, using root account
+
+    ```shell
+    adduser account-name sudo
+    ```
 
 ## Set XDG freedesktop locations
 
