@@ -4,9 +4,18 @@ Z Shell (zsh) is an advanced shell environment and shell scripting language for 
 
 [Wikipedia - Z Shell](https://en.wikipedia.org/wiki/Z_shell){target=_blank .md-button}
 
-## Prezto
 
-## OhmyZsh
+## Community Configurations
+
+Zsh is a very rich shell and a community configuration provides a quick way to use all those features.
+
+- [Prezto](https://github.com/sorin-ionescu/prezto) with sane defaults, aliases, functions, auto completion and prompt themes
+- [OhmyZsh](https://ohmyz.sh/) framework for managing your Zsh configuration with over 300 plugins
+
+If writing your own configuration, consider [Zinit plugin manager](https://github.com/zdharma-continuum/zinit) which installs plugins from their GitHub repository.
+
+Arch Linux has a [guide to configuring Zsh](https://wiki.archlinux.org/title/Zsh).
+
 
 ## Command History
 
@@ -37,7 +46,7 @@ Edit the whole command history as a file, allowing easy removal of unwanted or d
     fc -W; astro "$HISTFILE"; fc -R
     ````
 
-> Replace `astro` with either `emacsclient`, `nvim`, `vim`, nano or any preferred text editor.
+> Replace `astro` with either `emacsclient`, `nvim`, `vim`, `nano` or any preferred text editor.
 
 ## Shell aliases for commands
 

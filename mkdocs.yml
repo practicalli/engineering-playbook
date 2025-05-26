@@ -185,6 +185,11 @@ nav:
           - os/command-line/index.md
           - Kitty Terminal: os/command-line/kitty-terminal.md
           - Warp Terminal: os/command-line/warp.md
+          - Shell:
+              - os/command-line/shell/index.md
+              - Bash: os/command-line/shell/bash.md
+              - Zsh: os/command-line/shell/zsh.md
+              - Fish: os/command-line/shell/fish.md
       - Linux:
           - Overview: os/linux/index.md
           - Cron: os/cron.md
@@ -193,11 +198,6 @@ nav:
           - Hyprland: os/linux/hyprland.md
           - Regolith: os/linux/regolith.md
       - MacOSX: os/macosx.md
-      - Shell:
-          - os/shell/index.md
-          - os/shell/bash.md
-          - os/shell/zsh.md
-          - os/shell/fish.md
   - Persistence:
       - persistence/index.md
       - RDBMS:

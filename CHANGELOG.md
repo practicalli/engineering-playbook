@@ -39,3 +39,4 @@
 - dev: checkout v4 action with sparse checkout scheduled version workflow
 - ci: optional setup-python for publish book workflow
 - dev: optional setup-python for publish book workflow
+- os: move shell section under command-line
