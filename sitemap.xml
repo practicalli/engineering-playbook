@@ -161,10 +161,6 @@
          <lastmod>2025-05-26</lastmod>
     </url>
     <url>
-         <loc>https://practical.li/engineering-playbook/os/cron/</loc>
-         <lastmod>2025-05-26</lastmod>
-    </url>
-    <url>
          <loc>https://practical.li/engineering-playbook/os/debian-linux/</loc>
          <lastmod>2025-05-26</lastmod>
     </url>
@@ -189,6 +185,42 @@
          <lastmod>2025-05-26</lastmod>
     </url>
     <url>
+         <loc>https://practical.li/engineering-playbook/os/command-line/commands/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/os/command-line/commands/cron/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/os/command-line/commands/file-system/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/os/command-line/commands/managing-software/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/os/command-line/shell/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/os/command-line/shell/bash/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/os/command-line/shell/fish/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/os/command-line/shell/starship-prompt/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/os/command-line/shell/zsh/</loc>
+         <lastmod>2025-05-26</lastmod>
+    </url>
+    <url>
          <loc>https://practical.li/engineering-playbook/os/linux/</loc>
          <lastmod>2025-05-26</lastmod>
     </url>
@@ -206,22 +238,6 @@
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/linux/which-linux-distribution/</loc>
-         <lastmod>2025-05-26</lastmod>
-    </url>
-    <url>
-         <loc>https://practical.li/engineering-playbook/os/shell/</loc>
-         <lastmod>2025-05-26</lastmod>
-    </url>
-    <url>
-         <loc>https://practical.li/engineering-playbook/os/shell/bash/</loc>
-         <lastmod>2025-05-26</lastmod>
-    </url>
-    <url>
-         <loc>https://practical.li/engineering-playbook/os/shell/fish/</loc>
-         <lastmod>2025-05-26</lastmod>
-    </url>
-    <url>
-         <loc>https://practical.li/engineering-playbook/os/shell/zsh/</loc>
          <lastmod>2025-05-26</lastmod>
     </url>
     <url>

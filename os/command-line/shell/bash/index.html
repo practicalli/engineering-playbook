@@ -20,28 +20,28 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/engineering-playbook/os/shell/zsh/">
+        <link rel="canonical" href="https://practical.li/engineering-playbook/os/command-line/shell/bash/">
       
       
-        <link rel="prev" href="../bash/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../fish/">
+        <link rel="next" href="../zsh/">
       
       
-      <link rel="icon" href="../../../assets/favicon.svg">
+      <link rel="icon" href="../../../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Z Shell - Practicalli Engineering Playbook</title>
+        <title>Bash - Practicalli Engineering Playbook</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -60,9 +60,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -81,11 +81,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Z Shell - Practicalli Engineering Playbook" >
+        <meta  property="og:title"  content="Bash - Practicalli Engineering Playbook" >
       
         <meta  property="og:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/os/shell/zsh.png" >
+        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/os/command-line/shell/bash.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -93,19 +93,19 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/engineering-playbook/os/shell/zsh/" >
+        <meta  property="og:url"  content="https://practical.li/engineering-playbook/os/command-line/shell/bash/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Z Shell - Practicalli Engineering Playbook" >
+        <meta  name="twitter:title"  content="Bash - Practicalli Engineering Playbook" >
       
         <meta  name="twitter:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/os/shell/zsh.png" >
+        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/os/command-line/shell/bash.png" >
       
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -114,7 +114,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -133,7 +133,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#z-shell" class="md-skip">
+        <a href="#bourne-again-shell-bash" class="md-skip">
           Skip to content
         </a>
       
@@ -185,7 +185,7 @@
       target="_blank"
     >
       
-  <img src="../../../assets/images/practicalli-logo.png" alt="logo">
+  <img src="../../../../assets/images/practicalli-logo.png" alt="logo">
 
     </a>
 
@@ -203,7 +203,7 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-             Z Shell 
+             Bash 
           </span>
         </div>
       </div>
@@ -355,9 +355,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Practicalli Engineering Playbook" class="md-nav__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
+    <a href="../../../.." title="Practicalli Engineering Playbook" class="md-nav__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
       
-  <img src="../../../assets/images/practicalli-logo.png" alt="logo">
+  <img src="../../../../assets/images/practicalli-logo.png" alt="logo">
 
     </a>
     Practicalli Engineering Playbook
@@ -406,7 +406,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../.." class="md-nav__link ">
+            <a href="../../../.." class="md-nav__link ">
               
   
   
@@ -441,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../introduction/contributing/" class="md-nav__link">
+      <a href="../../../../introduction/contributing/" class="md-nav__link">
         
   
   
@@ -464,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../introduction/writing-tips/" class="md-nav__link">
+      <a href="../../../../introduction/writing-tips/" class="md-nav__link">
         
   
   
@@ -516,7 +516,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../build-tool/" class="md-nav__link ">
+            <a href="../../../../build-tool/" class="md-nav__link ">
               
   
   
@@ -551,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../build-tool/make/" class="md-nav__link">
+      <a href="../../../../build-tool/make/" class="md-nav__link">
         
   
   
@@ -574,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../build-tool/babashka-task-runner/" class="md-nav__link">
+      <a href="../../../../build-tool/babashka-task-runner/" class="md-nav__link">
         
   
   
@@ -626,7 +626,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../careers/" class="md-nav__link ">
+            <a href="../../../../careers/" class="md-nav__link ">
               
   
   
@@ -661,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../careers/engineer/" class="md-nav__link">
+      <a href="../../../../careers/engineer/" class="md-nav__link">
         
   
   
@@ -684,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../careers/engineering-manager/" class="md-nav__link">
+      <a href="../../../../careers/engineering-manager/" class="md-nav__link">
         
   
   
@@ -732,7 +732,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../change-management/" class="md-nav__link ">
+            <a href="../../../../change-management/" class="md-nav__link ">
               
   
   
@@ -791,7 +791,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../code-quality/" class="md-nav__link ">
+            <a href="../../../../code-quality/" class="md-nav__link ">
               
   
   
@@ -826,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../code-quality/megalinter/" class="md-nav__link">
+      <a href="../../../../code-quality/megalinter/" class="md-nav__link">
         
   
   
@@ -849,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../code-quality/clojure/" class="md-nav__link">
+      <a href="../../../../code-quality/clojure/" class="md-nav__link">
         
   
   
@@ -901,7 +901,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../continuous-integration/" class="md-nav__link ">
+            <a href="../../../../continuous-integration/" class="md-nav__link ">
               
   
   
@@ -966,7 +966,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../continuous-integration/docker/" class="md-nav__link ">
+            <a href="../../../../continuous-integration/docker/" class="md-nav__link ">
               
   
   
@@ -1001,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/docker/install/" class="md-nav__link">
+      <a href="../../../../continuous-integration/docker/install/" class="md-nav__link">
         
   
   
@@ -1044,7 +1044,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../continuous-integration/docker/desktop/" class="md-nav__link ">
+            <a href="../../../../continuous-integration/docker/desktop/" class="md-nav__link ">
               
   
   
@@ -1079,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/docker/desktop/extensions/" class="md-nav__link">
+      <a href="../../../../continuous-integration/docker/desktop/extensions/" class="md-nav__link">
         
   
   
@@ -1110,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/docker/images/" class="md-nav__link">
+      <a href="../../../../continuous-integration/docker/images/" class="md-nav__link">
         
   
   
@@ -1133,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/docker/dockerfile/" class="md-nav__link">
+      <a href="../../../../continuous-integration/docker/dockerfile/" class="md-nav__link">
         
   
   
@@ -1156,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/docker/clojure-multi-stage-dockerfile/" class="md-nav__link">
+      <a href="../../../../continuous-integration/docker/clojure-multi-stage-dockerfile/" class="md-nav__link">
         
   
   
@@ -1179,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/docker/compose/" class="md-nav__link">
+      <a href="../../../../continuous-integration/docker/compose/" class="md-nav__link">
         
   
   
@@ -1236,7 +1236,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../continuous-integration/github/" class="md-nav__link ">
+            <a href="../../../../continuous-integration/github/" class="md-nav__link ">
               
   
   
@@ -1271,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/github/actions/" class="md-nav__link">
+      <a href="../../../../continuous-integration/github/actions/" class="md-nav__link">
         
   
   
@@ -1294,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/github/common-jobs/" class="md-nav__link">
+      <a href="../../../../continuous-integration/github/common-jobs/" class="md-nav__link">
         
   
   
@@ -1317,7 +1317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/github/trigger-events/" class="md-nav__link">
+      <a href="../../../../continuous-integration/github/trigger-events/" class="md-nav__link">
         
   
   
@@ -1366,7 +1366,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../continuous-integration/github/workflows/" class="md-nav__link ">
+            <a href="../../../../continuous-integration/github/workflows/" class="md-nav__link ">
               
   
   
@@ -1401,7 +1401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/github/workflows/megalinter/" class="md-nav__link">
+      <a href="../../../../continuous-integration/github/workflows/megalinter/" class="md-nav__link">
         
   
   
@@ -1424,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/github/workflows/luarocks/" class="md-nav__link">
+      <a href="../../../../continuous-integration/github/workflows/luarocks/" class="md-nav__link">
         
   
   
@@ -1447,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/github/workflows/practicalli/" class="md-nav__link">
+      <a href="../../../../continuous-integration/github/workflows/practicalli/" class="md-nav__link">
         
   
   
@@ -1470,7 +1470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../continuous-integration/github/workflows/system-catalog/" class="md-nav__link">
+      <a href="../../../../continuous-integration/github/workflows/system-catalog/" class="md-nav__link">
         
   
   
@@ -1542,7 +1542,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../culture/" class="md-nav__link ">
+            <a href="../../../../culture/" class="md-nav__link ">
               
   
   
@@ -1577,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../culture/anti-patterns/" class="md-nav__link">
+      <a href="../../../../culture/anti-patterns/" class="md-nav__link">
         
   
   
@@ -1600,7 +1600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../culture/burnout/" class="md-nav__link">
+      <a href="../../../../culture/burnout/" class="md-nav__link">
         
   
   
@@ -1623,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../culture/documentation/" class="md-nav__link">
+      <a href="../../../../culture/documentation/" class="md-nav__link">
         
   
   
@@ -1646,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../culture/leadership/" class="md-nav__link">
+      <a href="../../../../culture/leadership/" class="md-nav__link">
         
   
   
@@ -1698,7 +1698,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../technical-writing/" class="md-nav__link ">
+            <a href="../../../../technical-writing/" class="md-nav__link ">
               
   
   
@@ -1733,7 +1733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../technical-writing/techniques.md" class="md-nav__link">
+      <a href="../../../../technical-writing/techniques.md" class="md-nav__link">
         
   
   
@@ -1776,7 +1776,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../technical-writing/static-site/" class="md-nav__link ">
+            <a href="../../../../technical-writing/static-site/" class="md-nav__link ">
               
   
   
@@ -1811,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../technical-writing/static-site/mkdocs/" class="md-nav__link">
+      <a href="../../../../technical-writing/static-site/mkdocs/" class="md-nav__link">
         
   
   
@@ -1863,8 +1863,6 @@
       
         
       
-        
-      
     
     
     
@@ -1877,7 +1875,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../" class="md-nav__link ">
               
   
   
@@ -1909,6 +1907,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1922,19 +1922,23 @@
       
         
       
+        
+      
+        
+      
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../command-line/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -1953,7 +1957,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_2">
             <span class="md-nav__icon md-icon"></span>
             Command Line
@@ -1969,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../command-line/kitty-terminal/" class="md-nav__link">
+      <a href="../../kitty-terminal/" class="md-nav__link">
         
   
   
@@ -1992,12 +1996,218 @@
   
   
     <li class="md-nav__item">
-      <a href="../../command-line/warp/" class="md-nav__link">
+      <a href="../../warp/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Warp Terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Shell
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9_2_4" id="__nav_9_2_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Shell
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Bash
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bash
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ohmybash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ohmybash
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../zsh/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Zsh
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fish/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fish
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../starship-prompt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Starship prompt
     
   </span>
   
@@ -2033,6 +2243,123 @@
       
         
       
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../commands/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Commands
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9_2_5" id="__nav_9_2_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Commands
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/file-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../commands/cron/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cron
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
         
       
         
@@ -2051,7 +2378,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../linux/" class="md-nav__link ">
+            <a href="../../../linux/" class="md-nav__link ">
               
   
   
@@ -2086,30 +2413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cron/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Cron
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../debian-linux/" class="md-nav__link">
+      <a href="../../../debian-linux/" class="md-nav__link">
         
   
   
@@ -2132,7 +2436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ubuntu-linux/" class="md-nav__link">
+      <a href="../../../ubuntu-linux/" class="md-nav__link">
         
   
   
@@ -2155,7 +2459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/hyprland/" class="md-nav__link">
+      <a href="../../../linux/hyprland/" class="md-nav__link">
         
   
   
@@ -2178,7 +2482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/regolith/" class="md-nav__link">
+      <a href="../../../linux/regolith/" class="md-nav__link">
         
   
   
@@ -2209,7 +2513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../macosx.md" class="md-nav__link">
+      <a href="../../../macosx.md" class="md-nav__link">
         
   
   
@@ -2220,264 +2524,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    Shell
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_9_5" id="__nav_9_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_9_5">
-            <span class="md-nav__icon md-icon"></span>
-            Shell
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bash/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Bourne Again SHell (BASH)
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Z Shell
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Z Shell
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prezto" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prezto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ohmyzsh" class="md-nav__link">
-    <span class="md-ellipsis">
-      OhmyZsh
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command-history" class="md-nav__link">
-    <span class="md-ellipsis">
-      Command History
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Command History">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#edit-last-command" class="md-nav__link">
-    <span class="md-ellipsis">
-      Edit last command
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edit-command-history" class="md-nav__link">
-    <span class="md-ellipsis">
-      Edit command history
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shell-aliases-for-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Shell aliases for commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alternatives" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alternatives
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../fish/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Fish Shell
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -2517,7 +2563,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../persistence/" class="md-nav__link ">
+            <a href="../../../../persistence/" class="md-nav__link ">
               
   
   
@@ -2576,7 +2622,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../persistence/rdbms/" class="md-nav__link ">
+            <a href="../../../../persistence/rdbms/" class="md-nav__link ">
               
   
   
@@ -2635,7 +2681,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../persistence/rdbms/client/" class="md-nav__link ">
+            <a href="../../../../persistence/rdbms/client/" class="md-nav__link ">
               
   
   
@@ -2670,7 +2716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../persistence/rdbms/client/cli/" class="md-nav__link">
+      <a href="../../../../persistence/rdbms/client/cli/" class="md-nav__link">
         
   
   
@@ -2693,7 +2739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../persistence/rdbms/client/dbeaver/" class="md-nav__link">
+      <a href="../../../../persistence/rdbms/client/dbeaver/" class="md-nav__link">
         
   
   
@@ -2716,7 +2762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../persistence/rdbms/client/pgadmin/" class="md-nav__link">
+      <a href="../../../../persistence/rdbms/client/pgadmin/" class="md-nav__link">
         
   
   
@@ -2793,7 +2839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../persistence/rdbms/server/h2/" class="md-nav__link">
+      <a href="../../../../persistence/rdbms/server/h2/" class="md-nav__link">
         
   
   
@@ -2816,7 +2862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../persistence/rdbms/server/mariadb/" class="md-nav__link">
+      <a href="../../../../persistence/rdbms/server/mariadb/" class="md-nav__link">
         
   
   
@@ -2857,7 +2903,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../persistence/rdbms/server/postgresql/" class="md-nav__link ">
+            <a href="../../../../persistence/rdbms/server/postgresql/" class="md-nav__link ">
               
   
   
@@ -2923,7 +2969,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../persistence/rdbms/sql/" class="md-nav__link ">
+            <a href="../../../../persistence/rdbms/sql/" class="md-nav__link ">
               
   
   
@@ -2958,7 +3004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../persistence/rdbms/sql/examples/" class="md-nav__link">
+      <a href="../../../../persistence/rdbms/sql/examples/" class="md-nav__link">
         
   
   
@@ -3038,7 +3084,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../practices/" class="md-nav__link ">
+            <a href="../../../../practices/" class="md-nav__link ">
               
   
   
@@ -3105,7 +3151,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../practices/discussions/" class="md-nav__link ">
+            <a href="../../../../practices/discussions/" class="md-nav__link ">
               
   
   
@@ -3140,7 +3186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/asking-questions/" class="md-nav__link">
+      <a href="../../../../practices/discussions/asking-questions/" class="md-nav__link">
         
   
   
@@ -3163,7 +3209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/rolling-wave-planning/" class="md-nav__link">
+      <a href="../../../../practices/discussions/rolling-wave-planning/" class="md-nav__link">
         
   
   
@@ -3186,7 +3232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/one-to-one-meeting/" class="md-nav__link">
+      <a href="../../../../practices/discussions/one-to-one-meeting/" class="md-nav__link">
         
   
   
@@ -3209,7 +3255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/retrospective/" class="md-nav__link">
+      <a href="../../../../practices/discussions/retrospective/" class="md-nav__link">
         
   
   
@@ -3232,7 +3278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/standup/" class="md-nav__link">
+      <a href="../../../../practices/discussions/standup/" class="md-nav__link">
         
   
   
@@ -3255,7 +3301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/five-whys/" class="md-nav__link">
+      <a href="../../../../practices/discussions/five-whys/" class="md-nav__link">
         
   
   
@@ -3278,7 +3324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/discussions/thinking-hats/" class="md-nav__link">
+      <a href="../../../../practices/discussions/thinking-hats/" class="md-nav__link">
         
   
   
@@ -3329,7 +3375,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../practices/kanban/" class="md-nav__link ">
+            <a href="../../../../practices/kanban/" class="md-nav__link ">
               
   
   
@@ -3364,7 +3410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/kanban/value-stream-mapping/" class="md-nav__link">
+      <a href="../../../../practices/kanban/value-stream-mapping/" class="md-nav__link">
         
   
   
@@ -3413,7 +3459,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../practices/behaviour-driven-development/" class="md-nav__link ">
+            <a href="../../../../practices/behaviour-driven-development/" class="md-nav__link ">
               
   
   
@@ -3451,7 +3497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/technical-debt/" class="md-nav__link">
+      <a href="../../../../practices/technical-debt/" class="md-nav__link">
         
   
   
@@ -3474,7 +3520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/root-cause-analysis/" class="md-nav__link">
+      <a href="../../../../practices/root-cause-analysis/" class="md-nav__link">
         
   
   
@@ -3519,7 +3565,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../practices/deliberate-practice/" class="md-nav__link ">
+            <a href="../../../../practices/deliberate-practice/" class="md-nav__link ">
               
   
   
@@ -3554,7 +3600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/deliberate-practice/architecture-kata/" class="md-nav__link">
+      <a href="../../../../practices/deliberate-practice/architecture-kata/" class="md-nav__link">
         
   
   
@@ -3577,7 +3623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/deliberate-practice/code-kata/" class="md-nav__link">
+      <a href="../../../../practices/deliberate-practice/code-kata/" class="md-nav__link">
         
   
   
@@ -3608,7 +3654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/test-driven-development/" class="md-nav__link">
+      <a href="../../../../practices/test-driven-development/" class="md-nav__link">
         
   
   
@@ -3631,7 +3677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../practices/managing-bias/" class="md-nav__link">
+      <a href="../../../../practices/managing-bias/" class="md-nav__link">
         
   
   
@@ -3681,7 +3727,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../programming-languages/" class="md-nav__link ">
+            <a href="../../../../programming-languages/" class="md-nav__link ">
               
   
   
@@ -3736,7 +3782,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../programming-languages/javascript/" class="md-nav__link ">
+            <a href="../../../../programming-languages/javascript/" class="md-nav__link ">
               
   
   
@@ -3771,7 +3817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../programming-languages/javascript/nodejs/" class="md-nav__link">
+      <a href="../../../../programming-languages/javascript/nodejs/" class="md-nav__link">
         
   
   
@@ -3833,7 +3879,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../source-control/" class="md-nav__link ">
+            <a href="../../../../source-control/" class="md-nav__link ">
               
   
   
@@ -3868,7 +3914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../source-control/git-configuration/" class="md-nav__link">
+      <a href="../../../../source-control/git-configuration/" class="md-nav__link">
         
   
   
@@ -3891,7 +3937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../source-control/git-concepts/" class="md-nav__link">
+      <a href="../../../../source-control/git-concepts/" class="md-nav__link">
         
   
   
@@ -3914,7 +3960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../source-control/git-status/" class="md-nav__link">
+      <a href="../../../../source-control/git-status/" class="md-nav__link">
         
   
   
@@ -3968,7 +4014,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../software-design/" class="md-nav__link ">
+            <a href="../../../../software-design/" class="md-nav__link ">
               
   
   
@@ -4003,7 +4049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../software-design/anti-patterns/" class="md-nav__link">
+      <a href="../../../../software-design/anti-patterns/" class="md-nav__link">
         
   
   
@@ -4048,7 +4094,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../software-design/architecture/" class="md-nav__link ">
+            <a href="../../../../software-design/architecture/" class="md-nav__link ">
               
   
   
@@ -4083,7 +4129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../software-design/architecture/structurizr/" class="md-nav__link">
+      <a href="../../../../software-design/architecture/structurizr/" class="md-nav__link">
         
   
   
@@ -4106,7 +4152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../software-design/architecture/adr/" class="md-nav__link">
+      <a href="../../../../software-design/architecture/adr/" class="md-nav__link">
         
   
   
@@ -4159,7 +4205,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../software-design/design-patterns/" class="md-nav__link ">
+            <a href="../../../../software-design/design-patterns/" class="md-nav__link ">
               
   
   
@@ -4194,7 +4240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../software-design/design-patterns/command-query-separation/" class="md-nav__link">
+      <a href="../../../../software-design/design-patterns/command-query-separation/" class="md-nav__link">
         
   
   
@@ -4217,7 +4263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../software-design/design-patterns/cqrs/" class="md-nav__link">
+      <a href="../../../../software-design/design-patterns/cqrs/" class="md-nav__link">
         
   
   
@@ -4275,78 +4321,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prezto" class="md-nav__link">
+  <a href="#ohmybash" class="md-nav__link">
     <span class="md-ellipsis">
-      Prezto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ohmyzsh" class="md-nav__link">
-    <span class="md-ellipsis">
-      OhmyZsh
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command-history" class="md-nav__link">
-    <span class="md-ellipsis">
-      Command History
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Command History">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#edit-last-command" class="md-nav__link">
-    <span class="md-ellipsis">
-      Edit last command
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edit-command-history" class="md-nav__link">
-    <span class="md-ellipsis">
-      Edit command history
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shell-aliases-for-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Shell aliases for commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#alternatives" class="md-nav__link">
-    <span class="md-ellipsis">
-      Alternatives
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
+      Ohmybash
     </span>
   </a>
   
@@ -4368,7 +4345,7 @@
 
 
   
-    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/os/shell/zsh.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/os/command-line/shell/bash.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -4377,67 +4354,17 @@
     
       
     
-    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/os/shell/zsh.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/os/command-line/shell/bash.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="z-shell">Z Shell<a class="headerlink" href="#z-shell" title="Permanent link">λ︎</a></h1>
-<p>Z Shell (zsh) is an advanced shell environment and shell scripting language for Linux/Unix systems.</p>
-<p><a class="md-button" href="https://en.wikipedia.org/wiki/Z_shell" target="_blank">Wikipedia - Z Shell</a></p>
-<h2 id="prezto">Prezto<a class="headerlink" href="#prezto" title="Permanent link">λ︎</a></h2>
-<h2 id="ohmyzsh">OhmyZsh<a class="headerlink" href="#ohmyzsh" title="Permanent link">λ︎</a></h2>
-<h2 id="command-history">Command History<a class="headerlink" href="#command-history" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-arrow-up">Up</kbd></span> and <span class="keys"><kbd class="key-arrow-down">Down</kbd></span> navigate through the history of commands.</p>
-<h3 id="edit-last-command">Edit last command<a class="headerlink" href="#edit-last-command" title="Permanent link">λ︎</a></h3>
-<p>Edit the previous command in the history if you know what it should be, e.g. if you typed got status instead of git statusthe you could run the command</p>
-<div class="admonition note">
-<p class="admonition-title">Edit last command</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">fc</span><span class="w"> </span>-e<span class="w"> </span>astro<span class="w"> </span>-1
-</code></pre></div>
-</div>
-<blockquote>
-<p>Replace <code>astro</code> with either <code>emacsclient</code>, <code>nvim</code>, <code>vim</code>, nano or any preferred text editor.</p>
-</blockquote>
-<details class="example">
-<summary>Edit last command</summary>
-<p>Edit the <code>got status</code>to <code>git status</code> and save &amp; exit. Now the previous command is <code>git status</code>.</p>
-<p>Change the <code>-1</code> to if the command is further back in history (a known location)</p>
-</details>
-<h3 id="edit-command-history">Edit command history<a class="headerlink" href="#edit-command-history" title="Permanent link">λ︎</a></h3>
-<p>Edit the whole command history as a file, allowing easy removal of unwanted or duplicate commands using search and replace and other editing tools.</p>
-<div class="admonition note">
-<p class="admonition-title">Edit entire history</p>
-<p>```shell
-fc -W; astro "$HISTFILE"; fc -R
-````</p>
-</div>
-<blockquote>
-<p>Replace <code>astro</code> with either <code>emacsclient</code>, <code>nvim</code>, <code>vim</code>, nano or any preferred text editor.</p>
-</blockquote>
-<h2 id="shell-aliases-for-commands">Shell aliases for commands<a class="headerlink" href="#shell-aliases-for-commands" title="Permanent link">λ︎</a></h2>
-<p>Add aliases to <code>$XDG_CONFIG_HOME/shell-aliases</code> or your preferred location of shell alias definitions.</p>
-<div class="admonition example">
-<p class="admonition-title">Shell Alias</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Shell history</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># edit entire history</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">alias</span><span class="w"> </span>zsh-edit-history<span class="o">=</span><span class="s2">&quot;fc -W; astro \&quot;</span><span class="nv">$HISTFILE</span><span class="s2">\&quot;; fc -R&quot;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># edit previous command in history</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nb">alias</span><span class="w"> </span>zsh-edit-last-command<span class="o">=</span><span class="s2">&quot;fc -e astro -1&quot;</span>
-</code></pre></div>
-</div>
-<h2 id="alternatives">Alternatives<a class="headerlink" href="#alternatives" title="Permanent link">λ︎</a></h2>
-<ul>
-<li><a href="https://github.com/marlonrichert/zsh-hist">zsh-hist plugin</a></li>
-</ul>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">λ︎</a></h2>
-<ul>
-<li><a href="https://superuser.com/a/1399768">Edit Zsh history - Stack Exchange</a></li>
-<li><a href="https://jdhao.github.io/2021/03/24/zsh_history_setup/">zsh history setup</a></li>
-</ul>
+<h1 id="bourne-again-shell-bash">Bourne Again SHell (BASH)<a class="headerlink" href="#bourne-again-shell-bash" title="Permanent link">λ︎</a></h1>
+<p>Bash is a very common shell environment for Linux and is typically the default shell.</p>
+<p><a class="glightbox" href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)#/media/File:Gnu-bash-logo.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bourne-Again shell logo" loading="lazy" src="https://en.wikipedia.org/wiki/Bash_(Unix_shell)#/media/File:Gnu-bash-logo.svg" /></a></p>
+<h2 id="ohmybash">Ohmybash<a class="headerlink" href="#ohmybash" title="Permanent link">λ︎</a></h2>
 
 
 
@@ -4458,7 +4385,7 @@ fc -W; astro "$HISTFILE"; fc -R
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 26, 2024 20:34:28 UTC">December 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 26, 2025 18:09:39 UTC">May 26, 2025</span>
   </span>
 
     
@@ -4498,7 +4425,7 @@ fc -W; astro "$HISTFILE"; fc -R
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../bash/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Bourne Again SHell (BASH)">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Operating System Shell">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4508,20 +4435,20 @@ fc -W; astro "$HISTFILE"; fc -R
                 Previous
               </span>
               <div class="md-ellipsis">
-                Bourne Again SHell (BASH)
+                Operating System Shell
               </div>
             </div>
           </a>
         
         
           
-          <a href="../fish/" class="md-footer__link md-footer__link--next" aria-label="Next: Fish Shell">
+          <a href="../zsh/" class="md-footer__link md-footer__link--next" aria-label="Next: Zsh">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Fish Shell
+                Zsh
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4631,10 +4558,10 @@ fc -W; astro "$HISTFILE"; fc -R
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
