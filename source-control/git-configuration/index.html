@@ -4661,10 +4661,17 @@
 </div>
 </div>
 <h2 id="commit-signing-with-ssh-key">Commit signing with SSH Key<a class="headerlink" href="#commit-signing-with-ssh-key" title="Permanent link">λ︎</a></h2>
-<p>Automatic signing each commit with the authors private key ensures traceability of all changes in the Git repository (prevents commit spoofing).  Every company that deals with sensitive data should ensure all commits are signed to provide accountability for all code and configuration commits.</p>
+<p>Automatically signing each commit with the authors private key ensures traceability of all changes in the Git repository (prevents commit spoofing).</p>
+<p>Every company that deals with sensitive data should ensure all commits are signed to provide accountability for all code and configuration commits.</p>
 <blockquote>
-<p><a href="https://engineering.homeoffice.gov.uk/standards/signing-code-commits/">SEGAS-00009</a> is a United Kingdom Home Office engineering standard that requires all commits be signed.</p>
+<p><a href="https://engineering.homeoffice.gov.uk/standards/signing-code-commits/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> SEGAS-00009</a> is a United Kingdom Home Office engineering standard that requires all commits be signed.</p>
 </blockquote>
+<p>A public SSH key can be registered with a GitHub account as a signing key which is used to validate commits cryptographically signed by the corresponding private key.</p>
+<details class="info">
+<summary>SSH Key for Authorization and Signing</summary>
+<p>An SSH key can be registered as both an authorization key used to access a remote repository securely and a signing key to validate commits.</p>
+<p>For extra security, use a separate SSH key for authorization and signing.</p>
+</details>
 <p>A public SSH key can be registered with a GitHub account as a signing key which is used to validate commits cryptographically signed by the corresponding private key.</p>
 <details class="info">
 <summary>SSH Key for Authorization and Signing</summary>
