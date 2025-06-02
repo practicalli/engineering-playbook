@@ -187,13 +187,24 @@ Add Git SSH key passphrase to Operating System keychain to avoid typing in the p
 
 ## Commit signing with SSH Key
 
-The SSH key can be registered with your GitHub account as a signing key, as opposed to an authorization key used to access a remote repository securely.
+Automatic signing each commit with the authors private key ensures traceability of all changes in the Git repository (prevents commit spoofing).  Every company that deals with sensitive data should ensure all commits are signed to provide accountability for all code and configuration commits.
+
+> [SEGAS-00009](https://engineering.homeoffice.gov.uk/standards/signing-code-commits/) is a United Kingdom Home Office engineering standard that requires all commits be signed.
+
+A public SSH key can be registered with a GitHub account as a signing key which is used to validate commits cryptographically signed by the corresponding private key.
+
+??? INFO "SSH Key for Authorization and Signing"
+    An SSH key can be registered as both an authorization key used to access a remote repository securely and a signing key to validate commits.
+
+    For extra security, use a separate SSH key for authorization and signing.
 
 Use an existing SSH key to sign commits and tags, or generate a new one specifically for signing.
 
-Configure Git client to use SSH to sign commits and tags for all local repositories
+Configure Git client to use SSH to sign commits and tags for all local repositories.
 
-??? EXAMPLE "Git Configuration SSH Key sigining"
+Add the public keys used for signing commits to an [allowed-signatures](#allowed-ssh-keys) file to see confirmation of the private key used for signing the commit.  Most Git clients will show this information.
+
+??? EXAMPLE "Git Configuration SSH Key signing"
     ```config
     ## ------ Git Behaviour ------ ##
     [commit]

@@ -19,6 +19,7 @@
 - os: install sudo & add user to sudo group
 - os: starship prompt in command-line shell
 - os: command-line commands section
+- source-control: add rationale for signing commits
 
 ### Changed
 
