@@ -187,9 +187,11 @@ Add Git SSH key passphrase to Operating System keychain to avoid typing in the p
 
 ## Commit signing with SSH Key
 
-Automatic signing each commit with the authors private key ensures traceability of all changes in the Git repository (prevents commit spoofing).  Every company that deals with sensitive data should ensure all commits are signed to provide accountability for all code and configuration commits.
+Automatically signing each commit with the authors private key ensures traceability of all changes in the Git repository (prevents commit spoofing).
 
-> [SEGAS-00009](https://engineering.homeoffice.gov.uk/standards/signing-code-commits/) is a United Kingdom Home Office engineering standard that requires all commits be signed.
+Every company that deals with sensitive data should ensure all commits are signed to provide accountability for all code and configuration commits.
+
+> [:globe_with_meridians: SEGAS-00009](https://engineering.homeoffice.gov.uk/standards/signing-code-commits/){target=_blank} is a United Kingdom Home Office engineering standard that requires all commits be signed.
 
 A public SSH key can be registered with a GitHub account as a signing key which is used to validate commits cryptographically signed by the corresponding private key.
 
@@ -197,6 +199,15 @@ A public SSH key can be registered with a GitHub account as a signing key which 
     An SSH key can be registered as both an authorization key used to access a remote repository securely and a signing key to validate commits.
 
     For extra security, use a separate SSH key for authorization and signing.
+
+
+A public SSH key can be registered with a GitHub account as a signing key which is used to validate commits cryptographically signed by the corresponding private key.
+
+??? INFO "SSH Key for Authorization and Signing"
+    An SSH key can be registered as both an authorization key used to access a remote repository securely and a signing key to validate commits.
+
+    For extra security, use a separate SSH key for authorization and signing.
+
 
 Use an existing SSH key to sign commits and tags, or generate a new one specifically for signing.
 
