@@ -2485,6 +2485,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debian-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debian Linux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4367,6 +4382,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debian-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debian Linux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -4453,30 +4483,57 @@
 <p>Use a Reglolith ISO image if installing the Operating System anew.</p>
 <p>Or add the Regolith public key and package repository to an existing Ubuntu or Debian Linux operating system.</p>
 <p><a class="md-button" href="https://regolith-desktop.com/docs/using-regolith/install/" target="_blank">Regolith 3 Install Guide</a></p>
+<h3 id="debian-linux">Debian Linux<a class="headerlink" href="#debian-linux" title="Permanent link">λ︎</a></h3>
+<p>An additional package source is currently required to support Debian Linux Trixie (the current testing version).</p>
+<blockquote>
+<p>NOTE: A change to the <code>xorg</code> approach to looking up a session binary broke Regolith (and other sessions).</p>
+</blockquote>
+<p>Update apt sources to include the unstable archive for Regolith Desktop</p>
+<div class="admonition note">
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/regolith.list</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>deb<span class="w"> </span><span class="o">[</span><span class="nv">arch</span><span class="o">=</span>amd64<span class="w"> </span>signed-by<span class="o">=</span>/usr/share/keyrings/regolith-archive-keyring.gpg<span class="o">]</span><span class="w"> </span>https://archive.regolith-desktop.com/debian/testing<span class="w"> </span>testing<span class="w"> </span>main
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>deb<span class="w"> </span><span class="o">[</span><span class="nv">arch</span><span class="o">=</span>amd64<span class="w"> </span>signed-by<span class="o">=</span>/usr/share/keyrings/regolith-archive-keyring.gpg<span class="o">]</span><span class="w"> </span>https://archive.regolith-desktop.com/debian/unstable<span class="w"> </span>testing<span class="w"> </span>main
+</code></pre></div>
+</div>
+<details class="example">
+<summary>Apt sources list for Debian Linux</summary>
+<p>New style apt configuration
+<div class="highlight"><span class="filename">/etc/apt/sources.list.d/regolith.sources</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Types: deb
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>URIs: https://archive.regolith-desktop.com/debian/testing/
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Suites: testing
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Components: main
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Signed-By: /usr/share/keyrings/regolith-archive-keyring.gpg
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Types: deb
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>URIs: https://archive.regolith-desktop.com/debian/unstable
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Suites: testing
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>Components: main
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Signed-By: /usr/share/keyrings/regolith-archive-keyring.gpg
+</code></pre></div></p>
+</details>
 <h2 id="post-install">Post Install<a class="headerlink" href="#post-install" title="Permanent link">λ︎</a></h2>
 <p><a class="md-button" href="https://regolith-desktop.com/docs/using-regolith/configuration/" target="_blank">Regolith 3 Configuration guide</a></p>
 <p>Edit <code>~/.config/regolith3/Xresources</code> to customise Regolith (version 3)</p>
 <details class="example">
 <summary>Practicalli Xresources configuration</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>!!<span class="w"> </span>Postion<span class="w"> </span>of<span class="w"> </span>status<span class="w"> </span>bar
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>wm.bar.position:<span class="w"> </span>top
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>!!<span class="w"> </span>Theme
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>gnome.wm.theme:<span class="w"> </span>Gruvbox
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>!!<span class="w"> </span>Workspace<span class="w"> </span>Icons
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>!!<span class="w"> </span>Icons<span class="w"> </span>to<span class="w"> </span>represent<span class="w"> </span>purpose<span class="w"> </span>of<span class="w"> </span>each<span class="w"> </span>workspace:
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>!!<span class="w"> </span>issues,<span class="w"> </span>terminal,<span class="w"> </span>Clojure,<span class="w"> </span>db,<span class="w"> </span>chat,<span class="w"> </span>settings,<span class="w"> </span>music,<span class="w"> </span>meetings/screencats,<span class="w"> </span>browser
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>wm.workspace.01.name:<span class="w"> </span><span class="m">1</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;1<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#4455ff&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>wm.workspace.02.name:<span class="w"> </span><span class="m">2</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;2<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#F7F7F7&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>wm.workspace.03.name:<span class="w"> </span><span class="m">3</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;3<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#339e35&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>wm.workspace.04.name:<span class="w"> </span><span class="m">4</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;4<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#f99b11&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>wm.workspace.05.name:<span class="w"> </span><span class="m">5</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;5<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#bf1e0f&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>wm.workspace.06.name:<span class="w"> </span><span class="m">6</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;6<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#79ace6&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>wm.workspace.07.name:<span class="w"> </span><span class="m">7</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;7<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#d489ff&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>wm.workspace.08.name:<span class="w"> </span><span class="m">8</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;8<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#F7F7F7&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>wm.workspace.09.name:<span class="w"> </span><span class="m">9</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;9<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#F7F7F7&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>wm.workspace.10.name:<span class="w"> </span><span class="m">10</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;10<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#ee8424&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>!!<span class="w"> </span>Postion<span class="w"> </span>of<span class="w"> </span>status<span class="w"> </span>bar
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>wm.bar.position:<span class="w"> </span>top
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>!!<span class="w"> </span>Theme
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>gnome.wm.theme:<span class="w"> </span>Gruvbox
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>!!<span class="w"> </span>Workspace<span class="w"> </span>Icons
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>!!<span class="w"> </span>Icons<span class="w"> </span>to<span class="w"> </span>represent<span class="w"> </span>purpose<span class="w"> </span>of<span class="w"> </span>each<span class="w"> </span>workspace:
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>!!<span class="w"> </span>issues,<span class="w"> </span>terminal,<span class="w"> </span>Clojure,<span class="w"> </span>db,<span class="w"> </span>chat,<span class="w"> </span>settings,<span class="w"> </span>music,<span class="w"> </span>meetings/screencats,<span class="w"> </span>browser
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>wm.workspace.01.name:<span class="w"> </span><span class="m">1</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;1<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#4455ff&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>wm.workspace.02.name:<span class="w"> </span><span class="m">2</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;2<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#F7F7F7&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>wm.workspace.03.name:<span class="w"> </span><span class="m">3</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;3<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#339e35&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>wm.workspace.04.name:<span class="w"> </span><span class="m">4</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;4<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#f99b11&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>wm.workspace.05.name:<span class="w"> </span><span class="m">5</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;5<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#bf1e0f&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>wm.workspace.06.name:<span class="w"> </span><span class="m">6</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;6<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#79ace6&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>wm.workspace.07.name:<span class="w"> </span><span class="m">7</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;7<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#d489ff&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>wm.workspace.08.name:<span class="w"> </span><span class="m">8</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;8<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#F7F7F7&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>wm.workspace.09.name:<span class="w"> </span><span class="m">9</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;9<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#F7F7F7&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>wm.workspace.10.name:<span class="w"> </span><span class="m">10</span>:&lt;span&gt;<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">font_desc</span><span class="o">=</span><span class="s1">&#39;FontAwesome 14&#39;</span>&gt;10<span class="w"> </span>&lt;/span&gt;&lt;span<span class="w"> </span><span class="nv">foreground</span><span class="o">=</span><span class="s1">&#39;#ee8424&#39;</span>&gt;&lt;/span&gt;&lt;span&gt;<span class="w"> </span>&lt;/span&gt;
 </code></pre></div>
 </details>
 <h3 id="default-terminal">Default terminal<a class="headerlink" href="#default-terminal" title="Permanent link">λ︎</a></h3>
@@ -4486,17 +4543,17 @@
 <summary>Adminstrator access required to set default terminal</summary>
 <p><code>sudo</code> is used as adminstrator rights are required to change the default terminal.  The list of available terminals can be seen without admin rights, although cannot be changed.</p>
 </details>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--config<span class="w"> </span>x-terminal-emulator
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--config<span class="w"> </span>x-terminal-emulator
 </code></pre></div>
 <p>Press the corresponding number key to select the desired terminal, e.g. <span class="keys"><kbd class="key-2">2</kbd></span> to select Kitty terminal</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>There<span class="w"> </span>are<span class="w"> </span><span class="m">3</span><span class="w"> </span>choices<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>alternative<span class="w"> </span>x-terminal-emulator<span class="w"> </span><span class="o">(</span>providing<span class="w"> </span>/usr/bin/x-terminal-emulator<span class="o">)</span>.
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>Selection<span class="w">    </span>Path<span class="w">                             </span>Priority<span class="w">   </span>Status
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>------------------------------------------------------------
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>*<span class="w"> </span><span class="m">0</span><span class="w">            </span>/usr/bin/gnome-terminal.wrapper<span class="w">   </span><span class="m">40</span><span class="w">        </span>auto<span class="w"> </span>mode
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="m">1</span><span class="w">            </span>/usr/bin/gnome-terminal.wrapper<span class="w">   </span><span class="m">40</span><span class="w">        </span>manual<span class="w"> </span>mode
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="m">2</span><span class="w">            </span>/usr/bin/kitty<span class="w">                    </span><span class="m">20</span><span class="w">        </span>manual<span class="w"> </span>mode
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="m">3</span><span class="w">            </span>/usr/bin/urxvt<span class="w">                    </span><span class="m">20</span><span class="w">        </span>manual<span class="w"> </span>mode
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>There<span class="w"> </span>are<span class="w"> </span><span class="m">3</span><span class="w"> </span>choices<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>alternative<span class="w"> </span>x-terminal-emulator<span class="w"> </span><span class="o">(</span>providing<span class="w"> </span>/usr/bin/x-terminal-emulator<span class="o">)</span>.
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>Selection<span class="w">    </span>Path<span class="w">                             </span>Priority<span class="w">   </span>Status
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>------------------------------------------------------------
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>*<span class="w"> </span><span class="m">0</span><span class="w">            </span>/usr/bin/gnome-terminal.wrapper<span class="w">   </span><span class="m">40</span><span class="w">        </span>auto<span class="w"> </span>mode
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="m">1</span><span class="w">            </span>/usr/bin/gnome-terminal.wrapper<span class="w">   </span><span class="m">40</span><span class="w">        </span>manual<span class="w"> </span>mode
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="m">2</span><span class="w">            </span>/usr/bin/kitty<span class="w">                    </span><span class="m">20</span><span class="w">        </span>manual<span class="w"> </span>mode
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="m">3</span><span class="w">            </span>/usr/bin/urxvt<span class="w">                    </span><span class="m">20</span><span class="w">        </span>manual<span class="w"> </span>mode
 </code></pre></div>
 <div class="admonition hint">
 <p class="admonition-title">Practicalli recommends Kitty</p>
@@ -4504,10 +4561,10 @@
 </div>
 <h3 id="theme">Theme<a class="headerlink" href="#theme" title="Permanent link">λ︎</a></h3>
 <p>List the available Regolith look packages to see the available themes</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>apt<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>regolith-look-
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>apt<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>regolith-look-
 </code></pre></div>
 <p>Install the desired theme using the <code>regolith-look</code> command</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>regolith-look<span class="w"> </span><span class="nb">set</span><span class="w"> </span>grubox
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>regolith-look<span class="w"> </span><span class="nb">set</span><span class="w"> </span>grubox
 </code></pre></div>
 <p>Regolith Desktop should update with the new theme settings.  Use <code>regolith-look refresh</code> to force an update to the new theme settings or if further changes are made to the configuration.</p>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">λ︎</a></h2>
@@ -4532,7 +4589,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 26, 2024 20:34:28 UTC">December 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 14, 2025 20:58:27 UTC">June 14, 2025</span>
   </span>
 
     
