@@ -16,6 +16,37 @@ Or add the Regolith public key and package repository to an existing Ubuntu or D
 
 [Regolith 3 Install Guide](https://regolith-desktop.com/docs/using-regolith/install/){target=_blank .md-button}
 
+### Debian Linux
+
+An additional package source is currently required to support Debian Linux Trixie (the current testing version).
+
+> NOTE: A change to the `xorg` approach to looking up a session binary broke Regolith (and other sessions).
+
+Update apt sources to include the unstable archive for Regolith Desktop
+
+!!! NOTE ""
+    ```shell title="/etc/apt/sources.list.d/regolith.list"
+    deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/debian/testing testing main
+    deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/debian/unstable testing main
+    ```
+
+??? EXAMPLE "Apt sources list for Debian Linux"
+
+    New style apt configuration
+    ```config title="/etc/apt/sources.list.d/regolith.sources"
+    Types: deb
+    URIs: https://archive.regolith-desktop.com/debian/testing/
+    Suites: testing
+    Components: main
+    Signed-By: /usr/share/keyrings/regolith-archive-keyring.gpg
+
+    Types: deb
+    URIs: https://archive.regolith-desktop.com/debian/unstable
+    Suites: testing
+    Components: main
+    Signed-By: /usr/share/keyrings/regolith-archive-keyring.gpg
+    ```
+
 ## Post Install
 
 [Regolith 3 Configuration guide](https://regolith-desktop.com/docs/using-regolith/configuration/){target=_blank .md-button}
