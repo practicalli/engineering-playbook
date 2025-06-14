@@ -4474,15 +4474,16 @@
 
 
 <h1 id="regolith-desktop">Regolith Desktop<a class="headerlink" href="#regolith-desktop" title="Permanent link">λ︎</a></h1>
-<p>Regolith 3 is a keyboard focused tiling window manager on top of Ubuntu or Debian, supporting X11 and Wayland (sway).</p>
-<p>Excellent defaults make using Regolith very quick to get started and customisation is via a simple <code>~/.config/regolith3/Xresources</code> file.</p>
+<p>Regolith Desktop is a Linux desktop environment that provides an Xorg and Wayland session for Debian Linux and Ubuntu distributions.</p>
+<p>Each desktop session provides a keyboard focused tiling window manager, <a href="https://i3wm.org/">i3</a> for Xorg and <a href="https://swaywm.org/">Sway</a> for Wayland.</p>
+<p>Regolith has excellent defaults so its very quick to get started and customisation is via a simple <code>~/.config/regolith3/Xresources</code> file.</p>
 <p><a class="md-button" href="https://regolith-desktop.com/docs/using-regolith/install/" target="_blank">Install Guide</a>
 <a class="md-button" href="https://regolith-desktop.com/docs/using-regolith/basics/" target="_blank">Basic Use</a>
 <a class="md-button" href="https://regolith-desktop.com/docs/using-regolith/configuration/" target="_blank">Configuration guide</a></p>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">λ︎</a></h2>
 <p>Use a Reglolith ISO image if installing the Operating System anew.</p>
 <p>Or add the Regolith public key and package repository to an existing Ubuntu or Debian Linux operating system.</p>
-<p><a class="md-button" href="https://regolith-desktop.com/docs/using-regolith/install/" target="_blank">Regolith 3 Install Guide</a></p>
+<p><a class="md-button" href="https://regolith-desktop.com/docs/using-regolith/install/" target="_blank">Install Guide</a></p>
 <h3 id="debian-linux">Debian Linux<a class="headerlink" href="#debian-linux" title="Permanent link">λ︎</a></h3>
 <p>An additional package source is currently required to support Debian Linux Trixie (the current testing version).</p>
 <blockquote>
@@ -4511,8 +4512,8 @@
 </code></pre></div></p>
 </details>
 <h2 id="post-install">Post Install<a class="headerlink" href="#post-install" title="Permanent link">λ︎</a></h2>
-<p><a class="md-button" href="https://regolith-desktop.com/docs/using-regolith/configuration/" target="_blank">Regolith 3 Configuration guide</a></p>
-<p>Edit <code>~/.config/regolith3/Xresources</code> to customise Regolith (version 3)</p>
+<p><a class="md-button" href="https://regolith-desktop.com/docs/using-regolith/configuration/" target="_blank">Regolith Configuration guide</a></p>
+<p>Edit <code>~/.config/regolith3/Xresources</code> to customise Regolith</p>
 <details class="example">
 <summary>Practicalli Xresources configuration</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>!!<span class="w"> </span>Postion<span class="w"> </span>of<span class="w"> </span>status<span class="w"> </span>bar
@@ -4546,14 +4547,14 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--config<span class="w"> </span>x-terminal-emulator
 </code></pre></div>
 <p>Press the corresponding number key to select the desired terminal, e.g. <span class="keys"><kbd class="key-2">2</kbd></span> to select Kitty terminal</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>There<span class="w"> </span>are<span class="w"> </span><span class="m">3</span><span class="w"> </span>choices<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>alternative<span class="w"> </span>x-terminal-emulator<span class="w"> </span><span class="o">(</span>providing<span class="w"> </span>/usr/bin/x-terminal-emulator<span class="o">)</span>.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>There are 3 choices for the alternative x-terminal-emulator (providing /usr/bin/x-terminal-emulator).
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>Selection<span class="w">    </span>Path<span class="w">                             </span>Priority<span class="w">   </span>Status
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  Selection    Path                             Priority   Status
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>------------------------------------------------------------
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>*<span class="w"> </span><span class="m">0</span><span class="w">            </span>/usr/bin/gnome-terminal.wrapper<span class="w">   </span><span class="m">40</span><span class="w">        </span>auto<span class="w"> </span>mode
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="m">1</span><span class="w">            </span>/usr/bin/gnome-terminal.wrapper<span class="w">   </span><span class="m">40</span><span class="w">        </span>manual<span class="w"> </span>mode
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">  </span><span class="m">2</span><span class="w">            </span>/usr/bin/kitty<span class="w">                    </span><span class="m">20</span><span class="w">        </span>manual<span class="w"> </span>mode
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="m">3</span><span class="w">            </span>/usr/bin/urxvt<span class="w">                    </span><span class="m">20</span><span class="w">        </span>manual<span class="w"> </span>mode
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>* 0            /usr/bin/gnome-terminal.wrapper   40        auto mode
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  1            /usr/bin/gnome-terminal.wrapper   40        manual mode
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  2            /usr/bin/kitty                    20        manual mode
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  3            /usr/bin/urxvt                    20        manual mode
 </code></pre></div>
 <div class="admonition hint">
 <p class="admonition-title">Practicalli recommends Kitty</p>
@@ -4589,7 +4590,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 14, 2025 20:58:27 UTC">June 14, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 14, 2025 22:43:44 UTC">June 14, 2025</span>
   </span>
 
     
