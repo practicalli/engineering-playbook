@@ -1,12 +1,15 @@
 # Regolith Desktop
 
-Regolith 3 is a keyboard focused tiling window manager on top of Ubuntu or Debian, supporting X11 and Wayland (sway).
+Regolith Desktop is a Linux desktop environment that provides an Xorg and Wayland session for Debian Linux and Ubuntu distributions.
 
-Excellent defaults make using Regolith very quick to get started and customisation is via a simple `~/.config/regolith3/Xresources` file.
+Each desktop session provides a keyboard focused tiling window manager, [i3](https://i3wm.org/) for Xorg and [Sway](https://swaywm.org/) for Wayland.
+
+Regolith has excellent defaults so its very quick to get started and customisation is via a simple `~/.config/regolith3/Xresources` file.
 
 [Install Guide](https://regolith-desktop.com/docs/using-regolith/install/){target=_blank .md-button}
 [Basic Use](https://regolith-desktop.com/docs/using-regolith/basics/){target=_blank .md-button}
 [Configuration guide](https://regolith-desktop.com/docs/using-regolith/configuration/){target=_blank .md-button}
+
 
 ## Install
 
@@ -14,7 +17,7 @@ Use a Reglolith ISO image if installing the Operating System anew.
 
 Or add the Regolith public key and package repository to an existing Ubuntu or Debian Linux operating system.
 
-[Regolith 3 Install Guide](https://regolith-desktop.com/docs/using-regolith/install/){target=_blank .md-button}
+[Install Guide](https://regolith-desktop.com/docs/using-regolith/install/){target=_blank .md-button}
 
 ### Debian Linux
 
@@ -49,9 +52,9 @@ Update apt sources to include the unstable archive for Regolith Desktop
 
 ## Post Install
 
-[Regolith 3 Configuration guide](https://regolith-desktop.com/docs/using-regolith/configuration/){target=_blank .md-button}
+[Regolith Configuration guide](https://regolith-desktop.com/docs/using-regolith/configuration/){target=_blank .md-button}
 
-Edit `~/.config/regolith3/Xresources` to customise Regolith (version 3)
+Edit `~/.config/regolith3/Xresources` to customise Regolith
 
 ??? EXAMPLE "Practicalli Xresources configuration"
     ```shell
@@ -91,7 +94,7 @@ sudo update-alternatives --config x-terminal-emulator
 
 Press the corresponding number key to select the desired terminal, e.g. ++2++ to select Kitty terminal
 
-```shell
+```shell-output
 There are 3 choices for the alternative x-terminal-emulator (providing /usr/bin/x-terminal-emulator).
 
   Selection    Path                             Priority   Status
