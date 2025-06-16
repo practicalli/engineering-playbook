@@ -44,3 +44,4 @@
 - ci: optional setup-python for publish book workflow
 - dev: optional setup-python for publish book workflow
 - os: move shell section under command-line
+- ci: update clojure quality check github workflow

@@ -113,7 +113,7 @@ Defines `changelog-check-skip` label on a pull request instructs the workflow no
           - main
 
     jobs:
-      tests:
+      check-code-quality:
         name: "Clojure Quality Checks"
         runs-on: ubuntu-latest
         steps:
@@ -124,36 +124,38 @@ Defines `changelog-check-skip` label on a pull request instructs the workflow no
           - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
 
           - name: "Prepare Java runtime"
-            uses: actions/setup-java@v3
+            uses: actions/setup-java@v4
             with:
               distribution: "temurin"
-              java-version: "17"
+              java-version: "21"
+
+          - name: "Prepare Clojure tools"
+            uses: DeLaGuardo/setup-clojure@13.4
+            with:
+              cli: 1.12.1.1550      # Clojure CLI
+              cljstyle: 0.17.642    # Cljstyle
+              clj-kondo: 2025.06.05 # Clj-kondo
+              # bb: 1.12.202        # Babashka
 
           - name: "Cache Clojure Dependencies"
-            uses: actions/cache@v3
+            uses: actions/cache@v4
             with:
               path: |
                 ~/.m2/repository
                 ~/.gitlibs
-              key: clojure-deps-${{ hashFiles('**/deps.edn') }}
+                .cpcache
+              key: clojure-deps-${{ hashFiles('deps.edn') }}
               restore-keys: clojure-deps-
 
-          - name: "Install Clojure tools"
-            uses: DeLaGuardo/setup-clojure@10
-            with:
-              cli: 1.11.1.1165 # Clojure CLI
-              cljstyle: 0.15.0 # cljstyle
-              clj-kondo: 2022.10.05 # Clj-kondo
-              # bb: 0.7.8           # Babashka
-
           - name: "Lint with clj-kondo"
-            run: clj-kondo --lint deps.edn src resources test --config .clj-kondo/config-ci.edn
+            run: clj-kondo --lint deps.edn src resources test --config '{:output {:pattern "::{{level}} file={{filename}},line={{row}},col={{col}}::{{message}}"}}'
+
 
           - name: "Check Clojure Style"
             run: cljstyle check --report
 
           - name: "Kaocha test runner"
-            run: clojure -X:env/test:test/run
+            run: clojure -X:test/env:test/run
     ```
 
 ## mkdocs publisher
