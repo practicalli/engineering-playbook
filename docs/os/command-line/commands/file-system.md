@@ -17,6 +17,46 @@
 
 `tree` shows a recursive list of files and directories, e.g. show the whole contents of a code project.
 
+`pwd` shows the full path of the current working directory
+
+
+## Navigate the file system
+
+
+`cd` to change to a different directory by giving the relative or full path
+
+```shell
+cd [path_or_directory]
+```
+
+Short-cuts:
+
+- `cd` move to the current user’s home directory
+- `cd ..`  – move up a directory and can be used with a relative path `cd ../sibling-directory`
+- `cd –` – move to the previous directory
+
+## Change files and directories
+
+`touch filename` creates a new file using the given name (assuming the file doesn't already exist)
+
+`mkdir path/to/target_folder/new-folder-name` creates a new directory using a relative or full path, the current user has read, write, and execute files permissions in the new directory (`-m` flag or `chmod` to alter permissions)
+
+
+`rm` command deletes files from a directory. You must have the write permission for the folder or use sudo. Here’s the syntax:
+
+```shell
+rm [options] file1 file2
+```
+
+-r (recursive) option removes a directory and its contents, including subdirectories.
+
+-i (interactive) flag prompts for confirmation before the removal
+
+-f (force) to delete without confirmation
+
+!!! INFO "Shell may be configured to ask for delete confirmation"
+<!--- TODO: add link to configure zsh and bash shells to always prompt for delete confirmation --->
+
 
 ## Find files and contents
 
