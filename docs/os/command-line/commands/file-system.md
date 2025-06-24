@@ -41,18 +41,19 @@ Short-cuts:
 
 `mkdir path/to/target_folder/new-folder-name` creates a new directory using a relative or full path, the current user has read, write, and execute files permissions in the new directory (`-m` flag or `chmod` to alter permissions)
 
+`cp` copies files using the form cp file1 file2 [target_path], Use the `-R` flag to recursively copy a directory and its contents (including sub-directories)
 
-`rm` command deletes files from a directory. You must have the write permission for the folder or use sudo. Here’s the syntax:
+`mv`  moves (optionally rename) a file or directory to another location using the form mv file_or_directory [target_directory]
 
-```shell
-rm [options] file1 file2
-```
+`rm` command deletes files from a directory. You must have the write permission for the folder or use sudo. Uses the form: rm [options] file1 file2
 
--r (recursive) option removes a directory and its contents, including subdirectories.
+!!! INFO "Common flags for file and directory commands"
+    `-r` (recursive) acts on a directory and its contents, including subdirectories.
 
--i (interactive) flag prompts for confirmation before the removal
+    `-i` (interactive) flag prompts for confirmation before running the command
 
--f (force) to delete without confirmation
+    `-f` (force) to run the command without confirmation
+
 
 !!! INFO "Shell may be configured to ask for delete confirmation"
 <!--- TODO: add link to configure zsh and bash shells to always prompt for delete confirmation --->
