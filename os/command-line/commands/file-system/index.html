@@ -2298,6 +2298,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#navigate-the-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigate the file system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change files and directories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#find-files-and-contents" class="md-nav__link">
     <span class="md-ellipsis">
       Find files and contents
@@ -4339,6 +4357,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#navigate-the-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigate the file system
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Change files and directories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#find-files-and-contents" class="md-nav__link">
     <span class="md-ellipsis">
       Find files and contents
@@ -4389,6 +4425,31 @@
 <p><code>ls -l</code> shows the meta data of files, e.g. ownership, permissions, etc.</p>
 <p><code>ls -a</code> includes hidden dot-files in the list, e.g. <code>.git</code></p>
 <p><code>tree</code> shows a recursive list of files and directories, e.g. show the whole contents of a code project.</p>
+<p><code>pwd</code> shows the full path of the current working directory</p>
+<h2 id="navigate-the-file-system">Navigate the file system<a class="headerlink" href="#navigate-the-file-system" title="Permanent link">λ︎</a></h2>
+<p><code>cd</code> to change to a different directory by giving the relative or full path</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span><span class="o">[</span>path_or_directory<span class="o">]</span>
+</code></pre></div>
+<p>Short-cuts:</p>
+<ul>
+<li><code>cd</code> move to the current user’s home directory</li>
+<li><code>cd ..</code>  – move up a directory and can be used with a relative path <code>cd ../sibling-directory</code></li>
+<li><code>cd –</code> – move to the previous directory</li>
+</ul>
+<h2 id="change-files-and-directories">Change files and directories<a class="headerlink" href="#change-files-and-directories" title="Permanent link">λ︎</a></h2>
+<p><code>touch filename</code> creates a new file using the given name (assuming the file doesn't already exist)</p>
+<p><code>mkdir path/to/target_folder/new-folder-name</code> creates a new directory using a relative or full path, the current user has read, write, and execute files permissions in the new directory (<code>-m</code> flag or <code>chmod</code> to alter permissions)</p>
+<p><code>rm</code> command deletes files from a directory. You must have the write permission for the folder or use sudo. Here’s the syntax:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rm<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span>file1<span class="w"> </span>file2
+</code></pre></div>
+<p>-r (recursive) option removes a directory and its contents, including subdirectories.</p>
+<p>-i (interactive) flag prompts for confirmation before the removal</p>
+<p>-f (force) to delete without confirmation</p>
+<div class="admonition info">
+<p class="admonition-title">Shell may be configured to ask for delete confirmation</p>
+</div>
+<!--- TODO: add link to configure zsh and bash shells to always prompt for delete confirmation --->
+
 <h2 id="find-files-and-contents">Find files and contents<a class="headerlink" href="#find-files-and-contents" title="Permanent link">λ︎</a></h2>
 <p>The find command is one of the most useful Linux commands, especially when you're faced with the hundreds and thousands of files and folders on a modern computer. As its name implies, find helps you find things, and not just by filename.</p>
 <p>Whether you're on your own computer or trying to support someone on an unfamiliar system, here are 10 ways find can help you locate important data.</p>
@@ -4516,7 +4577,7 @@ random.idea.txt</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 26, 2025 19:27:47 UTC">May 26, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 20, 2025 20:33:34 UTC">June 20, 2025</span>
   </span>
 
     
