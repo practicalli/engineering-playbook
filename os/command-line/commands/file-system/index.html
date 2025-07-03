@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
@@ -2316,6 +2316,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#find-files-and-contents" class="md-nav__link">
     <span class="md-ellipsis">
       Find files and contents
@@ -4375,6 +4384,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archives
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#find-files-and-contents" class="md-nav__link">
     <span class="md-ellipsis">
       Find files and contents
@@ -4399,7 +4417,7 @@
 
 
   
-    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/os/command-line/commands/file-system.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/os/command-line/commands/file-system.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -4453,6 +4471,21 @@
 </div>
 <!--- TODO: add link to configure zsh and bash shells to always prompt for delete confirmation --->
 
+<h2 id="archives">Archives<a class="headerlink" href="#archives" title="Permanent link">λ︎</a></h2>
+<p>Tar (tape archive) is the long standing command for creating archives on Unix, optionally compressing the resulting file with one of several algorithms.</p>
+<p><code>tar -cf tar_file_name.tar &lt;directory and/or files&gt;</code> creates a new archive, <code>-c</code> for create, <code>-f</code> to specify archive file name.</p>
+<p><code>tar -cfz archive.tgz &lt;directory and/or files&gt;</code> creates a new archive using gzip compression.</p>
+<p>Archive options:</p>
+<ul>
+<li><code>z</code> gizip compression, <code>.tgz</code> file extension</li>
+<li><code>j</code> bzip2 compression, <code>.tgj</code> file extension</li>
+<li><code>J</code> xz compression, <code>.tgx</code> file extension</li>
+</ul>
+<p>tar -xf archive.tar extracts everything from the archive, <code>-C</code> extracts to a given path.</p>
+<p>tar can change the contents of an archive using <code>--concatenate</code>, <code>--delete</code>, <code>--append</code> and <code>--update</code> flags.</p>
+<p>zip is a universal archive tool that compresses one or multiple files into a <code>.zip</code> archive, reducing the size of text based files. Binary files may result in a slightly bigger archive.</p>
+<p><code>zip [options] zip_file_name &lt;directory and/or files&gt;</code> creates a compressed archive.</p>
+<p><code>unzip [options] zip_file_name</code> extracts all the files form the archive.</p>
 <h2 id="find-files-and-contents">Find files and contents<a class="headerlink" href="#find-files-and-contents" title="Permanent link">λ︎</a></h2>
 <p>The find command is one of the most useful Linux commands, especially when you're faced with the hundreds and thousands of files and folders on a modern computer. As its name implies, find helps you find things, and not just by filename.</p>
 <p>Whether you're on your own computer or trying to support someone on an unfamiliar system, here are 10 ways find can help you locate important data.</p>
@@ -4580,7 +4613,7 @@ random.idea.txt</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 24, 2025 20:43:31 UTC">June 24, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 3, 2025 22:00:34 UTC">July 3, 2025</span>
   </span>
 
     
@@ -4756,7 +4789,7 @@ random.idea.txt</p>
       <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
