@@ -21,6 +21,7 @@
 - os: command-line commands section
 - source-control: add rationale for signing commits
 - os: debian linux trixie archive resolves xorg change
+- os: archive commands in file systems page
 
 ### Changed
 

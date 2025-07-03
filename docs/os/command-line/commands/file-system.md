@@ -59,6 +59,33 @@ Short-cuts:
 <!--- TODO: add link to configure zsh and bash shells to always prompt for delete confirmation --->
 
 
+
+## Archives
+
+Tar (tape archive) is the long standing command for creating archives on Unix, optionally compressing the resulting file with one of several algorithms.
+
+`tar -cf tar_file_name.tar <directory and/or files>` creates a new archive, `-c` for create, `-f` to specify archive file name.
+
+`tar -cfz archive.tgz <directory and/or files>` creates a new archive using gzip compression.
+
+Archive options:
+
+- `z` gizip compression, `.tgz` file extension
+- `j` bzip2 compression, `.tgj` file extension
+- `J` xz compression, `.tgx` file extension
+
+tar -xf archive.tar extracts everything from the archive, `-C` extracts to a given path.
+
+tar can change the contents of an archive using `--concatenate`, `--delete`, `--append` and `--update` flags.
+
+
+zip is a universal archive tool that compresses one or multiple files into a `.zip` archive, reducing the size of text based files. Binary files may result in a slightly bigger archive.
+
+`zip [options] zip_file_name <directory and/or files>` creates a compressed archive.
+
+`unzip [options] zip_file_name` extracts all the files form the archive.
+
+
 ## Find files and contents
 
 
