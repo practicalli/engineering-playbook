@@ -197,7 +197,10 @@ nav:
               - Cron: os/command-line/commands/cron.md
       - Linux:
           - Overview: os/linux/index.md
-          - Debian: os/debian-linux.md
+          - Debian:
+              - os/debian-linux/index.md
+              - Install: os/debian-linux/install.md
+              - Post Install: os/debian-linux/post-install.md
           - Ubuntu: os/ubuntu-linux.md
           - Hyprland: os/linux/hyprland.md
           - Regolith: os/linux/regolith.md

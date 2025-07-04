@@ -1,37 +1,6 @@
-# Debian Linux
+# Post Install
 
-Debian Linux provides support for the widest range of hardware of any Linux distribution.
-
-The Debian project established the high-quality `.deb` package system which ensures all packages are consitenly defined and manage dependencies.
-
-## Install
-
-Debian provides ISO images which can be burned onto compact disks or USB memory sticks.
-
-The net install image is small and quick to download, containing only the essential packages to run an operating system.
-
-Copy the Debian Linux ISO image to a USB of 1GB size or larger
-
-!!! EXAMPLE "Create USB install disk from Debian ISO file"
-    ```shell
-    cp debian.iso /dev/sda
-    ```
-
-??? HINT "Creating USB install disks with non-Debian images"
-    Find the name of the USB stick
-    ```shell
-    ls -l /dev/disk/by-id/usb-*
-    ```
-
-    Copy the image using the name of the USB Stick
-    ```shell
-    dd bs=4M if=path/to/filename.iso of=/dev/disk/by-id/usb-My_flash_drive conv=fsync oflag=direct status=progress
-    ```
-    [Arch Linux: ISO image command line utilities](https://wiki.archlinux.org/title/USB_flash_installation_medium)
-
-## Post Install
-
-### root vs sudo
+## root vs sudo
 
 Debian recommends using the root account to administer the system, rather than using `sudo` as with Ubuntu
 
@@ -43,7 +12,7 @@ su -
 
 !!! INFO "root password is set during install of Debian"
 
-!!! HINT "Dedicated terminal for root account"
+??? HINT "Dedicated terminal for root account"
     Open a terminal application specifically to use the root account when carrying out significant maintenance, e.g. installing many packages during the post install.
 
 ??? INFO "Install & Configure sudo for Debian Linux"
@@ -61,7 +30,51 @@ su -
     adduser account-name sudo
     ```
 
-## Set XDG freedesktop locations
+## Update to testing
+
+Debian Linux is an excellent choice for servers and every day use due to its stability and regular security updates.  The release cycle is between 1-2 years, so for software development some packages may not be as up to date as required.
+
+Newer versions can be installed via Personal Package Archives (PPA) or installed manually (`/usr/local/bin`, or `~/.local/bin`).
+
+Debian Testing contains packages for the next release of Debian Linux (currently `trixie`) and it is a viable approach when significant number of packages should be on the latest version.
+
+!!! NOTE "Upgrade to Debian Testing"
+    edit `/etc/apt/sources.list` and change third field from `bullseye` to `trixie`
+
+    ```config title="/etc/apt/sources.list"
+    deb http://deb.debian.org/debian/ trixie main non-free-firmware
+    deb-src http://deb.debian.org/debian/ trixie main non-free-firmware
+
+    deb http://security.debian.org/debian-security trixie-security main non-free-firmware
+    deb-src http://security.debian.org/debian-security trixie-security main non-free-firmware
+    ```
+
+    Additionally add `contrib` and `non-free` packages for access to even more packages (some of which are not open source)
+
+    ```config
+    deb http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
+    deb-src http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
+
+    deb http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
+    deb-src http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
+    ```
+
+> NOTE: trixie includes packages for OpenJDK 21
+
+
+## Configure shell
+
+Bash is the default shell and [oh-my-bash]() is a community configuration to add features and provide prompt themes.
+
+Zsh is an advanced shell with excellent Tab completion options and [Prezto]() or [oh-my-zsh]() community configurations.
+
+!!! TIP "Practicalli uses Prezto community config"
+
+## Set XDG Free Desktop locations
+
+Using the XFreeDesktop environment variables sets the location of configuration, cache and library files for software run by a user account.
+
+Backup and removal of user specific files becomes far simpler.  The root directory of an account is greatly simplified too.
 
 === "Zsh"
 
