@@ -20,28 +20,28 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/engineering-playbook/persistence/rdbms/server/mariadb/">
+        <link rel="canonical" href="https://practical.li/engineering-playbook/os/debian-linux/post-install/">
       
       
-        <link rel="prev" href="../h2/">
+        <link rel="prev" href="../install/">
       
       
-        <link rel="next" href="../postgresql/">
+        <link rel="next" href="../../ubuntu-linux/">
       
       
-      <link rel="icon" href="../../../../assets/favicon.svg">
+      <link rel="icon" href="../../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>Maria DB - Practicalli Engineering Playbook</title>
+        <title>Post Install - Practicalli Engineering Playbook</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -60,9 +60,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -81,11 +81,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Maria DB - Practicalli Engineering Playbook" >
+        <meta  property="og:title"  content="Post Install - Practicalli Engineering Playbook" >
       
         <meta  property="og:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/persistence/rdbms/server/mariadb.png" >
+        <meta  property="og:image"  content="https://practical.li/engineering-playbook/assets/images/social/os/debian-linux/post-install.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -93,19 +93,19 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/engineering-playbook/persistence/rdbms/server/mariadb/" >
+        <meta  property="og:url"  content="https://practical.li/engineering-playbook/os/debian-linux/post-install/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Maria DB - Practicalli Engineering Playbook" >
+        <meta  name="twitter:title"  content="Post Install - Practicalli Engineering Playbook" >
       
         <meta  name="twitter:description"  content="Practical guides to common Engineering tasks" >
       
-        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/persistence/rdbms/server/mariadb.png" >
+        <meta  name="twitter:image"  content="https://practical.li/engineering-playbook/assets/images/social/os/debian-linux/post-install.png" >
       
     
     
-   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -114,7 +114,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -133,7 +133,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#maria-db" class="md-skip">
+        <a href="#post-install" class="md-skip">
           Skip to content
         </a>
       
@@ -185,7 +185,7 @@
       target="_blank"
     >
       
-  <img src="../../../../assets/images/practicalli-logo.png" alt="logo">
+  <img src="../../../assets/images/practicalli-logo.png" alt="logo">
 
     </a>
 
@@ -203,7 +203,7 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-             Maria DB 
+             Post Install 
           </span>
         </div>
       </div>
@@ -355,9 +355,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Practicalli Engineering Playbook" class="md-nav__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
+    <a href="../../.." title="Practicalli Engineering Playbook" class="md-nav__button md-logo" aria-label="Practicalli Engineering Playbook" data-md-component="logo">
       
-  <img src="../../../../assets/images/practicalli-logo.png" alt="logo">
+  <img src="../../../assets/images/practicalli-logo.png" alt="logo">
 
     </a>
     Practicalli Engineering Playbook
@@ -406,7 +406,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../.." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   
@@ -441,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../introduction/contributing/" class="md-nav__link">
+      <a href="../../../introduction/contributing/" class="md-nav__link">
         
   
   
@@ -464,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../introduction/writing-tips/" class="md-nav__link">
+      <a href="../../../introduction/writing-tips/" class="md-nav__link">
         
   
   
@@ -516,7 +516,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../build-tool/" class="md-nav__link ">
+            <a href="../../../build-tool/" class="md-nav__link ">
               
   
   
@@ -551,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../build-tool/make/" class="md-nav__link">
+      <a href="../../../build-tool/make/" class="md-nav__link">
         
   
   
@@ -574,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../build-tool/babashka-task-runner/" class="md-nav__link">
+      <a href="../../../build-tool/babashka-task-runner/" class="md-nav__link">
         
   
   
@@ -626,7 +626,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../careers/" class="md-nav__link ">
+            <a href="../../../careers/" class="md-nav__link ">
               
   
   
@@ -661,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../careers/engineer/" class="md-nav__link">
+      <a href="../../../careers/engineer/" class="md-nav__link">
         
   
   
@@ -684,7 +684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../careers/engineering-manager/" class="md-nav__link">
+      <a href="../../../careers/engineering-manager/" class="md-nav__link">
         
   
   
@@ -732,7 +732,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../change-management/" class="md-nav__link ">
+            <a href="../../../change-management/" class="md-nav__link ">
               
   
   
@@ -791,7 +791,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../code-quality/" class="md-nav__link ">
+            <a href="../../../code-quality/" class="md-nav__link ">
               
   
   
@@ -826,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../code-quality/megalinter/" class="md-nav__link">
+      <a href="../../../code-quality/megalinter/" class="md-nav__link">
         
   
   
@@ -849,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../code-quality/clojure/" class="md-nav__link">
+      <a href="../../../code-quality/clojure/" class="md-nav__link">
         
   
   
@@ -901,7 +901,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../continuous-integration/" class="md-nav__link ">
+            <a href="../../../continuous-integration/" class="md-nav__link ">
               
   
   
@@ -966,7 +966,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../continuous-integration/docker/" class="md-nav__link ">
+            <a href="../../../continuous-integration/docker/" class="md-nav__link ">
               
   
   
@@ -1001,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/docker/install/" class="md-nav__link">
+      <a href="../../../continuous-integration/docker/install/" class="md-nav__link">
         
   
   
@@ -1044,7 +1044,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../continuous-integration/docker/desktop/" class="md-nav__link ">
+            <a href="../../../continuous-integration/docker/desktop/" class="md-nav__link ">
               
   
   
@@ -1079,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/docker/desktop/extensions/" class="md-nav__link">
+      <a href="../../../continuous-integration/docker/desktop/extensions/" class="md-nav__link">
         
   
   
@@ -1110,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/docker/images/" class="md-nav__link">
+      <a href="../../../continuous-integration/docker/images/" class="md-nav__link">
         
   
   
@@ -1133,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/docker/dockerfile/" class="md-nav__link">
+      <a href="../../../continuous-integration/docker/dockerfile/" class="md-nav__link">
         
   
   
@@ -1156,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/docker/clojure-multi-stage-dockerfile/" class="md-nav__link">
+      <a href="../../../continuous-integration/docker/clojure-multi-stage-dockerfile/" class="md-nav__link">
         
   
   
@@ -1179,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/docker/compose/" class="md-nav__link">
+      <a href="../../../continuous-integration/docker/compose/" class="md-nav__link">
         
   
   
@@ -1236,7 +1236,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../continuous-integration/github/" class="md-nav__link ">
+            <a href="../../../continuous-integration/github/" class="md-nav__link ">
               
   
   
@@ -1271,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/github/actions/" class="md-nav__link">
+      <a href="../../../continuous-integration/github/actions/" class="md-nav__link">
         
   
   
@@ -1294,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/github/common-jobs/" class="md-nav__link">
+      <a href="../../../continuous-integration/github/common-jobs/" class="md-nav__link">
         
   
   
@@ -1317,7 +1317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/github/trigger-events/" class="md-nav__link">
+      <a href="../../../continuous-integration/github/trigger-events/" class="md-nav__link">
         
   
   
@@ -1366,7 +1366,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../continuous-integration/github/workflows/" class="md-nav__link ">
+            <a href="../../../continuous-integration/github/workflows/" class="md-nav__link ">
               
   
   
@@ -1401,7 +1401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/github/workflows/megalinter/" class="md-nav__link">
+      <a href="../../../continuous-integration/github/workflows/megalinter/" class="md-nav__link">
         
   
   
@@ -1424,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/github/workflows/luarocks/" class="md-nav__link">
+      <a href="../../../continuous-integration/github/workflows/luarocks/" class="md-nav__link">
         
   
   
@@ -1447,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/github/workflows/practicalli/" class="md-nav__link">
+      <a href="../../../continuous-integration/github/workflows/practicalli/" class="md-nav__link">
         
   
   
@@ -1470,7 +1470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../continuous-integration/github/workflows/system-catalog/" class="md-nav__link">
+      <a href="../../../continuous-integration/github/workflows/system-catalog/" class="md-nav__link">
         
   
   
@@ -1542,7 +1542,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../culture/" class="md-nav__link ">
+            <a href="../../../culture/" class="md-nav__link ">
               
   
   
@@ -1577,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../culture/anti-patterns/" class="md-nav__link">
+      <a href="../../../culture/anti-patterns/" class="md-nav__link">
         
   
   
@@ -1600,7 +1600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../culture/burnout/" class="md-nav__link">
+      <a href="../../../culture/burnout/" class="md-nav__link">
         
   
   
@@ -1623,7 +1623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../culture/documentation/" class="md-nav__link">
+      <a href="../../../culture/documentation/" class="md-nav__link">
         
   
   
@@ -1646,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../culture/leadership/" class="md-nav__link">
+      <a href="../../../culture/leadership/" class="md-nav__link">
         
   
   
@@ -1698,7 +1698,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../technical-writing/" class="md-nav__link ">
+            <a href="../../../technical-writing/" class="md-nav__link ">
               
   
   
@@ -1733,7 +1733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../technical-writing/techniques.md" class="md-nav__link">
+      <a href="../../../technical-writing/techniques.md" class="md-nav__link">
         
   
   
@@ -1776,7 +1776,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../technical-writing/static-site/" class="md-nav__link ">
+            <a href="../../../technical-writing/static-site/" class="md-nav__link ">
               
   
   
@@ -1811,7 +1811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../technical-writing/static-site/mkdocs/" class="md-nav__link">
+      <a href="../../../technical-writing/static-site/mkdocs/" class="md-nav__link">
         
   
   
@@ -1846,6 +1846,8 @@
       
   
   
+    
+  
   
   
     
@@ -1865,15 +1867,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../os/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -1892,7 +1894,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Operating Systems
@@ -1934,7 +1936,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../os/command-line/" class="md-nav__link ">
+            <a href="../../command-line/" class="md-nav__link ">
               
   
   
@@ -1969,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/command-line/kitty-terminal/" class="md-nav__link">
+      <a href="../../command-line/kitty-terminal/" class="md-nav__link">
         
   
   
@@ -1992,7 +1994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/command-line/warp/" class="md-nav__link">
+      <a href="../../command-line/warp/" class="md-nav__link">
         
   
   
@@ -2041,7 +2043,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../os/command-line/shell/" class="md-nav__link ">
+            <a href="../../command-line/shell/" class="md-nav__link ">
               
   
   
@@ -2076,7 +2078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/command-line/shell/bash/" class="md-nav__link">
+      <a href="../../command-line/shell/bash/" class="md-nav__link">
         
   
   
@@ -2099,7 +2101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/command-line/shell/zsh/" class="md-nav__link">
+      <a href="../../command-line/shell/zsh/" class="md-nav__link">
         
   
   
@@ -2122,7 +2124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/command-line/shell/fish/" class="md-nav__link">
+      <a href="../../command-line/shell/fish/" class="md-nav__link">
         
   
   
@@ -2145,7 +2147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/command-line/shell/starship-prompt/" class="md-nav__link">
+      <a href="../../command-line/shell/starship-prompt/" class="md-nav__link">
         
   
   
@@ -2198,7 +2200,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../os/command-line/commands/" class="md-nav__link ">
+            <a href="../../command-line/commands/" class="md-nav__link ">
               
   
   
@@ -2233,7 +2235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/command-line/commands/file-system/" class="md-nav__link">
+      <a href="../../command-line/commands/file-system/" class="md-nav__link">
         
   
   
@@ -2256,7 +2258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/command-line/commands/cron/" class="md-nav__link">
+      <a href="../../command-line/commands/cron/" class="md-nav__link">
         
   
   
@@ -2292,6 +2294,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2313,15 +2317,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../os/linux/" class="md-nav__link ">
+            <a href="../../linux/" class="md-nav__link ">
               
   
   
@@ -2340,7 +2344,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_3">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -2353,6 +2357,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2370,15 +2376,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_3_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../os/debian-linux/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2397,7 +2403,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_9_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_3_2">
             <span class="md-nav__icon md-icon"></span>
             Debian
@@ -2413,7 +2419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/debian-linux/install/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         
   
   
@@ -2433,10 +2439,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../os/debian-linux/post-install/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Post Install
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2447,6 +2475,200 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#root-vs-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      root vs sudo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-to-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update to testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-xdg-free-desktop-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set XDG Free Desktop locations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git install
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-practicallidotfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone practicalli/dotfiles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-configure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git configure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kitty-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kitty Terminal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zsh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zsh-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zsh Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neovim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neovim
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Neovim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodejs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Releases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-nvim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure nvim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-and-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date and Time
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-sid-packages-on-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Sid packages on Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debian-tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debian Tracker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debian Tracker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-the-tracker-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable the tracker service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2467,7 +2689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/ubuntu-linux/" class="md-nav__link">
+      <a href="../../ubuntu-linux/" class="md-nav__link">
         
   
   
@@ -2490,7 +2712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/linux/hyprland/" class="md-nav__link">
+      <a href="../../linux/hyprland/" class="md-nav__link">
         
   
   
@@ -2513,7 +2735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/linux/regolith/" class="md-nav__link">
+      <a href="../../linux/regolith/" class="md-nav__link">
         
   
   
@@ -2544,7 +2766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../os/macosx.md" class="md-nav__link">
+      <a href="../../macosx.md" class="md-nav__link">
         
   
   
@@ -2571,8 +2793,6 @@
       
   
   
-    
-  
   
   
     
@@ -2588,15 +2808,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../../persistence/" class="md-nav__link ">
               
   
   
@@ -2615,7 +2835,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Persistence
@@ -2628,8 +2848,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2649,15 +2867,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../persistence/rdbms/" class="md-nav__link ">
               
   
   
@@ -2676,7 +2894,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10_2">
             <span class="md-nav__icon md-icon"></span>
             RDBMS
@@ -2716,7 +2934,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../client/" class="md-nav__link ">
+            <a href="../../../persistence/rdbms/client/" class="md-nav__link ">
               
   
   
@@ -2751,7 +2969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/cli/" class="md-nav__link">
+      <a href="../../../persistence/rdbms/client/cli/" class="md-nav__link">
         
   
   
@@ -2774,7 +2992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/dbeaver/" class="md-nav__link">
+      <a href="../../../persistence/rdbms/client/dbeaver/" class="md-nav__link">
         
   
   
@@ -2797,7 +3015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/pgadmin/" class="md-nav__link">
+      <a href="../../../persistence/rdbms/client/pgadmin/" class="md-nav__link">
         
   
   
@@ -2825,10 +3043,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -2842,11 +3058,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2_3" >
         
           
           <label class="md-nav__link" for="__nav_10_2_3" id="__nav_10_2_3_label" tabindex="0">
@@ -2862,7 +3078,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_10_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10_2_3">
             <span class="md-nav__icon md-icon"></span>
             Server
@@ -2876,7 +3092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../h2/" class="md-nav__link">
+      <a href="../../../persistence/rdbms/server/h2/" class="md-nav__link">
         
   
   
@@ -2896,32 +3112,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Maria DB
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../persistence/rdbms/server/mariadb/" class="md-nav__link">
         
   
   
@@ -2932,35 +3126,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2991,7 +3156,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../postgresql/" class="md-nav__link ">
+            <a href="../../../persistence/rdbms/server/postgresql/" class="md-nav__link ">
               
   
   
@@ -3057,7 +3222,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../sql/" class="md-nav__link ">
+            <a href="../../../persistence/rdbms/sql/" class="md-nav__link ">
               
   
   
@@ -3092,7 +3257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sql/examples/" class="md-nav__link">
+      <a href="../../../persistence/rdbms/sql/examples/" class="md-nav__link">
         
   
   
@@ -3172,7 +3337,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../practices/" class="md-nav__link ">
+            <a href="../../../practices/" class="md-nav__link ">
               
   
   
@@ -3239,7 +3404,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../practices/discussions/" class="md-nav__link ">
+            <a href="../../../practices/discussions/" class="md-nav__link ">
               
   
   
@@ -3274,7 +3439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/discussions/asking-questions/" class="md-nav__link">
+      <a href="../../../practices/discussions/asking-questions/" class="md-nav__link">
         
   
   
@@ -3297,7 +3462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/discussions/rolling-wave-planning/" class="md-nav__link">
+      <a href="../../../practices/discussions/rolling-wave-planning/" class="md-nav__link">
         
   
   
@@ -3320,7 +3485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/discussions/one-to-one-meeting/" class="md-nav__link">
+      <a href="../../../practices/discussions/one-to-one-meeting/" class="md-nav__link">
         
   
   
@@ -3343,7 +3508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/discussions/retrospective/" class="md-nav__link">
+      <a href="../../../practices/discussions/retrospective/" class="md-nav__link">
         
   
   
@@ -3366,7 +3531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/discussions/standup/" class="md-nav__link">
+      <a href="../../../practices/discussions/standup/" class="md-nav__link">
         
   
   
@@ -3389,7 +3554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/discussions/five-whys/" class="md-nav__link">
+      <a href="../../../practices/discussions/five-whys/" class="md-nav__link">
         
   
   
@@ -3412,7 +3577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/discussions/thinking-hats/" class="md-nav__link">
+      <a href="../../../practices/discussions/thinking-hats/" class="md-nav__link">
         
   
   
@@ -3463,7 +3628,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../practices/kanban/" class="md-nav__link ">
+            <a href="../../../practices/kanban/" class="md-nav__link ">
               
   
   
@@ -3498,7 +3663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/kanban/value-stream-mapping/" class="md-nav__link">
+      <a href="../../../practices/kanban/value-stream-mapping/" class="md-nav__link">
         
   
   
@@ -3547,7 +3712,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../practices/behaviour-driven-development/" class="md-nav__link ">
+            <a href="../../../practices/behaviour-driven-development/" class="md-nav__link ">
               
   
   
@@ -3585,7 +3750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/technical-debt/" class="md-nav__link">
+      <a href="../../../practices/technical-debt/" class="md-nav__link">
         
   
   
@@ -3608,7 +3773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/root-cause-analysis/" class="md-nav__link">
+      <a href="../../../practices/root-cause-analysis/" class="md-nav__link">
         
   
   
@@ -3653,7 +3818,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../practices/deliberate-practice/" class="md-nav__link ">
+            <a href="../../../practices/deliberate-practice/" class="md-nav__link ">
               
   
   
@@ -3688,7 +3853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/deliberate-practice/architecture-kata/" class="md-nav__link">
+      <a href="../../../practices/deliberate-practice/architecture-kata/" class="md-nav__link">
         
   
   
@@ -3711,7 +3876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/deliberate-practice/code-kata/" class="md-nav__link">
+      <a href="../../../practices/deliberate-practice/code-kata/" class="md-nav__link">
         
   
   
@@ -3742,7 +3907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/test-driven-development/" class="md-nav__link">
+      <a href="../../../practices/test-driven-development/" class="md-nav__link">
         
   
   
@@ -3765,7 +3930,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../practices/managing-bias/" class="md-nav__link">
+      <a href="../../../practices/managing-bias/" class="md-nav__link">
         
   
   
@@ -3815,7 +3980,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../programming-languages/" class="md-nav__link ">
+            <a href="../../../programming-languages/" class="md-nav__link ">
               
   
   
@@ -3870,7 +4035,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../programming-languages/javascript/" class="md-nav__link ">
+            <a href="../../../programming-languages/javascript/" class="md-nav__link ">
               
   
   
@@ -3905,7 +4070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../programming-languages/javascript/nodejs/" class="md-nav__link">
+      <a href="../../../programming-languages/javascript/nodejs/" class="md-nav__link">
         
   
   
@@ -3967,7 +4132,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../source-control/" class="md-nav__link ">
+            <a href="../../../source-control/" class="md-nav__link ">
               
   
   
@@ -4002,7 +4167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../source-control/git-configuration/" class="md-nav__link">
+      <a href="../../../source-control/git-configuration/" class="md-nav__link">
         
   
   
@@ -4025,7 +4190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../source-control/git-concepts/" class="md-nav__link">
+      <a href="../../../source-control/git-concepts/" class="md-nav__link">
         
   
   
@@ -4048,7 +4213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../source-control/git-status/" class="md-nav__link">
+      <a href="../../../source-control/git-status/" class="md-nav__link">
         
   
   
@@ -4102,7 +4267,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../software-design/" class="md-nav__link ">
+            <a href="../../../software-design/" class="md-nav__link ">
               
   
   
@@ -4137,7 +4302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../software-design/anti-patterns/" class="md-nav__link">
+      <a href="../../../software-design/anti-patterns/" class="md-nav__link">
         
   
   
@@ -4182,7 +4347,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../software-design/architecture/" class="md-nav__link ">
+            <a href="../../../software-design/architecture/" class="md-nav__link ">
               
   
   
@@ -4217,7 +4382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../software-design/architecture/structurizr/" class="md-nav__link">
+      <a href="../../../software-design/architecture/structurizr/" class="md-nav__link">
         
   
   
@@ -4240,7 +4405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../software-design/architecture/adr/" class="md-nav__link">
+      <a href="../../../software-design/architecture/adr/" class="md-nav__link">
         
   
   
@@ -4293,7 +4458,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../software-design/design-patterns/" class="md-nav__link ">
+            <a href="../../../software-design/design-patterns/" class="md-nav__link ">
               
   
   
@@ -4328,7 +4493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../software-design/design-patterns/command-query-separation/" class="md-nav__link">
+      <a href="../../../software-design/design-patterns/command-query-separation/" class="md-nav__link">
         
   
   
@@ -4351,7 +4516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../software-design/design-patterns/cqrs/" class="md-nav__link">
+      <a href="../../../software-design/design-patterns/cqrs/" class="md-nav__link">
         
   
   
@@ -4409,11 +4574,176 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
+  <a href="#root-vs-sudo" class="md-nav__link">
     <span class="md-ellipsis">
-      Docker
+      root vs sudo
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-to-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update to testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure shell
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-xdg-free-desktop-locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set XDG Free Desktop locations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git install
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-practicallidotfiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clone practicalli/dotfiles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-configure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git configure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kitty-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kitty Terminal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zsh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zsh
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zsh-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zsh Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#neovim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neovim
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Neovim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodejs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Releases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-nvim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure nvim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-and-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Date and Time
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-sid-packages-on-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Sid packages on Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debian-tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debian Tracker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debian Tracker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#disable-the-tracker-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disable the tracker service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -4433,7 +4763,7 @@
 
 
   
-    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/persistence/rdbms/server/mariadb.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/practicalli/engineering-playbook/edit/main/docs/os/debian-linux/post-install.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -4442,49 +4772,333 @@
     
       
     
-    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/persistence/rdbms/server/mariadb.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/engineering-playbook/raw/main/docs/os/debian-linux/post-install.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="maria-db">Maria DB<a class="headerlink" href="#maria-db" title="Permanent link">λ︎</a></h1>
-<p><a class="glightbox" href="https://d1q6f0aelx0por.cloudfront.net/product-logos/library-mariadb-logo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="MariaDB Foundation logo" loading="lazy" src="https://d1q6f0aelx0por.cloudfront.net/product-logos/library-mariadb-logo.png" style="height:150px;width:150px" /></a></p>
-<p>MariaDB is a community-developed, commercially supported fork of the MySQL relational database management system, intended to remain free and open-source software under the GNU General Public License.</p>
-<p>Development is led by some of the original developers of MySQL, who forked it due to concerns over its acquisition by Oracle Corporation in 2009.</p>
-<p><a class="md-button" href="https://mariadb.org/" target="_blank">MariaDB Foundation</a></p>
-<p><a class="md-button" href="https://en.wikipedia.org/wiki/MariaDB" target="_blank">MariaDB - Wikipedia</a></p>
-<p><a class="md-button" href="https://mariadb.com/kb/en/a-mariadb-primer/" target="_blank">MariaDB Primer</a></p>
-<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">λ︎</a></h2>
-<div class="admonition example">
-<p class="admonition-title">Docker Compose for MariaDB</p>
-<div class="highlight"><span class="filename">compose.yaml</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>services:
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>db:
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>image:<span class="w"> </span>mariadb
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span>restart:<span class="w"> </span>always
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span>environment:
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span>#<span class="w"> </span>MARIADB_RANDOM_ROOT_PASSWORD:<span class="w"> </span>yes
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span>MARIADB_ROOT_PASSWORD:<span class="w"> </span>practicalli
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span>MARIADB_MYSQL_LOCALHOST_USER:<span class="w"> </span>clojure
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span>MARIADB_DATABASE:<span class="w"> </span>service-db
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span>healthcheck:
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span>test:<span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;CMD&quot;</span>,<span class="w"> </span><span class="s2">&quot;healtcheck.sh --su-mysql --connect --innodb_initialized&quot;</span><span class="w"> </span><span class="o">]</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span>timeout:<span class="w"> </span>45s
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span>interval:<span class="w"> </span>10s
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span>retries:<span class="w"> </span><span class="m">10</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span>adminer:
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span>image:<span class="w"> </span>adminer
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span>restart:<span class="w"> </span>always
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span>ports:
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">      </span>-<span class="w"> </span><span class="m">8080</span>:8080
+<h1 id="post-install">Post Install<a class="headerlink" href="#post-install" title="Permanent link">λ︎</a></h1>
+<h2 id="root-vs-sudo">root vs sudo<a class="headerlink" href="#root-vs-sudo" title="Permanent link">λ︎</a></h2>
+<p>Debian recommends using the root account to administer the system, rather than using <code>sudo</code> as with Ubuntu</p>
+<p><code>su -</code> command in a terminal changes to the root user, upon entering a successful root password at the prompt</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>su<span class="w"> </span>-
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">root password is set during install of Debian</p>
+</div>
+<details class="hint">
+<summary>Dedicated terminal for root account</summary>
+<p>Open a terminal application specifically to use the root account when carrying out significant maintenance, e.g. installing many packages during the post install.</p>
+</details>
+<details class="info">
+<summary>Install &amp; Configure sudo for Debian Linux</summary>
+<p>The <a href="https://wiki.debian.org/sudo">sudo page on the Debian Wiki</a> describes how to install <code>sudo</code>, should that approach be acceptable.</p>
+<p>Install sudo package, using root account</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>apt<span class="w"> </span>install<span class="w"> </span>sudo
+</code></pre></div>
+<p>Add account-name to <code>sudo</code> group, using root account</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>adduser<span class="w"> </span>account-name<span class="w"> </span>sudo
+</code></pre></div>
+</details>
+<h2 id="update-to-testing">Update to testing<a class="headerlink" href="#update-to-testing" title="Permanent link">λ︎</a></h2>
+<p>Debian Linux is an excellent choice for servers and every day use due to its stability and regular security updates.  The release cycle is between 1-2 years, so for software development some packages may not be as up to date as required.</p>
+<p>Newer versions can be installed via Personal Package Archives (PPA) or installed manually (<code>/usr/local/bin</code>, or <code>~/.local/bin</code>).</p>
+<p>Debian Testing contains packages for the next release of Debian Linux (currently <code>trixie</code>) and it is a viable approach when significant number of packages should be on the latest version.</p>
+<div class="admonition note">
+<p class="admonition-title">Upgrade to Debian Testing</p>
+<p>edit <code>/etc/apt/sources.list</code> and change third field from <code>bullseye</code> to <code>trixie</code></p>
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>deb http://deb.debian.org/debian/ trixie main non-free-firmware
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>deb-src http://deb.debian.org/debian/ trixie main non-free-firmware
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>deb http://security.debian.org/debian-security trixie-security main non-free-firmware
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>deb-src http://security.debian.org/debian-security trixie-security main non-free-firmware
+</code></pre></div>
+<p>Additionally add <code>contrib</code> and <code>non-free</code> packages for access to even more packages (some of which are not open source)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>deb http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>deb-src http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>deb http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>deb-src http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
 </code></pre></div>
 </div>
-<p><a class="md-button" href="https://hub.docker.com/_/mariadb" target="_blank">MariaDB Official Docker Image</a></p>
-<p><a class="md-button" href="https://mariadb.com/kb/en/installing-and-using-mariadb-via-docker/" target="_blank">Install &amp; Use MariaDB via Docker</a></p>
-<p><a class="md-button" href="https://mariadb.com/kb/en/using-healthcheck-sh-script/" target="_blank">MariaDB healthcheck script</a>
-<a class="md-button" href="https://github.com/MariaDB/mariadb-docker/blob/master/10.10/healthcheck.sh" target="_blank">MariaDB healthcheck script - source</a></p>
+<blockquote>
+<p>NOTE: trixie includes packages for OpenJDK 21</p>
+</blockquote>
+<h2 id="configure-shell">Configure shell<a class="headerlink" href="#configure-shell" title="Permanent link">λ︎</a></h2>
+<p>Bash is the default shell and <a href="">oh-my-bash</a> is a community configuration to add features and provide prompt themes.</p>
+<p>Zsh is an advanced shell with excellent Tab completion options and <a href="">Prezto</a> or <a href="">oh-my-zsh</a> community configurations.</p>
+<div class="admonition tip">
+<p class="admonition-title">Practicalli uses Prezto community config</p>
+</div>
+<h2 id="set-xdg-free-desktop-locations">Set XDG Free Desktop locations<a class="headerlink" href="#set-xdg-free-desktop-locations" title="Permanent link">λ︎</a></h2>
+<p>Using the XFreeDesktop environment variables sets the location of configuration, cache and library files for software run by a user account.</p>
+<p>Backup and removal of user specific files becomes far simpler.  The root directory of an account is greatly simplified too.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Zsh</label><label for="__tabbed_1_2">Bash</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a># Set XDG_CONFIG_HOME for clean management of configuration files
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>export XDG_CONFIG_HOME=&quot;${XDG_CONFIG_HOME:=$HOME/.config}&quot;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>export XDG_DATA_HOME=&quot;${XDG_DATA_HOME:=$HOME/.local/share}&quot;
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>export XDG_STATE_HOME=&quot;${XDG_STATE_HOME:=$HOME/.local/state}&quot;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>export XDG_CACHE_HOME=&quot;${XDG_CACHE_HOME:=$HOME/.cache}&quot;
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>export ZDOTDIR=&quot;${ZDOTDIR:=$XDG_CONFIG_HOME/zsh}&quot;
+</code></pre></div>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="git-install">Git install<a class="headerlink" href="#git-install" title="Permanent link">λ︎</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>apt<span class="w"> </span>install<span class="w"> </span>git
+</code></pre></div>
+<h2 id="clone-practicallidotfiles">Clone practicalli/dotfiles<a class="headerlink" href="#clone-practicallidotfiles" title="Permanent link">λ︎</a></h2>
+<p>clone to projects/practicalli/dotfiles</p>
+<h2 id="git-configure">Git configure<a class="headerlink" href="#git-configure" title="Permanent link">λ︎</a></h2>
+<p>link .config/git to Practicall dotfiles/git directory</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ln<span class="w"> </span>-s<span class="w"> </span>~/projects/practicalli/dotfiles/git<span class="w"> </span>~/.config/git
+</code></pre></div>
+<p>Update identity-practicalli-john file with annonymous email address from GitHub settings &gt; Emails section</p>
+<h2 id="kitty-terminal">Kitty Terminal<a class="headerlink" href="#kitty-terminal" title="Permanent link">λ︎</a></h2>
+<p>Debian packages</p>
+<ul>
+<li>kitty</li>
+<li>kitty-doc</li>
+<li>kitty-shell-integration</li>
+<li>kitty-terminfo</li>
+<li><code>fonts-firacode</code> use by Practicalli Kitty terminal</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>apt<span class="w"> </span>install<span class="w"> </span>kitty<span class="w"> </span>kitty-doc<span class="w"> </span>kitty-shell-integration<span class="w"> </span>kitty-terminfo<span class="w"> </span>fonts-firacode
+</code></pre></div>
+<p>Link to practicalli/dotfiles/kitty in .config directory</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ln<span class="w"> </span>-s<span class="w"> </span>~/projects/practicalli/dotfiles/kitty<span class="w"> </span>~/.config/kitty
+</code></pre></div>
+<h2 id="zsh">Zsh<a class="headerlink" href="#zsh" title="Permanent link">λ︎</a></h2>
+<p>Install zsh package</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>apt<span class="w"> </span>install<span class="w"> </span>zsh
+</code></pre></div>
+<h2 id="zsh-configuration">Zsh Configuration<a class="headerlink" href="#zsh-configuration" title="Permanent link">λ︎</a></h2>
+<p><a href="">Prezto</a> and <a href="">OhMyZsh</a> are community created configurations that provide a rich experience with very little work.</p>
+<div class="admonition hint">
+<p class="admonition-title">Prezto recommended</p>
+<p>Practicalli recommends Prezto as it has excellent completion capabilities, especially wish fish mode enabled.</p>
+<p>OhMyZsh is used within Termux as Prezto has not worked correctly in my experiences.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Prezto</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Prezto provides sane defaults, aliases, functions, auto completion, and prompt themes.</p>
+<p>As the user account, <code>zsh</code> command to change to zsh from bash shell</p>
+<p>check if XDG_CONFIG_HOME is set, if not set to $HOME/.config on command line (practicalli dotfiles has a zshenv that does this later in process)</p>
+<p>clone prezto to XDG location</p>
+<div class="admonition example">
+<p class="admonition-title">Clone Prezto to XDG_CONFIG_HOME</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>https://github.com/sorin-ionescu/prezto.git<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="si">${</span><span class="nv">XDG_CONFIG_HOME</span><span class="k">:-</span><span class="nv">$HOME</span><span class="p">/.config</span><span class="si">}</span><span class="p">/zsh</span><span class="si">}</span><span class="s2">/.zprezto&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_CONFIG_HOME</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">XDG_CONFIG_HOME</span><span class="p">:=</span><span class="nv">$HOME</span><span class="p">/.config</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="o">[[</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$XDG_CONFIG_HOME</span>/zsh<span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">ZDOTDIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$XDG_CONFIG_HOME</span><span class="s2">/zsh&quot;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="nb">source</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$ZDOTDIR</span><span class="s2">/.zshenv&quot;</span>
+</code></pre></div>
+<p>Generate symbolic links to the zsh configuration files residing in the prezto directory</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>setopt<span class="w"> </span>EXTENDED_GLOB
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">for</span><span class="w"> </span>rcfile<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="si">}</span><span class="s2">&quot;</span>/.zprezto/runcoms/^README.md<span class="o">(</span>.N<span class="o">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span>ln<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$rcfile</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="si">}</span><span class="s2">/.</span><span class="si">${</span><span class="nv">rcfile</span><span class="p">:</span><span class="nv">t</span><span class="si">}</span><span class="s2">&quot;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="k">done</span>
+</code></pre></div>
+<p>Practicalli creates custom configuration files to keep updating Prezto a simple Git pull.</p>
+<ul>
+<li><code>.zprezto</code> practicalli customisations for Prezto</li>
+<li><code>.zprofile</code> includes .local/bin on execution path</li>
+<li><code>.zshrc</code> aliases for neovim configurations (astro, practicalli</li>
+<li><code>.zshenv</code> configures XDG locations</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>.zprezto
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>.p10k.zsh
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>.zlogin<span class="w"> </span>-&gt;<span class="w"> </span>/home/practicalli/.config/zsh/.zprezto/runcoms/zlogin
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>.zlogout<span class="w"> </span>-&gt;<span class="w"> </span>/home/practicalli/.config/zsh/.zprezto/runcoms/zlogout
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>.zpreztorc<span class="w"> </span>-&gt;<span class="w"> </span>/home/practicalli/projects/practicalli/dotfiles/zsh/.zpreztorc
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>.zprofile<span class="w"> </span>-&gt;<span class="w"> </span>/home/practicalli/.config/zsh/.zprezto/runcoms/zprofile
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>.zshenv<span class="w"> </span>-&gt;<span class="w"> </span>/home/practicalli/projects/practicalli/dotfiles/zsh/.zshenv
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>.zsh_history
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>.zshrc<span class="w"> </span>-&gt;<span class="w"> </span>/home/practicalli/projects/practicalli/dotfiles/zsh/.zshrc
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Change the default shell</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>chsh<span class="w"> </span>-s<span class="w"> </span>/usr/bin/zsh
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="neovim">Neovim<a class="headerlink" href="#neovim" title="Permanent link">λ︎</a></h2>
+<div class="admonition hint">
+<p class="admonition-title">Practicalli Neovim install</p>
+<p>See the <a href="https://practical.li/neovim/install/">install guide in Practicalli Neovim</a> book</p>
+</div>
+<p>Required packages</p>
+<ul>
+<li><code>curl</code> - suggested by neovim checkhealth</li>
+<li><code>gdu</code></li>
+<li><code>xclip</code> provider for accessing operating system clipboard from Neovim</li>
+<li><code>luarocks</code> required for some mason installed tools</li>
+<li><code>lazygit</code> terminal UI git client used by AstroNvim</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>apt<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span>gdu<span class="w"> </span>lazygit<span class="w"> </span>luarocks<span class="w"> </span>xclip
+</code></pre></div>
+<blockquote>
+<p><code>btm</code> is suggested but not available as a Debian packages</p>
+</blockquote>
+<h3 id="nodejs">Nodejs<a class="headerlink" href="#nodejs" title="Permanent link">λ︎</a></h3>
+<p>Nodejs is required for many of the linters installed by Mason.</p>
+<p><code>node</code> and <code>npm</code> are available as packages, although the <code>npm</code> package has a great many dependencies (many of which seem redundant).</p>
+<p>Download from nodejs website</p>
+<p>Extract to <code>~/.local/apps/nodejs</code></p>
+<p>Create a symbolic link to make it simpler to use alternate versions of node and npm</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>ln<span class="w"> </span>-s<span class="w"> </span>~/.local/apps/nodejs/node-v18.17.1-linux-x64/<span class="w"> </span>~/.local/apps/nodejs/current
+</code></pre></div>
+<p>Create symbolic links for <code>node</code> and <code>npm</code> to add them to the OS excecution path</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>ln<span class="w"> </span>-s<span class="w"> </span>~/.local/apps/nodejs/current/bin/node<span class="w"> </span>~/.local/bin/node<span class="w"> </span><span class="o">&amp;&amp;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>ln<span class="w"> </span>-s<span class="w"> </span>~/.local/apps/nodejs/current/bin/npm<span class="w"> </span>~/.local/bin/npm<span class="w"> </span><span class="o">&amp;&amp;</span>
+</code></pre></div>
+<p>If a different version of nodejs is installed, then all that should be required is deleting and recreating the <code>current</code> symbolic link in <code>~/.local/apps/nodejs/</code> to point to the desired version.</p>
+<h3 id="releases">Releases<a class="headerlink" href="#releases" title="Permanent link">λ︎</a></h3>
+<p>Download latest appimage for neovim from Neovim repository releases page</p>
+<div class="admonition example">
+<p class="admonition-title">Make Neovim executable</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>chmod<span class="w"> </span>u+x<span class="w"> </span>nvim.appimage
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Add Neovim to shell execution path</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>mv<span class="w"> </span>nvim.appimage<span class="w"> </span>~/.local/bin<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>ln<span class="w"> </span>-s<span class="w"> </span>~/.local/bin/nvim.appimage<span class="w"> </span>~/.local/bin/nvim
+</code></pre></div>
+</div>
+<p>Edit <code>.config/zsh/.zprofile</code> and add <code>$HOME/.local/bin</code> to paths to search for executables</p>
+<p>Set the list of directories that Zsh searches for programs.</p>
+<div class="admonition example">
+<p class="admonition-title">Zsh paths searched for executable files</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>path=(
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>  $HOME/.local/{,s}bin(N)
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>  /opt/{homebrew,local}/{,s}bin(N)
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>  /usr/local/{,s}bin(N)
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>  $path
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>)
+</code></pre></div>
+</div>
+<p>Use the <code>source</code> command to load the changes in <code>.zprofile</code> to  update the path and include the <code>.local/bin</code> path</p>
+<div class="admonition example">
+<p class="admonition-title">Load configuration into current shell session</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">source</span><span class="w"> </span>.config/zsh/.zprofile
+</code></pre></div>
+</div>
+<h3 id="configure-nvim">Configure nvim<a class="headerlink" href="#configure-nvim" title="Permanent link">λ︎</a></h3>
+<p>Clone astronvim configuration and Practicalli Astronvim configuration</p>
+<p>Add aliases to <code>.zshrc</code> to call different neovim configurations</p>
+<div class="admonition example">
+<p class="admonition-title">Shell Aliases for neovim multiple configurations</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">astro</span><span class="o">=</span><span class="s2">&quot;NVIM_APPNAME=astronvim nvim&quot;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">lazyvim</span><span class="o">=</span><span class="s2">&quot;NVIM_APPNAME=lazyvim nvim&quot;</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="nb">alias</span><span class="w"> </span>practicalli-redux<span class="o">=</span><span class="s2">&quot;NVIM_APPNAME=neovim-config-redux nvim&quot;</span>
+</code></pre></div>
+</div>
+<p><a class="md-button" href="https://practical.li/neovim/install/multiple-configurations/" target="_blank">Practicalli Neovim - Multiple Configurations</a></p>
+<h2 id="date-and-time">Date and Time<a class="headerlink" href="#date-and-time" title="Permanent link">λ︎</a></h2>
+<p>The <code>date</code> command on Linux systems is used to show the system date or set a specific date and time. The system date can only be changed by the root account or accounts in the <code>sudo</code> group.</p>
+<p>When using the Gnome desktop the system date is automatically managed, keeping the date and time current.</p>
+<p>The <code>timedatectl</code> command is used to control automatic updating of the system time.  This must be disabled to set the date and time to something other than the current.</p>
+<div class="admonition note">
+<p class="admonition-title">Disable automatic date-time</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>timedatectl<span class="w"> </span>set-ntp<span class="w"> </span><span class="m">0</span>
+</code></pre></div>
+</div>
+<p>When the timedateclt is disabled, then the <code>date</code> command can be used to set a specific date and or time.</p>
+<div class="admonition example">
+<p class="admonition-title">Set the date and time</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="w"> </span>date<span class="w"> </span>-s<span class="w"> </span><span class="s1">&#39;2024-09-16 21:32:00&#39;</span>
+</code></pre></div>
+</div>
+<p><code>date</code> command will show the current date, confirming that the OS system date was changed.</p>
+<div class="admonition note">
+<p class="admonition-title">Enable automatic date-time</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>timedatectl<span class="w"> </span>set-ntp<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+</div>
+<blockquote>
+<p>Linux used to use the ntp service which is available via the Debian <code>ntp</code> package, but not used by Gnome desktop</p>
+</blockquote>
+<h2 id="add-sid-packages-on-testing">Add Sid packages on Testing<a class="headerlink" href="#add-sid-packages-on-testing" title="Permanent link">λ︎</a></h2>
+<p>Packages can be installed from <code>sid</code> (unstable) when the <code>testing</code> version of Debian Linux is installed, referred to as "Testing-Unstable Mix".</p>
+<p>Configure apt to ensure a testing system stays on testing, without apt upgrading every package to the unstable version.</p>
+<p>Define testing as the default Debian release</p>
+<div class="admonition example">
+<p class="admonition-title">Set Default Release as testing with security updates</p>
+<div class="highlight"><span class="filename">/etc/apt/apt.conf.d/20-tum.conf</span><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>APT::Default-Release &quot;/^testing(|-security|-updates)$/&quot;;
+</code></pre></div>
+</div>
+<p>In the Apt sources.list configuration, copy the main testing line and change the version to unstable</p>
+<div class="admonition example">
+<p class="admonition-title">Add unstable to package sources</p>
+<div class="highlight"><span class="filename">/etc/apt/sources.list</span><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a># Testing
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>deb &lt;http://deb.debian.org/debian/&gt; trixie main contrib non-free-firmware non-free
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>deb-src &lt;http://deb.debian.org/debian/&gt; trixie main contrib non-free-firmware non-free
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>deb &lt;http://deb.debian.org/debian/&gt; trixie-updates main contrib non-free-firmware non-free
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>deb &lt;http://deb.debian.org/debian/&gt; trixie-backports main contrib non-free-firmware non-free
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>deb http://security.debian.org/debian-security trixie-security main contrib non-free-firmware
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>deb-src http://security.debian.org/debian-security trixie-security main contrib non-free-firmware
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a># Sid
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a># deb http://deb.debian.org/debian/ unstable main contrib non-free-firmware non-free
+</code></pre></div>
+</div>
+<p>Run apt update to refresh the cache. Use <code>apt -t unstable install &lt;package-name&gt;</code> to install package foo from unstable rather than testing.</p>
+<div class="admonition example">
+<p class="admonition-title">Install specific package from Sid</p>
+<p>```shell
+apt -t unstable install hyprland</p>
+</div>
+<h2 id="debian-tracker">Debian Tracker<a class="headerlink" href="#debian-tracker" title="Permanent link">λ︎</a></h2>
+<p><a href="https://wiki.ubuntu.com/Tracker">Tracker service</a> indexes many types of files to enable discovery of files by other Gnome services and applications.</p>
+<ul>
+<li><a href="https://wiki.ubuntu.com/IntegratedDesktopSearch">desktop search</a></li>
+<li>Tag database for keyword tagging</li>
+<li>Extensible metadata database to add custom metadata to files, e.g. rhythmbox, gedit, etc.</li>
+<li>Store First Class Objects and the Gnome 3.0 Model</li>
+</ul>
+<blockquote>
+<p>NOTE: when actively using Gnome desktop and Gnome apps, disabling the tracker may reduce functionality</p>
+</blockquote>
+<h3 id="disable-the-tracker-service">Disable the tracker service<a class="headerlink" href="#disable-the-tracker-service" title="Permanent link">λ︎</a></h3>
+<p>The tracker service can be a significant drain on computer resources as it indexes files, especially when there have been a log of changes or for a newly installed system.</p>
+<p>The tracker has many dependencies, so its not easy to remove the <code>tracker-miner-fs-3</code> package when actively using the Gnome desktop.</p>
+<p>The recommended approach is to edit the <code>.desktop</code> files and add <code>Hidden=true</code> at the end of each tracker related file and reboot the operating system.</p>
+<div class="highlight"><span class="filename">/etc/xdg/autostart/tracker-miner-fs-3.desktop</span><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>[Desktop Entry]
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>Name=Tracker File System Miner
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>Comment=Crawls and processes files on the file system
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>Exec=/usr/libexec/tracker-miner-fs-3
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>Terminal=false
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>Type=Application
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>Categories=Utility;
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>X-GNOME-Autostart-enabled=false
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>X-GNOME-HiddenUnderSystemd=false
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a># X-KDE-autostart-after=panel
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>X-KDE-StartupNotify=false
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>X-KDE-UniqueApplet=true
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a>NoDisplay=true
+<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a>OnlyShowIn=GNOME;KDE;XFCE;X-IVI;Unity;
+<a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a>X-systemd-skip=true
+<a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a>Hidden=true
+</code></pre></div>
+<p>If adding "Hiddent=true" is not sufficient, then disable the services for all users by setting them to <code>/dev/null</code> using the <code>systemctl</code> command.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>--global<span class="w"> </span>mask<span class="w"> </span>tracker-miner-fs-3.service
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>--global<span class="w"> </span>mask<span class="w"> </span>tracker-xdg-portal-3.service
+</code></pre></div>
+<p>Remove the database of indexed files from each user account on the system</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$HOME</span>/.cache/tracker*
+</code></pre></div>
+```</p>
 
 
 
@@ -4505,7 +5119,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 26, 2024 20:34:28 UTC">December 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 4, 2025 19:20:58 UTC">July 4, 2025</span>
   </span>
 
     
@@ -4545,7 +5159,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../h2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: H2">
+          <a href="../install/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Install">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4555,20 +5169,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                H2
+                Install
               </div>
             </div>
           </a>
         
         
           
-          <a href="../postgresql/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
+          <a href="../../ubuntu-linux/" class="md-footer__link md-footer__link--next" aria-label="Next: Ubuntu">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Overview
+                Ubuntu
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4678,10 +5292,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
