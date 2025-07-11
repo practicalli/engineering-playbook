@@ -1,9 +1,12 @@
 # File System
 
+View and navigate the contents of the files and directories on the file system.
 
-- [List files and directories](#list-files-and-directories)
-- [find files and contents]()
+Create and extract archives of files and directories.
 
+Use `$HOME` and `~` within directory paths as convenient Short-cuts.
+
+!!! TIP "Use `sudo` with these commands to access files & directories with elevated permissions"
 
 
 ## List files and directories
@@ -20,20 +23,26 @@
 `pwd` shows the full path of the current working directory
 
 
-## Navigate the file system
+## Disk usage
 
+`df -h` shows all disk usage in the operating system, in human readable format
+
+`du -sh` shows summary file use of the current directory (or specified path), including usage for sub-folders
+
+
+## Navigate the file system
 
 `cd` to change to a different directory by giving the relative or full path
 
 ```shell
-cd [path_or_directory]
+cd projects/practicalli
 ```
 
 Short-cuts:
 
 - `cd` move to the current user’s home directory
-- `cd ..`  – move up a directory and can be used with a relative path `cd ../sibling-directory`
-- `cd –` – move to the previous directory
+- `cd ..` move up a directory and can be used with a relative path `cd ../sibling-directory`
+- `cd –` move to the previous directory
 
 ## Change files and directories
 
@@ -41,11 +50,13 @@ Short-cuts:
 
 `mkdir path/to/target_folder/new-folder-name` creates a new directory using a relative or full path, the current user has read, write, and execute files permissions in the new directory (`-m` flag or `chmod` to alter permissions)
 
-`cp` copies files using the form cp file1 file2 [target_path], Use the `-R` flag to recursively copy a directory and its contents (including sub-directories)
+`mkdir -p path/that/doesnt/exist/yet` the `-p` option will create all the directories that are not already present in the given path.
 
-`mv`  moves (optionally rename) a file or directory to another location using the form mv file_or_directory [target_directory]
+`cp` copies files using the form `cp file1 file2 [target_path]`. Use the `-R` flag to recursively copy a directory and its contents (including sub-directories)
 
-`rm` command deletes files from a directory. You must have the write permission for the folder or use sudo. Uses the form: rm [options] file1 file2
+`mv`  moves (optionally rename) a file or directory to another location using the form `mv file_or_directory [target_directory]`
+
+`rm` command deletes files from a directory. Uses the form: `rm [options] file1 file2`
 
 !!! INFO "Common flags for file and directory commands"
     `-r` (recursive) acts on a directory and its contents, including subdirectories.
@@ -74,12 +85,12 @@ Archive options:
 - `j` bzip2 compression, `.tgj` file extension
 - `J` xz compression, `.tgx` file extension
 
-tar -xf archive.tar extracts everything from the archive, `-C` extracts to a given path.
+`tar -xf archive.tar` extracts everything from the archive, `-C` extracts to a given path.
 
-tar can change the contents of an archive using `--concatenate`, `--delete`, `--append` and `--update` flags.
+`tar` can change the contents of an archive using `--concatenate`, `--delete`, `--append` and `--update` flags.
 
 
-zip is a universal archive tool that compresses one or multiple files into a `.zip` archive, reducing the size of text based files. Binary files may result in a slightly bigger archive.
+`zip` is a universal archive tool that compresses one or multiple files into a `.zip` archive, reducing the size of text based files. Binary files may result in a slightly bigger archive.
 
 `zip [options] zip_file_name <directory and/or files>` creates a compressed archive.
 
@@ -89,122 +100,64 @@ zip is a universal archive tool that compresses one or multiple files into a `.z
 ## Find files and contents
 
 
-The find command is one of the most useful Linux commands, especially when you're faced with the hundreds and thousands of files and folders on a modern computer. As its name implies, find helps you find things, and not just by filename.
+`find` to look for files and directories by a pattern
 
-Whether you're on your own computer or trying to support someone on an unfamiliar system, here are 10 ways find can help you locate important data.
+!!! TIP "Append `2>/dev/null` onto commands to silence permission errors"
 
-[ Keep your most commonly used commands handy with the Linux commands cheat sheet. ]
-1. Find a single file by name
+Find the exact file name anywhere on the file system (from the `/` root)
 
-When you know the name of a file but can't remember where you saved it, use find to search your home directory. Use 2>/dev/null to silence permission errors (or use sudo to gain all permissions).
+```shell
+find / -name "secret-sauce.md" 2>/dev/null
+```
 
-$ find / -name "Foo.txt" 2>/dev/null
-/home/seth/Documents/Foo.txt
+`-iname` is case insensitive.  Wild-cards `*` can also be used when the exact name is not known.
 
-2. Find a single file by approximate name
+```shell
+$ find / -iname "*secret*md" 2>/dev/null
+```
 
-If you can't remember the exact name of the file, or you're not sure whether you capitalized any characters, you can do a partial and case-insensitive search like this:
+`find` can execute a different command on results returned, e.g searching for files by content rather than name
 
-$ find / -iname "*foo*txt" 2>/dev/null
-/home/seth/Documents/Foo.txt
-/home/seth/Documents/foo.txt
-/home/seth/Documents/foobar.txt
+```shell
+$ find ~/Documents/ -name "*md" -exec grep -Hi squirrels {} \;
+/home/practicalli/Documents/nature-in-action.md:I love watching squirrels play.
+```
 
-3. Find everything
-
-The ls -R command lists the contents of a directory recursively, meaning that it doesn't just list the target you provide for it, but also descends into every subdirectory within that target (and every subdirectory in each subdirectory, and so on.) The find command has that function too, by way of the -ls option:
-
-$ find ~/Documents -ls
-3554235 0 drwxr-xr-x [...] 05:36 /home/seth/Documents/
-3554224 0 -rw-rw-r-- [...] 05:36 /home/seth/Documents/Foo
-3766411 0 -rw-rw-r-- [...] 05:36 /home/seth/Documents/Foo/foo.txt
-3766416 0 -rw-rw-r-- [...] 05:36 /home/seth/Documents/Foo/foobar.txt
-
-Notice that I don't use 2>/dev/null in this instance because I'm only listing the contents of a file path within my home directory, so I don't anticipate permission errors.
-4. Find by content
-
-A find command doesn't have to perform just one task. In fact, one of the options in find enables you to execute a different command on whatever results find returns. This can be especially useful when you need to search for a file by content rather than by name, or you need to search by both.
-
-$ find ~/Documents/ -name "*txt" -exec grep -Hi penguin {} \;
-/home/seth/Documents/Foo.txt:I like penguins.
-/home/seth/Documents/foo.txt:Penguins are fun.
-
-[ Learn how to manage your Linux environment for success. ]
-5. Find files by type
-
-You can display files, directories, symlinks, named pipes, sockets, and more using the -type option.
-
-$ find ~ -type f
-/home/seth/.bash_logout
-/home/seth/.bash_profile
-/home/seth/.bashrc
-/home/seth/.emacs
-/home/seth/.local/share/keyrings/login.keyring
-/home/seth/.local/share/keyrings/user.keystore
-/home/seth/.local/share/gnome-shell/gnome-overrides-migrated
-[...]
-
-As long as you're using the GNU version of find, you can include multiple file types in your search results:
-
-$ find ~ -type f,l -name "notebook*"
-/home/seth/notebook.org
-/home/seth/Documents/notebook-alias.org
-
-6. List just directories
-
-A shortcoming of the ls command is that you can't filter its results by file type, so it can be noisy if you only want a listing of directories in a path. The find command combined with the -type d option is a better choice:
-
-$ find ~/Public -type d
-find ~/Public/ -type d
-/home/seth/Public/
-/home/seth/Public/example.com
-/home/seth/Public/example.com/www
-/home/seth/Public/example.com/www/img
-/home/seth/Public/example.com/www/font
-/home/seth/Public/example.com/www/style
-
-7. Limit listing results
+`-maxdepth` limits the number of directories to traverse
 
 With hundreds of files in a default user directory and thousands more outside of that, sometimes you get more results from find than you want. You can limit the depth of searches with the -maxdepth option, followed by the number of directories you want find to descend into after the starting point:
 
-$ find ~/Public/ -maxdepth 1 -type d
-/home/seth/Public/
-/home/seth/Public/example.com
+```shell
+$ find ~/secret-sauce.md -maxdepth 1
+```
 
-8. Find empty files
 
-Sometimes it's helpful to discover empty files as a way to declutter:
+`-mtime` limits a search to files older or newer than a value times, by increments of 24 hours.
 
-$ find ~ -type f -empty
-random.idea.txt
+Find files in the current user account home directory, modified in the last 24 hours
 
-Technically, you can use find to remove empty files, but programmatic removal of files is dangerous. For instance, if you forget to include -type f in a search for empty files, you get directories in your results. By adding a delete flag, you would remove potentially important directory structures.
+```shell
+find $HOME -mtime 0
+```
 
-It's vital to compose your find command and then verify the results before deleting. Furthermore, a misplaced delete flag in find can delete results before qualifying them (in other words, you can delete directories in a command intended to delete only files by placing the delete flag before the type flag).
+Use a `+` before the value of `-mtime` as a conditional, matching files modified before 24 times the value.
 
-I prefer to use xargs or Parallel and a trash command on the rare occasion that I remove files with find.
-9. Find files by age
+Find log file which have not been update for more than a week.
 
-The -mtime option allows you to limit a search to files older than, but also files newer than, some value times 24.
+```shell
+find /var/log -iname "*~" -o -iname "*log*" -mtime +7
+```
 
-$ find /var/log -iname "*~" -o -iname "*log*" -mtime +30
 
-The + before the -mtime number doesn't mean to add that number to the time. It's a conditional statement that matches (in this example) a value greater than 24 times 30. In other words, the sample code finds log files that haven't been modified in a month or more.
+The `-` conditional find modified files within 24 hours times the value.
 
-To find log files modified within the past week, you can use the - conditional:
+```shell
+find /var/log -iname "*~" -o -iname "*log*" -mtime -7
+```
 
-$ find /var/log -iname "*~" -o -iname "*log*" -mtime -7
-/var/log/tallylog
-/var/log/cups/error_log
-/var/log/cups/access_log
-/var/log/cups/page_log
-/var/log/anaconda/anaconda.log
-/var/log/anaconda/syslog
-/var/log/anaconda/X.log
-[...]
+`-ls` flag provides a long list showing meta data about the files found
 
-You already know about the -ls flag, so you can combine that with these commands for clarity:
-
+```shell-output
 $ find /var/log -iname "*~" -o -iname "*log*" -mtime -7 -ls
 -rw-------  1 root root            0 Jun  9 18:20 /var/log/tallylog
 -rw-------  1 root lp      332 Aug 11 15:05 /var/log/cups/error_log
@@ -213,15 +166,10 @@ $ find /var/log -iname "*~" -o -iname "*log*" -mtime -7 -ls
 -rw-------  1 root root  53733 Jun  9 18:24 /var/log/anaconda/anaconda.log
 -rw-------  1 root root 835513 Jun  9 18:24 /var/log/anaconda/syslog
 -rw-------  1 root root  21131 Jun  9 18:24 /var/log/anaconda/X.log
-[...]
+```
 
-10. Search a path
+`-ipath` to search for a path within the file space
 
-Sometimes you know the directory structure leading up to a file you need; you just don't know where the directory structure is located within the system. To search within a path string, you can use the -ipath option, which treats dots and slashes not as regex characters but as dots and slashes.
-
-$ find / -type d -name 'img' -ipath "*public_html/example.com*" 2>/dev/null
-/home/tux/Public/public_html/example.com/font
-
-Found it
-
-The find command is an essential tool for a sysadmin. It's useful when investigating or getting to know a new system, finding misplaced data, and troubleshooting everyday problems. But it's also just a convenience tool.
+```shell
+find / -type d -name 'img' -ipath "*public_html/practicalli*"
+```
