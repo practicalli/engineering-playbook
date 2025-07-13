@@ -193,8 +193,8 @@ nav:
               - Starship prompt: os/command-line/shell/starship-prompt.md
           - Commands:
               - os/command-line/commands/index.md
-              - Files: os/command-line/commands/file-system.md
-              - Cron: os/command-line/commands/cron.md
+              - File system: os/command-line/commands/file-system.md
+              - Scheduled tasks: os/command-line/commands/cron.md
       - Linux:
           - Overview: os/linux/index.md
           - Debian:
