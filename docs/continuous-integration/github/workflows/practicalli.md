@@ -287,3 +287,52 @@ The GtiHub action can use the following actions
           - run: echo "🎨 library versions checked with liquidz/antq"
           - run: echo "🍏 Job status is ${{ job.status }}."
     ```
+
+## Create GitHub release
+
+Create a new release for any tag commit pushed to the GitHub repository.
+
+!!! EXAMPLE "Create a release using GitHub CLI"
+    ```yaml
+    # Create a new release on GitHub repository using GitHub CLI
+
+    name: New Release
+
+    on:
+      push:
+        tags:
+          - "*"
+
+    jobs:
+      release:
+        runs-on: ubuntu-latest
+        permissions:
+          contents: write
+        steps:
+
+          - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
+          - run: echo "🐧 Job running on ${{ runner.os }} server"
+          - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
+
+
+          - name: "Checkout code"
+            uses: actions/checkout@v4
+            with:
+              fetch-depth: 0
+          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
+
+          - name: GitHub Release
+            env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              TAG: ${{ github.ref_name }}
+            run: |
+              gh release create "$TAG" \
+                  --repo="$GITHUB_REPOSITORY" \
+                  --title="${TAG}" \
+                  --generate-notes
+
+
+          - run: echo "🎨 New release created on " "$GITHUB_REPOSITORY"
+
+          - run: echo "🍏 Job status is ${{ job.status }}."
+    ```
