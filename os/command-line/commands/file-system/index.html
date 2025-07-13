@@ -34,7 +34,7 @@
     
     
       
-        <title>Files - Practicalli Engineering Playbook</title>
+        <title>File system - Practicalli Engineering Playbook</title>
       
     
     
@@ -81,7 +81,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Files - Practicalli Engineering Playbook" >
+        <meta  property="og:title"  content="File system - Practicalli Engineering Playbook" >
       
         <meta  property="og:description"  content="Practical guides to common Engineering tasks" >
       
@@ -97,7 +97,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Files - Practicalli Engineering Playbook" >
+        <meta  name="twitter:title"  content="File system - Practicalli Engineering Playbook" >
       
         <meta  name="twitter:description"  content="Practical guides to common Engineering tasks" >
       
@@ -203,7 +203,7 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-             Files 
+             File system 
           </span>
         </div>
       </div>
@@ -2253,7 +2253,7 @@
   
   
   <span class="md-ellipsis">
-    Files
+    File system
     
   </span>
   
@@ -2266,7 +2266,7 @@
   
   
   <span class="md-ellipsis">
-    Files
+    File system
     
   </span>
   
@@ -2292,6 +2292,15 @@
   <a href="#list-files-and-directories" class="md-nav__link">
     <span class="md-ellipsis">
       List files and directories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disk-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disk usage
     </span>
   </a>
   
@@ -2354,7 +2363,7 @@
   
   
   <span class="md-ellipsis">
-    Cron
+    Scheduled tasks
     
   </span>
   
@@ -4454,6 +4463,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#disk-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disk usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#navigate-the-file-system" class="md-nav__link">
     <span class="md-ellipsis">
       Navigate the file system
@@ -4522,32 +4540,38 @@
 
 
 <h1 id="file-system">File System<a class="headerlink" href="#file-system" title="Permanent link">λ︎</a></h1>
-<ul>
-<li><a href="#list-files-and-directories">List files and directories</a></li>
-<li><a href="">find files and contents</a></li>
-</ul>
+<p>View and navigate the contents of the files and directories on the file system.</p>
+<p>Create and extract archives of files and directories.</p>
+<p>Use <code>$HOME</code> and <code>~</code> within directory paths as convenient Short-cuts.</p>
+<div class="admonition tip">
+<p class="admonition-title">Use <code>sudo</code> with these commands to access files &amp; directories with elevated permissions</p>
+</div>
 <h2 id="list-files-and-directories">List files and directories<a class="headerlink" href="#list-files-and-directories" title="Permanent link">λ︎</a></h2>
 <p><code>ls</code> command lists the contents of the current directory or the specified path.</p>
 <p><code>ls -l</code> shows the meta data of files, e.g. ownership, permissions, etc.</p>
 <p><code>ls -a</code> includes hidden dot-files in the list, e.g. <code>.git</code></p>
 <p><code>tree</code> shows a recursive list of files and directories, e.g. show the whole contents of a code project.</p>
 <p><code>pwd</code> shows the full path of the current working directory</p>
+<h2 id="disk-usage">Disk usage<a class="headerlink" href="#disk-usage" title="Permanent link">λ︎</a></h2>
+<p><code>df -h</code> shows all disk usage in the operating system, in human readable format</p>
+<p><code>du -sh</code> shows summary file use of the current directory (or specified path), including usage for sub-folders</p>
 <h2 id="navigate-the-file-system">Navigate the file system<a class="headerlink" href="#navigate-the-file-system" title="Permanent link">λ︎</a></h2>
 <p><code>cd</code> to change to a different directory by giving the relative or full path</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span><span class="o">[</span>path_or_directory<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>projects/practicalli
 </code></pre></div>
 <p>Short-cuts:</p>
 <ul>
 <li><code>cd</code> move to the current user’s home directory</li>
-<li><code>cd ..</code>  – move up a directory and can be used with a relative path <code>cd ../sibling-directory</code></li>
-<li><code>cd –</code> – move to the previous directory</li>
+<li><code>cd ..</code> move up a directory and can be used with a relative path <code>cd ../sibling-directory</code></li>
+<li><code>cd –</code> move to the previous directory</li>
 </ul>
 <h2 id="change-files-and-directories">Change files and directories<a class="headerlink" href="#change-files-and-directories" title="Permanent link">λ︎</a></h2>
 <p><code>touch filename</code> creates a new file using the given name (assuming the file doesn't already exist)</p>
 <p><code>mkdir path/to/target_folder/new-folder-name</code> creates a new directory using a relative or full path, the current user has read, write, and execute files permissions in the new directory (<code>-m</code> flag or <code>chmod</code> to alter permissions)</p>
-<p><code>cp</code> copies files using the form cp file1 file2 [target_path], Use the <code>-R</code> flag to recursively copy a directory and its contents (including sub-directories)</p>
-<p><code>mv</code>  moves (optionally rename) a file or directory to another location using the form mv file_or_directory [target_directory]</p>
-<p><code>rm</code> command deletes files from a directory. You must have the write permission for the folder or use sudo. Uses the form: rm [options] file1 file2</p>
+<p><code>mkdir -p path/that/doesnt/exist/yet</code> the <code>-p</code> option will create all the directories that are not already present in the given path.</p>
+<p><code>cp</code> copies files using the form <code>cp file1 file2 [target_path]</code>. Use the <code>-R</code> flag to recursively copy a directory and its contents (including sub-directories)</p>
+<p><code>mv</code>  moves (optionally rename) a file or directory to another location using the form <code>mv file_or_directory [target_directory]</code></p>
+<p><code>rm</code> command deletes files from a directory. Uses the form: <code>rm [options] file1 file2</code></p>
 <div class="admonition info">
 <p class="admonition-title">Common flags for file and directory commands</p>
 <p><code>-r</code> (recursive) acts on a directory and its contents, including subdirectories.</p>
@@ -4569,118 +4593,54 @@
 <li><code>j</code> bzip2 compression, <code>.tgj</code> file extension</li>
 <li><code>J</code> xz compression, <code>.tgx</code> file extension</li>
 </ul>
-<p>tar -xf archive.tar extracts everything from the archive, <code>-C</code> extracts to a given path.</p>
-<p>tar can change the contents of an archive using <code>--concatenate</code>, <code>--delete</code>, <code>--append</code> and <code>--update</code> flags.</p>
-<p>zip is a universal archive tool that compresses one or multiple files into a <code>.zip</code> archive, reducing the size of text based files. Binary files may result in a slightly bigger archive.</p>
+<p><code>tar -xf archive.tar</code> extracts everything from the archive, <code>-C</code> extracts to a given path.</p>
+<p><code>tar</code> can change the contents of an archive using <code>--concatenate</code>, <code>--delete</code>, <code>--append</code> and <code>--update</code> flags.</p>
+<p><code>zip</code> is a universal archive tool that compresses one or multiple files into a <code>.zip</code> archive, reducing the size of text based files. Binary files may result in a slightly bigger archive.</p>
 <p><code>zip [options] zip_file_name &lt;directory and/or files&gt;</code> creates a compressed archive.</p>
 <p><code>unzip [options] zip_file_name</code> extracts all the files form the archive.</p>
 <h2 id="find-files-and-contents">Find files and contents<a class="headerlink" href="#find-files-and-contents" title="Permanent link">λ︎</a></h2>
-<p>The find command is one of the most useful Linux commands, especially when you're faced with the hundreds and thousands of files and folders on a modern computer. As its name implies, find helps you find things, and not just by filename.</p>
-<p>Whether you're on your own computer or trying to support someone on an unfamiliar system, here are 10 ways find can help you locate important data.</p>
-<p>[ Keep your most commonly used commands handy with the Linux commands cheat sheet. ]
-1. Find a single file by name</p>
-<p>When you know the name of a file but can't remember where you saved it, use find to search your home directory. Use 2&gt;/dev/null to silence permission errors (or use sudo to gain all permissions).</p>
-<p>$ find / -name "Foo.txt" 2&gt;/dev/null
-/home/seth/Documents/Foo.txt</p>
-<ol>
-<li>Find a single file by approximate name</li>
-</ol>
-<p>If you can't remember the exact name of the file, or you're not sure whether you capitalized any characters, you can do a partial and case-insensitive search like this:</p>
-<p>$ find / -iname "<em>foo</em>txt" 2&gt;/dev/null
-/home/seth/Documents/Foo.txt
-/home/seth/Documents/foo.txt
-/home/seth/Documents/foobar.txt</p>
-<ol>
-<li>Find everything</li>
-</ol>
-<p>The ls -R command lists the contents of a directory recursively, meaning that it doesn't just list the target you provide for it, but also descends into every subdirectory within that target (and every subdirectory in each subdirectory, and so on.) The find command has that function too, by way of the -ls option:</p>
-<p>$ find ~/Documents -ls
-3554235 0 drwxr-xr-x [...] 05:36 /home/seth/Documents/
-3554224 0 -rw-rw-r-- [...] 05:36 /home/seth/Documents/Foo
-3766411 0 -rw-rw-r-- [...] 05:36 /home/seth/Documents/Foo/foo.txt
-3766416 0 -rw-rw-r-- [...] 05:36 /home/seth/Documents/Foo/foobar.txt</p>
-<p>Notice that I don't use 2&gt;/dev/null in this instance because I'm only listing the contents of a file path within my home directory, so I don't anticipate permission errors.
-4. Find by content</p>
-<p>A find command doesn't have to perform just one task. In fact, one of the options in find enables you to execute a different command on whatever results find returns. This can be especially useful when you need to search for a file by content rather than by name, or you need to search by both.</p>
-<p>$ find ~/Documents/ -name "*txt" -exec grep -Hi penguin {} \;
-/home/seth/Documents/Foo.txt:I like penguins.
-/home/seth/Documents/foo.txt:Penguins are fun.</p>
-<p>[ Learn how to manage your Linux environment for success. ]
-5. Find files by type</p>
-<p>You can display files, directories, symlinks, named pipes, sockets, and more using the -type option.</p>
-<p>$ find ~ -type f
-/home/seth/.bash_logout
-/home/seth/.bash_profile
-/home/seth/.bashrc
-/home/seth/.emacs
-/home/seth/.local/share/keyrings/login.keyring
-/home/seth/.local/share/keyrings/user.keystore
-/home/seth/.local/share/gnome-shell/gnome-overrides-migrated
-[...]</p>
-<p>As long as you're using the GNU version of find, you can include multiple file types in your search results:</p>
-<p>$ find ~ -type f,l -name "notebook*"
-/home/seth/notebook.org
-/home/seth/Documents/notebook-alias.org</p>
-<ol>
-<li>List just directories</li>
-</ol>
-<p>A shortcoming of the ls command is that you can't filter its results by file type, so it can be noisy if you only want a listing of directories in a path. The find command combined with the -type d option is a better choice:</p>
-<p>$ find ~/Public -type d
-find ~/Public/ -type d
-/home/seth/Public/
-/home/seth/Public/example.com
-/home/seth/Public/example.com/www
-/home/seth/Public/example.com/www/img
-/home/seth/Public/example.com/www/font
-/home/seth/Public/example.com/www/style</p>
-<ol>
-<li>Limit listing results</li>
-</ol>
+<p><code>find</code> to look for files and directories by a pattern</p>
+<div class="admonition tip">
+<p class="admonition-title">Append <code>2&gt;/dev/null</code> onto commands to silence permission errors</p>
+</div>
+<p>Find the exact file name anywhere on the file system (from the <code>/</code> root)</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>find<span class="w"> </span>/<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;secret-sauce.md&quot;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+<p><code>-iname</code> is case insensitive.  Wild-cards <code>*</code> can also be used when the exact name is not known.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>find<span class="w"> </span>/<span class="w"> </span>-iname<span class="w"> </span><span class="s2">&quot;*secret*md&quot;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+<p><code>find</code> can execute a different command on results returned, e.g searching for files by content rather than name</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>find<span class="w"> </span>~/Documents/<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*md&quot;</span><span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-Hi<span class="w"> </span>squirrels<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>/home/practicalli/Documents/nature-in-action.md:I<span class="w"> </span>love<span class="w"> </span>watching<span class="w"> </span>squirrels<span class="w"> </span>play.
+</code></pre></div>
+<p><code>-maxdepth</code> limits the number of directories to traverse</p>
 <p>With hundreds of files in a default user directory and thousands more outside of that, sometimes you get more results from find than you want. You can limit the depth of searches with the -maxdepth option, followed by the number of directories you want find to descend into after the starting point:</p>
-<p>$ find ~/Public/ -maxdepth 1 -type d
-/home/seth/Public/
-/home/seth/Public/example.com</p>
-<ol>
-<li>Find empty files</li>
-</ol>
-<p>Sometimes it's helpful to discover empty files as a way to declutter:</p>
-<p>$ find ~ -type f -empty
-random.idea.txt</p>
-<p>Technically, you can use find to remove empty files, but programmatic removal of files is dangerous. For instance, if you forget to include -type f in a search for empty files, you get directories in your results. By adding a delete flag, you would remove potentially important directory structures.</p>
-<p>It's vital to compose your find command and then verify the results before deleting. Furthermore, a misplaced delete flag in find can delete results before qualifying them (in other words, you can delete directories in a command intended to delete only files by placing the delete flag before the type flag).</p>
-<p>I prefer to use xargs or Parallel and a trash command on the rare occasion that I remove files with find.
-9. Find files by age</p>
-<p>The -mtime option allows you to limit a search to files older than, but also files newer than, some value times 24.</p>
-<p>$ find /var/log -iname "<em>~" -o -iname "</em>log*" -mtime +30</p>
-<p>The + before the -mtime number doesn't mean to add that number to the time. It's a conditional statement that matches (in this example) a value greater than 24 times 30. In other words, the sample code finds log files that haven't been modified in a month or more.</p>
-<p>To find log files modified within the past week, you can use the - conditional:</p>
-<p>$ find /var/log -iname "<em>~" -o -iname "</em>log*" -mtime -7
-/var/log/tallylog
-/var/log/cups/error_log
-/var/log/cups/access_log
-/var/log/cups/page_log
-/var/log/anaconda/anaconda.log
-/var/log/anaconda/syslog
-/var/log/anaconda/X.log
-[...]</p>
-<p>You already know about the -ls flag, so you can combine that with these commands for clarity:</p>
-<p>$ find /var/log -iname "<em>~" -o -iname "</em>log*" -mtime -7 -ls
--rw-------  1 root root            0 Jun  9 18:20 /var/log/tallylog
--rw-------  1 root lp      332 Aug 11 15:05 /var/log/cups/error_log
--rw-------  1 root lp      332 Aug 11 15:05 /var/log/cups/access_log
--rw-------  1 root lp      332 Aug 11 15:05 /var/log/cups/page_log
--rw-------  1 root root  53733 Jun  9 18:24 /var/log/anaconda/anaconda.log
--rw-------  1 root root 835513 Jun  9 18:24 /var/log/anaconda/syslog
--rw-------  1 root root  21131 Jun  9 18:24 /var/log/anaconda/X.log
-[...]</p>
-<ol>
-<li>Search a path</li>
-</ol>
-<p>Sometimes you know the directory structure leading up to a file you need; you just don't know where the directory structure is located within the system. To search within a path string, you can use the -ipath option, which treats dots and slashes not as regex characters but as dots and slashes.</p>
-<p>$ find / -type d -name 'img' -ipath "<em>public_html/example.com</em>" 2&gt;/dev/null
-/home/tux/Public/public_html/example.com/font</p>
-<p>Found it</p>
-<p>The find command is an essential tool for a sysadmin. It's useful when investigating or getting to know a new system, finding misplaced data, and troubleshooting everyday problems. But it's also just a convenience tool.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>find<span class="w"> </span>~/secret-sauce.md<span class="w"> </span>-maxdepth<span class="w"> </span><span class="m">1</span>
+</code></pre></div>
+<p><code>-mtime</code> limits a search to files older or newer than a value times, by increments of 24 hours.</p>
+<p>Find files in the current user account home directory, modified in the last 24 hours</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>find<span class="w"> </span><span class="nv">$HOME</span><span class="w"> </span>-mtime<span class="w"> </span><span class="m">0</span>
+</code></pre></div>
+<p>Use a <code>+</code> before the value of <code>-mtime</code> as a conditional, matching files modified before 24 times the value.</p>
+<p>Find log file which have not been update for more than a week.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>find<span class="w"> </span>/var/log<span class="w"> </span>-iname<span class="w"> </span><span class="s2">&quot;*~&quot;</span><span class="w"> </span>-o<span class="w"> </span>-iname<span class="w"> </span><span class="s2">&quot;*log*&quot;</span><span class="w"> </span>-mtime<span class="w"> </span>+7
+</code></pre></div>
+<p>The <code>-</code> conditional find modified files within 24 hours times the value.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>find<span class="w"> </span>/var/log<span class="w"> </span>-iname<span class="w"> </span><span class="s2">&quot;*~&quot;</span><span class="w"> </span>-o<span class="w"> </span>-iname<span class="w"> </span><span class="s2">&quot;*log*&quot;</span><span class="w"> </span>-mtime<span class="w"> </span>-7
+</code></pre></div>
+<p><code>-ls</code> flag provides a long list showing meta data about the files found</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$ find /var/log -iname &quot;*~&quot; -o -iname &quot;*log*&quot; -mtime -7 -ls
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>-rw-------  1 root root            0 Jun  9 18:20 /var/log/tallylog
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>-rw-------  1 root lp      332 Aug 11 15:05 /var/log/cups/error_log
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>-rw-------  1 root lp      332 Aug 11 15:05 /var/log/cups/access_log
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>-rw-------  1 root lp      332 Aug 11 15:05 /var/log/cups/page_log
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>-rw-------  1 root root  53733 Jun  9 18:24 /var/log/anaconda/anaconda.log
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>-rw-------  1 root root 835513 Jun  9 18:24 /var/log/anaconda/syslog
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>-rw-------  1 root root  21131 Jun  9 18:24 /var/log/anaconda/X.log
+</code></pre></div>
+<p><code>-ipath</code> to search for a path within the file space</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>find<span class="w"> </span>/<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;img&#39;</span><span class="w"> </span>-ipath<span class="w"> </span><span class="s2">&quot;*public_html/practicalli*&quot;</span>
+</code></pre></div>
 
 
 
@@ -4701,7 +4661,7 @@ random.idea.txt</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 3, 2025 22:00:34 UTC">July 3, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 11, 2025 19:27:28 UTC">July 11, 2025</span>
   </span>
 
     
@@ -4758,13 +4718,13 @@ random.idea.txt</p>
         
         
           
-          <a href="../cron/" class="md-footer__link md-footer__link--next" aria-label="Next: Cron">
+          <a href="../cron/" class="md-footer__link md-footer__link--next" aria-label="Next: Scheduled tasks">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Cron
+                Scheduled tasks
               </div>
             </div>
             <div class="md-footer__button md-icon">
