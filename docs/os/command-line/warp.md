@@ -3,7 +3,9 @@
 !!! INFO "Section just starting - Warp terminal being evaluated"
     Practicalli uses [kitty terminal](kitty-terminal.md) currently, but has started to evaluate Warp terminal.  Any feedback on content recommendations most welcome.
 
-A terminal app with a focus on an enhanced programming experience, connecting to Warp AI for convienient help right within the command line.
+A terminal app with a focus on an enhanced programming experience, connecting to Warp AI for convenient help right within the command line.
+
+Warp supports graphics via the [:globe_with_meridians: Kitty Terminal Graphics Protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/){target=_blank}.
 
 [Warp Terminal](https://www.warp.dev){target=_blank .md-button}
 
