@@ -24,6 +24,7 @@
 - os: archive commands in file systems page
 - os: network commands page and examples
 - ci: github release from tag in practicalli workflows
+- os: accounts and privileges commands
 
 ### Changed
 

@@ -194,6 +194,7 @@ nav:
           - Commands:
               - os/command-line/commands/index.md
               - File system: os/command-line/commands/file-system.md
+              - Accounts & permissions: os/command-line/commands/accounts-permissions.md
               - Scheduled tasks: os/command-line/commands/cron.md
       - Linux:
           - Overview: os/linux/index.md
