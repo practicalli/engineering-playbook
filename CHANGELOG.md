@@ -26,6 +26,8 @@
 - ci: github release from tag in practicalli workflows
 - os: accounts and privileges commands
 - os: system resources commands
+- dev: `dependencies-update` make task to update all GitHub actions to newest version
+
 
 ### Changed
 
@@ -50,3 +52,4 @@
 - dev: optional setup-python for publish book workflow
 - os: move shell section under command-line
 - ci: update clojure quality check github workflow
+- dev: rename `outdated` to `dependencies-outdated`
