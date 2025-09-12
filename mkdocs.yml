@@ -204,7 +204,9 @@ nav:
               - Install: os/debian-linux/install.md
               - Post Install: os/debian-linux/post-install.md
           - Ubuntu: os/ubuntu-linux.md
-          - Hyprland: os/linux/hyprland.md
+          - Hyprland:
+              - os/linux/hyprland/index.md
+              - os/linux/hyprland/configure.md
           - Regolith: os/linux/regolith.md
       - MacOSX: os/macosx.md
   - Persistence:
