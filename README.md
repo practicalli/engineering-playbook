@@ -72,10 +72,19 @@ Publish book workflow installs Material for MkDocs version 9
 
 ## Local development
 
+Material for MkDocs consists of a number of python package and a python virtual environment is the recommended approach.
+
+Practicalli creates a common python environment to support all the books and blogs it creates.
+
+```shell
+python -m venv ~/.local/venv
+```
+
+
 Install mkdocs version 9 using the Python pip package manager
 
 ```shell
-pip install mkdocs-material=="9.*"
+~/.local/venv/bin/pip install mkdocs-material=="9.*"
 ```
 
 Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
@@ -98,7 +107,13 @@ Run a local server from the root of the cloned project
 make docs
 ```
 
-The website will open at <http://localhost:8000>
+If not using make, then run
+
+```shell
+source ~/.local/venv/bin/activate && mkdocs serve --dev-addr localhost:7777
+```
+
+The website will open at <http://localhost:7777>
 
 If making smaller changes, then only rebuild the content that changes, speeding up the local development process
 
@@ -107,4 +122,3 @@ make docs-changed
 ```
 
 > NOTE: navigation changes may not be correctly reflected without reloading the page in the web browser or carrying out a full `make docs` build
-
