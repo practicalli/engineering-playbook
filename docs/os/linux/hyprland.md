@@ -11,6 +11,15 @@ Hyprland is not a full desktop environment, unlike KDE or Gnome.  Additional too
 
 !!! WARNING "Hyprland is a quickly evolving project and issues may occur"
 
+=== "Garuda Linux"
+
+    [Garuda Linux](https://garudalinux.org/) is a distribution on top of Arch Linux.  There are several variants which includes one centered on Hyprland.
+
+    Garuda Linux Hyprland is recommended when first starting (especially if not used to Arch Linux).
+
+    Garuda uses the BtrFs file system which allows snapshots and rollbacks to recover the operating system and desktop should hyprland or arch linux pakcages break.
+
+
 === "NWG Live ISO"
 
     [NWG-ISO](https://github.com/nwg-piotr/nwg-iso) is a simple way to try out hyprland and the [NWG Shell tools](https://nwg-piotr.github.io/nwg-shell/), providing an experience close to a Desktop Environment like Gnome or KDE.
