@@ -1,15 +1,32 @@
 # Hyprland Tiling Compositor
 
-Hyprland is an elegant and high performance Tiling window compositor for Wayland on Linux.
+Hyprland is a high performance Wayland compositor and tiling window manager.  Hyprland is not a full desktop environment (DE) like [KDE Plasma](https://kde.org/) or [Gnome](https://www.gnome.org/).
 
-Hyprland is not a full desktop environment, unlike KDE or Gnome.  Additional tools can be installed to make a complete desktop environment.
+Hyprland is not a full desktop environment, unlike KDE or Gnome. There are distributions that provide a complete Hyprland based desktop environment.
 
-!!! HINT "Try Hyprland with the NWG Live ISO"
-    [NWG Live ISO](https://github.com/nwg-piotr/nwg-iso) provides a simple way to try Hyprland and the set of tools provided by NWG-Shell to give a Desktop Environment experience based on Gnome.
+- Omachy: simple and opinionated distribution from Arch Linux & Hprland, completely keyboard driven and providing a crafted experience.
+- Garuda Linux: hyprlant variant provides a professional and easy to manage operating system, G-Hyprland provides optional extra Hyprland customisation.
+- NWG Live
 
-## Install
+Hyprland can be installed on Arch Linux and Nix distributions.  Community scripts are available for Debian and RedHat based distributions.
+
+
+!!! WARNING "Hyprland can be very time consuming"
+
+## Install Options
 
 !!! WARNING "Hyprland is a quickly evolving project and issues may occur"
+
+=== "Omarchy"
+
+    [Omarchy](https://omarchy.org/) is a Linux distribution that provides a keyboard driven and unified menu experience, building on Arch Linux and Hyprland (Wayland compositor and tiling window manager).
+
+    Omachy is driven through its menu and configuration files are opened in Neovim (LazyVim config).
+
+    Google Mail and other web apps are opened as headless browsers, for a highly focused experience.
+
+    A base install option allows for a highly customised opeating system, whilst still retaining the simplicity of Omachy.
+
 
 === "Garuda Linux"
 
@@ -29,7 +46,6 @@ Hyprland is not a full desktop environment, unlike KDE or Gnome.  Additional too
     ![NWG Shell login greeter](https://github.com/nwg-piotr/nwg-shell/assets/20579136/811d8fd9-a825-49db-b318-fbefc0db584d){align=right loading=lazy style="height:450px"}
 
     ![NWG Shell desktop screeshot](https://github.com/nwg-piotr/nwg-shell/assets/20579136/402bb806-ff9b-4869-aee0-683b7838e15d){align=right loading=lazy style="height:450px"}
-
 
 
     !!! EXAMPLE "Create USB Startup"
