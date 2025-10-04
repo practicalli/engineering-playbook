@@ -2,18 +2,30 @@
 
 Hyprland comes with a simple config in `~/.config/hypr/hyprland.conf`.
 
-Garuda Linux has a richer configuration, and an even more advanced config called G-Hyprland which includes some elements of nwg-shell.
+!!! TIP "Organise config into distinct file names"
+    Consider defining autostart, layouts, bindings, look-n-feel
+
+    - placement: monitors, workspace rules, window rules, layouts, boarders, blur
+    - launch: app aliases, auto-start apps, key bindings
+    - input: keyboard, mouse and touchpad
+    - status: app indicators and notifications (unless using a separate tool like waybar)
 
 
 ## Monitors
 
-Single monitor easy.
+The default monitor settings should be suitable for most single monitor systems.
 
-Multi-monitor
 
-```shell
-hyprctrl monitors
-```
+
+### Multi-monitor
+
+It is important to configure multiple monitors, especially when they have different display resolutions.  Hyprland will use the same scale for each display by default.
+
+
+!!! NOTE "List the names of each attached monitor"
+    ```shell
+    hyprctrl monitors
+    ```
 
 > NOTE: workspaces can be assigned to a specific monitor using [workspace rules](#workspace-rules).
 

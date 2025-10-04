@@ -4,9 +4,9 @@ Hyprland is a high performance Wayland compositor and tiling window manager.  Hy
 
 Hyprland is not a full desktop environment, unlike KDE or Gnome. There are distributions that provide a complete Hyprland based desktop environment.
 
-- Omachy: simple and opinionated distribution from Arch Linux & Hprland, completely keyboard driven and providing a crafted experience.
-- Garuda Linux: hyprlant variant provides a professional and easy to manage operating system, G-Hyprland provides optional extra Hyprland customisation.
-- NWG Live
+- Garuda Linux: hyprland variant provides a professional and simple to manage operating system, G-Hyprland provides optional extra Hyprland customisation.
+- HyDE: a complete desktop environment for Hyprland, to be added on top of a minimal Arch Linux install.
+- NWG Live: provides a convenient way to try out Hyprland with little risk, also has lots of nice themes
 
 Hyprland can be installed on Arch Linux and Nix distributions.  Community scripts are available for Debian and RedHat based distributions.
 
@@ -16,17 +16,7 @@ Hyprland can be installed on Arch Linux and Nix distributions.  Community script
 ## Install Options
 
 !!! WARNING "Hyprland is a quickly evolving project and issues may occur"
-
-=== "Omarchy"
-
-    [Omarchy](https://omarchy.org/) is a Linux distribution that provides a keyboard driven and unified menu experience, building on Arch Linux and Hyprland (Wayland compositor and tiling window manager).
-
-    Omachy is driven through its menu and configuration files are opened in Neovim (LazyVim config).
-
-    Google Mail and other web apps are opened as headless browsers, for a highly focused experience.
-
-    A base install option allows for a highly customised opeating system, whilst still retaining the simplicity of Omachy.
-
+    Using a BtrFs file system is highly valuable approach for Hyprland, as snapshots can be taken before package updates that allow a system to rollback to the pre-upgrade state if there are issues.
 
 === "Garuda Linux"
 
@@ -35,6 +25,13 @@ Hyprland can be installed on Arch Linux and Nix distributions.  Community script
     Garuda Linux Hyprland is recommended when first starting (especially if not used to Arch Linux).
 
     Garuda uses the BtrFs file system which allows snapshots and rollbacks to recover the operating system and desktop should hyprland or arch linux pakcages break.
+
+
+=== "HyDE"
+
+    [Hyde-Project/HyDE](https://github.com/HyDE-Project/HyDE) is a series of scripts that install a more complete desktop environment based on Hyprland.
+
+    Practicalli recommends installing Arch Linux using a BtrFs partition, so snapshots and rollbacks can manage breaking chainges in Hyprland effectively.  This is beyond the scope of the HyDE project itself.
 
 
 === "NWG Live ISO"
@@ -55,6 +52,7 @@ Hyprland can be installed on Arch Linux and Nix distributions.  Community script
 
     [Arch Linux ISO command line untilities](https://wiki.archlinux.org/title/USB_flash_installation_medium){target=_blank .md-button}
 
+
 === "Debian Linux"
 
     [Practicalli Journal - notes on Hyprland with Debian Linux](https://practical.li/journal/linux-wayland-compositor--hyprland/#hyprland-on-debian){target=_blank .md-button}
@@ -64,6 +62,7 @@ Hyprland can be installed on Arch Linux and Nix distributions.  Community script
 
 
     The hyprland packages are on version 0.41 at time of writing, the current release is 0.45 and has significant changes
+
 
 === "Arch Linux"
 
