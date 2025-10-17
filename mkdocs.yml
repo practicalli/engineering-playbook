@@ -228,6 +228,7 @@ nav:
               - Examples: persistence/rdbms/sql/examples.md
   - Practices:
       - practices/index.md
+      - practices/personal-journal.md
       - Discussions:
           - practices/discussions/index.md
           - Asking Questions: practices/discussions/asking-questions.md
