@@ -229,10 +229,12 @@ nav:
   - Practices:
       - practices/index.md
       - practices/personal-journal.md
+      - Organising Work:
+          - practices/organising-work/index.md
+          - practices/organising-work/rolling-wave-planning.md
       - Discussions:
           - practices/discussions/index.md
           - Asking Questions: practices/discussions/asking-questions.md
-          - practices/discussions/rolling-wave-planning.md
           - practices/discussions/one-to-one-meeting.md
           - Retrospective: practices/discussions/retrospective.md
           - Standup: practices/discussions/standup.md
@@ -251,7 +253,6 @@ nav:
           - Code Kata: practices/deliberate-practice/code-kata.md
       - practices/test-driven-development.md
       - practices/managing-bias.md
-
   - Programming Languages:
       - programming-languages/index.md
       - JavaScript:
