@@ -27,6 +27,7 @@
 - os: accounts and privileges commands
 - os: system resources commands
 - dev: `dependencies-update` make task to update all GitHub actions to newest version
+- os: recommending tui apps
 
 
 ### Changed

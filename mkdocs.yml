@@ -197,6 +197,8 @@ nav:
               - Accounts & permissions: os/command-line/commands/accounts-permissions.md
               - System resources: os/command-line/commands/system-resources.md
               - Scheduled tasks: os/command-line/commands/cron.md
+      - TUI Apps:
+          - os/tui/index.md
       - Linux:
           - Overview: os/linux/index.md
           - Debian:
