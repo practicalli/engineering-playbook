@@ -2,526 +2,530 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://practical.li/engineering-playbook/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/assets/images/social/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/build-tool/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/build-tool/babashka-task-runner/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/build-tool/make/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/careers/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/careers/engineer/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/careers/engineering-manager/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/careers/staff-engineer/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/change-management/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/code-quality/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/code-quality/clojure/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/code-quality/megalinter/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/clojure-multi-stage-dockerfile/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/compose/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/dockerfile/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/images/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/install/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/desktop/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/docker/desktop/extensions/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/actions/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/common-jobs/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/issue-templates/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/trigger-events/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/luarocks/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/megalinter/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/practicalli/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/continuous-integration/github/workflows/system-catalog/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/culture/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/culture/anti-patterns/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/culture/burnout/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/culture/community/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/culture/documentation/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/culture/leadership/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/introduction/contributing/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/introduction/writing-tips/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/macos/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/ubuntu-linux/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/ghostty/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/kitty-terminal/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/warp/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/commands/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/commands/accounts-permissions/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/commands/cron/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/commands/file-system/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/commands/managing-software/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/commands/network/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/commands/system-resources/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/shell/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/shell/bash/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/shell/fish/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/shell/starship-prompt/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/command-line/shell/zsh/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/debian-linux/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/debian-linux/install/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/debian-linux/post-install/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/linux/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/linux/arch-linux/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/linux/garuda-linux/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/linux/regolith/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/linux/which-linux-distribution/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/linux/hyprland/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/os/linux/hyprland/configure/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
+    </url>
+    <url>
+         <loc>https://practical.li/engineering-playbook/os/tui/</loc>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/people/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/persistence/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/persistence/rdbms/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/persistence/rdbms/client/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/persistence/rdbms/client/cli/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/persistence/rdbms/client/dbeaver/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/persistence/rdbms/client/pgadmin/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/persistence/rdbms/server/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/persistence/rdbms/server/h2/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/persistence/rdbms/server/mariadb/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/persistence/rdbms/server/postgresql/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/persistence/rdbms/sql/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/persistence/rdbms/sql/examples/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/managing-bias/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/personal-journal/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/reports/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/root-cause-analysis/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/tech-debt-notes/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/technical-debt/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/test-driven-development/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/behaviour-driven-development/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/deliberate-practice/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/deliberate-practice/architecture-kata/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/deliberate-practice/code-kata/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/asking-questions/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/five-whys/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/one-to-one-meeting/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/retrospective/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/standup/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/discussions/thinking-hats/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/kanban/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/kanban/value-stream-mapping/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/organising-work/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/practices/organising-work/rolling-wave-planning/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/programming-languages/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/programming-languages/javascript/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/programming-languages/javascript/nodejs/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/software-design/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/software-design/open-standards/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/software-design/anti-patterns/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/software-design/architecture/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/software-design/architecture/adr/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/software-design/architecture/structurizr/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/software-design/design-patterns/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/software-design/design-patterns/command-query-separation/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/software-design/design-patterns/cqrs/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/software-design/domain-driven-design/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/software-design/domain-driven-design/ubquitous-language/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/software-design/microservices/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/source-control/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/source-control/git-concepts/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/source-control/git-configuration/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/source-control/git-overview/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/source-control/git-personal-access-token/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/source-control/git-status/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/source-control/github/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/source-control/pull-request/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/technical-writing/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/technical-writing/static-site/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
     <url>
          <loc>https://practical.li/engineering-playbook/technical-writing/static-site/mkdocs/</loc>
-         <lastmod>2025-10-19</lastmod>
+         <lastmod>2025-10-25</lastmod>
     </url>
 </urlset>
