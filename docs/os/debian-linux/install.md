@@ -1,22 +1,40 @@
 # Debian Linux Install
 
-Debian provides ISO images which can be burned onto compact disks or USB memory sticks.
+Debian provides ISO images which can be burned onto  USB memory sticks (or other removable media, e.g. compact disks).
 
 The net install image is small and quick to download, containing only the essential packages to run an operating system.
 
-Copy the Debian Linux ISO image to a USB of 1GB size or larger
+[Debian Linux NetInstall ISO image - AMD64](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.1.0-amd64-netinst.iso){.md-button}
 
-!!! EXAMPLE "Create USB install disk from Debian ISO file"
+
+## Create USB startup disk
+
+Copy the Debian Linux ISO image to a USB of 1GB size or larger, using one of the following tools.
+
+!!! NOTE "Create USB install disk using Caligula TUI"
+    Install the [Caligula disk image TUI](https://practical.li/engineering-playbook/os/tui/#caligula).
+
+    Run `calibula` with the burn command and the path to the downloaded Debian ISO image.  Follow the prompts of the Caligular TUI.
+
+    ```shell
+    Caligula burn debian.iso
+    ```
+
+!!! NOTE "Create USB install disk using the cp command"
+
+    Find the name of the USB stick
+
+    ```shell
+    ls -l /dev/disk/by-id/usb-*
+    ```
+
     Copy the ISO image to the USB disk (not a partition)
+
     ```shell
     cp debian.iso /dev/sda
     ```
 
-??? HINT "Creating USB install disks with non-Debian images"
-    Find the name of the USB stick
-    ```shell
-    ls -l /dev/disk/by-id/usb-*
-    ```
+??? NOTE "Creating USB install disks with dd"
 
     Copy the image using the name of the USB Stick
     ```shell
