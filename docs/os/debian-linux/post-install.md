@@ -30,36 +30,38 @@ su -
     adduser account-name sudo
     ```
 
-## Update to testing
+??? INFO "Update to testing"
 
-Debian Linux is an excellent choice for servers and every day use due to its stability and regular security updates.  The release cycle is between 1-2 years, so for software development some packages may not be as up to date as required.
+    Debian Linux is an excellent choice for servers and every day use due to its stability and regular security updates.  The release cycle is between 1-2 years, so for software development some packages may not be as up to date as required.
 
-Newer versions can be installed via Personal Package Archives (PPA) or installed manually (`/usr/local/bin`, or `~/.local/bin`).
+    Newer versions can be installed via Personal Package Archives (PPA) or installed manually (`/usr/local/bin`, or `~/.local/bin`).
 
-Debian Testing contains packages for the next release of Debian Linux (currently `trixie`) and it is a viable approach when significant number of packages should be on the latest version.
+    Debian Testing contains packages for the next release of Debian Linux (currently `trixie`) and it is a viable approach when significant number of packages should be on the latest version.
 
-!!! NOTE "Upgrade to Debian Testing"
-    edit `/etc/apt/sources.list` and change third field from `bullseye` to `trixie`
+    !!! NOTE "Upgrade to Debian Testing"
+        Edit `/etc/apt/sources.list` and change third field from `bullseye` to `trixie`
 
-    ```config title="/etc/apt/sources.list"
-    deb http://deb.debian.org/debian/ trixie main non-free-firmware
-    deb-src http://deb.debian.org/debian/ trixie main non-free-firmware
+        ```config title="/etc/apt/sources.list"
+        deb http://deb.debian.org/debian/ trixie main non-free-firmware
+        deb-src http://deb.debian.org/debian/ trixie main non-free-firmware
+    
+        deb http://security.debian.org/debian-security trixie-security main non-free-firmware
+        deb-src http://security.debian.org/debian-security trixie-security main non-free-firmware
+        ```
+    
+        Additionally add `contrib` and `non-free` packages for access to even more packages (some of which are not open source)
+    
+        ```config
+        deb http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
+        deb-src http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
+    
+        deb http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
+        deb-src http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
+        ```
 
-    deb http://security.debian.org/debian-security trixie-security main non-free-firmware
-    deb-src http://security.debian.org/debian-security trixie-security main non-free-firmware
-    ```
+## Regolith Desktop
 
-    Additionally add `contrib` and `non-free` packages for access to even more packages (some of which are not open source)
-
-    ```config
-    deb http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
-    deb-src http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
-
-    deb http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
-    deb-src http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
-    ```
-
-> NOTE: trixie includes packages for OpenJDK 21
+[Regolith Desktop](/engineering-playbook/os/linux/regolith/index.md) provides a full desktop environment based on i3 Tiling window manager and Gnome Desktop apps.
 
 
 ## Configure shell
@@ -88,6 +90,10 @@ Backup and removal of user specific files becomes far simpler.  The root directo
     ```
 
 === "Bash"
+
+
+!!! HINT "Practicalli dotfiles - shell aliases"
+    [Shell aliases](https://practical.li/engineering-playbook/os/command-line/shell/#aliases){target=_blank} file contains common aliases that can be sourced by multiple shell configurations, e.g. Zah, Bash, Fish, etc.
 
 ## Git install
 
