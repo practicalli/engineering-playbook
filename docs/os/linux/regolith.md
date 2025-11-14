@@ -27,11 +27,20 @@ An additional package source is currently required to support Debian Linux Trixi
 
 Update apt sources to include the unstable archive for Regolith Desktop
 
-!!! NOTE ""
+!!! NOTE "Add Signing Key for Regolith Package Archive"
     ```shell title="/etc/apt/sources.list.d/regolith.list"
     deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/debian/testing testing main
     deb [arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/debian/unstable testing main
     ```
+
+!!! NOTE "Add Regolith Package Archive"
+    ```shell
+    echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] \
+    https://archive.regolith-desktop.com/ubuntu/stable plucky v3.3" | \
+    sudo tee /etc/apt/sources.list.d/regolith.list
+    ```
+```
+
 
 ??? EXAMPLE "Apt sources list for Debian Linux"
 
@@ -48,6 +57,13 @@ Update apt sources to include the unstable archive for Regolith Desktop
     Suites: testing
     Components: main
     Signed-By: /usr/share/keyrings/regolith-archive-keyring.gpg
+    ```
+
+
+!!! NOTE "Add Regolith Package Archive"
+    ```shell
+    apt update && \
+    sudo apt install regolith-desktop regolith-session-flashback regolith-session-sway regolith-look-lascaille
     ```
 
 ## Post Install
