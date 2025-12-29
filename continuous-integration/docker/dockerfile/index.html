@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -35,7 +35,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -2958,6 +2958,8 @@
       
         
       
+        
+      
     
     
     
@@ -3050,6 +3052,34 @@
     
   
     Post Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../os/debian-linux/install-via-github-release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install via GitHub release
   
 
     
@@ -5680,8 +5710,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">HEALTHCHECK</span><span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span>CMD<span class="w"> </span><span class="o">[</span><span class="s2">"curl"</span>,<span class="w"> </span><span class="s2">"--fail"</span>,<span class="w"> </span><span class="s2">"http://localhost:8080/system-admin/status"</span><span class="o">]</span>
 </code></pre></div>
-<p>Start by learning the common instructions used in <code>Dockerfile</code> configurations and consult <a href="https://docs.docker.com/engine/reference/builder/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:"> Docker Docs extensive Dockerfile reference</a> to understand additional instructions are required</p>
-<p><a class="md-button" href="https://docs.docker.com/engine/reference/builder/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:"> Docker Docs Dockerfile reference</a></p>
+<p>Start by learning the common instructions used in <code>Dockerfile</code> configurations and consult <a href="https://docs.docker.com/engine/reference/builder/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f310.svg" title=":globe_with_meridians:"> Docker Docs extensive Dockerfile reference</a> to understand additional instructions are required</p>
+<p><a class="md-button" href="https://docs.docker.com/engine/reference/builder/" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f310.svg" title=":globe_with_meridians:"> Docker Docs Dockerfile reference</a></p>
 <h3 id="from">FROM<a class="headerlink" href="#from" title="Permanent link">λ︎</a></h3>
 <p><code>FROM</code> instruction should be the first instruction in the <code>Dockerfile</code> and specifies the image from which the current configuration uses as a base.</p>
 <p>FROM can be preceded ARG instructions to declare arguments used in the <code>FROM</code> instruction.  Comments <code>#</code> and <a href="https://docs.docker.com/engine/reference/builder/#parser-directives" target="_blank">parser directives</a> can also appear before <code>FROM</code></p>
@@ -5744,7 +5774,7 @@
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">"java"</span><span class="p">,</span><span class="w"> </span><span class="s2">"-jar"</span><span class="p">,</span><span class="w"> </span><span class="s2">"/service/practicalli-suit-you-sir-standalone.jar"</span><span class="p">]</span>
 </code></pre></div><p></p>
 </div>
-<p><a class="md-button" href="https://docs.docker.com/engine/reference/builder/#entrypoint" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:"> Docker Entrypoint documentation</a></p>
+<p><a class="md-button" href="https://docs.docker.com/engine/reference/builder/#entrypoint" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f310.svg" title=":globe_with_meridians:"> Docker Entrypoint documentation</a></p>
 <h3 id="cmd">CMD<a class="headerlink" href="#cmd" title="Permanent link">λ︎</a></h3>
 <p>The command to run the service within the container, typically paired with ENTRYPOINT</p>
 <p>CMD can be supplied on the command line when calling docker to over-ride the CMD defined in the <code>Dockerfile</code>, e.g. to help test a Docker image that is not running correctly or run variations of the service such as debug mode.</p>
@@ -5943,10 +5973,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   

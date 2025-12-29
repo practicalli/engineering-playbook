@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -35,7 +35,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -2866,6 +2866,8 @@
       
         
       
+        
+      
     
     
     
@@ -2958,6 +2960,34 @@
     
   
     Post Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../debian-linux/install-via-github-release/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install via GitHub release
   
 
     
@@ -5501,7 +5531,7 @@ eval "$(starship init bash)"</code></p>
 <h2 id="configure-preset">Configure preset<a class="headerlink" href="#configure-preset" title="Permanent link">λ︎</a></h2>
 <p>Starship uses <a href="https://starship.rs/presets/">presets</a> to configure the design of the prompt, defining what information is shown and which colors.</p>
 <p>Starship can be used to generate a <code>~/.config/starship.toml</code>  configuration file with a specific preset.  Starship lists the preset names if the name supplied is not recognised.</p>
-<p>Starship has a <a href="https://starship.rs/presets/catppuccin-powerline"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:"> Catppuccin Powerline Preset</a> (theme) which complements the <a href="">Kitty Cappuccin theme</a> and <a href="">Neovim Cappuccin colorscheme</a></p>
+<p>Starship has a <a href="https://starship.rs/presets/catppuccin-powerline"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f310.svg" title=":globe_with_meridians:"> Catppuccin Powerline Preset</a> (theme) which complements the <a href="">Kitty Cappuccin theme</a> and <a href="">Neovim Cappuccin colorscheme</a></p>
 <div class="admonition note">
 <p class="admonition-title">Generate Starship config file using catppuccin-powerline preset</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>starship<span class="w"> </span>preset<span class="w"> </span>catppuccin-powerline<span class="w"> </span>-o<span class="w"> </span>~/.config/starship.toml
@@ -5524,7 +5554,7 @@ eval "$(starship init bash)"</code></p>
 </details>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/practicalli/graphic-design/blob/live/os/command-line/kitty/kitty-starship-prompt-catppuccin-powerline-preset.png?raw=true" data-desc-position="bottom"><img alt="Starship command line theme with catppuccin-powerline preset" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/os/command-line/kitty/kitty-starship-prompt-catppuccin-powerline-preset.png?raw=true"></a></p>
 <h2 id="custom-theme">Custom theme<a class="headerlink" href="#custom-theme" title="Permanent link">λ︎</a></h2>
-<p>The <a href="https://starship.rs/presets/catppuccin-powerline"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:"> Catppuccin Powerline Preset</a> preset places all information on the left side of the prompt.  A custom version of the Cappuccin Powerline preset was created to move general information to the right hand side of the prompt and tweaked some of the default Catppuccin Mocha colors.</p>
+<p>The <a href="https://starship.rs/presets/catppuccin-powerline"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f310.svg" title=":globe_with_meridians:"> Catppuccin Powerline Preset</a> preset places all information on the left side of the prompt.  A custom version of the Cappuccin Powerline preset was created to move general information to the right hand side of the prompt and tweaked some of the default Catppuccin Mocha colors.</p>
 <p><code>format</code> controls the layout of the prompt.  <code>right_format</code> was added, moving the command duration, time, username and operating system details here from the left-hand side.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/practicalli/graphic-design/blob/live/os/command-line/starship-cli-preset-catppuccin-custom.png" data-desc-position="bottom"><img alt="Practicalli Custom version of Starship Cappuccin Powerline preset" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/os/command-line/starship-cli-preset-catppuccin-custom.png"></a></p>
 <div class="admonition example">
@@ -6012,10 +6042,10 @@ eval "$(starship init bash)"</code></p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   
