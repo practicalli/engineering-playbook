@@ -56,3 +56,4 @@
 - ci: update clojure quality check github workflow
 - dev: rename `outdated` to `dependencies-outdated`
 - dev: actions/checkout@5 in all GitHub workflows
+- build-tool: extract common make tasks to section index
