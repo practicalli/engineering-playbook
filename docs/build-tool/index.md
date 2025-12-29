@@ -3,4 +3,4 @@
 Build tools can support a wide range of development tasks
 
 * [GNU make](make.md) - language agnostic build tool, define any tasks
-* [babashka](babashka.md) - write a built tool using Clojure
+* [babashka task runner](babashka-task-runner.md) - write a build tool using Clojure syntax
