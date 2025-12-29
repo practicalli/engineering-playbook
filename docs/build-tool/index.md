@@ -1,9 +1,21 @@
-# Build Tools
+# Build Tool
 
-Build tools can support a wide range of development tasks
+A build tool is used to assemble a piece of software so that it can be run and simple to distribute.
 
-* [GNU make](make.md) - language agnostic build tool, define any tasks
-* [babashka task runner](babashka-task-runner.md) - write a build tool using Clojure syntax
+Build tools can support a wide range of development tasks and provide a [common and consistent set of commands](#common-task-naming) across all projects.
+
+- `build` packages software to run
+- `dist` creates a package of the software for distribution to others to install
+- `clean` removes files created during the build
+
+[GNU Make](make.md) is a long established tool that can be used to run any command line task.  Tasks are defined in a `Makefile` which is very expressive and simple to follow.
+
+
+## Tool Summary
+
+- [GNU make](make.md) - language agnostic build tool, define any tasks
+- [babashka task runner](babashka-task-runner.md) - write a build tool using Clojure syntax
+
 
 ## Common task naming
 
