@@ -205,6 +205,7 @@ nav:
               - os/debian-linux/index.md
               - Install: os/debian-linux/install.md
               - Post Install: os/debian-linux/post-install.md
+              - Install via GitHub release: os/debian-linux/install-via-github-release.md
           - Ubuntu: os/ubuntu-linux.md
           - Hyprland:
               - os/linux/hyprland/index.md
