@@ -177,6 +177,18 @@ Install via OS package manager (Debian, Arch, etc)
 [nnn.nvim plugin](https://github.com/luukvbaal/nnn.nvim){target=_blank}
 
 
+### Vifm Vim-like file manager
+
+[Vifm](https://vifm.info/){target=_blank} is a curses based Vim-like file manager extended with some useful ideas from mutt. Vifm uses common vim-style key bindings to navigate and manipulate files and directories.
+
+Vifm is [packaged for Linux/Unix based operating systems](https://github.com/vifm/vifm?tab=readme-ov-file#installation). An [AppImage is available](https://github.com/vifm/vifm?tab=readme-ov-file#appimage) if an OS package is not available.
+
+=== "Debian Linux"
+    ```shell
+    apt install vifm
+    ```
+
+
 ### igrep interactive grep
 
 [igrep](https://github.com/konradsz/igrep){target=_blank}
@@ -307,6 +319,23 @@ GPGTui for GPG interactive key management (listing/exporting/signing) with comma
 [oxker](https://github.com/mrjackwills/oxker){target=_blank} view and control docker containers.
 
 ![oxker in action ](https://github.com/mrjackwills/oxker/raw/main/.github/demo_01.webp){loading=lazy}
+
+
+### ttyper
+
+Test and enhance your typing skills. [Typer](https://github.com/max-niederman/ttyper){target=_blank} provides a detailed report of your typing skills.
+
+![Typer typing test and reports](https://github.com/max-niederman/ttyper/raw/main/resources/recording.gif){loading=lazy}
+
+
+### TTYPR
+
+[TTYPR](https://github.com/hotellogical05/ttypr){target=_blank} is a simple, lightweight typing practice application.
+
+![TTYPR in action](https://github.com/hotellogical05/ttypr/raw/main/images/preview.gif){loading=lazy}
+
+Installed via Rust Cargo package manager.
+
 
 
 [](){target=_blank}
