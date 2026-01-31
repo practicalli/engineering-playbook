@@ -9,3 +9,9 @@ Organising work priorities can be very complex and have many stakeholders with d
 Time is also a major stakeholder in every engineering project.
 
 - [Rolling Wave Planning](rolling-wave-planning.md) iterative approach to planning, also referred to as 30/60/90 planning.
+- [Real Options]() - decision making tool to manage risk
+
+
+
+
+### Example: A new billing system
