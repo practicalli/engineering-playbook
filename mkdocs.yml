@@ -261,6 +261,8 @@ nav:
       - JavaScript:
           - programming-languages/javascript/index.md
           - programming-languages/javascript/nodejs.md
+      - Rust:
+          - programming-languages/rust/index.md
   - Source Control:
       - source-control/index.md
       # - source-control/git-overview.md
