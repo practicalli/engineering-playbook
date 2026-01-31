@@ -9,7 +9,7 @@ Scripts can be written to download these assets and place them in a suitable loc
 - Shared for all users: `/usr/local/bin`
 - Only for current user: `$HOME/.local/bin`
 
-> NOTE: An account with administrative privelleges (root or user with `sudo` group) is required to install in `/usr/local/bin`
+> NOTE: An account with administrative privileges (root or user with `sudo` group) is required to install in `/usr/local/bin`
 
 ---
 
