@@ -10,6 +10,19 @@ TUI's tend to use a lot less resources and therefore perform very well, regardle
 
     [NCurses - Wikipedia](https://en.wikipedia.org/wiki/Ncurses){target=_blank .md.button}
 
+??? TIP "Link to latest GitHub release"
+    Use this form to link to a specific asset for the latest release of a GitHub project.
+
+    ```shell
+    https://github.com/account/repository/releases/latest/download/asset-filename.extension
+    ```
+
+    [GitHub releases - link to releases](https://docs.github.com/en/repositories/releasing-projects-on-github/linking-to-releases){.md-button}
+
+??? TIP "DRA - Download Release Assets from GitHub"
+
+    [DRA - Download Release Assets from GitHub](https://github.com/devmatteini/dra){.md-button}
+
 
 ## Disk Management
 
