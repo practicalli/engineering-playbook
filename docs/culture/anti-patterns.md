@@ -12,7 +12,7 @@ Introducing perks like video game consoles, pool tables, etc can provide some ba
 
 Perks are separate from the work that people are doing so serve as a distraction to help people wind-down.
 
-Howerver, perks alone are very limited as they are not connected to the work and not really part of an effective culture.  
+Howerver, perks alone are very limited as they are not connected to the work and not really part of an effective culture.
 
 Perks can also be a source of division and conflict, especially when they are made overly competitive or not equally accessible.
 
@@ -91,13 +91,55 @@ Eventually the stakeholder said: "Its just insurance, there isnt any difference"
 
 It was a few days after that revelation I started planning on an exit strategy from the company.  Six months later, I had left and out of the original 164 people in the IT department, only 9 people remained.  The company had been aquired by stakeholders who knew what they valued, selling off much of the company they did not value.
 
-!!! INFO "Macheaveleon Culture"
-    A focus on gaining individual power through manipulation and control, with the precept that it is for the greater prosperity of those being controlled.
+## Machiavellian Culture
 
-    [The Machiavellian Manager - lead with cunning & Wisdom](https://www.machiavellianmastery.com/post/the-machiavellian-manager-how-to-lead-with-cunning-and-wisdom){target=_blank .md-button} 
+A focus on gaining individual power through manipulation and control, with the precept that it is for the greater prosperity of those being controlled.
 
-    [how to deal with a Machiavellian boss](https://theconversation.com/manipulative-distrustful-self-serving-how-to-deal-with-a-machiavellian-boss-209210){target=_blank .md-button} 
+"The Machiavellian Manager: How to Lead with Cunning and Wisdom" is a leadership approach based on the principles of Niccolò Machiavelli's The Prince.
 
-    [Adopting Machiavellian Survival Tactics](https://www.linkedin.com/pulse/adopting-machiavellian-survival-tactics-workplace-shoobridge-ph-d-){target=_blank .md-button} 
+It advocates for a pragmatic, often ruthless, strategy focused on maintaining power, achieving results, and navigating corporate politics through deception, strategic alliances, and the ability to appear virtuous while acting otherwise.
 
-    [Machiavellian Leader Effectiveness: The Moderating Role of Political Skill](https://psycnet.apa.org/fulltext/2021-87833-001.html){target=_blank .md-button} 
+### Core Leadership Philosophy
+
+- The Fox and the Lion: A leader must be a fox to recognize traps and a lion to frighten away wolves. This means balancing cunning, strategic intelligence with strength and decisiveness.
+- Ends Justify the Means: The ultimate goal is to maintain power and achieve results; the methods, even if ruthless or manipulative, are justified by the success of the outcome.
+- Feared vs. Loved: It is safer to be feared than loved, if one cannot be both. Fear ensures stability and control, whereas reliance on affection can lead to exploitation.
+- Adaptability (Virtù): A leader must be flexible, adapting to changing circumstances rather than sticking to a rigid, moralistic path.
+
+### Tactics for Success
+
+- Mastering Perception: Cultivate an image of strength, wisdom, and virtue, regardless of your true actions. Optics are a critical tool for maintaining power.
+- Strategic Alliances: Form alliances to bolster your position, but remain cautious and do not fully trust partners, as alliances can be fleeting.
+- Divide and Rule: Weaken internal rivals by causing divisions among them, and prevent them from uniting.
+- Controlling Information: Keep competitors off-balance by withholding information and manipulating the flow of communication.
+
+### The Role of Wisdom
+
+- Understanding Human Nature: Acknowledge that people are often driven by self-interest and cannot always be trusted.
+- Strategic Foresight: Think in seasons, not seconds; plan for the long-term, not just immediate gratification.
+- Surrounding Yourself with Competence: Hire the best people, even those smarter than you, to ensure the success of your organization.
+
+### Modern Application and Risks
+
+While this style can be effective in high-stakes, competitive environments, it often creates a toxic, high-stress, and unethical workplace. It can lead to high employee turnover and damage long-term organizational health.
+
+### How to deal with a Machiavellian boss?
+
+An effective strategy to address Machiavellian individuals is to foster a culture of open communication and transparency.
+
+Create an environment where honesty and integrity are valued and it is more difficult for manipulative behaviors to thrive.
+
+### Strategies to Stop Manipulation
+
+- Set boundaries immediately and stick to them, e.g. saying no.
+- Don't ignore the situation as it will only get worse.
+- Structure your interaction, e.g. use written communication and make notes of what was said. If verbal communication is required, create a script that is to the point and avoid being diverted into other points or arguments
+- Be cautious about who you trust. When one person in power trades on manipulation it can quickly infect the company culture.
+- If manipulation is not stopped immediately, start planning a move on from the role
+- A Human Resource team has a primary role to protect the company they work for, over the needs of an individual if concerns diverge.
+
+[how to deal with a Machiavellian boss](https://theconversation.com/manipulative-distrustful-self-serving-how-to-deal-with-a-machiavellian-boss-209210){target=_blank .md-button}
+
+[Adopting Machiavellian Survival Tactics](https://www.linkedin.com/pulse/adopting-machiavellian-survival-tactics-workplace-shoobridge-ph-d-){target=_blank .md-button}
+
+[Machiavellian Leader Effectiveness: The Moderating Role of Political Skill](https://psycnet.apa.org/fulltext/2021-87833-001.html){target=_blank .md-button}
