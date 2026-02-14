@@ -73,6 +73,14 @@ Caligula is created with the [Rust Language](/engineering-playbook/programming-l
 
 ## OS Monitoring
 
+### Btop
+
+[Btop latest release - ](https://github.com/aristocratos/btop/releases/latest/btop-x86_64-linux-musl.tbz)
+
+
+https://github.com/aristocratos/btop/releases/latest/download/btop-x86_64-linux-musl.tbz
+
+
 ### Bottom Btm
 
 [bottom (btm)](https://github.com/ClementTsang/bottom){target=_blank} graphic process & system monitor.
