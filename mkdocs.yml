@@ -126,10 +126,7 @@ extra:
 
 # Navigation
 nav:
-  - Overview:
-      - index.md
-      - Contributing: introduction/contributing.md
-      - Writing Tips: introduction/writing-tips.md
+  - Overview: index.md
   - Build tool:
       - build-tool/index.md
       - build-tool/make.md
@@ -280,3 +277,5 @@ nav:
           - software-design/design-patterns/index.md
           - software-design/design-patterns/command-query-separation.md
           - software-design/design-patterns/cqrs.md
+  - Contributing: https://practical.li/contributing
+  - MkDocs Tips: https://practical.li/writing-tips/
