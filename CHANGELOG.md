@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+
+
 ### Added
 
 - github: sparse-checkout action example workflow
@@ -57,3 +59,13 @@
 - dev: rename `outdated` to `dependencies-outdated`
 - dev: actions/checkout@5 in all GitHub workflows
 - build-tool: extract common make tasks to section index
+- dev: update github actions via `make dependencies-outdated`
+
+| :file                                          | :name                   | :current | :latest |
+|------------------------------------------------|-------------------------|----------|---------|
+| .github/workflows/changelog-check.yaml         | actions/checkout        | v5       | v6.0.2  |
+| .github/workflows/megalinter.yaml              | actions/checkout        | v5       | v6.0.2  |
+|                                                | actions/upload-artifact | v4       | v7.0.1  |
+| .github/workflows/publish-book.yaml            | actions/cache           | v4       | v5.0.4  |
+|                                                | actions/checkout        | v5       | v6.0.2  |
+| .github/workflows/scheduled-version-check.yaml | actions/checkout        | v5       | v6.0.2  |
