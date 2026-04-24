@@ -16,7 +16,7 @@ Practicalli created a script to install Node.js via FNM on Linux. FNM is a fast 
 
     The install script is an extension of the Node.js install script, adding support for XDG_CONFIG_HOME and including a check of the Node.js version installed.
 
-    !!! "Install Nodejs via FNM"
+    !!! EXAMPLE "Install Nodejs via FNM"
         ```shell
         #!/usr/bin/env bash
 
@@ -81,6 +81,7 @@ Practicalli created a script to install Node.js via FNM on Linux. FNM is a fast 
 
         !!! INFO "Practicalli Debian Linux Post Install scripts"
             [Practicalli Dotfiles repository](https://github.com/practicalli/dotfiles){target=_blank} contains scripts to install a range of software development tools, TUI's, Programming Launguages and Linux system administration tools.
+
 
 === "MacOSX Homebrew"
 
