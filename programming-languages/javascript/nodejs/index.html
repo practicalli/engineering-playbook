@@ -5421,50 +5421,124 @@
 
 
 <h1 id="nodejs">Node.js<a class="headerlink" href="#nodejs" title="Permanent link">λ︎</a></h1>
-<p>Node.js is an environment to run JavaScript on the operating system, without the need for a browser.</p>
-<p>Node.js is useful for running JavaScript tools and server-side services.</p>
+<p>Node.js is an environment to run JavaScript without the need for a web browser.</p>
+<p>Node.js is useful for running JavaScript command line tools and server-side services.</p>
+<p>The Nodejs website provides <a href="https://nodejs.org/en/download" target="_blank">an install script tool that can use NVM, FNM, Docker or Homebrew</a> to install any version of Node.js.  Scripts are provided for Linux, MacOS and Windows operating systems.</p>
 <h2 id="install">Install<a class="headerlink" href="#install" title="Permanent link">λ︎</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Debian/Ubuntu</label><label for="__tabbed_1_2">MacOSX Homebrew</label></div>
+<p>Practicalli created a script to install Node.js via FNM on Linux. FNM is a fast and simple version manager for Node.js and adds itself to the system executable path.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Practicalli Script</label><label for="__tabbed_1_2">MacOSX Homebrew</label><label for="__tabbed_1_3">Manual Install</label><label for="__tabbed_1_4">Debian Packages</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>The nodejs package available in Ubuntu required a scary amount of dependencies, so it may be preferable to install nodejs locally, in your own account.  This does mean node is only available to this specific user account.</p>
-<details class="warning">
-<summary>Avoid nodejs debian packages when using Neovim Mason</summary>
-<p>Mason is a Neovim plugin to manage installation of LSP servers, format and lint tools.</p>
-<p>The debian packages potentially cause issues with Mason updates for specific format and lint tools.</p>
-<p>Install Node.js via the Linux archive available from the <a href="https://nodejs.org/" target="_blank">Nodejs Website - Download</a> </p>
-</details>
-<p><a class="md-button" href="https://nodejs.org/" target="_blank">Nodejs Website - Download</a> </p>
+<p>The install script is an extension of the Node.js install script, adding support for XDG_CONFIG_HOME and including a check of the Node.js version installed.</p>
+<p>!!! "Install Nodejs via FNM"
+    </p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/usr/bin/env bash</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># NOTE: run this script after setting up preferred shell, e.g. zsh</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># as the NVM script adds itself to the shell resource configuration</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">echo</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"# ---------------------------------------"</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"Nodejs install via Node Version Manager - FNM"</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Use argument as node version or use "24" if no argument passed</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nv">nodeversion</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">24</span><span class="si">}</span><span class="s2">"</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># Download and install fnm:</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># https://github.com/Schniz/fnm</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>curl<span class="w"> </span>-o-<span class="w"> </span>https://fnm.vercel.app/install<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># prevent duplication in your shell config file, pass --skip-shell to the install command:</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># Define location of FNM</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">"</span><span class="nv">$XDG_CONFIG_HOME</span><span class="s2">"</span>/fnm<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Source FNM script from XDG_DATA_HOME/fnm"</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="nv">FNM_PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$XDG_DATA_HOME</span><span class="s2">/fnm"</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="k">else</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Source NVM script from HOME/.local/share/fnm"</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="nv">FNM_PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/.local/share/fnm"</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">fi</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c1"># Source the FNM script</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">"</span><span class="nv">$FNM_PATH</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"</span><span class="nv">$FNM_PATH</span><span class="s2">:</span><span class="nv">$PATH</span><span class="s2">"</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">  </span><span class="c1"># eval "`fnm env`"  # shellcheck reports bad form</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">  </span><span class="nb">eval</span><span class="w"> </span><span class="s2">"</span><span class="k">$(</span>fnm<span class="w"> </span>env<span class="k">)</span><span class="s2">"</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="k">fi</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="c1"># Download and install Node.js:</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>fnm<span class="w"> </span>install<span class="w"> </span><span class="s2">"</span><span class="nv">$nodeversion</span><span class="s2">"</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="c1"># Verify the Node.js version:</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"Node.js version: </span><span class="k">$(</span>node<span class="w"> </span>-v<span class="k">)</span><span class="s2">"</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="c1"># Verify npm version:</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"NPM version: </span><span class="k">$(</span>npm<span class="w"> </span>-v<span class="k">)</span><span class="s2">"</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"# ---------------------------------------"</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="nb">echo</span>
+</code></pre></div><p></p>
+<div class="highlight"><pre><span></span><code>Run the script to install Node.js version 24.
+
+!!! "Install Nodejs version 24"
+```shell
+./nodejs-fnm-install.sh
+```
+
+Pass an argument to the script to install a specific version of Node.js
+
+!!! "Install Nodejs version 25"
+```shell
+./nodejs-fnm-install.sh 25
+```
+
+!!! INFO "Practicalli Debian Linux Post Install scripts"
+    [Practicalli Dotfiles repository](https://github.com/practicalli/dotfiles){target=_blank} contains scripts to install a range of software development tools, TUI's, Programming Launguages and Linux system administration tools.
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Install via <a href="https://brew.sh/">brew.sh</a> and the <a href="https://formulae.brew.sh/formula/node">Homebrew Formulae for node</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>brew<span class="w"> </span>install<span class="w"> </span>node
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><a class="md-button" href="https://nodejs.org/" target="_blank">Nodejs Website - Download</a></p>
 <p><a href="https://nodejs.org/">Download the relevant version of nodejs from the website</a>, either the Long Term Support version (recommended) or the latest release</p>
 <p>Create a suitable directory path to extract the downloaded nodejs archive to</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">$HOME</span>/.local/apps/nodejs/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">$HOME</span>/.local/apps/nodejs/
 </code></pre></div>
 <p>Extract the downloaded nodejs archive into this path</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>tar<span class="w"> </span>-Jvxf<span class="w"> </span>node-v20.7.0-linux-x64.tar.xz<span class="w"> </span>-C<span class="w"> </span><span class="nv">$HOME</span>/.local/apps/nodejs/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>tar<span class="w"> </span>-Jvxf<span class="w"> </span>node-v20.7.0-linux-x64.tar.xz<span class="w"> </span>-C<span class="w"> </span><span class="nv">$HOME</span>/.local/apps/nodejs/
 </code></pre></div>
 <blockquote>
 <p>The <code>tar</code> flag <code>-J</code> uses the XZ compression algorithm, <code>v</code> for verbose list of extracted files, <code>x</code> to extract all files, <code>f</code> to specify file (or remote file, tape drive)</p>
 </blockquote>
 <p>Create a symbolic link called current that points to the top level directory of the nodejs archive just unpacked, e.g. node-v<specific-version-number>
-</specific-version-number></p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ln -s node-v20.7.0-linux-x64 current
+</specific-version-number></p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ln -s node-v20.7.0-linux-x64 current
 </code></pre></div><p></p>
 <p>Add nodejs directory to the execution path, so that any additional node executables will automatically be included</p>
 <p>Edit the <code>~/.zshenv</code> file, adding a conditional path entry on the nodejs directory existing</p>
-<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">## Nodejs local install</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$HOME</span>/.local/apps/nodejs/current<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nv">path</span><span class="o">=(</span><span class="nv">$HOME</span>/.local/apps/nodejs/current/bin<span class="o">(</span>/N<span class="o">)</span><span class="w"> </span><span class="nv">$path</span><span class="o">)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">fi</span>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">## Nodejs local install</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-d<span class="w"> </span><span class="nv">$HOME</span>/.local/apps/nodejs/current<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nv">path</span><span class="o">=(</span><span class="nv">$HOME</span>/.local/apps/nodejs/current/bin<span class="o">(</span>/N<span class="o">)</span><span class="w"> </span><span class="nv">$path</span><span class="o">)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">fi</span>
 </code></pre></div>
 This example adds the nodejs bin directory at the start of the current executable path.<p></p>
 <p>Use <code>path+=($HOME/.local/apps/nodejs/current/bin(/N))</code> instead to append the nodejs bin directory to the end of the PATH.</p>
 <p>Open a new terminal to pick up the change or source the <code>.zshenv</code> file in an existing terminal</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">source</span><span class="w"> </span>~/.zshenv
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">source</span><span class="w"> </span>~/.zshenv
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>Install using brew.sh and the <a href="https://formulae.brew.sh/formula/node">Homebrew Formulae for node</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>brew<span class="w"> </span>install<span class="w"> </span>node
+<p>The stable release of Debian Linux, Trixie, packiages Node.js version 20.</p>
+<p>Node.js and Node Package Manager (NPM) are packaged separately.</p>
+<div class="admonition note">
+<p class="admonition-title">Install Node.js and NPM packages</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>apt<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>npm
 </code></pre></div>
+<blockquote>
+<p>NOTE: Debian Linux nodejs package has a large amount of dependencies. Practicalli recommends install Nodejs locally, in your own account.  This does mean node is only available to this specific user account.</p>
+</blockquote>
 </div>
 </div>
 </div>
@@ -5488,7 +5562,7 @@ This example adds the nodejs bin directory at the start of the current executabl
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 26, 2024 20:34:28 UTC">December 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 24, 2026 16:59:39 UTC">April 24, 2026</span>
   </span>
 
     
