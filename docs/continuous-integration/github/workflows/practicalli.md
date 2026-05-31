@@ -4,7 +4,7 @@ Practicalli books and other content websites use the following GitHub workflows.
 
 ## MegaLinter
 
-[:fontawesome-solid-book-open: Practicalli MegaLinter workflow](megalinter.md){.md-button}
+[:fontawesome-solid-book-open: Practicalli MegaLinter workflow](/continuous-integration/github/workflows/megalinter.md){.md-button}
 
 ## Changelog Update Check
 
