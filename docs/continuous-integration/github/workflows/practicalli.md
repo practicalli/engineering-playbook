@@ -339,51 +339,51 @@ Create a new release for any tag commit pushed to the GitHub repository.
 
 ## Zensical Doc Site
 
-Build and publish a Zenscial documentation project, only triggering after a successful run of the [:fontawesome-solid-book-open: MegaLinter workflow](megalinter.md) and if there is a change in one of the specified paths.
+Build and publish a Zenscial documentation project, only triggering after a successful run of the [:fontawesome-solid-book-open: MegaLinter workflow](/continuous-integration/github/workflows/megalinter.md) and if there is a change in one of the specified paths.
 
-```yaml
-# Workflow to conditionally publish a Zensical project
 
-name: Publish Zensical Docs
+!!! EXAMPLE "Conditionally publish a Zensical project"
+    ```yaml
+    name: Publish Zensical Docs
 
-on:
-  workflow_dispatch:  # Manually trigger workflow
+    on:
+      workflow_dispatch:  # Manually trigger workflow
 
-  # Run work flow conditional on linter workflow success
-  workflow_run:
-    workflows:
-      - "MegaLinter"
-    paths:
-      - 'docs/**'
-      - 'includes/**'
-      - 'overrides/**'
-      - 'mkdocs.yaml'
-      - 'zensical.toml'
-    branches:
-      - main
-    types:
-      - completed
+      # Run work flow conditional on linter workflow success
+      workflow_run:
+        workflows:
+          - "MegaLinter"
+        paths:
+          - 'docs/**'
+          - 'includes/**'
+          - 'overrides/**'
+          - 'mkdocs.yaml'
+          - 'zensical.toml'
+        branches:
+          - main
+        types:
+          - completed
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/configure-pages@v6
-      - uses: actions/checkout@v6
-      - uses: actions/setup-python@v6
-        with:
-          python-version: 3.x
-      - run: pip install zensical
-      - run: zensical build --clean
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: site
-      - uses: actions/deploy-pages@v5
-```
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    jobs:
+      deploy:
+        environment:
+          name: github-pages
+          url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/configure-pages@v6
+          - uses: actions/checkout@v6
+          - uses: actions/setup-python@v6
+            with:
+              python-version: 3.x
+          - run: pip install zensical
+          - run: zensical build --clean
+          - uses: actions/upload-pages-artifact@v5
+            with:
+              path: site
+          - uses: actions/deploy-pages@v5
+    ```
