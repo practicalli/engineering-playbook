@@ -176,6 +176,7 @@ nav:
       - Static Sites:
           - technical-writing/static-site/index.md
           - MkDocs: technical-writing/static-site/mkdocs.md
+          - Zensical: technical-writing/static-site/zensical.md
   - Operating Systems:
       - os/index.md
       - Command Line:
