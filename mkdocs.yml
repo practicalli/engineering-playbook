@@ -197,6 +197,7 @@ nav:
               - Scheduled tasks: os/command-line/commands/cron.md
       - TUI Apps:
           - os/tui/index.md
+          - os/tui/dra.md
       - Linux:
           - Overview: os/linux/index.md
           - Debian:
