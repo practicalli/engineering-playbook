@@ -39,7 +39,7 @@ Arch Linux has solid community support should a more involved operating system e
 ## Linux Desktop
 
 - i3 tiling window manager
-- [:fontawesome-solid-book-open: Hyprland](linux/hyprland.md) Wayland compositor and nwg-shell desktop for wayland and sway
+- [:fontawesome-solid-book-open: Hyprland](/os/linux/hyprland/index.md) Wayland compositor and nwg-shell desktop for wayland and sway
 
 ## Software development tools
 
