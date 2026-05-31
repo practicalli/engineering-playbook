@@ -43,6 +43,8 @@
 
 Zensical can be installed locally via vu or pip. Practicalli uses uv for simplicity.  Commands are wrapped in tasks defined within the `Makefile`.
 
+[UV Package Manager Install](/programming-languages/python/uv.md){target=_blank .md-button}
+
 === "Makefile"
 
     ```shell
