@@ -1,14 +1,21 @@
 # Zensical Static Site Generator
 
-[:globe_with_meridians: Zensical](https://github.com/zensical/zensical){target=_blank} is a Rust & Python tools for generating documentation sites from Markdown (potentially Common Mark).
+[:globe_with_meridians: Zensical](https://github.com/zensical/zensical){target=_blank} is a Rust & Python tools for generating documentation sites from Markdown (potentially Common Mark in future).
+
+UV Python Package Manager is used to [install Zensical as a tool](#install-zensical), negating the need for a Python Virtual environment
+
+`zensical.toml` is used to configure a project, defining plugins and navigation for the website.
+
+> NOTE: Zensical is a reimplementation and extension of Material for MkDocs and MkDocs itself.
 
 
-!!! "Practicalli Makefile tasks for Zensical projects"
+## Zensical Tasks
 
-    Practicalli defines common Makefile tasks for all Zensical projects, using UV to install Zensical as a tool.
+Practicalli defines tasks in a Makefile to manage every Zensical project.
 
 
-    !!! EXAMPLE "Makefile tasks for Zensical using UV"
+
+!!! EXAMPLE "Makefile tasks for Zensical using UV"
     ```make
     # -- Makefile Variables -------------------------- #
     DOCS_SERVER := zensical serve --dev-addr localhost:7777
