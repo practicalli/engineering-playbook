@@ -262,6 +262,7 @@ nav:
           - programming-languages/javascript/nodejs.md
       - Python:
           - programming-languages/Python/index.md
+          - UV: programming-languages/Python/uv.md
       - Rust:
           - programming-languages/rust/index.md
   - Source Control:
