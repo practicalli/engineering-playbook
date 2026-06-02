@@ -75,6 +75,7 @@ DISABLE_LINTERS:
   - REPOSITORY_SECRETLINT # reporting errors in its own config file
   # - REPOSITORY_DEVSKIM # unnecessary URL TLS checks
   - REPOSITORY_CHECKOV # fails on root user in Dockerfile
+  - REPOSITORY_OSV_SCANNER # fails due to not finding sources to check
   - REPOSITORY_SECRETLINT
 
 # Ignore all errors and return without error status
