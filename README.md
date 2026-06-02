@@ -72,53 +72,32 @@ Publish book workflow installs Material for MkDocs version 9
 
 ## Local development
 
-Material for MkDocs consists of a number of python package and a python virtual environment is the recommended approach.
+Zensical can be installed locally via vu or pip. Practicalli uses uv for simplicity.  Commands are wrapped in tasks defined within the `Makefile`.
 
-Practicalli creates a common python environment to support all the books and blogs it creates.
-
-```shell
-python -m venv ~/.local/venv
-```
-
-
-Install mkdocs version 9 using the Python pip package manager
+Clone the repository and change into the root of the project.
 
 ```shell
-~/.local/venv/bin/pip install mkdocs-material=="9.*"
+git clone https://github.com/practicalli/cycling
 ```
 
-Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
+Install Zensical as a tool using `uv` (updating if there is a new version).
 
 ```shell
-pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
+make docs-install
 ```
 
-> pillow and cairosvg python packages are required for [Social Cards](https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/)
-
-Fork the GitHub repository and clone that fork to your computer,
-
-```shell
-git clone https://github.com/<your-github-account>/<repository>.git
-```
-
-Run a local server from the root of the cloned project
+Build the website and serve locally at [http://localhost:8000](http://localhost:8000)
 
 ```shell
 make docs
 ```
 
-If not using make, then run
+---
+
+Specific command if now using make:
+
+Create a virtual python in the root of the project.
 
 ```shell
-source ~/.local/venv/bin/activate && mkdocs serve --dev-addr localhost:7777
+uv tool install zensical --upgrade
 ```
-
-The website will open at <http://localhost:7777>
-
-If making smaller changes, then only rebuild the content that changes, speeding up the local development process
-
-```shell
-make docs-changed
-```
-
-> NOTE: navigation changes may not be correctly reflected without reloading the page in the web browser or carrying out a full `make docs` build
