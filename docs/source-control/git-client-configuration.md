@@ -18,6 +18,13 @@ An identity is required when sharing commits via services such as GitHub/GitLab 
 
 Define your git identity using the following commands in a terminal window
 
+!!! NOTE "Configure Identity via the command line"
+    ```shell
+    git config --global user.name "practicalli-johnny"
+
+    git config --global user.email ***+github-account@noreply.github.com
+    ```
+
 ??? HINT "Use the GitHub Email Mask address"
     To minimise Email spam, use the [email address provided by GitHub as a mask to your primary email address](https://github.com/settings/emails) on the GitHub account.  The mask address is of the form `***+github-account@noreply.github.com`.
 
@@ -27,11 +34,6 @@ Define your git identity using the following commands in a terminal window
 
     For additional security, select the option **Block command line pushes that expose my email** to prevent commits being pushed to GitHub using your public email address.
 
-```shell
-git config --global user.name "practicalli-johnny"
-
-git config --global user.email ***+github-account@noreply.github.com
-```
 
 The `[user]` section of the Git configuration file is updated by these commands, automatically creating the file and section if it does not exist.
 
@@ -41,14 +43,14 @@ The `[user]` section of the Git configuration file is updated by these commands,
     [user]
      name = Practicalli Johnny
 
-        # add email to Personal GitHub account via Settings > Email
-     email = "johnny@clojure.inc"
+    # add email to Personal GitHub account via Settings > Email
+    email = "practicalli-johnny@users.noreply.github.com"
 
-    ## Identity for using GitHub API
+    # Identity for using GitHub API
     [github]
      user = practicalli-johnny
 
-    ## SSH Keys - add key passphrase to MacOSX key chain
+    # SSH Keys - add key passphrase to MacOSX key chain
     [credential]
         helper = osxkeychain
     ```
@@ -63,11 +65,11 @@ When working on a mixture of commercial and Open Source projects, configure the 
 
     # Default identity configuration
     [include]
-      path = ~/.config/git/identity-practicalli-johnny
+      path = ~/.config/git/identity
 
     # Override identify for specific directories
-    [includeIf "gitdir:~/projects/identity-clojure-inc"]
-      path = ~/.config/git/identity-clojure-inc
+    [includeIf "gitdir:~/projects/practicalli"]
+      path = ~/.config/git/identity-practicalli-johnny
     ```
 
 ??? INFO "MacOSX Path expansion not working"
@@ -76,7 +78,7 @@ When working on a mixture of commercial and Open Source projects, configure the 
 Included configure file with company identity.
 
 ??? EXAMPLE "Git Clone alias"
-    ```shell title=".config/git/identity-clojure-inc"
+    ```shell title=".config/git/identity-practicalli-johnny"
     ## ------ Company Identity ------ ##
     # Add details for specific company identity
 
@@ -85,7 +87,7 @@ Included configure file with company identity.
      name = Practicalli Johnny
 
         # add email to Personal GitHub account via Settings > Email
-     email = "johnny@clojure.inc"
+     email = "practicalli-johnny@users.noreply.github.com"
 
     ## Identity for using GitHub API
     [github]
@@ -125,7 +127,7 @@ SSH Keys provide a secure way to authorise requests to a shared service and veri
 [:fontawesome-brands-github: Add SSH key to GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/){target=_blank .md-button}
 
 
-## Add SSH key to Keychain
+### Add SSH key to Keychain
 
 Add Git SSH key passphrase to Operating System keychain to avoid typing in the passphrase each time a Git command interacts with a remote repository.
 
@@ -259,6 +261,8 @@ Automatically sign commits and tags when creating a commit
 
 ### Allowed SSH keys
 
+Check the SSH key used to sign a local commit or tag was a known key, before pushing to a shared repository.
+
 The `--show-signature` flag with Git `log` and `show` commands checks the contents of the `gpg.ssh.allowedSignersFile` to know which keys are valid
 
 Create an `$HOME/.config/git/allowed-signatures` file to list the SSH keys that you wish to define as allowed to sign commits.
@@ -276,6 +280,10 @@ Set the `gpg.ssh.allowedSignersFile` file in the Git Configuration
     When using different SSH keys across multiple computers, add all public keys to the `allowed-signatures` file.
 
     Use a secret GitHub gist if you do not wish to add public keys to a shared git repository for the Git configuration.
+
+??? INFO "Editor based Git Clients should show status of SSH Key"
+    Git clients like Magit (Emacs) and Neogit (Neovim) show if a commit has been signed with an SSH key that has a fingerprint in the `gpg.ssh.allowedSignersFile`.
+
 
 ## Clone aliases for a GitHub domain
 
