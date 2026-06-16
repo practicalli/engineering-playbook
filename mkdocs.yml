@@ -270,6 +270,7 @@ nav:
       # - source-control/git-overview.md
       - source-control/git-client-configuration.md
       - source-control/git-concepts.md
+      - source-control/git-ignore.md
       - source-control/git-status.md
   - Software Design:
       - software-design/index.md
