@@ -267,11 +267,15 @@ nav:
           - programming-languages/rust/index.md
   - Source Control:
       - source-control/index.md
-      # - source-control/git-overview.md
+      - source-control/git-overview.md
       - source-control/git-client-configuration.md
+      - source-control/git-concepts.md
       - source-control/git-concepts.md
       - source-control/git-ignore.md
       - source-control/git-status.md
+      - source-control/pull-request.md
+      - source-control/personal-access-token.md
+      - source-control/github.md
   - Software Design:
       - software-design/index.md
       - Anti-patterns: software-design/anti-patterns/index.md
