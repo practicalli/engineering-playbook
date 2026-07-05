@@ -26,7 +26,14 @@ Install UV via the provided install script, or from the latest GitHub release us
 
 === GitHub Release (DNA)
 
-    Install UV from the latest GitHub Release, using [DRA]().
+    Install UV from the latest GitHub Release, using [DRA](https://github.com/devmatteini/dra){target=_blank}.
+
+    The UV GitHub Release is packages as a `.tar.gz` file that includes `uv` and `uvx` executables.  Both of these executables should be installed to use UV completely.
+
+    The DRA tool by default extracts a single file when installing from a tar or zip archive.
+
+    DRA can install multiple executables from a tar or zip archive using the `-I`/ `--install-file` option.  The option should be specified for each file to be extracted
+
 
     !!! EXAMPLE "Bash script to install UV latest release"
         ```script
@@ -34,7 +41,7 @@ Install UV via the provided install script, or from the latest GitHub release us
 
         echo "# ---------------------------------------"
         echo "UV python package manager"
-        dra download --automatic --install --output ~/.local/bin/ astral-sh/uv
+        dra download --automatic --install-file uv --install-file uvx --output ~/.local/bin/ astral-sh/uv
 
         echo
         echo "Uv version: $(uv --version)"
