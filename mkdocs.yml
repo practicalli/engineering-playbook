@@ -170,13 +170,6 @@ nav:
       - culture/burnout.md
       - culture/documentation.md
       - culture/leadership.md
-  - Documentation:
-      - technical-writing/index.md
-      - technical-writing/techniques.md
-      - Static Sites:
-          - technical-writing/static-site/index.md
-          - MkDocs: technical-writing/static-site/mkdocs.md
-          - Zensical: technical-writing/static-site/zensical.md
   - Operating Systems:
       - os/index.md
       - Command Line:
@@ -287,5 +280,12 @@ nav:
           - software-design/design-patterns/index.md
           - software-design/design-patterns/command-query-separation.md
           - software-design/design-patterns/cqrs.md
+  - Technical Writing:
+      - technical-writing/index.md
+      - technical-writing/techniques.md
+      - Static Sites:
+          - technical-writing/static-site/index.md
+          - MkDocs: technical-writing/static-site/mkdocs.md
+          - Zensical: technical-writing/static-site/zensical.md
   - Contributing: https://practical.li/contributing
   - MkDocs Tips: https://practical.li/writing-tips/
