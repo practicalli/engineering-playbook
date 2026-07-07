@@ -143,7 +143,7 @@ unique_name_id = container "Service or data store name" "Description of service 
 ```
 
 ??? INFO "Tags and themes"
-    Tags are used to define the appearance in a view.  Structurizr default theme contains simple tags.  Amazon AWS theme contains a wide range of icons and styles to represent its many services, although these are more suitable for deploymentEnvironment views.  [Adding themes section](#themes) covers this in more detail.
+    Tags are used to define the appearance in a view.  Structurizr default theme contains simple tags.  Amazon AWS theme contains a wide range of icons and styles to represent its many services, although these are more suitable for deploymentEnvironment views.  [Adding themes section](#adding-themes) covers this in more detail.
 
 For a persistent store, e.g. relational database, use the form
 
@@ -157,7 +157,7 @@ For an elastic search service, use the form
 unique_name_id = container "Display name" "Description of service or database" "Elastic Search" "Elastic"
 ```
 
-simple example
+### Simple example
 
 * Create a model with a user and a software system, where the user uses the software system.
 * Create a system context view for the software system, adding the default set of elements, using auto-layout.

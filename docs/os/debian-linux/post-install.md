@@ -44,24 +44,24 @@ su -
         ```config title="/etc/apt/sources.list"
         deb http://deb.debian.org/debian/ trixie main non-free-firmware
         deb-src http://deb.debian.org/debian/ trixie main non-free-firmware
-    
+
         deb http://security.debian.org/debian-security trixie-security main non-free-firmware
         deb-src http://security.debian.org/debian-security trixie-security main non-free-firmware
         ```
-    
+
         Additionally add `contrib` and `non-free` packages for access to even more packages (some of which are not open source)
-    
+
         ```config
         deb http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
         deb-src http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware
-    
+
         deb http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
         deb-src http://security.debian.org/debian-security trixie-security main contrib non-free non-free-firmware
         ```
 
 ## Regolith Desktop
 
-[Regolith Desktop](/engineering-playbook/os/linux/regolith/index.md) provides a full desktop environment based on i3 Tiling window manager and Gnome Desktop apps.
+[Regolith Desktop](../linux/regolith.md) provides a full desktop environment based on i3 Tiling window manager and Gnome Desktop apps.
 
 
 ## Configure shell
@@ -391,26 +391,27 @@ The tracker has many dependencies, so its not easy to remove the `tracker-miner-
 
 The recommended approach is to edit the `.desktop` files and add `Hidden=true` at the end of each tracker related file and reboot the operating system.
 
-```config title="/etc/xdg/autostart/tracker-miner-fs-3.desktop"
-[Desktop Entry]
-Name=Tracker File System Miner
-Comment=Crawls and processes files on the file system
-Exec=/usr/libexec/tracker-miner-fs-3
-Terminal=false
-Type=Application
-Categories=Utility;
-X-GNOME-Autostart-enabled=false
-X-GNOME-HiddenUnderSystemd=false
-# X-KDE-autostart-after=panel
-X-KDE-StartupNotify=false
-X-KDE-UniqueApplet=true
-NoDisplay=true
-OnlyShowIn=GNOME;KDE;XFCE;X-IVI;Unity;
-X-systemd-skip=true
-Hidden=true
-```
+!!! EXAMPLE "Disable Tracker Miner with Desktop config"
+    ```config title="/etc/xdg/autostart/tracker-miner-fs-3.desktop"
+    [Desktop Entry]
+    Name=Tracker File System Miner
+    Comment=Crawls and processes files on the file system
+    Exec=/usr/libexec/tracker-miner-fs-3
+    Terminal=false
+    Type=Application
+    Categories=Utility;
+    X-GNOME-Autostart-enabled=false
+    X-GNOME-HiddenUnderSystemd=false
+    # X-KDE-autostart-after=panel
+    X-KDE-StartupNotify=false
+    X-KDE-UniqueApplet=true
+    NoDisplay=true
+    OnlyShowIn=GNOME;KDE;XFCE;X-IVI;Unity;
+    X-systemd-skip=true
+    Hidden=true
+    ```
 
-If adding "Hiddent=true" is not sufficient, then disable the services for all users by setting them to `/dev/null` using the `systemctl` command.
+If adding "Hidden=true" is not sufficient, then disable the services for all users by setting them to `/dev/null` using the `systemctl` command.
 
 ```shell
 sudo systemctl --global mask tracker-miner-fs-3.service

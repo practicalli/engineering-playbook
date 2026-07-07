@@ -8,13 +8,13 @@ Build tools can support a wide range of development tasks and provide a [common 
 - `dist` creates a package of the software for distribution to others to install
 - `clean` removes files created during the build
 
-[GNU Make](make.md) is a long established tool that can be used to run any command line task.  Tasks are defined in a `Makefile` which is very expressive and simple to follow.
+[GNU Make](./make/index.md) is a long established tool that can be used to run any command line task.  Tasks are defined in a `Makefile` which is very expressive and simple to follow.
 
 
 ## Tool Summary
 
-- [GNU make](make.md) - language agnostic build tool, define any tasks
-- [babashka task runner](babashka-task-runner.md) - write a build tool using Clojure syntax
+- [GNU make](./make/index.md) - language agnostic build tool, define any tasks
+- [babashka task runner](./babashka-task-runner.md) - write a build tool using Clojure syntax
 
 
 ## Common task naming

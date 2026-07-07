@@ -6,7 +6,7 @@ Intentionally acquiring technical debt can have significant business value if mo
 
 Inadvertently acquiring debt beyond the capability of a team leads to spiralling debt, increasingly limiting the ability to get work done.
 
-Unresolved debt leads to feature delivery delays, hidden risks, spiraling project costs, engineer burnout and eventually leaving in frustration.  
+Unresolved debt leads to feature delivery delays, hidden risks, spiraling project costs, engineer burnout and eventually leaving in frustration.
 
 Engineers use the term technical debt to communicate tasks are needed to improving the current system, along-side tasks only focused on business features. Naturally a system upon which teams can deliver timely features has intrinsic value for the business and its customers.
 
@@ -15,12 +15,12 @@ As a metaphor, technical debt has grown to reflect any issue having a negative i
 ??? INFO "Technical Debt original definition - Ward Cunningham, 1992, OOPSLA Conference"
     Ward Cunningham suggested technical debt could be a benefit.  An engineer creates a quick solution with limited understanding of the problem, with the intention to rewrite the code once understanding had improved and alleviate the debt.
 
-    The danger occurs when the debt is not repaid. Every minute spent on code that is not quite right for the programming task of the moment counts as interest on that debt. 
+    The danger occurs when the debt is not repaid. Every minute spent on code that is not quite right for the programming task of the moment counts as interest on that debt.
 
     Entire engineering organizations can be brought to a stand-still under the debt load of an unfactored implementation, object-oriented or otherwise.
 
 ??? INFO "Comparison to financial debt"
-    A debt is a value gained that must be repaid along with the accumulated interest over the duration of the debt.  
+    A debt is a value gained that must be repaid along with the accumulated interest over the duration of the debt.
 
     Aquiring debt can be a wise investment in the future or become an increasingly unsustainable cost.
 
@@ -63,7 +63,7 @@ Identifying debt and its risks can be time-consuming, so start by apply simple t
 
 When the driving factors of technical debt are understood, organisations can choose an appropriate level of technical debt and carefully manage it as part of the software development workflow.
 
-Project management and engineering teams should agree on what constitutes technical debt and balance the value provided by the debt with its detrimental effects.  
+Project management and engineering teams should agree on what constitutes technical debt and balance the value provided by the debt with its detrimental effects.
 
 Consider these aspects when reviewing the technical debt of a project:
 
@@ -79,7 +79,7 @@ The collective positive and negative effects of technical debt are specific to a
 
 ## References
 
-The McKinsey survey shows it is common to have 20% of technical budgets diverted to resolving issues related to technical debt. [1]
+The McKinsey survey shows it is common to have 20% of technical budgets diverted to resolving issues related to technical debt.
 
   1. [Demystifying digital dark matter: A new standard to tame technical debt](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/demystifying-digital-dark-matter-a-new-standard-to-tame-technical-debt)
 

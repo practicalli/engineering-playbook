@@ -31,7 +31,7 @@ Slack time should be included in plans to allow for unexpected challenges and to
 ??? HINT "Prevent Burnout by having a long-term view"
     One cause of Engineer burnout is continous sequence of deadlines, espcially when there are less than realistic time-frames involved.
 
-    Establishing a longer-term view of project work allows managers to realistically plan the work at realistic schedules for the engineering teams.  
+    Establishing a longer-term view of project work allows managers to realistically plan the work at realistic schedules for the engineering teams.
 
     Engineers gain an appreciation of the longer term work and consider designs that are more likely to optomise the amout of work required to deliver successive projects over time.
 
@@ -68,7 +68,7 @@ Highlight deadlines and interconnected work and devise a specific assignment of 
 
 Quickly review the plan for the current iteration (wave).
 
-Feedback on assumptions as more is learned about the work whilst doing the work.  
+Feedback on assumptions as more is learned about the work whilst doing the work.
 
 As the team commences work, the manager starts to plan the next wave and updates the relevant stakeholders.
 
@@ -87,12 +87,12 @@ When the project or feature has been delivered, conduct a post mortem retrospect
 - what to do more of
 - what to do less of
 
-[Run a retrospective](retrospective.md){.md-button}
+[Run a retrospective](../discussions/retrospective.md){.md-button}
 
-## Managing Uncertanty
+## Managing Uncertainty
 
 Rolling wave plan is an effective way to manage high levels of uncertainty and risk.
 
-Taking an incremental approach provides regular analysis and feedback into the project plans, allowing timely changes and supporting considerable piviots in direction.
+Taking an incremental approach provides regular analysis and feedback into the project plans, allowing timely changes and supporting considerable pivots in direction.
 
-Progress of the plan should be monitored and challenges identified quickly so that enough time is available to make considered changes to the plan, with the conseus and understanding from the wider team.
+Progress of the plan should be monitored and challenges identified quickly so that enough time is available to make considered changes to the plan, with the consensus and understanding from the wider team.

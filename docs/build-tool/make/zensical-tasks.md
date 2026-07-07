@@ -1,6 +1,6 @@
 # Zensical tasks
 
-[Zensical](/technical-writing/static-site/zensical.md) is a static site generator that provides a rich authoring system to create excellent usability experience.
+[Zensical](../../technical-writing/static-site/zensical.md) is a static site generator that provides a rich authoring system to create excellent usability experience.
 
 All Practicalli Books are switching to Zensical in 2026, migrating from Material for MkDocs.
 

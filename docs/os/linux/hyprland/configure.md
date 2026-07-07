@@ -40,7 +40,7 @@ Waybar
 
 ## Workspaces
 
-A workspace is of of 10 numbered screen [1 to 0] within the hyprland virtual desktop.
+A workspace is of of 10 numbered screen (1 to 0) within the hyprland virtual desktop.
 
 ++super+1++ switches focus to workspace number 1, replacing the current workspace if number 1 was not being displayed.
 

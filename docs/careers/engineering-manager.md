@@ -25,7 +25,7 @@ The essence of the role is to ensure engineers:
 
 ## Meetings
 
-[one to one](/engineering-playbook/practices/discussions/one-to-one-meeting.md) are regularly held with direct reports and those people the engineering manager reports to, ensuring there is good working relationship between the respective people.
+[one to one](../practices/discussions/one-to-one-meeting.md) are regularly held with direct reports and those people the engineering manager reports to, ensuring there is good working relationship between the respective people.
 
 - direct reports focus on supporting that persons ability to thrive within the company and identify actions to help
 
@@ -33,8 +33,8 @@ The essence of the role is to ensure engineers:
 
 Engineering team meetings may occasionally be joined to review how effective the format is to those involved, or should a wider issue be addressed (especially in retrospectives)
 
-- [standup](/engineering-playbook/practices/discussions/standup.md) can highlight issues with motivation and team cohesiveness
-- [retrospective](/engineering-playbook/practices/discussions/retrospective.md) can help identify action items that the engineering manager can actively support or help direct others to support
+- [standup](../practices/discussions/standup.md) can highlight issues with motivation and team cohesiveness
+- [retrospective](../practices/discussions/retrospective.md) can help identify action items that the engineering manager can actively support or help direct others to support
 
 !!! HINT "Performance reviews supported by one-to-one meetings"
     Where performance reviews are applicable, include the review as an aspect to raise with one-to-one meetings with direct reports throughout the year.

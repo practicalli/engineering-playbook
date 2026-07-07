@@ -4,7 +4,7 @@ Practicalli books and other content websites use the following GitHub workflows.
 
 ## MegaLinter
 
-[:fontawesome-solid-book-open: Practicalli MegaLinter workflow](/continuous-integration/github/workflows/megalinter.md){.md-button}
+[:fontawesome-solid-book-open: Practicalli MegaLinter workflow](./megalinter.md){.md-button}
 
 ## Changelog Update Check
 
@@ -339,7 +339,7 @@ Create a new release for any tag commit pushed to the GitHub repository.
 
 ## Zensical Doc Site
 
-Build and publish a Zenscial documentation project, only triggering after a successful run of the [:fontawesome-solid-book-open: MegaLinter workflow](/continuous-integration/github/workflows/megalinter.md) and if there is a change in one of the specified paths.
+Build and publish a Zenscial documentation project, only triggering after a successful run of the [:fontawesome-solid-book-open: MegaLinter workflow](./megalinter.md) and if there is a change in one of the specified paths.
 
 
 !!! EXAMPLE "Conditionally publish a Zensical project"

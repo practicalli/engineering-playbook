@@ -40,13 +40,13 @@ Install options:
 - Arch Linux package `pacman -S caligula`
 - Debian Linux has a [request to package](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1089012) discussion
 
-Caligula is created with the [Rust Language](/engineering-playbook/programming-languages/rust/index.md) and can be installed via the `caligula` crate.
+Caligula is created with the [Rust Language](../../programming-languages/rust/index.md) and can be installed via the `caligula` crate.
 
 ![Caligula copying an image to /dev/sdb](https://github.com/ifd3f/caligula/raw/main/images/verifying.png){loading=lazy}
 
 ### ncdu disk usage
 
-[ncdu](https://terminaltrove.com/ncdu/) is an ncurses disk usage analyzer.
+[ncdu](https://terminaltrove.com/ncdu/){target=_blank} is an ncurses disk usage analyzer.
 
 === "Debian Linux"
 
@@ -132,14 +132,14 @@ A Git client...
 
 ### fx json navigator
 
-[fx] for viewing and effectively navigating JSON.  A TUI version of `jq`.
+[fx](https://fx.wtf/){target=_blank} for viewing and effectively navigating JSON.  A TUI version of `jq`.
 
 ![Fx navigating JSON data](https://cdn.terminaltrove.com/m/34e03e9f-e7fc-4a99-8eb2-432d57291b25.gif){loading=lazy}
 
 
 ### jwt-ui
 
-[jwt-ui](https://github.com/jwt-rs/jwt-ui) Decoding and encoding JSON Web Tokens, for inspecting and debugging.
+[jwt-ui](https://github.com/jwt-rs/jwt-ui){target=_blank} Decoding and encoding JSON Web Tokens, for inspecting and debugging.
 
 [:fontawesome-brands-github: GitHub releases](https://github.com/jwt-rs/jwt-ui/releases){target=_blank .md-button}
 

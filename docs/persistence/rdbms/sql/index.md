@@ -4,7 +4,7 @@ SQL is a domain-specific language designed for managing data held in a relationa
 
 SQL data incorporates relations among entities and variables.
 
-Originally based upon [relational algebra](https://en.wikipedia.org/wiki/Relational_algebra) and [tuple relational calculus](https://en.wikipedia.org/wiki/Tuple_relational_calculus), SQL consists of many types of statements,[6] which may be informally classed as sublanguages, commonly:
+Originally based upon [relational algebra](https://en.wikipedia.org/wiki/Relational_algebra) and [tuple relational calculus](https://en.wikipedia.org/wiki/Tuple_relational_calculus), SQL consists of many types of statements, which may be informally classed as sublanguages, commonly:
 
 - [data query language (DQL)](https://en.wikipedia.org/wiki/Data_query_language)
 - [data definition language (DDL)](https://en.wikipedia.org/wiki/Data_query_language) (schema creation and modification)
