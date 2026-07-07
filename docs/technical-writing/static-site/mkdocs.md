@@ -2,10 +2,5 @@
 
 MkDocs is a python tools for generating documentation sites from Markdown.
 
-## install
-
-## Additional Plugins
-
-## GitHub workflow
-
-## Reference
+!!! WARNING "Practicalli is migrating to Zensical"
+    [Zensical Static Site Generator](zensical.md){.md-button}
