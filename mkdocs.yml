@@ -129,7 +129,11 @@ nav:
   - Overview: index.md
   - Build tool:
       - build-tool/index.md
-      - build-tool/make.md
+      - Makefile:
+          - build-tool/make/index.md
+          - build-tool/make/practicalli-tasks.md
+          - build-tool/make/zensical-tasks.md
+          - build-tool/make/clojure-project-tasks.md
       - build-tool/babashka-task-runner.md
   - Careers:
       - careers/index.md

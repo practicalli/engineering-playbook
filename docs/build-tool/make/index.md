@@ -122,7 +122,7 @@ Although unlikely, if a filename in the root of a project has the same name as a
 .PHONY: all lint deps test test-ci dist clean
 ```
 
-> Reference: [:fontawesome-solid-book-open: Makefile Tutorial: phony](https://makefiletutorial.com/#phony){target=_blank .md-button}
+[:fontawesome-solid-book-open: Makefile Tutorial: phony](https://makefiletutorial.com/#phony){target=_blank .md-button}
 
 ## Halt on failure
 
@@ -133,7 +133,7 @@ Although unlikely, if a filename in the root of a project has the same name as a
 all: deps test-ci dist clean
 ```
 
-> Reference: [:fontawesome-solid-book-open: Makefile Tutorial:  delete_on_error](https://makefiletutorial.com/#delete_on_error){target=_blank .md-button}
+[:fontawesome-solid-book-open: Makefile Tutorial:  delete_on_error](https://makefiletutorial.com/#delete_on_error){target=_blank .md-button}
 
 ## References
 
