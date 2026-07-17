@@ -15,7 +15,6 @@ Install UV via the provided install script, or from the latest GitHub release us
 
 === "Install Script"
 
-
     !!! NOTE "UV install Script"
         ```shell
         curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -24,7 +23,7 @@ Install UV via the provided install script, or from the latest GitHub release us
     > NOTE: review any script before running it locally
 
 
-=== GitHub Release (DNA)
+=== "GitHub Release (DNA)"
 
     Install UV from the latest GitHub Release, using [DRA](https://github.com/devmatteini/dra){target=_blank}.
 
