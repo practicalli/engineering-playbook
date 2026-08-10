@@ -40,4 +40,4 @@ Understanding how words evolved and how interconnected they are help you be more
 
 [Rob Words](https://robwords.com/){target=_blank .md-button}
 
-[Jess Zafarris](https://jesszafarris.com/)/){target=_blank .md-button}
+[Jess Zafarris](https://jesszafarris.com/){target=_blank .md-button}
