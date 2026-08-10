@@ -28,7 +28,7 @@ A “minimum viable style guide” typically includes:
 
 ## Etymology
 
-Etymology is the study of the origin and evolution of words—including their constituent units of sound and meaning—across time.
+The study of the origin and evolution of words—including their constituent units of sound and meaning—across time.
 
 As a subfield within linguistics, etymology has become an increasingly rigorous scientific field of study.
 
