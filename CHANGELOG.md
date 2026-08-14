@@ -31,7 +31,7 @@
 - dev: `dependencies-update` make task to update all GitHub actions to newest version
 - os: recommending tui apps
 - os: install software via github release
-
+- feat(tech-writing): mkdocs install as a tool and caveats
 
 ### Changed
 
