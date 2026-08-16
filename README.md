@@ -72,7 +72,11 @@ Publish book workflow installs Material for MkDocs version 9
 
 ## Local development
 
-Zensical can be installed locally via vu or pip. Practicalli uses uv for simplicity.  Commands are wrapped in tasks defined within the `Makefile`.
+Zensical can be installed locally via vu or pip.  Practicalli uses uv and installs Zensical as a tool for simplicity.
+
+CLI Commands are wrapped in tasks defined within the `Makefile`, providing a simpler and consistent user experience.
+
+[Zensical - Practcialli Engineering Playbook](https://practical.li/engineering-playbook/technical-writing/static-site/zensical/)
 
 Clone the repository and change into the root of the project.
 
@@ -86,10 +90,23 @@ Install Zensical as a tool using `uv` (updating if there is a new version).
 make docs-install
 ```
 
+Or use the uv command:
+
+```shell
+uv tool install zensical --with catppuccin-zensical --upgrade
+```
+
+
 Build the website and serve locally at [http://localhost:8000](http://localhost:8000)
 
 ```shell
 make docs
+```
+
+Or use the zensical command:
+
+```shell
+zensical serve --dev-addr localhost:7777
 ```
 
 ---
