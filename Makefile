@@ -63,8 +63,8 @@ dependencies-update: ## Update all library dependencies and GitHub action
 # ------------------------------------------------ #
 
 # --- Documentation Generation  ------------------ #
-docs-install:  ## Install or upgrade Zensical in Python virtual environment
-	uv tool install zensical --upgrade
+docs-install:  ## Install or upgrade Zensical with Catppuccin theme plugin
+	uv tool install zensical --with catppuccin-zensical --upgrade
 
 docs:  ## Build and run docs in local server
 	$(info -- Local Server --------------------------)
@@ -82,11 +82,7 @@ docs-debug:  ## Run local server in debug mode
 	$(info -- Local Server Debug --------------------)
 	$(DOCS_SERVER) -v
 
-mkdocs:  ## Build and run mkdocs in local server
-	$(info --------- Mkdocs Local Server ---------)
-	mkdocs serve --dev-addr localhost:7777
-
-dist: docs-build ## Build mkdocs website
+dist: docs-build ## Build Zensical website
 # ------------------------------------------------ #
 
 # ------- Version Control ------------------------ #
