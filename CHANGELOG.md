@@ -3,35 +3,42 @@
 ## Unreleased
 
 
+## 2026-08-22
 
 ### Added
 
-- github: sparse-checkout action example workflow
-- architecture: kata page first release
-- careers: new section and engineering manager
-- os: shell-aliases examples
-- os: zsh history and editing command history
-- source-control: git concepts
-- source-control: git status & multi-repo status
-- persistence: new section with structure and basic content
-- dev: set git attributes to correctly identify languages used
-- practices: asking questions
-- linux: link to sudo setup page on Debian Linux wiki
-- dev: add scheduled stale issue & pull request check (monthly)
-- os: install sudo & add user to sudo group
-- os: starship prompt in command-line shell
-- os: command-line commands section
-- source-control: add rationale for signing commits
-- os: debian linux trixie archive resolves xorg change
-- os: archive commands in file systems page
-- os: network commands page and examples
-- ci: github release from tag in practicalli workflows
-- os: accounts and privileges commands
-- os: system resources commands
-- dev: `dependencies-update` make task to update all GitHub actions to newest version
-- os: recommending tui apps
-- os: install software via github release
-- feat(tech-writing): mkdocs install as a tool and caveats
+- build(make): 🔧 check whole codebase when running megalinter locally
+- build(mkdocs): 🔧 add OS dependent light or dark palette
+- build(overrides): 💄 update page not found message
+- ci(github): 🔧 `dependencies-update` make task to update all GitHub actions to newest version
+- ci(github): 🔧 sparse-checkout action example workflow
+- doc(intro): 📝 update links and icons in sponsor practicalli section
+- docs(architecture): 📝 kata page first release
+- docs(careers): 📝 new section and engineering manager
+- docs(ci): 📝 github release from tag in practicalli workflows
+- docs(dev): set git attributes to correctly identify languages used
+- docs(dev): 📝 add scheduled stale issue & pull request check (monthly)
+- docs(linux): 📝 link to sudo setup page on Debian Linux wiki
+- docs(os): 📝 accounts and privileges commands
+- docs(os): 📝 archive commands in file systems page
+- docs(os): 📝 command-line commands section
+- docs(os): 📝 debian linux trixie archive resolves xorg change
+- docs(os): 📝 install software via github release
+- docs(os): 📝 install sudo & add user to sudo group
+- docs(os): 📝 network commands page and examples
+- docs(os): 📝 recommending tui apps
+- docs(os): 📝 shell-aliases examples
+- docs(os): 📝 starship prompt in command-line shell
+- docs(os): 📝 system resources commands
+- docs(os): 📝 zsh history and editing command history
+- docs(persistence): 📝 new section with structure and basic content
+- docs(practices): 📝 asking questions
+- docs(readme): 📝 ascii art generator link, remove star history
+- docs(source-control): 📝 add rationale for signing commits
+- docs(source-control): 📝 git concepts
+- docs(source-control): 📝 git status & multi-repo status
+- feat(tech-writing): 📝 mkdocs install as a tool and caveats
+
 
 ### Changed
 
