@@ -9,6 +9,8 @@
 ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝
 ```
 
+> NOTE: Ascii Art Generator: https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=Practicalli%205
+
 ## Book status
 
 [![MegaLinter](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml)
@@ -42,8 +44,7 @@ Please read the [detailed Practicalli contributing page](https://practical.li/co
 * [Current Issues](https://github.com/practicalli/engineering-playbook/issues)
 * [Current pull requests](https://github.com/practicalli/engineering-playbook/pulls)
 
-By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/engineering-playbook/graphs/contributors).
-
+By submitting content ideas and corrections you are agreeing they can be used in any work by Practicalli under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/practical.li/graphs/contributors).
 
 ## Sponsor Practicalli
 
@@ -52,11 +53,6 @@ By submitting content ideas and corrections you are agreeing they can be used in
 All sponsorship funds are used to support the continued development of [Practicalli series of books and videos](https://practical.li/), although most work is done at personal cost and time.
 
 Thanks to [Cognitect](https://www.cognitect.com/), [Nubank](https://nubank.com.br/) and a wide range of other [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors) for your continued support
-
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=practicalli/engineering-playbook&type=Date)](https://star-history.com/#practicalli/engineering-playbook&Date)
 
 
 ## GitHub Actions
