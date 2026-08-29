@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Added
+
+- docs(tech-writing): 📝 tools to support enhancing English prose
+
 
 ## 2026-08-22
 
