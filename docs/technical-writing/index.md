@@ -29,6 +29,7 @@ Add a `$XDG_CONFIG_HOME/proselint/config.json` file if there are checks that are
       "checks": {
         "annotations": false,
         "lexical_illusions": false,
+        "typography.diacritical_marks": false,
         "typography.symbols.curly_quotes": false,
         "typography.symbols.ellipsis": false,
         "typography.punctuation.hyperbole": false
@@ -40,6 +41,7 @@ Add a `$XDG_CONFIG_HOME/proselint/config.json` file if there are checks that are
 
     - `annotations` warns about `TODO:` and similar notes in the text
     - `lexical_illusions` warn on repeated words (trips up on log and shell output examples)
+    - `typography.diacritical_marks` warn on words containing marks affecting pronunciation
     - `typography.symbols.curly_quotes` warns double quotes in text should be curly - complains about code examples.
     - `typography.punctuation.hyperbole` false warning for annotation syntax
     - `typography.symbols.ellipsis` warns on `...
