@@ -1,10 +1,10 @@
 # UV Python Package Manager
 
-[UV](https://docs.astral.sh/uv/){target=_blank} is an extremely fast Python package manager written in Rust, designed to replace tools like pip and pip-tools.
+[UV](https://docs.astral.sh/uv/){target=_blank} is an extremely fast Python package manager written in Rust, an alternative to pip and associated pip-tools.
 
 UV can manage project dependencies, creating Python virtual environments, and executing command-line tools.
 
-!!! TIP "Uv tool is a very simple way to install python tools"
+!!! TIP "Uv tool is a very simple way to install Python tools"
 
 ## Install
 
@@ -47,3 +47,7 @@ Install UV via the provided install script, or from the latest GitHub release us
         echo "# ---------------------------------------"
         echo
         ```
+
+
+!!! INFO "Zensical Static Site Generator installed as a tool with UV"
+    [Zensical Static Site Generator play](../../technical-writing/static-site/zensical/){target=_blank .md-button}
