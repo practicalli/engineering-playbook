@@ -6,6 +6,10 @@
 
 - docs(tech-writing): 📝 tools to support enhancing English prose
 
+### Changed
+
+- build(mkdocs): 🔧 update nav for python section
+
 
 ## 2026-08-22
 
