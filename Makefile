@@ -7,8 +7,7 @@
 # ------------------------------------------------ #
 
 # Requirements
-# - python
-# - uv
+# - python & uv (local book generation)
 # - clojure & practicalli cli config (dependency check)
 # - docker (run megalinter locally)
 # - mega-linter-runner
@@ -62,7 +61,7 @@ dependencies-update: ## Update all library dependencies and GitHub action
 	- clojure -T:update/dependency-versions > $(OUTDATED_FILE)
 # ------------------------------------------------ #
 
-# --- Documentation Generation  ------------------ #
+# -- Documentation Generation -------------------- #
 docs-install:  ## Install or upgrade Zensical with Catppuccin theme plugin
 	uv tool install zensical --with catppuccin-zensical --upgrade
 

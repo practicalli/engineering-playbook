@@ -27,7 +27,10 @@ docs-install:  ## Install or upgrade Zensical with Catppuccin theme plugin
 DOCS_SERVER := zensical serve --dev-addr localhost:7777
 # ------------------------------------------------ #
 
-# --- Documentation Generation  ------------------ #
+# -- Documentation Generation -------------------- #
+docs-install:  ## Install or upgrade Zensical with Catppuccin theme plugin
+	uv tool install zensical --with catppuccin-zensical --upgrade
+
 docs:  ## Build and run docs in local server
 	$(info -- Local Server --------------------------)
 	$(DOCS_SERVER)
@@ -44,7 +47,7 @@ docs-debug:  ## Run local server in debug mode
 	$(info -- Local Server Debug --------------------)
 	$(DOCS_SERVER) -v
 
-dist: docs-build ## Build mkdocs website
+dist: docs-build ## Build Zensical website
 # ------------------------------------------------ #
 ```
 
