@@ -5,6 +5,7 @@
 ### Added
 
 - docs(tech-writing): 📝 tools to support enhancing English prose
+- docs(ci): add zensical doc workflow with Uv
 
 ### Changed
 

@@ -337,12 +337,84 @@ Create a new release for any tag commit pushed to the GitHub repository.
           - run: echo "🍏 Job status is ${{ job.status }}."
     ```
 
-## Zensical Doc Site
 
-Build and publish a Zenscial documentation project, only triggering after a successful run of the [:fontawesome-solid-book-open: MegaLinter workflow](./megalinter.md) and if there is a change in one of the specified paths.
+## Zensical Static Site Generator
+
+Build and publish a Zenscial documentation project.
+
+The workflow triggers after a successful run of the [:fontawesome-solid-book-open: MegaLinter workflow](./megalinter.md)
+
+The workflow also requires a change in one of the specified paths to trigger.
+
+Using the [Setup UV GitHub Action]() in the doc publishing workflow, Zensical build task is run without the need of a separate install step.
+
+The `uvx` command is an alias for `uv tool run` command.
 
 
-!!! EXAMPLE "Conditionally publish a Zensical project"
+!!! EXAMPLE "Zensical workflow with Setup-Uv action"
+    ```yaml
+    # Workflow to conditionally publish a Zensical project
+    ---
+    name: Publish Zensical Docs
+
+    on:
+      workflow_dispatch:  # Manually trigger workflow
+
+      # Run work flow conditional on linter workflow success
+      workflow_run:
+        workflows:
+          - "MegaLinter"
+        paths:
+          - 'docs/**'
+          - 'includes/**'
+          - 'overrides/**'
+          - 'mkdocs.yaml'
+          - 'zensical.toml'
+        branches:
+          - main
+        types:
+          - completed
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    jobs:
+      deploy:
+        environment:
+          name: github-pages
+          url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-slim
+        steps:
+          - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
+          - run: echo "🐧 Job running on ${{ runner.os }} server"
+          - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
+
+          - uses: actions/checkout@v7
+          - run: echo "🐙 ${{ github.repository }} repository sparse-checkout to the CI runner."
+          - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+            with:
+              version: "latest"
+              activate-environment: "false"
+              github-token: ${{ github.token }}
+              enable-cache: "auto"
+          - name: "Python version to the logs"
+            run: echo "Version of Python available $(python --version)"
+          - run: echo "Running Zensical Static Site Generator with Catppuccin theme"
+          - run: uvx --with catppuccin-zensical zensical build
+          - uses: actions/upload-pages-artifact@v5
+            with:
+              path: site
+          - uses: actions/deploy-pages@v5
+
+          # Summary
+          - run: echo "🎨 built and published Zensical website"
+          - run: echo "🍏 Job status is ${{ job.status }}."
+    ```
+
+
+??? EXAMPLE "Zensical project with Setup Python Action"
+    The workflow with [Setup Python action](https://github.com/actions/setup-python) first installs Zensical via Pip before running Zensical build to create the website.
     ```yaml
     name: Publish Zensical Docs
 
