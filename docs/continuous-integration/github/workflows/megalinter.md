@@ -2,13 +2,13 @@
 
 The MegaLinter Workflow uses a configuration file to define which linters should be run as well as specify linter specific configuration files.
 
-!!! EXAMPLE "Practicalli MegaLinter Workflow"
+!!! EXAMPLE "Practicalli MegaLinter Workflow using Java flavor"
 
     ```clojure
     ---
     # MegaLinter GitHub Action configuration file
-    # More info at https://megalinter.github.io
-    # All variables described in https://megalinter.github.io/configuration/
+    # More info at https://megalinter.io
+    # All variables described in https://megalinter.io/latest/config-file/
 
     name: MegaLinter
     on:
@@ -35,17 +35,21 @@ The MegaLinter Workflow uses a configuration file to define which linters should
 
           # Git Checkout
           - name: Checkout Code
-            uses: actions/checkout@v3
+            uses: actions/checkout@v7
             with:
               token: "${{ secrets.PAT || secrets.GITHUB_TOKEN }}"
               fetch-depth: 0
-          - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
+              sparse-checkout: |
+                docs
+                overrides
+                .github
+          - run: echo "🐙 Sparse Checkout of ${{ github.repository }} repository to the CI runner."
 
           # MegaLinter Configuration
           - name: MegaLinter Run
             id: ml
             ## latest release of major version
-            uses: oxsecurity/megalinter/flavors/java@v6
+            uses: oxsecurity/megalinter/flavors/java@v10
             env:
               # ADD CUSTOM ENV VARIABLES OR DEFINE IN MEGALINTER_CONFIG file
               MEGALINTER_CONFIG: .github/config/megalinter.yaml
@@ -58,7 +62,7 @@ The MegaLinter Workflow uses a configuration file to define which linters should
           # Upload MegaLinter artifacts
           - name: Archive production artifacts
             if: ${{ success() }} || ${{ failure() }}
-            uses: actions/upload-artifact@v3
+            uses: actions/upload-artifact@v7
             with:
               name: MegaLinter reports
               path: |

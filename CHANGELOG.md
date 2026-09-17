@@ -13,6 +13,7 @@
 - docs(language): ✏️ minor enhancements, link to zensical uv use
 - build(make): 🔧 update format and docs-install task
 - ci(zensical): 🔧 update to run zensical via uvx
+- docs(ci): ✏️ update java flavor megalinter workflow
 
 
 ## 2026-08-22
