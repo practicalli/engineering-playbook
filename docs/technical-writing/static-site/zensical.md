@@ -76,7 +76,8 @@ All plugins are defined within the `zensical.toml` configuration for the project
 
 ## GitHub workflow
 
-[Practicalli Workflow for Zensical static sites](../../continuous-integration/github/workflows/practicalli.md#zensical-doc-site){target=_blank .md-button}
+[Practicalli Workflow for Zensical static sites](../../continuous-integration/github/workflows/practicalli.md#zensical-static-site-generator){target=_blank .md-button}
+
 
 
 ## Reference
