@@ -21,7 +21,7 @@ Docker compose can use a [:fontawesome-solid-book-open: `Dockerfile` configurati
     [:fontawesome-solid-book-open: Detailed Docker Image Descriptions](images.md){.md-button}
 
 ??? HINT "Docker and Clojure projects"
-    A Docker Compose workflow complements the [Clojure REPL Driven Development workflow](https://practical.li/clojure/introduction/repl-workflow/).  
+    A Docker Compose workflow complements the [Clojure REPL Driven Development workflow](https://practical.li/clojure/introduction/repl-workflow/).
 
     A REPL connected editor provides instant feedback on the code as it is written, with Docker Compose providing a consistent build and orchestration of services.
 
@@ -29,7 +29,7 @@ Docker compose can use a [:fontawesome-solid-book-open: `Dockerfile` configurati
 
 ## General Workflow
 
-- [:fontawesome-solid-book-open: Install Docker Desktop](install.md) & [:fontawesome-solid-book-open: Extensions](desktop/extensions.md)
+- [:fontawesome-solid-book-open: Install Docker Desktop](./install.md) & [:fontawesome-solid-book-open: Extensions](desktop/extensions.md)
 - [:fontawesome-solid-book-open: Select a Docker image](images.md) as a base or builder stage
 - [:fontawesome-solid-book-open: Create a Dockerfile](dockerfile.md), e.g [:fontawesome-solid-book-open: a multi-stage build and run-time Dockerfile](clojure-multi-stage-dockerfile.md)
 - [:fontawesome-solid-book-open: Compose services together](compose.md), adding health checks and conditional starts

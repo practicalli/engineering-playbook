@@ -13,6 +13,6 @@ The development team should agree on the rules that are valueable for these tool
 
 MegaLinter provides an extensive range of lint tools all in one, using docker images to remove tool installation requirements.
 
-[MegaLinter - extensive collection of lint tools](megalinter.md){target=_blank .md-button}
+[MegaLinter - extensive collection of lint tools](./megalinter.md){target=_blank .md-button}
 
-[Clojure Quality Tools](clojure.md){target=_blank .md-button}
+[Clojure Quality Tools](./clojure.md){target=_blank .md-button}

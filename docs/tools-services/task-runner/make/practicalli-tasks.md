@@ -27,7 +27,8 @@ Manage multiple repositories using [:fontawesome-brands-github: mgitstatus](http
 
 ## Zensical
 
-Makefile tasks to install Zensical using UV, including additional plugins such as zensical-catppuccin theme.
+Makefile tasks to install Zensical using UV package manager for Python.
+
 
 ```make
 
@@ -42,8 +43,8 @@ DOCS_SERVER := zensical serve --dev-addr localhost:7777
 # ------------------------------------------------ #
 
 # --- Documentation Generation  ------------------ #
-docs-install:  ## Install or upgrade Zensical with Catppuccin theme plugin
-	uv tool install zensical --with catppuccin-zensical --upgrade
+docs-install:  ## Install or upgrade Zensical
+	uv tool install zensical --upgrade
 
 docs:  ## Build and run docs in local server
 	$(info -- Local Server --------------------------)
@@ -70,18 +71,24 @@ dist: docs-build ## Build mkdocs website
 ```
 
 
+The Zensical install can include additional plugins, such as zensical-catppuccin theme.
+
+```make
+docs-install:  ## Install or upgrade Zensical with Catppuccin theme plugin
+	uv tool install zensical --with catppuccin-zensical --upgrade
+```
+
 
 ## MkDocs with Python Virtual Environment
 
 Install Material for MkDocs using Python Virtual Environment, including additional plugins that Practicalli commonly uses.
 
-> NOTE: Practicalli is migrating to Zensical installed via UV.
+> NOTE: Practicalli has migrated to Zensical installed via UV.
 
 ```make
 # -- Makefile Variables ---------------- #
 MKDOCS_SERVER := mkdocs serve --dev-addr localhost:7777
 # -------------------------------------- #
-
 
 # -- Documentation Generation  --------- #
 python-venv:  ## Create Python Virtual Environment
@@ -116,5 +123,4 @@ docs-staging:  ## Deploy to staging repository
 	$(info -- Mkdocs Staging Deploy -----------------)
 	source ~/.local/venv/bin/activate && mkdocs gh-deploy --force --no-history --config-file mkdocs-staging.yml
 # -------------------------------------- #
-
 ```

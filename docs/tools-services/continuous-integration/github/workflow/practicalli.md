@@ -160,7 +160,7 @@ Defines `changelog-check-skip` label on a pull request instructs the workflow no
 
 ## mkdocs publisher
 
-A workflow previously used to publish Practicalli books.  Superceeded by [Zensical workflow](#zensical-static-site-generator)
+A workflow previously used to publish Practicalli books, superceeded by [Zensical workflow](#zensical-static-site-generator)
 
 * `workflow_dispatch:` for manual trigger of workflow
 * `workflow_run:` to depend on a successful run of the `MegaLinter` workflow
