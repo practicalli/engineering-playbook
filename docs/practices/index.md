@@ -33,3 +33,12 @@ Engineering has many practices and principles defined over it many decades.
 - Rolling Wave Planning
 - MoSCoW rules - Must have, Should have, Could have, Wont have
 - [Managing Bias](managing-bias.md)
+
+
+## Engineering team responsibilities
+
+All engineers should feel they have collective ownership of the entire code base, so that a PR can be submitted for any part of the code and associated documentation.
+
+Domain teams have responsibility for specific components and services, leading their development and ensuring usability across the engineering practice.
+
+There should be no concern about asking questions on any aspect of work the engineering practice is responsible for.

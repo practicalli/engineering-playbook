@@ -1,4 +1,4 @@
-# Asking Questions Clearly
+# Asking Questions
 
 ![Question mark logo](https://github.com/practicalli/graphic-design/blob/live/icons/questions.png?raw=true){align=right loading=lazy style="height:150px;width:150px"}
 
@@ -10,9 +10,14 @@
     An example would be good right now - when the challenge or issue is not clear or hard to describe
 
 
-Asking clear questions allows people to provide relevant opinions and answers quickly
+Asking clear questions allows people to provide relevant opinions and answers quickly.
 
 Virtuous Cycle: Practice asking clear questions grows confidence and speed in asking clear questions
+
+!!! TIP "Crafting questions saves time"
+    Investing a little time to craft a clear question, ideally with relevant examples, will save a lot of time discussing the appropriate answer.
+
+    A shared repository that replicates an issue as simply as possible aids project maintainers quickly understand and adress issues.
 
 
 ## The Question cycle
