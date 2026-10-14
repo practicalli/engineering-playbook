@@ -10,7 +10,7 @@ Echo information regarding the triggering of the workflow, to help diagnose issu
     ```yaml
     jobs:
       workflow:
-        name: workflow-name
+        name: job-name
         runs-on: ubuntu-latest
         steps:
           - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"

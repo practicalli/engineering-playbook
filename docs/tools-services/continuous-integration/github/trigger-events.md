@@ -33,11 +33,10 @@ A POSIX Cron pattern is used to define the schedule
         # - cron: "0 4 1 * *" # at 04:04:04 on first day of month
 ```
 
-!!! INFO "Scheduled version check uses cron schedule"
-
 ??? INFO "Cron references"
     - [`on.schedule` - GitHub workflow syntax](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onschedule)
     - [Cron Expression Syntax Cheatsheet](https://cronstatus.com/docs/cron/)
+
 
 ## Workflow Dispatch
 
@@ -45,11 +44,20 @@ Add `workflow_dispatch:` without arguments to the `on:` directive in a workflow 
 
 Visit GitHub.com > Actions > Workflow Name in the repository and select `Run`
 
-## Conditional on other workeflow
+??? EXAMPLE "Workflow with Manual Trigger"
+    ```yaml
+    ---
+    name: Publish Book
+    on:
+      # Manually trigger workflow
+      workflow_dispatch:
+    ```
 
-Run a workflow based on the outcome of running another GitHub workflow
+## Conditional on another workflow
 
-!!! EXAMPLE "Run workflow if MegaLinter workflow returns success"
+`workflow_run:` defines that a workflow should only run if the outcome of another GitHub workflow run completed with success.
+
+??? EXAMPLE "Run workflow if MegaLinter workflow returns success"
     ```yaml
         name: "Publish Documentation"
         on:

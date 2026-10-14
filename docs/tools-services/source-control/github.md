@@ -8,7 +8,10 @@ A GitHub account provides an unlimited amount of public repositories.
 
 User account
 
-Organisation
+- 2 Factor authentication (ideally a separate physical device from the one where initial access was requested, e.g. Yubi key)
+
+Organisation teams and memberships
+
 
 ## SSH access
 
