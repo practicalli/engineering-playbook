@@ -1,3 +1,7 @@
+---
+icon: fontawesome/brands/arch-linux
+---
+
 # Hyprland Tiling Compositor
 
 Hyprland is a high performance Wayland compositor and tiling window manager.  Hyprland is not a full desktop environment (DE) like [KDE Plasma](https://kde.org/) or [Gnome](https://www.gnome.org/).

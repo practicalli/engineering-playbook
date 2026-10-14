@@ -1,3 +1,7 @@
+---
+icon: lucide/square-terminal
+---
+
 # Warp terminal
 
 !!! INFO "Section just starting - Warp terminal being evaluated"

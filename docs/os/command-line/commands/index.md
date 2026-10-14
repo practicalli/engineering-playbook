@@ -1,3 +1,7 @@
+---
+icon: lucide/square-terminal
+---
+
 # Common CLI Commands
 
     Console and output management:

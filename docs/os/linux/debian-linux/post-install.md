@@ -1,4 +1,14 @@
+---
+icon: fontawesome/brands/debian
+---
+
 # Post Install
+
+Recommended actions to configure a Debian Linux system ready for software engineering and system administration tasks.
+
+!!! INFO "To be replaced by Practicalli Debian Linux post install scripts"
+    [Practicalli dotfiles project](https://github.com/practicalli/dotfiles/tree/main/debian-linux){target=_blank} contains scripts to update a Debian Linux install with all the tools that Practicalli recommends for software engineering tasks.
+
 
 ## root vs sudo
 
@@ -32,7 +42,9 @@ su -
 
 ??? INFO "Update to testing"
 
-    Debian Linux is an excellent choice for servers and every day use due to its stability and regular security updates.  The release cycle is between 1-2 years, so for software development some packages may not be as up to date as required.
+    Debian Linux is an excellent choice for servers and every day use due to its stability and regular security updates.
+
+    The release cycle is between 1-2 years, so for software development some packages may not be as up to date as required.
 
     Newer versions can be installed via Personal Package Archives (PPA) or installed manually (`/usr/local/bin`, or `~/.local/bin`).
 
@@ -61,7 +73,7 @@ su -
 
 ## Regolith Desktop
 
-[Regolith Desktop](../linux/regolith.md) provides a full desktop environment based on i3 Tiling window manager and Gnome Desktop apps.
+[Regolith Desktop](../regolith.md) provides a full desktop environment based on i3 Tiling window manager and Gnome Desktop apps.
 
 
 ## Configure shell
@@ -76,7 +88,7 @@ Zsh is an advanced shell with excellent Tab completion options and [Prezto]() or
 
 Using the XFreeDesktop environment variables sets the location of configuration, cache and library files for software run by a user account.
 
-Backup and removal of user specific files becomes far simpler.  The root directory of an account is greatly simplified too.
+Backup and removal of user specific files becomes far simpler. The root directory of an account is greatly simplified too.
 
 === "Zsh"
 
@@ -146,17 +158,19 @@ apt install zsh
 
 ## Zsh Configuration
 
-[Prezto]() and [OhMyZsh]() are community created configurations that provide a rich experience with very little work.
+[Prezto](https://github.com/sorin-ionescu/prezto){target=_blank} and [OhMyZsh](https://ohmyz.sh/){target=_blank} are community created configurations that provide a rich experience with minimal effort or maintenance.
 
-!!! HINT "Prezto recommended"
-    Practicalli recommends Prezto as it has excellent completion capabilities, especially wish fish mode enabled.
 
-    OhMyZsh is used within Termux as Prezto has not worked correctly in my experiences.
+??? INFO "Prezto has uncertain future"
+    Practicalli team has recommended Prezto in the past as it has excellent completion capabilities, especially wish fish mode enabled.
+
+    The original maintaner is no longer active and although additional maintainers were added, activity has stalled in 2026.
+
+    OhMyZsh is used within Termux as Prezto has issues on this platform.
 
 === "Prezto"
 
     Prezto provides sane defaults, aliases, functions, auto completion, and prompt themes.
-
 
     As the user account, `zsh` command to change to zsh from bash shell
 
@@ -310,11 +324,11 @@ The `date` command on Linux systems is used to show the system date or set a spe
 
 When using the Gnome desktop the system date is automatically managed, keeping the date and time current.
 
-The `timedatectl` command is used to control automatic updating of the system time.  This must be disabled to set the date and time to something other than the current.
+The `timedatectl` command is used to control automatic updating of the system time. Disabled by setting this command to `false` in order to change the date and time.
 
 !!! NOTE "Disable automatic date-time"
     ```shell
-    timedatectl set-ntp 0
+    timedatectl set-ntp false
     ```
 
 When the timedateclt is disabled, then the `date` command can be used to set a specific date and or time.

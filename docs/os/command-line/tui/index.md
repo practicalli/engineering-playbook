@@ -1,6 +1,10 @@
+---
+icon: lucide/square-terminal
+---
+
 # Terminal User Interface (TUI)
 
-Terminal or Text User Interface apps are very effective, especially for people who prefer the keyboard over mouse for control.
+Terminal or Text User Interface apps are light on resources and most effective for people who prefer keyboard driven control.
 
 TUI's tend to use a lot less resources and therefore perform very well, regardless of operating system and available resources (CPU, Memory, Disk space, etc.).
 
@@ -20,7 +24,6 @@ TUI's tend to use a lot less resources and therefore perform very well, regardle
     [GitHub releases - link to releases](https://docs.github.com/en/repositories/releasing-projects-on-github/linking-to-releases){.md-button}
 
 ??? TIP "DRA - Download Release Assets from GitHub"
-
     [DRA - Download Release Assets from GitHub](https://github.com/devmatteini/dra){.md-button}
 
 
@@ -40,13 +43,13 @@ Install options:
 - Arch Linux package `pacman -S caligula`
 - Debian Linux has a [request to package](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1089012) discussion
 
-Caligula is created with the [Rust Language](../../programming-languages/rust/index.md) and can be installed via the `caligula` crate.
+Caligula is created with the [Rust Language](../../../programming-languages/rust/index.md) and can be installed via the `caligula` crate.
 
 ![Caligula copying an image to /dev/sdb](https://github.com/ifd3f/caligula/raw/main/images/verifying.png){loading=lazy}
 
 ### ncdu disk usage
 
-[ncdu](https://terminaltrove.com/ncdu/){target=_blank} is an ncurses disk usage analyzer.
+[ncdu](https://terminaltrove.com/ncdu/){target=_blank} is an ncurses disk usage analyser.
 
 === "Debian Linux"
 
@@ -60,7 +63,7 @@ Caligula is created with the [Rust Language](../../programming-languages/rust/in
     sudo pacman -S ncdu
     ```
 
-![ncdu disk usage analyzer](https://cdn.terminaltrove.com/m/a9ec3580-7859-4db7-be9f-ebd27578ab8d.png){loading=lazy}
+![ncdu disk usage analyser](https://cdn.terminaltrove.com/m/a9ec3580-7859-4db7-be9f-ebd27578ab8d.png){loading=lazy}
 
 
 ### diskonaut
@@ -132,7 +135,7 @@ A Git client...
 
 ### fx json navigator
 
-[fx](https://fx.wtf/){target=_blank} for viewing and effectively navigating JSON.  A TUI version of `jq`.
+[fx](https://fx.wtf/){target=_blank} for viewing and effectively navigating JSON. A TUI version of `jq`.
 
 ![Fx navigating JSON data](https://cdn.terminaltrove.com/m/34e03e9f-e7fc-4a99-8eb2-432d57291b25.gif){loading=lazy}
 
@@ -235,7 +238,7 @@ Vifm is [packaged for Linux/Unix based operating systems](https://github.com/vif
 
 ### Blendr bluetooth analyser
 
-[blendr](https://github.com/dmtrKovalenko/blendr){target=_blank} to inspect, search, connect, and analyze data coming from BLE devices directly from your terminal.
+[blendr](https://github.com/dmtrKovalenko/blendr){target=_blank} to inspect, search, connect, and analyse data coming from BLE devices directly from your terminal.
 
 Designed for BLE engineers to useful search, create a direct connection to any characteristic and device with one command, and displaying your custom services names in the UI.
 
@@ -276,7 +279,7 @@ bbcli --feed business list
 
 ### fzf-make
 
-[fzf-make](https://github.com/kyu08/fzf-make){target=_blank} Tui for make, just, pnpm, yarm, task.  Search and browse task definitions, keeping a history of tasks used.
+[fzf-make](https://github.com/kyu08/fzf-make){target=_blank} Tui for make, just, pnpm, yarm, task. Search and browse task definitions, keeping a history of tasks used.
 
 Install via Rust Cargo, Arch Linux, Nix, Homebrew
 
@@ -285,7 +288,7 @@ Install via Rust Cargo, Arch Linux, Nix, Homebrew
 
 ### csvlens
 
-[csvlens](https://github.com/YS-L/csvlens){target=_blank} explorer for Comma Seperated Values (CSV data).  Supports basic vim-style navigation.
+[csvlens](https://github.com/YS-L/csvlens){target=_blank} explorer for Comma Separated Values (CSV data). Supports basic vim-style navigation.
 
 ![cvslens exploring a CSV file](https://github.com/YS-L/csvlens/raw/main/.github/demo.gif){loading=lazy}
 

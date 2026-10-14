@@ -1,3 +1,7 @@
+---
+icon: lucide/square-terminal
+---
+
 # Operating System Shell
 
 A shell is a computer program that exposes an operating system's services to a human user or other programs.

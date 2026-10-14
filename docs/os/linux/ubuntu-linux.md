@@ -1,3 +1,7 @@
+---
+icon: fontawesome/brands/ubuntu
+---
+
 # Ubuntu Linux
 
 Ubuntu Linux is a Debian Linux based distribution providing additional Kernel patches, Desktop management and themes and a wider range of packages provided in the distribution ISO (including non-free software).

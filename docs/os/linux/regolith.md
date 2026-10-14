@@ -1,10 +1,14 @@
+---
+icon: lucide/moon
+---
+
 # Regolith Desktop
 
 Regolith Desktop is a Linux desktop environment that provides an Xorg and Wayland session for Debian Linux and Ubuntu distributions.
 
 Each desktop session provides a keyboard focused tiling window manager, [i3](https://i3wm.org/) for Xorg and [Sway](https://swaywm.org/) for Wayland.
 
-Regolith has excellent defaults so its very quick to get started and customisation is via a simple `~/.config/regolith3/Xresources` file.
+Regolith has excellent defaults so quick to get started with. Customisation is via a simple `~/.config/regolith3/Xresources` file.
 
 [Install Guide](https://regolith-desktop.com/docs/using-regolith/install/){target=_blank .md-button}
 [Basic Use](https://regolith-desktop.com/docs/using-regolith/basics/){target=_blank .md-button}
