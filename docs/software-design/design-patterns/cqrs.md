@@ -1,3 +1,7 @@
+---
+icon: lucide/landmark
+---
+
 # Command Query Resposibility Segregation
 
 System architecture that extends the idea behind command–query separation to the level of services.

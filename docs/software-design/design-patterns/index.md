@@ -1,3 +1,7 @@
+---
+icon: lucide/landmark
+---
+
 # Design Patterns
 
 A pattern is

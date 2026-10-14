@@ -1,3 +1,7 @@
+---
+icon: lucide/landmark
+---
+
 # Structurizr - Architecture diagrams as code
 
 [Structurizr](https://structurizr.com/dsl) is a tool for expressing and visualising architecture using the [C4 model](https://c4model.com/)

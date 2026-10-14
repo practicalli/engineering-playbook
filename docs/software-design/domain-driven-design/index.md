@@ -1,3 +1,7 @@
+---
+icon: lucide/landmark
+---
+
 # Domain Driven Design
 
 - Ubiquitous Language, applicable withing a single bounded context

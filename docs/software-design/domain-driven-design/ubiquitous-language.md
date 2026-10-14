@@ -1,8 +1,12 @@
+---
+icon: lucide/landmark
+---
+
 # Ubiquitous Language
 
 A Ubiquitous language is built on the model, making that model integral to all communication between domain experts and engineering.
 
-Many project challenges arise when the language used is fractured.  
+Many project challenges arise when the language used is fractured.
 
 Domain experts often use their own very familiar terms that may have great nuaunce and abstraction.
 

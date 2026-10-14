@@ -1,3 +1,7 @@
+---
+icon: lucide/virus-off
+---
+
 # Anti-Patterns
 
 Anti-patterns arise as people translate business needs into software solutions, especially where the human process requires a clear and well communicated shared vision.

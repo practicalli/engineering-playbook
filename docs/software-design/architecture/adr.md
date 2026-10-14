@@ -1,3 +1,7 @@
+---
+icon: lucide/landmark
+---
+
 # Architecture Decision Record
 
 Architecture Decision Record (ADR) is a formal way to capture a significant decision which impacts the current or future system.
@@ -60,13 +64,13 @@ Teams can align on best practices across the organization when ADRs detail why c
     - contact details for all those involved (if the decision has follow-on or questions arise)
 
     ## Status
-    
+
     Define the status of the decision along with the date of change into that state
 
-    - proposed <date> 
-    - accepted <date> 
-    - rejected <date>  
-    - deprecated  <date> 
+    - proposed <date>
+    - accepted <date>
+    - rejected <date>
+    - deprecated  <date>
     - superseded <date>
 
     ## Context
@@ -83,7 +87,7 @@ Teams can align on best practices across the organization when ADRs detail why c
 
     ## Consequences
 
-    Define how the decision impacts the project (and/or organisation), highlighing the benefits and constraints 
+    Define how the decision impacts the project (and/or organisation), highlighing the benefits and constraints
 
     - aleviated constraints
     - added constraints

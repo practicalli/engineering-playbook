@@ -1,3 +1,7 @@
+---
+icon: lucide/landmark
+---
+
 # Command–query separation
 
 Every method should either be a command that performs an action, or a query that returns data to the caller, but not both.

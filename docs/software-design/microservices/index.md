@@ -1,3 +1,7 @@
+---
+icon: lucide/microscope
+---
+
 # Microservices
 
 Microservice architecture is a pattern for building scalable and easy-to-maintain web-based applications.
