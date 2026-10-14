@@ -16,16 +16,18 @@ The essence of the role is to ensure engineers:
 
 
 !!! TIP "Expectations may vary company to company"
-    The EM role have varied wildly across all the companies I have worked for.  Some were very hands-on, some I never had chance to look at the code.
+    The EM role can vary wildly across companies. I have worked for some teams were I was hands-on coding each day, with other teams there were so many other priorities I never had chance to look at the code.
 
-    Establishing what you percieve as the role scope within your organisation & team is important.  Without this clearly communicated then undiscussed expectations easily go unmet, leading to a poor outcome.
+    Establishing what you percieve as the role scope within your organisation & team is important. This must be aligned with the expectations of your manager.
 
-    When the scope is diverse, communicate the aspects you will focus on each month or each quarter.
+    Without a shared and clearly defined remit then expectations easily go unmet, leading to a poor outcome for all.
+
+    When the scope is diverse, communicate the aspects you will focus on each month (each week if its a chaotic or 'high-pressure' environment).
 
 
 ## Meetings
 
-[one to one](../practices/discussions/one-to-one-meeting.md) are regularly held with direct reports and those people the engineering manager reports to, ensuring there is good working relationship between the respective people.
+[one to one](../../practices/discussions/one-to-one-meeting.md) are regularly held with direct reports and those people the engineering manager reports to, ensuring there is good working relationship between the respective people.
 
 - direct reports focus on supporting that persons ability to thrive within the company and identify actions to help
 
@@ -33,8 +35,8 @@ The essence of the role is to ensure engineers:
 
 Engineering team meetings may occasionally be joined to review how effective the format is to those involved, or should a wider issue be addressed (especially in retrospectives)
 
-- [standup](../practices/discussions/standup.md) can highlight issues with motivation and team cohesiveness
-- [retrospective](../practices/discussions/retrospective.md) can help identify action items that the engineering manager can actively support or help direct others to support
+- [standup](../../practices/discussions/standup.md) can highlight issues with motivation and team cohesiveness
+- [retrospective](../../practices/discussions/retrospective.md) can help identify action items that the engineering manager can actively support or help direct others to support
 
 !!! HINT "Performance reviews supported by one-to-one meetings"
     Where performance reviews are applicable, include the review as an aspect to raise with one-to-one meetings with direct reports throughout the year.
@@ -56,9 +58,9 @@ Use the knowledge sharing tool for the organisation, e.g. [Atlassian Confluence]
 
 ## Management anti-patters
 
-**micro-management** is highly ineffective, demonstrates lack of trust, highlights poor communication and lack of management skills.  Shows lack of understanding of the needs of the business and engineering teams.
+**micro-management** is highly ineffective, demonstrates lack of trust, highlights poor communication and lack of management skills. Shows lack of understanding of the needs of the business and engineering teams.
 
-**overt control** suggests a lack of confidence, demoralises the team, incurs a lack of trust and engagement by team under control.  Drives inefficiency, stifles agency and creativity.
+**overt control** suggests a lack of confidence, demoralises the team, incurs a lack of trust and engagement by team under control. Drives inefficiency, stifles agency and creativity.
 
 **emotional pain** degrading and emotionally attacking a person has no place in a positive relationship.
 
@@ -80,14 +82,22 @@ There should be clear goals to achieve (e.g. milestones) and a common understand
 
 
 !!! WARNING "Avoid solutionising"
-    Product requirements for a project should avoid providing a solution as this can be very distracting, especially if this leads the engineers on the team down an inappropriate approach.
+    Product requirements should avoid providing a solution, focusing on on the **what** and **why** but not the **how**.
 
-    For example: Product suggested an API approach to an intricated billing system for a high volume service.  This would not have performed effectively and would have had a detrimental impact on the overall service.  A busy engineering team may have adopted this approach rather than seeking out existing services they could build a builing service upon (i.e. a ledger service).
+    A solution can prevent discussion and lead engineers down an inappropriate approach.
+
+    For example: Product suggested an API approach to an intricated billing system for a high volume service. All the API's were listed and so the only action was to create the relevant code.
+
+    The API approach did not factor in the significant performance degredation it would cause to the current system, especially for end-of-day batch processing tasks.
+
+    The proposed solution would not have performed effectively and would have had a detrimental impact on the overall service provided to customers.
+
+    A busy engineering team may have adopted this approach rather than seeking out existing services they could build a service upon (i.e. an existing ledger service).
 
 
-## EM responsibility
+## Responsibility
 
-The EM is ultimately responsible for everything the team does and agrees to do
+The Engineering Manager is ultimately responsible for everything the team does and agrees to do
 
 - delivery of all work agreed
 - Health and wellbeing of team
@@ -98,6 +108,7 @@ The EM is ultimately responsible for everything the team does and agrees to do
 - Overall schedule of the team and meetings they attend
 
 ## product Manager
+
 The PM for the team is ultimately responsible for providing clear guidance on business features required by Griffin customers.
 
 - The Product owner should be aware of the respective value of any work proposed and any time frame in which this value is constrained by.
@@ -122,9 +133,6 @@ Priorities for product driven and engineering driven work agreed at start of wee
 
 - Work broken down to small pieces, 1 day to 1 week.
 - Epics used to orchestrate larger pieces
-
-
-
 
 
 ## Cycling analogy
@@ -157,17 +165,15 @@ Create the basic engineering environment
 
 
 <!--
-Tech Careers
 How to Build the Engineering Manager Career Path
-Should you promote from within or hire outsiders? At CTO Craft Con, a presenter offered a framework for making either choice succeed.
-Mar 31st, 2025 8:03am by Jennifer Riggins
-Featued image for: How to Build the Engineering Manager Career Path
-Katherine Spice of Octopus Electric Vehicles presents at CTO Craft Con. Photo by Jennifer Riggins.
+
+Should you promote from within or hire outsiders?
+
 Unless you work in a more traditional industry with clear staff hierarchies, it often unclear how to move up within your organization.
 
 It can be even harder to decode in the technical division, where you need to decide if you want to try your hand at being an engineering manager (EM) or to get promoted without becoming a manager — or if you follow Honeycomb.io co-founder Charity Majors’s advice, continue on a pendulum back and forth between technical and management roles.
 
-But what if your organization’s leaders instead had an intentional plan that helped identify the right tech talent to move into engineering manager roles? What if they provided the right level of onboarding, mentorship and training for managers? What if they guaranteed that if that developer doesn’t like being an engineering manager, they could return to their developer role?
+If leaders of an organization had an intentional plan that helped identify the right tech talent to move into engineering manager roles? What if they provided the right level of onboarding, mentorship and training for managers? What if they guaranteed that if that developer doesn’t like being an engineering manager, they could return to their developer role?
 
 That’s just what Katherine Spice, head of engineering at Octopus Electric Vehicles, laid out on the CTO Craft Con stage in London in March. She offered advice for identifying the right mix of people, culture, delivery and technology that helps build an engineering manager program at scale.
 
@@ -261,7 +267,7 @@ The “build it” model has a much larger time investment than recruiting from 
 
 “It’s a really great thing for your organization to retain people and get them into additional roles have that career development within your organization. And, for those people, having opportunities to try different things, learn different things, is a super powerful aspect of retention.”
 
-But you don’t want to set up your successful engineers to falter in managerial roles they don’t want. Spice outlined some green flags that indicate developers could be ready and right to take the management route:
+Avoid setting up your successful engineers to falter in managerial roles they don’t want. Spice outlined some green flags that indicate developers could be ready and right to take the management route:
 
 They are actively engaged in helping those around them.
 Without prompting, they provide good, positive, actionable feedback in team ceremonies.
@@ -298,7 +304,7 @@ All these will help de-risk this buy decision.
 This recruitment process will likely cost more money up front, and these outsiders changing companies will probably have higher salaries than an engineer that you promote from within. Spice predicts, however, it ends up evening out with the extra time you put in mentoring your internal promotions.
 
 Set Your New EM Up for Success
-Build versus buy is neither here nor there if you aren’t setting your new engineering managers up to succeed. That success must be measurable.
+Success must be measurable.
 
 Of course, retention rate and progress are important, but they are lagging metrics, often too late, especially if a new EM is faltering.
 
