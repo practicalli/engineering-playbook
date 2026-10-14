@@ -2,30 +2,27 @@
 
 ![Zensical Logo](https://zensical.org/assets/zensical.svg){align=right loading=lazy style="height:150px;width:150px"}
 
-!!! QUOTE ""
+!!! QUOTE "Zensical pitch"
     A scalable Open Source systems for technical writing that always keep you in the flow
 
-[:globe_with_meridians: Zensical](https://github.com/zensical/zensical){target=_blank} is a Rust & Python tools for generating documentation sites from Markdown (potentially Common Mark in future).
+[:globe_with_meridians: Zensical](https://github.com/zensical/zensical){target=_blank} is a highly efficient tool for generating websites from Markdown content. Build times are as low as a few seconds for 500+ page site (an order of magnitude faster than most generator tools).
 
-Zensical is a very efficient tool that generates a site from Markdown within a few seconds (an order of magnitude faster than most generator tools).
+Content is written using Python flavoured Markdown, enabling authors to create a rich user experience without creating additional CSS or JavaScript. This website is an example of that experience.
 
-Zensical is a rapidly evolving tool that aims to be feature comparable with Material for MkDocs by the end of 2026.
+TOML notation is used to configure a project, defining feature toggles and navigation for the website.
 
-
-`zensical.toml` is used to configure a project, defining plugins and navigation for the website.
-
-> NOTE: Zensical is a reimplementation and extension of Material for MkDocs and MkDocs itself.
+> NOTE: Zensical is a reimplementation of "Material for MkDocs" and MkDocs.
 
 
 ## Install Zensical
 
-Zensical can be installed locally via vu or pip. Practicalli uses uv for simplicity.
+Zensical can be installed locally via vu or pip Python package managers. Practicalli recommends Uv for simplicity.
 
-UV Python Package Manager is used to install Zensical as a tool, negating the need for a Python Virtual environment
+Uv is used to install Zensical as a tool, negating the need for a Python Virtual environment
 
 [UV Package Manager Install](../../programming-languages/python/uv.md){target=_blank .md-button}
 
-Zensical commands are wrapped in Makefile tasks to provide a consistent and simple command line experience.
+[Practicalli dotfiles Makefile-zensical](https://github.com/practicalli/dotfiles/blob/main/Makefile-zensical){target=_blank} defines tasks that wrap Zensical commands, providing a consistent and simple command line experience.
 
 Install the latest version of Zensical as a tool using `uv` (updating if there is a new version).
 
@@ -35,7 +32,7 @@ Install the latest version of Zensical as a tool using `uv` (updating if there i
     make docs-install
     ```
 
-    [Makefile tasks for Zensical](../../build-tool/make/zensical-tasks.md){target=_blank .md-button}
+    [Makefile tasks for Zensical](../../tools-services/task-runner/make/zensical-tasks.md){target=_blank .md-button}
 
 
 === "Command"
@@ -47,9 +44,13 @@ Install the latest version of Zensical as a tool using `uv` (updating if there i
 
 ## Run Zensical locally
 
-Create a new Zensical project with `zensical new .`.
+Create a new Zensical project, which adds a `docs` directory, `zensical.toml` config and `.github/workflow/docs.yml` to publish the site vig GitHub pages.
 
-Or clone an existing repository that contains a Zensical project.
+```shell
+zensical new .
+```
+
+> Or clone an existing repository that contains a Zensical project.
 
 === "Makefile"
 
@@ -71,13 +72,17 @@ Or clone an existing repository that contains a Zensical project.
 
 All plugins are defined within the `zensical.toml` configuration for the project.
 
-[catppuccin-zensical theme](https://github.com/jonathan343/catppuccin-zensical){target=_blank} is the only plugin currently used by Practicalli projects.
+### Custom Theme
+
+[catppuccin-zensical theme](https://github.com/jonathan343/catppuccin-zensical){target=_blank} plugin is used to enhance the look of the Zensical theme.
+
+
+!!! WARN "Overrides not compatible with theme plugin"
+    Your `overrides` will not work when using a theme plugin. At the time of writing, the Zensical theme will only work with one set of `overrides`, which a theme plugin will supersede.
+
+    A custom theme can be defined using your own `overrides` html and css files.
 
 
 ## GitHub workflow
 
-[Practicalli Workflow for Zensical static sites](../../continuous-integration/github/workflows/practicalli.md#zensical-static-site-generator){target=_blank .md-button}
-
-
-
-## Reference
+[Practicalli Workflow for Zensical static sites](../../tools-services/continuous-integration/github/workflow/practicalli.md#zensical-static-site-generator){target=_blank .md-button}
