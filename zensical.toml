@@ -232,7 +232,16 @@ nav = [
       "software-design/microservices/index.md",
     ]},
   ]},
-  { "Zensical Tips" = "https://practical.li/zensical-tips/" },
+
+  { "Tech Writing" = [
+    "technical-writing/index.md",
+    { "Techniques" = "technical-writing/techniques.md" },
+    { "Static Site" = [
+      "technical-writing/static-site/index.md",
+      { "MkDocs" = "technical-writing/static-site/mkdocs.md" },
+      { "Zensical" = "technical-writing/static-site/zensical.md" },
+    ]},
+  ]},
 ]
 
 
