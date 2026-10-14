@@ -1,3 +1,7 @@
+---
+icon: lucide/database
+---
+
 # Persistence
 
 Storing data on long term storage
