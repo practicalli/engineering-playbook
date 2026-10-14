@@ -25,7 +25,9 @@ Copyright &copy; 2026 Practicalli
 
 # Explicitly defined navigation (comment for Implicit navigation)
 nav = [
-  { "Home" = "index.md" },
+  { "Playbook" = [
+    "index.md",
+  ]},
 
   { "Practices" = [
     "practices/index.md",
