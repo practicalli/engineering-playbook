@@ -1,3 +1,7 @@
+---
+icon: lucide/square-terminal
+---
+
 # Z Shell
 
 Z Shell (zsh) is an advanced shell environment and shell scripting language for Linux/Unix systems.

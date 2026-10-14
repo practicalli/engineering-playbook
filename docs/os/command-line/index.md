@@ -1,3 +1,7 @@
+---
+icon: lucide/square-terminal
+---
+
 # Command Line
 
 Terminal Emulator apps, shells, configuration tips, etc.

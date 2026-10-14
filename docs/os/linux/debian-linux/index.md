@@ -1,3 +1,7 @@
+---
+icon: fontawesome/brands/debian
+---
+
 # Debian Linux
 
 Debian Linux provides support for the widest range of hardware of any Linux distribution and is one of the longest running Linux distributions.

@@ -1,3 +1,7 @@
+---
+icon: fontawesome/brands/debian
+---
+
 # Install via GitHub Release
 
 Scripts can be used to automatically install software outside an operating system package management tools.

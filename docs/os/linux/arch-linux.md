@@ -1,3 +1,7 @@
+---
+icon: fontawesome/brands/arch-linux
+---
+
 # Arch Linux
 
 - Rolling Release

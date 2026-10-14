@@ -1,3 +1,7 @@
+---
+icon: lucide/square-terminal
+---
+
 # Starship prompt theme
 
 ![Starship.rs Cross Shell Prompt](https://raw.githubusercontent.com/starship/starship/master/media/logo.png){align=right loading=lazy style="width:240px"}
@@ -6,9 +10,10 @@
 
 Make your command line more informative and more enjoyable to use.
 
+Starship is configured via the `~/.config/starship.toml` file.
+
 ![Starship custom prompt by Practicalli](https://github.com/practicalli/graphic-design/blob/live/os/command-line/starship-cli-preset-catppuccin-custom.png?raw=true){loading=lazy}
 
-Starship is configured via the `~/.config/starship.toml` file.
 
 
 ## Install
@@ -74,7 +79,7 @@ Add a one-line config to [launch Starship for a specific shell](https://starship
 
 Starship uses [presets](https://starship.rs/presets/) to configure the design of the prompt, defining what information is shown and which colors.
 
-Starship can be used to generate a `~/.config/starship.toml`  configuration file with a specific preset.  Starship lists the preset names if the name supplied is not recognised.
+Starship can be used to generate a `~/.config/starship.toml` configuration file with a specific preset. Starship lists the preset names if the name supplied is not recognised.
 
 Starship has a [:globe_with_meridians: Catppuccin Powerline Preset](https://starship.rs/presets/catppuccin-powerline) (theme) which complements the [Kitty Cappuccin theme]() and [Neovim Cappuccin colorscheme]()
 
@@ -101,17 +106,20 @@ Starship has a [:globe_with_meridians: Catppuccin Powerline Preset](https://star
 ![Starship command line theme with catppuccin-powerline preset](https://github.com/practicalli/graphic-design/blob/live/os/command-line/kitty/kitty-starship-prompt-catppuccin-powerline-preset.png?raw=true){loading=lazy}
 
 
-
 ## Custom theme
 
-The [:globe_with_meridians: Catppuccin Powerline Preset](https://starship.rs/presets/catppuccin-powerline) preset places all information on the left side of the prompt.  A custom version of the Cappuccin Powerline preset was created to move general information to the right hand side of the prompt and tweaked some of the default Catppuccin Mocha colors.
+The [:globe_with_meridians: Catppuccin Powerline Preset](https://starship.rs/presets/catppuccin-powerline) preset places all information on the left side of the prompt.
+
+Practicalli created a [custom version of the Cappuccin Powerline preset](https://github.com/practicalli/dotfiles/blob/main/shell/starship.toml){target=_blank}, moving general information to the right hand side of the prompt. Several of the default Catppuccin Mocha colors were tweaked.
 
 `format` controls the layout of the prompt.  `right_format` was added, moving the command duration, time, username and operating system details here from the left-hand side.
 
-![Practicalli Custom version of Starship Cappuccin Powerline preset](https://github.com/practicalli/graphic-design/blob/live/os/command-line/starship-cli-preset-catppuccin-custom.png){loading=lazy}
+![Starship custom prompt by Practicalli](https://github.com/practicalli/graphic-design/blob/live/os/command-line/starship-cli-preset-catppuccin-custom.png?raw=true){loading=lazy}
 
 
-!!! EXAMPLE "Custom Starship theme based on Cappuccin Powerline preset"
+[Practicalli custom Starship.toml](https://github.com/practicalli/dotfiles/blob/main/shell/starship.toml){target=_blank .md-button}
+
+??? EXAMPLE "Custom Starship theme based on Cappuccin Powerline preset"
     ```toml title="~/.config/starship.toml"
     "$schema" = 'https://starship.rs/config-schema.json'
 

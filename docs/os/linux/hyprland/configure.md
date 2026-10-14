@@ -1,3 +1,7 @@
+---
+icon: fontawesome/brands/arch-linux
+---
+
 # Configure Hyprland
 
 Hyprland comes with a simple config in `~/.config/hypr/hyprland.conf`.

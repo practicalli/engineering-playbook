@@ -1,17 +1,23 @@
+---
+icon: fontawesome/brands/linux
+---
+
 # Chosing a Linux Distribution
 
+Arguably the most commonly used Linux distributions are:
 
-- Ubuntu
-- Debian
-- Arch Linux
+- [Debian](https://www.debian.org/)
+- [Ubuntu](https://ubuntu.com)
+- [Arch Linux](https://archlinux.org/)
+- [CentOS](https://www.centos.org/)
+
+[Wikipedia: List of Linux Distributions](https://en.wikipedia.org/wiki/List_of_Linux_distributions){target=_blank .md-button}
 
 
 ## The essential differences
 
-
 - package manager and package format
 - default packages
-
 
 
 ## Ubuntu

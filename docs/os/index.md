@@ -1,3 +1,7 @@
+---
+icon: lucide/server
+---
+
 # Operating Systems
 
 !!! QUOTE
@@ -13,23 +17,28 @@ There are a wide range of Linux distributions to choose from, although Practical
 
 Arch Linux has solid community support should a more involved operating system experience be desirable.
 
-[Regolith Desktop](linux/regolith/){.md-button}
-[Debian Linux](linux/debian/){.md-button}
-[Ubuntu Desktop](linux/ubuntu/){.md-button}
+[:lucide-moon: Regolith Desktop](./linux/regolith.md){.md-button}
+[:fontawesome-brands-debian: Debian Linux](./linux/debian-linux/index.md){.md-button}
+[:fontawesome-brands-ubuntu: Ubuntu Linux](./linux/ubuntu-linux.md){.md-button}
+[:fontawesome-brands-arch-linux: Arch Linux](./linux/arch-linux.md){.md-button}
 
 !!! HINT "Practicalli recommends Linux"
-    Practicalli recommends use of a Linux distribution to provide a stable and developer focused environment to work in.  The vast majority is freely available without cost and typically of high quality thanks to so many collaborators and users.
+    Practicalli recommends using a Linux distribution to provide a stable and developer focused environment. Most Linux distributions are freely available and of high quality, thanks to many collaborators and users.
 
-    Linux also has a quite minimal hardware resource use and has very widespread support for new and classic hardware.
+    Linux has minimal hardware resource use and has widespread support for new and classic hardware.
 
-    Unix/BSD based systems can also offer a good developer experience, e.g. MacOSX.
 
 ??? INFO "MacOS"
-    MacOS is a BSD based operating system so has similar command line experience.  Coupled with Homebrew, a wide selection of developer focused packages are freely available.
+    MacOS is a BSD based operating system with a similar command line experience. Coupled with Homebrew, a wide selection of developer focused packages are available.
 
-    MacOS is often used by commercial companies (especially FinTech) as commercial software is used to administrate the operting system, usually by a remote System Adminstration team.
+    MacOS is used by many commercial companies (especially FinTech) to control administration of the operting system, usually by a remote System Adminstration team.
+
 
 ## Command Line Shell
+
+Bash is the most common default shell provides by Linux/Unix operating systems.
+
+Zsh is a more advanced shell and is commonly used by software engineers and operations staff.
 
 - bash
 - zsh

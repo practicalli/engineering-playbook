@@ -1,3 +1,7 @@
+---
+icon: lucide/square-terminal
+---
+
 # DRA Download Release Assets
 
 A command line tool to download release assets from GitHub, without the need for GitHub authentication.

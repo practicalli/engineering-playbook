@@ -1,3 +1,7 @@
+---
+icon: fontawesome/brands/arch-linux
+---
+
 # Garuda Linux
 
 A professionally assembled operating system based on Arch Linux, with variants including Hyprland.
@@ -16,7 +20,7 @@ sftp://practicalli@rangerone/home/practicalli
 A prompt appears to enter the user's password.
 
 
-### Window rules 
+### Window rules
 
 Thunar dialogs show as a full size tiled window, taking up a disproportionate amount of space.
 
@@ -32,7 +36,7 @@ Center the Rename dialog on the mouse will minimise focus being lost if the mous
     windowrule = float,stayfocused,move cursor -50% -50%,class:^(thunar)$,title:(Rename.*)$
     ```
 
-The File Operations Progress 
+The File Operations Progress
 
 !!! NOTE "Thunar File Operations: float and move to bottom left corner"
     ```Configure
@@ -40,4 +44,3 @@ The File Operations Progress
     windowrule = move onscreen 100%-24 100%-24,class:^(thunar)$,title:(File Operation Progress.*)$
     ```
 ```
-

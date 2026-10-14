@@ -1,6 +1,10 @@
+---
+icon: fontawesome/brands/linux
+---
+
 # Linux  Operating System
 
-Linux is an open source kernel with a very large collection of software tools.
+Linux is an open source kernel with a massive collection of software tools.
 
 Linux is typically installed via a distribution, a community or commercial effort to package that large collection of software so that it is easy to install and maintain.
 

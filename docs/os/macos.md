@@ -1,3 +1,7 @@
+---
+icon: fontawesome/brands/apple
+---
+
 # Mac OS
 
 A BSD based Unix system with commercial Graphic Desktop shell created by Apple.
@@ -10,8 +14,9 @@ A BSD based Unix system with commercial Graphic Desktop shell created by Apple.
     Practicalli highly recommends the 'International English' keyboard on Macbook laptops as this has sensible locations for keys, especially the `#` key.
     Or use the [:globe_with_meridians: Model 100 or Atreus keyboards from Keyboard.io](https://shop.keyboard.io/){target=_blank}
 
-!!! INFO "Practicalli has limited access to MacOS"
-    Practicalli only has occasional access to Mac hardware and macOS, typically during some commercial engagements.  Any updates or corrections to this section are most welcome
+??? INFO "Practicalli has limited access to MacOS"
+    Access to Mac hardware and macOS is typically during commercial engagements. Any updates or corrections to this section are most welcome
+
 
 ## Window Tiling manager
 

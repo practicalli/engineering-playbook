@@ -1,3 +1,7 @@
+---
+icon: lucide/cat
+---
+
 # Kitty terminal
 
 ![Kitty Logo](https://github.com/practicalli/graphic-design/blob/live/logos/kitty-light.png?raw=true#only-dark){align=right loading=lazy style="height:150px;width:150px"}

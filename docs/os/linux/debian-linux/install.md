@@ -1,3 +1,7 @@
+---
+icon: fontawesome/brands/debian
+---
+
 # Debian Linux Install
 
 Debian provides ISO images which can be burned onto  USB memory sticks (or other removable media, e.g. compact disks).
