@@ -8,6 +8,7 @@
 - docs(ci): add zensical doc workflow with Uv
 - docs(practice): 🌟 asking questions clearly
 - build(zensical): 🔧 toml configuration for project
+- build(zensical): 🔧 add social cards plugin
 
 ### Changed
 
