@@ -13,9 +13,8 @@
 
 ## Book status
 
-[![MegaLinter](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/megalinter.yaml)
-[![Publish Book](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/publish-book.yaml)
-[![pages-build-deployment](https://github.com/practicalli/engineering-playbook/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/pages/pages-build-deployment)
+[![MegaLinter](https://github.com/practicalli/engineering-playbook/actions/workflows/mega-linter.yml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/mega-linter.yml)
+[![Publish Zensical Docs](https://github.com/practicalli/engineering-playbook/actions/workflows/docs.yml/badge.svg)](https://github.com/practicalli/engineering-playbook/actions/workflows/docs.yml)
 
 ![Ideas & issues](https://img.shields.io/github/issues/practicalli/engineering-playbook?label=content%20ideas&logo=github)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/engineering-playbook?label=pull%20requests&logo=github)
