@@ -12,6 +12,7 @@
 - build(zensical): 🔧 add social cards plugin
 - build(zensical): ♻️ git and github navigation sub-sections
 - doc(readme): 🔗 update status badge link for megalinter and doc publishing workflow
+- doc(readme): 🔗 make ascii art generator a link
 
 ### Changed
 
