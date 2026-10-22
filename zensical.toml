@@ -79,7 +79,7 @@ nav = [
     { "Version Control" = [
       "tools-services/source-control/index.md",
       { "Git" = [
-        { "Overview" = "tools-services/source-control/overview.md" },
+        "tools-services/source-control/index.md",
         { "Concepts" = "tools-services/source-control/concepts.md" },
         { "Repository" = "tools-services/source-control/repository.md" },
         { "Status" = "tools-services/source-control/status.md" },
