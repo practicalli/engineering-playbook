@@ -85,6 +85,7 @@ nav = [
         { "Repository" = "tools-services/source-control/git/repository.md" },
         { "Status" = "tools-services/source-control/git/status.md" },
         { "Ignore" = "tools-services/source-control/git/ignore.md" },
+        { "Commits" = "tools-services/source-control/git/commits.md" },
       ]},
       { "GitHub" = [
         "tools-services/source-control/github.md",
