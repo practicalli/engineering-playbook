@@ -10,6 +10,7 @@
 - docs(practice): 🌟 asking questions clearly
 - build(zensical): 🔧 toml configuration for project
 - build(zensical): 🔧 add social cards plugin
+- build(zensical): ♻️ git and github navigation sub-sections
 
 ### Changed
 

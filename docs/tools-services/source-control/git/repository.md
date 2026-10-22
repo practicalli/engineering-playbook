@@ -2,7 +2,7 @@
 
 
 - a local repository resides on your computer
--
+- a shared repository resides on a remote service, e.g. GitHub, GitLab
 
 
 

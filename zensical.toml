@@ -80,11 +80,11 @@ nav = [
       "tools-services/source-control/index.md",
       { "Conventional Commits" = "tools-services/source-control/conventional-commits.md" },
       { "Git" = [
-        "tools-services/source-control/index.md",
-        { "Concepts" = "tools-services/source-control/concepts.md" },
-        { "Repository" = "tools-services/source-control/repository.md" },
-        { "Status" = "tools-services/source-control/status.md" },
-        { "Ignore" = "tools-services/source-control/ignore.md" },
+        "tools-services/source-control/git/index.md",
+        { "Client Config" = "tools-services/source-control/git/client-configuration.md" },
+        { "Repository" = "tools-services/source-control/git/repository.md" },
+        { "Status" = "tools-services/source-control/git/status.md" },
+        { "Ignore" = "tools-services/source-control/git/ignore.md" },
       ]},
       { "GitHub" = [
         "tools-services/source-control/github.md",
