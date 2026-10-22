@@ -78,6 +78,7 @@ nav = [
     ]},
     { "Version Control" = [
       "tools-services/source-control/index.md",
+      { "Conventional Commits" = "tools-services/source-control/conventional-commits.md" },
       { "Git" = [
         "tools-services/source-control/index.md",
         { "Concepts" = "tools-services/source-control/concepts.md" },

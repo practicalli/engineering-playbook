@@ -5,6 +5,7 @@
 ### Added
 
 - docs(tech-writing): 📝 tools to support enhancing English prose
+- docs(git): 📝 add conventional commits under source-control section
 - docs(ci): add zensical doc workflow with Uv
 - docs(practice): 🌟 asking questions clearly
 - build(zensical): 🔧 toml configuration for project
