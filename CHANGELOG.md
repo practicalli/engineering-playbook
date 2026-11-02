@@ -19,6 +19,7 @@
 - build(zensical): 🔧 enable discussions section
 - build(zensical): 🔧 enable deliberate practice section
 - build(zensical): 🔧 enable organising work section
+- build(zensical): 🔧 enable kanban section
 
 ### Changed
 

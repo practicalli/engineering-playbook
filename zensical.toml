@@ -60,6 +60,11 @@ nav = [
       { "Real Options" = "practices/organising-work/real-options.md"},
       { "Given When Then" = "practices/organising-work/given-when-then.md"},
     ] },
+    { "Kanban" = [
+      "practices/kanban/index.md",
+      { "Constraints" = "practices/kanban/constraints.md"},
+      { "Value Stream Mapping" = "practices/kanban/value-stream-mapping.md"},
+    ] },
     { "Test Driven Development" = "practices/test-driven-development.md"},
     { "Change Management" = [
       "practices/change-management/index.md",
