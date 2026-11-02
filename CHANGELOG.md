@@ -18,6 +18,7 @@
 - doc(practices): ✏️ elaborate on change management and personal journal
 - build(zensical): 🔧 enable discussions section
 - build(zensical): 🔧 enable deliberate practice section
+- build(zensical): 🔧 enable organising work section
 
 ### Changed
 

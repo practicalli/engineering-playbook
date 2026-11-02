@@ -53,6 +53,13 @@ nav = [
       { "Code Kata" = "practices/deliberate-practice/code-kata.md"},
       { "Architecture Kata" = "practices/deliberate-practice/architecture-kata.md"},
     ]},
+    { "Organising Work" = [
+      "practices/organising-work/index.md",
+      { "Rolling Wave Planning" = "practices/organising-work/rolling-wave-planning.md"},
+      { "MoSCoW Method" = "practices/organising-work/moscow-method.md"},
+      { "Real Options" = "practices/organising-work/real-options.md"},
+      { "Given When Then" = "practices/organising-work/given-when-then.md"},
+    ] },
     { "Test Driven Development" = "practices/test-driven-development.md"},
     { "Change Management" = [
       "practices/change-management/index.md",
