@@ -48,6 +48,11 @@ nav = [
       { "Standup" = "practices/discussions/standup.md"},
       { "Thinking Hats" = "practices/discussions/thinking-hats.md"},
     ]},
+    { "Deliberate Practice" = [
+      "practices/deliberate-practice/index.md",
+      { "Code Kata" = "practices/deliberate-practice/code-kata.md"},
+      { "Architecture Kata" = "practices/deliberate-practice/architecture-kata.md"},
+    ]},
     { "Test Driven Development" = "practices/test-driven-development.md"},
     { "Change Management" = [
       "practices/change-management/index.md",
