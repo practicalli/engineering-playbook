@@ -20,6 +20,7 @@
 - build(zensical): 🔧 enable deliberate practice section
 - build(zensical): 🔧 enable organising work section
 - build(zensical): 🔧 enable kanban section
+- build(zensical): 🔧 change bdd to nested section
 
 ### Changed
 

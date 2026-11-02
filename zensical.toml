@@ -38,7 +38,6 @@ nav = [
     { "Reports" = "practices/reports.md"},
     { "Cause Analysis" = "practices/cause-analysis.md"},
     { "Technical Debt" = "practices/technical-debt.md"},
-    { "Behaviour Driven Development" = "practices/behaviour-driven-development/index.md" },
     { "Discussions" = [
       "practices/discussions/index.md",
       { "Asking Questions" = "practices/discussions/asking-questions.md"},
@@ -64,6 +63,9 @@ nav = [
       "practices/kanban/index.md",
       { "Constraints" = "practices/kanban/constraints.md"},
       { "Value Stream Mapping" = "practices/kanban/value-stream-mapping.md"},
+    ] },
+    { "Behaviour Driven Development" = [
+      "practices/behaviour-driven-development/index.md"
     ] },
     { "Test Driven Development" = "practices/test-driven-development.md"},
     { "Change Management" = [
