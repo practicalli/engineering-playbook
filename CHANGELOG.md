@@ -16,6 +16,7 @@
 - docs(intro): ✏️ update navigation keys information
 - doc(people): ✏️ elaborate on EM and staff engineer career roles
 - doc(practices): ✏️ elaborate on change management and personal journal
+- build(zensical): 🔧 enable discussions section
 
 ### Changed
 

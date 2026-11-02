@@ -39,6 +39,15 @@ nav = [
     { "Cause Analysis" = "practices/cause-analysis.md"},
     { "Technical Debt" = "practices/technical-debt.md"},
     { "Behaviour Driven Development" = "practices/behaviour-driven-development/index.md" },
+    { "Discussions" = [
+      "practices/discussions/index.md",
+      { "Asking Questions" = "practices/discussions/asking-questions.md"},
+      { "Five Whys" = "practices/discussions/five-whys.md"},
+      { "One To Ones" = "practices/discussions/one-to-one-meeting.md"},
+      { "Retrospective" = "practices/discussions/retrospective.md"},
+      { "Standup" = "practices/discussions/standup.md"},
+      { "Thinking Hats" = "practices/discussions/thinking-hats.md"},
+    ]},
     { "Test Driven Development" = "practices/test-driven-development.md"},
     { "Change Management" = [
       "practices/change-management/index.md",
