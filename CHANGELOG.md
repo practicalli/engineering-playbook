@@ -22,6 +22,7 @@
 - build(zensical): 🔧 enable kanban section
 - build(zensical): 🔧 change bdd to nested section
 - doc(practices): 📝 add establish common language
+- doc(practices): 📝 add moscow method
 
 ### Changed
 
