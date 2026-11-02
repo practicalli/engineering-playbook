@@ -32,6 +32,7 @@ nav = [
   { "Practices" = [
     "practices/index.md",
     { "Asking Questions" = "practices/asking-questions.md"},
+    { "Establish Common Language" = "practices/establish-common-language.md"},
     { "Managing Bias" = "practices/managing-bias.md"},
     { "Personal Journal" = "practices/personal-journal.md"},
     { "Project Discovery" = "practices/project-discovery.md"},
