@@ -1,4 +1,4 @@
-# Project Elaboration Template
+# Project Elaboration
 
 Establishing the fundamental information about a new project or feature is essential to success.
 
