@@ -16,13 +16,14 @@ The culture of an organisation comes from the sum of its parts, the people and t
 
     The code often aludes to the type of language that should be used when interacting with others, either verbal, written or body language.
 
+
 ## Create a culture
 
 A culture should be deliberately designed and cultivated.
 
 !!! QUOTE "Culture as a Strategy - too important to leave to chance. - Maria Campbell"
 
-Create an environment for culture to grow and encourage collaboration so that culture becomes part of everyones daily flow.
+Create an environment for culture to grow and encourage collaboration so that culture becomes part of everyone's daily flow.
 
 - discuss the concept of culture and why its valuable
 - identify important cultural aspects (individual, team, organisation)
@@ -35,10 +36,16 @@ Create an environment for culture to grow and encourage collaboration so that cu
 ??? HINT "Culture alignment over carbon copy"
     Culture can be viewed as a living entity and as with biological species a culture must be open to growing and adapting to changing circumstances whist still remaining true to its core values and ideals.
 
-    When people are only hired with carbon copies of existing culture there is no room for growth and culture can become stifling and too much of a constraint.  When significant change has to be managed by this carbon copy culture, there is a far greater risk of failure.
+    When people are only hired with carbon copies of existing culture there is no room for growth and culture can become stifling and too much of a constraint.
+
+    There is a far greater risk of failure introducing significant change when managed by carbon copy culture.
+
 
 ## Be the change you seek
 
 When a person believes a benefitial change can be made to culture then they should feel able to drive that change.
 
 Initial feedback on the the value and context of a change should be gained, helping form how that change can be effectively adopted.
+
+!!! QUOTE "Tusculan Disputations - Cisero, Marcus Tullius"
+    It is the peculiar quality of a fool to perceive the faults of others and to forget their own.
