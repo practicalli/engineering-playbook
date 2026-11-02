@@ -2,11 +2,9 @@
 
 !!! WARNING "Work in progress"
 
-Management roles are there to balance the needs of the organisation with the engineering teams ability to deliver
+An entry level management role adopted by engineers moving away from deep technical responsibilities towards people support.
 
-The role naturally focuses on on the larger goals and challenges facing the engineering teams, supporting the engineers to solve specific challenges using their own skills and experiences (that is why they were hired)
-
-The Engineering Manager role can have a wide variation in scope of the role, especially in a startup environment.
+The role naturally focuses on the larger goals and challenges facing engineering teams, supporting the engineers to solve specific challenges using their own skills and experiences (that is why they were hired after all)
 
 The essence of the role is to ensure engineers:
 
@@ -15,7 +13,7 @@ The essence of the role is to ensure engineers:
 - support the growth of engineers
 
 
-!!! TIP "Expectations may vary company to company"
+!!! TIP "Expectations may vary widely company to company"
     The EM role can vary wildly across companies. I have worked for some teams were I was hands-on coding each day, with other teams there were so many other priorities I never had chance to look at the code.
 
     Establishing what you percieve as the role scope within your organisation & team is important. This must be aligned with the expectations of your manager.
@@ -25,25 +23,37 @@ The essence of the role is to ensure engineers:
     When the scope is diverse, communicate the aspects you will focus on each month (each week if its a chaotic or 'high-pressure' environment).
 
 
+## Personality Traits
+
+The role works for the team so personal ego should not be an influencing factor.
+
+A strong ego is counterproductive to an effective team and prevents other members from engaging.
+
+Supportive leadership encourages all members of the team to become fully involved in decisions and actions, sharing in the sense of ownership and responsibility.
+
+
 ## Meetings
 
-[one to one](../../practices/discussions/one-to-one-meeting.md) are regularly held with direct reports and those people the engineering manager reports to, ensuring there is good working relationship between the respective people.
+Regular meetings with the team is the foundation to building high-trust relationships.
 
 - direct reports focus on supporting that persons ability to thrive within the company and identify actions to help
 
 - stakeholders to ensure their concerns are understood and they have a realistic view of current capability from engineering teams
 
-Engineering team meetings may occasionally be joined to review how effective the format is to those involved, or should a wider issue be addressed (especially in retrospectives)
+Each member of the team should be supported to drive their [one to one](../../practices/discussions/one-to-one-meeting.md) with their manager, driving their own agenda that supports career and personal growth.
+
+Collective team meetings should be highly focused to avoid waste, deciding on actions and identifying were further discussion is required
 
 - [standup](../../practices/discussions/standup.md) can highlight issues with motivation and team cohesiveness
-- [retrospective](../../practices/discussions/retrospective.md) can help identify action items that the engineering manager can actively support or help direct others to support
+- [retrospective](../../practices/discussions/retrospective.md) identify action items that the engineering manager can actively support or help direct others to support
 
-!!! HINT "Performance reviews supported by one-to-one meetings"
+??? HINT "Performance reviews supported by one-to-one meetings"
     Where performance reviews are applicable, include the review as an aspect to raise with one-to-one meetings with direct reports throughout the year.
 
     The need to complete a review should be raised as early as possible in one-to-one meetings and regularly raised (even if only briefly) to ensure supporting tasks are carried out to swiftly complete the review at the appropriate time.
 
     Creating regular journal entries can speed up the completion of a self-written performance review submission
+
 
 ## Journal
 
@@ -67,9 +77,9 @@ Use the knowledge sharing tool for the organisation, e.g. [Atlassian Confluence]
 **dominating** by tearing people down to (allegedly) build them up in the (perceived) right way is an act of emotional torture and highly counter productive in the long term.
 
 
-# Working with Product
+## Working with Product Owners
 
-Important relationship for and effective team
+Important relationship for effective delivery, working on the most valuable work at the right time.
 
 Ensures the work is readily understandable by the engineers on the team.
 
@@ -95,7 +105,7 @@ There should be clear goals to achieve (e.g. milestones) and a common understand
     A busy engineering team may have adopted this approach rather than seeking out existing services they could build a service upon (i.e. an existing ledger service).
 
 
-## Responsibility
+## Responsibilities
 
 The Engineering Manager is ultimately responsible for everything the team does and agrees to do
 
@@ -107,61 +117,74 @@ The Engineering Manager is ultimately responsible for everything the team does a
 - Overall quality of the platform
 - Overall schedule of the team and meetings they attend
 
-## product Manager
+### Product Manager
 
-The PM for the team is ultimately responsible for providing clear guidance on business features required by Griffin customers.
+Ultimately responsible for providing clear guidance on business features and priorities. The "What" and "When" from the stakeholder point of view.
 
 - The Product owner should be aware of the respective value of any work proposed and any time frame in which this value is constrained by.
-- Why is it valuable
+- Why is it valuable, compared to other business features
 - When is it valuable
-- How is it valuable compared to other business features
 
-## Work focus & cadence
 
-Short term cycle
+## Work Cadence
+
+Short term cycle provides fast feedback, reducing wasteful work.
+
 - 4 weeks product driven work
 - 2 weeks engineering driven work
 - Introduce goal keeper concept (based on need - initially engineering managers sole responsibility)
 
-## Planning view
+
+## Planning View
+
+Long term plan matches the overal vision of the organisation at a high level.
+
+Short term detailed plan to ensure focus on delivery.
 
 - 3 month high level goals
-- 1 month plan overview
-- 1 week detailed work
+- 1 month plan overview (one or more milestones)
+- 1 week detailed work (prioritised by stakeholder feedback each week)
 
-Priorities for product driven and engineering driven work agreed at start of week.
+Priorities for product driven and engineering driven work agreed at start of each week.
 
 - Work broken down to small pieces, 1 day to 1 week.
-- Epics used to orchestrate larger pieces
+- Epics used to orchestrate larger pieces of work.
 
+
+<!--
 
 ## Cycling analogy
 
 ### Onboarding
 
-Create the basic engineering environment
+Create the basic engineering environment is analagious to preparing for a long ride.
+
 - Getting a bike and making it ready for a ride
-- Wearing the right clothes for the weather
+- Deciding on the route (and sync'ing to the cycle computer)
+- Wearing the right clothes for the weather conditions
 - Food and snacks for the journey
+- Inviting friends to share the activity
 
 ### Starting as Engineer Manager
 
 (analogy breaks down a bit)
 
 - I have an idea of the destination, but not an exact route
-- Discover several hills to climb (at the same time)
+- Discover several hills to climb (some are climbed in parallel, but there is a limit)
+
 - Understanding organisation principles, practices and tools
 - Understanding the team
 - Understanding platform & products
 - Understanding the needs of the business
 - Identify where I can add value without detracting from delivery
 
+
 ### Reaching the destination
 
 - Delivered what the business currently needs
 - Climbing up each hill to be able to add value
 - Identifying Where next?
-
+ -->
 
 
 <!--

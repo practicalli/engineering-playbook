@@ -14,6 +14,7 @@
 - doc(readme): 🔗 update status badge link for megalinter and doc publishing workflow
 - doc(readme): 🔗 make ascii art generator a link
 - docs(intro): ✏️ update navigation keys information
+- doc(people): elaborate on EM and staff engineer career roles
 
 ### Changed
 
