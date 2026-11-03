@@ -346,9 +346,11 @@ The workflow triggers after a successful run of the [:fontawesome-solid-book-ope
 
 The workflow also requires a change in one of the specified paths to trigger.
 
-Using the [Setup UV GitHub Action]() in the doc publishing workflow, Zensical build task is run without the need of a separate install step.
+Using [:fontawesome-brands-github: Setup UV GitHub Action](https://github.com/astral-sh/setup-uv/){target=_blank} in the doc publishing workflow, Zensical build task is run without the need of a separate Zensical install step.
 
 The `uvx` command is an alias for `uv tool run` command.
+
+> Setup-UV version must use the full SHA or release version, e.g. v10.3.3.
 
 
 !!! EXAMPLE "Zensical workflow with Setup-Uv action"
@@ -392,7 +394,9 @@ The `uvx` command is an alias for `uv tool run` command.
 
           - uses: actions/checkout@v7
           - run: echo "🐙 ${{ github.repository }} repository sparse-checkout to the CI runner."
-          - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+
+      - name: Install UV Python Package Manager
+        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
             with:
               version: "latest"
               activate-environment: "false"

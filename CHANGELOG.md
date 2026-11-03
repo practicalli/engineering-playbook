@@ -33,6 +33,7 @@
 - ci(zensical): 🔧 update to run zensical via uvx
 - docs(ci): ✏️ update java flavor megalinter workflow
 - docs(ci): ✏️ elaborate action versions security vs maintenance
+- ci(docs): ⬆️ update setup-uv to 10.3.3 release
 
 
 ## 2026-08-22
