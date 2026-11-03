@@ -31,14 +31,13 @@ nav = [
 
   { "Practices" = [
     "practices/index.md",
-    { "Asking Questions" = "practices/asking-questions.md"},
+    { "Technical Debt" = "practices/technical-debt.md"},
     { "Establish Common Language" = "practices/establish-common-language.md"},
     { "Managing Bias" = "practices/managing-bias.md"},
     { "Personal Journal" = "practices/personal-journal.md"},
     { "Project Discovery" = "practices/project-discovery.md"},
     { "Reports" = "practices/reports.md"},
-    { "Cause Analysis" = "practices/cause-analysis.md"},
-    { "Technical Debt" = "practices/technical-debt.md"},
+    { "Root Cause Analysis" = "practices/cause-analysis.md"},
     { "Discussions" = [
       "practices/discussions/index.md",
       { "Asking Questions" = "practices/discussions/asking-questions.md"},
