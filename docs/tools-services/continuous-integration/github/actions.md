@@ -4,17 +4,33 @@
 
 [GitHub Actions Marketplace](https://github.com/marketplace?type=actions)  contains a wide range of actions that can be used to quickly create a workflow.
 
-!!! HINT "Use major version only"
-    Use the major version of a GitHub action within a GitHub workflows to minimise the maintenance of action versions in workflow configuration.  e.g. if the latest version is `v5.2.1`, then use version `v5` to use the latest version available within that major version.
+## Maintenance verses stability and security
+
+The more specific the action version used in a workflow, the more secure the workflow becomes at the cost of additional version maintenance (updates required more frequently).
+
+The full SHA of a release is an immutable reference, creating the most stable and security definition.
+
+Specifying only the major version automatically uses the latest tag, within that major version. Maintenance is reduced as the major version changes far less often.
+
+
+| Method        | Description               | Stability/Risk                          |
+| ------------- | ------------------------- | --------------------------------------- |
+| Major Version |	`actions/name@v5`         | Fails when tags missing                 |
+| Tag	          | `actions/name@v3.5.2`	    | Stable if Release cannot be republished |
+| Commit SHA    |	`actions/name@9e4...f2c3`	| Most stable, immutable reference        |
+
+
+!!! TIP "Automate version updates to minimise maintenance"
+
 
 ## Authentication
 
-GitHub actions have read access to repositories, allowing them to checkout code and configuration.  For more permissions the GitHub Action requires an authorisation token.
+GitHub actions have read access to repositories, allowing them to checkout code and configuration. Additional permissions for the GitHub Action requires an authorisation token.
 
 GitHub automatically creates a token that GitHub actions can use to make an authenticated API request, scoped to the current repository.
 
 ```yaml title="Use automatically created token"
-      - uses: actions/action-name@v2
+      - uses: actions/name@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 ```

@@ -32,6 +32,7 @@
 - build(make): 🔧 update format and docs-install task
 - ci(zensical): 🔧 update to run zensical via uvx
 - docs(ci): ✏️ update java flavor megalinter workflow
+- docs(ci): ✏️ elaborate action versions security vs maintenance
 
 
 ## 2026-08-22
